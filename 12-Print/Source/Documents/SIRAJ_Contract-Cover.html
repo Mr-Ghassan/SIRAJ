@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Sale &amp; Purchase Agreement · cover</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  /* Cover: symmetric 20 mm margins. Stacked lockup, bilingual title (English left / Arabic right) around a
+     central axis, the Portal as the one signature element, parties below. */
+  .spa { padding-inline: 20mm !important; }
+  .spa .lock { align-self: center; --lw: 34mm; margin-top: 4mm; }
+  .spa .axis { position: relative; display: grid; grid-template-columns: 1fr 52mm 1fr; column-gap: 8mm; align-items: end; margin-top: 22mm; }
+  .spa .axis .en .eyebrow-d, .spa .axis .ar .eyebrow-d { margin-bottom: 5mm; }
+  .spa .axis .ar { text-align: right; }
+  .spa .axis .ar .eyebrow-d { justify-content: flex-end; font-size: 8pt; letter-spacing: 0; }
+  .spa .t-en { font-size: 25pt; font-weight: 300; line-height: 1.12; letter-spacing: -0.01em; color: var(--d-ink-strong); }
+  .spa .t-ar { font-size: 25pt; font-weight: 400; line-height: 1.4; color: var(--d-ink-strong); }
+  .spa .s-en { margin-top: 5mm; font-size: 9pt; line-height: 4.6mm; color: var(--d-ash); }
+  .spa .s-ar { margin-top: 4mm; font-size: 10pt; line-height: 5.4mm; color: var(--d-ash); }
+  .spa .portal { width: 52mm; height: 78mm; }
+  .spa .portal img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; clip-path: url(#portal); }
+  .spa .parties { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16mm; margin-top: 18mm; position: relative; }
+  .spa .parties::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; border-left: 0.5pt solid var(--d-rule); }
+  .spa .parties .row { display: grid; grid-template-columns: 22mm 1fr; column-gap: 3mm; padding: 2.6mm 0; border-bottom: 0.5pt solid var(--d-rule-soft); font-size: 8.6pt; line-height: 4.4mm; color: var(--d-ink-strong); }
+  .spa .parties .row .k { font-size: 5.6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); padding-top: 0.6mm; }
+  .spa .parties [lang="ar"] .row { grid-template-columns: 1fr 22mm; font-size: 9.6pt; line-height: 5mm; }
+  .spa .parties [lang="ar"] .row .k { font-size: 7.6pt; letter-spacing: 0; order: 2; text-align: right; padding-top: 0; }
+  .spa .parties [lang="ar"] .row .v { order: 1; }
+  .spa .parties [lang="ar"] .row { direction: ltr; }
+  .spa .parties [lang="ar"] .row .v { direction: rtl; text-align: right; }
+  .spa .conf { margin-top: auto; margin-bottom: 4mm; display: flex; justify-content: space-between; align-items: center; font-size: 6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); }
+  .spa .conf [lang="ar"] { font-size: 8pt; }
+  .spa .conf .ln { flex: 1; margin: 0 4mm; border-top: 0.5pt solid var(--d-rule); position: relative; }
+  .spa .conf .ln::before { content: ""; position: absolute; left: calc(50% - 0.7mm); top: -0.95mm; width: 1.4mm; height: 1.4mm; background: var(--d-stone); transform: rotate(45deg); }
+
+  /* particulars page */
+  .pp { padding-inline: 20mm !important; }
+  .pp .ttl { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 4mm; border-bottom: 0.75pt solid var(--d-maroon); }
+  .pp .ttl .en { font-size: 17pt; font-weight: 300; color: var(--d-ink-strong); }
+  .pp .ttl .ar { font-size: 17pt; color: var(--d-ink-strong); }
+  .pp .grid { margin-top: 2mm; }
+  .pp .r { display: grid; grid-template-columns: 26mm 1fr 1fr 26mm; column-gap: 4mm; padding: 2.7mm 0; border-bottom: 0.5pt solid var(--d-rule-soft); align-items: baseline; position: relative; }
+  .pp .r::after { content: ""; position: absolute; left: 50%; top: 2mm; bottom: 2mm; border-left: 0.5pt solid var(--d-rule-soft); }
+  .pp .r .ke { font-size: 5.6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); }
+  .pp .r .ve { font-size: 8.4pt; line-height: 4.2mm; color: var(--d-ink-strong); padding-right: 4mm; }
+  .pp .r .va { font-size: 9.4pt; line-height: 4.9mm; color: var(--d-ink-strong); text-align: right; padding-left: 4mm; }
+  .pp .r .ka { font-size: 7.6pt; font-weight: 500; color: var(--d-maroon); text-align: right; }
+  .pp .rec { margin-top: 9mm; }
+  .pp .rec .bi-cols { margin-top: 4mm; font-size: 8.4pt; line-height: 4.4mm; }
+  .pp .rec .bi-cols [lang="ar"] { font-size: 9.4pt; line-height: 5.2mm; }
+  .pp .rec p + p { margin-top: 2.4mm; }
+  .pp .init { margin-top: auto; margin-bottom: 26mm; display: grid; grid-template-columns: 1fr 1fr; column-gap: 16mm; }
+  .pp .init > div { display: flex; justify-content: space-between; align-items: flex-end; font-size: 6pt; color: var(--d-ash); }
+  .pp .init .box { width: 22mm; height: 12mm; border: 0.5pt solid var(--d-rule); }
+  .pp .init [lang="ar"] { font-size: 7.4pt; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Business documents · Contract"
+      data-preview-title="Sale &amp; Purchase Agreement — bilingual cover &amp; particulars"
+      data-preview-note="English reads from the left, Arabic from the right, around a shared axis. Cover on 300 gsm uncoated; inner pages on 120 gsm letterhead stock. Parties and figures are fictional."
+      data-preview-cols="2">
+
+<svg data-keep width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- SIRAJ Portal (05-Graphic-System/SVG/SIRAJ_Portal_v1.0.svg) normalised to the object bounding box -->
+  <clipPath id="portal" clipPathUnits="objectBoundingBox"><path d="M0,1 V0.099 C0,0.018 0.28,0 0.55,0 C0.86,0 1,0.1116 1,0.189 V1 Z"/></clipPath>
+</svg>
+
+<!-- ================================================================ COVER == -->
+<section class="page spa" lang="en" dir="ltr" data-label="Cover">
+  <div class="lk lk--stack lock"><img src="../../../01-Logos/Lockups/SIRAJ_Lockup_Stacked_Primary_v1.0.svg" alt="SIRAJ — سراج للتطوير العقاري — Real Estate Development"></div>
+
+  <div class="axis">
+    <div class="en">
+      <div class="eyebrow-d"><i class="lumen"></i>SRJ-SPA-2026-0412</div>
+      <div class="t-en">Sale &amp; Purchase<br>Agreement</div>
+      <div class="s-en">Residence 1204<br>{{demo_projects.noor.en}}, {{demo_projects.noor.location_en}}</div>
+    </div>
+    <div class="portal"><img src="../../../08-Photography/Library/SIRAJ_Photo_Residential-Tower-Golden-Hour_v1.0.jpg" alt=""></div>
+    <div class="ar" lang="ar">
+      <div class="eyebrow-d">اتفاقية رقم <bdi dir="ltr">SRJ-SPA-2026-0412</bdi></div>
+      <div class="t-ar">اتفاقية<br>بيع وشراء</div>
+      <div class="s-ar">الوحدة 1204<br>{{demo_projects.noor.ar}}، {{demo_projects.noor.location_ar}}</div>
+    </div>
+  </div>
+
+  <div class="parties">
+    <div lang="en">
+      <div class="row"><span class="k">Seller</span><span class="v">{{company.name_en}}</span></div>
+      <div class="row"><span class="k">Purchaser</span><span class="v">Mr. Ahmed Al Rawahi</span></div>
+      <div class="row"><span class="k">Dated</span><span class="v">25 October 2026</span></div>
+    </div>
+    <div lang="ar">
+      <div class="row"><span class="k">البائع</span><span class="v">{{company.name_ar}}</span></div>
+      <div class="row"><span class="k">المشتري</span><span class="v">السيد أحمد الرواحي</span></div>
+      <div class="row"><span class="k">التاريخ</span><span class="v">25 أكتوبر 2026</span></div>
+    </div>
+  </div>
+
+  <div class="conf"><span>Private &amp; confidential</span><span class="ln"></span><span lang="ar">خاص وسري</span></div>
+</section>
+
+<!-- ========================================================== PARTICULARS == -->
+<section class="page pp" lang="en" dir="ltr" data-label="Page 2 · particulars, side by side">
+  <header class="run-head">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="rh"><span>SRJ-SPA-2026-0412</span><i></i><span lang="ar">اتفاقية بيع وشراء</span></div>
+  </header>
+
+  <div class="ttl"><span class="en">Particulars</span><span class="ar" lang="ar">بيانات الاتفاقية</span></div>
+  <div class="grid">
+    <div class="r"><span class="ke">Seller</span><span class="ve">{{company.name_en}}, {{contact.cr_number}}, {{contact.address_en}}</span><span class="va" lang="ar">{{company.name_ar}}، {{print.cr_number_ar}}، {{contact.address_ar}}</span><span class="ka" lang="ar">البائع</span></div>
+    <div class="r"><span class="ke">Purchaser</span><span class="ve">Mr. Ahmed Al Rawahi, civil ID 00000000, P.O. Box 123, P.C. 112, Ruwi</span><span class="va" lang="ar">السيد أحمد الرواحي، البطاقة المدنية 00000000، ص.ب 123، ر.ب 112، روي</span><span class="ka" lang="ar">المشتري</span></div>
+    <div class="r"><span class="ke">Property</span><span class="ve">Residence 1204, level 12, {{demo_projects.noor.en}}, {{demo_projects.noor.location_en}}</span><span class="va" lang="ar">الوحدة 1204، الطابق 12، {{demo_projects.noor.ar}}، {{demo_projects.noor.location_ar}}</span><span class="ka" lang="ar">العقار</span></div>
+    <div class="r"><span class="ke">Areas</span><span class="ve">Internal 186 m² · balcony 24 m²</span><span class="va" lang="ar">داخلية 186 م² · شرفة 24 م²</span><span class="ka" lang="ar">المساحات</span></div>
+    <div class="r"><span class="ke">Price</span><span class="ve">OMR 242,000.000</span><span class="va" lang="ar">242,000.000 ر.ع.</span><span class="ka" lang="ar">سعر الشراء</span></div>
+    <div class="r"><span class="ke">Payment</span><span class="ve">Five instalments, Schedule 2</span><span class="va" lang="ar">خمس دفعات، الملحق 2</span><span class="ka" lang="ar">خطة الدفع</span></div>
+    <div class="r"><span class="ke">Handover</span><span class="ve">Anticipated {{demo_projects.noor.handover}}</span><span class="va" lang="ar">متوقع في {{demo_projects.noor.handover|qar}}</span><span class="ka" lang="ar">التسليم</span></div>
+    <div class="r"><span class="ke">Law</span><span class="ve">The laws of the {{company.country_en}}</span><span class="va" lang="ar">قوانين {{company.country_ar}}</span><span class="ka" lang="ar">القانون الحاكم</span></div>
+  </div>
+
+  <div class="rec">
+    <div class="bi-line eyebrow-d"><span style="display:flex;gap:2mm;align-items:center"><i class="lumen"></i>Recitals</span><span lang="ar">التمهيد</span></div>
+    <div class="bi-cols bi-cols--ruled">
+      <div lang="en">
+        <p>A. The Seller is developing {{demo_projects.noor.en}} on the land described in Schedule 1.</p>
+        <p>B. The Purchaser wishes to buy the Property, and the Seller wishes to sell it, on the terms of this Agreement.</p>
+        <p>C. The Arabic and English texts are equally authentic. In case of difference, the Arabic text prevails.</p>
+      </div>
+      <div lang="ar">
+        <p>أ. يقوم البائع بتطوير مشروع {{demo_projects.noor.ar}} على الأرض الموصوفة في الملحق 1.</p>
+        <p>ب. يرغب المشتري في شراء العقار، ويرغب البائع في بيعه، وفق أحكام هذه الاتفاقية.</p>
+        <p>ج. النصان العربي والإنجليزي متساويان في الحجية، وفي حال الاختلاف يسود النص العربي.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="init">
+    <div><span>Seller's initials</span><span class="box"></span><span lang="ar">توقيع البائع</span></div>
+    <div><span>Purchaser's initials</span><span class="box"></span><span lang="ar">توقيع المشتري</span></div>
+  </div>
+
+  <footer class="doc-foot" style="inset-inline-end:20mm">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>Page <span lang="ar">صفحة</span></b><span data-page></span> / <span data-pages></span></span></div>
+    <div class="bi4">
+      <div><b>{{company.name_en}}</b>{{contact.address_en}}</div>
+      <div><b>Contact</b>T {{contact.phone}} · {{contact.website}}</div>
+      <div lang="ar"><b>تواصل</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi></div>
+      <div lang="ar"><b>{{company.name_ar}}</b>{{contact.address_ar}}</div>
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>

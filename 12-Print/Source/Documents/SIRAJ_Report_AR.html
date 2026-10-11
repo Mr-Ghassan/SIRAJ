@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Report · Arabic</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  /* Mirror of the English report: binding margin on the right, Silk Corner on the top-left (top-end in RTL). */
+  .rc .top { display: flex; justify-content: space-between; align-items: flex-start; flex: none; }
+  .rc .hero { margin-top: 12mm; height: 132mm; border-start-end-radius: 46mm 36mm; overflow: hidden; background: var(--d-linen); flex: none; }
+  .rc .hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+  .rc .title { margin-top: 12mm; }
+  .rc .title .t { font-size: 30pt; line-height: 1.35; font-weight: 400; color: var(--d-ink-strong); margin-top: 3mm; }
+  .rc .title .s { font-size: 12.5pt; font-weight: 300; color: var(--d-ash); margin-top: 3mm; }
+  .rc .en-title { position: absolute; left: var(--m-outer); top: 193mm; direction: ltr; text-align: left; font-family: var(--f-latin); font-size: 17pt; font-weight: 300; line-height: 1.15; color: var(--d-ash); }
+  .rc .meta { --meta-cols: 4; margin-top: auto; margin-bottom: 17mm; padding-top: 4mm; border-top: 0.5pt solid var(--d-rule); }
+
+  .ri .sec { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+  .ri .sec .no { grid-column: span 2; font-family: var(--f-latin); font-size: 30pt; font-weight: 200; line-height: 1; color: var(--d-stone); }
+  .ri .sec .hd { grid-column: span 10; }
+  .ri .kpis { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: var(--gutter); margin-top: 8mm; padding: 5mm 0; border-top: 0.75pt solid var(--d-maroon); border-bottom: 0.5pt solid var(--d-rule); }
+  .ri .kpis > div + div { border-inline-start: 0.5pt solid var(--d-rule-soft); padding-inline-start: 4mm; }
+  .ri .kpi__n { font-family: var(--f-latin); }
+  .ri .kpi__l { font-size: 8pt; line-height: 4.4mm; }
+  .ri table.doc-table { margin-top: 8mm; }
+  .ri .doc-table td .sub { font-size: 7.8pt; }
+  .ri .prog { display: flex; align-items: center; gap: 2.5mm; }
+  .ri .prog .bar { flex: 1; }
+  .ri .prog .p { width: 9mm; text-align: end; }
+  .ri .status { display: inline-flex; align-items: center; gap: 1.5mm; font-size: 8pt; }
+  .ri .status i { width: 1.3mm; height: 1.3mm; transform: rotate(45deg); background: var(--d-stone); }
+  .ri .status.ok i { background: var(--siraj-color-functional-success); }
+  .ri .status.watch i { background: var(--siraj-color-functional-warning); }
+  .ri .cols { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); margin-top: 8mm; }
+  .ri .cols .body-text { grid-column: span 7; columns: 2; column-gap: 6mm; font-size: 9.2pt; line-height: 5.1mm; }
+  .ri .cols .body-text p { break-inside: avoid-column; }
+  .ri .cols .body-text p + p { margin-top: 2.6mm; }
+  .ri .cols .side { grid-column: 9 / span 4; }
+  .ri .callout { font-size: 8.8pt; line-height: 4.8mm; }
+</style>
+</head>
+<body dir="ltr" lang="en" data-preview-eyebrow="SIRAJ · Business documents · Report"
+      data-preview-title="Report — cover &amp; inner page · Arabic"
+      data-preview-note="Right-to-left mirror: binding margin on the right, Silk Corner on the top-left, numerals in Western digits, the same grid and components as the English version."
+      data-preview-cols="2">
+
+<!-- ================================================================ COVER == -->
+<section class="page rc" lang="ar" dir="rtl" data-label="Cover">
+  <div class="top">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="eyebrow-d"><i class="lumen"></i>تقرير ربع سنوي · الربع الثالث 2026</div>
+  </div>
+  <div class="hero"><img src="../../../08-Photography/Library/SIRAJ_Photo_Construction-Site-Dawn_v1.0.jpg" alt="{{demo_projects.noor.ar}} قيد الإنشاء"></div>
+  <div class="title">
+    <div class="eyebrow-d"><i class="lumen"></i>تقدّم أعمال التطوير</div>
+    <div class="t">تقرير تقدّم<br>المشاريع</div>
+    <div class="s">يوليو – سبتمبر 2026 · أربعة مشاريع في مسقط</div>
+  </div>
+  <div class="en-title" lang="en">Portfolio progress<br>report</div>
+  <div class="meta">
+    <div><dt>إعداد</dt><dd>إدارة التطوير</dd></div>
+    <div><dt>مُقدَّم إلى</dt><dd>مجلس الإدارة</dd></div>
+    <div><dt>تاريخ الإصدار</dt><dd>11 أكتوبر 2026</dd></div>
+    <div><dt>التصنيف</dt><dd>سري</dd></div>
+  </div>
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio">{{company.name_ar}} · <bdi dir="ltr">{{contact.website}}</bdi></span></div>
+  </footer>
+</section>
+
+<!-- ============================================================ INNER PAGE == -->
+<section class="page ri" lang="ar" dir="rtl" data-label="Inner page · overview">
+  <header class="run-head">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="rh"><span lang="ar">تقرير تقدّم المشاريع · الربع الثالث 2026</span><i></i><span lang="ar">01 نظرة عامة</span></div>
+  </header>
+
+  <div class="sec">
+    <div class="no">01</div>
+    <div class="hd">
+      <div class="eyebrow-d"><i class="lumen"></i>نظرة عامة على المحفظة</div>
+      <h1 class="h1" style="margin-top:2mm">أربعة مشاريع، برنامج واحد</h1>
+      <p class="lead" style="margin-top:3mm">تقدّمت أعمال الإنشاء في المواقع الأربعة خلال هذا الربع. واكتمل الهيكل الأساسي في {{demo_projects.noor.ar}}، ولا يزال المشروع ملتزمًا بموعد التسليم في {{demo_projects.noor.handover|qar}}.</p>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div><div class="kpi__n">{{demo_projects.noor.units}}<small>+ {{demo_projects.harir.units}}</small></div><div class="kpi__l">وحدة سكنية قيد الإنشاء</div></div>
+    <div><div class="kpi__n">41<small>%</small></div><div class="kpi__l">متوسط التقدّم المرجّح للمحفظة</div></div>
+    <div><div class="kpi__n">72<small>%</small></div><div class="kpi__l">من الوحدات محجوزة أو مُباعة</div></div>
+    <div><div class="kpi__n">4<small>/ 4</small></div><div class="kpi__l">مشاريع ضمن البرنامج الزمني</div></div>
+  </div>
+
+  <table class="doc-table">
+    <thead><tr><th>المشروع</th><th>النوع</th><th class="num">الوحدات</th><th style="width:44mm">نسبة الإنجاز</th><th>التسليم</th><th>الحالة</th></tr></thead>
+    <tbody>
+      <tr><td>{{demo_projects.noor.ar}}<span class="sub">{{demo_projects.noor.location_ar}}</span></td><td>برج سكني</td><td class="num">{{demo_projects.noor.units}}</td><td><div class="prog"><div class="bar" style="--v:58%"><i></i></div><span class="p">58%</span></div></td><td>{{demo_projects.noor.handover|qar}}</td><td><span class="status ok"><i></i>ضمن البرنامج</span></td></tr>
+      <tr><td>{{demo_projects.harir.ar}}<span class="sub">{{demo_projects.harir.location_ar}}</span></td><td>مجمّع فلل فاخرة</td><td class="num">{{demo_projects.harir.units}}</td><td><div class="prog"><div class="bar" style="--v:34%"><i></i></div><span class="p">34%</span></div></td><td>{{demo_projects.harir.handover|qar}}</td><td><span class="status ok"><i></i>ضمن البرنامج</span></td></tr>
+      <tr><td>{{demo_projects.mishkat.ar}}<span class="sub">{{demo_projects.mishkat.location_ar}}</span></td><td>مكاتب تجارية</td><td class="num">—</td><td><div class="prog"><div class="bar" style="--v:41%"><i></i></div><span class="p">41%</span></div></td><td>{{demo_projects.mishkat.handover|qar}}</td><td><span class="status watch"><i></i>مراجعة الواجهات</span></td></tr>
+      <tr><td>{{demo_projects.qandeel.ar}}<span class="sub">{{demo_projects.qandeel.location_ar}}</span></td><td>متعدد الاستخدامات</td><td class="num">—</td><td><div class="prog"><div class="bar" style="--v:12%"><i></i></div><span class="p">12%</span></div></td><td>{{demo_projects.qandeel.handover|qar}}</td><td><span class="status ok"><i></i>أعمال تمهيدية</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="cols">
+    <div class="body-text">
+      <p>في {{demo_projects.noor.ar}} بلغ الهيكل الخرساني الطابق 24 في أغسطس، متقدّمًا أسبوعين على الخطة. واعتُمدت نماذج ألواح الواجهات في سبتمبر وبدأ التصنيع خارج الموقع.</p>
+      <p>أنجزت {{demo_projects.harir.ar}} البنية التحتية للمجموعة الأولى المكوّنة من أربع عشرة فيلا، وتليها أحواض السباحة والأسوار في الربع القادم.</p>
+      <p>تخضع واجهات {{demo_projects.mishkat.ar}} لمراجعة التصميم بعد تغيير المورّد، ويحافظ البرنامج المعدّل على موعد التسليم.</p>
+      <p>بدأت في {{demo_projects.qandeel.ar}} الأعمال التمهيدية وتحويل الخدمات، وتُغلق مناقصات المقاول الرئيسي في نوفمبر.</p>
+    </div>
+    <div class="side">
+      <div class="callout"><b>الربع القادم</b><br>حفل اكتمال الهيكل في {{demo_projects.noor.ar}}، وتجربة تسليم أول فيلا في {{demo_projects.harir.ar}}، وترسية العقد الرئيسي لـ{{demo_projects.qandeel.ar}}.</div>
+      <div class="callout callout--rule mt-1"><b>مخاطر للمتابعة</b><br>توريد الواجهات لـ{{demo_projects.mishkat.ar}}. الإجراء: اعتماد مصدرين لوحدات الزجاج بالاتفاق مع المقاول.</div>
+    </div>
+  </div>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>صفحة</b> <span data-page data-pad></span> / <span data-pages data-pad></span></span></div>
+    <div class="doc-foot__cols"><div><b>{{company.name_ar}}</b>سري · لمجلس الإدارة</div><div></div><div></div><div style="text-align:end"><b>الربع الثالث 2026</b><bdi dir="ltr">{{contact.website}}</bdi></div></div>
+  </footer>
+</section>
+
+</body>
+</html>

@@ -193,6 +193,7 @@
     return { width: w + 'mm', height: h + 'mm', w: w, h: h };
   }
   function pageRule() {
+    if (document.body.hasAttribute('data-flow')) return; // flow documents own their @page rules
     var ps = pageSize();
     var st = document.createElement('style');
     st.textContent = '@page { size: ' + ps.width + ' ' + ps.height + '; margin: 0; }';
@@ -226,9 +227,9 @@
     });
     stage.appendChild(head);
     stage.appendChild(grid);
-    // clear the body but keep template <style>/<script> blocks
+    // clear the body but keep template <style>/<script> blocks and [data-keep] (e.g. shared SVG <defs>)
     Array.prototype.slice.call(document.body.childNodes).forEach(function (n) {
-      if (!(n.nodeType === 1 && /^(STYLE|SCRIPT|LINK)$/.test(n.tagName))) document.body.removeChild(n);
+      if (!(n.nodeType === 1 && (/^(STYLE|SCRIPT|LINK)$/.test(n.tagName) || n.hasAttribute('data-keep')))) document.body.removeChild(n);
     });
     document.body.appendChild(stage);
   }

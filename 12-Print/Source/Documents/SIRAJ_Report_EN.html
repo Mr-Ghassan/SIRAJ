@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Report · English</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  /* Cover: image inside the margins (office- and press-safe), Silk Corner on the top-end corner. */
+  .rc .top { display: flex; justify-content: space-between; align-items: flex-start; flex: none; }
+  .rc .top .tag { text-align: end; }
+  .rc .hero { margin-top: 12mm; height: 132mm; border-start-end-radius: 46mm 36mm; overflow: hidden; background: var(--d-linen); flex: none; }
+  .rc .hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+  .rc .title { margin-top: 12mm; }
+  .rc .title .t { font-size: 32pt; line-height: 1.08; font-weight: 300; letter-spacing: -0.015em; color: var(--d-ink-strong); margin-top: 4mm; }
+  .rc .title .s { font-size: 12pt; font-weight: 300; color: var(--d-ash); margin-top: 3.5mm; }
+  .rc .meta { --meta-cols: 4; margin-top: auto; margin-bottom: 17mm; padding-top: 4mm; border-top: 0.5pt solid var(--d-rule); }
+  .rc .ar-title { position: absolute; right: var(--m-outer); top: 191mm; font-size: 19pt; line-height: 1.35; color: var(--d-ash); text-align: right; }
+
+  .ri .sec { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+  .ri .sec .no { grid-column: span 2; font-size: 30pt; font-weight: 200; line-height: 1; color: var(--d-stone); letter-spacing: -0.02em; }
+  .ri .sec .hd { grid-column: span 10; }
+  .ri .kpis { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: var(--gutter); margin-top: 9mm; padding: 5mm 0; border-top: 0.75pt solid var(--d-maroon); border-bottom: 0.5pt solid var(--d-rule); }
+  .ri .kpis > div + div { border-inline-start: 0.5pt solid var(--d-rule-soft); padding-inline-start: 4mm; }
+  .ri table.doc-table { margin-top: 9mm; }
+  .ri .prog { display: flex; align-items: center; gap: 2.5mm; }
+  .ri .prog .bar { flex: 1; }
+  .ri .prog .p { width: 9mm; text-align: end; font-variant-numeric: tabular-nums; }
+  .ri .status { display: inline-flex; align-items: center; gap: 1.5mm; font-size: 6.6pt; color: var(--d-ink); }
+  .ri .status i { width: 1.3mm; height: 1.3mm; transform: rotate(45deg); background: var(--d-stone); }
+  .ri .status.ok i { background: var(--siraj-color-functional-success); }
+  .ri .status.watch i { background: var(--siraj-color-functional-warning); }
+  .ri .cols { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); margin-top: 9mm; }
+  .ri .cols .body-text { grid-column: span 7; columns: 2; column-gap: 6mm; font-size: 8.4pt; line-height: 4.3mm; }
+  .ri .cols .body-text p { break-inside: avoid-column; }
+  .ri .cols .body-text p + p { margin-top: 2.6mm; }
+  .ri .cols .side { grid-column: 9 / span 4; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Business documents · Report"
+      data-preview-title="Report — cover &amp; inner page · English"
+      data-preview-note="Cover image sits inside the margins with the Silk Corner, so the template prints on office printers; inner pages use the running header, KPI band, data table and two-column text. Project data from brand.config demo projects."
+      data-preview-cols="2">
+
+<!-- ================================================================ COVER == -->
+<section class="page rc" lang="en" dir="ltr" data-label="Cover">
+  <div class="top">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="tag eyebrow-d"><i class="lumen"></i>Quarterly report · Q3 2026</div>
+  </div>
+  <div class="hero"><img src="../../../08-Photography/Library/SIRAJ_Photo_Construction-Site-Dawn_v1.0.jpg" alt="{{demo_projects.noor.en}} under construction"></div>
+  <div class="title">
+    <div class="eyebrow-d"><i class="lumen"></i>Development progress</div>
+    <div class="t">Portfolio progress<br>report</div>
+    <div class="s">July – September 2026 · four developments in Muscat</div>
+  </div>
+  <div class="ar-title" lang="ar">تقرير تقدّم<br>المشاريع</div>
+  <div class="meta">
+    <div><dt>Prepared by</dt><dd>Development Management</dd></div>
+    <div><dt>For</dt><dd>Board of Directors</dd></div>
+    <div><dt>Issued</dt><dd>11 October 2026</dd></div>
+    <div><dt>Classification</dt><dd>Confidential</dd></div>
+  </div>
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio">{{company.name_en}} · {{contact.website}}</span></div>
+  </footer>
+</section>
+
+<!-- ============================================================ INNER PAGE == -->
+<section class="page ri" lang="en" dir="ltr" data-label="Inner page · overview">
+  <header class="run-head">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="rh"><span>Portfolio progress report · Q3 2026</span><i></i><span>01 Overview</span></div>
+  </header>
+
+  <div class="sec">
+    <div class="no">01</div>
+    <div class="hd">
+      <div class="eyebrow-d"><i class="lumen"></i>Portfolio overview</div>
+      <h1 class="h1" style="margin-top:3mm">Four developments, one programme</h1>
+      <p class="lead" style="margin-top:4mm">Construction advanced on all four sites this quarter. {{demo_projects.noor.en}} topped out its core and remains on programme for handover in {{demo_projects.noor.handover}}.</p>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div><div class="kpi__n">{{demo_projects.noor.units}}<small>+ {{demo_projects.harir.units}}</small></div><div class="kpi__l">Residences under construction</div></div>
+    <div><div class="kpi__n">41<small>%</small></div><div class="kpi__l">Weighted progress across the portfolio</div></div>
+    <div><div class="kpi__n">72<small>%</small></div><div class="kpi__l">Residences reserved or sold</div></div>
+    <div><div class="kpi__n">4<small>/ 4</small></div><div class="kpi__l">Projects on programme</div></div>
+  </div>
+
+  <table class="doc-table">
+    <thead><tr><th>Development</th><th>Type</th><th class="num">Units</th><th style="width:44mm">Progress</th><th>Handover</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>{{demo_projects.noor.en}}<span class="sub">{{demo_projects.noor.location_en}}</span></td><td>{{demo_projects.noor.type}}</td><td class="num">{{demo_projects.noor.units}}</td><td><div class="prog"><div class="bar" style="--v:58%"><i></i></div><span class="p">58%</span></div></td><td>{{demo_projects.noor.handover}}</td><td><span class="status ok"><i></i>On programme</span></td></tr>
+      <tr><td>{{demo_projects.harir.en}}<span class="sub">{{demo_projects.harir.location_en}}</span></td><td>{{demo_projects.harir.type}}</td><td class="num">{{demo_projects.harir.units}}</td><td><div class="prog"><div class="bar" style="--v:34%"><i></i></div><span class="p">34%</span></div></td><td>{{demo_projects.harir.handover}}</td><td><span class="status ok"><i></i>On programme</span></td></tr>
+      <tr><td>{{demo_projects.mishkat.en}}<span class="sub">{{demo_projects.mishkat.location_en}}</span></td><td>{{demo_projects.mishkat.type}}</td><td class="num">—</td><td><div class="prog"><div class="bar" style="--v:41%"><i></i></div><span class="p">41%</span></div></td><td>{{demo_projects.mishkat.handover}}</td><td><span class="status watch"><i></i>Façade review</span></td></tr>
+      <tr><td>{{demo_projects.qandeel.en}}<span class="sub">{{demo_projects.qandeel.location_en}}</span></td><td>{{demo_projects.qandeel.type}}</td><td class="num">—</td><td><div class="prog"><div class="bar" style="--v:12%"><i></i></div><span class="p">12%</span></div></td><td>{{demo_projects.qandeel.handover}}</td><td><span class="status ok"><i></i>Enabling works</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="cols">
+    <div class="body-text">
+      <p>At {{demo_projects.noor.en}} the reinforced-concrete core reached level 24 in August, two weeks ahead of the baseline. Façade mock-up panels were approved in September and production has started off-site.</p>
+      <p>{{demo_projects.harir.en}} completed infrastructure for the first cluster of fourteen villas. Pool shells and boundary walls follow in the next quarter.</p>
+      <p>The {{demo_projects.mishkat.en}} façade is under design review after a supplier change; the revised programme protects the {{demo_projects.mishkat.handover}} handover.</p>
+      <p>{{demo_projects.qandeel.en}} began enabling works and utility diversions. Main-contract tenders close in November.</p>
+    </div>
+    <div class="side">
+      <div class="callout"><b>Next quarter</b><br>Topping-out ceremony at {{demo_projects.noor.en}}; first villa handover rehearsal at {{demo_projects.harir.en}}; award of the {{demo_projects.qandeel.en}} main contract.</div>
+      <div class="callout callout--rule mt-1"><b>Risk to watch</b><br>Façade supply for {{demo_projects.mishkat.en}}. Mitigation: dual sourcing of glazing units agreed with the contractor.</div>
+    </div>
+  </div>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>Page</b><span data-page data-pad></span> / <span data-pages data-pad></span></span></div>
+    <div class="doc-foot__cols"><div><b>{{company.name_en}}</b>Confidential · for the Board of Directors</div><div></div><div></div><div style="text-align:end"><b>Q3 2026</b>{{contact.website}}</div></div>
+  </footer>
+</section>
+
+</body>
+</html>
