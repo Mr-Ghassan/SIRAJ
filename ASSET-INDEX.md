@@ -1317,7 +1317,7 @@ Specification: [`12-Print/README.md`](12-Print/README.md)
 |---|---|
 | [SIRAJ_Contract-Cover_SPA-Bilingual_v1.0.pdf](12-Print/PDF/Documents/SIRAJ_Contract-Cover_SPA-Bilingual_v1.0.pdf) | 488 KB |
 | [SIRAJ_Memo_AR_v1.0.pdf](12-Print/PDF/Documents/SIRAJ_Memo_AR_v1.0.pdf) | 47 KB |
-| [SIRAJ_Quotation_EN-AR_v1.0.pdf](12-Print/PDF/Documents/SIRAJ_Quotation_EN-AR_v1.0.pdf) | 497 KB |
+| [SIRAJ_Quotation_EN-AR_v1.0.pdf](12-Print/PDF/Documents/SIRAJ_Quotation_EN-AR_v1.0.pdf) | 496 KB |
 | [SIRAJ_Receipt-Payment-Voucher_EN-AR_v1.0.pdf](12-Print/PDF/Documents/SIRAJ_Receipt-Payment-Voucher_EN-AR_v1.0.pdf) | 74 KB |
 | [SIRAJ_Report_AR_v1.0.pdf](12-Print/PDF/Documents/SIRAJ_Report_AR_v1.0.pdf) | 776 KB |
 | [SIRAJ_Tax-Invoice_EN-AR_v1.0.pdf](12-Print/PDF/Documents/SIRAJ_Tax-Invoice_EN-AR_v1.0.pdf) | 58 KB |
@@ -1344,11 +1344,11 @@ Specification: [`12-Print/README.md`](12-Print/README.md)
 | [SIRAJ_Business-Card_EN-AR-Print_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Business-Card_EN-AR-Print_v1.0.pdf) | 45 KB |
 | [SIRAJ_Business-Card_EN-AR_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Business-Card_EN-AR_v1.0.pdf) | 40 KB |
 | [SIRAJ_Compliments-Slip_Bilingual-Print_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Compliments-Slip_Bilingual-Print_v1.0.pdf) | 35 KB |
-| [SIRAJ_Compliments-Slip_Bilingual_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Compliments-Slip_Bilingual_v1.0.pdf) | 30 KB |
+| [SIRAJ_Compliments-Slip_Bilingual_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Compliments-Slip_Bilingual_v1.0.pdf) | 29 KB |
 | [SIRAJ_Continuation-Sheet_EN-AR_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Continuation-Sheet_EN-AR_v1.0.pdf) | 13 KB |
 | [SIRAJ_Envelope_C4_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Envelope_C4_v1.0.pdf) | 24 KB |
 | [SIRAJ_Envelope_DL_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Envelope_DL_v1.0.pdf) | 24 KB |
-| [SIRAJ_Letterhead_AR_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Letterhead_AR_v1.0.pdf) | 21 KB |
+| [SIRAJ_Letterhead_AR_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Letterhead_AR_v1.0.pdf) | 20 KB |
 | [SIRAJ_Presentation-Folder_Dieline_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Dieline_v1.0.pdf) | 868 KB |
 | [SIRAJ_Presentation-Folder_Flat_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Flat_v1.0.pdf) | 861 KB |
 | [SIRAJ_Presentation-Folder_Print_v1.0.pdf](12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Print_v1.0.pdf) | 846 KB |
@@ -1361,10 +1361,10 @@ Specification: [`12-Print/README.md`](12-Print/README.md)
 |---|---|
 | [SIRAJ_Contract-Cover_SPA-Bilingual_v1.0.png](12-Print/PNG/Documents/SIRAJ_Contract-Cover_SPA-Bilingual_v1.0.png) | 548 KB |
 | [SIRAJ_Memo_AR_v1.0.png](12-Print/PNG/Documents/SIRAJ_Memo_AR_v1.0.png) | 246 KB |
-| [SIRAJ_Quotation_EN-AR_v1.0.png](12-Print/PNG/Documents/SIRAJ_Quotation_EN-AR_v1.0.png) | 559 KB |
+| [SIRAJ_Quotation_EN-AR_v1.0.png](12-Print/PNG/Documents/SIRAJ_Quotation_EN-AR_v1.0.png) | 556 KB |
 | [SIRAJ_Receipt-Payment-Voucher_EN-AR_v1.0.png](12-Print/PNG/Documents/SIRAJ_Receipt-Payment-Voucher_EN-AR_v1.0.png) | 344 KB |
 | [SIRAJ_Report_AR_v1.0.png](12-Print/PNG/Documents/SIRAJ_Report_AR_v1.0.png) | 1.6 MB |
-| [SIRAJ_Tax-Invoice_EN-AR_v1.0.png](12-Print/PNG/Documents/SIRAJ_Tax-Invoice_EN-AR_v1.0.png) | 341 KB |
+| [SIRAJ_Tax-Invoice_EN-AR_v1.0.png](12-Print/PNG/Documents/SIRAJ_Tax-Invoice_EN-AR_v1.0.png) | 340 KB |
 
 </details>
 
@@ -1387,8 +1387,8 @@ Specification: [`12-Print/README.md`](12-Print/README.md)
 | [SIRAJ_Business-Card_Brand_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Business-Card_Brand_v1.0.png) | 528 KB |
 | [SIRAJ_Business-Card_EN-AR-Print_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Business-Card_EN-AR-Print_v1.0.png) | 194 KB |
 | [SIRAJ_Business-Card_EN-AR_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Business-Card_EN-AR_v1.0.png) | 231 KB |
-| [SIRAJ_Compliments-Slip_Bilingual-Print_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Compliments-Slip_Bilingual-Print_v1.0.png) | 118 KB |
-| [SIRAJ_Compliments-Slip_Bilingual_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Compliments-Slip_Bilingual_v1.0.png) | 119 KB |
+| [SIRAJ_Compliments-Slip_Bilingual-Print_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Compliments-Slip_Bilingual-Print_v1.0.png) | 117 KB |
+| [SIRAJ_Compliments-Slip_Bilingual_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Compliments-Slip_Bilingual_v1.0.png) | 117 KB |
 | [SIRAJ_Continuation-Sheet_EN-AR_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Continuation-Sheet_EN-AR_v1.0.png) | 92 KB |
 | [SIRAJ_Envelope_C4_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Envelope_C4_v1.0.png) | 115 KB |
 | [SIRAJ_Envelope_DL_v1.0.png](12-Print/PNG/Stationery/SIRAJ_Envelope_DL_v1.0.png) | 145 KB |
@@ -1479,7 +1479,7 @@ Specification: [`13-Presentations/README.md`](13-Presentations/README.md)
 | [SIRAJ_Presentation_Noor-Residences_AR_08-Construction-timeline_v1.0.png](13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_AR_08-Construction-timeline_v1.0.png) | 435 KB |
 | [SIRAJ_Presentation_Noor-Residences_AR_09-Payment-plan_v1.0.png](13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_AR_09-Payment-plan_v1.0.png) | 116 KB |
 | [SIRAJ_Presentation_Noor-Residences_AR_10-Quote_v1.0.png](13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_AR_10-Quote_v1.0.png) | 56 KB |
-| [SIRAJ_Presentation_Noor-Residences_AR_11-Contact_v1.0.png](13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_AR_11-Contact_v1.0.png) | 417 KB |
+| [SIRAJ_Presentation_Noor-Residences_AR_11-Contact_v1.0.png](13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_AR_11-Contact_v1.0.png) | 416 KB |
 
 </details>
 
@@ -1587,7 +1587,7 @@ Specification: [`14-Property-Marketing/README.md`](14-Property-Marketing/README.
 | [SIRAJ_Brochure_Noor-Residences_AR-p13_v1.0.png](14-Property-Marketing/01-Brochure/PNG/AR/SIRAJ_Brochure_Noor-Residences_AR-p13_v1.0.png) | 167 KB |
 | [SIRAJ_Brochure_Noor-Residences_AR-p14_v1.0.png](14-Property-Marketing/01-Brochure/PNG/AR/SIRAJ_Brochure_Noor-Residences_AR-p14_v1.0.png) | 3.4 MB |
 | [SIRAJ_Brochure_Noor-Residences_AR-p15_v1.0.png](14-Property-Marketing/01-Brochure/PNG/AR/SIRAJ_Brochure_Noor-Residences_AR-p15_v1.0.png) | 134 KB |
-| [SIRAJ_Brochure_Noor-Residences_AR-p16_v1.0.png](14-Property-Marketing/01-Brochure/PNG/AR/SIRAJ_Brochure_Noor-Residences_AR-p16_v1.0.png) | 781 KB |
+| [SIRAJ_Brochure_Noor-Residences_AR-p16_v1.0.png](14-Property-Marketing/01-Brochure/PNG/AR/SIRAJ_Brochure_Noor-Residences_AR-p16_v1.0.png) | 780 KB |
 
 </details>
 
@@ -1627,7 +1627,7 @@ Specification: [`14-Property-Marketing/README.md`](14-Property-Marketing/README.
 | File | Size |
 |---|---|
 | [SIRAJ_Fact-Sheet_Noor-Residences_AR-p01_v1.0.png](14-Property-Marketing/02-Fact-Sheet/PNG/SIRAJ_Fact-Sheet_Noor-Residences_AR-p01_v1.0.png) | 1.9 MB |
-| [SIRAJ_Fact-Sheet_Noor-Residences_AR-p02_v1.0.png](14-Property-Marketing/02-Fact-Sheet/PNG/SIRAJ_Fact-Sheet_Noor-Residences_AR-p02_v1.0.png) | 365 KB |
+| [SIRAJ_Fact-Sheet_Noor-Residences_AR-p02_v1.0.png](14-Property-Marketing/02-Fact-Sheet/PNG/SIRAJ_Fact-Sheet_Noor-Residences_AR-p02_v1.0.png) | 364 KB |
 
 </details>
 
@@ -1635,7 +1635,7 @@ Specification: [`14-Property-Marketing/README.md`](14-Property-Marketing/README.
 
 | File | Size |
 |---|---|
-| [SIRAJ_Fact-Sheet_Noor-Residences_AR_v1.0.pdf](14-Property-Marketing/02-Fact-Sheet/SIRAJ_Fact-Sheet_Noor-Residences_AR_v1.0.pdf) | 624 KB |
+| [SIRAJ_Fact-Sheet_Noor-Residences_AR_v1.0.pdf](14-Property-Marketing/02-Fact-Sheet/SIRAJ_Fact-Sheet_Noor-Residences_AR_v1.0.pdf) | 623 KB |
 
 </details>
 
@@ -2669,7 +2669,7 @@ Specification: [`99-Archive/README.md`](99-Archive/README.md)
 | [SIRAJ_Presentation_Noor-Residences_EN_18-Payment-plan_v1.0.png](99-Archive/English-Dormant/13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_EN_18-Payment-plan_v1.0.png) | 125 KB |
 | [SIRAJ_Presentation_Noor-Residences_EN_19-Delivery-team_v1.0.png](99-Archive/English-Dormant/13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_EN_19-Delivery-team_v1.0.png) | 406 KB |
 | [SIRAJ_Presentation_Noor-Residences_EN_20-Quote_v1.0.png](99-Archive/English-Dormant/13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_EN_20-Quote_v1.0.png) | 76 KB |
-| [SIRAJ_Presentation_Noor-Residences_EN_21-Contact_v1.0.png](99-Archive/English-Dormant/13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_EN_21-Contact_v1.0.png) | 415 KB |
+| [SIRAJ_Presentation_Noor-Residences_EN_21-Contact_v1.0.png](99-Archive/English-Dormant/13-Presentations/Exports/PNG/SIRAJ_Presentation_Noor-Residences_EN_21-Contact_v1.0.png) | 414 KB |
 
 </details>
 
@@ -2753,7 +2753,7 @@ Specification: [`99-Archive/README.md`](99-Archive/README.md)
 | [SIRAJ_Brochure_Noor-Residences_EN-p13_v1.0.png](99-Archive/English-Dormant/14-Property-Marketing/01-Brochure/PNG/EN/SIRAJ_Brochure_Noor-Residences_EN-p13_v1.0.png) | 167 KB |
 | [SIRAJ_Brochure_Noor-Residences_EN-p14_v1.0.png](99-Archive/English-Dormant/14-Property-Marketing/01-Brochure/PNG/EN/SIRAJ_Brochure_Noor-Residences_EN-p14_v1.0.png) | 3.4 MB |
 | [SIRAJ_Brochure_Noor-Residences_EN-p15_v1.0.png](99-Archive/English-Dormant/14-Property-Marketing/01-Brochure/PNG/EN/SIRAJ_Brochure_Noor-Residences_EN-p15_v1.0.png) | 149 KB |
-| [SIRAJ_Brochure_Noor-Residences_EN-p16_v1.0.png](99-Archive/English-Dormant/14-Property-Marketing/01-Brochure/PNG/EN/SIRAJ_Brochure_Noor-Residences_EN-p16_v1.0.png) | 801 KB |
+| [SIRAJ_Brochure_Noor-Residences_EN-p16_v1.0.png](99-Archive/English-Dormant/14-Property-Marketing/01-Brochure/PNG/EN/SIRAJ_Brochure_Noor-Residences_EN-p16_v1.0.png) | 802 KB |
 
 </details>
 
