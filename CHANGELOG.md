@@ -15,7 +15,8 @@ The first complete release of the SIRAJ Real Estate Development identity, design
 - **Design system:** 182 design tokens exported to CSS, SCSS, JS/TS, Tailwind, Swift and Kotlin; base CSS; UI component library; example screens.
 - **Applications:** social media system, stationery and business documents, presentation system (HTML, PDF and PPTX), property marketing, outdoor and mockups.
 - **Motion:** motion principles and tokens, a deterministic renderer, the official intro (16:9, 9:16, 1:1, alpha and bilingual), the modular outro, 5 signature transitions, a motion component library, and optional sound design.
-- **Brand guidelines:** a document of about 75 pages (PDF and HTML), plus governance and the brand checklist.
+- **Brand guidelines:** an 80-page document (PDF and HTML), plus governance and the brand checklist.
+- **Client confirmations (2026-10-11):** colours approved; website sirajproperties.net and Instagram @sirajproperties; Founding Project named «نور · Noor»; people rule: women only in hijab with modest dress, a mixed Omani and international cast, and Omani men in dishdasha and massar (never kumma or ghutra). The affected imagery was regenerated and all dependent assets were rebuilt.
 
 ### Open items before public launch
 - Confirm the remaining placeholder data (phone, address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.

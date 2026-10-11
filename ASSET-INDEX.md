@@ -2668,7 +2668,7 @@ Specification: [`19-Templates/README.md`](19-Templates/README.md)
 | [SIRAJ_Brand-Guidelines_p39.jpg](20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p39.jpg) | 107 KB |
 | [SIRAJ_Brand-Guidelines_p40.jpg](20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p40.jpg) | 54 KB |
 | [SIRAJ_Brand-Guidelines_p41.jpg](20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p41.jpg) | 129 KB |
-| [SIRAJ_Brand-Guidelines_p42.jpg](20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p42.jpg) | 54 KB |
+| [SIRAJ_Brand-Guidelines_p42.jpg](20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p42.jpg) | 75 KB |
 | [SIRAJ_Brand-Guidelines_p43.jpg](20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p43.jpg) | 98 KB |
 | [SIRAJ_Brand-Guidelines_p44.jpg](20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p44.jpg) | 21 KB |
 | [SIRAJ_Brand-Guidelines_p45.jpg](20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p45.jpg) | 34 KB |
@@ -2715,7 +2715,7 @@ Specification: [`19-Templates/README.md`](19-Templates/README.md)
 | File | Size |
 |---|---|
 | [guidelines.css](20-Brand-Guidelines/source/guidelines.css) | 16 KB |
-| [siraj-brand-guidelines.html](20-Brand-Guidelines/source/siraj-brand-guidelines.html) | 340 KB |
+| [siraj-brand-guidelines.html](20-Brand-Guidelines/source/siraj-brand-guidelines.html) | 341 KB |
 
 </details>
 
