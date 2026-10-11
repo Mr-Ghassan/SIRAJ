@@ -1,8 +1,10 @@
 # 02 · Colour — SIRAJ Colour System v1.0
 
+> ✅ **Status: APPROVED** by SIRAJ on 2026-10-11 (HEX, RGB, CMYK, Pantone).
+
 The four official colours are taken directly from the master artboards (`Logo.ai`, artboard 5). Every other colour is an extension built around them.
 
-| Tier | Name | HEX | RGB | CMYK (FOGRA39 start) | Pantone (nearest — verify) | Role |
+| Tier | Name | HEX | RGB | CMYK (FOGRA39) | Pantone | Role |
 |---|---|---|---|---|---|---|
 | Official | **SIRAJ Maroon** | `#602733` | 96 39 51 | 34 89 58 47 | 7421 C · alt. 504 C | Primary: logo, headlines, key surfaces |
 | Official | **SIRAJ Deep** | `#2C0F12` | 44 15 18 | 50 85 70 80 | 4975 C | Dark environment, gradient base |
@@ -22,7 +24,7 @@ The four official colours are taken directly from the master artboards (`Logo.ai
 
 The official black artboard colour is `#020202` (logo on black).
 
-> **Print approval:** the CMYK values are starting points for ISO Coated v2 (FOGRA39), and the Pantone references are nearest matches. Approve both against a physical drawdown or hard proof before the first run. Maroon shifts easily toward brown or purple on uncoated stock.
+> **Print production:** the values are approved. As standard practice, match each new print supplier's output to a physical drawdown of these references.
 
 ## Files
 

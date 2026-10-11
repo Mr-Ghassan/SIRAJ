@@ -18,8 +18,7 @@ The first complete release of the SIRAJ Real Estate Development identity, design
 - **Brand guidelines:** a document of about 75 pages (PDF and HTML), plus governance and the brand checklist.
 
 ### Open items before public launch
-- Replace PLACEHOLDER contact data in `00-Brand-Foundation/brand.config.json` and rebuild.
+- Confirm the remaining placeholder data (phone, address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.
 - Approve the proposed brand line «Light, built. · نورٌ يُبنى».
-- Verify CMYK and Pantone values on physical proofs.
 - Replace the AI-generated concept imagery with commissioned project photography and CGI.
 - Commission a bespoke Arabic wordmark (recommended v1.1).

@@ -112,9 +112,9 @@ Individual targets are `build:tokens`, `build:logos`, `build:ui`, `build:social`
 ## Status and notes
 
 - ✅ **Official v1.0.** The logo geometry is unchanged from the supplied master.
-- ⚠️ Contact details in `brand.config.json` are **placeholders** until confirmed.
+- ✅ Website **sirajproperties.net** and Instagram **@sirajproperties** are confirmed. The phone, address and CR details in `brand.config.json` are still placeholders.
 - ⚠️ Photography in `08-Photography/Library` and the campaign visuals are **AI-generated concept imagery** (ElevenLabs/Seedream), used to demonstrate the art direction. Replace them with commissioned photography or CGI before public use.
-- ⚠️ CMYK and Pantone values must be approved on physical proofs.
+- ✅ Colour values (HEX, RGB, CMYK, Pantone) are **approved**.
 - 💡 Proposed brand line *«Light, built. · نورٌ يُبنى»* is pending approval.
 - 💡 A bespoke Arabic wordmark is recommended for v1.1.
 

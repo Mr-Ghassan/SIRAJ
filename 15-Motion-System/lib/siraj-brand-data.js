@@ -1,6 +1,6 @@
 /* Generated from 00-Brand-Foundation/brand.config.json — rebuild with: node tools/build-motion-data.js */
 (function(g){g.SIRAJ_BRAND={
- "$note": "Single source for company details used by templates. Values marked PLACEHOLDER must be replaced with confirmed details before any public release, then rebuild.",
+ "$note": "Single source for company details used by templates. Fields marked PLACEHOLDER must be replaced before public release, then rebuild. Website and Instagram are confirmed.",
  "company": {
   "name_en": "SIRAJ Real Estate Development",
   "name_ar": "سراج للتطوير العقاري",
@@ -11,10 +11,10 @@
   "country_ar": "سلطنة عُمان"
  },
  "contact": {
-  "website": "siraj.om",
-  "website_status": "PLACEHOLDER",
-  "email": "info@siraj.om",
-  "email_status": "PLACEHOLDER",
+  "website": "sirajproperties.net",
+  "website_status": "CONFIRMED",
+  "email": "info@sirajproperties.net",
+  "email_status": "Domain confirmed (sirajproperties.net); mailbox name to be confirmed",
   "phone": "+968 2400 0000",
   "phone_status": "PLACEHOLDER",
   "whatsapp": "+968 9000 0000",
@@ -22,8 +22,9 @@
   "address_ar": "الخوير، مسقط، سلطنة عُمان",
   "po_box": "P.O. Box 000, P.C. 100",
   "cr_number": "CR 0000000",
-  "social_handle": "@siraj.om",
-  "social_status": "PLACEHOLDER"
+  "social_handle": "@sirajproperties",
+  "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES",
+  "instagram": "https://instagram.com/sirajproperties"
  },
  "brand_line": {
   "en": "Light, built.",
@@ -41,7 +42,10 @@
    "units": 168,
    "floors": 24,
    "handover": "Q4 2027",
-   "from_price_omr": 145000
+   "from_price_omr": 145000,
+   "official_name_en": "Noor",
+   "official_name_ar": "نور",
+   "status": "OFFICIAL NAME — The Founding Project. Other details (units, floors, prices, dates) are illustrative until confirmed."
   },
   "harir": {
    "en": "Harir Villas",

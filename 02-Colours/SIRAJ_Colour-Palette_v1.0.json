@@ -423,5 +423,6 @@
       ]
     ]
   },
-  "note": "CMYK values are FOGRA39 (ISO Coated v2) starting points; Pantone references are nearest-match recommendations. Approve both against a physical drawdown / proof before first print run."
+  "note": "Approved values. For each new print supplier, match CMYK/Pantone to a physical drawdown as standard production practice.",
+  "status": "APPROVED — colour values (HEX, RGB, CMYK, Pantone) approved by SIRAJ, 2026-10-11."
 }
