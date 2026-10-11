@@ -6,15 +6,17 @@
 <!--
   SIRAJ signature transitions. Each is a pure function of progress p ∈ [0,1] from scene A to scene B.
   ?type=sweep|fold|ribbon|arch|curtain  &a=<image> &b=<image>  — demo timeline: hold A 0.4 s · transition · hold B.
-  Durations (motion tokens): sweep 1.2 s (cinematic) · fold 1.0 s · ribbon 0.8 s · arch 1.2 s · curtain 1.2 s.
+  Durations (motion tokens): sweep 1.2 s (cinematic) · fold 1.0 s · ribbon 1.0 s · arch 1.2 s · curtain 1.2 s.
+  All silk is real: photographed silk (06-SIRAJ-Silk/Stills) for the sweep band, fold flap and curtain edge, and filmed
+  silk footage (06-SIRAJ-Silk/Footage, keyed ribbon pass) for the ribbon and arch transitions.
 -->
 <link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
-<script src="../../06-SIRAJ-Silk/engine/siraj-silk.js"></script>
 <script src="../lib/siraj-motion.js"></script>
+<script src="../lib/siraj-footage.js"></script>
 <style>
   html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #170608; }
-  .scene, canvas, svg.ov { position: absolute; inset: 0; width: 100%; height: 100%; }
-  svg.ov { z-index: 3; } canvas { z-index: 4; } .label { z-index: 5; }
+  .scene, #rib, svg.ov { position: absolute; inset: 0; width: 100%; height: 100%; }
+  svg.ov { z-index: 3; } #rib { z-index: 4; object-fit: cover; } .label { z-index: 5; }
   .scene img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .band { position: absolute; background-size: cover; background-position: center; pointer-events: none; }
   .label { position: absolute; left: 72px; bottom: 56px; font: 500 15px/1 Jost; letter-spacing: .24em; text-transform: uppercase; color: #F7F2ED; opacity: .9; display: flex; align-items: center; gap: 14px; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
@@ -26,7 +28,7 @@
 <div class="scene" id="B"><img id="imgB"></div>
 <div class="band" id="band"></div>
 <svg class="ov" id="ov" xmlns="http://www.w3.org/2000/svg"></svg>
-<canvas id="fg"></canvas>
+<video id="rib" muted playsinline></video>
 <div class="label" id="label"></div>
 <script>
 const M = SirajMotion, E = M.EASE;
@@ -37,31 +39,37 @@ document.getElementById('imgA').src = LIB + (q.get('a') || 'SIRAJ_Photo_Resident
 document.getElementById('imgB').src = LIB + (q.get('b') || 'SIRAJ_Photo_Villa-Community-Dusk_v1.0.jpg');
 const NAMES = { sweep: 'Silk Sweep', fold: 'Silk Fold', ribbon: 'Ribbon Pass', arch: 'Architectural Reveal', curtain: 'Curtain Reveal' };
 document.getElementById('label').innerHTML = `<i></i>${NAMES[TYPE]}`;
-const DUR = { sweep: 1.2, fold: 1.0, ribbon: 0.8, arch: 1.2, curtain: 1.2 }[TYPE];
+const DUR = { sweep: 1.2, fold: 1.0, ribbon: 1.0, arch: 1.2, curtain: 1.2 }[TYPE];
 const T0 = 0.5;
 const W = innerWidth, H = innerHeight;
 const A = document.getElementById('A'), B = document.getElementById('B'), band = document.getElementById('band'), ov = document.getElementById('ov');
-const silk = new SirajSilk(document.getElementById('fg'), { background: 'transparent' });
-silk.canvas.width = W; silk.canvas.height = H;
-window.ready = Promise.all([...document.images].map((i) => i.decode()));
+const FMT = H > W ? '9x16' : '16x9';
+const rib = SirajFootage.ribbon(document.getElementById('rib'), { fmt: FMT });
+const CLIP = SirajFootage.PASS[FMT];
+window.ready = Promise.all([...document.images].map((i) => i.decode()).concat(rib.ready));
 const DRAPE = '../../06-SIRAJ-Silk/Stills/Drape-Lumen/SIRAJ_Silk_Drape-Lumen_16x9_web_v1.0.webp';
+const FALL = '../../06-SIRAJ-Silk/Stills/Drape-Fall/SIRAJ_Silk_Drape-Fall_9x16_web_v1.0.webp';
 ov.setAttribute('viewBox', `0 0 ${W} ${H}`);
 
 // curved silk edge x(y): a gentle S so the boundary reads as fabric, never a hard wipe
 const edge = (x0, amp, phase = 0) => { const pts = []; for (let i = 0; i <= 24; i++) { const y = (i / 24) * H; pts.push([x0 + amp * Math.sin((i / 24) * Math.PI * 1.2 + phase) - amp * 0.3 * (i / 24), y]); } return pts; };
 const pathFrom = (pts, closeRight) => 'M' + pts.map((p) => p.map((v) => v.toFixed(1)).join(',')).join('L') + (closeRight ? `L${W + 400},${H} L${W + 400},0 Z` : `L-400,${H} L-400,0 Z`);
 
-window.seek = (t) => {
+window.seek = async (t) => {
   const pr = M.clamp((t - T0) / DUR);
   A.style.cssText = ''; B.style.cssText = ''; band.style.cssText = 'display:none'; ov.innerHTML = '';
-  let ribbons = [];
+  let pass = null;   // [clip progress 0..1, css transform] when the real ribbon footage is on screen
   if (TYPE === 'sweep') {
     // a broad silk plane crosses the frame; B lies behind its trailing edge
     const p = E.reveal(pr);
     const x = M.lerp(-0.25 * W, 1.3 * W, p);
     B.style.clipPath = `path('${pathFrom(edge(x, W * 0.08, 0.4), false)}')`;
-    const head = M.lerp(0, 1.0, p);
-    ribbons = pr > 0 && pr < 1 ? [{ absolute: false, points: [[x / W * 2 - 1 - 0.05, -1.5, 0], [x / W * 2 - 1 + 0.02, -0.5, 0.25], [x / W * 2 - 1 - 0.04, 0.4, -0.2], [x / W * 2 - 1 + 0.05, 1.5, 0]].map(([a, b, c]) => [a, b, c]), width: 0.62, twist: [0.25, 0.55, 0.6, 0.1], wave: [0.03, 1.0, 0.3], exposure: 1.25, segments: 260 }] : [];
+    // the plane itself: a band of photographed silk riding just ahead of the edge
+    if (pr > 0 && pr < 1) {
+      const bw = W * 0.2, L = edge(x, W * 0.08, 0.4), R = edge(x + bw, W * 0.08, 0.4), x0 = x - W * 0.12;
+      const d = 'M' + L.map(([px, py]) => `${(px - x0).toFixed(1)},${py.toFixed(1)}`).join('L') + 'L' + R.reverse().map(([px, py]) => `${(px - x0).toFixed(1)},${py.toFixed(1)}`).join('L') + 'Z';
+      band.style.cssText = `display:block;left:${x0}px;top:0;width:${bw + W * 0.24}px;height:${H}px;background-image:url(${FALL});z-index:2;clip-path:path('${d}')`;
+    }
     B.style.transform = `scale(${1.04 - 0.04 * E.drape(M.clamp(pr * 1.1))})`;
   } else if (TYPE === 'fold') {
     // A folds away along a diagonal crease that travels from the lower-end corner; the folded flap shows silk
@@ -70,13 +78,13 @@ window.seek = (t) => {
     const c1 = [W - d, H], c2 = [W, H - d * 0.9];
     A.style.clipPath = `path('M0,0 L${W},0 L${c2[0]},${c2[1]} Q${W - d * 0.45},${H - d * 0.38} ${c1[0]},${c1[1]} L0,${H} Z')`;
     const flapW = Math.min(d, (W + H) * 0.3) * (1 - p * 0.6);
-    ov.innerHTML = `<defs><linearGradient id="fl" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#170608"/><stop offset=".38" stop-color="#602733"/><stop offset=".56" stop-color="#C79A9C"/><stop offset=".68" stop-color="#81404C"/><stop offset="1" stop-color="#45161F"/></linearGradient></defs>
+    // the folded flap is photographed silk, its sheen running along the crease
+    ov.innerHTML = `<defs><pattern id="fl" patternUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}"><image href="${DRAPE}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="xMidYMid slice"/></pattern></defs>
       <path d="M${c1[0]},${c1[1]} Q${W - d * 0.45},${H - d * 0.38} ${c2[0]},${c2[1]} L${c2[0] - flapW * 0.9},${c2[1] - flapW * 0.25} Q${W - d * 0.45 - flapW * 0.8},${H - d * 0.38 - flapW * 0.6} ${c1[0] - flapW * 0.25},${c1[1] - flapW * 0.9} Z" fill="url(#fl)" opacity="${pr > 0 && pr < 1 ? 1 : 0}"/>`;
     B.style.zIndex = 0; A.style.zIndex = 1;
   } else if (TYPE === 'ribbon') {
     // a slim ribbon passes through; the cut happens at its midpoint, softened by a 1.04 → 1.0 settle
-    const head = M.lerp(0, 2.0, E.glide(pr));
-    ribbons = [{ points: [[-1.6, -0.9, 0.3], [-0.8, -0.3, -0.2], [0.0, 0.05, 0.35], [0.8, 0.3, -0.2], [1.6, 0.9, 0]], width: 0.16, range: [M.clamp(head - 0.9), M.clamp(head)], fade: 0.06, exposure: 1.3, twist: [0.6, 2.2, 0.8, 0.2], segments: 300 }];
+    pass = [E.glide(pr), ''];
     const k = M.seg(pr, 0.42, 0.2, E.flow);
     B.style.opacity = k; B.style.transform = `scale(${1.04 - 0.04 * E.drape(M.clamp((pr - 0.42) / 0.58))})`;
   } else if (TYPE === 'arch') {
@@ -90,8 +98,7 @@ window.seek = (t) => {
     }
     B.style.clipPath = `path('${d || 'M0,0'}')`;
     B.style.transform = `scale(${1.04 - 0.04 * E.drape(pr)})`;
-    const head = M.lerp(0, 2.0, E.glide(pr));
-    ribbons = [{ points: [[-1.7, 0.2, 0.2], [-0.8, -0.15, -0.2], [0.0, 0.1, 0.3], [0.8, -0.1, -0.2], [1.7, 0.25, 0]], width: 0.08, range: [M.clamp(head - 1.0), M.clamp(head)], fade: 0.08, exposure: 1.35, twist: [0.4, 1.6, 0.8, 0.2], segments: 300 }];
+    pass = [E.glide(pr), ''];             // the same real ribbon flows through the opening columns
   } else if (TYPE === 'curtain') {
     // A lifts upward; its lower edge is a soft drape whose silk band catches the light (minimal — never theatrical)
     const p = E.reveal(pr);
@@ -103,8 +110,10 @@ window.seek = (t) => {
     band.style.cssText = `display:block;left:0;width:${W}px;top:${y - bh * 0.15}px;height:${bh}px;background-image:url(${DRAPE});z-index:2;clip-path:path('${(() => { let s = `M0,${bh * 0.15 + amp * Math.sin(pr * 3)}`; for (let i = 0; i <= 24; i++) { const x = (i / 24) * W; s += ` L${x.toFixed(1)},${(bh * 0.15 + amp * Math.sin((i / 24) * Math.PI * 2 + pr * 3)).toFixed(1)}`; } return s + ` L${W},${bh} L0,${bh} Z`; })()}')`;
     B.style.transform = `scale(${1.04 - 0.04 * E.drape(pr)})`;
   }
-  silk.set({ background: 'transparent', ribbons, exposure: 0.84, light: [0.55, 0.75, 0.62] });
-  silk.render(t);
+  // real silk footage: the keyed ribbon pass, time-mapped onto the transition
+  const v = rib.video;
+  if (pass && pr > 0 && pr < 1) { v.style.display = 'block'; v.style.transform = pass[1]; await rib.at(M.lerp(CLIP[0], CLIP[1], pass[0])); }
+  else v.style.display = 'none';
 };
 </script>
 </body>

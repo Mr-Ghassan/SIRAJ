@@ -70,7 +70,7 @@ body { width: max-content; }
 .bg, .bg-photo, .bg-still { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .scrim { position: absolute; inset: 0; pointer-events: none; }
 .horizon { position: absolute; left: 0; width: 100%; height: auto; }
-.horizon-fill { position: absolute; left: 0; right: 0; bottom: 0; background: var(--silk-ground); }
+.horizon-fill { position: absolute; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, rgba(80,30,37,0) 0, #501E25 140px, #3A151B 100%); } /* continues the real silk Horizon photo below its edge */
 [dir="rtl"] .horizon, [dir="rtl"] .mirror { transform: scaleX(-1); }
 .element { position: absolute; pointer-events: none; }
 

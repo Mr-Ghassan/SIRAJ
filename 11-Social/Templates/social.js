@@ -245,7 +245,7 @@
       const edge = ct - (D.horizonGap != null ? D.horizonGap : S5 * 1.1);
       const itop = edge - (D.horizonEdge || 0.70) * ih;
       Object.assign(img.style, { width: iw + 'px', height: ih + 'px', left: (W - iw) / 2 + 'px', top: itop + 'px' });
-      $('.horizon-fill').style.top = (itop + ih - 4) + 'px';
+      $('.horizon-fill').style.top = (itop + ih - 140) + 'px';
     }
     const sc = cv.querySelector('.scrim');
     if (D.overlay === 'scrim' && sc) {

@@ -4,7 +4,7 @@
 
 | Time | Action |
 |---|---|
-| 0.0 – 2.6 | A slim silk ribbon passes from the end side back toward the start (the mirror of the intro). |
+| 0.0 – 2.6 | A **real** silk ribbon (filmed footage, mirrored) passes from the end side back toward the start, the mirror of the intro. |
 | 0.55 – 2.1 | Behind it, the wordmark resolves through a wipe from the end side, unblurring and settling (DRAPE). |
 | 1.9 – 2.8 | A stone hairline draws from the centre (FLOW). |
 | 2.15 → | Supporting details settle in, with 120 ms stagger. |

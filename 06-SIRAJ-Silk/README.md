@@ -2,9 +2,18 @@
 
 > Silk is a **behaviour**, not a texture. It **reveals, frames, connects, guides and transitions**, and then it leaves space for the architecture.
 
+## Real silk only (rule since 2026-10-11)
+
+**Every silk background is a photograph of real silk fabric, never a graphic or a CG render.** This applies to stills, posts, slides, print, UI and the backgrounds of motion pieces. Moving silk in the intro, outro and transitions is **real silk footage**: a silk ribbon filmed on a chroma-key screen and keyed to an alpha channel (`Footage/`).
+
+- **Source:** AI photo and video generation, briefed as studio photography of real wine-maroon silk satin. Generation runs through the connected creative tools: ElevenLabs Seedream 5 Pro for stills, Seedance 2.5 for footage and BiRefNet v2 for cut-outs. Every frame is checked for real fabric texture, hems, weight and palette.
+- **Import:** `python3 tools/silk-photo-import.py <Formation> <landscape.png> <portrait.png> [grade]`. This blends in the SIRAJ Silk Grade and writes the four ratios plus web WebP.
+- **Archive:** the earlier CG engine stills are kept for reference only in `99-Archive/Silk-CG-v1.0/`. Do not use them in communications.
+- The engine below remains the **design tool** for blocking compositions and art-directing new photography. Its output is not a deliverable.
+
 ## The SIRAJ Silk Engine (`engine/siraj-silk.js`)
 
-The engine is a proprietary, dependency-free WebGL2 renderer for art-directed maroon silk. It powers the stills, the backgrounds, the web hero option, and every motion piece (intro, outro and transitions).
+The engine is a proprietary, dependency-free WebGL2 renderer for art-directed maroon silk. It is now the **previs tool**: use it to block a silk gesture, then brief and generate the real photograph or footage that matches it.
 
 - **DRAPE** is a full-frame silk surface. It is a height field built from long tension waves, creased folds (a smooth-abs crease) and folds converging on a pinch point, shaded per pixel.
 - **RIBBON** is a continuous 3D band on a Catmull–Rom spline. It has a travelling wave, a twist profile, a width taper, and a visible `range` that lets the ribbon *travel* through a frame.
@@ -24,7 +33,7 @@ The engine is a proprietary, dependency-free WebGL2 renderer for art-directed ma
 
 To preview a preset, open `engine/stage.html?preset=drape-lumen&w=1600&h=900&t=1.5`.
 
-## Official formations (`engine/presets.js`, stills in `Stills/`)
+## Official formations (real silk photographs in `Stills/`; previs presets in `engine/presets.js`)
 
 | Formation | Concept | Use |
 |---|---|---|
@@ -39,7 +48,7 @@ To preview a preset, open `engine/stage.html?preset=drape-lumen&w=1600&h=900&t=1
 | **Gateway** | Two silk forms framing an opening | Project reveals, entrances |
 | **Wrap** | A spiral ribbon wrapping a vertical axis | Composited around towers |
 
-Each formation is supplied at 16:9 (3840×2160), 9:16, 1:1 and 4:5, as JPG (q92) plus web WebP. Transparent PNG overlays are in `Stills/Alpha/`. Rebuild with `node tools/build-silk.js [preset]`.
+Each formation is supplied at 16:9 (3840×2160), 9:16, 1:1 and 4:5, as JPG (q92) plus web WebP, all photographed silk. Transparent PNG cut-outs of the real silk are in `Stills/Alpha/`. Import new photography with `tools/silk-photo-import.py`. The CG previs renders go only to the archive (`npm run build:silk-cg`).
 
 ## Rules: how much, where, how
 

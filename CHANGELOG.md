@@ -20,6 +20,13 @@ The first complete release of the SIRAJ Real Estate Development identity, design
 
 - **Language policy (2026-10-11): Arabic only.** All communications for SIRAJ and the Founding Project are Arabic. English is dormant, kept in `99-Archive/English-Dormant/`, until a freehold project open to foreign ownership. Added Arabic editions of every motion component, Arabic-default outros, and an Arabic RTL PowerPoint template (`tools/pptx-arabize.py`).
 
+- **Real silk only (2026-10-11).** Every silk background is now a photograph of real silk fabric, never a graphic or a CG render.
+  - **Stills:** the 11 formations in `06-SIRAJ-Silk/Stills` (4 ratios plus web) and the 6 alpha cut-outs are real silk photography. Imported with `tools/silk-photo-import.py`; cut-outs made with BiRefNet v2.
+  - **Footage:** the intro, outro and Ribbon / Arch transitions use real silk footage, a ribbon filmed on chroma green and keyed to VP9 + alpha (`06-SIRAJ-Silk/Footage`, `tools/silk-footage-key.sh`, `15-Motion-System/lib/siraj-footage.js`).
+  - **Transitions:** the Sweep band and Fold flap are photographed silk.
+  - **Posts and long formats:** the Project Siraj façade and hero posts use real silk cut-outs, and hoardings and the sales-centre wall carry one continuous real silk ribbon.
+  - **Archive:** the CG engine stills are kept for reference only in `99-Archive/Silk-CG-v1.0`. The engine remains as a previs tool (`npm run build:silk-cg` writes only to the archive).
+
 ### Open items before public launch
 - Confirm the remaining placeholder data (phone, address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.
 - Approve the proposed brand line «Light, built. · نورٌ يُبنى».

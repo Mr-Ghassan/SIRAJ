@@ -9,7 +9,7 @@
 | **FLOW** | Movement enters with continuous momentum | `easing.flow` cubic-bezier(.45,.05,.15,1) |
 | **DRAPE** | Elements settle like falling fabric, never stopping mechanically | `easing.drape` cubic-bezier(.16,1,.3,1) · spring `drape` ζ≈1.0 |
 | **REVEAL** | Content is uncovered as silk reveals architecture | Mask wipes along a curved silk edge · `easing.reveal` (.77,0,.18,1) |
-| **WRAP** | A line or ribbon travels around an object, image or title | Ribbon `range` animation in the silk engine |
+| **WRAP** | A line or ribbon travels around an object, image or title | Real silk footage (`lib/siraj-footage.js`), time-mapped |
 | **FOLD** | Transitions behave like controlled material folds | `easing.fold` (.7,0,.2,1) · *Silk Fold* transition |
 | **GLIDE** | Camera and UI moves are smooth and confident | `easing.glide` (.65,0,.35,1) · parallax 12% |
 | **SETTLE** | Every animation ends calmly and precisely | Final 30–40% of every move decelerates. Image scale goes 1.04 → 1.00, never above 1.08. |

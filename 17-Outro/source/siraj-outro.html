@@ -5,7 +5,7 @@
 <title>SIRAJ — Official Brand Outro v1.0</title>
 <!--
   SIRAJ Brand Outro v1.0 — 5.0 s. The visual system coming to rest.
-  0.0  A slim silk ribbon passes from the end side back toward the start (the mirror of the intro).
+  0.0  A real silk ribbon (filmed footage, 06-SIRAJ-Silk/Footage) passes from the end side back toward the start (the mirror of the intro).
   0.6  Behind it, the official wordmark resolves (fade, unblur, settle — DRAPE).
   1.9  A stone hairline draws from the centre; supporting details settle in, staggered by 80 ms.
   3.2  Clean final frame; hold to 5.0.
@@ -13,16 +13,17 @@
   Contact data comes from 00-Brand-Foundation/brand.config.json (via 15-Motion-System/lib/siraj-brand-data.js).
 -->
 <link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
-<script src="../../06-SIRAJ-Silk/engine/siraj-silk.js"></script>
 <script src="../../15-Motion-System/lib/siraj-motion.js"></script>
 <script src="../../15-Motion-System/lib/siraj-logo-data.js"></script>
 <script src="../../15-Motion-System/lib/siraj-brand-data.js"></script>
+<script src="../../15-Motion-System/lib/siraj-footage.js"></script>
 <style>
   html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
   body { background: #170608; --ink: #D6C0B2; --ink2: #B9A69A; --rule: #AA9180; }
   body.light { background: #F7F2ED; --ink: #602733; --ink2: #6B625E; --rule: #AA9180; }
   body.alpha { background: transparent; }
-  canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .layer { position: absolute; inset: 0; width: 100%; height: 100%; }
+  #rib { object-fit: cover; transform: scaleX(-1); }
   #logo { position: absolute; left: 50%; overflow: visible; }
   .block { position: absolute; left: 0; right: 0; text-align: center; color: var(--ink); }
   .rule { position: absolute; left: 50%; height: 1px; background: var(--rule); opacity: .8; }
@@ -35,12 +36,12 @@
 </style>
 </head>
 <body>
-<canvas id="bg"></canvas>
+<div id="bg" class="layer"></div>
 <div class="project" id="project"></div>
 <svg id="logo" xmlns="http://www.w3.org/2000/svg"></svg>
 <div class="rule" id="rule"></div>
 <div class="block" id="details"></div>
-<canvas id="fg"></canvas>
+<video id="rib" class="layer" muted playsinline></video>
 <script>
 const M = SirajMotion, E = M.EASE, B = window.SIRAJ_BRAND;
 const q = new URLSearchParams(location.search);
@@ -112,24 +113,18 @@ details.style.top = (ruleY + LH * 0.45) + 'px';
 [...details.children].forEach((el) => { if (el.classList.contains('mt')) el.style.marginTop = fs(18) + 'px'; });
 if (!hasDetails) rule.style.display = 'none';
 
-// ---- silk --------------------------------------------------------------------------------------------
-const bg = new SirajSilk(document.getElementById('bg'), { background: 'transparent' });
-const fg = new SirajSilk(document.getElementById('fg'), { background: 'transparent' });
-[bg, fg].forEach((s) => { s.canvas.width = W; s.canvas.height = H; });
-SirajSilk.BACKGROUNDS.outroDark = { type: 1, a: '#4A1C26', b: '#2C0F12', c: '#170608', d: '#070203', at: [0.72, 0.8] };
-SirajSilk.BACKGROUNDS.outroLight = { type: 2, a: '#FBF8F5', b: '#F7F2ED', c: '#EFE7E0', d: '#E6DCD3', at: [0.74, 0.82] };
-const A = W / H;
-const PATH = { '16x9': [[1.6, 0.9, 0], [1.0, 0.35, 0.3], [0.45, 0.02, -0.3], [-0.1, -0.12, 0.35], [-0.6, -0.08, -0.2], [-1.1, 0.25, 0.2], [-1.7, 0.75, 0]],
-               '9x16': [[1.9, 0.5, 0], [1.1, 0.2, 0.3], [0.45, 0.0, -0.3], [-0.2, -0.1, 0.35], [-0.85, -0.05, -0.2], [-1.4, 0.2, 0.2], [-2.0, 0.5, 0]],
-               '1x1': [[1.6, 0.9, 0], [1.0, 0.35, 0.3], [0.45, 0.02, -0.3], [-0.1, -0.12, 0.35], [-0.6, -0.08, -0.2], [-1.1, 0.25, 0.2], [-1.7, 0.75, 0]] }[FMT];
+// ---- background (a plain light field, no graphics) + real silk ribbon footage ------------------------
+const bgEl = document.getElementById('bg');
+if (!ALPHA) bgEl.style.background = DARK
+  ? 'radial-gradient(ellipse 80% 90% at 72% 20%, #4A1C26 0%, #2C0F12 36%, #170608 70%, #070203 100%)'
+  : 'radial-gradient(ellipse 80% 90% at 74% 18%, #FBF8F5 0%, #F7F2ED 40%, #EFE7E0 74%, #E6DCD3 100%)';
+const rib = SirajFootage.ribbon(document.getElementById('rib'), { fmt: FMT });
+const CLIP = SirajFootage.PASS[FMT];
 
-window.seek = (t) => {
-  if (!ALPHA) { bg.set({ background: DARK ? 'outroDark' : 'outroLight', exposure: 0.84 }); bg.render(t); }
-  const head = M.lerp(0, 2.0, M.seg(t, 0.0, 2.6, E.glide));
-  const u1 = M.clamp(head), u0 = M.clamp(head - 0.9);
-  fg.set({ background: 'transparent', light: [0.7 - 0.9 * M.seg(t, 0, 2.6, E.linear), 0.7, 0.6], exposure: DARK ? 0.84 : 0.9,
-    ribbons: u1 - u0 > 0.002 ? [{ points: PATH, width: { '16x9': 0.2, '9x16': 0.12, '1x1': 0.18 }[FMT], range: [u0, u1], fade: 0.08, twist: [0.6, 2.0, 0.8, 0.15], wave: [0.04, 1.2, 0.2], exposure: DARK ? 1.25 : 1.45, segments: 420 }] : [] });
-  fg.render(t);
+window.seek = async (t) => {
+  // ribbon: real footage mirrored (end → start), its passage spanning outro 0.0 → 2.6 s
+  await rib.at(M.lerp(CLIP[0], CLIP[1], M.seg(t, 0.0, 2.6, E.linear)));
+  rib.video.style.opacity = t > 3.0 ? 0 : 1;
   // project title first (project variant)
   if (isProject) { const p = M.enter(t, 0.35, { dur: 1.1, distance: 18 * U }); project.style.opacity = p.opacity; project.style.transform = `translateY(${p.y}px)`; project.style.filter = `blur(${p.blur}px)`; }
   // logo resolve: wipe from end → start + unblur + settle

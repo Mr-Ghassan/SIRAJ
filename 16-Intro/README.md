@@ -5,7 +5,7 @@
 | Time | Action |
 |---|---|
 | 0.0 | Near darkness. A warm light source breathes in at the upper end: the lamp (*siraj*). |
-| 0.3 | A maroon silk ribbon enters from the lower start along the 51° Silk Axis, and light travels across it. |
+| 0.3 | A **real** maroon silk ribbon (filmed footage, `06-SIRAJ-Silk/Footage`) enters from the lower start and glides toward the upper end. |
 | 1.5 – 3.2 | The ribbon sweeps across the frame. Behind its passage, the **official wordmark is revealed** by a feathered silk-edge mask. The silk never distorts the logo. |
 | 1.4 – 5.0 | The logo settles imperceptibly from 1.03 to 1.00 (DRAPE). |
 | 3.6 – 5.2 | The ribbon leaves through the upper end. The two **Lumen diamonds ignite** (stone to sand glow, then back to stone) with a soft halo. |
