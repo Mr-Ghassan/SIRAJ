@@ -52,7 +52,7 @@ ul.dl.no li::before { content: "✕"; position: absolute; left: 2px; top: 6px; c
 .cv-foot { position: absolute; left: 120px; right: 120px; bottom: 60px; display: flex; justify-content: space-between; font: 500 13px Jost; letter-spacing: .2em; text-transform: uppercase; color: #D6C0B2; }
 .cv-foot span:last-child { font-family: Tajawal; letter-spacing: 0; font-size: 18px; }
 /* toc */
-.toc { columns: 2; column-gap: 120px; }
+.toc { columns: 3; column-gap: 72px; }
 .toc div { display: flex; gap: 12px; padding: 5px 0; border-bottom: 1px solid #E3D6CC; break-inside: avoid; font-size: 16px; }
 .toc .dots { flex: 1; }
 /* idea */
@@ -159,3 +159,30 @@ pre.code { background: #170608; color: #D6C0B2; font: 400 14px/1.55 ui-monospace
 .check { columns: 2; column-gap: 80px; }
 .check div { display: flex; gap: 18px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid #E3D6CC; break-inside: avoid; font-size: 19px; }
 .check .box { width: 18px; height: 18px; border: 1.5px solid #602733; flex: none; margin-top: 5px; }
+/* strategy pages */
+.ar-lead { font: 300 38px/1.5 Tajawal; color: #3B3436; direction: rtl; text-align: right; margin: 8px 0 0; }
+.pillist div { display: flex; gap: 18px; align-items: center; padding: 13px 0; border-bottom: 1px solid #E3D6CC; font-size: 20px; }
+.pillist i, .lum-i { width: 9px; height: 9px; background: #AA9180; transform: rotate(45deg); flex: none; display: inline-block; margin-inline-end: 10px; }
+.principle { margin-top: 40px; background: #602733; color: #F7F2ED; padding: 36px 40px; }
+.principle div { font: 300 28px/1.35 Jost; } .principle .ar { font: 300 28px/1.6 Tajawal; direction: rtl; text-align: right; color: #D6C0B2; margin-top: 14px; }
+.growth { display: grid; grid-template-columns: 700px 1fr; gap: 80px; align-items: center; }
+.circles { width: 680px; height: 680px; }
+.phases > div { border-top: 1px solid #AA9180; padding: 22px 0; }
+.phases b { font: 300 44px/1 Jost; color: #602733; letter-spacing: .04em; margin-inline-end: 18px; }
+.phases .ar { font: 400 26px Tajawal; color: #AA9180; }
+.phases p { margin: 12px 0 0; font-size: 18px; }
+.pers { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.pers div { padding: 20px 0; border-bottom: 1px solid #E3D6CC; }
+.pers b { display: block; font: 300 36px/1.1 Jost; color: #140E10; } .pers span { color: #8E837D; font-size: 18px; }
+.pillars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 40px; border-top: 2px solid #602733; }
+.pillars > div { padding: 32px 26px 0 0; display: flex; flex-direction: column; gap: 14px; }
+.pillars .n { font: 200 54px/1 Jost; color: #AA9180; }
+.pillars b { font: 400 28px/1.15 Jost; color: #140E10; } .pillars .ar { font: 400 22px Tajawal; color: #602733; } .pillars p { font-size: 18px; margin: 0; }
+.life { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.life b { display: block; font: 300 38px/1 Jost; color: #602733; letter-spacing: .04em; margin: 26px 0 12px; } .life p { margin: 0 0 10px; }
+.arch-tree { display: flex; flex-direction: column; align-items: center; background: #fff; border: 1px solid #E3D6CC; padding: 50px; }
+.arch-tree .line { width: 1px; height: 50px; background: #AA9180; margin: 26px 0; }
+.arch-tree .projs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; width: 100%; border-top: 1px solid #AA9180; padding-top: 30px; }
+.arch-tree .projs div { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+.arch-tree .projs b { font: 300 30px/1.1 Jost; color: #140E10; } .arch-tree .projs .ar { font: 300 24px Tajawal; color: #3B3436; }
+.arch-tree em { font: 500 10px Jost; font-style: normal; letter-spacing: .18em; text-transform: uppercase; color: #8E837D; margin-top: 8px; }

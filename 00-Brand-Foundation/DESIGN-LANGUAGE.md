@@ -7,7 +7,10 @@ The full rationale lives in `20-Brand-Guidelines/`. If this file and the guideli
 
 ## 1. The idea in one line
 
-**SIRAJ (سراج, "the lamp") — architecture shaped with the elegance, continuity and controlled movement of silk.**
+> **Positioning:** SIRAJ develops considered real estate projects designed to create lasting value. · سراج تطور مشاريع عقارية مدروسة تصنع قيمة تستمر.
+> **Core statement:** SIRAJ does not begin with scale. It begins with a standard. · سراج لا تبدأ بالانتشار، بل تبدأ بمعيار.
+
+**SIRAJ (سراج, "the lamp") — architecture shaped with the elegance, continuity and controlled movement of silk.** The lamp sets the standard, silk carries it, and architecture makes it last. The strategy is in `STRATEGIC-POSITIONING_AR.md` (official) and `BRAND-STRATEGY.md`.
 
 - **The Lumen (◆)** is the light. It's the 45° stone-coloured diamond above the *I* and *J* of the wordmark. In the system it becomes the marker, bullet, indicator and "light source".
 - **Silk** is the surface that carries the light. Deep maroon silk is the brand's signature *behaviour*: it reveals, frames, connects and transitions.
@@ -97,6 +100,9 @@ Motion follows seven principles: **FLOW · DRAPE · REVEAL · WRAP · FOLD · GL
 
 ## 8. Voice
 
-- Calm, precise, confident. Short sentences. No superlatives stacked ("the most luxurious ever").
-- English example: *"Light, built."* / *"A residence shaped by light and silence."*
-- Arabic example: *«نورٌ يُبنى»* / *«مساكن تتشكّل بالضوء والسكينة»*
+- Clear, calm, intelligent, confident and persuasive. SIRAJ is confident without noise and luxurious without exaggeration.
+- Rely on facts, design, location, numbers, product quality, vision and value.
+- **Never use:** exaggeration, «الأفخم على الإطلاق» / "the most luxurious ever", «الفرصة التي لن تتكرر» / "once-in-a-lifetime opportunity", pushy sales language, or unsupported investment promises.
+- Investment figures are always labelled (projected or illustrative) and carry a disclaimer.
+- Every project message answers the **five pillars**: Location · Product · Experience · Investment value · Trust.
+- Examples: *"A residence shaped by light and silence."* / *«مساكن تتشكّل بالضوء والسكينة»* · *"The project that sets the SIRAJ standard."* / *«المشروع الذي يؤسس معيار سراج»*

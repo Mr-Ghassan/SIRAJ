@@ -18,9 +18,20 @@ This repository is the **single source of truth** for the SIRAJ brand. It contai
 | 🗂 **Every file** | [`ASSET-INDEX.md`](ASSET-INDEX.md) |
 | 📝 **Release notes** | [`CHANGELOG.md`](CHANGELOG.md) |
 
+## Strategy
+
+> **SIRAJ develops considered real estate projects designed to create lasting value.**
+> **سراج تطور مشاريع عقارية مدروسة تصنع قيمة تستمر.**
+>
+> *SIRAJ does not begin with scale. It begins with a standard. · سراج لا تبدأ بالانتشار، بل تبدأ بمعيار.*
+
+The company follows **PROVE → EXPAND → SCALE**. It starts from one strong **Founding Project** in Muscat and grows in circles. Each project is an endorsed brand within the SIRAJ system.
+
+The official strategy is in [`00-Brand-Foundation/STRATEGIC-POSITIONING_AR.md`](00-Brand-Foundation/STRATEGIC-POSITIONING_AR.md), with the English rendering in [`STRATEGIC-POSITIONING_EN.md`](00-Brand-Foundation/STRATEGIC-POSITIONING_EN.md).
+
 ## The idea
 
-> **The lamp gives light. Silk carries it. Architecture holds it.**
+> **The lamp sets the standard. Silk carries it. Architecture makes it last.**
 
 - **Siraj (سِراج)** means *the lamp*. The two stone diamonds on the I and the J of the wordmark are its flames. In the system they become the **Lumen ◆**, the brand's marker of light.
 - **SIRAJ Silk** is deep maroon silk used as a *behaviour*. It reveals, frames, connects and transitions.
