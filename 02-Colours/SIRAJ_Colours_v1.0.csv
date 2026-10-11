@@ -1,0 +1,16 @@
+name,tier,hex,r,g,b,c,m,y,k,pantone,contrast_on_ivory,contrast_on_deep
+"SIRAJ Maroon",Official,#602733,96,39,51,34,89,58,47,"PANTONE 7421 C (nearest) · alt. 504 C",10.29,1.55
+"SIRAJ Deep",Official,#2C0F12,44,15,18,50,85,70,80,"PANTONE 4975 C (nearest)",15.94,1.0
+"SIRAJ Sand",Official,#D6C0B2,214,192,178,14,24,27,0,"PANTONE 4755 C (nearest) · alt. 7604 C",1.57,10.17
+"Architectural Stone",Official,#AA9180,170,145,128,31,41,49,7,"PANTONE 7530 C (nearest)",2.67,5.97
+"SIRAJ Shadow",Extended,#170608,23,6,8,60,80,70,88,"PANTONE Black 5 C (nearest)",17.71,1.11
+"Silk Highlight",Silk,#C79A9C,199,154,156,18,42,30,4,"PANTONE 5005 C (nearest)",2.21,7.2
+"Silk Midtone",Silk,#81404C,129,64,76,30,80,52,30,"PANTONE 7650 C (nearest)",6.81,2.34
+"Silk Dark",Silk,#45161F,69,22,31,42,90,65,62,"PANTONE 7421 C at 100% + 4975 C overprint",13.61,1.17
+"Warm Ivory",Neutral,#F7F2ED,247,242,237,2,4,6,0,"PANTONE 9224 C (nearest) · or uncoated warm white stock",1.0,15.94
+"Linen",Neutral,#EFE7E0,239,231,224,5,8,11,0,"PANTONE 7527 C at 30% (nearest)",1.1,14.51
+"Warm Grey",Neutral,#8E837D,142,131,125,42,43,45,15,"PANTONE Warm Gray 9 C (nearest)",3.32,4.81
+"Ash",Neutral,#6B625E,107,98,94,50,50,52,35,"PANTONE 405 C (nearest)",5.34,2.98
+"Graphite",Neutral,#3B3436,59,52,54,62,64,58,62,"PANTONE 432 C (warm alt. Black 7 C)",10.91,1.46
+"Near Black",Neutral,#140E10,20,14,16,70,70,65,85,"PANTONE Black 6 C (nearest)",17.16,1.08
+"Pure White",Neutral,#FFFFFF,255,255,255,0,0,0,0,"— (paper white)",1.11,17.73

@@ -1,15 +1,22 @@
-/* SIRAJ brand fonts — Jost (Latin) + Noto Kufi Arabic (Arabic). SIL OFL 1.1. */
-@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-ExtraLight.ttf") format("truetype"); font-weight: 200; font-style: normal; font-display: swap; unicode-range: U+0000-05FF, U+0700-FFFF; }
-@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; unicode-range: U+0000-05FF, U+0700-FFFF; }
-@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0000-05FF, U+0700-FFFF; }
-@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0000-05FF, U+0700-FFFF; }
-@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0000-05FF, U+0700-FFFF; }
-@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; unicode-range: U+0000-05FF, U+0700-FFFF; }
-@font-face { font-family: "Noto Kufi Arabic"; src: url("fonts/NotoKufiArabic/NotoKufiArabic-ExtraLight.ttf") format("truetype"); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: "Noto Kufi Arabic"; src: url("fonts/NotoKufiArabic/NotoKufiArabic-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: "Noto Kufi Arabic"; src: url("fonts/NotoKufiArabic/NotoKufiArabic-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Noto Kufi Arabic"; src: url("fonts/NotoKufiArabic/NotoKufiArabic-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "Noto Kufi Arabic"; src: url("fonts/NotoKufiArabic/NotoKufiArabic-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: "Noto Kufi Arabic"; src: url("fonts/NotoKufiArabic/NotoKufiArabic-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+/* SIRAJ brand fonts — Jost (Latin + all digits) + Tajawal (Arabic). SIL OFL 1.1.
+   "SIRAJ Digits" maps Jost figures onto Western digits so Arabic text uses the same 0-9 as English. */
+@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-ExtraLight.ttf") format("truetype"); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Tajawal"; src: url("fonts/Tajawal/Tajawal-ExtraLight.ttf") format("truetype"); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: "Tajawal"; src: url("fonts/Tajawal/Tajawal-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Tajawal"; src: url("fonts/Tajawal/Tajawal-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Tajawal"; src: url("fonts/Tajawal/Tajawal-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Tajawal"; src: url("fonts/Tajawal/Tajawal-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Tajawal"; src: url("fonts/Tajawal/Tajawal-ExtraBold.ttf") format("truetype"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "SIRAJ Digits"; src: url("fonts/Jost/Jost-ExtraLight.ttf") format("truetype"); font-weight: 200; font-style: normal; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A, U+00B2, U+00B3; }
+@font-face { font-family: "SIRAJ Digits"; src: url("fonts/Jost/Jost-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A, U+00B2, U+00B3; }
+@font-face { font-family: "SIRAJ Digits"; src: url("fonts/Jost/Jost-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A, U+00B2, U+00B3; }
+@font-face { font-family: "SIRAJ Digits"; src: url("fonts/Jost/Jost-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A, U+00B2, U+00B3; }
+@font-face { font-family: "SIRAJ Digits"; src: url("fonts/Jost/Jost-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A, U+00B2, U+00B3; }
+@font-face { font-family: "SIRAJ Digits"; src: url("fonts/Jost/Jost-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A, U+00B2, U+00B3; }
 @font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-LightItalic.ttf") format("truetype"); font-weight: 300; font-style: italic; font-display: swap; }
 @font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-RegularItalic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }

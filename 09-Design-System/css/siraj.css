@@ -1,0 +1,98 @@
+/* =============================================================================
+   SIRAJ Design System v1.0 — Foundation CSS
+   Fonts + tokens + base typography + signature utilities.
+   Import once:  <link rel="stylesheet" href="09-Design-System/css/siraj.css">
+   ========================================================================== */
+@import url("../../03-Typography/siraj-fonts.css");
+@import url("../tokens/build/siraj-tokens.css");
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --siraj-font-latin: var(--siraj-font-family-latin);
+  --siraj-font-arabic: var(--siraj-font-family-arabic);
+  --siraj-font: "Jost", "Tajawal", sans-serif;
+  --siraj-ease: var(--siraj-motion-easing-flow);
+}
+
+html { -webkit-text-size-adjust: 100%; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+body {
+  margin: 0;
+  font-family: var(--siraj-font);
+  font-size: var(--siraj-type-latin-body-size);
+  line-height: var(--siraj-type-latin-body-line);
+  font-weight: 400;
+  color: var(--siraj-text);
+  background: var(--siraj-bg);
+}
+
+/* ---- Script handling ------------------------------------------------------ */
+[dir="rtl"], :lang(ar) { font-family: "SIRAJ Digits", "Tajawal", "Jost", sans-serif; letter-spacing: 0 !important; }
+:lang(ar) { line-height: var(--siraj-type-arabic-body-line); }
+.latin { font-family: "Jost", sans-serif; }
+.arabic { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0 !important; }
+.num { font-variant-numeric: lining-nums tabular-nums; font-feature-settings: "lnum" 1, "tnum" 1; }
+.ltr-isolate { unicode-bidi: isolate; direction: ltr; display: inline-block; }
+
+/* ---- Type scale (Latin defaults, Arabic overrides via :lang(ar)) ---------- */
+.t-display, .t-h1, .t-h2, .t-h3, .t-h4 { margin: 0; color: var(--siraj-text-strong); text-wrap: balance; }
+.t-display { font-size: var(--siraj-type-latin-display-size); font-weight: 300; line-height: var(--siraj-type-latin-display-line); letter-spacing: var(--siraj-type-latin-display-tracking); }
+.t-h1 { font-size: var(--siraj-type-latin-h1-size); font-weight: 300; line-height: var(--siraj-type-latin-h1-line); letter-spacing: var(--siraj-type-latin-h1-tracking); }
+.t-h2 { font-size: var(--siraj-type-latin-h2-size); font-weight: 400; line-height: var(--siraj-type-latin-h2-line); }
+.t-h3 { font-size: var(--siraj-type-latin-h3-size); font-weight: 400; line-height: var(--siraj-type-latin-h3-line); }
+.t-h4 { font-size: var(--siraj-type-latin-h4-size); font-weight: 500; line-height: var(--siraj-type-latin-h4-line); }
+.t-lead { font-size: var(--siraj-type-latin-lead-size); font-weight: 300; line-height: var(--siraj-type-latin-lead-line); }
+.t-body { font-size: var(--siraj-type-latin-body-size); line-height: var(--siraj-type-latin-body-line); }
+.t-small { font-size: var(--siraj-type-latin-small-size); line-height: var(--siraj-type-latin-small-line); }
+.t-caption, .eyebrow { font-size: var(--siraj-type-latin-caption-size); font-weight: 500; line-height: 1.4; letter-spacing: 0.16em; text-transform: uppercase; }
+.t-numeral { font-size: var(--siraj-type-latin-numeral-size); font-weight: 200; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums; }
+
+:lang(ar) .t-display, .t-display:lang(ar) { font-size: var(--siraj-type-arabic-display-size); line-height: var(--siraj-type-arabic-display-line); letter-spacing: 0; }
+:lang(ar) .t-h1, .t-h1:lang(ar) { font-size: var(--siraj-type-arabic-h1-size); line-height: var(--siraj-type-arabic-h1-line); letter-spacing: 0; }
+:lang(ar) .t-h2, .t-h2:lang(ar) { font-size: var(--siraj-type-arabic-h2-size); line-height: var(--siraj-type-arabic-h2-line); }
+:lang(ar) .t-h3, .t-h3:lang(ar) { font-size: var(--siraj-type-arabic-h3-size); line-height: var(--siraj-type-arabic-h3-line); }
+:lang(ar) .t-h4, .t-h4:lang(ar) { font-size: var(--siraj-type-arabic-h4-size); line-height: var(--siraj-type-arabic-h4-line); }
+:lang(ar) .t-lead, .t-lead:lang(ar) { font-size: var(--siraj-type-arabic-lead-size); line-height: var(--siraj-type-arabic-lead-line); }
+:lang(ar) .t-body, .t-body:lang(ar) { font-size: var(--siraj-type-arabic-body-size); line-height: var(--siraj-type-arabic-body-line); }
+:lang(ar) .t-caption, .t-caption:lang(ar), :lang(ar) .eyebrow, .eyebrow:lang(ar) { letter-spacing: 0; text-transform: none; font-size: 13px; }
+:lang(ar) .t-numeral, .t-numeral:lang(ar) { font-size: var(--siraj-type-arabic-numeral-size); line-height: 1.2; letter-spacing: 0; }
+
+@media (max-width: 899px) {
+  .t-display { font-size: var(--siraj-type-latin-display-size-mobile); }
+  .t-h1 { font-size: var(--siraj-type-latin-h1-size-mobile); }
+  .t-h2 { font-size: var(--siraj-type-latin-h2-size-mobile); }
+  .t-h3 { font-size: var(--siraj-type-latin-h3-size-mobile); }
+  :lang(ar) .t-display { font-size: var(--siraj-type-arabic-display-size-mobile); }
+  :lang(ar) .t-h1 { font-size: var(--siraj-type-arabic-h1-size-mobile); }
+  :lang(ar) .t-h2 { font-size: var(--siraj-type-arabic-h2-size-mobile); }
+}
+
+/* ---- Signature utilities -------------------------------------------------- */
+/* Lumen — the 45° diamond from the I and J of the wordmark. Bullet, marker, indicator. */
+.lumen { display: inline-block; width: 0.5em; height: 0.5em; background: var(--siraj-lumen); transform: rotate(45deg); vertical-align: 0.12em; flex: none; }
+.lumen--sm { width: 6px; height: 6px; }
+.lumen--lg { width: 12px; height: 12px; }
+
+/* Silk Corner — a single soft corner on the top-end of an architectural rectangle. */
+.silk-corner { border-start-end-radius: var(--siraj-radius-silk-fixed); overflow: hidden; }
+.silk-corner--fluid { border-start-end-radius: 40% 32%; overflow: hidden; }
+
+/* Hairline rule in stone */
+.rule { height: 1px; background: var(--siraj-lumen); border: 0; opacity: 0.7; }
+.rule--short { width: 48px; }
+
+/* Environments */
+.env-light { --siraj-bg: #F7F2ED; background: var(--siraj-bg); color: var(--siraj-text); }
+.env-dark  { background: var(--siraj-color-brand-shadow); color: #E9DDD4; }
+.env-maroon { background: var(--siraj-gradient-silk-light); color: #E9DDD4; }
+.env-dark .t-display, .env-dark .t-h1, .env-dark .t-h2, .env-dark .t-h3, .env-dark .t-h4,
+.env-maroon .t-display, .env-maroon .t-h1, .env-maroon .t-h2, .env-maroon .t-h3, .env-maroon .t-h4 { color: #F7F2ED; }
+.env-dark .eyebrow, .env-maroon .eyebrow { color: var(--siraj-color-brand-sand); }
+
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+:focus-visible { outline: 2px solid var(--siraj-focus); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; }
+}

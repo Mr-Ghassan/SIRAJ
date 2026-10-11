@@ -99,15 +99,15 @@
   "font": {
     "family": {
       "latin":  { "$type": "fontFamily", "$value": ["Jost", "Helvetica Neue", "Arial", "sans-serif"] },
-      "arabic": { "$type": "fontFamily", "$value": ["Noto Kufi Arabic", "Geeza Pro", "Tahoma", "sans-serif"] },
-      "brand":  { "$type": "fontFamily", "$value": ["Jost", "Noto Kufi Arabic", "sans-serif"], "$description": "Mixed content stack: Latin glyphs in Jost, Arabic falls through to Noto Kufi Arabic." }
+      "arabic": { "$type": "fontFamily", "$value": ["SIRAJ Digits", "Tajawal", "Geeza Pro", "Tahoma", "sans-serif"], "$description": "Tajawal for Arabic. SIRAJ Digits (Jost figures, unicode-range limited) guarantees identical Western numerals in Arabic and English." },
+      "brand":  { "$type": "fontFamily", "$value": ["Jost", "Tajawal", "sans-serif"], "$description": "Mixed content stack: Latin glyphs and all digits in Jost, Arabic falls through to Tajawal." }
     },
     "weight": {
       "extralight": { "$type": "fontWeight", "$value": 200 },
       "light":      { "$type": "fontWeight", "$value": 300 },
       "regular":    { "$type": "fontWeight", "$value": 400 },
       "medium":     { "$type": "fontWeight", "$value": 500 },
-      "semibold":   { "$type": "fontWeight", "$value": 600 }
+      "bold":       { "$type": "fontWeight", "$value": 700, "$description": "Tajawal has no 600; use 500 or 700." }
     }
   },
   "type": {
@@ -124,16 +124,16 @@
       "numeral": { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 200, "fontSize": "72px", "lineHeight": 1, "letterSpacing": "-0.02em", "fontVariantNumeric": "lining-nums tabular-nums" }, "mobile": "48px" }
     },
     "arabic": {
-      "display": { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "80px", "lineHeight": 1.35, "letterSpacing": "0" }, "mobile": "46px" },
-      "h1":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "54px", "lineHeight": 1.4, "letterSpacing": "0" }, "mobile": "36px" },
-      "h2":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "38px", "lineHeight": 1.45, "letterSpacing": "0" }, "mobile": "27px" },
-      "h3":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "27px", "lineHeight": 1.5, "letterSpacing": "0" }, "mobile": "22px" },
-      "h4":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 500, "fontSize": "20px", "lineHeight": 1.6, "letterSpacing": "0" }, "mobile": "18px" },
-      "lead":    { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "19px", "lineHeight": 1.85, "letterSpacing": "0" }, "mobile": "17px" },
-      "body":    { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "15px", "lineHeight": 1.95, "letterSpacing": "0" }, "mobile": "15px" },
-      "small":   { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "13px", "lineHeight": 1.85, "letterSpacing": "0" }, "mobile": "13px" },
-      "caption": { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 500, "fontSize": "12px", "lineHeight": 1.7, "letterSpacing": "0" }, "mobile": "12px" },
-      "numeral": { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 200, "fontSize": "66px", "lineHeight": 1.2, "letterSpacing": "0" }, "mobile": "44px" }
+      "display": { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "92px", "lineHeight": 1.25, "letterSpacing": "0" }, "mobile": "52px" },
+      "h1":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "64px", "lineHeight": 1.3, "letterSpacing": "0" }, "mobile": "42px" },
+      "h2":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "45px", "lineHeight": 1.38, "letterSpacing": "0" }, "mobile": "32px" },
+      "h3":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "32px", "lineHeight": 1.45, "letterSpacing": "0" }, "mobile": "25px" },
+      "h4":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 500, "fontSize": "24px", "lineHeight": 1.55, "letterSpacing": "0" }, "mobile": "21px" },
+      "lead":    { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "22px", "lineHeight": 1.75, "letterSpacing": "0" }, "mobile": "19px" },
+      "body":    { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "17px", "lineHeight": 1.85, "letterSpacing": "0" }, "mobile": "17px" },
+      "small":   { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "15px", "lineHeight": 1.75, "letterSpacing": "0" }, "mobile": "15px" },
+      "caption": { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 500, "fontSize": "13px", "lineHeight": 1.6, "letterSpacing": "0" }, "mobile": "13px" },
+      "numeral": { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 200, "fontSize": "72px", "lineHeight": 1.1, "letterSpacing": "0" }, "mobile": "48px" }
     }
   },
   "space": {

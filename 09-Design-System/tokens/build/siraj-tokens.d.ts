@@ -105,7 +105,7 @@ export declare const siraj: {
       "light": number;
       "regular": number;
       "medium": number;
-      "semibold": number;
+      "bold": number;
     };
   };
   "type": {

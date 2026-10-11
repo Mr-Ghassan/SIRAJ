@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SIRAJ Silk — Stage</title>
+<style>html,body{margin:0;background:transparent;overflow:hidden}canvas{display:block}</style>
+<script src="siraj-silk.js"></script><script src="presets.js"></script></head>
+<body><canvas id="c"></canvas>
+<script>
+// Usage: stage.html?preset=hero-ribbon&w=1920&h=1080&t=2.5   (or window.stage(presetObj, w, h, t) from automation)
+const cv = document.getElementById('c');
+let silk = null;
+window.stage = (preset, w, h, t = 0) => {
+  cv.width = w; cv.height = h; cv.style.width = w + 'px'; cv.style.height = h + 'px';
+  const p = typeof preset === 'string' ? SirajSilkPresets[preset] : preset;
+  if (!silk) silk = new SirajSilk(cv, p); else silk.set(p);
+  silk.render(t);
+  return true;
+};
+window.frame = (t) => { silk.render(t); return true; };
+const q = new URLSearchParams(location.search);
+if (q.get('preset')) window.stage(q.get('preset'), +(q.get('w') || innerWidth), +(q.get('h') || innerHeight), +(q.get('t') || 0));
+</script></body></html>

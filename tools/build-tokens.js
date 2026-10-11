@@ -125,11 +125,14 @@ kt += `}\n`;
 fs.writeFileSync(path.join(OUT, 'SirajTokens.kt'), kt);
 
 // ---- Font face CSS (relative to repo root /03-Typography) ----------------
-const W = { ExtraLight: 200, Light: 300, Regular: 400, Medium: 500, SemiBold: 600, Bold: 700 };
-let ff = `/* SIRAJ brand fonts — Jost (Latin) + Noto Kufi Arabic (Arabic). SIL OFL 1.1. */\n`;
-for (const [fam, dir, file] of [['Jost', 'Jost', 'Jost'], ['Noto Kufi Arabic', 'NotoKufiArabic', 'NotoKufiArabic']]) {
+const WJ = { ExtraLight: 200, Light: 300, Regular: 400, Medium: 500, SemiBold: 600, Bold: 700 };
+const WT = { ExtraLight: 200, Light: 300, Regular: 400, Medium: 500, Bold: 700, ExtraBold: 800 };
+let ff = `/* SIRAJ brand fonts — Jost (Latin + all digits) + Tajawal (Arabic). SIL OFL 1.1.\n   "SIRAJ Digits" maps Jost figures onto Western digits so Arabic text uses the same 0-9 as English. */\n`;
+for (const [fam, dir, W] of [['Jost', 'Jost', WJ], ['Tajawal', 'Tajawal', WT], ['SIRAJ Digits', 'Jost', WJ]]) {
   for (const [n, w] of Object.entries(W)) {
-    ff += `@font-face { font-family: "${fam}"; src: url("fonts/${dir}/${file}-${n}.ttf") format("truetype"); font-weight: ${w}; font-style: normal; font-display: swap;${fam === 'Jost' ? ' unicode-range: U+0000-05FF, U+0700-FFFF;' : ''} }\n`;
+    const file = fam === 'Tajawal' ? 'Tajawal' : 'Jost';
+    const range = fam === 'SIRAJ Digits' ? ' unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A, U+00B2, U+00B3;' : '';
+    ff += `@font-face { font-family: "${fam}"; src: url("fonts/${dir}/${file}-${n}.ttf") format("truetype"); font-weight: ${w}; font-style: normal; font-display: swap;${range} }\n`;
   }
 }
 ff += `@font-face { font-family: "Jost"; src: url("fonts/Jost/Jost-LightItalic.ttf") format("truetype"); font-weight: 300; font-style: italic; font-display: swap; }\n`;

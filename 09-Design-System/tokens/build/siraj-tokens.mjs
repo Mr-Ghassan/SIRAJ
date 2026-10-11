@@ -103,14 +103,15 @@ export const siraj = {
         "sans-serif"
       ],
       "arabic": [
-        "Noto Kufi Arabic",
+        "SIRAJ Digits",
+        "Tajawal",
         "Geeza Pro",
         "Tahoma",
         "sans-serif"
       ],
       "brand": [
         "Jost",
-        "Noto Kufi Arabic",
+        "Tajawal",
         "sans-serif"
       ]
     },
@@ -119,7 +120,7 @@ export const siraj = {
       "light": 300,
       "regular": 400,
       "medium": 500,
-      "semibold": 600
+      "bold": 700
     }
   },
   "type": {
@@ -209,84 +210,84 @@ export const siraj = {
     },
     "arabic": {
       "display": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
         "fontWeight": 300,
-        "fontSize": "80px",
-        "lineHeight": 1.35,
+        "fontSize": "92px",
+        "lineHeight": 1.25,
         "letterSpacing": "0",
-        "mobileFontSize": "46px"
+        "mobileFontSize": "52px"
       },
       "h1": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
         "fontWeight": 300,
-        "fontSize": "54px",
-        "lineHeight": 1.4,
+        "fontSize": "64px",
+        "lineHeight": 1.3,
         "letterSpacing": "0",
-        "mobileFontSize": "36px"
+        "mobileFontSize": "42px"
       },
       "h2": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
         "fontWeight": 400,
-        "fontSize": "38px",
-        "lineHeight": 1.45,
+        "fontSize": "45px",
+        "lineHeight": 1.38,
         "letterSpacing": "0",
-        "mobileFontSize": "27px"
+        "mobileFontSize": "32px"
       },
       "h3": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
         "fontWeight": 400,
-        "fontSize": "27px",
-        "lineHeight": 1.5,
+        "fontSize": "32px",
+        "lineHeight": 1.45,
         "letterSpacing": "0",
-        "mobileFontSize": "22px"
+        "mobileFontSize": "25px"
       },
       "h4": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
         "fontWeight": 500,
-        "fontSize": "20px",
-        "lineHeight": 1.6,
+        "fontSize": "24px",
+        "lineHeight": 1.55,
         "letterSpacing": "0",
-        "mobileFontSize": "18px"
+        "mobileFontSize": "21px"
       },
       "lead": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
         "fontWeight": 300,
-        "fontSize": "19px",
+        "fontSize": "22px",
+        "lineHeight": 1.75,
+        "letterSpacing": "0",
+        "mobileFontSize": "19px"
+      },
+      "body": {
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
+        "fontWeight": 400,
+        "fontSize": "17px",
         "lineHeight": 1.85,
         "letterSpacing": "0",
         "mobileFontSize": "17px"
       },
-      "body": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
+      "small": {
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
         "fontWeight": 400,
         "fontSize": "15px",
-        "lineHeight": 1.95,
+        "lineHeight": 1.75,
         "letterSpacing": "0",
         "mobileFontSize": "15px"
       },
-      "small": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
-        "fontWeight": 400,
+      "caption": {
+        "fontFamily": "SIRAJ Digits,Tajawal,Geeza Pro,Tahoma,sans-serif",
+        "fontWeight": 500,
         "fontSize": "13px",
-        "lineHeight": 1.85,
+        "lineHeight": 1.6,
         "letterSpacing": "0",
         "mobileFontSize": "13px"
       },
-      "caption": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
-        "fontWeight": 500,
-        "fontSize": "12px",
-        "lineHeight": 1.7,
-        "letterSpacing": "0",
-        "mobileFontSize": "12px"
-      },
       "numeral": {
-        "fontFamily": "Noto Kufi Arabic,Geeza Pro,Tahoma,sans-serif",
+        "fontFamily": "Jost,Helvetica Neue,Arial,sans-serif",
         "fontWeight": 200,
-        "fontSize": "66px",
-        "lineHeight": 1.2,
+        "fontSize": "72px",
+        "lineHeight": 1.1,
         "letterSpacing": "0",
-        "mobileFontSize": "44px"
+        "mobileFontSize": "48px"
       }
     }
   },

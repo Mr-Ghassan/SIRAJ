@@ -56,14 +56,15 @@ module.exports = {
         "sans-serif"
       ],
       "arabic": [
-        "Noto Kufi Arabic",
+        "SIRAJ Digits",
+        "Tajawal",
         "Geeza Pro",
         "Tahoma",
         "sans-serif"
       ],
       "brand": [
         "Jost",
-        "Noto Kufi Arabic",
+        "Tajawal",
         "sans-serif"
       ]
     },

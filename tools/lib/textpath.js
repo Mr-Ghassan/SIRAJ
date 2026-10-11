@@ -6,9 +6,9 @@ const FONTS = path.resolve(__dirname, '..', '..', '03-Typography', 'fonts');
 const FILES = {
   'jost-200': 'Jost/Jost-ExtraLight.ttf', 'jost-300': 'Jost/Jost-Light.ttf', 'jost-400': 'Jost/Jost-Regular.ttf',
   'jost-500': 'Jost/Jost-Medium.ttf', 'jost-600': 'Jost/Jost-SemiBold.ttf', 'jost-700': 'Jost/Jost-Bold.ttf',
-  'kufi-200': 'NotoKufiArabic/NotoKufiArabic-ExtraLight.ttf', 'kufi-300': 'NotoKufiArabic/NotoKufiArabic-Light.ttf',
-  'kufi-400': 'NotoKufiArabic/NotoKufiArabic-Regular.ttf', 'kufi-500': 'NotoKufiArabic/NotoKufiArabic-Medium.ttf',
-  'kufi-600': 'NotoKufiArabic/NotoKufiArabic-SemiBold.ttf', 'kufi-700': 'NotoKufiArabic/NotoKufiArabic-Bold.ttf',
+  'tajawal-200': 'Tajawal/Tajawal-ExtraLight.ttf', 'tajawal-300': 'Tajawal/Tajawal-Light.ttf',
+  'tajawal-400': 'Tajawal/Tajawal-Regular.ttf', 'tajawal-500': 'Tajawal/Tajawal-Medium.ttf',
+  'tajawal-700': 'Tajawal/Tajawal-Bold.ttf', 'tajawal-800': 'Tajawal/Tajawal-ExtraBold.ttf',
 };
 
 let hbP = null;

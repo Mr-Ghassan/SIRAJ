@@ -1,0 +1,427 @@
+{
+  "version": "1.0.0",
+  "palette": [
+    {
+      "name": "SIRAJ Maroon",
+      "token": "color.brand.primary",
+      "tier": "Official",
+      "role": "Primary — logo, headlines, key surfaces",
+      "hex": "#602733",
+      "rgb": [
+        96,
+        39,
+        51
+      ],
+      "cmyk": [
+        34,
+        89,
+        58,
+        47
+      ],
+      "pantone": "PANTONE 7421 C (nearest) · alt. 504 C",
+      "contrast": {
+        "on_ivory": 10.29,
+        "on_white": 11.44,
+        "on_maroon": 1.0,
+        "on_deep": 1.55
+      }
+    },
+    {
+      "name": "SIRAJ Deep",
+      "token": "color.brand.deep",
+      "tier": "Official",
+      "role": "Dark environment, gradient base",
+      "hex": "#2C0F12",
+      "rgb": [
+        44,
+        15,
+        18
+      ],
+      "cmyk": [
+        50,
+        85,
+        70,
+        80
+      ],
+      "pantone": "PANTONE 4975 C (nearest)",
+      "contrast": {
+        "on_ivory": 15.94,
+        "on_white": 17.73,
+        "on_maroon": 1.55,
+        "on_deep": 1.0
+      }
+    },
+    {
+      "name": "SIRAJ Sand",
+      "token": "color.brand.sand",
+      "tier": "Official",
+      "role": "Reversed logo, light-on-dark type",
+      "hex": "#D6C0B2",
+      "rgb": [
+        214,
+        192,
+        178
+      ],
+      "cmyk": [
+        14,
+        24,
+        27,
+        0
+      ],
+      "pantone": "PANTONE 4755 C (nearest) · alt. 7604 C",
+      "contrast": {
+        "on_ivory": 1.57,
+        "on_white": 1.74,
+        "on_maroon": 6.56,
+        "on_deep": 10.17
+      }
+    },
+    {
+      "name": "Architectural Stone",
+      "token": "color.brand.stone",
+      "tier": "Official",
+      "role": "Lumen accent, rules, fine detail",
+      "hex": "#AA9180",
+      "rgb": [
+        170,
+        145,
+        128
+      ],
+      "cmyk": [
+        31,
+        41,
+        49,
+        7
+      ],
+      "pantone": "PANTONE 7530 C (nearest)",
+      "contrast": {
+        "on_ivory": 2.67,
+        "on_white": 2.97,
+        "on_maroon": 3.85,
+        "on_deep": 5.97
+      }
+    },
+    {
+      "name": "SIRAJ Shadow",
+      "token": "color.brand.shadow",
+      "tier": "Extended",
+      "role": "Cinema black, deepest silk shadow",
+      "hex": "#170608",
+      "rgb": [
+        23,
+        6,
+        8
+      ],
+      "cmyk": [
+        60,
+        80,
+        70,
+        88
+      ],
+      "pantone": "PANTONE Black 5 C (nearest)",
+      "contrast": {
+        "on_ivory": 17.71,
+        "on_white": 19.7,
+        "on_maroon": 1.72,
+        "on_deep": 1.11
+      }
+    },
+    {
+      "name": "Silk Highlight",
+      "token": "color.silk.highlight",
+      "tier": "Silk",
+      "role": "Specular sheen on silk",
+      "hex": "#C79A9C",
+      "rgb": [
+        199,
+        154,
+        156
+      ],
+      "cmyk": [
+        18,
+        42,
+        30,
+        4
+      ],
+      "pantone": "PANTONE 5005 C (nearest)",
+      "contrast": {
+        "on_ivory": 2.21,
+        "on_white": 2.46,
+        "on_maroon": 4.65,
+        "on_deep": 7.2
+      }
+    },
+    {
+      "name": "Silk Midtone",
+      "token": "color.silk.midtone",
+      "tier": "Silk",
+      "role": "Lit fold",
+      "hex": "#81404C",
+      "rgb": [
+        129,
+        64,
+        76
+      ],
+      "cmyk": [
+        30,
+        80,
+        52,
+        30
+      ],
+      "pantone": "PANTONE 7650 C (nearest)",
+      "contrast": {
+        "on_ivory": 6.81,
+        "on_white": 7.58,
+        "on_maroon": 1.51,
+        "on_deep": 2.34
+      }
+    },
+    {
+      "name": "Silk Dark",
+      "token": "color.silk.dark",
+      "tier": "Silk",
+      "role": "Turning fold",
+      "hex": "#45161F",
+      "rgb": [
+        69,
+        22,
+        31
+      ],
+      "cmyk": [
+        42,
+        90,
+        65,
+        62
+      ],
+      "pantone": "PANTONE 7421 C at 100% + 4975 C overprint",
+      "contrast": {
+        "on_ivory": 13.61,
+        "on_white": 15.13,
+        "on_maroon": 1.32,
+        "on_deep": 1.17
+      }
+    },
+    {
+      "name": "Warm Ivory",
+      "token": "color.neutral.ivory",
+      "tier": "Neutral",
+      "role": "Default light background",
+      "hex": "#F7F2ED",
+      "rgb": [
+        247,
+        242,
+        237
+      ],
+      "cmyk": [
+        2,
+        4,
+        6,
+        0
+      ],
+      "pantone": "PANTONE 9224 C (nearest) · or uncoated warm white stock",
+      "contrast": {
+        "on_ivory": 1.0,
+        "on_white": 1.11,
+        "on_maroon": 10.29,
+        "on_deep": 15.94
+      }
+    },
+    {
+      "name": "Linen",
+      "token": "color.neutral.linen",
+      "tier": "Neutral",
+      "role": "Secondary light surface",
+      "hex": "#EFE7E0",
+      "rgb": [
+        239,
+        231,
+        224
+      ],
+      "cmyk": [
+        5,
+        8,
+        11,
+        0
+      ],
+      "pantone": "PANTONE 7527 C at 30% (nearest)",
+      "contrast": {
+        "on_ivory": 1.1,
+        "on_white": 1.22,
+        "on_maroon": 9.36,
+        "on_deep": 14.51
+      }
+    },
+    {
+      "name": "Warm Grey",
+      "token": "color.neutral.warm-grey",
+      "tier": "Neutral",
+      "role": "Borders, large secondary type",
+      "hex": "#8E837D",
+      "rgb": [
+        142,
+        131,
+        125
+      ],
+      "cmyk": [
+        42,
+        43,
+        45,
+        15
+      ],
+      "pantone": "PANTONE Warm Gray 9 C (nearest)",
+      "contrast": {
+        "on_ivory": 3.32,
+        "on_white": 3.69,
+        "on_maroon": 3.1,
+        "on_deep": 4.81
+      }
+    },
+    {
+      "name": "Ash",
+      "token": "color.neutral.ash",
+      "tier": "Neutral",
+      "role": "Secondary text",
+      "hex": "#6B625E",
+      "rgb": [
+        107,
+        98,
+        94
+      ],
+      "cmyk": [
+        50,
+        50,
+        52,
+        35
+      ],
+      "pantone": "PANTONE 405 C (nearest)",
+      "contrast": {
+        "on_ivory": 5.34,
+        "on_white": 5.94,
+        "on_maroon": 1.93,
+        "on_deep": 2.98
+      }
+    },
+    {
+      "name": "Graphite",
+      "token": "color.neutral.graphite",
+      "tier": "Neutral",
+      "role": "Body text on light",
+      "hex": "#3B3436",
+      "rgb": [
+        59,
+        52,
+        54
+      ],
+      "cmyk": [
+        62,
+        64,
+        58,
+        62
+      ],
+      "pantone": "PANTONE 432 C (warm alt. Black 7 C)",
+      "contrast": {
+        "on_ivory": 10.91,
+        "on_white": 12.14,
+        "on_maroon": 1.06,
+        "on_deep": 1.46
+      }
+    },
+    {
+      "name": "Near Black",
+      "token": "color.neutral.near-black",
+      "tier": "Neutral",
+      "role": "Headlines, dark UI chrome",
+      "hex": "#140E10",
+      "rgb": [
+        20,
+        14,
+        16
+      ],
+      "cmyk": [
+        70,
+        70,
+        65,
+        85
+      ],
+      "pantone": "PANTONE Black 6 C (nearest)",
+      "contrast": {
+        "on_ivory": 17.16,
+        "on_white": 19.09,
+        "on_maroon": 1.67,
+        "on_deep": 1.08
+      }
+    },
+    {
+      "name": "Pure White",
+      "token": "color.neutral.white",
+      "tier": "Neutral",
+      "role": "Paper, UI surfaces",
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "cmyk": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pantone": "— (paper white)",
+      "contrast": {
+        "on_ivory": 1.11,
+        "on_white": 1.0,
+        "on_maroon": 11.44,
+        "on_deep": 17.73
+      }
+    }
+  ],
+  "hierarchy": {
+    "light_environment": [
+      [
+        "Warm Ivory / White",
+        60
+      ],
+      [
+        "SIRAJ Maroon",
+        18
+      ],
+      [
+        "Graphite (text)",
+        12
+      ],
+      [
+        "Linen / Sand",
+        7
+      ],
+      [
+        "Architectural Stone",
+        3
+      ]
+    ],
+    "dark_environment": [
+      [
+        "SIRAJ Shadow / Deep",
+        55
+      ],
+      [
+        "SIRAJ Maroon (incl. silk)",
+        25
+      ],
+      [
+        "SIRAJ Sand",
+        12
+      ],
+      [
+        "Warm Ivory (text)",
+        5
+      ],
+      [
+        "Architectural Stone",
+        3
+      ]
+    ]
+  },
+  "note": "CMYK values are FOGRA39 (ISO Coated v2) starting points; Pantone references are nearest-match recommendations. Approve both against a physical drawdown / proof before first print run."
+}

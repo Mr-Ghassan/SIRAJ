@@ -27,7 +27,7 @@ async function lockup(kind, { letter, lumen, text }) {
   const H = L.BOX.h, W = L.BOX.w;
   let body = '', vw, vh;
   if (kind === 'horizontal') {
-    const ar = await textPath('سراج للتطوير العقاري', { font: 'kufi-400', size: H * 0.30 });
+    const ar = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: H * 0.37 });
     // Fit English line to the Arabic line's width with tracking.
     const enSize = H * 0.165;
     const en0 = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize });
@@ -47,9 +47,9 @@ async function lockup(kind, { letter, lumen, text }) {
     const enSize = H * 0.15;
     const en0 = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize });
     const en = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize, tracking: (lineW - en0.width) / (22 * enSize) });
-    const ar0 = await textPath('سراج للتطوير العقاري', { font: 'kufi-400', size: 10 });
-    const arSize = Math.min(H * 0.34, 10 * (lineW * 0.82) / ar0.width);
-    const ar = await textPath('سراج للتطوير العقاري', { font: 'kufi-400', size: arSize });
+    const ar0 = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: 10 });
+    const arSize = Math.min(H * 0.42, 10 * (lineW * 0.82) / ar0.width);
+    const ar = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: arSize });
     const ruleY = H * 1.42, arBase = H * 2.12, enBase = H * 2.58;
     body = L.group({ letter, lumen }) +
       `<rect x="${(W / 2 - H * 0.6).toFixed(2)}" y="${ruleY.toFixed(2)}" width="${(H * 1.2).toFixed(2)}" height="${(H * 0.018).toFixed(3)}" fill="${lumen}"/>` +
@@ -65,9 +65,9 @@ async function lockup(kind, { letter, lumen, text }) {
     vw = W; vh = H * 1.64;
   } else if (kind === 'arabic') {
     // Arabic-led lockup: Arabic name above the official wordmark (for Arabic-first communications).
-    const ar0 = await textPath('سراج للتطوير العقاري', { font: 'kufi-400', size: 10 });
+    const ar0 = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: 10 });
     const arSize = 10 * W / ar0.width;
-    const ar = await textPath('سراج للتطوير العقاري', { font: 'kufi-400', size: arSize });
+    const ar = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: arSize });
     const top = arSize * 1.25;
     body = L.group({ x: 0, y: top + H * 0.55, letter, lumen }) + `<path transform="translate(0 ${(arSize * 1.02).toFixed(2)})" d="${ar.d}" fill="${text}"/>`;
     vw = W; vh = top + H * 1.55;
