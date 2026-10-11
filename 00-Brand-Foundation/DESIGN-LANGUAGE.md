@@ -119,6 +119,13 @@ Motion follows seven principles: **FLOW · DRAPE · REVEAL · WRAP · FOLD · GL
 - لا تُستخدم إلا صور نساء محجبات، دون إظهار الشعر أو أي عورة.
 - Casting is a **mix of Omani and international** people. **Omani men wear the dishdasha with the massar (المصر)**, not the kumma, and never the Gulf ghutra. International men wear formal or smart modest clothing. There are no intimate poses.
 
+## 7c. Silk is real fabric (mandatory · 2026-10-11)
+
+- Every silk background is a **photograph of real silk fabric**: `06-SIRAJ-Silk/Stills` (11 formations) and `Stills/Alpha` (cut-outs).
+- Moving silk is **real silk footage**: `06-SIRAJ-Silk/Footage`, keyed to alpha.
+- Never use a graphic, vector, gradient "silk" or CG render as a silk background. The engine is for previs only.
+- New silk imagery is briefed as studio photography of wine-maroon silk satin and checked for real texture, hems, weight and palette. Import it with `tools/silk-photo-import.py`.
+
 ## 8. Voice
 
 - Clear, calm, intelligent, confident and persuasive. SIRAJ is confident without noise and luxurious without exaggeration.

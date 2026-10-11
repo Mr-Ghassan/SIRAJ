@@ -41,9 +41,13 @@
 
 **Reduced motion:** every duration collapses to 1 ms (CSS), and the web helper adds the end state directly.
 
-## Silk simulation approach
+## Silk in motion: real footage
 
-Real cloth simulation is chaotic and expensive. The SIRAJ Silk Engine is instead an **art-directed procedural simulation**:
+**All delivered motion uses real silk** (rule since 2026-10-11). The ribbon in the intro, outro and transitions is filmed silk footage, keyed to alpha (`06-SIRAJ-Silk/Footage`). `lib/siraj-footage.js` seeks it frame-accurately inside `window.seek(t)`, so renders stay deterministic. Static silk in transitions (Sweep band, Fold flap, Curtain edge) is photographed silk from `06-SIRAJ-Silk/Stills`.
+
+### Previs only: the procedural engine
+
+The SIRAJ Silk Engine remains as the **previs tool** used to block timing and composition before footage is briefed. It is never a deliverable. Its approach is an **art-directed procedural simulation**:
 
 - **Gravity and tension** come from the drape height field (long tension waves, creased valleys, folds converging to a held point).
 - **Directional movement and air** come from the ribbon's travelling wave, the twist profile, and the time-varying sway of the spline control points.

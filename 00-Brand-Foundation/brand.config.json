@@ -4,8 +4,21 @@
     "communications": "ar",
     "english": "dormant",
     "english_activation": "Only for a freehold project open to foreign ownership (تملك حر وتملك للأجانب), and only for that project.",
-    "allowed_latin": ["SIRAJ wordmark", "website", "social handle", "email", "phone", "Western digits"],
-    "bilingual_exceptions": ["business card", "quotation", "tax invoice", "payment receipt", "contract cover"],
+    "allowed_latin": [
+      "SIRAJ wordmark",
+      "website",
+      "social handle",
+      "email",
+      "phone",
+      "Western digits"
+    ],
+    "bilingual_exceptions": [
+      "business card",
+      "quotation",
+      "tax invoice",
+      "payment receipt",
+      "contract cover"
+    ],
     "archive": "99-Archive/English-Dormant (restore: bash tools/archive-english.sh --restore; build English with SIRAJ_EN=1)",
     "decided": "2026-10-11"
   },
@@ -89,5 +102,13 @@
       "type": "Commercial offices",
       "handover": "Q3 2028"
     }
+  },
+  "silk_policy": {
+    "rule": "Real silk only. Every silk background is a photograph of real silk fabric; moving silk is real silk footage keyed to alpha. Never a graphic, vector or CG render.",
+    "rule_ar": "حرير حقيقي فقط: كل خلفية حريرية صورة فوتوغرافية لقماش حرير حقيقي، والحرير المتحرك لقطات فيديو حقيقية؛ لا رسومات ولا تصاميم ولا محاكاة حاسوبية.",
+    "since": "2026-10-11",
+    "stills": "06-SIRAJ-Silk/Stills",
+    "footage": "06-SIRAJ-Silk/Footage",
+    "cg_archive": "99-Archive/Silk-CG-v1.0 (reference/previs only)"
   }
 }
