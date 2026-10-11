@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Business Card · EN / AR</title>
+<link rel="stylesheet" href="../css/siraj-print.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  /* 85 × 55 mm · margins 6.5 mm · safe zone 4 mm inside trim */
+  .card .face { --m: 6.5mm; }
+  .card .lk { position: absolute; top: var(--m); --lw: 25mm; }
+  .card .who { position: absolute; top: 24mm; inset-inline-start: var(--m); }
+  .card .who .cap { color: var(--d-maroon); margin-top: 1.6mm; }
+  .card .base { position: absolute; bottom: var(--m); inset-inline: var(--m); display: grid; grid-template-columns: 1fr 1fr; column-gap: 4mm; }
+  .card .rule { position: absolute; margin: 0; inset-inline: var(--m); top: 36.6mm; height: 0; border: 0; border-top: 0.35pt solid var(--d-rule); opacity: 1; }
+  .card .rule::before { content: ""; position: absolute; inset-inline-start: 0; top: -0.75mm; width: 1.1mm; height: 1.1mm; background: var(--d-stone); transform: rotate(45deg); }
+  .card .deboss { top: 7.4mm; inset-inline-end: var(--m); width: 17mm; }
+  .card .addr { white-space: pre-line; }
+  .card .base { top: 39.2mm; bottom: auto; }
+  [dir="rtl"] .card .deboss, .card[dir="rtl"] .deboss { transform: scaleX(-1); }
+  .card .contact .addr { color: var(--d-ash); }
+  .card[dir="rtl"] .base { top: 38.2mm; }
+  .card[dir="rtl"] .rule { top: 36.2mm; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Stationery · Business card"
+      data-preview-title="Business card — English / Arabic · 85 × 55 mm"
+      data-preview-note="Uncoated warm-white 400 gsm (or 2 × 350 gsm duplex). Silk Blade blind deboss, no ink — shown here as tonal relief. Contact data from brand.config.json (placeholders).">
+
+<!-- Side A · English -->
+<section class="sheet card" data-w="85" data-h="55" data-bleed="3" data-label="Side A · English">
+  <div class="art"><div class="face" dir="ltr" lang="en">
+    <svg class="deboss deboss--light" viewBox="0 0 135 96" aria-hidden="true"><g transform="scale(10) translate(-61.67 -75.34)"><path d="M61.67,75.34c0,0,9.58,2.13,13.49,9.58H71.6C71.6,84.92,70.01,79.78,61.67,75.34z"/></g></svg>
+    <div class="lk lk--desc" style="inset-inline-start:var(--m)"><img src="../../../01-Logos/Lockups/SIRAJ_Lockup_Descriptor_Primary_v1.0.svg" alt="SIRAJ Real Estate Development"></div>
+    <div class="who">
+      <div class="name-en">{{print.people.card.name_en}}</div>
+      <div class="cap">{{print.people.card.title_en}}</div>
+    </div>
+    <div class="rule"></div>
+    <div class="base">
+      <div class="contact">
+        <div><span class="lbl">M</span>{{print.people.card.mobile}}</div>
+        <div><span class="lbl">T</span>{{contact.phone}}</div>
+        <div><span class="lbl">E</span>{{print.people.card.email_user}}@{{contact.website}}</div>
+      </div>
+      <div class="contact">
+        <div class="addr">{{contact.address_en|lines}}</div>
+        <div>{{contact.website}}</div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- Side B · Arabic -->
+<section class="sheet card" data-w="85" data-h="55" data-bleed="3" data-label="Side B · Arabic">
+  <div class="art"><div class="face card" dir="rtl" lang="ar">
+    <svg class="deboss deboss--light" viewBox="0 0 135 96" aria-hidden="true" style="opacity:.55"><g transform="scale(10) translate(-61.67 -75.34)"><path d="M61.67,75.34c0,0,9.58,2.13,13.49,9.58H71.6C71.6,84.92,70.01,79.78,61.67,75.34z"/></g></svg>
+    <div class="lk lk--ar" style="inset-inline-start:var(--m); --lw: 25mm; top: calc(var(--m) - 1mm)"><img src="../../../01-Logos/Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.svg" alt="سراج للتطوير العقاري"></div>
+    <div class="who" style="top:23.6mm">
+      <div class="name-ar">{{print.people.card.name_ar}}</div>
+      <div class="cap" lang="ar" style="color:var(--d-maroon);margin-top:.6mm">{{print.people.card.title_ar}}</div>
+    </div>
+    <div class="rule"></div>
+    <div class="base">
+      <div class="contact" lang="ar">
+        <div><span class="lbl">جوال</span><bdi dir="ltr">{{print.people.card.mobile}}</bdi></div>
+        <div><span class="lbl">هاتف</span><bdi dir="ltr">{{contact.phone}}</bdi></div>
+        <div><span class="lbl">بريد</span><bdi dir="ltr">{{print.people.card.email_user}}@{{contact.website}}</bdi></div>
+      </div>
+      <div class="contact" lang="ar">
+        <div class="addr">{{contact.address_ar|lines}}</div>
+        <div><bdi dir="ltr">{{contact.website}}</bdi></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+</body>
+</html>

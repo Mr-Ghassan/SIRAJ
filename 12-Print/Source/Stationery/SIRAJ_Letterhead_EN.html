@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Letterhead · English</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+</head>
+<body data-preview-eyebrow="SIRAJ · Stationery · Letterhead"
+      data-preview-title="Letterhead — English · A4"
+      data-preview-note="Printed master (blank) on uncoated warm-white 120 gsm. Descriptor lockup, wordmark 38 mm. Fold marks at 99 / 198 mm, punch mark at 148.5 mm. Typing area starts 60 mm from top."
+      data-preview-cols="2">
+
+<section class="page marks-fold" lang="en" dir="ltr" data-label="Letterhead · English · page 1 master">
+  <i class="marks-punch"></i>
+  <header class="doc-head">
+    <div class="lk lk--desc"><img src="../../../01-Logos/Lockups/SIRAJ_Lockup_Descriptor_Primary_v1.0.svg" alt="SIRAJ Real Estate Development"></div>
+  </header>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__rule"><i class="lumen"></i></div>
+    <div class="doc-foot__cols">
+      <div><b>Head office</b>{{company.name_en}}<br>{{contact.address_en|first}}</div>
+      <div><b>Postal</b>{{contact.po_box}}<br>{{company.country_en}} · {{contact.cr_number}}</div>
+      <div><b>Telephone</b>T {{contact.phone}}<br>WhatsApp {{contact.whatsapp}}</div>
+      <div><b>Online</b>{{contact.email}}<br>{{contact.website}}</div>
+    </div>
+  </footer>
+</section>
+
+<section class="page marks-fold preview-only" lang="en" dir="ltr" data-label="In use · sample letter (not printed)">
+  <i class="marks-punch"></i>
+  <header class="doc-head">
+    <div class="lk lk--desc"><img src="../../../01-Logos/Lockups/SIRAJ_Lockup_Descriptor_Primary_v1.0.svg" alt="SIRAJ Real Estate Development"></div>
+  </header>
+  <div class="letter">
+    <div class="letter__top">
+      <div class="letter__to">Mr. Ahmed Al Rawahi<br>P.O. Box 123, P.C. 112<br>Ruwi, Muscat<br>Sultanate of Oman</div>
+      <div class="letter__meta"><div><b>Date</b>11 October 2026</div><div><b>Ref.</b>SRJ/SAL/2026/0412</div></div>
+    </div>
+    <div class="letter__subject">{{demo_projects.noor.en}} — Reservation of Residence 1204</div>
+    <div class="letter__salute">Dear Mr. Al Rawahi,</div>
+    <div class="letter__body">
+      <p>Thank you for choosing {{demo_projects.noor.en}} in {{demo_projects.noor.location_en}}. We are pleased to confirm the reservation of Residence 1204, a three-bedroom home on the twelfth floor with an open view towards the sea.</p>
+      <p>Your reservation is held for fourteen days from the date of this letter. During this time our team will prepare the Sale and Purchase Agreement and the payment schedule we discussed, for your review and signature.</p>
+      <p>Handover of {{demo_projects.noor.en}} is planned for {{demo_projects.noor.handover}}. Until then we will keep you informed at each stage of construction, and you are welcome to visit the sales centre at any time.</p>
+      <p>Should you have any questions, please contact {{print.people.card.name_en}}, {{print.people.card.title_en}}, on {{print.people.card.mobile|nbsp}}.</p>
+    </div>
+    <div class="letter__sign">
+      <div>Yours sincerely,</div>
+      <div class="sp"></div>
+      <div class="nm">{{print.people.sender.name_en}}</div>
+      <div class="tt">{{print.people.sender.title_en}}</div>
+    </div>
+  </div>
+  <footer class="doc-foot">
+    <div class="doc-foot__rule"><i class="lumen"></i></div>
+    <div class="doc-foot__cols">
+      <div><b>Head office</b>{{company.name_en}}<br>{{contact.address_en|first}}</div>
+      <div><b>Postal</b>{{contact.po_box}}<br>{{company.country_en}} · {{contact.cr_number}}</div>
+      <div><b>Telephone</b>T {{contact.phone}}<br>WhatsApp {{contact.whatsapp}}</div>
+      <div><b>Online</b>{{contact.email}}<br>{{contact.website}}</div>
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SIRAJ Social — Profile Grid Preview</title>
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<!-- Instagram profile mock (1290 × 3230: a phone @3x, scrolled capture) showing the 9-tile rhythm of the system.
+     Tiles are the rendered exports in 11-Social/Exports, shown with the platform's 3:4 grid crop. ?lang=en|ar -->
+<script id="data" type="application/json">{
+  "tiles": [
+    "Property-Launch_Post", "Project-Feature_Post", "Statistics_Post",
+    "Construction-Update_Post", "Quote_Post", "Corporate-Announcement_Post",
+    "Event-Invitation_Post", "Hiring_Post", "Sold-Announcement_Post"
+  ],
+  "highlights": ["Projects", "Noor", "Harir", "Updates", "Investment", "Events", "Careers", "Contact"],
+  "labels_ar": { "Projects": "المشاريع", "Noor": "نور", "Harir": "حرير", "Updates": "التحديثات", "Investment": "الاستثمار", "Events": "الفعاليات", "Careers": "الوظائف", "Contact": "تواصل" },
+  "stats": { "posts": "128", "followers": "12.4K", "following": "86" }
+}</script>
+<style>
+  html, body { margin: 0; background: #fff; }
+  .phone { position: relative; width: 1290px; height: 3230px; background: #fff; overflow: hidden; color: #140E10; font-family: "Jost", "Tajawal", sans-serif; }
+  .phone[dir="rtl"] { font-family: "SIRAJ Digits", "Tajawal", "Jost", sans-serif; }
+  .status { height: 160px; display: flex; align-items: center; justify-content: space-between; padding: 30px 90px 0; font: 500 50px/1 "Jost"; direction: ltr; }
+  .status .dots { display: flex; gap: 14px; align-items: center; }
+  .status .dots span { display: block; background: #140E10; border-radius: 3px; }
+  .bar { height: 130px; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
+  .bar .handle { font: 600 56px/1 "Jost"; letter-spacing: -0.01em; direction: ltr; }
+  .bar .icons { display: flex; gap: 56px; }
+  .bar .icons i { display: block; width: 52px; height: 52px; border: 5px solid #140E10; border-radius: 14px; }
+  .bar .icons i.menu { border: 0; border-top: 5px solid #140E10; border-bottom: 5px solid #140E10; height: 40px; border-radius: 0; position: relative; }
+  .bar .icons i.menu::after { content: ""; position: absolute; left: 0; right: 0; top: 13px; border-top: 5px solid #140E10; }
+  .head { display: flex; align-items: center; gap: 70px; padding: 30px 48px 0; }
+  .avatar { width: 264px; height: 264px; border-radius: 50%; padding: 10px; background: linear-gradient(51deg, #AA9180, #D6C0B2); flex: none; }
+  .avatar img { width: 100%; height: 100%; border-radius: 50%; border: 8px solid #fff; display: block; box-sizing: border-box; }
+  .nums { flex: 1; display: flex; justify-content: space-around; text-align: center; }
+  .nums b { display: block; font: 600 52px/1.1 "Jost"; }
+  .nums span { font: 400 40px/1.3 "Jost", "Tajawal"; color: #3B3436; }
+  .bio { padding: 34px 48px 0; font: 400 40px/1.42 "Jost", "Tajawal"; }
+  .phone[dir="rtl"] .bio { font-family: "SIRAJ Digits", "Tajawal", sans-serif; line-height: 1.55; }
+  .bio .name { font-weight: 600; }
+  .bio .lm { display: inline-block; width: 14px; height: 14px; background: #AA9180; transform: rotate(45deg); margin: 0 14px; vertical-align: 4px; }
+  .bio .cat { color: #6B625E; }
+  .bio .link { color: #602733; font-weight: 500; direction: ltr; unicode-bidi: isolate; }
+  .btns { display: flex; gap: 18px; padding: 36px 48px 0; }
+  .btns div { flex: 1; height: 96px; border-radius: 20px; background: #EFE7E0; display: flex; align-items: center; justify-content: center; font: 600 40px/1 "Jost", "Tajawal"; }
+  .btns .primary { background: #602733; color: #fff; }
+  .hl { display: flex; gap: 46px; padding: 52px 48px 0; overflow: hidden; }
+  .hl figure { margin: 0; flex: none; width: 178px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .hl .ring { width: 178px; height: 178px; border-radius: 50%; border: 4px solid #D9D4D0; padding: 8px; box-sizing: border-box; }
+  .hl .ring div { width: 100%; height: 100%; border-radius: 50%; background-size: 100% auto; background-position: center; }
+  .hl figcaption { font: 400 34px/1.2 "Jost", "Tajawal"; white-space: nowrap; }
+  .tabs { display: flex; margin-top: 48px; border-bottom: 1px solid #E3DEDA; }
+  .tabs div { flex: 1; height: 120px; display: flex; align-items: center; justify-content: center; }
+  .tabs div.on { border-bottom: 4px solid #140E10; }
+  .tabs .g { width: 50px; height: 50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+  .tabs .g span { background: #140E10; }
+  .tabs .r { width: 52px; height: 52px; border: 5px solid #8C8580; border-radius: 14px; box-sizing: border-box; }
+  .tabs .t { width: 54px; height: 54px; border: 5px solid #8C8580; border-radius: 50%; box-sizing: border-box; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 4px; }
+  .grid div { aspect-ratio: 3 / 4; background-size: cover; background-position: center; }
+</style>
+</head><body>
+<script src="brand-data.js"></script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById('data').textContent);
+  const B = window.SIRAJ_BRAND;
+  const lang = new URLSearchParams(location.search).get('lang') || 'en';
+  const ar = lang === 'ar';
+  const L = ar ? 'AR' : 'EN';
+  const handle = (B.contact.social_handle || '').replace(/^@/, '');
+  const projects = ['noor', 'harir', 'qandeel'].map((k) => B.demo_projects[k][ar ? 'ar' : 'en']).join(' · ');
+  const tiles = D.tiles.map((t) => `<div style="background-image:url('../Exports/SIRAJ_Social_${t}_${L}_v1.0.png')"></div>`).join('');
+  const hl = D.highlights.map((h) => `<figure><div class="ring"><div style="background-image:url('../Highlights/SIRAJ_Social_Highlight_${h}_v1.0.png')"></div></div><figcaption>${ar ? D.labels_ar[h] : h}</figcaption></figure>`).join('');
+  const T = ar
+    ? { posts: 'منشور', followers: 'متابِع', following: 'يتابع', cat: 'شركة تطوير عقاري', line: `مساكن تتشكّل بالضوء والسكينة <i class="lm"></i> ${B.company.country_ar}`, follow: 'متابعة', msg: 'رسالة', contact: 'تواصل' }
+    : { posts: 'posts', followers: 'followers', following: 'following', cat: 'Real estate developer', line: `Residences shaped by light and silence <i class="lm"></i> ${B.company.country_en}`, follow: 'Follow', msg: 'Message', contact: 'Contact' };
+  document.body.innerHTML = `<div class="phone" dir="${ar ? 'rtl' : 'ltr'}" lang="${lang}">
+    <div class="status"><span>9:41</span><span class="dots"><span style="width:12px;height:22px"></span><span style="width:12px;height:30px"></span><span style="width:12px;height:38px"></span><span style="width:70px;height:34px;border-radius:9px;margin-left:16px"></span></span></div>
+    <div class="bar"><span class="handle">${handle}</span><span class="icons"><i></i><i class="menu"></i></span></div>
+    <div class="head"><div class="avatar"><img src="../../01-Logos/Dark/SIRAJ_Social-Avatar_Circle_v1.0.png"></div>
+      <div class="nums"><div><b>${D.stats.posts}</b><span>${T.posts}</span></div><div><b>${D.stats.followers}</b><span>${T.followers}</span></div><div><b>${D.stats.following}</b><span>${T.following}</span></div></div></div>
+    <div class="bio"><div class="name">${ar ? B.company.name_ar : B.company.name_en}</div><div class="cat">${T.cat}</div>
+      <div>${T.line}</div><div>${projects}</div><div class="link">${B.contact.website}</div></div>
+    <div class="btns"><div class="primary">${T.follow}</div><div>${T.msg}</div><div>${T.contact}</div></div>
+    <div class="hl">${hl}</div>
+    <div class="tabs"><div class="on"><span class="g">${'<span></span>'.repeat(9)}</span></div><div><span class="r"></span></div><div><span class="t"></span></div></div>
+    <div class="grid">${tiles}</div></div>`;
+  const imgs = [...document.querySelectorAll('[style*="background-image"]')].map((el) => el.style.backgroundImage.slice(5, -2));
+  Promise.all([document.fonts.ready, ...imgs.map((src) => new Promise((r) => { const i = new Image(); i.onload = () => r(); i.onerror = () => { (window.__miss = window.__miss || []).push(src); r(); }; i.src = src; }))])
+    .then(() => { window.__qa = (window.__miss || []).map((s) => 'missing image ' + s); document.body.dataset.ready = '1'; });
+})();
+</script>
+</body></html>

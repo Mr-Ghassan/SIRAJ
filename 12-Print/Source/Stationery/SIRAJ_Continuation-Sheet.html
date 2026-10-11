@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Continuation sheet</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  .cont-head { display: flex; justify-content: space-between; align-items: flex-start; flex: none; }
+  .cont-head .lk { --lw: 24mm; }
+  .cont-foot { position: absolute; bottom: 9mm; inset-inline: var(--m-inner) var(--m-outer); display: flex; justify-content: space-between; align-items: center; gap: 4mm; font-size: var(--fs-micro); color: var(--d-ash); }
+  .cont-foot .ln { flex: 1; height: 0; border-top: 0.5pt solid var(--d-rule); position: relative; }
+  .cont-foot .ln::before { content: ""; position: absolute; inset-inline-start: 0; top: -0.85mm; width: 1.2mm; height: 1.2mm; background: var(--d-stone); transform: rotate(45deg); }
+  .page[dir="rtl"] .cont-foot { font-size: 7pt; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Stationery · Continuation sheet"
+      data-preview-title="Continuation sheet — English &amp; Arabic · A4"
+      data-preview-note="Second and following pages of letters. Wordmark reduced to 24 mm; footer reduced to a hairline and the web address. Same margins as the letterhead.">
+
+<section class="page" lang="en" dir="ltr" data-label="Continuation · English">
+  <header class="cont-head">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+  </header>
+  <footer class="cont-foot"><span class="ln"></span><span>{{company.name_en}} · {{contact.website}}</span></footer>
+</section>
+
+<section class="page" lang="ar" dir="rtl" data-label="Continuation · Arabic">
+  <header class="cont-head">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+  </header>
+  <footer class="cont-foot"><span class="ln"></span><span>{{company.name_ar}} · <bdi dir="ltr">{{contact.website}}</bdi></span></footer>
+</section>
+
+</body>
+</html>

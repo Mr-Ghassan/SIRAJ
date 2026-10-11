@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Envelope · DL</title>
+<link rel="stylesheet" href="../css/siraj-print.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  /* DL 220 × 110 mm, wallet flap 38 mm. Printed on converted envelopes: keep all ink 12 mm from edges. */
+  .env .face { --m: 14mm; }
+  .env .word { position: absolute; top: 13mm; left: var(--m); width: 32mm; }
+  .env .ret { position: absolute; top: 27mm; left: var(--m); font-size: 6.4pt; line-height: 3.3mm; color: var(--d-ash); white-space: pre-line; }
+  .env .ret-ar { position: absolute; top: 26.6mm; right: var(--m); direction: rtl; text-align: right; font-family: var(--f-arabic); font-size: 7.4pt; line-height: 3.9mm; color: var(--d-ash); }
+  .env .ret-ar strong { display: block; font-weight: 500; font-size: 7.6pt; line-height: 3.9mm; color: var(--d-ink-strong); }
+  .env .lumen-r { position: absolute; top: 27.4mm; left: var(--m); }
+  .env .to { position: absolute; left: 110mm; top: 58mm; font-size: 9.5pt; line-height: 4.8mm; color: var(--d-ink-strong); }
+  .env .to .ln { display: block; }
+  .env .flap { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .env .flap-mark { position: absolute; left: 50%; top: 24mm; transform: translateX(-50%); display: flex; align-items: center; gap: 2.4mm; font-size: 6.4pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); font-weight: 500; white-space: nowrap; }
+  .env .flap-mark i { width: 1.5mm; height: 1.5mm; background: var(--d-stone); transform: rotate(45deg); }
+  .env .flap-mark span[lang="ar"] { font-size: 8pt; letter-spacing: 0; font-family: var(--f-arabic); }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Stationery · Envelope"
+      data-preview-title="Envelope — DL 220 × 110 mm"
+      data-preview-note="Over-printed on converted warm-white 120 gsm wallet envelopes (peel &amp; seal). One colour: Maroon (PANTONE 7421 C) + Stone for the Lumen. Dashed flap and the addressee are shown for reference only."
+      data-preview-cols="1">
+
+<section class="sheet env" data-w="220" data-h="110" data-bleed="0" data-label="Front · address side">
+  <div class="art"><div class="face">
+    <img class="word" src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ">
+    <div class="ret"><strong style="font-weight:400;color:var(--d-ink-strong)">{{company.name_en}}</strong><br>{{contact.po_box}}<br>{{contact.address_en|lines}}</div>
+    <div class="ret-ar" lang="ar"><strong>{{company.name_ar}}</strong>{{print.po_box_ar}}<br>{{contact.address_ar}}</div>
+    <div class="to pv-only"><span class="ln">Mr. Ahmed Al Rawahi</span><span class="ln">P.O. Box 123, P.C. 112</span><span class="ln">Ruwi, Muscat</span><span class="ln">Sultanate of Oman</span></div>
+  </div></div>
+</section>
+
+<section class="sheet env" data-w="220" data-h="110" data-bleed="0" data-label="Back · flap">
+  <div class="art"><div class="face">
+    <svg class="flap pv-only" viewBox="0 0 220 110" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,0 L0,38 L110,44 L220,38 L220,0" fill="none" stroke="#AA9180" stroke-width="0.25" stroke-dasharray="1.2 1"/>
+    </svg>
+    <div class="flap-mark"><span>{{contact.website}}</span><i></i><span lang="ar">{{company.name_ar}}</span></div>
+  </div></div>
+</section>
+
+</body>
+</html>

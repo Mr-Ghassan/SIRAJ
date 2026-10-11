@@ -1,0 +1,71 @@
+/* =============================================================================
+   SIRAJ Print v1.0 — sheet geometry for trimmed print items
+   (business cards, slips, envelopes, ID cards, badges, folders).
+
+   <section class="sheet" data-w="85" data-h="55" data-bleed="3" data-label="…">
+     <div class="art [bg-*]">            ← trim + bleed area (clipped). Backgrounds bleed here.
+       <div class="face"> … </div>      ← trim area. Position content in mm from the trim.
+     </div>
+   </section>
+
+   Modes (set by siraj-doc.js from the URL):
+     default   page = trim size (digital proof, preview)
+     ?marks    page = trim + bleed + 10 mm slug, crop marks + slug line
+   ========================================================================== */
+@import url("../../../19-Templates/docs/css/siraj-doc.css");
+
+.sheet {
+  --b: 0mm; --slug: 0mm;
+  position: relative; overflow: hidden;
+  width: calc(var(--w) + 2 * (var(--b) + var(--slug)));
+  height: calc(var(--h) + 2 * (var(--b) + var(--slug)));
+  break-after: page; page-break-after: always;
+  background: transparent;
+}
+.sheet:last-child { break-after: auto; page-break-after: auto; }
+.sheet > .art { position: absolute; inset: var(--slug); overflow: hidden; background: var(--d-paper); }
+.sheet > .art > .face { position: absolute; inset: var(--b); }
+.sheet > .marks { position: absolute; inset: 0; pointer-events: none; }
+html.has-marks .sheet { background: #fff; }
+html.is-preview .sheet > .art { background: #FCFAF7; }
+
+/* elements that must run into the bleed: extend by --b on the given edges */
+.to-bleed { position: absolute; inset: calc(-1 * var(--b)); }
+.bleed-l { margin-inline-start: calc(-1 * var(--b)); }
+
+/* backgrounds (applied to .art so they reach the bleed) */
+.bg-g1 { background: var(--d-g1) !important; color: #E9DDD4; }
+.bg-deep { background: var(--d-deep) !important; color: #E9DDD4; }
+.bg-maroon { background: var(--d-maroon) !important; color: #E9DDD4; }
+.bg-ivory { background: var(--d-ivory) !important; }
+.bg-linen { background: var(--d-linen) !important; }
+
+/* die-cut corner radius (CR80 cards) — preview/trim proof only */
+html:not(.has-marks) .sheet.cr80 > .art { border-radius: 3.18mm; }
+html.is-preview .pv-fig > .sheet.cr80 { border-radius: 3.18mm; }
+
+/* positioning helper: everything inside .face is absolutely placed in mm */
+.abs { position: absolute; }
+
+/* ------------------------------------------------------- micro type ---- */
+.cap { font-size: 5.4pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.4; }
+.cap[lang="ar"], [lang="ar"] .cap { font-size: 6.6pt; letter-spacing: 0; text-transform: none; }
+.name-en { font-size: 11pt; font-weight: 300; letter-spacing: 0.005em; color: var(--d-ink-strong); line-height: 1.2; }
+.name-ar { font-family: var(--f-arabic); font-size: 12pt; font-weight: 500; color: var(--d-ink-strong); line-height: 1.35; }
+.contact { font-size: 6.3pt; line-height: 3.1mm; color: var(--d-ink); }
+.contact[lang="ar"] { font-size: 7.4pt; line-height: 3.5mm; }
+.contact .lbl { display: inline-block; width: 4.2mm; color: var(--d-maroon); font-weight: 500; font-size: 5pt; letter-spacing: 0.12em; }
+.contact[lang="ar"] .lbl { width: auto; min-width: 7mm; font-size: 6.3pt; letter-spacing: 0; }
+.on-dark { color: #E9DDD4; }
+.on-dark .name-en, .on-dark .name-ar { color: #F7F2ED; }
+.on-dark .cap, .on-dark .contact .lbl { color: var(--d-sand); }
+
+/* blind deboss (no ink): previewed as a tonal relief */
+.deboss { position: absolute; opacity: 1; }
+.deboss path { fill: rgba(0, 0, 0, 0.12); }
+.deboss--light path { fill: rgba(60, 40, 30, 0.055); }
+html.has-marks .deboss { display: none; }   /* deboss is a separate die, never printed */
+
+/* dieline technical layer */
+.dieline { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+html.no-dieline .dieline, html.no-dieline .dl-legend { display: none; }

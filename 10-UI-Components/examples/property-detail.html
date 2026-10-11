@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noor Residences — SIRAJ</title>
+<meta name="description" content="Noor Residences, Al Khuwair, Muscat — 148 freehold residences by SIRAJ Real Estate Development. From OMR 145,000, handover Q4 2027.">
+<link rel="icon" href="../../01-Logos/SVG/SIRAJ_Monogram-S_Maroon-on-Ivory_v1.0.svg">
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<link rel="stylesheet" href="../siraj-components.css">
+<style>
+  /* pd- = page composition for the project page */
+  .pd-head { padding-block: 40px 40px; }
+  .pd-head__row { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-block-start: 48px; }
+  .pd-head h1 { margin: 18px 0 20px; }
+  .pd-head__badges { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pd-head__aside { display: grid; justify-items: end; gap: 20px; text-align: end; }
+  .pd-price { margin: 0; color: var(--siraj-text-strong); font-size: 34px; font-weight: 300; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .pd-price small { display: block; margin-block-end: 6px; color: var(--siraj-text-muted); font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+  .pd-gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: 300px 300px; gap: var(--sj-gutter); }
+  .pd-gallery__main { grid-column: span 8; grid-row: span 2; position: relative; }
+  .pd-gallery__side { grid-column: span 4; position: relative; }
+  .pd-gallery .sj-media { height: 100%; }
+  .pd-gallery__tools { position: absolute; inset-block-end: 24px; inset-inline-start: 24px; display: flex; gap: 8px; z-index: 1; }
+  .pd-chip { display: inline-flex; align-items: center; gap: 10px; height: 40px; padding-inline: 16px; color: var(--siraj-color-brand-deep); background: rgb(247 242 237 / .94); font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; border: 0; cursor: pointer; }
+  .pd-chip:hover { background: var(--siraj-color-neutral-ivory); }
+  .pd-chip .sj-icon { width: 18px; height: 18px; }
+  .pd-more { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 8px; color: var(--siraj-color-neutral-ivory); background: rgb(23 6 8 / .52); text-decoration: none; z-index: 1; }
+  .pd-more strong { font-size: 40px; font-weight: 200; line-height: 1; }
+  .pd-more span { font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+  .pd-subnav { position: sticky; top: 0; z-index: 50; margin-block-start: 64px; background: var(--siraj-bg); }
+  .pd-subnav .sj-tabs__list { gap: 44px; }
+  .pd-body { padding-block: 72px 128px; }
+  .pd-block { padding-block: 0 96px; scroll-margin-top: 80px; }
+  .pd-block + .pd-block { padding-block-start: 0; }
+  .pd-block > h2 { margin: 18px 0 24px; }
+  .pd-block .t-lead { margin: 0 0 24px; color: var(--siraj-text); }
+  .pd-block p.pd-text { margin: 0 0 40px; font-size: 17px; line-height: 1.75; color: var(--siraj-text); max-width: 700px; }
+  .pd-amen { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 48px 0 0; padding: 0; list-style: none; border-block-start: 1px solid var(--sj-hairline); }
+  .pd-amen li { display: grid; gap: 14px; padding: 24px 20px 24px 0; border-block-end: 1px solid var(--sj-hairline); color: var(--siraj-text-strong); font-size: 15px; }
+  .pd-amen li:not(:nth-child(4n + 1)) { padding-inline-start: 20px; border-inline-start: 1px solid var(--sj-hairline); }
+  .pd-amen .sj-icon { width: 28px; height: 28px; color: var(--siraj-accent); --siraj-icon-stroke: 1.15; }
+  .pd-filter { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-block-end: 24px; }
+  .pd-plan { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); margin-block-start: 40px; background: var(--siraj-surface); border: 1px solid var(--sj-hairline); }
+  .pd-plan__art { padding: 32px; border-inline-end: 1px solid var(--sj-hairline); background: var(--siraj-surface); }
+  .pd-plan__art svg { display: block; width: 100%; height: auto; }
+  .pd-plan__info { display: grid; align-content: start; gap: 18px; padding: 32px; }
+  .pd-plan__info h3 { margin: 0; color: var(--siraj-text-strong); font-size: 26px; font-weight: 300; }
+  .pd-plan__rooms { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; border-block-start: 1px solid var(--sj-hairline); }
+  .pd-plan__rooms li { display: flex; justify-content: space-between; padding: 11px 0; border-block-end: 1px solid var(--sj-hairline); font-size: 14px; color: var(--siraj-text); font-variant-numeric: tabular-nums; }
+  .pd-plan__rooms li span:last-child { color: var(--siraj-text-strong); }
+  .pd-pay { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sj-gutter); margin-block-start: 40px; }
+  .pd-pay__pct { display: block; color: var(--siraj-text-strong); font-size: 48px; font-weight: 200; line-height: 1; margin-block: 8px 6px; font-variant-numeric: tabular-nums; }
+  .pd-pay .sj-step { padding-block-start: 40px; }
+  .pd-pay-example { display: flex; justify-content: space-between; gap: 24px; margin-block-start: 40px; padding: 20px 24px; background: var(--siraj-surface-alt); font-size: 14px; color: var(--siraj-text); }
+  .pd-pay-example strong { color: var(--siraj-text-strong); font-weight: 500; }
+  .pd-progress { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; align-items: stretch; margin-block-start: 40px; }
+  .pd-progress__photo { position: relative; min-height: 300px; }
+  .pd-progress__photo .sj-media { height: 100%; }
+  .pd-progress__photo figcaption { position: absolute; inset-inline-start: 16px; inset-block-end: 16px; z-index: 1; }
+  .pd-progress__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 24px; margin-block-start: 40px; }
+  .pd-map { position: relative; margin-block-start: 40px; border: 1px solid var(--sj-hairline); background: var(--siraj-surface-alt); }
+  .pd-map > svg { display: block; width: 100%; height: auto; }
+  .pd-map__ctrl { position: absolute; inset-block-start: 16px; inset-inline-end: 16px; display: grid; gap: 4px; }
+  .pd-map__ctrl .sj-icon-btn { width: 40px; height: 40px; background: var(--siraj-surface); }
+  .pd-dist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; margin: 32px 0 0; padding: 0; list-style: none; }
+  .pd-dist li { display: flex; align-items: center; gap: 14px; padding: 16px 0; border-block-end: 1px solid var(--sj-hairline); font-size: 15px; color: var(--siraj-text-strong); }
+  .pd-dist li .sj-icon { color: var(--siraj-lumen); }
+  .pd-dist li span { margin-inline-start: auto; color: var(--siraj-text-muted); font-variant-numeric: tabular-nums; }
+  .pd-aside { position: sticky; top: 96px; align-self: start; }
+  .pd-enquire { background: var(--siraj-surface); border: 1px solid var(--sj-hairline); border-block-start: 2px solid var(--siraj-accent); }
+  .pd-enquire__head { padding: 28px 28px 24px; border-block-end: 1px solid var(--sj-hairline); }
+  .pd-enquire__head h2 { margin: 12px 0 6px; color: var(--siraj-text-strong); font-size: 26px; font-weight: 300; }
+  .pd-enquire__head p { margin: 0; color: var(--siraj-text-muted); font-size: 14px; }
+  .pd-enquire form { display: grid; gap: 20px; padding: 28px; }
+  .pd-enquire .sj-input, .pd-enquire .sj-select select { height: 48px; }
+  .pd-enquire__agent { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 28px; border-block-start: 1px solid var(--sj-hairline); background: var(--siraj-bg); }
+  .pd-enquire__agent .sj-cluster { --sj-cluster: 6px; flex-wrap: nowrap; }
+  .pd-note { margin: 0; color: var(--siraj-text-muted); font-size: 12px; line-height: 1.5; }
+  @media (max-width: 899px) {
+    .pd-head__row { flex-direction: column; align-items: start; margin-block-start: 28px; }
+    .pd-head__aside { justify-items: start; text-align: start; }
+    .pd-gallery { grid-template-rows: 300px 160px; gap: 8px; margin-inline: calc(-1 * var(--sj-margin)); }
+    .pd-gallery__main { grid-column: 1 / -1; grid-row: auto; }
+    .pd-gallery__side { grid-column: span 6; }
+    .pd-gallery__tools { inset-inline-start: 16px; inset-block-end: 16px; }
+    .pd-chip span { display: none; }
+    .pd-subnav { margin-block-start: 32px; }
+    .pd-subnav .sj-tabs__list { gap: 28px; }
+    .pd-body { padding-block: 48px 80px; }
+    .pd-block { padding-block-end: 72px; }
+    .pd-amen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pd-amen li:not(:nth-child(4n + 1)) { padding-inline-start: 0; border-inline-start: 0; }
+    .pd-amen li:nth-child(even) { padding-inline-start: 16px; border-inline-start: 1px solid var(--sj-hairline); }
+    .pd-filter { flex-direction: column; align-items: start; }
+    .pd-filter .sj-segmented { max-width: 100%; overflow-x: auto; }
+    .pd-plan, .pd-progress { grid-template-columns: 1fr; }
+    .pd-plan__art { border-inline-end: 0; border-block-end: 1px solid var(--sj-hairline); padding: 16px; }
+    .pd-pay { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+    .pd-pay.sj-stepper { grid-auto-flow: row; }
+    .pd-pay .sj-step::after { display: none; }
+    .pd-pay-example { flex-direction: column; gap: 6px; }
+    .pd-dist { grid-template-columns: 1fr; }
+    .pd-aside { position: static; }
+  }
+</style>
+</head>
+<body data-sj-sprite="../../07-Icon-System/sprite/siraj-icons.svg">
+
+<nav class="sj-nav" aria-label="Main">
+  <div class="sj-container sj-nav__inner">
+    <a class="sj-logo" href="corporate-home.html" aria-label="SIRAJ home"><img src="../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></a>
+    <ul class="sj-nav__links">
+      <li><a class="sj-nav__link" href="corporate-home.html#projects" aria-current="page">Projects</a></li>
+      <li><a class="sj-nav__link" href="corporate-home.html#invest">Invest</a></li>
+      <li><a class="sj-nav__link" href="corporate-home.html#about">About</a></li>
+      <li><a class="sj-nav__link" href="corporate-home.html#news">News</a></li>
+      <li><a class="sj-nav__link" href="corporate-home.html#contact">Contact</a></li>
+    </ul>
+    <div class="sj-nav__actions">
+      <a class="sj-nav__lang sj-hide-mobile" href="corporate-home-ar.html" lang="ar">العربية</a>
+      <button class="sj-icon-btn sj-icon-btn--plain sj-hide-mobile" type="button" aria-label="Search"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-search"/></svg></button>
+      <a class="sj-btn sj-btn--secondary sj-btn--sm sj-hide-mobile" href="#enquire">Enquire</a>
+      <button class="sj-icon-btn sj-nav__menu-btn" type="button" aria-label="Open menu" data-sj-drawer-open="menu"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-menu"/></svg></button>
+    </div>
+  </div>
+</nav>
+<aside class="sj-drawer" id="menu" aria-hidden="true" aria-label="Menu">
+  <div class="sj-drawer__head"><img src="../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ" style="height:22px"><button class="sj-icon-btn" type="button" aria-label="Close menu" data-sj-close><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button></div>
+  <div class="sj-drawer__body"><ul class="sj-mobile-nav"><li><a href="corporate-home.html#projects" aria-current="page">Projects</a></li><li><a href="corporate-home.html#invest">Invest</a></li><li><a href="corporate-home.html#about">About</a></li><li><a href="corporate-home.html#news">News</a></li><li><a href="corporate-home.html#contact">Contact</a></li></ul></div>
+  <div class="sj-drawer__foot"><a class="sj-btn sj-btn--primary" href="#enquire" data-sj-close>Enquire</a></div>
+</aside>
+
+<main>
+<header class="sj-container pd-head">
+  <nav class="sj-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="corporate-home.html">Home</a></li><li><a href="corporate-home.html#projects">Projects</a></li><li><a href="corporate-home.html#projects">Muscat</a></li><li><span aria-current="page">Noor Residences</span></li></ol></nav>
+  <div class="pd-head__row">
+    <div>
+      <p class="sj-kicker">Residential · Al Khuwair, Muscat</p>
+      <h1 class="t-h1">Noor Residences</h1>
+      <div class="pd-head__badges"><span class="sj-badge sj-badge--offplan">Off-plan</span><span class="sj-badge sj-badge--info">Handover Q4 2027</span><span class="sj-badge sj-badge--plain">Freehold</span><span class="sj-badge sj-badge--ready">52 available</span></div>
+    </div>
+    <div class="pd-head__aside">
+      <p class="pd-price"><small>Starting from</small>OMR 145,000</p>
+      <div class="sj-cluster" style="--sj-cluster:10px">
+        <span class="sj-tooltip"><button class="sj-icon-btn" type="button" aria-label="Share"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-share"/></svg></button><span class="sj-tooltip__bubble" role="tooltip">Share</span></span>
+        <span class="sj-tooltip"><button class="sj-icon-btn" type="button" aria-label="Save" aria-pressed="false"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-heart"/></svg></button><span class="sj-tooltip__bubble" role="tooltip">Save to shortlist</span></span>
+        <a class="sj-btn sj-btn--secondary" href="#" data-sj-toast="Brochure downloading|Noor Residences · 24 pages · 8.4 MB" data-sj-toast-icon="download"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg><span class="sj-btn__label">Brochure</span></a>
+        <a class="sj-btn sj-btn--primary" href="#enquire"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-calendar"/></svg><span class="sj-btn__label">Book a viewing</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="sj-container" aria-label="Gallery">
+  <div class="pd-gallery">
+    <div class="pd-gallery__main">
+      <div class="sj-media sj-silk--hero"><img src="../../08-Photography/Library/SIRAJ_Photo_Residential-Tower-Golden-Hour_v1.0.jpg" alt="Noor Residences tower at golden hour against the Hajar mountains"></div>
+      <div class="pd-gallery__tools"><button class="pd-chip" type="button"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-image"/></svg><span>Gallery · 28</span></button><button class="pd-chip" type="button"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-360-tour"/></svg><span>Virtual tour</span></button><button class="pd-chip" type="button"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-play"/></svg><span>Film</span></button></div>
+    </div>
+    <div class="pd-gallery__side"><div class="sj-media"><img src="../../08-Photography/Library/SIRAJ_Photo_Apartment-Interior-Sea-View_v1.0.jpg" alt="Living room with floor-to-ceiling windows facing the sea"></div></div>
+    <div class="pd-gallery__side"><div class="sj-media"><img src="../../08-Photography/Library/SIRAJ_Photo_Aerial-Coastal-Community_v1.0.jpg" alt="Aerial view of the Muscat coastline"></div><a class="pd-more" href="#"><strong>+25</strong><span>View all photos</span></a></div>
+  </div>
+</section>
+
+<nav class="pd-subnav" aria-label="On this page">
+  <div class="sj-container"><div class="sj-tabs__list">
+    <a class="sj-tab" href="#overview" aria-current="true">Overview</a>
+    <a class="sj-tab" href="#residences">Residences <span class="sj-tab__count">7</span></a>
+    <a class="sj-tab" href="#payment">Payment plan</a>
+    <a class="sj-tab" href="#progress">Progress</a>
+    <a class="sj-tab" href="#location">Location</a>
+  </div></div>
+</nav>
+
+<div class="sj-container sj-grid pd-body">
+  <div class="sj-span-8">
+
+    <section class="pd-block" id="overview" aria-labelledby="ov-title">
+      <p class="sj-kicker">Overview</p>
+      <h2 class="t-h2" id="ov-title">Twenty-two storeys of calm above Al Khuwair.</h2>
+      <p class="t-lead">A slender tower in warm stone and bronze, oriented to catch the morning sea breeze and turn its back to the afternoon sun.</p>
+      <p class="pd-text">148 residences — from one-bedroom apartments to four full-floor penthouses — sit above a shaded podium of gardens, a 25-metre infinity pool and a residents’ majlis. Every home has a deep loggia facing the Sea of Oman, and is finished in natural oak, Omani limestone and brushed bronze.</p>
+      <dl class="sj-facts" style="--cols:4">
+        <div><dt>Residences</dt><dd>148</dd></div>
+        <div><dt>Floors</dt><dd>G + 22</dd></div>
+        <div><dt>Unit types</dt><dd>1–4 BR</dd></div>
+        <div><dt>Sizes</dt><dd>85–420 m²</dd></div>
+        <div><dt>Starting price</dt><dd>OMR 145,000</dd></div>
+        <div><dt>Handover</dt><dd>Q4 2027</dd></div>
+        <div><dt>Ownership</dt><dd>Freehold</dd></div>
+        <div><dt>Service charge</dt><dd>OMR 2.4 / m²</dd></div>
+      </dl>
+      <ul class="pd-amen" aria-label="Amenities">
+        <li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-pool"/></svg> Infinity pool</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-gym"/></svg> Fitness studio</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-security"/></svg> 24/7 concierge</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-parking"/></svg> Covered parking</li>
+        <li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-elevator"/></svg> 4 high-speed lifts</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-sea-view"/></svg> Sea views</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-community"/></svg> Residents’ majlis</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-sustainability"/></svg> Solar-ready roof</li>
+      </ul>
+    </section>
+
+    <section class="pd-block" id="residences" aria-labelledby="res-title">
+      <p class="sj-kicker">Residences &amp; floor plans</p>
+      <h2 class="t-h2" id="res-title">Choose your residence</h2>
+      <div class="pd-filter">
+        <div class="sj-segmented" role="group" aria-label="Unit type"><button type="button" aria-pressed="true">All</button><button type="button" aria-pressed="false">1 BR</button><button type="button" aria-pressed="false">2 BR</button><button type="button" aria-pressed="false">3 BR</button><button type="button" aria-pressed="false">Penthouse</button></div>
+        <p class="sj-alert sj-alert--info" style="margin:0"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-info"/></svg> Prices exclude 3% registration fee</p>
+      </div>
+      <div class="sj-table-wrap">
+        <table class="sj-table sj-table--compact" data-sj-sortable>
+          <caption class="visually-hidden">Available residences at Noor Residences</caption>
+          <thead><tr>
+            <th scope="col" aria-sort="none"><button class="sj-sort" type="button">Unit <span class="sj-sort__icon"></span></button></th>
+            <th scope="col">Type</th>
+            <th scope="col" class="is-num" aria-sort="none"><button class="sj-sort" type="button">Floor <span class="sj-sort__icon"></span></button></th>
+            <th scope="col" class="is-num" aria-sort="none"><button class="sj-sort" type="button">Area m² <span class="sj-sort__icon"></span></button></th>
+            <th scope="col">View</th>
+            <th scope="col" class="is-num" aria-sort="ascending"><button class="sj-sort" type="button">Price OMR <span class="sj-sort__icon"></span></button></th>
+            <th scope="col">Status</th>
+            <th scope="col"><span class="visually-hidden">Plan</span></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="is-strong">A-0302</td><td>1 Bedroom</td><td class="is-num">3</td><td class="is-num">85</td><td>City</td><td class="is-num" data-value="145000">145,000</td><td><span class="sj-badge sj-badge--ready">Available</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Floor plan A-0302"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-floor-plan"/></svg></button></td></tr>
+            <tr><td class="is-strong">A-0905</td><td>1 Bedroom</td><td class="is-num">9</td><td class="is-num">92</td><td>Garden</td><td class="is-num" data-value="158500">158,500</td><td><span class="sj-badge sj-badge--reserved">Reserved</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Floor plan A-0905"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-floor-plan"/></svg></button></td></tr>
+            <tr><td class="is-strong">B-1204</td><td>2 Bedroom</td><td class="is-num">12</td><td class="is-num">128</td><td>Sea</td><td class="is-num" data-value="198500">198,500</td><td><span class="sj-badge sj-badge--ready">Available</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Floor plan B-1204"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-floor-plan"/></svg></button></td></tr>
+            <tr><td class="is-strong">B-1408</td><td>2 Bedroom</td><td class="is-num">14</td><td class="is-num">134</td><td>Sea</td><td class="is-num" data-value="207000">207,000</td><td><span class="sj-badge sj-badge--sold">Sold</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Floor plan B-1408"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-floor-plan"/></svg></button></td></tr>
+            <tr><td class="is-strong">C-1507</td><td>3 Bedroom</td><td class="is-num">15</td><td class="is-num">176</td><td>Sea &amp; city</td><td class="is-num" data-value="264000">264,000</td><td><span class="sj-badge sj-badge--ready">Available</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Floor plan C-1507"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-floor-plan"/></svg></button></td></tr>
+            <tr><td class="is-strong">C-1903</td><td>3 Bedroom</td><td class="is-num">19</td><td class="is-num">182</td><td>Sea</td><td class="is-num" data-value="281500">281,500</td><td><span class="sj-badge sj-badge--ready">Available</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Floor plan C-1903"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-floor-plan"/></svg></button></td></tr>
+            <tr><td class="is-strong">PH-2201</td><td>Penthouse</td><td class="is-num">22</td><td class="is-num">420</td><td>Panoramic</td><td class="is-num" data-value="690000">690,000</td><td><span class="sj-badge sj-badge--offplan">On request</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Floor plan PH-2201"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-floor-plan"/></svg></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pd-plan">
+        <figure class="pd-plan__art" style="margin:0">
+          <svg viewBox="0 0 460 320" role="img" aria-label="Floor plan of a 2-bedroom residence, 128 square metres" font-family="Jost, sans-serif">
+            <g fill="none" stroke="var(--siraj-text-strong)">
+              <!-- outer walls -->
+              <path d="M20 40 H440 V250 H20 Z" stroke-width="4"/>
+              <!-- loggia -->
+              <path d="M20 250 V292 H300 V250" stroke-width="1" stroke-dasharray="4 4"/>
+              <!-- interior walls -->
+              <path d="M170 40 V120 M170 150 V250" stroke-width="2"/>
+              <path d="M300 40 V250" stroke-width="2"/>
+              <path d="M300 140 H380 M410 140 H440" stroke-width="2"/>
+              <path d="M20 120 H80 M110 120 H170" stroke-width="2"/>
+              <path d="M370 40 V100" stroke-width="2"/>
+              <!-- door swings -->
+              <path d="M80 120 A30 30 0 0 1 110 150" stroke-width="1" stroke-opacity=".5"/>
+              <path d="M170 120 A30 30 0 0 1 200 150" stroke-width="1" stroke-opacity=".5"/>
+              <path d="M380 140 A30 30 0 0 0 410 170" stroke-width="1" stroke-opacity=".5"/>
+              <!-- windows -->
+              <path d="M40 250 H150 M190 250 H290 M320 250 H420" stroke="var(--siraj-surface)" stroke-width="2"/>
+              <path d="M40 251 H150 M190 251 H290 M320 251 H420" stroke-width="1"/>
+              <!-- kitchen counter -->
+              <path d="M190 40 V64 H290 V40" stroke-width="1" stroke-opacity=".6"/>
+            </g>
+            <g fill="var(--siraj-text-muted)" font-size="10" letter-spacing="1.4" text-anchor="middle">
+              <text x="95" y="76">KITCHEN · 11 m²</text>
+              <text x="95" y="196">BEDROOM 2</text><text x="95" y="210" letter-spacing="0">14 m²</text>
+              <text x="235" y="160">LIVING / DINING</text><text x="235" y="174" letter-spacing="0">38 m²</text>
+              <text x="370" y="196">MASTER BEDROOM</text><text x="370" y="210" letter-spacing="0">19 m²</text>
+              <text x="335" y="76">BATH</text><text x="405" y="76">EN-SUITE</text>
+              <text x="160" y="276">LOGGIA · 16 m²</text>
+            </g>
+            <g transform="translate(400 296)"><rect x="-5" y="-5" width="10" height="10" fill="var(--siraj-lumen)" transform="rotate(45)"/><text x="12" y="4" fill="var(--siraj-text-muted)" font-size="10" letter-spacing="1.4">SEA</text></g>
+            <g fill="var(--siraj-text-muted)" font-size="10"><path d="M20 14 H440" stroke="var(--siraj-border-strong)" stroke-width="1"/><path d="M20 10 V18 M440 10 V18" stroke="var(--siraj-border-strong)"/><text x="230" y="10" text-anchor="middle">16.4 m</text></g>
+          </svg>
+        </figure>
+        <div class="pd-plan__info">
+          <p class="sj-kicker">Featured layout · Type B</p>
+          <h3>Two bedrooms, 128 m²</h3>
+          <ul class="pd-plan__rooms">
+            <li><span>Living / dining</span><span>38 m²</span></li>
+            <li><span>Master bedroom + en-suite</span><span>19 m²</span></li>
+            <li><span>Bedroom 2</span><span>14 m²</span></li>
+            <li><span>Kitchen</span><span>11 m²</span></li>
+            <li><span>Loggia</span><span>16 m²</span></li>
+          </ul>
+          <a class="sj-link sj-link--caps" href="#">Download plan (PDF) <svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pd-block" id="payment" aria-labelledby="pay-title">
+      <p class="sj-kicker">Payment plan</p>
+      <h2 class="t-h2" id="pay-title">10 / 50 / 40, with nothing hidden</h2>
+      <ol class="sj-stepper sj-stepper--keep pd-pay" aria-label="Payment milestones">
+        <li class="sj-step is-current" style="--step-progress:0%"><span class="sj-step__marker"></span><span class="sj-step__index">01 · On booking</span><span class="pd-pay__pct">10%</span><p class="sj-step__title">Reservation</p><p class="sj-step__meta">Secures your unit</p></li>
+        <li class="sj-step is-upcoming"><span class="sj-step__marker"></span><span class="sj-step__index">02 · Within 30 days</span><span class="pd-pay__pct">10%</span><p class="sj-step__title">Sale agreement</p><p class="sj-step__meta">SPA signing</p></li>
+        <li class="sj-step is-upcoming"><span class="sj-step__marker"></span><span class="sj-step__index">03 · 2026 – 2027</span><span class="pd-pay__pct">40%</span><p class="sj-step__title">Construction</p><p class="sj-step__meta">8 quarterly instalments</p></li>
+        <li class="sj-step is-upcoming"><span class="sj-step__marker"></span><span class="sj-step__index">04 · Q4 2027</span><span class="pd-pay__pct">40%</span><p class="sj-step__title">Handover</p><p class="sj-step__meta">Or post-handover over 24 months</p></li>
+      </ol>
+      <div class="pd-pay-example"><span>Example · Unit B-1204 at <strong>OMR 198,500</strong></span><span>Reservation <strong>OMR 19,850</strong> · Instalment <strong>OMR 9,925</strong> / quarter</span></div>
+    </section>
+
+    <section class="pd-block" id="progress" aria-labelledby="prog-title">
+      <p class="sj-kicker">Construction progress</p>
+      <h2 class="t-h2" id="prog-title">Level 18 of 22, on schedule</h2>
+      <div class="pd-progress">
+        <figure class="pd-progress__photo" style="margin:0"><div class="sj-media"><img src="../../08-Photography/Library/SIRAJ_Photo_Construction-Site-Dawn_v1.0.jpg" alt="Noor Residences structure under construction at dawn"></div><figcaption><span class="sj-badge sj-badge--on-image">Site photo · 30 Sep 2026</span></figcaption></figure>
+        <div>
+          <div class="sj-progress sj-progress--thick"><div class="sj-progress__head"><span class="sj-progress__label">Overall completion</span><span class="sj-progress__value">68%</span></div><div class="sj-progress__track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Overall completion"><div class="sj-progress__fill" style="--value:68%"></div></div><div class="sj-progress__foot"><span>Started Q1 2025</span><span>Handover Q4 2027</span></div></div>
+          <div class="pd-progress__stats">
+            <div class="sj-stat sj-stat--compact"><p class="sj-stat__label">Structure</p><p class="sj-stat__value">82<span class="sj-stat__unit">%</span></p></div>
+            <div class="sj-stat sj-stat--compact"><p class="sj-stat__label">Façade</p><p class="sj-stat__value">24<span class="sj-stat__unit">%</span></p></div>
+          </div>
+          <p style="margin:32px 0 0"><a class="sj-link sj-link--caps" href="#">Monthly progress reports <svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pd-block" id="location" aria-labelledby="loc-title" style="padding-bottom:0">
+      <p class="sj-kicker">Location</p>
+      <h2 class="t-h2" id="loc-title">At the centre of Muscat’s coast</h2>
+      <div class="pd-map">
+        <svg viewBox="0 0 800 440" role="img" aria-label="Map of Al Khuwair showing Noor Residences between Sultan Qaboos Street and the coast" font-family="Jost, sans-serif">
+          <rect width="800" height="440" fill="var(--siraj-surface-alt)"/>
+          <!-- sea -->
+          <path d="M0 0 H800 V96 C700 120 640 84 560 104 C470 126 420 92 330 112 C230 134 150 104 0 128 Z" fill="var(--siraj-color-neutral-sand)" fill-opacity=".45"/>
+          <path d="M0 128 C150 104 230 134 330 112 C420 92 470 126 560 104 C640 84 700 120 800 96" fill="none" stroke="var(--siraj-lumen)" stroke-opacity=".7"/>
+          <text x="40" y="52" fill="var(--siraj-text-muted)" font-size="11" letter-spacing="3">SEA OF OMAN</text>
+          <!-- blocks -->
+          <g fill="none" stroke="var(--siraj-text)" stroke-opacity=".12">
+            <path d="M60 170 H190 V230 H60 Z M220 160 H330 V230 H220 Z M60 300 H170 V380 H60 Z M200 300 H320 V390 H200 Z M480 160 H600 V230 H480 Z M630 150 H750 V230 H630 Z M480 300 H580 V380 H480 Z M610 300 H740 V400 H610 Z"/>
+          </g>
+          <!-- roads -->
+          <g fill="none" stroke="var(--siraj-text)" stroke-opacity=".28">
+            <path d="M0 150 C200 140 600 140 800 132"/>
+            <path d="M200 140 V440 M460 140 V440 M600 140 V440"/>
+            <path d="M0 400 H800"/>
+          </g>
+          <path d="M0 262 C220 270 560 256 800 266" fill="none" stroke="var(--siraj-surface)" stroke-width="10"/>
+          <path d="M0 262 C220 270 560 256 800 266" fill="none" stroke="var(--siraj-text)" stroke-opacity=".35" stroke-width="1"/>
+          <text x="560" y="252" fill="var(--siraj-text-muted)" font-size="10" letter-spacing="2">SULTAN QABOOS STREET</text>
+          <!-- POIs -->
+          <g fill="var(--siraj-lumen)">
+            <rect x="96" y="326" width="8" height="8" transform="rotate(45 100 330)"/>
+            <rect x="676" y="186" width="8" height="8" transform="rotate(45 680 190)"/>
+            <rect x="526" y="336" width="8" height="8" transform="rotate(45 530 340)"/>
+            <rect x="266" y="186" width="8" height="8" transform="rotate(45 270 190)"/>
+          </g>
+          <g fill="var(--siraj-text)" font-size="12">
+            <text x="114" y="334">Grand Mosque</text>
+            <text x="694" y="194">Qurum Beach</text>
+            <text x="544" y="344">Muscat Grand Mall</text>
+            <text x="284" y="194">Ministries district</text>
+          </g>
+          <!-- Noor Residences -->
+          <g transform="translate(400 206)">
+            <rect x="-22" y="-22" width="44" height="44" fill="none" stroke="var(--siraj-accent)" stroke-opacity=".35" transform="rotate(45)"/>
+            <rect x="-10" y="-10" width="20" height="20" fill="var(--siraj-accent)" transform="rotate(45)"/>
+            <rect x="-3" y="-3" width="6" height="6" fill="var(--siraj-color-neutral-ivory)" transform="rotate(45)"/>
+            <rect x="-86" y="-70" width="172" height="36" fill="var(--siraj-surface)" stroke="var(--sj-hairline)"/>
+            <text x="0" y="-47" text-anchor="middle" fill="var(--siraj-text-strong)" font-size="13">Noor Residences</text>
+          </g>
+          <!-- compass + scale -->
+          <g transform="translate(748 392)" fill="var(--siraj-text-muted)" font-size="10"><path d="M0 -26 L6 -10 H-6 Z" fill="var(--siraj-text-strong)"/><text x="0" y="6" text-anchor="middle">N</text></g>
+          <g transform="translate(40 418)" fill="var(--siraj-text-muted)" font-size="10"><path d="M0 0 H80 M0 -4 V4 M80 -4 V4" stroke="var(--siraj-text-muted)"/><text x="90" y="4">500 m</text></g>
+        </svg>
+        <div class="pd-map__ctrl"><button class="sj-icon-btn" type="button" aria-label="Zoom in"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-plus"/></svg></button><button class="sj-icon-btn" type="button" aria-label="Zoom out"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-minus"/></svg></button><button class="sj-icon-btn" type="button" aria-label="Directions"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-direction"/></svg></button></div>
+      </div>
+      <ul class="pd-dist">
+        <li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Sultan Qaboos Grand Mosque <span>6 min</span></li>
+        <li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Muscat Grand Mall <span>7 min</span></li>
+        <li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Qurum Beach <span>9 min</span></li>
+        <li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Royal Opera House <span>12 min</span></li>
+        <li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Muscat International Airport <span>15 min</span></li>
+        <li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Muttrah Corniche <span>22 min</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <aside class="sj-span-4 sj-start-9 pd-aside" id="enquire" aria-labelledby="enq-title">
+    <div class="pd-enquire">
+      <div class="pd-enquire__head">
+        <p class="sj-kicker">Enquire</p>
+        <h2 id="enq-title">Arrange a private viewing</h2>
+        <p>A consultant will call you within one working day.</p>
+      </div>
+      <form onsubmit="event.preventDefault(); SIRAJ.toast('Enquiry sent','Maryam will call you within one working day.')">
+        <div class="sj-field"><label class="sj-label" for="e-name">Full name</label><input class="sj-input" id="e-name" autocomplete="name" placeholder="Your name"></div>
+        <div class="sj-field"><label class="sj-label" for="e-phone">Mobile</label><div class="sj-input-group"><span class="sj-input-group__affix">+968</span><input class="sj-input" id="e-phone" inputmode="tel" autocomplete="tel-national" placeholder="9XXX XXXX"></div></div>
+        <div class="sj-field"><label class="sj-label" for="e-type">Interested in</label><div class="sj-select"><select id="e-type"><option>2 bedroom · from OMR 198,500</option><option>1 bedroom · from OMR 145,000</option><option>3 bedroom · from OMR 264,000</option><option>Penthouse · on request</option></select><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-chevron-down"/></svg></div></div>
+        <fieldset class="sj-choice-group sj-choice-group--row"><legend class="sj-label">Contact me by</legend><label class="sj-radio"><input type="radio" name="via" checked> Call</label><label class="sj-radio"><input type="radio" name="via"> WhatsApp</label><label class="sj-radio"><input type="radio" name="via"> Email</label></fieldset>
+        <label class="sj-check" style="font-size:13px;color:var(--siraj-text-muted)"><input type="checkbox"> Send me launch news and progress updates</label>
+        <button class="sj-btn sj-btn--primary sj-btn--block sj-btn--lg" type="submit"><span class="sj-btn__label">Request a call back</span><svg class="sj-icon sj-icon--dir sj-btn__trail" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></button>
+        <p class="pd-note">By submitting you agree to our privacy policy. We never share your details.</p>
+      </form>
+      <div class="pd-enquire__agent">
+        <div class="sj-person"><span class="sj-avatar sj-avatar--lg">MA<span class="sj-avatar__status"></span></span><div><p class="sj-person__name">Maryam Al Balushi</p><p class="sj-person__role">Sales consultant</p></div></div>
+        <div class="sj-cluster"><a class="sj-icon-btn sj-icon-btn--sm" href="#" aria-label="Call Maryam"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-call"/></svg></a><a class="sj-icon-btn sj-icon-btn--sm" href="#" aria-label="WhatsApp Maryam"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-whatsapp"/></svg></a></div>
+      </div>
+    </div>
+  </aside>
+</div>
+</main>
+
+<footer class="sj-footer" data-theme="dark">
+  <div class="sj-container">
+    <div class="sj-footer__top">
+      <div class="sj-footer__brand"><a class="sj-logo" href="corporate-home.html"><img src="../../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ"></a><p class="sj-footer__statement">Architecture shaped with the elegance, continuity and controlled movement of silk.</p></div>
+      <div class="sj-footer__col"><p class="sj-footer__heading">Projects</p><ul class="sj-footer__links"><li><a href="property-detail.html">Noor Residences</a></li><li><a href="#">Rimal Villas</a></li><li><a href="#">Qurum Gate</a></li></ul></div>
+      <div class="sj-footer__col"><p class="sj-footer__heading">Company</p><ul class="sj-footer__links"><li><a href="corporate-home.html#about">About</a></li><li><a href="corporate-home.html#invest">Invest</a></li><li><a href="customer-portal-mobile.html">Owner portal</a></li></ul></div>
+      <div class="sj-footer__col sj-footer__col--wide"><p class="sj-footer__heading">Sales centre</p><ul class="sj-footer__links"><li><a href="#">Way 3017, Al Khuwair, Muscat</a></li><li><a href="#">+968 2400 0000</a></li><li><a href="#">sales@siraj.om</a></li></ul></div>
+    </div>
+    <div class="sj-footer__bottom"><span>© 2026 SIRAJ Real Estate Development SAOC · Visuals are artist’s impressions.</span><ul class="sj-footer__legal"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul><div class="sj-footer__social"><a class="sj-icon-btn" href="#" aria-label="WhatsApp"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-whatsapp"/></svg></a><a class="sj-icon-btn" href="#" aria-label="Email"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-email"/></svg></a><a class="sj-icon-btn" href="#" aria-label="Call"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-call"/></svg></a></div></div>
+  </div>
+</footer>
+<script src="../siraj-components.js"></script>
+</body>
+</html>

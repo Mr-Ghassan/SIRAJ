@@ -1,0 +1,60 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SIRAJ Social — Avatar Usage</title>
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<!-- Profile avatar usage board, 1600 × 1000. Avatar source: 01-Logos/Dark/SIRAJ_Social-Avatar_Circle_v1.0.png -->
+<style>
+  html, body { margin: 0; background: #F7F2ED; }
+  .board { position: relative; width: 1600px; height: 1000px; background: #F7F2ED; font-family: "Jost", sans-serif; color: #3B3436; overflow: hidden; }
+  .eyebrow { display: flex; align-items: center; gap: 16px; font: 500 18px/1 "Jost"; letter-spacing: .16em; text-transform: uppercase; color: #602733; }
+  .eyebrow i, .rules i { flex: none; width: 9px; height: 9px; background: #AA9180; transform: rotate(45deg); }
+  h1 { margin: 26px 0 0; font: 300 60px/1.08 "Jost"; letter-spacing: -0.01em; color: #140E10; }
+  .hero { position: absolute; left: 96px; top: 96px; width: 560px; }
+  .hero .big { margin-top: 64px; width: 440px; height: 440px; display: block; }
+  .hero .src { margin-top: 28px; font: 400 15px/1.5 "Jost"; color: #6B625E; letter-spacing: .02em; }
+  .panel { position: absolute; left: 760px; right: 96px; top: 96px; }
+  .h2 { font: 500 16px/1 "Jost"; letter-spacing: .16em; text-transform: uppercase; color: #6B625E; padding-bottom: 18px; border-bottom: 1px solid rgba(170,145,128,.7); }
+  .ladder { display: flex; align-items: flex-end; gap: 44px; padding: 36px 0 40px; }
+  .ladder figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .ladder img { display: block; }
+  .ladder figcaption { font: 500 13px/1.4 "Jost"; letter-spacing: .12em; text-transform: uppercase; color: #6B625E; text-align: center; }
+  .ladder figcaption b { display: block; font-weight: 400; color: #140E10; font-size: 18px; letter-spacing: 0; text-transform: none; }
+  .rules { list-style: none; margin: 0; padding: 0; }
+  .rules li { display: flex; gap: 18px; align-items: baseline; padding: 16px 0; border-top: 1px solid rgba(170,145,128,.7); font: 400 19px/1.45 "Jost"; color: #3B3436; }
+  .rules li:last-child { border-bottom: 1px solid rgba(170,145,128,.7); }
+  .rules li i { transform: translateY(-3px) rotate(45deg); }
+  .rules li.no i { background: #602733; }
+  .rules li.no { color: #3B3436; }
+  .rules b { font-weight: 500; color: #140E10; }
+</style>
+</head><body>
+<script src="brand-data.js"></script>
+<div class="board">
+  <div class="hero">
+    <div class="eyebrow"><i></i>Profile · Avatar</div>
+    <h1>One mark,<br>every platform.</h1>
+    <img class="big" src="../../01-Logos/Dark/SIRAJ_Social-Avatar_Circle_v1.0.png" alt="SIRAJ avatar">
+    <div class="src">01-Logos/Dark/SIRAJ_Social-Avatar_Circle_v1.0.png · 1080 × 1080 master<br>Copy: 11-Social/Profile/SIRAJ_Social_Avatar_Circle_1080_v1.0.png</div>
+  </div>
+  <div class="panel">
+    <div class="h2">Display sizes</div>
+    <div class="ladder">
+      <figure><img src="../../01-Logos/Dark/SIRAJ_Social-Avatar_Circle_v1.0.png" width="200" height="200"><figcaption><b>Profile</b>Instagram · LinkedIn · X</figcaption></figure>
+      <figure><img src="../../01-Logos/Dark/SIRAJ_Social-Avatar_Circle_v1.0.png" width="110" height="110"><figcaption><b>Story ring</b>110 px</figcaption></figure>
+      <figure><img src="../../01-Logos/Dark/SIRAJ_Social-Avatar_Circle_v1.0.png" width="64" height="64"><figcaption><b>Feed</b>64 px</figcaption></figure>
+      <figure><img src="../../01-Logos/Dark/SIRAJ_Social-Avatar_Circle_v1.0.png" width="40" height="40"><figcaption><b>Comment</b>40 px</figcaption></figure>
+    </div>
+    <div class="h2">Rules</div>
+    <ul class="rules">
+      <li><i></i><span><b>Same avatar everywhere</b> — Instagram, LinkedIn, X, TikTok, YouTube, WhatsApp Business. Upload the 1080 px master; never a screenshot.</span></li>
+      <li><i></i><span><b>Sand wordmark on the G1 gradient</b>, centred inside the circular crop with ½ H clear space. The platform applies the circle; never add a ring.</span></li>
+      <li><i></i><span><b>Handle</b> <span id="handle"></span> on every platform, so search and tagging stay consistent.</span></li>
+      <li class="no"><i></i><span><b>Don’t</b> swap in project logos, add text or campaign art, recolour the gradient, or use photography as the avatar.</span></li>
+      <li class="no"><i></i><span><b>Don’t</b> use the monogram here — it is reserved for favicons and app icons below 32 px.</span></li>
+    </ul>
+  </div>
+</div>
+<script>
+  document.getElementById('handle').textContent = (window.SIRAJ_BRAND.contact || {}).social_handle || '';
+  document.fonts.ready.then(() => { window.__qa = []; document.body.dataset.ready = '1'; });
+</script>
+</body></html>

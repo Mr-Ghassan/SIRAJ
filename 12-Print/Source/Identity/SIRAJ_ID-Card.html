@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Employee ID card · CR80</title>
+<link rel="stylesheet" href="../css/siraj-print.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  /* CR80 portrait 54 × 85.6 mm, corner radius 3.18 mm (die). Margins 4.5 mm; keep text 3 mm inside the radius. */
+  .id .face { --m: 4.5mm; }
+  .id .band { position: absolute; left: calc(-1 * var(--b)); right: calc(-1 * var(--b)); top: calc(-1 * var(--b)); height: calc(15mm + var(--b)); background: var(--d-g1); }
+  .id .band .word { position: absolute; left: calc(var(--m) + var(--b)); bottom: 4.6mm; width: 21mm; }
+  .id .band .tag { position: absolute; right: calc(var(--m) + var(--b)); bottom: 4.6mm; text-align: right; color: var(--d-sand); line-height: 1.15; }
+  .id .band .tag .cap { color: var(--d-sand); font-size: 4.6pt; }
+  .id .band .tag [lang="ar"] { display: block; font-family: var(--f-arabic); font-size: 6pt; }
+  .id .photo { position: absolute; left: var(--m); top: 19mm; width: 24mm; height: 30mm; background: var(--d-linen); border-start-end-radius: 9mm 7mm; overflow: hidden; }
+  .id .photo svg { position: absolute; left: 3mm; bottom: 0; width: 18mm; }
+  .id .photo .ph { position: absolute; left: 0; right: 0; top: 4.2mm; text-align: center; font-size: 4pt; letter-spacing: 0.16em; color: var(--d-warm-grey); font-weight: 500; }
+  .id .facts { position: absolute; left: 32.5mm; right: var(--m); top: 19mm; }
+  .id .facts .k { font-size: 3.9pt; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--d-maroon); line-height: 2.2mm; }
+  .id .facts .k [lang="ar"] { font-family: var(--f-arabic); letter-spacing: 0; text-transform: none; font-size: 4.8pt; float: right; }
+  .id .facts .v { font-size: 6.6pt; color: var(--d-ink-strong); line-height: 3mm; margin-bottom: 2.6mm; font-variant-numeric: tabular-nums; }
+  .id .who { position: absolute; left: var(--m); right: var(--m); top: 53mm; }
+  .id .who .en { font-size: 9.5pt; font-weight: 400; color: var(--d-ink-strong); line-height: 1.2; }
+  .id .who .en-t { font-size: 4.6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); margin-top: 0.8mm; }
+  .id .who .ar { direction: rtl; text-align: right; font-family: var(--f-arabic); font-size: 10pt; font-weight: 500; color: var(--d-ink-strong); line-height: 1.3; margin-top: 3.4mm; padding-top: 2.4mm; border-top: 0.35pt solid var(--d-rule); }
+  .id .who .ar-t { direction: rtl; text-align: right; font-family: var(--f-arabic); font-size: 6pt; color: var(--d-maroon); }
+  .id .dept { position: absolute; left: var(--m); right: var(--m); bottom: 4.2mm; display: flex; justify-content: space-between; align-items: center; font-size: 5pt; color: var(--d-ash); }
+  .id .dept [lang="ar"] { font-family: var(--f-arabic); font-size: 6pt; }
+  .id .dept i { width: 1mm; height: 1mm; background: var(--d-stone); transform: rotate(45deg); }
+
+  .idb .face { --m: 4.5mm; }
+  .idb .qr { position: absolute; left: calc(50% - 12mm); top: 6mm; width: 24mm; height: 24mm; }
+  .idb .scan { position: absolute; left: var(--m); right: var(--m); top: 32mm; display: flex; justify-content: space-between; font-size: 4.4pt; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; color: var(--d-maroon); }
+  .idb .scan [lang="ar"] { font-family: var(--f-arabic); font-size: 5.6pt; letter-spacing: 0; }
+  .idb .ret { position: absolute; left: var(--m); right: var(--m); top: 38.5mm; font-size: 5.2pt; line-height: 2.7mm; color: var(--d-ink); border-top: 0.35pt solid var(--d-rule); padding-top: 2.4mm; }
+  .idb .ret [lang="ar"] { direction: rtl; text-align: right; font-family: var(--f-arabic); font-size: 6pt; line-height: 3.2mm; margin-top: 2mm; }
+  .idb .foot { position: absolute; left: calc(-1 * var(--b)); right: calc(-1 * var(--b)); bottom: calc(-1 * var(--b)); height: calc(13mm + var(--b)); background: var(--d-g1); }
+  .idb .foot .row { position: absolute; left: calc(var(--m) + var(--b)); right: calc(var(--m) + var(--b)); top: 4.2mm; display: flex; justify-content: space-between; align-items: center; color: var(--d-sand); font-size: 5.4pt; }
+  .idb .foot .row i { width: 1.1mm; height: 1.1mm; background: var(--d-stone); transform: rotate(45deg); }
+  .idb .foot .row [lang="ar"] { font-family: var(--f-arabic); font-size: 6.4pt; }
+  .idb .valid { position: absolute; left: var(--m); right: var(--m); bottom: 15.5mm; display: flex; justify-content: space-between; font-size: 5pt; color: var(--d-ash); }
+  .idb .valid b { font-weight: 500; color: var(--d-ink-strong); }
+  .idb .valid [lang="ar"] { font-family: var(--f-arabic); font-size: 6pt; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Identity · Employee ID"
+      data-preview-title="Employee ID card — CR80 · 54 × 85.6 mm"
+      data-preview-note="White PVC 0.76 mm, matte laminate, die radius 3.18 mm. Photo, name, staff number and QR are variable data (printed by the card printer); everything else is the pre-printed base.">
+
+<section class="sheet cr80 id" data-w="54" data-h="85.6" data-bleed="3" data-label="Front · photo &amp; bilingual identity">
+  <div class="art"><div class="face">
+    <div class="band">
+      <img class="word" src="../../../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ">
+      <div class="tag"><span class="cap">Staff</span><span lang="ar">موظف</span></div>
+    </div>
+    <div class="photo">
+      <div class="ph">PHOTO · 24 × 30</div>
+      <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="22" r="11" fill="#D6C0B2"/><path d="M4,60 C6,42 16,36 30,36 C44,36 54,42 56,60 Z" fill="#D6C0B2"/></svg>
+    </div>
+    <div class="facts">
+      <div class="k">Staff no. <span lang="ar">الرقم</span></div>
+      <div class="v">{{print.people.id.staff_no}}</div>
+      <div class="k">Issued <span lang="ar">الإصدار</span></div>
+      <div class="v">{{print.people.id.issued}}</div>
+      <div class="k">Expires <span lang="ar">الانتهاء</span></div>
+      <div class="v">{{print.people.id.expires}}</div>
+      <div class="k">Blood <span lang="ar">الفصيلة</span></div>
+      <div class="v" style="margin-bottom:0">{{print.people.id.blood}}</div>
+    </div>
+    <div class="who">
+      <div class="en">{{print.people.id.name_en}}</div>
+      <div class="en-t">{{print.people.id.title_en}}</div>
+      <div class="ar" lang="ar">{{print.people.id.name_ar}}</div>
+      <div class="ar-t" lang="ar">{{print.people.id.title_ar}}</div>
+    </div>
+    <div class="dept"><span>{{print.people.id.dept_en}}</span><i></i><span lang="ar">{{print.people.id.dept_ar}}</span></div>
+  </div></div>
+</section>
+
+<section class="sheet cr80 idb" data-w="54" data-h="85.6" data-bleed="3" data-label="Back · QR verification &amp; return address">
+  <div class="art"><div class="face">
+    <svg class="qr" viewBox="0 0 25 25" aria-label="QR placeholder">
+      <rect x="0" y="0" width="25" height="25" fill="#FFFFFF"/>
+      <g fill="#2C0F12">
+        <path d="M0,0h7v7h-7z M1,1v5h5v-5z M2,2h3v3h-3z"/>
+        <path d="M18,0h7v7h-7z M19,1v5h5v-5z M20,2h3v3h-3z"/>
+        <path d="M0,18h7v7h-7z M1,19v5h5v-5z M2,20h3v3h-3z"/>
+      </g>
+      <rect x="8.5" y="8.5" width="8" height="8" fill="none" stroke="#AA9180" stroke-width="0.25" stroke-dasharray="0.6 0.5"/>
+      <text x="12.5" y="13.3" text-anchor="middle" font-family="Jost" font-size="1.7" font-weight="500" letter-spacing="0.25" fill="#6B625E">QR</text>
+    </svg>
+    <div class="scan"><span>Scan to verify</span><span lang="ar">امسح للتحقق</span></div>
+    <div class="ret">
+      <div lang="en">This card remains the property of {{company.name_en}}. If found, please return to {{contact.address_en}} · {{contact.phone}}.</div>
+      <div lang="ar">هذه البطاقة ملك لشركة {{company.name_ar}}. في حال العثور عليها، يُرجى إعادتها إلى {{contact.address_ar}} · <bdi dir="ltr">{{contact.phone}}</bdi>.</div>
+    </div>
+    <div class="valid"><span>Signature ____________</span><span lang="ar">التوقيع</span></div>
+    <div class="foot"><div class="row"><span>{{contact.website}}</span><i></i><span lang="ar">{{company.name_ar}}</span></div></div>
+  </div></div>
+</section>
+
+</body>
+</html>

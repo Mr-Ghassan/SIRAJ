@@ -1,0 +1,55 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SIRAJ Social — Quote</title>
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<link rel="stylesheet" href="social.css">
+<!-- Template data: edit the copy below. Contact and project facts come from
+     00-Brand-Foundation/brand.config.json through {tokens} (see README). Open with
+     ?format=post|square|story|reel|carousel|li|x&lang=en|ar(&slide=n) -->
+<script id="data" type="application/json">{
+  "name": "Quote",
+  "exports": {
+    "post": [
+      "en",
+      "ar"
+    ],
+    "square": [
+      "en",
+      "ar"
+    ],
+    "li": [
+      "en",
+      "ar"
+    ]
+  },
+  "layout": "type",
+  "env": "deep",
+  "still": "Drape-Deep",
+  "anchor": "bottom",
+  "cw": 0.9,
+  "en": {
+    "blocks": [
+      {
+        "type": "quote",
+        "text": "Architecture should feel the way light feels on silk: calm, continuous, precise.",
+        "cite": "SIRAJ design philosophy"
+      }
+    ],
+    "end": "{contact.social_handle}"
+  },
+  "ar": {
+    "blocks": [
+      {
+        "type": "quote",
+        "text": "ينبغي للعمارة أن تمنحك ما يمنحه الضوء على الحرير: هدوءٌ، واستمراريةٌ، ودقّة.",
+        "cite": "فلسفة التصميم في سراج"
+      }
+    ],
+    "end": "[[{contact.social_handle}]]"
+  },
+  "formats": {
+    "li": {
+      "cw": 0.72
+    }
+  }
+}</script>
+</head><body><script src="brand-data.js"></script><script src="social.js"></script></body></html>

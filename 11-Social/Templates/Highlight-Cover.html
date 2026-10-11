@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SIRAJ Social — Highlight Covers</title>
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<!-- Highlight covers: 1080 × 1920, sand line icon inside the circular-safe centre (Ø 420 px).
+     ?icon=projects|noor|harir|updates|investment|events|careers|contact   or   ?sheet=1 (overview board) -->
+<style>
+  html, body { margin: 0; background: #170608; }
+  .cover { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, #7A3542 0px, #602733 260px, #3E161D 560px, #2C0F12 760px, #1E0A0D 1100px); }
+  .icon { position: absolute; left: 50%; top: 50%; color: #D6C0B2; }
+  .icon svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; overflow: visible; }
+  .cover .icon { width: 300px; height: 300px; margin: -150px 0 0 -150px; }
+  .cover .icon svg { stroke-width: 1.1; }
+  /* overview board */
+  .sheet { width: 2160px; height: 1240px; background: #F7F2ED; position: relative; font-family: "Jost", sans-serif; color: #3B3436; }
+  .sheet .eyebrow { position: absolute; left: 120px; top: 110px; display: flex; align-items: center; gap: 16px; font: 500 20px/1 "Jost"; letter-spacing: .16em; text-transform: uppercase; color: #602733; }
+  .sheet .eyebrow i { width: 10px; height: 10px; background: #AA9180; transform: rotate(45deg); }
+  .sheet h1 { position: absolute; left: 120px; top: 150px; margin: 0; font: 300 64px/1.1 "Jost"; color: #140E10; letter-spacing: -0.01em; }
+  .sheet p { position: absolute; right: 120px; top: 158px; margin: 0; width: 760px; font: 400 22px/1.55 "Jost"; color: #6B625E; }
+  .grid { position: absolute; left: 120px; right: 120px; top: 380px; display: grid; grid-template-columns: repeat(4, 1fr); row-gap: 70px; }
+  .cell { display: flex; flex-direction: column; align-items: center; }
+  .circ { position: relative; width: 300px; height: 300px; border-radius: 50%; overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, #7A3542 0px, #602733 72px, #3E161D 156px, #2C0F12 212px); }
+  .circ .icon { width: 84px; height: 84px; margin: -42px 0 0 -42px; }
+  .circ .icon svg { stroke-width: 1.25; }
+  .lab { margin-top: 26px; display: flex; gap: 18px; align-items: baseline; }
+  .lab .en { font: 500 18px/1 "Jost"; letter-spacing: .16em; text-transform: uppercase; color: #3B3436; }
+  .lab .ar { font: 500 22px/1 "Tajawal"; color: #602733; }
+</style>
+</head><body>
+<script src="highlight-icons.js"></script>
+<script>
+(function () {
+  const I = window.SIRAJ_HIGHLIGHT_ICONS;
+  const q = new URLSearchParams(location.search);
+  const svg = (k) => `<svg viewBox="${I[k].vb}" xmlns="http://www.w3.org/2000/svg">${I[k].body}</svg>`;
+  const LABELS = { projects: ['Projects', 'المشاريع'], noor: ['Noor', 'نور'], harir: ['Harir', 'حرير'], updates: ['Updates', 'التحديثات'],
+    investment: ['Investment', 'الاستثمار'], events: ['Events', 'الفعاليات'], careers: ['Careers', 'الوظائف'], contact: ['Contact', 'تواصل'] };
+  if (q.get('sheet')) {
+    document.body.innerHTML = `<div class="sheet"><div class="eyebrow"><i></i>Instagram · Highlight covers</div><h1>Eight covers, one light.</h1>
+      <p>Sand line icons from the SIRAJ icon system on a centred Lumen glow. Covers are 1080 × 1920; the icon sits inside the Ø 420 px circular-safe centre so it survives every crop.</p>
+      <div class="grid">${Object.keys(LABELS).map((k) => `<div class="cell"><div class="circ"><div class="icon">${svg(k)}</div></div>
+      <div class="lab"><span class="en">${LABELS[k][0]}</span><span class="ar" lang="ar" dir="rtl">${LABELS[k][1]}</span></div></div>`).join('')}</div></div>`;
+  } else {
+    const k = q.get('icon') || 'projects';
+    document.body.innerHTML = `<div class="cover"><div class="icon">${svg(k)}</div></div>`;
+  }
+  document.fonts.ready.then(() => { window.__qa = []; document.body.dataset.ready = '1'; });
+})();
+</script>
+</body></html>

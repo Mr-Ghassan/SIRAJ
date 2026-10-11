@@ -1,0 +1,215 @@
+/* =============================================================================
+   SIRAJ Social Media System v1.0 — shared layout engine styles
+   Used by every template in 11-Social/Templates/*.html (rendered by social.js).
+   Grid: 6 columns · 72 px margin · 24 px gutter (portrait formats).
+   ========================================================================== */
+
+html, body { margin: 0; padding: 0; background: #0d0405; }
+body { width: max-content; }
+
+.canvas {
+  --ivory: #F7F2ED; --linen: #EFE7E0; --maroon: #602733; --deep: #2C0F12; --shadow: #170608;
+  --stone: #AA9180; --sand: #D6C0B2; --graphite: #3B3436; --ash: #6B625E; --ink: #140E10;
+  --silk-mid: #81404C; --silk-ground: #2D0F13;
+  position: relative; overflow: hidden;
+  width: var(--W); height: var(--H);
+  font-family: "Jost", "Tajawal", sans-serif;
+  color: var(--fg);
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.canvas[lang="ar"] { font-family: "SIRAJ Digits", "Tajawal", "Jost", sans-serif; letter-spacing: 0; }
+.canvas * { box-sizing: border-box; }
+.canvas img { display: block; }
+
+/* ---- Formats ---------------------------------------------------------------
+   --m margin · --g gutter · --top / --bot safe insets · --logo logo width
+   Type: --fs-display --fs-title --fs-lead --fs-body --fs-eyebrow --fs-cap --fs-stat --fs-num
+   Space: --s1..--s5                                                          */
+.f-post, .f-carousel {
+  --W: 1080px; --H: 1350px; --m: 72px; --g: 24px; --top: 72px; --bot: 72px; --logo: 168px;
+  --fs-display: 96px; --fs-title: 70px; --fs-lead: 30px; --fs-body: 25px; --fs-eyebrow: 20px; --fs-cap: 18px;
+  --fs-stat: 80px; --fs-num: 210px;
+  --s1: 16px; --s2: 24px; --s3: 32px; --s4: 48px; --s5: 64px;
+}
+.f-square {
+  --W: 1080px; --H: 1080px; --m: 72px; --g: 24px; --top: 72px; --bot: 72px; --logo: 160px;
+  --fs-display: 86px; --fs-title: 62px; --fs-lead: 28px; --fs-body: 24px; --fs-eyebrow: 19px; --fs-cap: 17px;
+  --fs-stat: 72px; --fs-num: 180px;
+  --s1: 14px; --s2: 22px; --s3: 28px; --s4: 40px; --s5: 56px;
+}
+.f-story, .f-reel {
+  --W: 1080px; --H: 1920px; --m: 72px; --g: 24px; --top: 250px; --bot: 340px; --logo: 184px;
+  --fs-display: 104px; --fs-title: 78px; --fs-lead: 33px; --fs-body: 27px; --fs-eyebrow: 22px; --fs-cap: 19px;
+  --fs-stat: 88px; --fs-num: 240px;
+  --s1: 18px; --s2: 28px; --s3: 36px; --s4: 56px; --s5: 72px;
+}
+.f-reel { --top: 312px; --bot: 312px; }
+.f-li {
+  --W: 1200px; --H: 627px; --m: 56px; --g: 20px; --top: 56px; --bot: 56px; --logo: 116px;
+  --fs-display: 60px; --fs-title: 46px; --fs-lead: 20px; --fs-body: 17px; --fs-eyebrow: 13px; --fs-cap: 12px;
+  --fs-stat: 50px; --fs-num: 120px;
+  --s1: 10px; --s2: 14px; --s3: 20px; --s4: 28px; --s5: 36px;
+}
+.f-x {
+  --W: 1600px; --H: 900px; --m: 80px; --g: 24px; --top: 80px; --bot: 80px; --logo: 156px;
+  --fs-display: 82px; --fs-title: 62px; --fs-lead: 26px; --fs-body: 22px; --fs-eyebrow: 16px; --fs-cap: 15px;
+  --fs-stat: 68px; --fs-num: 160px;
+  --s1: 14px; --s2: 20px; --s3: 26px; --s4: 38px; --s5: 50px;
+}
+
+/* ---- Environments ---------------------------------------------------------- */
+.env-ivory  { background: var(--ivory); --fg: var(--graphite); --fg-strong: var(--ink); --accent: var(--maroon); --muted: var(--ash); --rule: rgba(170,145,128,.7); --bar: var(--maroon); }
+.env-linen  { background: var(--linen); --fg: var(--graphite); --fg-strong: var(--ink); --accent: var(--maroon); --muted: var(--ash); --rule: rgba(170,145,128,.7); --bar: var(--maroon); }
+.env-deep   { background: var(--deep); --fg: #E9DDD4; --fg-strong: var(--ivory); --accent: var(--sand); --muted: rgba(214,192,178,.74); --rule: rgba(170,145,128,.5); --bar: var(--sand); }
+.env-shadow { background: var(--shadow); --fg: #E9DDD4; --fg-strong: var(--ivory); --accent: var(--sand); --muted: rgba(214,192,178,.74); --rule: rgba(170,145,128,.5); --bar: var(--sand); }
+.env-maroon { background: linear-gradient(51deg, #2C0F12 0%, #602733 100%); --fg: #EDE2DA; --fg-strong: var(--ivory); --accent: var(--sand); --muted: rgba(226,208,196,.78); --rule: rgba(214,192,178,.42); --bar: var(--sand); }
+.env-photo  { background: var(--shadow); --fg: #EFE6DF; --fg-strong: #FFFFFF; --accent: var(--sand); --muted: rgba(233,221,212,.82); --rule: rgba(214,192,178,.5); --bar: var(--sand); }
+
+/* ---- Background layers ----------------------------------------------------- */
+.bg, .bg-photo, .bg-still { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.scrim { position: absolute; inset: 0; pointer-events: none; }
+.horizon { position: absolute; left: 0; width: 100%; height: auto; }
+.horizon-fill { position: absolute; left: 0; right: 0; bottom: 0; background: var(--silk-ground); }
+[dir="rtl"] .horizon, [dir="rtl"] .mirror { transform: scaleX(-1); }
+.element { position: absolute; pointer-events: none; }
+
+/* ---- Media window ---------------------------------------------------------- */
+.media { position: absolute; overflow: hidden; background: var(--linen); }
+.media img { width: 100%; height: 100%; object-fit: cover; }
+.media-tag {
+  position: absolute; bottom: var(--s3); inset-inline-start: var(--s3);
+  font: 500 var(--fs-cap)/1 "Jost", sans-serif; letter-spacing: .16em; text-transform: uppercase;
+  color: #fff; display: flex; align-items: center; gap: .8em; text-shadow: 0 1px 12px rgba(23,6,8,.35);
+}
+[lang="ar"] .media-tag { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-cap) * 1.2); }
+
+/* ---- Content stack --------------------------------------------------------- */
+.content { position: absolute; display: flex; flex-direction: column; align-items: flex-start; }
+.content > * { margin: 0; }
+.content > * + * { margin-top: var(--s4); }
+.content > .eyebrow + .title, .content > .eyebrow + .display { margin-top: var(--s3); }
+.content > .title + .lead, .content > .display + .lead { margin-top: var(--s3); }
+.content > .lead + .lead { margin-top: var(--s2); }
+.content > .spacer { flex: 1 1 auto; margin: 0; }
+
+.eyebrow {
+  display: flex; align-items: center; gap: .95em;
+  font: 500 var(--fs-eyebrow)/1.3 "Jost", sans-serif; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--accent); white-space: nowrap;
+}
+.lm { display: inline-block; flex: none; width: .5em; height: .5em; background: var(--stone); transform: rotate(45deg); }
+.eyebrow .lm { width: .52em; height: .52em; margin-inline-end: .1em; }
+.env-ivory .eyebrow .lm, .env-linen .eyebrow .lm { background: var(--stone); }
+[lang="ar"] .eyebrow { font-family: "SIRAJ Digits", "Tajawal", sans-serif; font-size: calc(var(--fs-eyebrow) * 1.26); letter-spacing: 0; text-transform: none; font-weight: 500; line-height: 1.4; }
+[lang="ar"] .eyebrow .lm { width: .42em; height: .42em; }
+
+.display, .title { font-weight: 300; color: var(--fg-strong); text-wrap: balance; }
+.display { font-size: var(--fs-display); line-height: 1.02; letter-spacing: -0.015em; }
+.title { font-size: var(--fs-title); line-height: 1.06; letter-spacing: -0.01em; }
+[lang="ar"] .display { font-size: calc(var(--fs-display) * 0.98); line-height: 1.26; letter-spacing: 0; }
+[lang="ar"] .title { font-size: calc(var(--fs-title) * 1.0); line-height: 1.3; letter-spacing: 0; }
+
+.lead { font-size: var(--fs-lead); font-weight: 300; line-height: 1.45; color: var(--fg); max-width: 30em; text-wrap: pretty; }
+[lang="ar"] .lead { font-size: calc(var(--fs-lead) * 1.04); line-height: 1.65; font-weight: 400; }
+.body { font-size: var(--fs-body); font-weight: 400; line-height: 1.55; color: var(--fg); }
+[lang="ar"] .body { font-size: calc(var(--fs-body) * 1.06); line-height: 1.7; }
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+/* ---- Footer (logo zone: bottom-start) --------------------------------------- */
+.foot { position: absolute; bottom: var(--bot); inset-inline: var(--m); display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s4); }
+.foot .logo { width: var(--logo); height: auto; flex: none; }
+.foot-end {
+  font: 500 var(--fs-cap)/1 "Jost", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+  display: flex; align-items: center; gap: .9em; white-space: nowrap; margin-bottom: -0.12em;
+}
+.foot-end.lower { text-transform: none; letter-spacing: .08em; }
+[lang="ar"] .foot-end { font-family: "SIRAJ Digits", "Tajawal", "Jost", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-cap) * 1.18); margin-bottom: -0.2em; }
+.foot-end .lm { width: .55em; height: .55em; }
+.foot-note { font-size: calc(var(--fs-cap) * 0.92); line-height: 1.45; color: var(--muted); max-width: 34em; text-align: end; font-weight: 400; margin-bottom: -0.3em; letter-spacing: .01em; }
+[lang="ar"] .foot-note { font-size: calc(var(--fs-cap) * 1.02); line-height: 1.6; letter-spacing: 0; }
+
+/* ---- Blocks ---------------------------------------------------------------- */
+/* facts — inline row of key facts separated by Lumen markers */
+.facts { display: flex; flex-wrap: wrap; align-items: center; column-gap: 1.1em; row-gap: .6em; font: 500 calc(var(--fs-cap) * 1.08)/1.3 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--fg); }
+.facts .lm { width: .45em; height: .45em; }
+[lang="ar"] .facts { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-cap) * 1.32); }
+
+/* stats — numerals over hairlines */
+.stats { display: grid; grid-template-columns: repeat(var(--cols, 2), 1fr); column-gap: var(--g); row-gap: var(--s4); width: 100%; }
+.stat { border-top: 1px solid var(--rule); padding-top: var(--s2); min-width: 0; }
+.stat .v { font: 200 var(--fs-stat)/1 "Jost", sans-serif; letter-spacing: -0.02em; color: var(--fg-strong); white-space: nowrap; font-variant-numeric: lining-nums; }
+.stat .v small { font-size: .42em; font-weight: 300; letter-spacing: .02em; margin-inline-start: .18em; }
+.stat .v.pre small { margin-inline: 0 .22em; }
+.stat .v.sm { font-size: calc(var(--fs-stat) * 0.62); font-weight: 300; line-height: 1.2; }
+.stat .l { margin-top: var(--s2); font: 500 var(--fs-cap)/1.4 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+[lang="ar"] .stat .v { font-family: "SIRAJ Digits", "Tajawal", "Jost", sans-serif; letter-spacing: 0; }
+[lang="ar"] .stat .v.sm { font-weight: 300; font-size: calc(var(--fs-stat) * 0.6); line-height: 1.3; }
+[lang="ar"] .stat .l { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-cap) * 1.26); font-weight: 500; line-height: 1.5; }
+
+/* progress — construction percentage */
+.progress { width: 100%; }
+.pg-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s3); }
+.pg-num { font: 200 var(--fs-num)/.8 "Jost", sans-serif; letter-spacing: -0.04em; color: var(--fg-strong); font-variant-numeric: lining-nums; }
+.pg-num small { font-size: .36em; font-weight: 300; letter-spacing: 0; margin-inline-start: .06em; vertical-align: .95em; }
+.pg-label { font: 500 var(--fs-cap)/1.5 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); text-align: end; padding-bottom: .1em; }
+[lang="ar"] .pg-label { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-cap) * 1.26); }
+.pg-bar { position: relative; height: 14px; margin-top: var(--s4); }
+.pg-bar::before { content: ""; position: absolute; inset-inline: 0; top: 6px; height: 1px; background: var(--rule); }
+.pg-fill { position: absolute; inset-inline-start: 0; top: 5px; height: 3px; background: var(--bar); }
+.pg-mark { position: absolute; top: 1px; width: 12px; height: 12px; background: var(--stone); transform: translateX(-50%) rotate(45deg); }
+[dir="rtl"] .pg-mark { transform: translateX(50%) rotate(45deg); }
+.pg-scale { display: flex; justify-content: space-between; margin-top: var(--s1); font: 400 var(--fs-cap)/1 "Jost", sans-serif; color: var(--muted); letter-spacing: .06em; }
+
+/* details — key / value rows (event, contact, job) */
+.details { width: 100%; border-bottom: 1px solid var(--rule); }
+.row { display: grid; grid-template-columns: var(--kcol, 30%) 1fr; column-gap: var(--g); align-items: baseline; border-top: 1px solid var(--rule); padding: var(--s2) 0; }
+.row .k { font: 500 var(--fs-cap)/1.4 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.row .v { font-size: var(--fs-lead); font-weight: 300; line-height: 1.3; color: var(--fg-strong); }
+[lang="ar"] .row .k { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-cap) * 1.26); }
+[lang="ar"] .row .v { line-height: 1.5; font-size: calc(var(--fs-lead) * 1.02); font-weight: 400; }
+
+/* list — Lumen bullets */
+.list { width: 100%; list-style: none; padding: 0; margin-inline: 0; margin-bottom: 0; border-bottom: 1px solid var(--rule); }
+.list li { display: flex; align-items: center; gap: var(--s2); border-top: 1px solid var(--rule); padding: var(--s2) 0; font-size: var(--fs-lead); font-weight: 300; line-height: 1.3; color: var(--fg-strong); }
+.list li .lm { width: 10px; height: 10px; }
+.list li .n { font: 400 var(--fs-cap)/1 "Jost", sans-serif; color: var(--muted); letter-spacing: .1em; min-width: 2.4em; }
+[lang="ar"] .list li { font-weight: 400; line-height: 1.5; font-size: calc(var(--fs-lead) * 1.02); }
+
+/* quote — Silk Blade as the quotation mark */
+.quote-mark { width: calc(var(--fs-title) * 1.7); height: auto; margin-bottom: calc(var(--s3) * -0.4); }
+[dir="rtl"] .quote-mark { transform: scaleX(-1); }
+.quote { font-size: var(--fs-title); font-weight: 300; line-height: 1.16; letter-spacing: -0.01em; color: var(--fg-strong); text-wrap: balance; }
+[lang="ar"] .quote { line-height: 1.45; letter-spacing: 0; }
+.cite { display: flex; align-items: center; gap: var(--s2); font: 500 var(--fs-eyebrow)/1.3 "Jost", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.cite::before { content: ""; width: 48px; height: 1px; background: var(--stone); }
+[lang="ar"] .cite { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-eyebrow) * 1.26); }
+
+/* partners — SIRAJ × partner slot */
+.partners { display: flex; align-items: center; gap: var(--s4); }
+.partners .p-logo { height: calc(var(--logo) * 0.56); width: auto; }
+.partners .x { font: 200 calc(var(--fs-title) * 0.8)/1 "Jost", sans-serif; color: var(--stone); }
+.partners .slot { height: calc(var(--logo) * 0.72); padding: 0 1.4em; display: flex; align-items: center; justify-content: center; border: 1px solid var(--rule); font: 500 var(--fs-cap)/1 "Jost", sans-serif; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+[lang="ar"] .partners .slot { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0; font-size: calc(var(--fs-cap) * 1.25); }
+
+/* rule — hairline */
+.hr { width: 100%; height: 1px; background: var(--rule); }
+.hr.short { width: 64px; background: var(--stone); }
+
+/* counter (carousel) */
+.counter b { font-weight: 500; color: var(--fg-strong); }
+
+/* ---- Crop guides (reel cover) ---------------------------------------------- */
+.guide { position: absolute; left: 0; right: 0; border-top: 2px dashed rgba(255,255,255,.85); }
+.guide-shade { position: absolute; left: 0; right: 0; background: rgba(23,6,8,.55); }
+.guide-label { position: absolute; inset-inline-end: 24px; font: 500 18px/1 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #fff; }
+
+/* index — editorial numeral (feature series, carousel chapters) */
+.index { display: flex; flex-direction: column; gap: var(--s2); }
+.ix-n { font: 200 var(--fs-stat)/.9 "Jost", sans-serif; letter-spacing: -0.02em; color: var(--accent); }
+.ix-n small { font-size: .3em; font-weight: 400; letter-spacing: .12em; color: var(--muted); margin-inline-start: .5em; vertical-align: .2em; }
+.ix-l { font: 500 var(--fs-cap)/1.5 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+[lang="ar"] .ix-l { font-family: "SIRAJ Digits", "Tajawal", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-cap) * 1.26); }
+.aside > * + * { margin-top: var(--s3); }
+.element svg, .quote-mark { display: block; }
+.element svg { width: 100%; height: auto; }

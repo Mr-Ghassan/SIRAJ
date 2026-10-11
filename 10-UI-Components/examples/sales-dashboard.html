@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIRAJ Sales Dashboard</title>
+<meta name="description" content="SIRAJ internal sales dashboard — Noor Residences.">
+<link rel="icon" href="../../01-Logos/SVG/SIRAJ_Monogram-S_Sand-on-G1_v1.0.svg">
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<link rel="stylesheet" href="../siraj-components.css">
+<style>
+  /* db- = dashboard composition. Data colours (dark): Silk Highlight #C79A9C (sold / primary series),
+     Maroon midtone #81404C (reserved), Warm Grey #8E837D (available), Stone hatch (blocked).
+     Validated for CVD separation; every chart also carries a legend, direct labels and a table view. */
+  :root { --db-side: 256px; --db-sold: #C79A9C; --db-reserved: #81404C; --db-available: #8E837D; --db-blocked: #AA9180; }
+  body { background: var(--siraj-bg); }
+  .db-app { display: grid; grid-template-columns: var(--db-side) minmax(0, 1fr); min-height: 100vh; }
+  .db-side { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; padding: 28px 0 20px; background: var(--siraj-bg); }
+  .db-side__brand { display: flex; align-items: center; gap: 14px; padding: 0 28px 28px; }
+  .db-side__brand img { height: 22px; }
+  .db-side__brand span { padding-inline-start: 14px; border-inline-start: 1px solid var(--siraj-border); color: var(--siraj-text-muted); font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+  .db-side h4 { margin: 28px 28px 10px; color: var(--siraj-text-muted); font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+  .db-menu { margin: 0; padding: 0 14px; list-style: none; display: grid; gap: 2px; }
+  .db-menu a { position: relative; display: flex; align-items: center; gap: 14px; height: 42px; padding-inline: 14px; color: var(--siraj-text); font-size: 14px; text-decoration: none; transition: background-color .2s var(--sj-ease), color .2s var(--sj-ease); }
+  .db-menu a:hover { background: var(--siraj-surface); color: var(--siraj-text-strong); }
+  .db-menu a[aria-current="page"] { background: var(--siraj-surface); color: var(--siraj-text-strong); }
+  .db-menu a[aria-current="page"]::before { content: ""; position: absolute; inset-inline-start: -14px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; margin-inline-start: -3.5px; background: var(--siraj-lumen); transform: rotate(45deg); }
+  .db-menu .sj-icon { color: var(--siraj-text-muted); }
+  .db-menu a[aria-current="page"] .sj-icon { color: var(--siraj-accent); }
+  .db-menu__count { margin-inline-start: auto; color: var(--siraj-text-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .db-dot { width: 6px; height: 6px; transform: rotate(45deg); border: 1px solid var(--siraj-border-strong); margin-inline: 5px; }
+  .db-dot.is-on { background: var(--siraj-lumen); border-color: var(--siraj-lumen); }
+  .db-side__foot { margin-top: auto; padding: 20px 28px 0; border-top: 1px solid var(--siraj-border); display: flex; align-items: center; justify-content: space-between; }
+  .db-main { min-width: 0; border-inline-start: 1px solid var(--siraj-border); }
+  .db-top { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 20px; height: 88px; padding-inline: 40px; background: var(--siraj-bg); border-bottom: 1px solid var(--siraj-border); }
+  .db-top h1 { margin: 0; color: var(--siraj-text-strong); font-size: 26px; font-weight: 300; line-height: 1.2; }
+  .db-top p { margin: 4px 0 0; color: var(--siraj-text-muted); font-size: 13px; }
+  .db-top__tools { margin-inline-start: auto; display: flex; align-items: center; gap: 12px; }
+  .db-top .sj-search .sj-input { height: 40px; width: 240px; font-size: 14px; background: var(--siraj-surface); border-color: var(--siraj-border); }
+  .db-top .sj-icon-btn { width: 40px; height: 40px; }
+  .db-bell { position: relative; }
+  .db-bell::after { content: ""; position: absolute; top: 9px; inset-inline-end: 9px; width: 6px; height: 6px; background: var(--sj-error); transform: rotate(45deg); }
+  .db-content { padding: 32px 40px 64px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+  .db-panel { background: var(--siraj-surface); border: 1px solid var(--siraj-border); min-width: 0; }
+  .db-panel__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 24px 28px 0; }
+  .db-panel__head h2 { margin: 0; color: var(--siraj-text-strong); font-size: 18px; font-weight: 400; }
+  .db-panel__head p { margin: 4px 0 0; color: var(--siraj-text-muted); font-size: 13px; }
+  .db-panel__body { padding: 20px 28px 28px; }
+  .db-c3 { grid-column: span 3; } .db-c4 { grid-column: span 4; } .db-c5 { grid-column: span 5; } .db-c7 { grid-column: span 7; } .db-c8 { grid-column: span 8; } .db-c12 { grid-column: 1 / -1; }
+  .db-kpi .sj-stat__value { font-size: 52px; }
+  .db-kpi .sj-progress { margin-top: 2px; }
+  .db-legend { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; list-style: none; color: var(--siraj-text); font-size: 13px; }
+  .db-legend li { display: inline-flex; align-items: center; gap: 8px; }
+  .db-legend b { color: var(--siraj-text-strong); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .db-key { width: 10px; height: 10px; flex: none; }
+  .db-key--sold { background: var(--db-sold); } .db-key--reserved { background: var(--db-reserved); }
+  .db-key--available { border: 1px solid var(--db-available); } .db-key--blocked { background: repeating-linear-gradient(45deg, var(--db-blocked) 0 1px, transparent 1px 4px); border: 1px solid var(--db-blocked); }
+  .db-key--bar { background: var(--db-sold); } .db-key--target { height: 0; border-top: 1px dashed var(--siraj-color-neutral-sand); width: 16px; }
+  svg.db-chart { display: block; width: 100%; height: auto; overflow: visible; font-family: Jost, sans-serif; }
+  .db-gridline { stroke: var(--siraj-text); stroke-opacity: .1; }
+  .db-baseline { stroke-opacity: .36; }
+  .db-tick { fill: var(--siraj-text-muted); font-size: 11px; }
+  .db-tick--strong { fill: var(--siraj-text); }
+  .db-val { fill: var(--siraj-text-strong); font-size: 12px; font-weight: 500; }
+  .db-bar { fill: var(--db-sold); transition: opacity .2s; }
+  .db-bar.is-partial { fill: url(#db-partial); stroke: var(--db-sold); stroke-width: 1; }
+  .db-chart:hover .db-bar:not(:hover) { opacity: .55; }
+  .db-target { stroke: var(--siraj-color-neutral-sand); stroke-dasharray: 4 4; }
+  .db-seg { fill: none; stroke-width: 22; transform: rotate(-90deg); transform-origin: 100px 100px; }
+  .db-seg--sold { stroke: var(--db-sold); } .db-seg--reserved { stroke: var(--db-reserved); } .db-seg--available { stroke: var(--db-available); } .db-seg--blocked { stroke: url(#db-hatch); }
+  .db-donut { display: grid; grid-template-columns: 188px 1fr; gap: 32px; align-items: center; }
+  .db-donut__center { font-family: Jost, sans-serif; }
+  .db-donut .db-legend { flex-direction: column; gap: 0; }
+  .db-donut .db-legend li { justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--siraj-border); }
+  .db-donut .db-legend li:first-child { border-top: 1px solid var(--siraj-border); }
+  .db-donut .db-legend li span:first-child { display: inline-flex; align-items: center; gap: 10px; }
+  .db-floorgrid { display: grid; gap: 4px; }
+  .db-floor { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: center; }
+  .db-floor__n { color: var(--siraj-text-muted); font-size: 11px; font-variant-numeric: tabular-nums; text-align: end; }
+  .db-floor__units { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .db-unit { height: 16px; cursor: pointer; }
+  .db-unit.is-sold { background: var(--db-sold); }
+  .db-unit.is-reserved { background: var(--db-reserved); }
+  .db-unit.is-available { box-shadow: inset 0 0 0 1px var(--db-available); }
+  .db-unit.is-blocked { background: repeating-linear-gradient(45deg, var(--db-blocked) 0 1px, transparent 1px 4px); box-shadow: inset 0 0 0 1px var(--db-blocked); }
+  .db-unit:hover { outline: 1px solid var(--siraj-text-strong); outline-offset: 1px; }
+  .db-cols { display: grid; grid-template-columns: 28px repeat(7, 1fr); gap: 4px 4px; padding-inline-start: 12px; margin-bottom: 8px; color: var(--siraj-text-muted); font-size: 11px; text-align: center; }
+  .db-cols span:first-child { visibility: hidden; }
+  .db-hbars { display: grid; gap: 18px; margin: 0; padding: 0; list-style: none; }
+  .db-hbar__row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; color: var(--siraj-text); }
+  .db-hbar__row b { color: var(--siraj-text-strong); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .db-hbar__track { position: relative; height: 8px; background: var(--siraj-surface-alt); }
+  .db-hbar__fill { position: absolute; inset-block: 0; inset-inline-start: 0; background: var(--db-sold); }
+  .db-people { display: grid; margin: 0; padding: 0; list-style: none; }
+  .db-people li { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--siraj-border); }
+  .db-people li:last-child { border-bottom: 0; }
+  .db-people__rank { width: 18px; color: var(--siraj-text-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .db-people__val { margin-inline-start: auto; text-align: end; font-variant-numeric: tabular-nums; }
+  .db-people__val b { display: block; color: var(--siraj-text-strong); font-weight: 400; font-size: 15px; }
+  .db-people__val span { color: var(--siraj-text-muted); font-size: 12px; }
+  .db-table .sj-table thead th { background: var(--siraj-surface); }
+  .db-table .sj-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--siraj-surface-alt) 45%, transparent); }
+  .db-table__foot { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; border-top: 1px solid var(--siraj-border); }
+  .db-tip { position: fixed; z-index: 900; pointer-events: none; padding: 8px 12px; background: var(--sj-ink-inverse); color: var(--sj-on-ink-inverse); font-size: 13px; white-space: nowrap; opacity: 0; transform: translate(-50%, calc(-100% - 14px)); transition: opacity .12s; }
+  .db-tip.is-on { opacity: 1; }
+  .db-tip::after { content: ""; position: absolute; left: 50%; top: 100%; width: 8px; height: 8px; margin: -4px 0 0 -4px; background: inherit; transform: rotate(45deg); }
+  @media (max-width: 1279px) { .db-c3 { grid-column: span 6; } .db-c8, .db-c4, .db-c5, .db-c7 { grid-column: 1 / -1; } }
+  @media (max-width: 899px) { .db-app { grid-template-columns: 1fr; } .db-side { display: none; } .db-top { padding-inline: 20px; } .db-top__tools .sj-search, .db-top__tools .sj-segmented { display: none; } .db-content { padding: 20px; } .db-c3 { grid-column: 1 / -1; } .db-donut { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-sj-sprite="../../07-Icon-System/sprite/siraj-icons.svg">
+<div class="db-app">
+  <aside class="db-side" aria-label="Sales navigation">
+    <div class="db-side__brand"><img src="../../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ"><span>Sales</span></div>
+    <ul class="db-menu">
+      <li><a href="#" aria-current="page"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-grid"/></svg> Overview</a></li>
+      <li><a href="#"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-building"/></svg> Inventory <span class="db-menu__count">148</span></a></li>
+      <li><a href="#"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-reservation"/></svg> Reservations <span class="db-menu__count">18</span></a></li>
+      <li><a href="#"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-customer"/></svg> Customers</a></li>
+      <li><a href="#"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-payment"/></svg> Payments <span class="db-menu__count">6</span></a></li>
+      <li><a href="#"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-documents"/></svg> Contracts</a></li>
+      <li><a href="#"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-growth"/></svg> Reports</a></li>
+    </ul>
+    <h4>Projects</h4>
+    <ul class="db-menu">
+      <li><a href="#"><span class="db-dot is-on"></span> Noor Residences</a></li>
+      <li><a href="#"><span class="db-dot"></span> Rimal Villas</a></li>
+      <li><a href="#"><span class="db-dot"></span> Qurum Gate</a></li>
+    </ul>
+    <div class="db-side__foot">
+      <div class="sj-person"><span class="sj-avatar sj-avatar--brand">KR</span><div><p class="sj-person__name">Khalid Al Rawahi</p><p class="sj-person__role">Sales director</p></div></div>
+      <button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Settings"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button>
+    </div>
+  </aside>
+
+  <div class="db-main">
+    <header class="db-top">
+      <div><h1>Sales overview</h1><p>Noor Residences · Updated 11 Oct 2026, 09:40</p></div>
+      <div class="db-top__tools">
+        <div class="sj-segmented sj-segmented--sm" role="group" aria-label="Period"><button type="button" aria-pressed="false">MTD</button><button type="button" aria-pressed="false">QTD</button><button type="button" aria-pressed="true">YTD</button></div>
+        <div class="sj-search"><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-search"/></svg><input class="sj-input" type="search" placeholder="Unit, customer or ref." aria-label="Search"></div>
+        <button class="sj-icon-btn db-bell" type="button" aria-label="Notifications, 3 new"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-alert"/></svg></button>
+        <button class="sj-btn sj-btn--secondary sj-btn--sm" type="button"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg><span class="sj-btn__label">Export</span></button>
+        <button class="sj-btn sj-btn--primary sj-btn--sm" type="button" data-sj-toast="Reservation draft created|RSV-2026-0413 · assign a unit to continue" data-sj-toast-icon="reservation"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-plus"/></svg><span class="sj-btn__label">New reservation</span></button>
+      </div>
+    </header>
+
+    <main class="db-content">
+      <section class="db-c3 sj-stat sj-stat--card db-kpi" aria-label="Units sold">
+        <p class="sj-stat__label">Units sold</p>
+        <p class="sj-stat__value">96<span class="sj-stat__unit">/ 148</span></p>
+        <div class="sj-progress"><div class="sj-progress__track" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Sold"><div class="sj-progress__fill" style="--value:65%;background:var(--db-sold)"></div></div></div>
+        <p class="sj-delta sj-delta--up"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg> +8 <span class="sj-delta__ctx">this month · 65% sold</span></p>
+      </section>
+      <section class="db-c3 sj-stat sj-stat--card db-kpi" aria-label="Sales value">
+        <p class="sj-stat__label">Sales value · YTD</p>
+        <p class="sj-stat__value"><span class="sj-stat__unit">OMR</span>18.4<span class="sj-stat__unit">M</span></p>
+        <svg class="sj-spark" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="var(--db-sold)" stroke-width="1.5" vector-effect="non-scaling-stroke" points="0,34 22,30 44,24 66,31 88,26 110,20 132,31 154,25 176,14 200,30"/></svg>
+        <p class="sj-delta sj-delta--up"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg> +12.6% <span class="sj-delta__ctx">vs 2025</span></p>
+      </section>
+      <section class="db-c3 sj-stat sj-stat--card db-kpi" aria-label="Reservations">
+        <p class="sj-stat__label">Reservations · MTD</p>
+        <p class="sj-stat__value">14</p>
+        <svg class="sj-spark" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="var(--db-sold)" stroke-width="1.5" vector-effect="non-scaling-stroke" points="0,30 22,26 44,28 66,20 88,24 110,21 132,26 154,18 176,12 200,10"/></svg>
+        <p class="sj-delta sj-delta--up"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg> +3 <span class="sj-delta__ctx">vs September</span></p>
+      </section>
+      <section class="db-c3 sj-stat sj-stat--card db-kpi" aria-label="Collection rate">
+        <p class="sj-stat__label">Collection rate</p>
+        <p class="sj-stat__value">94.2<span class="sj-stat__unit">%</span></p>
+        <svg class="sj-spark" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="var(--db-sold)" stroke-width="1.5" vector-effect="non-scaling-stroke" points="0,12 22,10 44,13 66,11 88,12 110,9 132,10 154,12 176,14 200,17"/></svg>
+        <p class="sj-delta sj-delta--down"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg> −1.1 pts <span class="sj-delta__ctx">6 instalments overdue</span></p>
+      </section>
+
+      <section class="db-panel db-c7" aria-labelledby="ch1">
+        <div class="db-panel__head"><div><h2 id="ch1">Monthly sales value</h2><p>OMR millions · 2026 · October to date</p></div><ul class="db-legend"><li><span class="db-key db-key--bar"></span>Sales value</li><li><span class="db-key db-key--target"></span>Monthly target</li></ul></div>
+        <div class="db-panel__body">
+          <svg class="db-chart" viewBox="0 0 600 262" role="img" aria-label="Bar chart of monthly sales value, January to October 2026. Highest in September at OMR 2.7 million; target OMR 2.0 million per month.">
+            <defs><pattern id="db-partial" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="#C79A9C" fill-opacity=".25"/><line x1="0" y1="0" x2="0" y2="5" stroke="#C79A9C" stroke-width="1.5"/></pattern></defs>
+            <line x1="34" x2="592" y1="236.0" y2="236.0" class="db-gridline db-baseline"/>
+<text x="22" y="240.0" class="db-tick" text-anchor="end">0</text>
+<line x1="34" x2="592" y1="164.0" y2="164.0" class="db-gridline"/>
+<text x="22" y="168.0" class="db-tick" text-anchor="end">1</text>
+<line x1="34" x2="592" y1="92.0" y2="92.0" class="db-gridline"/>
+<text x="22" y="96.0" class="db-tick" text-anchor="end">2</text>
+<line x1="34" x2="592" y1="20.0" y2="20.0" class="db-gridline"/>
+<text x="22" y="24.0" class="db-tick" text-anchor="end">3</text>
+<rect class="db-bar" x="48.9" y="135.2" width="26" height="100.8" data-tip="Jan 2026 · OMR 1.4M"/>
+<text x="61.9" y="256" class="db-tick" text-anchor="middle">Jan</text>
+<rect class="db-bar" x="104.7" y="106.4" width="26" height="129.6" data-tip="Feb 2026 · OMR 1.8M"/>
+<text x="117.7" y="256" class="db-tick" text-anchor="middle">Feb</text>
+<rect class="db-bar" x="160.5" y="70.4" width="26" height="165.6" data-tip="Mar 2026 · OMR 2.3M"/>
+<text x="173.5" y="256" class="db-tick" text-anchor="middle">Mar</text>
+<rect class="db-bar" x="216.3" y="128.0" width="26" height="108.0" data-tip="Apr 2026 · OMR 1.5M"/>
+<text x="229.3" y="256" class="db-tick" text-anchor="middle">Apr</text>
+<rect class="db-bar" x="272.1" y="92.0" width="26" height="144.0" data-tip="May 2026 · OMR 2.0M"/>
+<text x="285.1" y="256" class="db-tick" text-anchor="middle">May</text>
+<rect class="db-bar" x="327.9" y="56.0" width="26" height="180.0" data-tip="Jun 2026 · OMR 2.5M"/>
+<text x="340.9" y="256" class="db-tick" text-anchor="middle">Jun</text>
+<rect class="db-bar" x="383.7" y="135.2" width="26" height="100.8" data-tip="Jul 2026 · OMR 1.4M"/>
+<text x="396.7" y="256" class="db-tick" text-anchor="middle">Jul</text>
+<rect class="db-bar" x="439.5" y="99.2" width="26" height="136.8" data-tip="Aug 2026 · OMR 1.9M"/>
+<text x="452.5" y="256" class="db-tick" text-anchor="middle">Aug</text>
+<rect class="db-bar" x="495.3" y="41.6" width="26" height="194.4" data-tip="Sep 2026 · OMR 2.7M"/>
+<text x="508.3" y="256" class="db-tick" text-anchor="middle">Sep</text>
+<text x="508.3" y="33.6" class="db-val" text-anchor="middle">2.7</text>
+<rect class="db-bar is-partial" x="551.1" y="171.2" width="26" height="64.8" data-tip="Oct 2026 · OMR 0.9M (to date)"/>
+<text x="564.1" y="256" class="db-tick" text-anchor="middle">Oct</text>
+<line x1="34" x2="592" y1="92.0" y2="92.0" class="db-target"/>
+<text x="592" y="84.0" class="db-tick db-tick--strong" text-anchor="end">Target 2.0</text>
+          </svg>
+        </div>
+      </section>
+
+      <section class="db-panel db-c5" aria-labelledby="ch2">
+        <div class="db-panel__head"><div><h2 id="ch2">Inventory status</h2><p>All 148 residences</p></div></div>
+        <div class="db-panel__body db-donut">
+          <svg class="db-chart" viewBox="0 0 200 200" role="img" aria-label="Donut chart: 96 sold, 18 reserved, 30 available, 4 blocked.">
+            <defs><pattern id="db-hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#AA9180" stroke-width="1.2"/></pattern></defs>
+            <circle r="78" cx="100" cy="100" fill="none" stroke="var(--siraj-surface-alt)" stroke-width="22"/>
+            <circle class="db-seg db-seg--sold" r="78" cx="100" cy="100" stroke-dasharray="314.90 175.19" stroke-dashoffset="0.00" data-tip="Sold · 96 units · 64.9%"/>
+<circle class="db-seg db-seg--reserved" r="78" cx="100" cy="100" stroke-dasharray="56.61 433.48" stroke-dashoffset="-317.90" data-tip="Reserved · 18 units · 12.2%"/>
+<circle class="db-seg db-seg--available" r="78" cx="100" cy="100" stroke-dasharray="96.34 393.75" stroke-dashoffset="-377.50" data-tip="Available · 30 units · 20.3%"/>
+<circle class="db-seg db-seg--blocked" r="78" cx="100" cy="100" stroke-dasharray="10.25 479.84" stroke-dashoffset="-476.84" data-tip="Blocked · 4 units · 2.7%"/>
+            <text x="100" y="98" text-anchor="middle" fill="var(--siraj-text-strong)" font-size="40" font-weight="200" class="db-donut__center">65%</text>
+            <text x="100" y="122" text-anchor="middle" fill="var(--siraj-text-muted)" font-size="11" letter-spacing="2" class="db-donut__center">SOLD</text>
+          </svg>
+          <ul class="db-legend">
+            <li><span><span class="db-key db-key--sold"></span>Sold</span><b>96</b></li>
+            <li><span><span class="db-key db-key--reserved"></span>Reserved</span><b>18</b></li>
+            <li><span><span class="db-key db-key--available"></span>Available</span><b>30</b></li>
+            <li><span><span class="db-key db-key--blocked"></span>Blocked</span><b>4</b></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="db-panel db-c7" aria-labelledby="ch3">
+        <div class="db-panel__head"><div><h2 id="ch3">Units availability</h2><p>Tower · floors 1–22 · hover a unit for details</p></div>
+          <ul class="db-legend"><li><span class="db-key db-key--sold"></span>Sold</li><li><span class="db-key db-key--reserved"></span>Reserved</li><li><span class="db-key db-key--available"></span>Available</li><li><span class="db-key db-key--blocked"></span>Blocked</li></ul></div>
+        <div class="db-panel__body">
+          <div class="db-cols" aria-hidden="true"><span>Fl</span><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span></div>
+          <div class="db-floorgrid" role="list" aria-label="Units by floor">
+            <div class="db-floor"><span class="db-floor__n">22</span><div class="db-floor__units"><span class="db-unit is-reserved" style="grid-column:span 2" data-tip="PH-2201 · Penthouse · Reserved" aria-label="PH-2201, Penthouse, Reserved"></span><span class="db-unit is-available" style="grid-column:span 2" data-tip="PH-2202 · Penthouse · Available" aria-label="PH-2202, Penthouse, Available"></span><span class="db-unit is-reserved" style="grid-column:span 2" data-tip="PH-2203 · Penthouse · Reserved" aria-label="PH-2203, Penthouse, Reserved"></span><span class="db-unit is-reserved" style="grid-column:span 1" data-tip="PH-2204 · Penthouse · Reserved" aria-label="PH-2204, Penthouse, Reserved"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">21</span><div class="db-floor__units"><span class="db-unit is-reserved" style="grid-column:span 2" data-tip="PH-2101 · Penthouse · Reserved" aria-label="PH-2101, Penthouse, Reserved"></span><span class="db-unit is-available" style="grid-column:span 2" data-tip="PH-2102 · Penthouse · Available" aria-label="PH-2102, Penthouse, Available"></span><span class="db-unit is-blocked" style="grid-column:span 2" data-tip="PH-2103 · Penthouse · Blocked" aria-label="PH-2103, Penthouse, Blocked"></span><span class="db-unit is-available" style="grid-column:span 1" data-tip="PH-2104 · Penthouse · Available" aria-label="PH-2104, Penthouse, Available"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">20</span><div class="db-floor__units"><span class="db-unit is-reserved" data-tip="A-2001 · 1 BR · Reserved" aria-label="A-2001, 1 BR, Reserved"></span><span class="db-unit is-available" data-tip="B-2002 · 2 BR · Available" aria-label="B-2002, 2 BR, Available"></span><span class="db-unit is-available" data-tip="C-2003 · 2 BR · Available" aria-label="C-2003, 2 BR, Available"></span><span class="db-unit is-available" data-tip="D-2004 · 3 BR · Available" aria-label="D-2004, 3 BR, Available"></span><span class="db-unit is-reserved" data-tip="E-2005 · 1 BR · Reserved" aria-label="E-2005, 1 BR, Reserved"></span><span class="db-unit is-available" data-tip="F-2006 · 2 BR · Available" aria-label="F-2006, 2 BR, Available"></span><span class="db-unit is-reserved" data-tip="G-2007 · 3 BR · Reserved" aria-label="G-2007, 3 BR, Reserved"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">19</span><div class="db-floor__units"><span class="db-unit is-reserved" data-tip="A-1901 · 1 BR · Reserved" aria-label="A-1901, 1 BR, Reserved"></span><span class="db-unit is-available" data-tip="B-1902 · 2 BR · Available" aria-label="B-1902, 2 BR, Available"></span><span class="db-unit is-available" data-tip="C-1903 · 2 BR · Available" aria-label="C-1903, 2 BR, Available"></span><span class="db-unit is-reserved" data-tip="D-1904 · 3 BR · Reserved" aria-label="D-1904, 3 BR, Reserved"></span><span class="db-unit is-available" data-tip="E-1905 · 1 BR · Available" aria-label="E-1905, 1 BR, Available"></span><span class="db-unit is-available" data-tip="F-1906 · 2 BR · Available" aria-label="F-1906, 2 BR, Available"></span><span class="db-unit is-available" data-tip="G-1907 · 3 BR · Available" aria-label="G-1907, 3 BR, Available"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">18</span><div class="db-floor__units"><span class="db-unit is-reserved" data-tip="A-1801 · 1 BR · Reserved" aria-label="A-1801, 1 BR, Reserved"></span><span class="db-unit is-available" data-tip="B-1802 · 2 BR · Available" aria-label="B-1802, 2 BR, Available"></span><span class="db-unit is-available" data-tip="C-1803 · 2 BR · Available" aria-label="C-1803, 2 BR, Available"></span><span class="db-unit is-reserved" data-tip="D-1804 · 3 BR · Reserved" aria-label="D-1804, 3 BR, Reserved"></span><span class="db-unit is-reserved" data-tip="E-1805 · 1 BR · Reserved" aria-label="E-1805, 1 BR, Reserved"></span><span class="db-unit is-available" data-tip="F-1806 · 2 BR · Available" aria-label="F-1806, 2 BR, Available"></span><span class="db-unit is-blocked" data-tip="G-1807 · 3 BR · Blocked" aria-label="G-1807, 3 BR, Blocked"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">17</span><div class="db-floor__units"><span class="db-unit is-available" data-tip="A-1701 · 1 BR · Available" aria-label="A-1701, 1 BR, Available"></span><span class="db-unit is-available" data-tip="B-1702 · 2 BR · Available" aria-label="B-1702, 2 BR, Available"></span><span class="db-unit is-available" data-tip="C-1703 · 2 BR · Available" aria-label="C-1703, 2 BR, Available"></span><span class="db-unit is-reserved" data-tip="D-1704 · 3 BR · Reserved" aria-label="D-1704, 3 BR, Reserved"></span><span class="db-unit is-sold" data-tip="E-1705 · 1 BR · Sold" aria-label="E-1705, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-1706 · 2 BR · Sold" aria-label="F-1706, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-1707 · 3 BR · Sold" aria-label="G-1707, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">16</span><div class="db-floor__units"><span class="db-unit is-available" data-tip="A-1601 · 1 BR · Available" aria-label="A-1601, 1 BR, Available"></span><span class="db-unit is-available" data-tip="B-1602 · 2 BR · Available" aria-label="B-1602, 2 BR, Available"></span><span class="db-unit is-sold" data-tip="C-1603 · 2 BR · Sold" aria-label="C-1603, 2 BR, Sold"></span><span class="db-unit is-reserved" data-tip="D-1604 · 3 BR · Reserved" aria-label="D-1604, 3 BR, Reserved"></span><span class="db-unit is-blocked" data-tip="E-1605 · 1 BR · Blocked" aria-label="E-1605, 1 BR, Blocked"></span><span class="db-unit is-sold" data-tip="F-1606 · 2 BR · Sold" aria-label="F-1606, 2 BR, Sold"></span><span class="db-unit is-available" data-tip="G-1607 · 3 BR · Available" aria-label="G-1607, 3 BR, Available"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">15</span><div class="db-floor__units"><span class="db-unit is-reserved" data-tip="A-1501 · 1 BR · Reserved" aria-label="A-1501, 1 BR, Reserved"></span><span class="db-unit is-sold" data-tip="B-1502 · 2 BR · Sold" aria-label="B-1502, 2 BR, Sold"></span><span class="db-unit is-available" data-tip="C-1503 · 2 BR · Available" aria-label="C-1503, 2 BR, Available"></span><span class="db-unit is-reserved" data-tip="D-1504 · 3 BR · Reserved" aria-label="D-1504, 3 BR, Reserved"></span><span class="db-unit is-available" data-tip="E-1505 · 1 BR · Available" aria-label="E-1505, 1 BR, Available"></span><span class="db-unit is-available" data-tip="F-1506 · 2 BR · Available" aria-label="F-1506, 2 BR, Available"></span><span class="db-unit is-sold" data-tip="G-1507 · 3 BR · Sold" aria-label="G-1507, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">14</span><div class="db-floor__units"><span class="db-unit is-reserved" data-tip="A-1401 · 1 BR · Reserved" aria-label="A-1401, 1 BR, Reserved"></span><span class="db-unit is-sold" data-tip="B-1402 · 2 BR · Sold" aria-label="B-1402, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-1403 · 2 BR · Sold" aria-label="C-1403, 2 BR, Sold"></span><span class="db-unit is-available" data-tip="D-1404 · 3 BR · Available" aria-label="D-1404, 3 BR, Available"></span><span class="db-unit is-sold" data-tip="E-1405 · 1 BR · Sold" aria-label="E-1405, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-1406 · 2 BR · Sold" aria-label="F-1406, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-1407 · 3 BR · Sold" aria-label="G-1407, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">13</span><div class="db-floor__units"><span class="db-unit is-available" data-tip="A-1301 · 1 BR · Available" aria-label="A-1301, 1 BR, Available"></span><span class="db-unit is-available" data-tip="B-1302 · 2 BR · Available" aria-label="B-1302, 2 BR, Available"></span><span class="db-unit is-sold" data-tip="C-1303 · 2 BR · Sold" aria-label="C-1303, 2 BR, Sold"></span><span class="db-unit is-available" data-tip="D-1304 · 3 BR · Available" aria-label="D-1304, 3 BR, Available"></span><span class="db-unit is-sold" data-tip="E-1305 · 1 BR · Sold" aria-label="E-1305, 1 BR, Sold"></span><span class="db-unit is-reserved" data-tip="F-1306 · 2 BR · Reserved" aria-label="F-1306, 2 BR, Reserved"></span><span class="db-unit is-sold" data-tip="G-1307 · 3 BR · Sold" aria-label="G-1307, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">12</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-1201 · 1 BR · Sold" aria-label="A-1201, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-1202 · 2 BR · Sold" aria-label="B-1202, 2 BR, Sold"></span><span class="db-unit is-available" data-tip="C-1203 · 2 BR · Available" aria-label="C-1203, 2 BR, Available"></span><span class="db-unit is-available" data-tip="D-1204 · 3 BR · Available" aria-label="D-1204, 3 BR, Available"></span><span class="db-unit is-sold" data-tip="E-1205 · 1 BR · Sold" aria-label="E-1205, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-1206 · 2 BR · Sold" aria-label="F-1206, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-1207 · 3 BR · Sold" aria-label="G-1207, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">11</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-1101 · 1 BR · Sold" aria-label="A-1101, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-1102 · 2 BR · Sold" aria-label="B-1102, 2 BR, Sold"></span><span class="db-unit is-blocked" data-tip="C-1103 · 2 BR · Blocked" aria-label="C-1103, 2 BR, Blocked"></span><span class="db-unit is-sold" data-tip="D-1104 · 3 BR · Sold" aria-label="D-1104, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-1105 · 1 BR · Sold" aria-label="E-1105, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-1106 · 2 BR · Sold" aria-label="F-1106, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-1107 · 3 BR · Sold" aria-label="G-1107, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">10</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-1001 · 1 BR · Sold" aria-label="A-1001, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-1002 · 2 BR · Sold" aria-label="B-1002, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-1003 · 2 BR · Sold" aria-label="C-1003, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-1004 · 3 BR · Sold" aria-label="D-1004, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-1005 · 1 BR · Sold" aria-label="E-1005, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-1006 · 2 BR · Sold" aria-label="F-1006, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-1007 · 3 BR · Sold" aria-label="G-1007, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">09</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0901 · 1 BR · Sold" aria-label="A-0901, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0902 · 2 BR · Sold" aria-label="B-0902, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0903 · 2 BR · Sold" aria-label="C-0903, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0904 · 3 BR · Sold" aria-label="D-0904, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0905 · 1 BR · Sold" aria-label="E-0905, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0906 · 2 BR · Sold" aria-label="F-0906, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0907 · 3 BR · Sold" aria-label="G-0907, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">08</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0801 · 1 BR · Sold" aria-label="A-0801, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0802 · 2 BR · Sold" aria-label="B-0802, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0803 · 2 BR · Sold" aria-label="C-0803, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0804 · 3 BR · Sold" aria-label="D-0804, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0805 · 1 BR · Sold" aria-label="E-0805, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0806 · 2 BR · Sold" aria-label="F-0806, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0807 · 3 BR · Sold" aria-label="G-0807, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">07</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0701 · 1 BR · Sold" aria-label="A-0701, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0702 · 2 BR · Sold" aria-label="B-0702, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0703 · 2 BR · Sold" aria-label="C-0703, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0704 · 3 BR · Sold" aria-label="D-0704, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0705 · 1 BR · Sold" aria-label="E-0705, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0706 · 2 BR · Sold" aria-label="F-0706, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0707 · 3 BR · Sold" aria-label="G-0707, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">06</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0601 · 1 BR · Sold" aria-label="A-0601, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0602 · 2 BR · Sold" aria-label="B-0602, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0603 · 2 BR · Sold" aria-label="C-0603, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0604 · 3 BR · Sold" aria-label="D-0604, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0605 · 1 BR · Sold" aria-label="E-0605, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0606 · 2 BR · Sold" aria-label="F-0606, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0607 · 3 BR · Sold" aria-label="G-0607, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">05</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0501 · 1 BR · Sold" aria-label="A-0501, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0502 · 2 BR · Sold" aria-label="B-0502, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0503 · 2 BR · Sold" aria-label="C-0503, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0504 · 3 BR · Sold" aria-label="D-0504, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0505 · 1 BR · Sold" aria-label="E-0505, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0506 · 2 BR · Sold" aria-label="F-0506, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0507 · 3 BR · Sold" aria-label="G-0507, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">04</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0401 · 1 BR · Sold" aria-label="A-0401, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0402 · 2 BR · Sold" aria-label="B-0402, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0403 · 2 BR · Sold" aria-label="C-0403, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0404 · 3 BR · Sold" aria-label="D-0404, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0405 · 1 BR · Sold" aria-label="E-0405, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0406 · 2 BR · Sold" aria-label="F-0406, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0407 · 3 BR · Sold" aria-label="G-0407, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">03</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0301 · 1 BR · Sold" aria-label="A-0301, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0302 · 2 BR · Sold" aria-label="B-0302, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0303 · 2 BR · Sold" aria-label="C-0303, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0304 · 3 BR · Sold" aria-label="D-0304, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0305 · 1 BR · Sold" aria-label="E-0305, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0306 · 2 BR · Sold" aria-label="F-0306, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0307 · 3 BR · Sold" aria-label="G-0307, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">02</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0201 · 1 BR · Sold" aria-label="A-0201, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0202 · 2 BR · Sold" aria-label="B-0202, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0203 · 2 BR · Sold" aria-label="C-0203, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0204 · 3 BR · Sold" aria-label="D-0204, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0205 · 1 BR · Sold" aria-label="E-0205, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0206 · 2 BR · Sold" aria-label="F-0206, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0207 · 3 BR · Sold" aria-label="G-0207, 3 BR, Sold"></span></div></div>
+<div class="db-floor"><span class="db-floor__n">01</span><div class="db-floor__units"><span class="db-unit is-sold" data-tip="A-0101 · 1 BR · Sold" aria-label="A-0101, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="B-0102 · 2 BR · Sold" aria-label="B-0102, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="C-0103 · 2 BR · Sold" aria-label="C-0103, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="D-0104 · 3 BR · Sold" aria-label="D-0104, 3 BR, Sold"></span><span class="db-unit is-sold" data-tip="E-0105 · 1 BR · Sold" aria-label="E-0105, 1 BR, Sold"></span><span class="db-unit is-sold" data-tip="F-0106 · 2 BR · Sold" aria-label="F-0106, 2 BR, Sold"></span><span class="db-unit is-sold" data-tip="G-0107 · 3 BR · Sold" aria-label="G-0107, 3 BR, Sold"></span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="db-c5" style="display:grid;gap:24px;align-content:start">
+        <section class="db-panel" aria-labelledby="ch4">
+          <div class="db-panel__head"><div><h2 id="ch4">Sold by unit type</h2><p>Units sold of total</p></div></div>
+          <div class="db-panel__body">
+            <ul class="db-hbars">
+              <li><div class="db-hbar__row"><span>1 bedroom</span><b>34 / 40</b></div><div class="db-hbar__track"><div class="db-hbar__fill" style="width:85%"></div></div></li>
+              <li><div class="db-hbar__row"><span>2 bedroom</span><b>40 / 56</b></div><div class="db-hbar__track"><div class="db-hbar__fill" style="width:71.4%"></div></div></li>
+              <li><div class="db-hbar__row"><span>3 bedroom</span><b>20 / 44</b></div><div class="db-hbar__track"><div class="db-hbar__fill" style="width:45.5%"></div></div></li>
+              <li><div class="db-hbar__row"><span>Penthouse</span><b>2 / 8</b></div><div class="db-hbar__track"><div class="db-hbar__fill" style="width:25%"></div></div></li>
+            </ul>
+          </div>
+        </section>
+        <section class="db-panel" aria-labelledby="ch5">
+          <div class="db-panel__head"><div><h2 id="ch5">Top consultants</h2><p>Year to date</p></div><a class="sj-link sj-link--caps" href="#" style="font-size:11px">All</a></div>
+          <div class="db-panel__body" style="padding-top:8px;padding-bottom:12px">
+            <ol class="db-people">
+              <li><span class="db-people__rank">01</span><span class="sj-avatar sj-avatar--sm">MA</span><div><p class="sj-person__name">Maryam Al Balushi</p><p class="sj-person__role">Al Khuwair</p></div><div class="db-people__val"><b>OMR 3.6M</b><span>18 units</span></div></li>
+              <li><span class="db-people__rank">02</span><span class="sj-avatar sj-avatar--sm">AH</span><div><p class="sj-person__name">Ahmed Al Hinai</p><p class="sj-person__role">Al Khuwair</p></div><div class="db-people__val"><b>OMR 3.1M</b><span>15 units</span></div></li>
+              <li><span class="db-people__rank">03</span><span class="sj-avatar sj-avatar--sm">LK</span><div><p class="sj-person__name">Laila Al Kindi</p><p class="sj-person__role">International desk</p></div><div class="db-people__val"><b>OMR 2.5M</b><span>12 units</span></div></li>
+            </ol>
+          </div>
+        </section>
+      </div>
+
+      <section class="db-panel db-c12 db-table" aria-labelledby="ch6">
+        <div class="db-panel__head" style="padding-bottom:20px"><div><h2 id="ch6">Latest reservations</h2><p>18 active · 3 expiring this week</p></div>
+          <div class="sj-tabs" data-sj-tabs><div class="sj-tabs__list" role="tablist" style="gap:28px;border:0"><button class="sj-tab" role="tab" aria-selected="true" style="padding-block:4px 10px;font-size:11px">All</button><button class="sj-tab" role="tab" aria-selected="false" tabindex="-1" style="padding-block:4px 10px;font-size:11px">Reserved</button><button class="sj-tab" role="tab" aria-selected="false" tabindex="-1" style="padding-block:4px 10px;font-size:11px">Contract</button><button class="sj-tab" role="tab" aria-selected="false" tabindex="-1" style="padding-block:4px 10px;font-size:11px">Expired</button></div></div></div>
+        <div class="sj-table-wrap">
+          <table class="sj-table sj-table--compact" data-sj-sortable>
+            <thead><tr>
+              <th scope="col">Reference</th>
+              <th scope="col" aria-sort="none"><button class="sj-sort" type="button">Customer <span class="sj-sort__icon"></span></button></th>
+              <th scope="col">Unit</th>
+              <th scope="col">Type</th>
+              <th scope="col" class="is-num" aria-sort="none"><button class="sj-sort" type="button">Price OMR <span class="sj-sort__icon"></span></button></th>
+              <th scope="col" aria-sort="descending"><button class="sj-sort" type="button">Reserved <span class="sj-sort__icon"></span></button></th>
+              <th scope="col">Consultant</th>
+              <th scope="col">Status</th>
+              <th scope="col"><span class="visually-hidden">Actions</span></th>
+            </tr></thead>
+            <tbody>
+              <tr><td class="is-muted">RSV-0412</td><td><span class="sj-cell-user"><span class="sj-avatar sj-avatar--sm">SH</span><span class="is-strong">Salim Al Harthy</span></span></td><td class="is-strong">B-1204</td><td>2 BR</td><td class="is-num" data-value="198500">198,500</td><td data-value="20261009">09 Oct 2026</td><td>Maryam A.</td><td><span class="sj-badge sj-badge--reserved">Reserved</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Actions for RSV-0412"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button></td></tr>
+              <tr><td class="is-muted">RSV-0411</td><td><span class="sj-cell-user"><span class="sj-avatar sj-avatar--sm">FL</span><span class="is-strong">Fatma Al Lawati</span></span></td><td class="is-strong">C-1903</td><td>3 BR</td><td class="is-num" data-value="281500">281,500</td><td data-value="20261008">08 Oct 2026</td><td>Ahmed H.</td><td><span class="sj-badge sj-badge--info">Contract sent</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Actions for RSV-0411"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button></td></tr>
+              <tr><td class="is-muted">RSV-0409</td><td><span class="sj-cell-user"><span class="sj-avatar sj-avatar--sm">RB</span><span class="is-strong">Rashid Al Busaidi</span></span></td><td class="is-strong">A-0614</td><td>1 BR</td><td class="is-num" data-value="151000">151,000</td><td data-value="20261006">06 Oct 2026</td><td>Laila K.</td><td><span class="sj-badge sj-badge--ready">Deposit paid</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Actions for RSV-0409"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button></td></tr>
+              <tr><td class="is-muted">RSV-0407</td><td><span class="sj-cell-user"><span class="sj-avatar sj-avatar--sm">NS</span><span class="is-strong">Noura Al Siyabi</span></span></td><td class="is-strong">B-0910</td><td>2 BR</td><td class="is-num" data-value="192000">192,000</td><td data-value="20261004">04 Oct 2026</td><td>Maryam A.</td><td><span class="sj-badge sj-badge--sold">Sold</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Actions for RSV-0407"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button></td></tr>
+              <tr><td class="is-muted">RSV-0405</td><td><span class="sj-cell-user"><span class="sj-avatar sj-avatar--sm">JW</span><span class="is-strong">James Whitfield</span></span></td><td class="is-strong">PH-2202</td><td>Penthouse</td><td class="is-num" data-value="712000">712,000</td><td data-value="20261002">02 Oct 2026</td><td>Saif M.</td><td><span class="sj-badge sj-badge--reserved">Reserved</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Actions for RSV-0405"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button></td></tr>
+              <tr><td class="is-muted">RSV-0402</td><td><span class="sj-cell-user"><span class="sj-avatar sj-avatar--sm">AZ</span><span class="is-strong">Aisha Al Zadjali</span></span></td><td class="is-strong">A-1105</td><td>1 BR</td><td class="is-num" data-value="156500">156,500</td><td data-value="20260929">29 Sep 2026</td><td>Ahmed H.</td><td><span class="sj-badge sj-badge--error">Expired</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Actions for RSV-0402"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button></td></tr>
+              <tr><td class="is-muted">RSV-0398</td><td><span class="sj-cell-user"><span class="sj-avatar sj-avatar--sm">HR</span><span class="is-strong">Hamad Al Rashdi</span></span></td><td class="is-strong">C-1206</td><td>3 BR</td><td class="is-num" data-value="262000">262,000</td><td data-value="20260927">27 Sep 2026</td><td>Laila K.</td><td><span class="sj-badge sj-badge--sold">Sold</span></td><td class="is-actions"><button class="sj-icon-btn sj-icon-btn--sm sj-icon-btn--plain" type="button" aria-label="Actions for RSV-0398"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="db-table__foot">
+          <span class="sj-pagination__summary" style="margin:0">Showing 7 of 18 reservations</span>
+          <nav class="sj-pagination" aria-label="Pagination"><ul class="sj-pagination__list"><li><a class="sj-page" href="#" aria-current="page">1</a></li><li><a class="sj-page" href="#">2</a></li><li><a class="sj-page" href="#">3</a></li></ul><a class="sj-pagination__step" href="#">Next <svg class="sj-icon sj-icon--dir sj-icon--sm" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></a></nav>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<div class="db-tip" role="tooltip" aria-hidden="true"></div>
+<script src="../siraj-components.js"></script>
+<script>
+  /* Hover layer for chart marks and unit cells */
+  (function () {
+    var tip = document.querySelector('.db-tip');
+    document.addEventListener('mousemove', function (e) {
+      var t = e.target.closest && e.target.closest('[data-tip]');
+      if (!t) { tip.classList.remove('is-on'); return; }
+      var r = t.getBoundingClientRect();
+      tip.textContent = t.getAttribute('data-tip');
+      tip.style.left = (r.left + r.width / 2) + 'px';
+      tip.style.top = r.top + 'px';
+      tip.classList.add('is-on');
+    });
+  })();
+</script>
+</body>
+</html>

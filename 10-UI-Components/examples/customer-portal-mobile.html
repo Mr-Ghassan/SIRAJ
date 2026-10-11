@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بوابة ملّاك سراج</title>
+<meta name="description" content="بوابة ملّاك سراج — وحدتي، جدول الدفعات، تقدّم البناء، المستندات وحالة التسليم.">
+<meta name="theme-color" content="#F7F2ED">
+<link rel="icon" href="../../01-Logos/SVG/SIRAJ_Monogram-S_Maroon-on-Ivory_v1.0.svg">
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<link rel="stylesheet" href="../siraj-components.css">
+<style>
+  /* cp- = customer portal composition (mobile-first, 390 px reference) */
+  body { background: var(--siraj-surface-alt); }
+  .cp { max-width: 430px; min-height: 100vh; margin-inline: auto; background: var(--siraj-bg); }
+  .cp main { padding-bottom: 40px; }
+  .cp-bar { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; height: 64px; padding-inline: 20px; background: var(--siraj-bg); border-bottom: 1px solid var(--sj-hairline); }
+  .cp-bar img { height: 20px; display: block; }
+  .cp-bar .sj-cluster { --sj-cluster: 8px; }
+  .cp-bar .sj-icon-btn { width: 40px; height: 40px; }
+  .cp-bell { position: relative; }
+  .cp-bell::after { content: ""; position: absolute; top: 9px; inset-inline-end: 9px; width: 6px; height: 6px; background: var(--siraj-accent); transform: rotate(45deg); }
+  .cp-hello { padding: 28px 20px 24px; }
+  .cp-hello h1 { margin: 10px 0 6px; color: var(--siraj-text-strong); font-size: 30px; font-weight: 300; line-height: 1.35; }
+  .cp-hello p { margin: 0; color: var(--siraj-text-muted); font-size: 15px; }
+  .cp-section { padding: 0 20px; margin-top: 36px; }
+  .cp-section__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
+  .cp-section__head h2 { margin: 0; color: var(--siraj-text-strong); font-size: 21px; font-weight: 400; }
+  .cp-section__head a { font-size: 14px; }
+  .cp-unit .sj-media { aspect-ratio: 16 / 10; }
+  .cp-unit .sj-property-card__body { padding: 20px 20px 0; }
+  .cp-unit .sj-specs li { font-size: 13px; padding: 14px 4px; gap: 6px; }
+  .cp-unit .sj-specs li:first-child { padding-inline-start: 20px; }
+  .cp-unit .sj-specs .sj-icon { width: 16px; height: 16px; }
+  .cp-card { background: var(--siraj-surface); border: 1px solid var(--sj-hairline); padding: 20px; }
+  .cp-handover { display: grid; gap: 18px; }
+  .cp-handover__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .cp-handover__date { margin: 6px 0 0; color: var(--siraj-text-strong); font-size: 28px; font-weight: 300; line-height: 1.3; }
+  .cp-mini { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--sj-hairline); }
+  .cp-mini > div { padding-top: 14px; }
+  .cp-mini > div + div { padding-inline-start: 16px; border-inline-start: 1px solid var(--sj-hairline); }
+  .cp-mini dt { color: var(--siraj-text-muted); font-size: 13px; }
+  .cp-mini dd { margin: 2px 0 0; color: var(--siraj-text-strong); font-size: 17px; }
+  .cp-due { position: relative; overflow: hidden; padding: 24px 20px 20px; background: var(--siraj-gradient-silk-light); color: var(--siraj-text); }
+  .cp-due__silk { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .38; mix-blend-mode: screen; pointer-events: none; }
+  .cp-due > :not(img) { position: relative; }
+  .cp-due p.cp-due__amount { margin: 12px 0 4px; color: var(--siraj-text-strong); font-size: 44px; font-weight: 200; line-height: 1.1; }
+  .cp-due__amount small { font-size: 18px; font-weight: 300; color: var(--siraj-text); }
+  .cp-due p { margin: 0; font-size: 15px; }
+  .cp-due__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 22px; }
+  .cp-due__actions .sj-btn { padding-inline: 12px; }
+  .cp-pay { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--sj-hairline); }
+  .cp-pay li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--sj-hairline); align-items: center; }
+  .cp-pay__name { color: var(--siraj-text-strong); font-size: 15px; }
+  .cp-pay__date { grid-row: 2; color: var(--siraj-text-muted); font-size: 13px; }
+  .cp-pay__amt { color: var(--siraj-text-strong); font-size: 16px; text-align: end; font-variant-numeric: tabular-nums; }
+  .cp-pay__st { grid-row: 2; grid-column: 2; justify-self: end; }
+  .cp-pay li.is-due { background: color-mix(in srgb, var(--sj-warning) 8%, transparent); margin-inline: -20px; padding-inline: 20px; border-inline-start: 2px solid var(--sj-warning); }
+  .cp-update { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; margin-top: 8px; padding-top: 18px; border-top: 1px solid var(--sj-hairline); }
+  .cp-update .sj-media { aspect-ratio: 1; }
+  .cp-update p { margin: 0; }
+  .cp-update b { display: block; color: var(--siraj-text-strong); font-weight: 500; font-size: 15px; }
+  .cp-update span { color: var(--siraj-text-muted); font-size: 13px; }
+  .cp-docs { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--sj-hairline); }
+  .cp-docs li { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--sj-hairline); }
+  .cp-docs__icon { display: grid; place-items: center; width: 44px; height: 44px; flex: none; color: var(--siraj-accent); background: var(--siraj-surface-alt); }
+  .cp-docs__name { margin: 0; color: var(--siraj-text-strong); font-size: 15px; line-height: 1.4; }
+  .cp-docs__meta { margin: 0; color: var(--siraj-text-muted); font-size: 13px; }
+  .cp-docs .sj-icon-btn { margin-inline-start: auto; width: 40px; height: 40px; }
+  .cp-help { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .cp-tabs { position: sticky; z-index: 40; bottom: 0; display: grid; grid-template-columns: repeat(5, 1fr); height: 72px; padding-bottom: env(safe-area-inset-bottom); background: var(--siraj-surface); border-top: 1px solid var(--sj-hairline); }
+  .cp-tabs a { position: relative; display: grid; justify-items: center; align-content: center; gap: 4px; color: var(--siraj-text-muted); font-size: 12px; text-decoration: none; }
+  .cp-tabs a .sj-icon { width: 22px; height: 22px; }
+  .cp-tabs a[aria-current="page"] { color: var(--siraj-accent); }
+  .cp-tabs a[aria-current="page"]::before { content: ""; position: absolute; top: -4px; width: 7px; height: 7px; background: var(--siraj-lumen); transform: rotate(45deg); }
+</style>
+</head>
+<body data-sj-sprite="../../07-Icon-System/sprite/siraj-icons.svg">
+<div class="cp">
+  <header class="cp-bar">
+    <img src="../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="سراج">
+    <div class="sj-cluster">
+      <button class="sj-icon-btn sj-icon-btn--plain cp-bell" type="button" aria-label="الإشعارات، 2 جديدة"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-alert"/></svg></button>
+      <span class="sj-avatar sj-avatar--sm">س ح</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="cp-hello">
+      <p class="sj-kicker">بوابة الملّاك</p>
+      <h1>مساء الخير، سالم</h1>
+      <p>آخر تحديث للبناء قبل 11 يومًا.</p>
+    </div>
+
+    <section class="cp-section" style="margin-top:0" aria-labelledby="unit-t">
+      <article class="sj-property-card cp-unit">
+        <div class="sj-media"><img src="../../08-Photography/Library/SIRAJ_Photo_Apartment-Interior-Sea-View_v1.0.jpg" alt="غرفة المعيشة بإطلالة على البحر"><div class="sj-media__badges"><span class="sj-badge sj-badge--on-image">على المخطط</span></div></div>
+        <div class="sj-property-card__body">
+          <p class="sj-property-card__loc"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> الخوير، مسقط</p>
+          <h2 class="sj-property-card__title" id="unit-t">نور ريزيدنس · <span class="sj-ltr">B-1204</span></h2>
+          <p class="sj-property-card__price">198,500 <small>ر.ع.</small></p>
+        </div>
+        <ul class="sj-specs"><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-bedroom"/></svg> غرفتان</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-bathroom"/></svg> 3</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-area"/></svg> 128 م²</li><li><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-sea-view"/></svg> الطابق 12</li></ul>
+      </article>
+    </section>
+
+    <section class="cp-section" aria-labelledby="ho-t">
+      <div class="cp-card cp-handover">
+        <div class="cp-handover__top"><div><p class="sj-kicker" id="ho-t">حالة التسليم</p><p class="cp-handover__date">الربع الرابع 2027</p></div><span class="sj-badge sj-badge--ready">في الموعد</span></div>
+        <div class="sj-progress"><div class="sj-progress__head"><span class="sj-progress__label">اكتمال البناء</span><span class="sj-progress__value">68%</span></div><div class="sj-progress__track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="اكتمال البناء"><div class="sj-progress__fill" style="--value:68%"></div></div></div>
+        <dl class="cp-mini" style="margin:0"><div><dt>التسليم المتوقع</dt><dd>ديسمبر 2027</dd></div><div><dt>المتبقي</dt><dd>14 شهرًا</dd></div></dl>
+      </div>
+    </section>
+
+    <section class="cp-section" aria-labelledby="due-t">
+      <div class="cp-due" data-theme="dark">
+        <img class="cp-due__silk" src="../../06-SIRAJ-Silk/Stills/Ribbon-Sweep/SIRAJ_Silk_Ribbon-Sweep_16x9_web_v1.0.webp" alt="" aria-hidden="true">
+        <p class="sj-kicker" id="due-t">الدفعة القادمة · القسط 3 من 8</p>
+        <p class="cp-due__amount">9,925 <small>ر.ع.</small></p>
+        <p>مستحقة في 18 أكتوبر 2026 · بعد 7 أيام</p>
+        <div class="cp-due__actions"><button class="sj-btn sj-btn--light" type="button" data-sj-toast="جارٍ تحويلك إلى بوابة الدفع|القسط 3 · 9,925 ر.ع." data-sj-toast-icon="payment">ادفع الآن</button><a class="sj-btn sj-btn--outline-light" href="#pay-t">الجدول</a></div>
+      </div>
+    </section>
+
+    <section class="cp-section" aria-labelledby="pay-t">
+      <div class="cp-section__head"><h2 id="pay-t">جدول الدفعات</h2><a class="sj-link" href="#">الكل (12)</a></div>
+      <div class="sj-progress" style="margin-bottom:20px"><div class="sj-progress__head"><span class="sj-progress__label">المدفوع حتى الآن</span><span class="sj-progress__value">59,550 / 198,500 ر.ع.</span></div><div class="sj-progress__track" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="المدفوع"><div class="sj-progress__fill" style="--value:30%"></div></div><div class="sj-progress__foot"><span>30% مدفوع</span><span>المتبقي 138,950 ر.ع.</span></div></div>
+      <ul class="cp-pay">
+        <li><span class="cp-pay__name">دفعة الحجز · 10%</span><span class="cp-pay__amt">19,850</span><span class="cp-pay__date">14 فبراير 2026</span><span class="cp-pay__st sj-badge sj-badge--ready">مدفوع</span></li>
+        <li><span class="cp-pay__name">اتفاقية البيع · 10%</span><span class="cp-pay__amt">19,850</span><span class="cp-pay__date">10 مارس 2026</span><span class="cp-pay__st sj-badge sj-badge--ready">مدفوع</span></li>
+        <li><span class="cp-pay__name">القسط 1 من 8</span><span class="cp-pay__amt">9,925</span><span class="cp-pay__date">18 أبريل 2026</span><span class="cp-pay__st sj-badge sj-badge--ready">مدفوع</span></li>
+        <li><span class="cp-pay__name">القسط 2 من 8</span><span class="cp-pay__amt">9,925</span><span class="cp-pay__date">18 يوليو 2026</span><span class="cp-pay__st sj-badge sj-badge--ready">مدفوع</span></li>
+        <li class="is-due"><span class="cp-pay__name">القسط 3 من 8</span><span class="cp-pay__amt">9,925</span><span class="cp-pay__date">18 أكتوبر 2026</span><span class="cp-pay__st sj-badge sj-badge--reserved">مستحق</span></li>
+        <li><span class="cp-pay__name">القسط 4 من 8</span><span class="cp-pay__amt">9,925</span><span class="cp-pay__date">18 يناير 2027</span><span class="cp-pay__st sj-badge sj-badge--plain">قادم</span></li>
+      </ul>
+    </section>
+
+    <section class="cp-section" aria-labelledby="prog-t">
+      <div class="cp-section__head"><h2 id="prog-t">تقدّم البناء</h2><a class="sj-link" href="#">التقارير</a></div>
+      <div class="cp-card">
+        <ol class="sj-stepper sj-stepper--vertical" aria-label="مراحل البناء">
+          <li class="sj-step is-done"><span class="sj-step__marker"></span><span class="sj-step__index">01</span><p class="sj-step__title">الأعمال التمهيدية</p><p class="sj-step__meta">اكتملت · الربع الأول 2025</p></li>
+          <li class="sj-step is-done"><span class="sj-step__marker"></span><span class="sj-step__index">02</span><p class="sj-step__title">الأساسات</p><p class="sj-step__meta">اكتملت · الربع الثالث 2025</p></li>
+          <li class="sj-step is-current" style="--step-progress:82%" aria-current="step"><span class="sj-step__marker"></span><span class="sj-step__index">03 · جارٍ الآن</span><p class="sj-step__title">الهيكل الخرساني</p><p class="sj-step__meta">الطابق 18 من 22 · 82%</p></li>
+          <li class="sj-step is-upcoming"><span class="sj-step__marker"></span><span class="sj-step__index">04</span><p class="sj-step__title">الواجهات والأنظمة</p><p class="sj-step__meta">الربع الأول 2027</p></li>
+          <li class="sj-step is-upcoming"><span class="sj-step__marker"></span><span class="sj-step__index">05</span><p class="sj-step__title">التشطيبات الداخلية</p><p class="sj-step__meta">الربع الثالث 2027</p></li>
+          <li class="sj-step is-upcoming" style="padding-bottom:0"><span class="sj-step__marker"></span><span class="sj-step__index">06</span><p class="sj-step__title">التسليم وجولة المعاينة</p><p class="sj-step__meta">الربع الرابع 2027</p></li>
+        </ol>
+        <div class="cp-update" style="margin-top:24px">
+          <div class="sj-media sj-silk--sm"><img src="../../08-Photography/Library/SIRAJ_Photo_Construction-Site-Dawn_v1.0.jpg" alt="موقع البناء عند الفجر"></div>
+          <p><b>تحديث سبتمبر 2026</b><span>اكتمل صبّ الطابق 18، وبدأ تركيب نماذج الواجهة.</span><br><a class="sj-link" href="#" style="font-size:14px;margin-top:6px">شاهد الصور <svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cp-section" aria-labelledby="docs-t">
+      <div class="cp-section__head"><h2 id="docs-t">المستندات</h2><a class="sj-link" href="#">الكل (9)</a></div>
+      <ul class="cp-docs">
+        <li><span class="cp-docs__icon"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-contract"/></svg></span><div><p class="cp-docs__name">اتفاقية البيع والشراء</p><p class="cp-docs__meta">PDF · 2.1 م.ب · موقّعة</p></div><button class="sj-icon-btn" type="button" aria-label="تحميل اتفاقية البيع"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg></button></li>
+        <li><span class="cp-docs__icon"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-payment"/></svg></span><div><p class="cp-docs__name">إيصال القسط 2</p><p class="cp-docs__meta">PDF · 180 ك.ب · 18 يوليو 2026</p></div><button class="sj-icon-btn" type="button" aria-label="تحميل الإيصال"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg></button></li>
+        <li><span class="cp-docs__icon"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-floor-plan"/></svg></span><div><p class="cp-docs__name">مخطط الوحدة <span class="sj-ltr">B-1204</span></p><p class="cp-docs__meta">PDF · 1.4 م.ب</p></div><button class="sj-icon-btn" type="button" aria-label="تحميل المخطط"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg></button></li>
+        <li><span class="cp-docs__icon"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-documents"/></svg></span><div><p class="cp-docs__name">دليل خيارات التشطيب</p><p class="cp-docs__meta">PDF · 6.8 م.ب · جديد</p></div><button class="sj-icon-btn" type="button" aria-label="تحميل الدليل"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg></button></li>
+      </ul>
+    </section>
+
+    <section class="cp-section" aria-label="الدعم">
+      <div class="cp-card cp-help">
+        <div class="sj-person"><span class="sj-avatar sj-avatar--lg">م ب<span class="sj-avatar__status"></span></span><div><p class="sj-person__name">مريم البلوشي</p><p class="sj-person__role">مديرة علاقات الملّاك</p></div></div>
+        <div class="sj-cluster" style="--sj-cluster:8px;flex-wrap:nowrap"><a class="sj-icon-btn" href="#" aria-label="اتصال"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-call"/></svg></a><a class="sj-icon-btn sj-icon-btn--solid" href="#" aria-label="واتساب"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-whatsapp"/></svg></a></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="cp-tabs" aria-label="التنقل">
+    <a href="#" aria-current="page"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-property"/></svg>الرئيسية</a>
+    <a href="#pay-t"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-payment"/></svg>الدفعات</a>
+    <a href="#prog-t"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-construction"/></svg>البناء</a>
+    <a href="#docs-t"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-documents"/></svg>المستندات</a>
+    <a href="#"><svg class="sj-icon" aria-hidden="true"><use href="../../07-Icon-System/sprite/siraj-icons.svg#sj-user"/></svg>حسابي</a>
+  </nav>
+</div>
+<script src="../siraj-components.js"></script>
+</body>
+</html>

@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIRAJ UI Components</title>
+<meta name="description" content="SIRAJ Real Estate Development — official digital UI component library v1.0">
+<link rel="icon" href="../01-Logos/SVG/SIRAJ_Monogram-S_Maroon-on-Ivory_v1.0.svg">
+<link rel="stylesheet" href="../09-Design-System/css/siraj.css">
+<link rel="stylesheet" href="siraj-components.css">
+<style>
+  /* ---- Documentation chrome (doc- prefix; not part of the component library) ---- */
+  :root { --doc-side: 272px; --doc-top: 72px; }
+  body { background: var(--siraj-bg); }
+  .doc-top { position: sticky; top: 0; z-index: 200; height: var(--doc-top); display: flex; align-items: center; gap: 24px; padding-inline: 32px; background: var(--siraj-bg); border-block-end: 1px solid var(--sj-hairline); }
+  .doc-top .sj-logo img { height: 22px; }
+  .doc-top__name { display: flex; align-items: center; gap: 16px; color: var(--siraj-text-strong); font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+  .doc-top__name::before { content: ""; width: 1px; height: 24px; background: var(--sj-hairline); }
+  .doc-top__ver { color: var(--siraj-text-muted); }
+  .doc-top__tools { margin-inline-start: auto; display: flex; align-items: center; gap: 12px; }
+  .doc-toggle { display: inline-flex; align-items: center; gap: 10px; height: 36px; padding-inline: 14px; font: inherit; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--siraj-text-strong); background: transparent; border: 1px solid var(--sj-hairline); cursor: pointer; }
+  .doc-toggle:hover { border-color: var(--siraj-border-strong); }
+  .doc-toggle .sj-icon { width: 16px; height: 16px; }
+  .doc-toggle__state { color: var(--siraj-text-muted); }
+  .doc-layout { display: grid; grid-template-columns: var(--doc-side) minmax(0, 1fr); }
+  .doc-side { position: sticky; top: var(--doc-top); height: calc(100vh - var(--doc-top)); overflow-y: auto; padding: 40px 28px 64px 32px; border-inline-end: 1px solid var(--sj-hairline); }
+  .doc-side h4 { margin: 28px 0 10px; color: var(--siraj-text-muted); font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+  .doc-side h4:first-child { margin-top: 0; }
+  .doc-side ul { margin: 0; padding: 0; list-style: none; }
+  .doc-side a { display: flex; align-items: center; gap: 10px; padding: 6px 0; color: var(--siraj-text); font-size: 14px; text-decoration: none; }
+  .doc-side a:hover { color: var(--siraj-accent); }
+  .doc-side a::before { content: ""; width: 5px; height: 5px; background: var(--siraj-lumen); transform: rotate(45deg) scale(0); transition: transform .3s var(--sj-ease-drape); }
+  .doc-side a:hover::before, .doc-side a.is-current::before { transform: rotate(45deg) scale(1); }
+  .doc-main { min-width: 0; padding: 0 64px 128px; }
+  .doc-hero { padding: 96px 0 80px; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px; align-items: end; }
+  .doc-hero h1 { margin: 20px 0 24px; }
+  .doc-hero .t-lead { margin: 0; color: var(--siraj-text); max-width: 600px; }
+  .doc-hero__art { aspect-ratio: 4 / 3; }
+  .doc-principles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 0 0 32px; padding: 0; list-style: none; }
+  .doc-principles li { padding-top: 20px; border-top: 1px solid var(--siraj-border-strong); }
+  .doc-principles strong { display: block; margin-bottom: 8px; color: var(--siraj-text-strong); font-size: 16px; font-weight: 500; }
+  .doc-principles span { color: var(--siraj-text-muted); font-size: 14px; line-height: 1.55; }
+  .doc-section { margin-top: 112px; padding-bottom: 8px; scroll-margin-top: calc(var(--doc-top) + 24px); }
+  .doc-main :not(pre) > code { padding: 1px 6px; font: 0.84em/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--siraj-text-strong); background: var(--siraj-surface-alt); border-radius: 2px; white-space: nowrap; }
+  .doc-section__head { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 0 24px; padding-top: 32px; border-top: 1px solid var(--siraj-border-strong); margin-bottom: 40px; }
+  .doc-section__num { color: var(--siraj-text-muted); font-size: 13px; font-weight: 500; letter-spacing: .08em; padding-top: 14px; font-variant-numeric: tabular-nums; }
+  .doc-section__head h2 { margin: 0 0 14px; }
+  .doc-section__head p { margin: 0; max-width: 680px; color: var(--siraj-text); font-size: 17px; line-height: 1.6; }
+  .doc-stage { position: relative; padding: 56px 48px 48px; background: var(--siraj-bg); border: 1px solid var(--sj-hairline); }
+  .doc-stage::before { content: "Live example"; position: absolute; top: 16px; inset-inline-start: 20px; color: var(--siraj-text-muted); font: 500 10px/1 Jost, sans-serif; letter-spacing: .2em; text-transform: uppercase; opacity: .8; }
+  .doc-stage[lang="ar"]::before { content: "مثال حي"; font: 500 12px/1 Tajawal, sans-serif; letter-spacing: 0; }
+  .doc-stage--surface { background: var(--siraj-surface); }
+  .doc-stage--alt { background: var(--siraj-surface-alt); }
+  .doc-stage--flush { padding: 40px 0 0; }
+  .doc-stage--flush::before { inset-inline-start: 20px; }
+  .doc-stage + .doc-stage { border-top: 0; }
+  .doc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px; }
+  .doc-row + .doc-row { margin-top: 28px; }
+  .doc-rowlabel { width: 100%; margin: 0 0 -4px; color: var(--siraj-text-muted); font-size: 11px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+  [lang="ar"] .doc-rowlabel { font-size: 13px; }
+  .doc-cols { display: grid; grid-template-columns: repeat(var(--c, 2), minmax(0, 1fr)); gap: 32px; }
+  .doc-code { position: relative; border: 1px solid var(--sj-hairline); border-top: 0; background: var(--siraj-surface-alt); }
+  .doc-code pre { margin: 0; padding: 24px 28px; overflow-x: auto; color: var(--siraj-text-strong); font: 13px/1.7 ui-monospace, "SF Mono", Menlo, Consolas, monospace; tab-size: 2; }
+  .doc-code__copy { position: absolute; top: 12px; right: 12px; height: 28px; padding-inline: 10px; font: 500 10px/1 Jost, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--siraj-text-muted); background: var(--siraj-bg); border: 1px solid var(--sj-hairline); cursor: pointer; }
+  .doc-code__copy:hover { color: var(--siraj-text-strong); }
+  .doc-notes { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; margin-top: 40px; }
+  .doc-notes h3 { margin: 0 0 16px; color: var(--siraj-text-strong); font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+  .doc-notes .sj-list { font-size: 15px; line-height: 1.6; color: var(--siraj-text); }
+  .doc-dd { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .doc-dd > div { padding: 20px 24px; background: var(--siraj-surface); border: 1px solid var(--sj-hairline); border-top: 2px solid var(--sj-success); }
+  .doc-dd > div.is-dont { border-top-color: var(--sj-error); }
+  .doc-dd h4 { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: var(--sj-success); font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+  .doc-dd .is-dont h4 { color: var(--sj-error); }
+  .doc-dd ul { margin: 0; padding-inline-start: 18px; color: var(--siraj-text); font-size: 14px; line-height: 1.6; }
+  .doc-dd li + li { margin-top: 6px; }
+  .doc-swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border: 1px solid var(--sj-hairline); }
+  .doc-swatch { display: grid; gap: 6px; padding: 96px 16px 16px; font-size: 12px; color: var(--_fg); background: var(--_bg); }
+  .doc-swatch b { font-weight: 500; font-size: 13px; }
+  .doc-swatch span { opacity: .78; font-variant-numeric: tabular-nums; }
+  .doc-type { display: grid; gap: 20px; }
+  .doc-type__row { display: grid; grid-template-columns: 140px 1fr; align-items: baseline; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--sj-hairline); }
+  .doc-type__row > span { color: var(--siraj-text-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .doc-type__row > * { margin: 0; }
+  .doc-mini-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; height: 120px; }
+  .doc-mini-grid span { background: color-mix(in srgb, var(--siraj-accent) 8%, transparent); border-inline: 1px solid color-mix(in srgb, var(--siraj-accent) 24%, transparent); }
+  .doc-device { width: 390px; height: 640px; overflow: hidden; position: relative; border: 1px solid var(--sj-hairline); background: var(--siraj-bg); }
+  .doc-scrim-frame { position: relative; display: grid; place-items: center; min-height: 520px; padding: 48px; background: var(--sj-scrim) center / cover; overflow: hidden; }
+  .doc-scrim-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+  .doc-scrim-frame::after { content: ""; position: absolute; inset: 0; background: var(--sj-scrim); z-index: 0; }
+  .doc-scrim-frame > :not(img) { position: relative; z-index: 1; }
+  .doc-drawer-frame { position: relative; height: 640px; overflow: hidden; display: flex; justify-content: flex-end; }
+  .doc-drawer-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .doc-drawer-frame::after { content: ""; position: absolute; inset: 0; background: var(--sj-scrim); }
+  .doc-drawer-frame .sj-drawer { z-index: 1; }
+  .doc-footer { margin-top: 128px; padding-top: 32px; border-top: 1px solid var(--sj-hairline); display: flex; justify-content: space-between; color: var(--siraj-text-muted); font-size: 13px; }
+  [dir="rtl"] .sj-empty__art { transform: scaleX(-1); }
+  @media (max-width: 1100px) {
+    .doc-layout { grid-template-columns: 1fr; }
+    .doc-side { display: none; }
+    .doc-main { padding: 0 24px 96px; }
+    .doc-hero, .doc-notes, .doc-dd { grid-template-columns: 1fr; }
+    .doc-principles { grid-template-columns: 1fr 1fr; }
+    .doc-cols { grid-template-columns: 1fr; }
+    .doc-stage { padding: 48px 20px 24px; }
+    .doc-top__name span:not(.doc-top__ver) { display: none; }
+    .doc-top { padding-inline: 20px; gap: 12px; }
+    .doc-top__name { display: none; }
+    .doc-toggle { padding-inline: 10px; }
+    .doc-toggle__word { display: none; }
+    .doc-swatches { grid-template-columns: repeat(3, 1fr); }
+    .doc-device { width: 100%; max-width: 390px; }
+    .doc-stage { overflow-x: clip; }
+    .doc-drawer-frame .sj-drawer { width: 100% !important; }
+    .doc-scrim-frame { padding: 24px 16px; }
+    .doc-type__row { grid-template-columns: 1fr; gap: 6px; }
+    .doc-section__head { grid-template-columns: 1fr; }
+    .doc-section__num { padding-top: 0; margin-bottom: 8px; }
+  }
+</style>
+</head>
+<body data-sj-sprite="../07-Icon-System/sprite/siraj-icons.svg">
+
+<header class="doc-top">
+  <a class="sj-logo" href="#top" aria-label="SIRAJ">
+    <img class="sj-only-light" src="../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ">
+    <img class="sj-only-dark" src="../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ">
+  </a>
+  <div class="doc-top__name"><span>UI Components</span> <span class="doc-top__ver">v1.0</span></div>
+  <div class="doc-top__tools">
+    <button class="doc-toggle" type="button" data-sj-dir-toggle aria-pressed="false"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-globe"/></svg> <span class="doc-toggle__word">Direction</span> <span class="doc-toggle__state" data-dir-label>LTR</span></button>
+    <button class="doc-toggle" type="button" data-sj-theme-toggle aria-pressed="false"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-layers"/></svg> <span class="doc-toggle__word">Theme</span> <span class="doc-toggle__state" data-theme-label>Light</span></button>
+  </div>
+</header>
+
+<div class="doc-layout" id="top">
+<nav class="doc-side" aria-label="Components">
+  <h4>Overview</h4>
+  <ul><li><a href="#foundations">Foundations</a></li></ul>
+  <h4>Actions</h4>
+  <ul><li><a href="#buttons">Buttons</a></li><li><a href="#links">Links &amp; icon buttons</a></li></ul>
+  <h4>Inputs</h4>
+  <ul><li><a href="#fields">Text fields</a></li><li><a href="#select">Select &amp; dropdown</a></li><li><a href="#choice">Checkbox, radio, switch</a></li><li><a href="#segmented">Segmented control</a></li></ul>
+  <h4>Navigation</h4>
+  <ul><li><a href="#tabs">Tabs</a></li><li><a href="#navbar">Navigation bar</a></li><li><a href="#breadcrumbs">Breadcrumbs &amp; pagination</a></li></ul>
+  <h4>Content</h4>
+  <ul><li><a href="#cards">Cards</a></li><li><a href="#property-card">Property card</a></li><li><a href="#project-card">Project card</a></li><li><a href="#stat">Statistic</a></li><li><a href="#table">Data table</a></li><li><a href="#accordion">Accordion</a></li><li><a href="#badges">Badges &amp; tags</a></li><li><a href="#avatars">Avatars</a></li></ul>
+  <h4>Overlays</h4>
+  <ul><li><a href="#dialog">Dialog</a></li><li><a href="#drawer">Drawer</a></li><li><a href="#tooltip">Tooltip</a></li></ul>
+  <h4>Feedback</h4>
+  <ul><li><a href="#banner">Banners</a></li><li><a href="#toast">Toast &amp; alert</a></li><li><a href="#loader">Loaders</a></li><li><a href="#progress">Progress &amp; stepper</a></li><li><a href="#empty">Empty state</a></li></ul>
+  <h4>Layout</h4>
+  <ul><li><a href="#footer">Footer</a></li></ul>
+  <h4>Examples</h4>
+  <ul><li><a href="examples/corporate-home.html">Corporate home</a></li><li><a href="examples/corporate-home-ar.html">Corporate home (AR)</a></li><li><a href="examples/property-detail.html">Property detail</a></li><li><a href="examples/sales-dashboard.html">Sales dashboard</a></li><li><a href="examples/customer-portal-mobile.html">Customer portal</a></li></ul>
+</nav>
+
+<main class="doc-main">
+
+<!-- ======================================================= HERO -->
+<section class="doc-hero" aria-labelledby="doc-title">
+  <div>
+    <p class="sj-kicker">SIRAJ Design System · Digital</p>
+    <h1 class="t-h1" id="doc-title">UI Components</h1>
+    <p class="t-lead">The official interface library for SIRAJ Real Estate Development. Architectural, quietly premium and fully bilingual — every component mirrors in Arabic, follows the brand tokens and works in light and dark.</p>
+  </div>
+  <div class="sj-media sj-silk doc-hero__art"><img src="../08-Photography/Library/SIRAJ_Photo_Residential-Tower-Golden-Hour_v1.0.jpg" alt="SIRAJ residential tower at golden hour"></div>
+</section>
+<ul class="doc-principles">
+  <li><strong>Square by default</strong><span>Architectural edges. Inputs and chips may soften to 2 px. No pills.</span></li>
+  <li><strong>Hairlines over shadows</strong><span>Structure comes from 1 px Linen rules, not stacked drop shadows.</span></li>
+  <li><strong>The Lumen marks</strong><span>The 45° Stone diamond is the bullet, the active state and the step marker.</span></li>
+  <li><strong>Silk, sparingly</strong><span>One Silk Corner on the top-end of a hero or featured card — once or twice per view.</span></li>
+</ul>
+
+<!-- ======================================================= FOUNDATIONS -->
+<section class="doc-section" id="foundations">
+  <div class="doc-section__head"><span class="doc-section__num">00</span><div><h2 class="t-h2">Foundations</h2><p>Components consume semantic tokens from <code>siraj-tokens.css</code>. Never hard-code a hex value — use <code>--siraj-accent</code>, <code>--siraj-text</code>, <code>--siraj-border</code>… so dark mode and nested themes work automatically.</p></div></div>
+  <div class="doc-stage doc-stage--surface" data-sj-dir-scope>
+    <div class="doc-swatches">
+      <div class="doc-swatch" style="--_bg:#602733;--_fg:#F7F2ED"><b>SIRAJ Maroon</b><span>--siraj-accent</span><span>#602733</span></div>
+      <div class="doc-swatch" style="--_bg:#2C0F12;--_fg:#D6C0B2"><b>SIRAJ Deep</b><span>--siraj-accent-strong</span><span>#2C0F12</span></div>
+      <div class="doc-swatch" style="--_bg:#AA9180;--_fg:#170608"><b>Stone · Lumen</b><span>--siraj-lumen</span><span>#AA9180</span></div>
+      <div class="doc-swatch" style="--_bg:#F7F2ED;--_fg:#3B3436"><b>Warm Ivory</b><span>--siraj-bg</span><span>#F7F2ED</span></div>
+      <div class="doc-swatch" style="--_bg:#EFE7E0;--_fg:#3B3436"><b>Linen</b><span>--siraj-surface-alt</span><span>#EFE7E0</span></div>
+      <div class="doc-swatch" style="--_bg:#3B3436;--_fg:#F7F2ED"><b>Graphite</b><span>--siraj-text</span><span>#3B3436</span></div>
+    </div>
+    <div class="doc-cols" style="--c:2;margin-top:48px">
+      <div class="doc-type">
+        <div class="doc-type__row"><span>Display · 300</span><p class="t-h1">Light, built.</p></div>
+        <div class="doc-type__row"><span>H3 · 400</span><p class="t-h3">A residence shaped by light</p></div>
+        <div class="doc-type__row"><span>Body · 400</span><p class="t-body">Calm, precise, confident. Short sentences.</p></div>
+        <div class="doc-type__row"><span>Eyebrow · 500</span><p class="sj-kicker">Al Khuwair · Muscat</p></div>
+      </div>
+      <div class="sj-stack" style="--sj-stack:24px">
+        <p class="doc-rowlabel">12-column grid · 24 px gutter · 1280 px max</p>
+        <div class="doc-mini-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="doc-row" style="gap:32px;align-items:end">
+          <div class="sj-media sj-silk--sm" style="width:160px;height:120px;background:var(--siraj-gradient-silk-light)"></div>
+          <div class="sj-stack" style="--sj-stack:8px"><p class="doc-rowlabel" style="margin:0">Signature</p><p class="t-small" style="margin:0"><span class="lumen"></span>&nbsp; Lumen · 45° Stone</p><p class="t-small" style="margin:0">Silk Corner · top-end only</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= BUTTONS -->
+<section class="doc-section" id="buttons">
+  <div class="doc-section__head"><span class="doc-section__num">01</span><div><h2 class="t-h2">Buttons</h2><p>Square, uppercase-tracked labels. On hover a fill drapes in from the start edge and leaves through the end — the silk gesture in micro form. One primary action per view.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-row">
+      <p class="doc-rowlabel">Variants</p>
+      <button class="sj-btn sj-btn--primary" type="button"><span class="sj-btn__label">Book a viewing</span></button>
+      <button class="sj-btn sj-btn--secondary" type="button"><span class="sj-btn__label">Download brochure</span><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg></button>
+      <button class="sj-btn sj-btn--ghost" type="button"><span class="sj-btn__label">Compare</span></button>
+      <button class="sj-btn sj-btn--primary" type="button"><span class="sj-btn__label">Explore projects</span><svg class="sj-icon sj-icon--dir sj-btn__trail" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></button>
+    </div>
+    <div class="doc-row">
+      <p class="doc-rowlabel">Sizes</p>
+      <button class="sj-btn sj-btn--primary sj-btn--sm" type="button">Small</button>
+      <button class="sj-btn sj-btn--primary" type="button">Medium</button>
+      <button class="sj-btn sj-btn--primary sj-btn--lg" type="button">Large</button>
+      <button class="sj-btn sj-btn--secondary sj-btn--sm" type="button">Small</button>
+      <button class="sj-btn sj-btn--secondary sj-btn--lg" type="button">Large</button>
+    </div>
+    <div class="doc-row">
+      <p class="doc-rowlabel">States</p>
+      <button class="sj-btn sj-btn--primary" type="button" style="--_bg:var(--siraj-accent-strong)">Hover</button>
+      <button class="sj-btn sj-btn--primary" type="button" style="outline:2px solid var(--siraj-focus);outline-offset:3px">Focus</button>
+      <button class="sj-btn sj-btn--primary" type="button" disabled>Disabled</button>
+      <button class="sj-btn sj-btn--primary is-loading" type="button" aria-busy="true"><span class="sj-btn__lumen"></span><span class="sj-btn__label">Reserving</span></button>
+      <button class="sj-btn sj-btn--secondary is-loading" type="button" aria-busy="true"><span class="sj-btn__lumen"></span><span class="sj-btn__label">Sending</span></button>
+    </div>
+  </div>
+  <div class="doc-stage" data-sj-dir-scope style="background:url('../06-SIRAJ-Silk/Stills/Drape-Deep/SIRAJ_Silk_Drape-Deep_16x9_web_v1.0.webp') center/cover">
+    <div class="doc-row">
+      <p class="doc-rowlabel" style="color:var(--siraj-color-neutral-sand)">On imagery &amp; silk</p>
+      <button class="sj-btn sj-btn--light" type="button">Enquire now</button>
+      <button class="sj-btn sj-btn--outline-light" type="button"><span class="sj-btn__label">Watch the film</span><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-play"/></svg></button>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;button class="sj-btn sj-btn--primary" type="button"&gt;Book a viewing&lt;/button&gt;
+&lt;button class="sj-btn sj-btn--secondary"&gt;Download brochure &lt;svg class="sj-icon"&gt;&lt;use href="…#sj-download"/&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;button class="sj-btn sj-btn--ghost sj-btn--sm"&gt;Compare&lt;/button&gt;
+&lt;a class="sj-btn sj-btn--primary" href="/projects"&gt;
+  Explore projects &lt;svg class="sj-icon sj-icon--dir sj-btn__trail"&gt;&lt;use href="…#sj-arrow-right"/&gt;&lt;/svg&gt;
+&lt;/a&gt;
+&lt;!-- Loading --&gt;
+&lt;button class="sj-btn sj-btn--primary is-loading" aria-busy="true"&gt;
+  &lt;span class="sj-btn__lumen"&gt;&lt;/span&gt;&lt;span class="sj-btn__label"&gt;Reserving&lt;/span&gt;
+&lt;/button&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Primary (Maroon) for the single most important action: enquire, reserve, submit.</li><li>Secondary (outline) for supporting actions; ghost inside toolbars and tables.</li><li>Directional icons take <code>.sj-icon--dir</code> so they mirror in RTL.</li><li>Arabic labels drop uppercase and tracking automatically.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Use verbs: “Book a viewing”, “Reserve unit”.</li><li>Keep one primary button per view.</li><li>Use <code>--light</code> variants on imagery and silk.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Round corners or use pill shapes.</li><li>Add drop shadows or gradients to buttons.</li><li>Place two Maroon buttons side by side.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= LINKS -->
+<section class="doc-section" id="links">
+  <div class="doc-section__head"><span class="doc-section__num">02</span><div><h2 class="t-h2">Links &amp; icon buttons</h2><p>Text links rest on a Stone hairline; on hover an accent line sweeps across. Icon buttons are 48 px squares with a Linen hairline — always with an accessible label.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-row" style="gap:40px">
+      <p class="doc-rowlabel">Text links</p>
+      <a class="sj-link" href="#links">View residence <svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></a>
+      <a class="sj-link sj-link--caps" href="#links">All projects <svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></a>
+      <a class="sj-link sj-link--quiet" href="#links">Read the full story</a>
+      <a class="sj-link" href="#links" style="background-size:100% 1px,100% 1px">Hover state</a>
+    </div>
+    <div class="doc-row">
+      <p class="doc-rowlabel">Icon buttons</p>
+      <button class="sj-icon-btn" type="button" aria-label="Save"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-heart"/></svg></button>
+      <button class="sj-icon-btn" type="button" aria-label="Share"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-share"/></svg></button>
+      <button class="sj-icon-btn" type="button" aria-label="Saved" aria-pressed="true"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-heart-filled"/></svg></button>
+      <button class="sj-icon-btn sj-icon-btn--solid" type="button" aria-label="Call"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-call"/></svg></button>
+      <button class="sj-icon-btn sj-icon-btn--plain" type="button" aria-label="More"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-more"/></svg></button>
+      <button class="sj-icon-btn sj-icon-btn--sm" type="button" aria-label="Previous"><svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-chevron-left"/></svg></button>
+      <button class="sj-icon-btn sj-icon-btn--sm" type="button" aria-label="Next"><svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-chevron-right"/></svg></button>
+      <button class="sj-icon-btn" type="button" aria-label="Disabled" disabled><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg></button>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;a class="sj-link" href="#"&gt;View residence &lt;svg class="sj-icon sj-icon--dir"&gt;&lt;use href="…#sj-arrow-right"/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a class="sj-link sj-link--caps" href="#"&gt;All projects&lt;/a&gt;
+&lt;button class="sj-icon-btn" aria-label="Save to favourites"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-heart"/&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;button class="sj-icon-btn sj-icon-btn--solid" aria-label="Call sales"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-call"/&gt;&lt;/svg&gt;&lt;/button&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Links in running text use the accent colour (Maroon on light, Sand on dark).</li><li><code>aria-pressed</code> turns an icon button into a toggle (save, favourite).</li><li>Minimum hit area: 36 × 36 px (small), 48 × 48 px default.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Pair icon-only buttons with a tooltip on desktop.</li><li>Use filled icons only to signal an “on” state.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Underline links with the browser default.</li><li>Use Stone for link text — it fails contrast on Ivory.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= FIELDS -->
+<section class="doc-section" id="fields">
+  <div class="doc-section__head"><span class="doc-section__num">03</span><div><h2 class="t-h2">Text fields</h2><p>52 px fields with a 2 px radius and a Warm Grey boundary (3:1 against Ivory). Labels sit above the field in tracked caps; help and error text below.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:3">
+      <div class="sj-field"><label class="sj-label" for="f-name">Full name</label><input class="sj-input" id="f-name" placeholder="e.g. Salim Al Harthy"><p class="sj-help">As it appears on your passport.</p></div>
+      <div class="sj-field"><label class="sj-label" for="f-phone">Mobile number</label><div class="sj-input-group"><span class="sj-input-group__affix sj-ltr">+968</span><input class="sj-input" id="f-phone" inputmode="tel" value="9123 4567"></div><p class="sj-help">We will only call between 9:00 and 18:00.</p></div>
+      <div class="sj-field is-invalid"><label class="sj-label" for="f-email">Email</label><input class="sj-input" id="f-email" value="salim@" aria-invalid="true" aria-describedby="f-email-err"><p class="sj-help" id="f-email-err"><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-alert"/></svg> Enter a complete email address.</p></div>
+      <div class="sj-field"><label class="sj-label" for="f-search">Search</label><div class="sj-search"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-search"/></svg><input class="sj-input" id="f-search" type="search" placeholder="Project, area or unit"></div></div>
+      <div class="sj-field"><label class="sj-label" for="f-focus">Focused</label><input class="sj-input" id="f-focus" value="Noor Residences" style="border-color:var(--siraj-accent);box-shadow:inset 0 0 0 1px var(--siraj-accent)"></div>
+      <div class="sj-field"><label class="sj-label" for="f-dis">Unit reference</label><input class="sj-input" id="f-dis" value="B-1204" disabled><p class="sj-help">Assigned by your consultant.</p></div>
+    </div>
+    <div class="sj-field" style="margin-top:32px"><label class="sj-label" for="f-msg">Message <span class="sj-label__opt">(optional)</span></label><textarea class="sj-textarea" id="f-msg" placeholder="Tell us what you are looking for — size, view, timing."></textarea></div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-field"&gt;
+  &lt;label class="sj-label" for="name"&gt;Full name&lt;/label&gt;
+  &lt;input class="sj-input" id="name" placeholder="e.g. Salim Al Harthy"&gt;
+  &lt;p class="sj-help"&gt;As it appears on your passport.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sj-field is-invalid"&gt;
+  &lt;label class="sj-label" for="email"&gt;Email&lt;/label&gt;
+  &lt;input class="sj-input" id="email" aria-invalid="true" aria-describedby="email-err"&gt;
+  &lt;p class="sj-help" id="email-err"&gt;&lt;svg class="sj-icon sj-icon--sm"&gt;&lt;use href="…#sj-alert"/&gt;&lt;/svg&gt; Enter a complete email address.&lt;/p&gt;
+&lt;/div&gt;
+&lt;textarea class="sj-textarea"&gt;&lt;/textarea&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Always a visible label — placeholders are hints, not labels.</li><li>Errors pair colour with an icon and a sentence, and add a 2 px start edge.</li><li>Phone numbers and references are isolated LTR inside Arabic forms (<code>.sj-ltr</code>).</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Write errors that explain the fix.</li><li>Group related fields on the 12-column grid.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Use floating labels or underline-only inputs.</li><li>Rely on red alone to signal an error.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= SELECT -->
+<section class="doc-section" id="select">
+  <div class="doc-section__head"><span class="doc-section__num">04</span><div><h2 class="t-h2">Select &amp; dropdown</h2><p>Use the styled native select for forms (best on mobile). Use the custom dropdown when options need meta information; the selected option is marked with the Lumen.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope style="padding-bottom:300px">
+    <div class="doc-cols" style="--c:3">
+      <div class="sj-field"><label class="sj-label" for="s-type">Unit type</label><div class="sj-select"><select id="s-type"><option>2 bedroom apartment</option><option>1 bedroom apartment</option><option>3 bedroom apartment</option><option>Penthouse</option></select><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-chevron-down"/></svg></div></div>
+      <div class="sj-field"><span class="sj-label" id="dd-label">Project</span>
+        <div class="sj-dropdown is-open">
+          <button class="sj-dropdown__trigger" type="button" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="dd-label"><span class="sj-dropdown__value">Noor Residences</span><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-chevron-down"/></svg></button>
+          <ul class="sj-menu" role="listbox" aria-labelledby="dd-label">
+            <li class="sj-menu__item is-active" role="option" aria-selected="true" data-label="Noor Residences">Noor Residences <span class="sj-menu__meta">Al Khuwair</span></li>
+            <li class="sj-menu__item" role="option" aria-selected="false" data-label="Rimal Villas">Rimal Villas <span class="sj-menu__meta">Al Mawaleh</span></li>
+            <li class="sj-menu__item" role="option" aria-selected="false" data-label="Qurum Gate">Qurum Gate <span class="sj-menu__meta">Qurum</span></li>
+            <li class="sj-menu__sep" role="presentation"></li>
+            <li class="sj-menu__item" role="option" aria-selected="false" data-label="All projects">All projects</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sj-field"><label class="sj-label" for="s-dis">Floor</label><div class="sj-select"><select id="s-dis" disabled><option>Select a unit type first</option></select><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-chevron-down"/></svg></div></div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-select"&gt;
+  &lt;select id="type"&gt;&lt;option&gt;2 bedroom apartment&lt;/option&gt;&lt;/select&gt;
+  &lt;svg class="sj-icon"&gt;&lt;use href="…#sj-chevron-down"/&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;div class="sj-dropdown"&gt;
+  &lt;button class="sj-dropdown__trigger" aria-haspopup="listbox" aria-expanded="false"&gt;
+    &lt;span class="sj-dropdown__value"&gt;Noor Residences&lt;/span&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-chevron-down"/&gt;&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;ul class="sj-menu" role="listbox"&gt;
+    &lt;li class="sj-menu__item" role="option" aria-selected="true"&gt;Noor Residences
+      &lt;span class="sj-menu__meta"&gt;Al Khuwair&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Dropdown supports ↑ ↓ Enter and Escape; the menu drapes down 6 px with the drape easing.</li><li>Menus are the one place a soft shadow (<code>--siraj-shadow-mid</code>) is allowed — they float.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Pre-select the most likely option.</li><li>Keep option labels short; push detail into meta.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Use a dropdown for two or three options — use a segmented control.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= CHOICE -->
+<section class="doc-section" id="choice">
+  <div class="doc-section__head"><span class="doc-section__num">05</span><div><h2 class="t-h2">Checkbox, radio &amp; switch</h2><p>The radio is a Lumen — a diamond that fills when chosen. Checkboxes are square with a 2 px radius; the switch is a rectangular track with a square knob.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:3">
+      <fieldset class="sj-choice-group"><legend class="sj-label">Amenities</legend>
+        <label class="sj-check"><input type="checkbox" checked> Sea view</label>
+        <label class="sj-check"><input type="checkbox" checked> Private pool</label>
+        <label class="sj-check"><input type="checkbox"> Maid's room</label>
+        <label class="sj-check"><input type="checkbox" disabled> Rooftop garden (sold out)</label>
+      </fieldset>
+      <fieldset class="sj-choice-group"><legend class="sj-label">Preferred contact</legend>
+        <label class="sj-radio"><input type="radio" name="rc" checked> Phone call</label>
+        <label class="sj-radio"><input type="radio" name="rc"> WhatsApp</label>
+        <label class="sj-radio"><input type="radio" name="rc"> Email</label>
+        <label class="sj-radio"><input type="radio" name="rc" disabled> Visit (unavailable)</label>
+      </fieldset>
+      <fieldset class="sj-choice-group"><legend class="sj-label">Notifications</legend>
+        <label class="sj-switch"><input type="checkbox" role="switch" checked> Payment reminders</label>
+        <label class="sj-switch"><input type="checkbox" role="switch" checked> Construction updates</label>
+        <label class="sj-switch"><input type="checkbox" role="switch"> New launches</label>
+        <label class="sj-switch"><input type="checkbox" role="switch" disabled> SMS (coming soon)</label>
+      </fieldset>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;label class="sj-check"&gt;&lt;input type="checkbox" checked&gt; Sea view&lt;/label&gt;
+&lt;label class="sj-radio"&gt;&lt;input type="radio" name="contact" checked&gt; Phone call&lt;/label&gt;
+&lt;label class="sj-switch"&gt;&lt;input type="checkbox" role="switch"&gt; Payment reminders&lt;/label&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Native inputs, restyled — keyboard and screen-reader behaviour comes for free.</li><li>Switches apply immediately; checkboxes are submitted with a form.</li><li>The switch knob travels with <code>inset-inline-start</code>, so it mirrors in RTL.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Group with a <code>fieldset</code> and visible legend.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Replace the diamond radio with a circle — it is a brand signature.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= SEGMENTED -->
+<section class="doc-section" id="segmented">
+  <div class="doc-section__head"><span class="doc-section__num">06</span><div><h2 class="t-h2">Segmented control</h2><p>A single choice between two to five peers — unit types, time ranges, views. The selected segment takes the accent fill.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-row" style="gap:32px">
+      <div class="sj-segmented" role="group" aria-label="Unit type"><button type="button" aria-pressed="false">1 BR</button><button type="button" aria-pressed="true">2 BR</button><button type="button" aria-pressed="false">3 BR</button><button type="button" aria-pressed="false">Penthouse</button></div>
+      <div class="sj-segmented" role="group" aria-label="View"><button type="button" aria-pressed="true"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-grid"/></svg> Grid</button><button type="button" aria-pressed="false"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-list"/></svg> List</button><button type="button" aria-pressed="false"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-map"/></svg> Map</button></div>
+      <div class="sj-segmented sj-segmented--sm" role="group" aria-label="Range"><button type="button" aria-pressed="false">MTD</button><button type="button" aria-pressed="true">QTD</button><button type="button" aria-pressed="false">YTD</button></div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-segmented" role="group" aria-label="Unit type"&gt;
+  &lt;button type="button" aria-pressed="false"&gt;1 BR&lt;/button&gt;
+  &lt;button type="button" aria-pressed="true"&gt;2 BR&lt;/button&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= TABS -->
+<section class="doc-section" id="tabs">
+  <div class="doc-section__head"><span class="doc-section__num">07</span><div><h2 class="t-h2">Tabs</h2><p>Underlined tabs on a Linen hairline. The active tab gains a 1 px accent underline and a Lumen that settles in beside the label.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="sj-tabs" data-sj-tabs>
+      <div class="sj-tabs__list" role="tablist" aria-label="Project information">
+        <button class="sj-tab" role="tab" id="t-1" aria-selected="true" aria-controls="tp-1">Overview</button>
+        <button class="sj-tab" role="tab" id="t-2" aria-selected="false" aria-controls="tp-2" tabindex="-1">Floor plans <span class="sj-tab__count">12</span></button>
+        <button class="sj-tab" role="tab" id="t-3" aria-selected="false" aria-controls="tp-3" tabindex="-1">Payment plan</button>
+        <button class="sj-tab" role="tab" id="t-4" aria-selected="false" aria-controls="tp-4" tabindex="-1">Location</button>
+      </div>
+      <div class="sj-tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="t-1"><p class="t-lead" style="margin:0;max-width:720px">Twenty-two storeys of calm above Al Khuwair, with uninterrupted views to the Sea of Oman.</p></div>
+      <div class="sj-tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="t-2" hidden><p class="t-lead" style="margin:0">Twelve layouts from 85 m² to 420 m².</p></div>
+      <div class="sj-tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="t-3" hidden><p class="t-lead" style="margin:0">10% on reservation, 50% during construction, 40% on handover.</p></div>
+      <div class="sj-tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="t-4" hidden><p class="t-lead" style="margin:0">Six minutes to the Grand Mosque, fifteen to the airport.</p></div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-tabs" data-sj-tabs&gt;
+  &lt;div class="sj-tabs__list" role="tablist"&gt;
+    &lt;button class="sj-tab" role="tab" aria-selected="true" aria-controls="p1"&gt;Overview&lt;/button&gt;
+    &lt;button class="sj-tab" role="tab" aria-selected="false" aria-controls="p2" tabindex="-1"&gt;
+      Floor plans &lt;span class="sj-tab__count"&gt;12&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="sj-tabs__panel" role="tabpanel" id="p1"&gt;…&lt;/div&gt;
+  &lt;div class="sj-tabs__panel" role="tabpanel" id="p2" hidden&gt;…&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Arrow keys move between tabs and respect reading direction.</li><li>The underline grows from the start edge (left in LTR, right in RTL).</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Use for peer content on the same page.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Use boxed or pill tabs. Don't use tabs for sequential steps — use the stepper.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= NAVBAR -->
+<section class="doc-section" id="navbar">
+  <div class="doc-section__head"><span class="doc-section__num">08</span><div><h2 class="t-h2">Navigation bar</h2><p>A calm, 88 px bar: wordmark at the start, tracked links in the middle, language and enquiry at the end. The current page is marked with a Lumen beneath the link. Below 1100 px the links fold into a drawer.</p></div></div>
+  <div class="doc-stage doc-stage--flush" data-sj-dir-scope>
+    <nav class="sj-nav" aria-label="Main">
+      <div class="sj-nav__inner" style="padding-inline:32px">
+        <a class="sj-logo" href="#navbar" aria-label="SIRAJ home"><img class="sj-only-light" src="../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"><img class="sj-only-dark" src="../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ"></a>
+        <ul class="sj-nav__links">
+          <li><a class="sj-nav__link" href="#navbar" aria-current="page">Projects</a></li>
+          <li><a class="sj-nav__link" href="#navbar">Invest</a></li>
+          <li><a class="sj-nav__link" href="#navbar">About</a></li>
+          <li><a class="sj-nav__link" href="#navbar">News</a></li>
+          <li><a class="sj-nav__link" href="#navbar">Contact</a></li>
+        </ul>
+        <div class="sj-nav__actions">
+          <a class="sj-nav__lang sj-hide-mobile" href="#navbar" lang="ar">العربية</a>
+          <button class="sj-icon-btn sj-icon-btn--plain sj-hide-mobile" type="button" aria-label="Search"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-search"/></svg></button>
+          <a class="sj-btn sj-btn--secondary sj-btn--sm sj-hide-mobile" href="#navbar">Enquire</a>
+          <button class="sj-icon-btn sj-nav__menu-btn" type="button" aria-label="Menu" data-sj-drawer-open="demo-mobile-nav"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-menu"/></svg></button>
+        </div>
+      </div>
+    </nav>
+    <div style="padding:48px 32px;display:flex;gap:48px;align-items:flex-start;flex-wrap:wrap;border-top:1px solid var(--sj-hairline)">
+      <div>
+        <p class="doc-rowlabel" style="margin-bottom:16px">Mobile · closed</p>
+        <div class="doc-device" style="height:auto">
+          <nav class="sj-nav sj-nav--compact" aria-label="Main (mobile)"><div class="sj-nav__inner" style="padding-inline:20px"><a class="sj-logo" href="#navbar"><img class="sj-only-light" src="../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ" style="height:22px"><img class="sj-only-dark" src="../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ" style="height:22px"></a><div class="sj-nav__actions"><button class="sj-icon-btn sj-icon-btn--plain" type="button" aria-label="Search"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-search"/></svg></button><button class="sj-icon-btn sj-nav__menu-btn" type="button" aria-label="Menu" data-sj-drawer-open="demo-mobile-nav"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-menu"/></svg></button></div></div></nav>
+          <div class="sj-media" style="height:260px"><img src="../08-Photography/Library/SIRAJ_Photo_Villa-Community-Dusk_v1.0.jpg" alt=""></div>
+        </div>
+      </div>
+      <div>
+        <p class="doc-rowlabel" style="margin-bottom:16px">Mobile · drawer open</p>
+        <div class="doc-device">
+          <div class="sj-drawer sj-drawer--static" style="width:100%;box-shadow:none">
+            <div class="sj-drawer__head" style="height:72px;padding-inline:20px"><img class="sj-only-light" src="../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ" style="height:22px"><img class="sj-only-dark" src="../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ" style="height:22px"><button class="sj-icon-btn" type="button" aria-label="Close menu"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button></div>
+            <div class="sj-drawer__body" style="padding:8px 20px 24px">
+              <ul class="sj-mobile-nav"><li><a href="#navbar" aria-current="page">Projects</a></li><li><a href="#navbar">Invest</a></li><li><a href="#navbar">About</a></li><li><a href="#navbar">News</a></li><li><a href="#navbar">Contact</a></li></ul>
+              <div style="display:grid;gap:12px;margin-top:32px"><a class="sj-btn sj-btn--primary sj-btn--block" href="#navbar">Enquire</a><a class="sj-btn sj-btn--ghost sj-btn--block" href="#navbar" lang="ar">العربية</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="sj-drawer" id="demo-mobile-nav" aria-hidden="true" aria-label="Menu">
+    <div class="sj-drawer__head"><img class="sj-only-light" src="../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ" style="height:22px"><img class="sj-only-dark" src="../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ" style="height:22px"><button class="sj-icon-btn" type="button" aria-label="Close menu" data-sj-close><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button></div>
+    <div class="sj-drawer__body"><ul class="sj-mobile-nav"><li><a href="#navbar" aria-current="page">Projects</a></li><li><a href="#navbar">Invest</a></li><li><a href="#navbar">About</a></li><li><a href="#navbar">News</a></li><li><a href="#navbar">Contact</a></li></ul></div>
+    <div class="sj-drawer__foot"><a class="sj-btn sj-btn--primary" href="#navbar">Enquire</a></div>
+  </aside>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;nav class="sj-nav" aria-label="Main"&gt;
+  &lt;div class="sj-container sj-nav__inner"&gt;
+    &lt;a class="sj-logo" href="/"&gt;&lt;img src="01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"&gt;&lt;/a&gt;
+    &lt;ul class="sj-nav__links"&gt;
+      &lt;li&gt;&lt;a class="sj-nav__link" href="/projects" aria-current="page"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="sj-nav__actions"&gt;
+      &lt;a class="sj-nav__lang sj-hide-mobile" href="/ar" lang="ar"&gt;العربية&lt;/a&gt;
+      &lt;a class="sj-btn sj-btn--secondary sj-btn--sm sj-hide-mobile" href="/enquire"&gt;Enquire&lt;/a&gt;
+      &lt;button class="sj-icon-btn sj-nav__menu-btn" data-sj-drawer-open="menu" aria-label="Menu"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-menu"/&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;aside class="sj-drawer" id="menu"&gt;… &lt;ul class="sj-mobile-nav"&gt;…&lt;/ul&gt;&lt;/aside&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li><code>.sj-nav--overlay</code> sits transparently over hero imagery — combine with <code>data-theme="dark"</code> for Sand text and logo.</li><li><code>data-sj-nav-scroll</code> adds a solid background after the first 24 px of scroll.</li><li>The wordmark is never smaller than 96 px wide.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Keep five top-level links or fewer.</li><li>Offer the language switch in its own script (العربية / English).</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Recolour or redraw the wordmark.</li><li>Add mega-menus with imagery in the bar itself.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= BREADCRUMBS -->
+<section class="doc-section" id="breadcrumbs">
+  <div class="doc-section__head"><span class="doc-section__num">09</span><div><h2 class="t-h2">Breadcrumbs &amp; pagination</h2><p>Breadcrumbs are separated by small Lumens. Pagination marks the current page with a Graphite frame and a Lumen above it.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <nav class="sj-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="#breadcrumbs">Home</a></li><li><a href="#breadcrumbs">Projects</a></li><li><a href="#breadcrumbs">Muscat</a></li><li><span aria-current="page">Noor Residences</span></li></ol></nav>
+    <div style="height:56px"></div>
+    <nav class="sj-pagination" aria-label="Pagination">
+      <a class="sj-pagination__step" href="#breadcrumbs" aria-disabled="true"><svg class="sj-icon sj-icon--dir sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-left"/></svg> Previous</a>
+      <ul class="sj-pagination__list">
+        <li><a class="sj-page" href="#breadcrumbs" aria-current="page">1</a></li>
+        <li><a class="sj-page" href="#breadcrumbs">2</a></li>
+        <li><a class="sj-page" href="#breadcrumbs">3</a></li>
+        <li><span class="sj-page sj-page--gap">…</span></li>
+        <li><a class="sj-page" href="#breadcrumbs">12</a></li>
+      </ul>
+      <a class="sj-pagination__step" href="#breadcrumbs">Next <svg class="sj-icon sj-icon--dir sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></a>
+      <span class="sj-pagination__summary">Showing 1–12 of 142 residences</span>
+    </nav>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;nav class="sj-breadcrumbs" aria-label="Breadcrumb"&gt;
+  &lt;ol&gt;&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span aria-current="page"&gt;Noor Residences&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;nav class="sj-pagination" aria-label="Pagination"&gt;
+  &lt;ul class="sj-pagination__list"&gt;
+    &lt;li&gt;&lt;a class="sj-page" href="?p=1" aria-current="page"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="sj-page" href="?p=2"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= CARDS -->
+<section class="doc-section" id="cards">
+  <div class="doc-section__head"><span class="doc-section__num">10</span><div><h2 class="t-h2">Cards</h2><p>White surfaces on Ivory with a Linen hairline — no resting shadow. Interactive cards gain a soft drape shadow and the image settles from 1.04 to 1.0.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:3">
+      <article class="sj-card">
+        <div class="sj-card__body">
+          <span class="sj-card__icon"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-key"/></svg></span>
+          <h3 class="sj-card__title">Handover, simplified</h3>
+          <p class="sj-card__text">A dedicated relationship manager walks every residence with you before the keys change hands.</p>
+        </div>
+        <div class="sj-card__foot"><a class="sj-link sj-link--caps" href="#cards">Learn more <svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></a></div>
+      </article>
+      <a class="sj-card sj-card--interactive" href="#cards" style="text-decoration:none">
+        <div class="sj-media sj-media--16x10"><img src="../08-Photography/Library/SIRAJ_Photo_Sales-Centre-Interior_v1.0.jpg" alt=""></div>
+        <div class="sj-card__body"><p class="sj-kicker">News · 12 Sep 2026</p><h3 class="sj-card__title">The SIRAJ sales centre opens in Al Khuwair</h3></div>
+      </a>
+      <article class="sj-card" style="background:var(--siraj-surface-alt);border-color:transparent">
+        <div class="sj-card__body">
+          <p class="sj-kicker">Investor brief</p>
+          <h3 class="sj-card__title">Freehold ownership for GCC and international buyers</h3>
+          <p class="sj-card__text">Integrated Tourism Complex status grants full title and residence visas.</p>
+        </div>
+        <div class="sj-card__foot"><span class="sj-muted t-small">PDF · 2.4 MB</span><button class="sj-icon-btn sj-icon-btn--sm" type="button" aria-label="Download"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg></button></div>
+      </article>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;article class="sj-card"&gt;
+  &lt;div class="sj-card__body"&gt;
+    &lt;span class="sj-card__icon"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-key"/&gt;&lt;/svg&gt;&lt;/span&gt;
+    &lt;h3 class="sj-card__title"&gt;Handover, simplified&lt;/h3&gt;
+    &lt;p class="sj-card__text"&gt;…&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="sj-card__foot"&gt;&lt;a class="sj-link sj-link--caps" href="#"&gt;Learn more&lt;/a&gt;&lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= PROPERTY CARD -->
+<section class="doc-section" id="property-card">
+  <div class="doc-section__head"><span class="doc-section__num">11</span><div><h2 class="t-h2">Property card</h2><p>The workhorse of listings. Image with the Silk Corner on the top-end, status badge, location eyebrow, light title, price and a specs row with icons separated by hairlines.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:3">
+      <article class="sj-property-card">
+        <div class="sj-media"><img src="../08-Photography/Library/SIRAJ_Photo_Residential-Tower-Golden-Hour_v1.0.jpg" alt="Noor Residences tower"><div class="sj-media__badges"><span class="sj-badge sj-badge--on-image">Off-plan</span></div></div>
+        <div class="sj-property-card__body">
+          <p class="sj-property-card__loc"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Al Khuwair, Muscat</p>
+          <h3 class="sj-property-card__title"><a href="examples/property-detail.html">Noor Residences</a></h3>
+          <p class="sj-property-card__price"><small>From</small> OMR 145,000</p>
+        </div>
+        <ul class="sj-specs"><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-bedroom"/></svg> 1–4</li><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-bathroom"/></svg> 2–5</li><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-area"/></svg> 85–420 m²</li></ul>
+      </article>
+      <article class="sj-property-card">
+        <div class="sj-media"><img src="../08-Photography/Library/SIRAJ_Photo_Villa-Community-Dusk_v1.0.jpg" alt="Rimal Villas at dusk"><div class="sj-media__badges"><span class="sj-badge sj-badge--on-image">Ready</span></div></div>
+        <div class="sj-property-card__body">
+          <p class="sj-property-card__loc"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Al Mawaleh, Seeb</p>
+          <h3 class="sj-property-card__title"><a href="#property-card">Rimal Villas</a></h3>
+          <p class="sj-property-card__price"><small>From</small> OMR 312,000</p>
+        </div>
+        <ul class="sj-specs"><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-bedroom"/></svg> 4–5</li><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-bathroom"/></svg> 5–6</li><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-area"/></svg> 410–560 m²</li></ul>
+      </article>
+      <article class="sj-property-card">
+        <div class="sj-media"><img src="../08-Photography/Library/SIRAJ_Photo_Apartment-Interior-Sea-View_v1.0.jpg" alt="Apartment interior with sea view"><div class="sj-media__badges"><span class="sj-badge sj-badge--on-image sj-badge--sold">Sold</span></div></div>
+        <div class="sj-property-card__body">
+          <p class="sj-property-card__loc"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-location"/></svg> Qurum, Muscat</p>
+          <h3 class="sj-property-card__title"><a href="#property-card">Unit B-1204</a></h3>
+          <p class="sj-property-card__price">OMR 198,500</p>
+        </div>
+        <ul class="sj-specs"><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-bedroom"/></svg> 2</li><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-bathroom"/></svg> 3</li><li><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-area"/></svg> 128 m²</li></ul>
+      </article>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;article class="sj-property-card"&gt;
+  &lt;div class="sj-media"&gt;
+    &lt;img src="…" alt="Noor Residences tower"&gt;
+    &lt;div class="sj-media__badges"&gt;&lt;span class="sj-badge sj-badge--on-image"&gt;Off-plan&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="sj-property-card__body"&gt;
+    &lt;p class="sj-property-card__loc"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-location"/&gt;&lt;/svg&gt; Al Khuwair, Muscat&lt;/p&gt;
+    &lt;h3 class="sj-property-card__title"&gt;&lt;a href="/noor"&gt;Noor Residences&lt;/a&gt;&lt;/h3&gt;
+    &lt;p class="sj-property-card__price"&gt;&lt;small&gt;From&lt;/small&gt; OMR 145,000&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;ul class="sj-specs"&gt;
+    &lt;li&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-bedroom"/&gt;&lt;/svg&gt; 1–4&lt;/li&gt;&lt;li&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-bathroom"/&gt;&lt;/svg&gt; 2–5&lt;/li&gt;&lt;li&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-area"/&gt;&lt;/svg&gt; 85–420 m²&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/article&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>The whole card is clickable via the title link's stretched hit area.</li><li>Badges sit on the top-start corner — never under the Silk Corner.</li><li>Currency: <code>OMR 145,000</code> in English, <code>145,000 ر.ع.</code> in Arabic.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Use architectural photography with a clear subject.</li><li>Keep specs to three or four items.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Add a Silk Corner to every card in a dense grid of 9+.</li><li>Stack price, discount and promo badges.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= PROJECT CARD -->
+<section class="doc-section" id="project-card">
+  <div class="doc-section__head"><span class="doc-section__num">12</span><div><h2 class="t-h2">Project card</h2><p>An editorial card for developments: tall 4:5 image, index numeral, title, location and a three-part meta row. The arrow square fills with Maroon on hover.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:3">
+      <a class="sj-project-card" href="examples/property-detail.html">
+        <div class="sj-media sj-silk"><img src="../08-Photography/Library/SIRAJ_Photo_Residential-Tower-Golden-Hour_v1.0.jpg" alt=""></div>
+        <div class="sj-project-card__head"><span class="sj-project-card__index">01</span><div><h3 class="sj-project-card__title">Noor Residences</h3><p class="sj-project-card__sub">Al Khuwair, Muscat</p></div><span class="sj-project-card__arrow"><svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg></span></div>
+        <dl class="sj-meta"><div><dt>Type</dt><dd>Residential</dd></div><div><dt>Units</dt><dd>148</dd></div><div><dt>Handover</dt><dd>Q4 2027</dd></div></dl>
+      </a>
+      <a class="sj-project-card" href="#project-card">
+        <div class="sj-media"><img src="../08-Photography/Library/SIRAJ_Photo_Mixed-Use-Plaza-Evening_v1.0.jpg" alt=""></div>
+        <div class="sj-project-card__head"><span class="sj-project-card__index">02</span><div><h3 class="sj-project-card__title">Qurum Gate</h3><p class="sj-project-card__sub">Qurum, Muscat</p></div><span class="sj-project-card__arrow"><svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg></span></div>
+        <dl class="sj-meta"><div><dt>Type</dt><dd>Mixed-use</dd></div><div><dt>Area</dt><dd>38,000 m²</dd></div><div><dt>Handover</dt><dd>Q2 2028</dd></div></dl>
+      </a>
+      <a class="sj-project-card" href="#project-card">
+        <div class="sj-media"><img src="../08-Photography/Library/SIRAJ_Photo_Commercial-Facade-Morning_v1.0.jpg" alt=""></div>
+        <div class="sj-project-card__head"><span class="sj-project-card__index">03</span><div><h3 class="sj-project-card__title">Ghala Business Square</h3><p class="sj-project-card__sub">Ghala, Muscat</p></div><span class="sj-project-card__arrow"><svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg></span></div>
+        <dl class="sj-meta"><div><dt>Type</dt><dd>Commercial</dd></div><div><dt>Floors</dt><dd>14</dd></div><div><dt>Status</dt><dd>Ready</dd></div></dl>
+      </a>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;a class="sj-project-card" href="/noor"&gt;
+  &lt;div class="sj-media sj-silk"&gt;&lt;img src="…" alt=""&gt;&lt;/div&gt;
+  &lt;div class="sj-project-card__head"&gt;
+    &lt;span class="sj-project-card__index"&gt;01&lt;/span&gt;
+    &lt;div&gt;&lt;h3 class="sj-project-card__title"&gt;Noor Residences&lt;/h3&gt;&lt;p class="sj-project-card__sub"&gt;Al Khuwair, Muscat&lt;/p&gt;&lt;/div&gt;
+    &lt;span class="sj-project-card__arrow"&gt;&lt;svg class="sj-icon sj-icon--dir"&gt;&lt;use href="…#sj-arrow-up-right"/&gt;&lt;/svg&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;dl class="sj-meta"&gt;&lt;div&gt;&lt;dt&gt;Units&lt;/dt&gt;&lt;dd&gt;148&lt;/dd&gt;&lt;/div&gt;…&lt;/dl&gt;
+&lt;/a&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= STAT -->
+<section class="doc-section" id="stat">
+  <div class="doc-section__head"><span class="doc-section__num">13</span><div><h2 class="t-h2">Statistic</h2><p>Large Jost ExtraLight numerals with Western digits in both languages. A Stone rule and Lumen open each metric; deltas pair colour with an arrow and context.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:4">
+      <div class="sj-stat"><p class="sj-stat__label">Residences delivered</p><p class="sj-stat__value">2,400<span class="sj-stat__unit">+</span></p><p class="sj-stat__note">Across 12 developments since 2011.</p></div>
+      <div class="sj-stat"><p class="sj-stat__label">Portfolio value</p><p class="sj-stat__value"><span class="sj-stat__unit">OMR</span>480<span class="sj-stat__unit">M</span></p><p class="sj-stat__note">Current portfolio, 2026.</p></div>
+      <div class="sj-stat"><p class="sj-stat__label">Sold · Noor Residences</p><p class="sj-stat__value">65<span class="sj-stat__unit">%</span></p><p class="sj-delta sj-delta--up"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg> +8 pts <span class="sj-delta__ctx">vs last quarter</span></p></div>
+      <div class="sj-stat"><p class="sj-stat__label">Collection rate</p><p class="sj-stat__value">94.2<span class="sj-stat__unit">%</span></p><p class="sj-delta sj-delta--down"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg> −1.1 pts <span class="sj-delta__ctx">vs last month</span></p></div>
+    </div>
+    <div class="doc-cols" style="--c:3;margin-top:48px">
+      <div class="sj-stat sj-stat--card sj-stat--compact"><p class="sj-stat__label">Sales value · QTD</p><p class="sj-stat__value"><span class="sj-stat__unit">OMR</span>6.2<span class="sj-stat__unit">M</span></p><svg class="sj-spark" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="var(--siraj-accent)" stroke-width="1.5" points="0,32 20,30 40,33 60,26 80,27 100,20 120,22 140,15 160,16 180,9 200,6" vector-effect="non-scaling-stroke"/></svg><p class="sj-delta sj-delta--up"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg> +12.6% <span class="sj-delta__ctx">vs Q2</span></p></div>
+      <div class="sj-stat sj-stat--card sj-stat--compact"><p class="sj-stat__label">Reservations · MTD</p><p class="sj-stat__value">14</p><svg class="sj-spark" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="var(--siraj-accent)" stroke-width="1.5" points="0,28 20,24 40,26 60,18 80,22 100,19 120,24 140,17 160,12 180,15 200,10" vector-effect="non-scaling-stroke"/></svg><p class="sj-delta sj-delta--up"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-up-right"/></svg> +3 <span class="sj-delta__ctx">vs September</span></p></div>
+      <div class="sj-stat sj-stat--card sj-stat--compact"><p class="sj-stat__label">Average price / m²</p><p class="sj-stat__value"><span class="sj-stat__unit">OMR</span>1,134</p><svg class="sj-spark" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="var(--siraj-accent)" stroke-width="1.5" points="0,20 20,19 40,21 60,18 80,18 100,17 120,16 140,16 160,14 180,14 200,13" vector-effect="non-scaling-stroke"/></svg><p class="sj-delta"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-minus"/></svg> 0.0% <span class="sj-delta__ctx">stable</span></p></div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-stat"&gt;
+  &lt;p class="sj-stat__label"&gt;Collection rate&lt;/p&gt;
+  &lt;p class="sj-stat__value"&gt;94.2&lt;span class="sj-stat__unit"&gt;%&lt;/span&gt;&lt;/p&gt;
+  &lt;p class="sj-delta sj-delta--down"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-arrow-up-right"/&gt;&lt;/svg&gt; −1.1 pts &lt;span class="sj-delta__ctx"&gt;vs last month&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sj-stat sj-stat--card sj-stat--compact"&gt;…&lt;/div&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= TABLE -->
+<section class="doc-section" id="table">
+  <div class="doc-section__head"><span class="doc-section__num">14</span><div><h2 class="t-h2">Data table</h2><p>Hairline rows with Linen zebra striping, tracked caps headers and numbers aligned to the end edge with tabular figures. Sortable headers expose <code>aria-sort</code>.</p></div></div>
+  <div class="doc-stage doc-stage--surface" data-sj-dir-scope>
+    <div class="sj-table-wrap">
+      <table class="sj-table" data-sj-sortable>
+        <thead><tr>
+          <th scope="col" aria-sort="none"><button class="sj-sort" type="button">Unit <span class="sj-sort__icon"></span></button></th>
+          <th scope="col">Type</th>
+          <th scope="col" class="is-num" aria-sort="none"><button class="sj-sort" type="button">Floor <span class="sj-sort__icon"></span></button></th>
+          <th scope="col" class="is-num" aria-sort="none"><button class="sj-sort" type="button">Area m² <span class="sj-sort__icon"></span></button></th>
+          <th scope="col">View</th>
+          <th scope="col" class="is-num" aria-sort="ascending"><button class="sj-sort" type="button">Price OMR <span class="sj-sort__icon"></span></button></th>
+          <th scope="col">Status</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="is-strong">A-0302</td><td>1 Bedroom</td><td class="is-num">3</td><td class="is-num">85</td><td>City</td><td class="is-num" data-value="145000">145,000</td><td><span class="sj-badge sj-badge--ready">Available</span></td></tr>
+          <tr><td class="is-strong">A-0905</td><td>1 Bedroom</td><td class="is-num">9</td><td class="is-num">92</td><td>Garden</td><td class="is-num" data-value="158500">158,500</td><td><span class="sj-badge sj-badge--reserved">Reserved</span></td></tr>
+          <tr><td class="is-strong">B-1204</td><td>2 Bedroom</td><td class="is-num">12</td><td class="is-num">128</td><td>Sea</td><td class="is-num" data-value="198500">198,500</td><td><span class="sj-badge sj-badge--sold">Sold</span></td></tr>
+          <tr><td class="is-strong">B-1507</td><td>3 Bedroom</td><td class="is-num">15</td><td class="is-num">176</td><td>Sea</td><td class="is-num" data-value="264000">264,000</td><td><span class="sj-badge sj-badge--ready">Available</span></td></tr>
+          <tr><td class="is-strong">PH-2201</td><td>Penthouse</td><td class="is-num">22</td><td class="is-num">420</td><td>Panoramic</td><td class="is-num" data-value="690000">690,000</td><td><span class="sj-badge sj-badge--offplan">On request</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-table-wrap"&gt;
+  &lt;table class="sj-table" data-sj-sortable&gt;
+    &lt;thead&gt;&lt;tr&gt;
+      &lt;th scope="col"&gt;Unit&lt;/th&gt;
+      &lt;th scope="col" class="is-num" aria-sort="ascending"&gt;
+        &lt;button class="sj-sort"&gt;Price OMR &lt;span class="sj-sort__icon"&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+    &lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;&lt;tr&gt;&lt;td class="is-strong"&gt;B-1204&lt;/td&gt;&lt;td class="is-num" data-value="198500"&gt;198,500&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Numeric columns take <code>.is-num</code> — end-aligned so they line up in both directions.</li><li>Use <code>data-value</code> on cells whose display text is formatted.</li><li>Wrap in <code>.sj-table-wrap</code> for horizontal scroll on small screens.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Put units in the header (“Area m²”), not in every cell.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Draw vertical grid lines or box every cell.</li><li>Centre-align numbers.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= ACCORDION -->
+<section class="doc-section" id="accordion">
+  <div class="doc-section__head"><span class="doc-section__num">15</span><div><h2 class="t-h2">Accordion</h2><p>Hairline-separated rows with light, generous titles. The plus folds into a minus; the open item is marked with a Lumen; the panel unfolds on the flow easing.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="sj-accordion" data-sj-single>
+      <div class="sj-accordion__item">
+        <button class="sj-accordion__trigger" type="button" aria-expanded="true" aria-controls="acc-1"><span class="sj-accordion__num">01</span> Who can buy property at Noor Residences? <span class="sj-accordion__plus"></span></button>
+        <div class="sj-accordion__panel" id="acc-1"><div class="sj-accordion__inner"><div class="sj-accordion__content"><p>Omani nationals, GCC citizens and international buyers. As an Integrated Tourism Complex, Noor Residences offers freehold title and eligibility for an Omani residence visa.</p></div></div></div>
+      </div>
+      <div class="sj-accordion__item">
+        <button class="sj-accordion__trigger" type="button" aria-expanded="false" aria-controls="acc-2"><span class="sj-accordion__num">02</span> What does the payment plan look like? <span class="sj-accordion__plus"></span></button>
+        <div class="sj-accordion__panel" id="acc-2"><div class="sj-accordion__inner"><div class="sj-accordion__content"><p>10% on reservation, 10% at contract, 40% across eight construction instalments and 40% on handover in Q4 2027.</p></div></div></div>
+      </div>
+      <div class="sj-accordion__item">
+        <button class="sj-accordion__trigger" type="button" aria-expanded="false" aria-controls="acc-3"><span class="sj-accordion__num">03</span> Are service charges included? <span class="sj-accordion__plus"></span></button>
+        <div class="sj-accordion__panel" id="acc-3"><div class="sj-accordion__inner"><div class="sj-accordion__content"><p>Service charges are estimated at OMR 2.4 per m² per year and begin at handover.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-accordion" data-sj-single&gt;
+  &lt;div class="sj-accordion__item"&gt;
+    &lt;button class="sj-accordion__trigger" aria-expanded="true" aria-controls="a1"&gt;
+      &lt;span class="sj-accordion__num"&gt;01&lt;/span&gt; Who can buy? &lt;span class="sj-accordion__plus"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="sj-accordion__panel" id="a1"&gt;&lt;div class="sj-accordion__inner"&gt;
+      &lt;div class="sj-accordion__content"&gt;…&lt;/div&gt;
+    &lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= BADGES -->
+<section class="doc-section" id="badges">
+  <div class="doc-section__head"><span class="doc-section__num">16</span><div><h2 class="t-h2">Badges &amp; tags</h2><p>Badges label status with a 2 px radius, tracked caps and a small Lumen in the status tone. Tags are toggleable filters.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-row"><p class="doc-rowlabel">Property status</p>
+      <span class="sj-badge sj-badge--ready">Ready</span>
+      <span class="sj-badge sj-badge--offplan">Off-plan</span>
+      <span class="sj-badge sj-badge--reserved">Reserved</span>
+      <span class="sj-badge sj-badge--sold">Sold</span>
+      <span class="sj-badge sj-badge--new">New launch</span>
+      <span class="sj-badge sj-badge--info">Handover Q4 2027</span>
+      <span class="sj-badge sj-badge--error">Overdue</span>
+      <span class="sj-badge sj-badge--plain">Freehold</span>
+    </div>
+    <div class="doc-row"><p class="doc-rowlabel">Filter tags</p>
+      <button class="sj-tag" type="button" aria-pressed="true"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-sea-view"/></svg> Sea view</button>
+      <button class="sj-tag" type="button" aria-pressed="false"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-pool"/></svg> Pool</button>
+      <button class="sj-tag" type="button" aria-pressed="false"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-gym"/></svg> Gym</button>
+      <button class="sj-tag" type="button" aria-pressed="true"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-parking"/></svg> 2 parking</button>
+      <button class="sj-tag" type="button" aria-pressed="false">Muscat <svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;span class="sj-badge sj-badge--ready"&gt;Ready&lt;/span&gt;
+&lt;span class="sj-badge sj-badge--offplan"&gt;Off-plan&lt;/span&gt;
+&lt;span class="sj-badge sj-badge--sold"&gt;Sold&lt;/span&gt;
+&lt;span class="sj-badge sj-badge--on-image"&gt;Off-plan&lt;/span&gt;  &lt;!-- on photography --&gt;
+&lt;button class="sj-tag" aria-pressed="true"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-sea-view"/&gt;&lt;/svg&gt; Sea view&lt;/button&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= AVATARS -->
+<section class="doc-section" id="avatars">
+  <div class="doc-section__head"><span class="doc-section__num">17</span><div><h2 class="t-h2">Avatars</h2><p>Square avatars with initials in Maroon on Linen. The S monogram represents SIRAJ itself. Presence is a Lumen at the bottom-end corner.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-row" style="gap:28px">
+      <span class="sj-avatar sj-avatar--sm">SH</span>
+      <span class="sj-avatar">MA</span>
+      <span class="sj-avatar sj-avatar--lg">LK<span class="sj-avatar__status"></span></span>
+      <span class="sj-avatar sj-avatar--xl sj-avatar--silk">RB</span>
+      <span class="sj-avatar sj-avatar--lg"><img src="../01-Logos/SVG/SIRAJ_Monogram-S_Ivory-on-Maroon_v1.0.svg" alt="SIRAJ"></span>
+      <span class="sj-avatar-group"><span class="sj-avatar">SH</span><span class="sj-avatar">MA</span><span class="sj-avatar">LK</span><span class="sj-avatar" style="color:var(--siraj-text-muted)">+4</span></span>
+      <div class="sj-person"><span class="sj-avatar sj-avatar--lg">MA<span class="sj-avatar__status"></span></span><div><p class="sj-person__name">Maryam Al Balushi</p><p class="sj-person__role">Senior sales consultant</p></div></div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;span class="sj-avatar"&gt;MA&lt;/span&gt;
+&lt;span class="sj-avatar sj-avatar--lg"&gt;LK&lt;span class="sj-avatar__status"&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;div class="sj-person"&gt;
+  &lt;span class="sj-avatar sj-avatar--lg"&gt;MA&lt;/span&gt;
+  &lt;div&gt;&lt;p class="sj-person__name"&gt;Maryam Al Balushi&lt;/p&gt;&lt;p class="sj-person__role"&gt;Senior sales consultant&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= DIALOG -->
+<section class="doc-section" id="dialog">
+  <div class="doc-section__head"><span class="doc-section__num">18</span><div><h2 class="t-h2">Dialog</h2><p>Built on the native <code>&lt;dialog&gt;</code> element for focus trapping and Escape. A 2 px accent edge crowns the panel; it rises 16 px on the drape easing over a Shadow scrim.</p></div></div>
+  <div class="doc-stage doc-stage--flush" data-sj-dir-scope style="padding-top:0">
+    <div class="doc-scrim-frame">
+      <img src="../08-Photography/Library/SIRAJ_Photo_Apartment-Interior-Sea-View_v1.0.jpg" alt="">
+      <div class="sj-dialog__panel" style="width:min(560px,100%);box-shadow:var(--siraj-shadow-high)" role="dialog" aria-labelledby="dlg-static-title">
+        <div class="sj-dialog__head"><p class="sj-kicker">Unit B-1204 · Noor Residences</p><h3 class="sj-dialog__title" id="dlg-static-title">Reserve this residence</h3></div>
+        <button class="sj-icon-btn sj-dialog__close" type="button" aria-label="Close"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button>
+        <div class="sj-dialog__body"><p>A refundable reservation fee of <strong class="sj-strong">OMR 2,000</strong> holds this residence for 14 days while your consultant prepares the sale and purchase agreement.</p></div>
+        <div class="sj-dialog__foot"><button class="sj-btn sj-btn--ghost" type="button">Cancel</button><button class="sj-btn sj-btn--primary" type="button">Confirm reservation</button></div>
+      </div>
+    </div>
+    <div style="padding:24px 32px;border-top:1px solid var(--sj-hairline)"><button class="sj-btn sj-btn--secondary sj-btn--sm" type="button" data-sj-dialog-open="demo-dialog">Open live dialog</button></div>
+  </div>
+  <dialog class="sj-dialog" id="demo-dialog" aria-labelledby="dlg-title">
+    <div class="sj-dialog__panel">
+      <div class="sj-dialog__head"><p class="sj-kicker">Unit B-1204 · Noor Residences</p><h3 class="sj-dialog__title" id="dlg-title">Reserve this residence</h3></div>
+      <button class="sj-icon-btn sj-dialog__close" type="button" aria-label="Close" data-sj-close><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button>
+      <div class="sj-dialog__body"><p>A refundable reservation fee of <strong class="sj-strong">OMR 2,000</strong> holds this residence for 14 days while your consultant prepares the sale and purchase agreement.</p></div>
+      <div class="sj-dialog__foot"><button class="sj-btn sj-btn--ghost" type="button" data-sj-close>Cancel</button><button class="sj-btn sj-btn--primary" type="button" data-sj-close data-sj-toast="Reservation confirmed|Unit B-1204 is held until 25 Oct 2026.">Confirm reservation</button></div>
+    </div>
+  </dialog>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;button class="sj-btn sj-btn--primary" data-sj-dialog-open="reserve"&gt;Reserve&lt;/button&gt;
+&lt;dialog class="sj-dialog" id="reserve" aria-labelledby="reserve-title"&gt;
+  &lt;div class="sj-dialog__panel"&gt;
+    &lt;div class="sj-dialog__head"&gt;
+      &lt;p class="sj-kicker"&gt;Unit B-1204&lt;/p&gt;
+      &lt;h3 class="sj-dialog__title" id="reserve-title"&gt;Reserve this residence&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;button class="sj-icon-btn sj-dialog__close" data-sj-close aria-label="Close"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-close"/&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;div class="sj-dialog__body"&gt;…&lt;/div&gt;
+    &lt;div class="sj-dialog__foot"&gt;
+      &lt;button class="sj-btn sj-btn--ghost" data-sj-close&gt;Cancel&lt;/button&gt;
+      &lt;button class="sj-btn sj-btn--primary"&gt;Confirm reservation&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Use for confirmations that need a decision. Keep content short — one paragraph.</li><li>Focus is trapped by the browser; Escape and a click on the scrim close it.</li><li>On phones the footer stacks and buttons go full width.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Name the action in the confirm button (“Confirm reservation”).</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Open a dialog on page load or stack dialogs.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= DRAWER -->
+<section class="doc-section" id="drawer">
+  <div class="doc-section__head"><span class="doc-section__num">19</span><div><h2 class="t-h2">Drawer</h2><p>A side panel that slides in from the end edge (right in LTR, left in RTL) for filters, enquiry forms and the mobile menu.</p></div></div>
+  <div class="doc-stage doc-stage--flush" data-sj-dir-scope style="padding-top:0">
+    <div class="doc-drawer-frame">
+      <img src="../08-Photography/Library/SIRAJ_Photo_Aerial-Coastal-Community_v1.0.jpg" alt="">
+      <div class="sj-drawer sj-drawer--static" style="width:420px">
+        <div class="sj-drawer__head"><h3 class="sj-drawer__title">Filter residences</h3><button class="sj-icon-btn" type="button" aria-label="Close"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button></div>
+        <div class="sj-drawer__body sj-stack" style="--sj-stack:28px">
+          <div class="sj-field"><span class="sj-label">Bedrooms</span><div class="sj-segmented" role="group" aria-label="Bedrooms"><button type="button" aria-pressed="false">Any</button><button type="button" aria-pressed="true">2</button><button type="button" aria-pressed="false">3</button><button type="button" aria-pressed="false">4+</button></div></div>
+          <div class="sj-field"><label class="sj-label" for="dr-price">Budget</label><div class="sj-select"><select id="dr-price"><option>OMR 150,000 – 250,000</option></select><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-chevron-down"/></svg></div></div>
+          <fieldset class="sj-choice-group"><legend class="sj-label">Amenities</legend><label class="sj-check"><input type="checkbox" checked> Sea view</label><label class="sj-check"><input type="checkbox"> Private pool</label><label class="sj-check"><input type="checkbox" checked> Covered parking</label></fieldset>
+        </div>
+        <div class="sj-drawer__foot"><button class="sj-btn sj-btn--ghost" type="button">Reset</button><button class="sj-btn sj-btn--primary" type="button">Show 24 residences</button></div>
+      </div>
+    </div>
+    <div style="padding:24px 32px;border-top:1px solid var(--sj-hairline)"><button class="sj-btn sj-btn--secondary sj-btn--sm" type="button" data-sj-drawer-open="demo-drawer">Open live drawer</button></div>
+  </div>
+  <aside class="sj-drawer" id="demo-drawer" aria-hidden="true" aria-label="Filter residences">
+    <div class="sj-drawer__head"><h3 class="sj-drawer__title">Filter residences</h3><button class="sj-icon-btn" type="button" aria-label="Close" data-sj-close><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button></div>
+    <div class="sj-drawer__body sj-stack" style="--sj-stack:28px">
+      <fieldset class="sj-choice-group"><legend class="sj-label">Amenities</legend><label class="sj-check"><input type="checkbox" checked> Sea view</label><label class="sj-check"><input type="checkbox"> Private pool</label></fieldset>
+    </div>
+    <div class="sj-drawer__foot"><button class="sj-btn sj-btn--ghost" type="button" data-sj-close>Reset</button><button class="sj-btn sj-btn--primary" type="button" data-sj-close>Show 24 residences</button></div>
+  </aside>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;button class="sj-btn sj-btn--secondary" data-sj-drawer-open="filters"&gt;Filters&lt;/button&gt;
+&lt;aside class="sj-drawer" id="filters" aria-hidden="true" aria-label="Filter residences"&gt;
+  &lt;div class="sj-drawer__head"&gt;
+    &lt;h3 class="sj-drawer__title"&gt;Filter residences&lt;/h3&gt;
+    &lt;button class="sj-icon-btn" data-sj-close aria-label="Close"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-close"/&gt;&lt;/svg&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="sj-drawer__body"&gt;…&lt;/div&gt;
+  &lt;div class="sj-drawer__foot"&gt;…&lt;/div&gt;
+&lt;/aside&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= TOOLTIP -->
+<section class="doc-section" id="tooltip">
+  <div class="doc-section__head"><span class="doc-section__num">20</span><div><h2 class="t-h2">Tooltip</h2><p>Near Black bubbles with Ivory text and a diamond pointer — the Lumen again. Shown on hover and keyboard focus.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope style="padding-top:120px">
+    <div class="doc-row" style="gap:64px;padding-inline-start:96px">
+      <span class="sj-tooltip is-visible"><button class="sj-icon-btn" type="button" aria-describedby="tt-1"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-info"/></svg></button><span class="sj-tooltip__bubble" role="tooltip" id="tt-1">Service charge: OMR 2.4 / m² / year</span></span>
+      <span class="sj-tooltip"><button class="sj-icon-btn" type="button" aria-label="Share" aria-describedby="tt-2"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-share"/></svg></button><span class="sj-tooltip__bubble" role="tooltip" id="tt-2">Share this residence</span></span>
+      <span class="sj-tooltip"><a class="sj-link" href="#tooltip" aria-describedby="tt-3">Freehold</a><span class="sj-tooltip__bubble" role="tooltip" id="tt-3">Full ownership title in your name</span></span>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;span class="sj-tooltip"&gt;
+  &lt;button class="sj-icon-btn" aria-label="Service charge" aria-describedby="tip"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-info"/&gt;&lt;/svg&gt;&lt;/button&gt;
+  &lt;span class="sj-tooltip__bubble" role="tooltip" id="tip"&gt;OMR 2.4 / m² / year&lt;/span&gt;
+&lt;/span&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= BANNER -->
+<section class="doc-section" id="banner">
+  <div class="doc-section__head"><span class="doc-section__num">21</span><div><h2 class="t-h2">Banners</h2><p>Functional colours are used quietly: a 2 px start edge, the icon and a 7% tint. Text stays Graphite for legibility.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="sj-stack" style="--sj-stack:16px">
+      <div class="sj-banner" role="status"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-info"/></svg><div class="sj-banner__body"><p class="sj-banner__title">Sales centre hours</p><p class="sj-banner__text">During Ramadan the Al Khuwair sales centre is open 10:00–15:00 and 20:00–23:00.</p></div><button class="sj-icon-btn" type="button" aria-label="Dismiss" data-sj-close><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button></div>
+      <div class="sj-banner sj-banner--success" role="status"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg><div class="sj-banner__body"><p class="sj-banner__title">Payment received</p><p class="sj-banner__text">OMR 14,500 was credited to instalment 4 on 2 Oct 2026. Your receipt is in Documents.</p><div class="sj-banner__actions"><a class="sj-link sj-link--caps" href="#banner">View receipt</a></div></div></div>
+      <div class="sj-banner sj-banner--warning" role="status"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-clock"/></svg><div class="sj-banner__body"><p class="sj-banner__title">Instalment due in 7 days</p><p class="sj-banner__text">OMR 14,500 is due on 18 Oct 2026.</p></div></div>
+      <div class="sj-banner sj-banner--error" role="alert"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-alert"/></svg><div class="sj-banner__body"><p class="sj-banner__title">We could not verify your documents</p><p class="sj-banner__text">The passport copy is unreadable. Please upload a clearer scan.</p></div></div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-banner sj-banner--success" role="status"&gt;
+  &lt;svg class="sj-icon"&gt;&lt;use href="…#sj-check"/&gt;&lt;/svg&gt;
+  &lt;div class="sj-banner__body"&gt;
+    &lt;p class="sj-banner__title"&gt;Payment received&lt;/p&gt;
+    &lt;p class="sj-banner__text"&gt;OMR 14,500 was credited to instalment 4.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class="sj-icon-btn" data-sj-close aria-label="Dismiss"&gt;&lt;svg class="sj-icon sj-icon--sm"&gt;&lt;use href="…#sj-close"/&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= TOAST -->
+<section class="doc-section" id="toast">
+  <div class="doc-section__head"><span class="doc-section__num">22</span><div><h2 class="t-h2">Toast &amp; alert</h2><p>Toasts confirm an action in a Near Black panel at the bottom-end of the screen. A Stone timer line shows when it will leave. Inline alerts are a quieter, icon-led line of text.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:2;align-items:start">
+      <div class="sj-stack" style="--sj-stack:12px">
+        <div class="sj-toast is-static"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg><div class="sj-toast__body"><p class="sj-toast__title">Saved to your shortlist</p><p class="sj-toast__text">Noor Residences · Unit B-1204</p></div><button class="sj-toast__action" type="button">Undo</button><button class="sj-toast__close" type="button" aria-label="Dismiss"><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button><span class="sj-toast__timer"></span></div>
+        <div class="sj-toast is-static"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-download"/></svg><div class="sj-toast__body"><p class="sj-toast__title">Brochure downloaded</p></div><button class="sj-toast__close" type="button" aria-label="Dismiss"><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg></button><span class="sj-toast__timer" style="transform:scaleX(.3)"></span></div>
+        <div style="margin-top:20px"><button class="sj-btn sj-btn--secondary sj-btn--sm" type="button" data-sj-toast="Enquiry sent|A consultant will call you within one working day.">Trigger a toast</button></div>
+      </div>
+      <div class="sj-stack" style="--sj-stack:18px">
+        <p class="sj-alert sj-alert--success"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Documents verified</p>
+        <p class="sj-alert sj-alert--info"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-info"/></svg> Prices exclude 3% registration fee</p>
+        <p class="sj-alert sj-alert--warning"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-clock"/></svg> Offer ends 31 Oct 2026</p>
+        <p class="sj-alert sj-alert--error"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-alert"/></svg> Unit no longer available</p>
+      </div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;!-- Programmatic --&gt;
+&lt;script&gt;SIRAJ.toast('Enquiry sent', 'A consultant will call you within one working day.')&lt;/script&gt;
+&lt;!-- Declarative --&gt;
+&lt;button data-sj-toast="Enquiry sent|A consultant will call you."&gt;Send&lt;/button&gt;
+&lt;p class="sj-alert sj-alert--success"&gt;&lt;svg class="sj-icon"&gt;&lt;use href="…#sj-check"/&gt;&lt;/svg&gt; Documents verified&lt;/p&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= LOADER -->
+<section class="doc-section" id="loader">
+  <div class="doc-section__head"><span class="doc-section__num">23</span><div><h2 class="t-h2">Loaders</h2><p>No spinners, no bouncing dots. The Lumen loader is a Stone diamond with a silk sheen gliding across it; the line loader is a hairline with a travelling accent segment. Skeletons breathe on Linen.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:3;align-items:center">
+      <div class="doc-row" style="gap:40px"><span class="sj-loader sj-loader--sm" role="status" aria-label="Loading"></span><span class="sj-loader" role="status" aria-label="Loading"></span><span class="sj-loader sj-loader--lg" role="status" aria-label="Loading"></span></div>
+      <div class="sj-loading-block" role="status"><img class="sj-only-light" src="../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ" style="height:24px"><img class="sj-only-dark" src="../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ" style="height:24px"><span class="sj-loader-line sj-loading-block__line"></span><span class="sj-loading-block__label">Loading residences</span></div>
+      <div class="sj-stack" style="--sj-stack:12px" aria-hidden="true"><div class="sj-skeleton" style="height:120px"></div><div class="sj-skeleton" style="height:14px;width:40%"></div><div class="sj-skeleton" style="height:22px;width:80%"></div><div class="sj-skeleton" style="height:14px;width:60%"></div></div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;span class="sj-loader" role="status" aria-label="Loading"&gt;&lt;/span&gt;
+&lt;span class="sj-loader-line"&gt;&lt;/span&gt;
+&lt;div class="sj-skeleton" style="height:120px"&gt;&lt;/div&gt;</code></pre></div>
+  <div class="doc-notes">
+    <div><h3>Usage</h3><ul class="sj-list"><li>Use the line loader at the top of a region that is refreshing; the Lumen loader inline.</li><li>All loaders stop moving under <code>prefers-reduced-motion</code>.</li></ul></div>
+    <div class="doc-dd"><div><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-check"/></svg> Do</h4><ul><li>Prefer skeletons for content that has a known shape.</li></ul></div><div class="is-dont"><h4><svg class="sj-icon sj-icon--sm" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-close"/></svg> Don't</h4><ul><li>Spin the wordmark or the Lumen.</li></ul></div></div>
+  </div>
+</section>
+
+<!-- ======================================================= PROGRESS -->
+<section class="doc-section" id="progress">
+  <div class="doc-section__head"><span class="doc-section__num">24</span><div><h2 class="t-h2">Progress &amp; stepper</h2><p>Construction progress and payment milestones. The progress line carries a Lumen at its leading edge; the stepper uses Lumen markers — filled Maroon when done, Stone with a breathing frame when current, outlined when upcoming.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="doc-cols" style="--c:2">
+      <div class="sj-progress"><div class="sj-progress__head"><span class="sj-progress__label">Construction · Noor Residences</span><span class="sj-progress__value">68%</span></div><div class="sj-progress__track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Construction progress"><div class="sj-progress__fill" style="--value:68%"></div></div><div class="sj-progress__foot"><span>Updated 30 Sep 2026</span><span>Handover Q4 2027</span></div></div>
+      <div class="sj-progress"><div class="sj-progress__head"><span class="sj-progress__label">Paid to date</span><span class="sj-progress__value">OMR 58,000 / 145,000</span></div><div class="sj-progress__track" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="Paid to date"><div class="sj-progress__fill" style="--value:40%"></div></div><div class="sj-progress__foot"><span>40% paid</span><span>Next: 18 Oct 2026</span></div></div>
+    </div>
+    <div style="height:64px"></div>
+    <ol class="sj-stepper" aria-label="Construction milestones">
+      <li class="sj-step is-done"><span class="sj-step__marker"></span><span class="sj-step__index">01</span><p class="sj-step__title">Enabling works</p><p class="sj-step__meta">Q1 2025</p></li>
+      <li class="sj-step is-done"><span class="sj-step__marker"></span><span class="sj-step__index">02</span><p class="sj-step__title">Foundations</p><p class="sj-step__meta">Q3 2025</p></li>
+      <li class="sj-step is-current" style="--step-progress:60%" aria-current="step"><span class="sj-step__marker"></span><span class="sj-step__index">03</span><p class="sj-step__title">Structure</p><p class="sj-step__meta">Level 18 of 22</p></li>
+      <li class="sj-step is-upcoming"><span class="sj-step__marker"></span><span class="sj-step__index">04</span><p class="sj-step__title">Façade &amp; MEP</p><p class="sj-step__meta">Q1 2027</p></li>
+      <li class="sj-step is-upcoming"><span class="sj-step__marker"></span><span class="sj-step__index">05</span><p class="sj-step__title">Interiors</p><p class="sj-step__meta">Q3 2027</p></li>
+      <li class="sj-step is-upcoming"><span class="sj-step__marker"></span><span class="sj-step__index">06</span><p class="sj-step__title">Handover</p><p class="sj-step__meta">Q4 2027</p></li>
+    </ol>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-progress"&gt;
+  &lt;div class="sj-progress__head"&gt;&lt;span class="sj-progress__label"&gt;Construction&lt;/span&gt;&lt;span class="sj-progress__value"&gt;68%&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="sj-progress__track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"&gt;
+    &lt;div class="sj-progress__fill" style="--value:68%"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ol class="sj-stepper"&gt;   &lt;!-- add .sj-stepper--vertical for a vertical timeline --&gt;
+  &lt;li class="sj-step is-done"&gt;&lt;span class="sj-step__marker"&gt;&lt;/span&gt;&lt;span class="sj-step__index"&gt;01&lt;/span&gt;
+    &lt;p class="sj-step__title"&gt;Foundations&lt;/p&gt;&lt;p class="sj-step__meta"&gt;Q3 2025&lt;/p&gt;&lt;/li&gt;
+  &lt;li class="sj-step is-current" style="--step-progress:60%" aria-current="step"&gt;…&lt;/li&gt;
+  &lt;li class="sj-step is-upcoming"&gt;…&lt;/li&gt;
+&lt;/ol&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= EMPTY -->
+<section class="doc-section" id="empty">
+  <div class="doc-section__head"><span class="doc-section__num">25</span><div><h2 class="t-h2">Empty state</h2><p>A single silk line drawn through an architectural frame with a Silk Corner, and a Lumen where the light falls. Calm copy, one clear next step.</p></div></div>
+  <div class="doc-stage" data-sj-dir-scope>
+    <div class="sj-empty">
+      <svg class="sj-empty__art" viewBox="0 0 220 150" fill="none" aria-hidden="true">
+        <path d="M66.5 128.5V22.5H124.5C142.17 22.5 156.5 36.83 156.5 54.5V128.5" stroke="currentColor" stroke-opacity=".7"/>
+        <path d="M86.5 128.5V62.5H136.5V128.5" stroke="currentColor" stroke-opacity=".35"/>
+        <path d="M24 128.5H196" stroke="currentColor" stroke-opacity=".7"/>
+        <path d="M6 104C36 98 52 70 82 74C112 78 112 112 146 108C172 105 186 70 214 60" stroke="var(--siraj-accent)" stroke-width="1.25" stroke-linecap="round"/>
+        <rect x="139" y="8" width="7" height="7" transform="rotate(45 142.5 11.5)" fill="currentColor"/>
+      </svg>
+      <h3 class="sj-empty__title">No saved residences yet</h3>
+      <p class="sj-empty__text">Tap the heart on any residence to keep it here. Your shortlist is shared with your sales consultant.</p>
+      <div class="sj-empty__actions"><a class="sj-btn sj-btn--primary" href="#empty">Browse residences</a></div>
+    </div>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;div class="sj-empty"&gt;
+  &lt;svg class="sj-empty__art" viewBox="0 0 220 150"&gt;…&lt;/svg&gt;
+  &lt;h3 class="sj-empty__title"&gt;No saved residences yet&lt;/h3&gt;
+  &lt;p class="sj-empty__text"&gt;Tap the heart on any residence to keep it here.&lt;/p&gt;
+  &lt;div class="sj-empty__actions"&gt;&lt;a class="sj-btn sj-btn--primary" href="/projects"&gt;Browse residences&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+
+<!-- ======================================================= FOOTER -->
+<section class="doc-section" id="footer">
+  <div class="doc-section__head"><span class="doc-section__num">26</span><div><h2 class="t-h2">Footer</h2><p>Always set on SIRAJ Shadow with Sand headings — the footer carries <code>data-theme="dark"</code>, so every component inside it switches to its dark tokens automatically.</p></div></div>
+  <div class="doc-stage doc-stage--flush" data-sj-dir-scope style="padding-top:0;border:0">
+    <footer class="sj-footer" data-theme="dark" style="padding-block:72px 32px">
+      <div style="padding-inline:48px">
+        <div class="sj-footer__top">
+          <div class="sj-footer__brand"><a class="sj-logo" href="#footer"><img src="../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ"></a><p class="sj-footer__statement">Architecture shaped with the elegance of silk.</p></div>
+          <div class="sj-footer__col"><p class="sj-footer__heading">Projects</p><ul class="sj-footer__links"><li><a href="#footer">Noor Residences</a></li><li><a href="#footer">Rimal Villas</a></li><li><a href="#footer">Qurum Gate</a></li></ul></div>
+          <div class="sj-footer__col"><p class="sj-footer__heading">Company</p><ul class="sj-footer__links"><li><a href="#footer">About</a></li><li><a href="#footer">Invest</a></li><li><a href="#footer">News</a></li></ul></div>
+          <div class="sj-footer__col sj-footer__col--wide"><p class="sj-footer__heading">Newsletter</p><p class="t-small" style="margin:0">Launches and progress updates, once a month.</p><form class="sj-footer__news" onsubmit="return false"><input class="sj-input" type="email" placeholder="Email address" aria-label="Email address"><button class="sj-icon-btn" type="submit" aria-label="Subscribe"><svg class="sj-icon sj-icon--dir" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-arrow-right"/></svg></button></form></div>
+        </div>
+        <div class="sj-footer__bottom"><span>© 2026 SIRAJ Real Estate Development SAOC</span><ul class="sj-footer__legal"><li><a href="#footer">Privacy</a></li><li><a href="#footer">Terms</a></li></ul><div class="sj-footer__social"><a class="sj-icon-btn" href="#footer" aria-label="WhatsApp"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-whatsapp"/></svg></a><a class="sj-icon-btn" href="#footer" aria-label="Email"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-email"/></svg></a><a class="sj-icon-btn" href="#footer" aria-label="Call"><svg class="sj-icon" aria-hidden="true"><use href="../07-Icon-System/sprite/siraj-icons.svg#sj-call"/></svg></a></div></div>
+      </div>
+    </footer>
+  </div>
+<div class="doc-code"><button class="doc-code__copy" type="button">Copy</button><pre><code>&lt;footer class="sj-footer" data-theme="dark"&gt;
+  &lt;div class="sj-container"&gt;
+    &lt;div class="sj-footer__top"&gt;
+      &lt;div class="sj-footer__brand"&gt;…&lt;/div&gt;
+      &lt;div class="sj-footer__col"&gt;&lt;p class="sj-footer__heading"&gt;Projects&lt;/p&gt;&lt;ul class="sj-footer__links"&gt;…&lt;/ul&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="sj-footer__bottom"&gt;…&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre></div>
+</section>
+
+<div class="doc-footer"><span>SIRAJ UI Components v1.0 · October 2026</span><span>Tokens: 09-Design-System · Icons: 07-Icon-System</span></div>
+</main>
+</div>
+
+<script src="siraj-components.js"></script>
+<script>
+/* ---- Documentation-only behaviour: labels, copy buttons, RTL demo copy ---- */
+(function () {
+  var AR = {
+    'Book a viewing':'احجز معاينة','Download brochure':'تحميل الكتيّب','Compare':'مقارنة','Explore projects':'استكشف المشاريع','Small':'صغير','Medium':'متوسط','Large':'كبير','Hover':'تمرير','Focus':'تركيز','Disabled':'معطّل','Reserving':'جارٍ الحجز','Sending':'جارٍ الإرسال','Enquire now':'استفسر الآن','Watch the film':'شاهد الفيلم',
+    'Variants':'الأنواع','Sizes':'الأحجام','States':'الحالات','On imagery & silk':'على الصور والحرير','Text links':'روابط نصية','Icon buttons':'أزرار الأيقونات',
+    'View residence':'عرض الوحدة','All projects':'كل المشاريع','Read the full story':'اقرأ القصة كاملة','Hover state':'حالة التمرير',
+    'Full name':'الاسم الكامل','As it appears on your passport.':'كما يظهر في جواز السفر.','Mobile number':'رقم الهاتف','We will only call between 9:00 and 18:00.':'نتصل فقط بين 9:00 و18:00.','Email':'البريد الإلكتروني','Enter a complete email address.':'أدخل بريدًا إلكترونيًا كاملًا.','Search':'بحث','Focused':'في حالة التركيز','Unit reference':'رقم الوحدة','Assigned by your consultant.':'يحدده مستشار المبيعات.','Message':'رسالة','(optional)':'(اختياري)',
+    'Unit type':'نوع الوحدة','Project':'المشروع','Floor':'الطابق','Noor Residences':'نور ريزيدنس','Rimal Villas':'فلل رمال','Qurum Gate':'بوابة القرم','Al Khuwair':'الخوير','Al Mawaleh':'الموالح','Qurum':'القرم',
+    'Amenities':'المرافق','Sea view':'إطلالة بحرية','Private pool':'مسبح خاص',"Maid's room":'غرفة خادمة','Rooftop garden (sold out)':'حديقة السطح (نفدت)','Preferred contact':'وسيلة التواصل المفضلة','Phone call':'مكالمة هاتفية','WhatsApp':'واتساب','Visit (unavailable)':'زيارة (غير متاحة)','Notifications':'الإشعارات','Payment reminders':'تذكير بالدفعات','Construction updates':'تحديثات البناء','New launches':'إطلاقات جديدة','SMS (coming soon)':'رسائل نصية (قريبًا)',
+    'Penthouse':'بنتهاوس','Grid':'شبكة','List':'قائمة','Map':'خريطة',
+    'Overview':'نظرة عامة','Floor plans':'المخططات','Payment plan':'خطة الدفع','Location':'الموقع',
+    'Twenty-two storeys of calm above Al Khuwair, with uninterrupted views to the Sea of Oman.':'اثنان وعشرون طابقًا من السكينة فوق الخوير، بإطلالات مفتوحة على بحر عُمان.',
+    'Projects':'المشاريع','Invest':'الاستثمار','About':'عن سراج','News':'الأخبار','Contact':'تواصل معنا','Enquire':'استفسر','Mobile · closed':'الجوال · مغلقة','Mobile · drawer open':'الجوال · القائمة مفتوحة',
+    'Home':'الرئيسية','Muscat':'مسقط','Previous':'السابق','Next':'التالي','Showing 1–12 of 142 residences':'عرض 1–12 من 142 وحدة',
+    'Handover, simplified':'تسليم بلا تعقيد','A dedicated relationship manager walks every residence with you before the keys change hands.':'مدير علاقات مخصّص يرافقك في معاينة وحدتك قبل تسليم المفاتيح.','Learn more':'اعرف المزيد','News · 12 Sep 2026':'أخبار · 12 سبتمبر 2026','The SIRAJ sales centre opens in Al Khuwair':'افتتاح مركز مبيعات سراج في الخوير','Investor brief':'موجز المستثمر','Freehold ownership for GCC and international buyers':'تملّك حر لمواطني الخليج والمشترين الدوليين','Integrated Tourism Complex status grants full title and residence visas.':'صفة المجمع السياحي المتكامل تمنح ملكية كاملة وتأشيرة إقامة.','PDF · 2.4 MB':'PDF · 2.4 م.ب',
+    'Off-plan':'على المخطط','Ready':'جاهز','Sold':'مُباع','Al Khuwair, Muscat':'الخوير، مسقط','Al Mawaleh, Seeb':'الموالح، السيب','Qurum, Muscat':'القرم، مسقط','Ghala, Muscat':'غلا، مسقط','From':'ابتداءً من','Unit B-1204':'الوحدة B-1204',
+    'Type':'النوع','Units':'الوحدات','Handover':'التسليم','Residential':'سكني','Mixed-use':'متعدد الاستخدامات','Area':'المساحة','Commercial':'تجاري','Floors':'الطوابق','Status':'الحالة','Ghala Business Square':'ساحة غلا للأعمال',
+    'Residences delivered':'وحدة سكنية مسلّمة','Across 12 developments since 2011.':'في 12 مشروعًا منذ 2011.','Portfolio value':'قيمة المحفظة','Current portfolio, 2026.':'المحفظة الحالية، 2026.','Sold · Noor Residences':'المُباع · نور ريزيدنس','vs last quarter':'مقارنة بالربع السابق','Collection rate':'نسبة التحصيل','vs last month':'مقارنة بالشهر السابق','Sales value · QTD':'قيمة المبيعات · الربع','vs Q2':'مقارنة بالربع الثاني','Reservations · MTD':'الحجوزات · الشهر','vs September':'مقارنة بسبتمبر','Average price / m²':'متوسط سعر م²','stable':'مستقر',
+    'Unit':'الوحدة','Area m²':'المساحة م²','View':'الإطلالة','Price OMR':'السعر ر.ع.','1 Bedroom':'غرفة نوم','2 Bedroom':'غرفتا نوم','3 Bedroom':'3 غرف نوم','City':'المدينة','Garden':'الحديقة','Sea':'البحر','Panoramic':'بانورامية','Available':'متاح','Reserved':'محجوز','On request':'عند الطلب',
+    'Who can buy property at Noor Residences?':'من يحق له التملّك في نور ريزيدنس؟','What does the payment plan look like?':'ما هي خطة الدفع؟','Are service charges included?':'هل رسوم الخدمات مشمولة؟',
+    'Omani nationals, GCC citizens and international buyers. As an Integrated Tourism Complex, Noor Residences offers freehold title and eligibility for an Omani residence visa.':'المواطنون العُمانيون ومواطنو دول الخليج والمشترون الدوليون. بصفته مجمعًا سياحيًا متكاملًا، يتيح نور ريزيدنس التملّك الحر والأهلية لتأشيرة الإقامة العُمانية.',
+    'Property status':'حالة العقار','New launch':'إطلاق جديد','Handover Q4 2027':'التسليم الربع الرابع 2027','Overdue':'متأخر','Freehold':'تملّك حر','Filter tags':'وسوم التصفية','Pool':'مسبح','Gym':'نادٍ رياضي','2 parking':'موقفان',
+    'Maryam Al Balushi':'مريم البلوشي','Senior sales consultant':'مستشارة مبيعات أولى',
+    'Unit B-1204 · Noor Residences':'الوحدة B-1204 · نور ريزيدنس','Reserve this residence':'احجز هذه الوحدة','Cancel':'إلغاء','Confirm reservation':'تأكيد الحجز','Open live dialog':'افتح النافذة','Open live drawer':'افتح اللوحة',
+    'Filter residences':'تصفية الوحدات','Bedrooms':'غرف النوم','Any':'الكل','Budget':'الميزانية','Covered parking':'موقف مظلّل','Reset':'إعادة ضبط','Show 24 residences':'عرض 24 وحدة',
+    'Service charge: OMR 2.4 / m² / year':'رسوم الخدمات: 2.4 ر.ع. / م² / سنة','Share this residence':'شارك هذه الوحدة','Full ownership title in your name':'سند ملكية كامل باسمك',
+    'Sales centre hours':'مواعيد مركز المبيعات','During Ramadan the Al Khuwair sales centre is open 10:00–15:00 and 20:00–23:00.':'خلال شهر رمضان يفتح مركز مبيعات الخوير من 10:00 إلى 15:00 ومن 20:00 إلى 23:00.','Payment received':'تم استلام الدفعة','OMR 14,500 was credited to instalment 4 on 2 Oct 2026. Your receipt is in Documents.':'تم قيد 14,500 ر.ع. للقسط الرابع في 2 أكتوبر 2026. الإيصال في المستندات.','View receipt':'عرض الإيصال','Instalment due in 7 days':'قسط مستحق خلال 7 أيام','OMR 14,500 is due on 18 Oct 2026.':'مبلغ 14,500 ر.ع. مستحق في 18 أكتوبر 2026.','We could not verify your documents':'تعذّر التحقق من مستنداتك','The passport copy is unreadable. Please upload a clearer scan.':'نسخة الجواز غير واضحة. يرجى رفع نسخة أوضح.',
+    'Saved to your shortlist':'أُضيفت إلى قائمتك المختصرة','Noor Residences · Unit B-1204':'نور ريزيدنس · الوحدة B-1204','Undo':'تراجع','Brochure downloaded':'تم تحميل الكتيّب','Trigger a toast':'أظهر إشعارًا','Documents verified':'تم التحقق من المستندات','Prices exclude 3% registration fee':'الأسعار لا تشمل رسوم التسجيل 3%','Offer ends 31 Oct 2026':'ينتهي العرض في 31 أكتوبر 2026','Unit no longer available':'الوحدة لم تعد متاحة',
+    'Loading residences':'جارٍ تحميل الوحدات',
+    'Construction · Noor Residences':'البناء · نور ريزيدنس','Updated 30 Sep 2026':'آخر تحديث 30 سبتمبر 2026','Paid to date':'المدفوع حتى الآن','OMR 58,000 / 145,000':'58,000 / 145,000 ر.ع.','40% paid':'تم دفع 40%','Next: 18 Oct 2026':'التالي: 18 أكتوبر 2026','Enabling works':'الأعمال التمهيدية','Foundations':'الأساسات','Structure':'الهيكل','Level 18 of 22':'الطابق 18 من 22','Façade & MEP':'الواجهات والأنظمة','Interiors':'التشطيبات الداخلية',
+    'Q1 2025':'الربع الأول 2025','Q3 2025':'الربع الثالث 2025','Q1 2027':'الربع الأول 2027','Q3 2027':'الربع الثالث 2027','Q4 2027':'الربع الرابع 2027','Q2 2028':'الربع الثاني 2028',
+    'No saved residences yet':'لا توجد وحدات محفوظة بعد','Tap the heart on any residence to keep it here. Your shortlist is shared with your sales consultant.':'اضغط على القلب في أي وحدة للاحتفاظ بها هنا. تُشارك قائمتك مع مستشار المبيعات.','Browse residences':'تصفّح الوحدات',
+    'Architecture shaped with the elegance of silk.':'عمارة تتشكّل بأناقة الحرير.','Company':'الشركة','Newsletter':'النشرة البريدية','Launches and progress updates, once a month.':'الإطلاقات وتحديثات التقدم، مرة في الشهر.','© 2026 SIRAJ Real Estate Development SAOC':'© 2026 سراج للتطوير العقاري ش.م.ع.م','Privacy':'الخصوصية','Terms':'الشروط',
+    'A refundable reservation fee of':'رسوم حجز مستردّة بقيمة','OMR 2,000':'2,000 ر.ع.','holds this residence for 14 days while your consultant prepares the sale and purchase agreement.':'تحجز هذه الوحدة لمدة 14 يومًا ريثما يُعدّ مستشارك اتفاقية البيع والشراء.',
+    '+8 pts':'\u2066+8\u2069 نقاط','−1.1 pts':'\u2066−1.1\u2069 نقطة','+12.6%':'\u2066+12.6%\u2069','+3':'\u2066+3\u2069','0.0%':'\u20660.0%\u2069','OMR':'ر.ع.','M':'مليون',
+    '2 bedroom apartment':'شقة بغرفتي نوم','1 bedroom apartment':'شقة بغرفة نوم','3 bedroom apartment':'شقة بثلاث غرف نوم','Select a unit type first':'اختر نوع الوحدة أولًا','OMR 150,000 – 250,000':'150,000 – 250,000 ر.ع.','All projects':'كل المشاريع',
+    'Display · 300':'عرض · 300','H3 · 400':'عنوان 3 · 400','Body · 400':'نص · 400','Eyebrow · 500':'تمهيد · 500','Light, built.':'نورٌ يُبنى.','A residence shaped by light':'مسكن يتشكّل بالضوء','Calm, precise, confident. Short sentences.':'هادئ، دقيق، واثق. جمل قصيرة.','Al Khuwair · Muscat':'الخوير · مسقط','12-column grid · 24 px gutter · 1280 px max':'شبكة 12 عمودًا · فاصل 24 بكسل · 1280 بكسل','Signature':'التوقيع','Lumen · 45° Stone':'اللومن · حجر 45°','Silk Corner · top-end only':'زاوية الحرير · أعلى النهاية فقط'
+  };
+  var PH = { 'e.g. Salim Al Harthy':'مثال: سالم الحارثي', 'Project, area or unit':'مشروع أو منطقة أو وحدة', 'Tell us what you are looking for — size, view, timing.':'أخبرنا بما تبحث عنه — المساحة والإطلالة والتوقيت.', 'Email address':'البريد الإلكتروني' };
+  var originals = new WeakMap();
+  function walk(scope, toAr) {
+    var tw = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, null);
+    var n; while ((n = tw.nextNode())) {
+      if (n.parentNode.closest('pre, script, style')) continue;
+      if (toAr) {
+        var t = n.nodeValue.trim();
+        if (t && AR[t]) { originals.set(n, n.nodeValue); n.nodeValue = n.nodeValue.replace(t, AR[t]); }
+      } else if (originals.has(n)) { n.nodeValue = originals.get(n); }
+    }
+    scope.querySelectorAll('[placeholder]').forEach(function (el) {
+      if (toAr && PH[el.placeholder]) { el.dataset.phEn = el.placeholder; el.placeholder = PH[el.placeholder]; }
+      else if (!toAr && el.dataset.phEn) el.placeholder = el.dataset.phEn;
+    });
+  }
+  document.addEventListener('sj:dir', function (e) {
+    var rtl = e.detail === 'rtl';
+    document.querySelectorAll('[data-sj-dir-scope]').forEach(function (s) { walk(s, rtl); });
+    document.querySelector('[data-dir-label]').textContent = rtl ? 'RTL' : 'LTR';
+  });
+  document.addEventListener('sj:theme', function (e) { document.querySelector('[data-theme-label]').textContent = e.detail === 'dark' ? 'Dark' : 'Light'; });
+  document.querySelectorAll('.doc-code__copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var txt = b.nextElementSibling.textContent;
+      if (navigator.clipboard) navigator.clipboard.writeText(txt).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); });
+    });
+  });
+  var links = Array.prototype.slice.call(document.querySelectorAll('.doc-side a[href^="#"]'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) links.forEach(function (a) { a.classList.toggle('is-current', a.getAttribute('href') === '#' + en.target.id); }); }); }, { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('.doc-section').forEach(function (s) { io.observe(s); });
+  }
+  var q = new URLSearchParams(location.search);
+  if (q.get('theme') === 'dark') SIRAJ.setTheme('dark');
+  if (q.get('dir') === 'rtl') SIRAJ.setDir('rtl');
+})();
+</script>
+</body>
+</html>

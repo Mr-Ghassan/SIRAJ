@@ -1,0 +1,245 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SIRAJ Social — Noor Residences Carousel</title>
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<link rel="stylesheet" href="social.css">
+<!-- Template data: edit the copy below. Contact and project facts come from
+     00-Brand-Foundation/brand.config.json through {tokens} (see README). Open with
+     ?format=post|square|story|reel|carousel|li|x&lang=en|ar(&slide=n) -->
+<script id="data" type="application/json">{
+  "name": "Noor-Carousel",
+  "exports": {
+    "carousel": [
+      "en",
+      "ar"
+    ]
+  },
+  "slides": [
+    {
+      "layout": "hero",
+      "env": "photo",
+      "photo": "Campaign-Silk-Wrap",
+      "pos": "50% 42%",
+      "overlay": "scrim",
+      "scrimReach": 560,
+      "display": true,
+      "cw": 0.86,
+      "en": {
+        "eyebrow": "{noor.en} · {noor.location_en}",
+        "title": "A tower shaped by light."
+      },
+      "ar": {
+        "eyebrow": "{noor.ar} · {noor.location_ar}",
+        "title": "برجٌ يتشكّل بالضوء."
+      }
+    },
+    {
+      "layout": "window",
+      "env": "ivory",
+      "photo": "Apartment-Interior-Sea-View",
+      "pos": "58% 50%",
+      "media": {
+        "shape": "corner",
+        "h": 0.5
+      },
+      "en": {
+        "eyebrow": "01 · The residences",
+        "title": "Rooms that open to the sea.",
+        "lead": "One- to four-bedroom residences with floor-to-ceiling glazing and deep, shaded terraces."
+      },
+      "ar": {
+        "eyebrow": "01 · الوحدات السكنية",
+        "title": "غرفٌ تنفتح على البحر.",
+        "lead": "وحدات من غرفة إلى أربع غرف نوم، بواجهات زجاجية كاملة الارتفاع وشرفات عميقة مظلّلة."
+      }
+    },
+    {
+      "layout": "type",
+      "env": "linen",
+      "anchor": "bottom",
+      "elements": [
+        {
+          "type": "Silk-Line_Maroon",
+          "style": "left:-140px;top:40px;width:1360px"
+        }
+      ],
+      "en": {
+        "eyebrow": "02 · Amenities",
+        "title": "Designed for stillness.",
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Residents’ lounge and library",
+              "Infinity pool facing the mountains",
+              "Fitness studio and spa",
+              "Landscaped podium garden",
+              "24-hour concierge"
+            ]
+          }
+        ]
+      },
+      "ar": {
+        "eyebrow": "02 · المرافق",
+        "title": "صُمّمت للسكينة.",
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "ردهة للسكان ومكتبة",
+              "مسبح لا متناهٍ يطلّ على الجبال",
+              "استوديو لياقة وسبا",
+              "حديقة منسّقة على المنصّة",
+              "خدمة كونسيرج على مدار الساعة"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "layout": "type",
+      "env": "deep",
+      "still": "Horizon-Deep",
+      "anchor": "bottom",
+      "en": {
+        "eyebrow": "03 · Key facts",
+        "title": "{noor.en} at a glance.",
+        "blocks": [
+          {
+            "type": "stats",
+            "cols": 2,
+            "items": [
+              {
+                "v": "{noor.units}",
+                "l": "Residences"
+              },
+              {
+                "v": "{noor.floors}",
+                "l": "Floors"
+              },
+              {
+                "v": "{noor.handover}",
+                "sm": true,
+                "l": "Handover"
+              },
+              {
+                "v": "{n:noor.from_price_omr}",
+                "u": "OMR",
+                "pre": true,
+                "sm": true,
+                "l": "Starting price"
+              }
+            ]
+          }
+        ]
+      },
+      "ar": {
+        "eyebrow": "03 · حقائق رئيسية",
+        "title": "{noor.ar} في لمحة.",
+        "blocks": [
+          {
+            "type": "stats",
+            "cols": 2,
+            "items": [
+              {
+                "v": "{noor.units}",
+                "l": "وحدة سكنية"
+              },
+              {
+                "v": "{noor.floors}",
+                "l": "طابقاً"
+              },
+              {
+                "v": "{q:noor.handover}",
+                "sm": true,
+                "l": "التسليم"
+              },
+              {
+                "v": "{n:noor.from_price_omr}",
+                "u": "ر.ع.",
+                "sm": true,
+                "l": "الأسعار ابتداءً من"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "layout": "type",
+      "env": "maroon",
+      "still": "Drape-Lumen",
+      "anchor": "bottom",
+      "footGap": 1.2,
+      "footLockup": {
+        "en": {
+          "v": "Descriptor_Reversed",
+          "w": 330,
+          "vb": [
+            126.27,
+            74.21
+          ]
+        },
+        "ar": {
+          "v": "Arabic_Reversed",
+          "w": 300,
+          "vb": [
+            126.27,
+            85.07
+          ]
+        }
+      },
+      "en": {
+        "eyebrow": "Register your interest",
+        "title": "Visit the {noor.en} suite.",
+        "blocks": [
+          {
+            "type": "details",
+            "rows": [
+              [
+                "Call",
+                "{contact.phone}"
+              ],
+              [
+                "WhatsApp",
+                "{contact.whatsapp}"
+              ],
+              [
+                "Online",
+                "{contact.website}"
+              ]
+            ],
+            "kcol": "30%"
+          }
+        ]
+      },
+      "ar": {
+        "eyebrow": "سجّل اهتمامك",
+        "title": "زوروا جناح {noor.ar}.",
+        "blocks": [
+          {
+            "type": "details",
+            "rows": [
+              [
+                "اتصل بنا",
+                "[[{contact.phone}]]"
+              ],
+              [
+                "واتساب",
+                "[[{contact.whatsapp}]]"
+              ],
+              [
+                "الموقع",
+                "[[{contact.website}]]"
+              ]
+            ],
+            "kcol": "30%"
+          }
+        ]
+      },
+      "formats": {
+        "carousel": {}
+      }
+    }
+  ]
+}</script>
+</head><body><script src="brand-data.js"></script><script src="social.js"></script></body></html>

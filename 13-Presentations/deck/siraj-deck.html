@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noor Residences — Investor Presentation · SIRAJ</title>
+<meta name="description" content="SIRAJ presentation system v1.0 — sample investor presentation for Noor Residences (demonstration project).">
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+<!--
+  SIRAJ Presentation System v1.0 · English master deck
+  Edit text directly in each <section class="slide">. Chart data lives in the data-chart JSON.
+  Keys: P present · ←/→ navigate · G grid overlay · Esc exit.  Export: node tools/build-presentations.js
+-->
+<main class="deck">
+
+<!-- 01 · COVER ============================================================= -->
+<section class="slide slide--dark" data-foot="none" aria-label="Cover">
+  <img class="cover-logo" src="../../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ">
+  <div class="cover-portal sj-mask-portal"><img src="../../08-Photography/Library/SIRAJ_Photo_Campaign-Silk-Wrap_v1.0.jpg" alt="Noor Residences tower wrapped in maroon silk at dusk"></div>
+  <div class="cover-text on-dark">
+    <p class="eyebrow"><span class="lumen"></span>Investor presentation · October 2026</p>
+    <h1 class="display" style="margin-top:40px">Noor Residences</h1>
+    <p class="ar-name" lang="ar" dir="rtl" style="text-align:left">مساكن نور</p>
+    <p class="lead">A 24-storey tower of 168 residences in Al&nbsp;Khuwair, Muscat.</p>
+  </div>
+  <footer class="foot foot--on-dark" style="right:auto"><span>SIRAJ Real Estate Development · Confidential</span></footer>
+</section>
+
+<!-- 02 · AGENDA ============================================================ -->
+<section class="slide" aria-label="Agenda">
+  <div class="frame">
+    <div class="c-1-5 row-full" style="display:flex;flex-direction:column">
+      <p class="eyebrow">Contents</p>
+      <h2 class="title">Agenda</h2>
+      <p class="lead muted" style="margin-top:auto;max-width:560px">Noor Residences, its performance since launch and the terms on offer to investors.</p>
+    </div>
+    <div class="c-7-12 row-full" style="padding-top:8px">
+      <ol class="agenda agenda--fill">
+        <li><span class="n">01</span><span class="t">The project<span class="d">Overview, location, masterplan and residences</span></span><span class="p num">04</span></li>
+        <li><span class="n">02</span><span class="t">Performance<span class="d">Key numbers, sales, pricing and delivery</span></span><span class="p num">10</span></li>
+        <li><span class="n">03</span><span class="t">Investment<span class="d">Budget, proposition, payment plan and team</span></span><span class="p num">15</span></li>
+        <li><span class="n">04</span><span class="t">Next steps<span class="d">Viewings, reservations and contact</span></span><span class="p num">21</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · EXECUTIVE SUMMARY ================================================= -->
+<section class="slide" data-section="Executive summary" aria-label="Executive summary">
+  <div class="frame">
+    <div class="c-1-5 row-full" style="display:flex;flex-direction:column">
+      <p class="eyebrow">Executive summary</p>
+      <h2 class="title">A quiet tower at the centre of Muscat, half sold in seven months.</h2>
+      <div class="progress" style="margin-top:auto">
+        <div class="progress-v num">84<small>/ 168</small></div>
+        <div class="progress-bar"><i style="width:50%"></i><span class="lumen" style="left:50%"></span></div>
+        <p class="caption">Residences sold · September 2026</p>
+      </div>
+    </div>
+    <div class="c-7-12 row-full" style="padding-top:8px">
+      <ul class="points">
+        <li><span class="lumen"></span><div><h3>A prime, connected address</h3><p>On Sultan Qaboos Street in Al Khuwair, five minutes from the Grand Mosque and fifteen from the airport.</p></div></li>
+        <li><span class="lumen"></span><div><h3>Strong early absorption</h3><p>84 of 168 residences sold since launch in March 2026, about twelve each month.</p></div></li>
+        <li><span class="lumen"></span><div><h3>Resilient economics</h3><p>OMR 40.0 M gross development value and a projected 27% gross margin on an OMR 29.2 M budget.</p></div></li>
+        <li><span class="lumen"></span><div><h3>On programme for Q4 2027</h3><p>Foundations and podium are complete. The structure has reached level 9 of 24.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · SECTION DIVIDER (dark silk) ======================================= -->
+<section class="slide slide--dark" data-foot="none" aria-label="Section 01">
+  <div class="bleed"><img src="../../06-SIRAJ-Silk/Stills/Drape-Lumen/SIRAJ_Silk_Drape-Lumen_16x9_v1.0.jpg" alt=""></div>
+  <div class="scrim-start"></div>
+  <div class="divider-text on-dark" style="bottom:192px">
+    <p class="divider-num">01</p>
+    <h2 class="display">The project</h2>
+    <p class="lead" style="margin-top:32px;max-width:620px">Twenty-four storeys shaped by light, on Muscat's coastal spine.</p>
+  </div>
+</section>
+
+<!-- 05 · PROJECT OVERVIEW ================================================== -->
+<section class="slide" data-section="01 · The project" data-foot-from="8" aria-label="Project overview">
+  <div class="sj-mask-silk-corner" style="position:absolute;left:0;top:0;bottom:0;width:calc(var(--m) + 6 * var(--col) + 5 * var(--g))">
+    <img src="../../08-Photography/Library/SIRAJ_Photo_Residential-Tower-Golden-Hour_v1.0.jpg" alt="Noor Residences at golden hour" style="width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
+  </div>
+  <div class="frame">
+    <div class="c-8-12 row-full" style="display:flex;flex-direction:column">
+      <p class="eyebrow">Project overview</p>
+      <h2 class="title">Noor Residences</h2>
+      <p class="body muted" style="margin-top:28px">A slender tower of warm stone and bronze. Deep loggias temper the afternoon sun and frame long views to the Gulf of Oman.</p>
+      <dl class="specs" style="margin-top:auto">
+        <div><dt>Location</dt><dd>Al Khuwair, Muscat</dd></div>
+        <div><dt>Typology</dt><dd>Residential tower</dd></div>
+        <div><dt>Floors</dt><dd class="num">24 + podium</dd></div>
+        <div><dt>Residences</dt><dd class="num">168</dd></div>
+        <div><dt>Plot area</dt><dd class="num">5,170 m²</dd></div>
+        <div><dt>Gross floor area</dt><dd class="num">31,500 m²</dd></div>
+        <div><dt>Saleable area</dt><dd class="num">23,930 m²</dd></div>
+        <div><dt>Handover</dt><dd class="num">Q4 2027</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · FULL-BLEED IMAGE ================================================== -->
+<section class="slide slide--dark" data-section="01 · The project" aria-label="The residences">
+  <div class="bleed"><img src="../../08-Photography/Library/SIRAJ_Photo_Apartment-Interior-Sea-View_v1.0.jpg" alt="Living room with floor-to-ceiling glazing to the sea" style="object-position:50% 60%"></div>
+  <div class="scrim-start" style="opacity:.9"></div><div class="scrim-bottom" style="opacity:.55"></div>
+  <div class="frame on-dark">
+    <div class="c-1-5 row-full">
+      <p class="eyebrow">The residences</p>
+      <h2 class="title" style="margin-top:28px">Every home opens to the light of the Gulf.</h2>
+      <p class="caption" style="margin-top:36px">Typical two-bedroom living room · Visualisation</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · LOCATION MAP ====================================================== -->
+<section class="slide" data-section="01 · The project" aria-label="Location">
+  <div class="frame">
+    <div class="c-1-4 row-full" style="display:flex;flex-direction:column">
+      <p class="eyebrow">Location</p>
+      <h2 class="title">On Muscat's coastal spine</h2>
+      <p class="body muted" style="margin-top:28px;font-size:24px">Between Al Ghubrah and Qurum, with direct access to Sultan Qaboos Street.</p>
+      <table class="table" style="margin-top:auto">
+        <thead><tr><th>Drive time</th><th class="r">Min</th></tr></thead>
+        <tbody style="font-size:21px">
+          <tr><td style="font-size:21px">Grand Mosque</td><td class="r">5</td></tr>
+          <tr><td style="font-size:21px">Oman Avenues Mall</td><td class="r">6</td></tr>
+          <tr><td style="font-size:21px">Royal Opera House</td><td class="r">8</td></tr>
+          <tr><td style="font-size:21px">Muscat Airport</td><td class="r">15</td></tr>
+          <tr><td style="font-size:21px">Al Mouj Muscat</td><td class="r">18</td></tr>
+          <tr><td style="font-size:21px">Muttrah Corniche</td><td class="r">20</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="c-5-12 row-full">
+      <svg class="chart" data-draw="map" width="1110" height="888" role="img" aria-label="Stylised map of Muscat showing Noor Residences in Al Khuwair"
+        data-opts='{"landmarks":[
+          {"n":"Grand Mosque","t":"5 min","lon":58.388,"lat":23.584,"side":"l","dy":64},
+          {"n":"Oman Avenues Mall","t":"6 min","lon":58.400,"lat":23.600,"side":"l","dy":24},
+          {"n":"Royal Opera House","t":"8 min","lon":58.468,"lat":23.613,"side":"r","dy":-44},
+          {"n":"Muscat Airport","t":"15 min","lon":58.284,"lat":23.593,"side":"r","dy":-20},
+          {"n":"Muttrah Corniche","t":"20 min","lon":58.566,"lat":23.624,"side":"l","dy":-44}],
+          "offmap":[{"n":"Al Mouj Muscat","t":"18 min","y":236}]}'></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · MASTERPLAN ======================================================== -->
+<section class="slide slide--linen" data-section="01 · The project" aria-label="Masterplan">
+  <div class="frame">
+    <div class="c-1-4 row-full" style="display:flex;flex-direction:column">
+      <p class="eyebrow">Masterplan</p>
+      <h2 class="title">A garden at the foot of the tower</h2>
+      <ol class="sitekey">
+        <li><b>1</b>Noor Residences tower</li>
+        <li><b>2</b>Arrival court &amp; drop-off</li>
+        <li><b>3</b>Residents' garden</li>
+        <li><b>4</b>Pool deck</li>
+        <li><b>5</b>Children's garden</li>
+        <li><b>6</b>Car park entry · 2 basements</li>
+        <li><b>7</b>Café &amp; retail pavilion</li>
+        <li><b>8</b>Podium: gym, lounge, majlis</li>
+      </ol>
+      <p class="caption" style="margin-top:auto">Plot 5,170 m² · 62% open space</p>
+    </div>
+    <div class="c-5-12 row-full">
+      <svg class="chart" data-draw="site" width="1110" height="888" role="img" aria-label="Stylised site plan of Noor Residences"
+        data-opts='{"scale":8.4,"ox":200,"oy":96,"keys":[
+          {"n":1,"x":44,"y":27,"dark":true},{"n":2,"x":14,"y":65},{"n":3,"x":19,"y":25},{"n":4,"x":46,"y":57},
+          {"n":5,"x":13,"y":51},{"n":6,"x":71,"y":24},{"n":7,"x":47,"y":68.5,"dark":true},{"n":8,"x":31,"y":43}]}'></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · FLOOR PLAN ======================================================== -->
+<section class="slide" data-section="01 · The project" aria-label="Floor plan">
+  <div class="frame">
+    <div class="c-1-4 row-full" style="display:flex;flex-direction:column">
+      <p class="eyebrow">Residences · Type B</p>
+      <h2 class="title">Two-bedroom residence</h2>
+      <p class="body muted" style="margin-top:28px;font-size:24px">A north-facing plan with a 7.8 m wide balcony across the living room and master bedroom.</p>
+      <dl class="specs" style="margin-top:auto;grid-template-columns:1fr">
+        <div><dt>Internal area</dt><dd class="num">122 m²</dd></div>
+        <div><dt>Balcony</dt><dd class="num">14 m²</dd></div>
+        <div><dt>Total area</dt><dd class="num">136 m²</dd></div>
+        <div><dt>From</dt><dd class="num">OMR 212,000</dd></div>
+      </dl>
+    </div>
+    <div class="c-5-12 row-full">
+      <svg class="chart" data-draw="plan" width="1110" height="888" role="img" aria-label="Floor plan of the Type B two-bedroom residence with room areas" data-opts='{"scale":62,"ox":96,"oy":104}'></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · SECTION DIVIDER (light silk) ====================================== -->
+<section class="slide slide--light-silk" data-foot="none" aria-label="Section 02">
+  <div class="bleed"><img src="../../06-SIRAJ-Silk/Stills/Horizon-Ivory/SIRAJ_Silk_Horizon-Ivory_16x9_v1.0.jpg" alt=""></div>
+  <div class="divider-text" style="top:var(--top)">
+    <p class="divider-num" style="margin-top:0">02</p>
+    <h2 class="display">Performance</h2>
+    <p class="lead muted" style="margin-top:32px;max-width:620px">Seven months of sales, pricing and construction.</p>
+  </div>
+</section>
+
+<!-- 11 · KEY NUMBERS ======================================================= -->
+<section class="slide slide--dark" data-section="02 · Performance" aria-label="Key numbers">
+  <div class="frame">
+    <div class="c-1-8"><p class="eyebrow">Key numbers</p><h2 class="title">Noor Residences at a glance</h2></div>
+    <div class="c-1-12 row-body" style="align-self:end">
+      <div class="kpis">
+        <div class="kpi"><div class="v num">168</div><p class="l">Residences across 24 floors</p></div>
+        <div class="kpi"><div class="v num">50<small>%</small></div><span class="key lumen lumen--xl"></span><p class="l">Sold within seven months of launch</p></div>
+        <div class="kpi"><div class="v num"><small>OMR</small>40.0<small>M</small></div><p class="l">Gross development value</p></div>
+        <div class="kpi"><div class="v num">27<small>%</small></div><p class="l">Projected gross margin</p></div>
+        <div class="kpi"><div class="v num">6.4<small>%</small></div><p class="l">Projected gross rental yield</p></div>
+        <div class="kpi"><div class="v num"><small>Q4</small>2027</div><p class="l">Handover to residents</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · CHARTS: BAR + LINE ================================================ -->
+<section class="slide" data-section="02 · Performance" aria-label="Sales and pricing">
+  <div class="frame">
+    <div class="c-1-8"><p class="eyebrow">Sales &amp; pricing</p><h2 class="title">Steady absorption at a premium to the market</h2></div>
+    <div class="c-1-6 row-body chart-block" style="margin-top:72px">
+      <h3>Sales velocity</h3>
+      <p class="unit">Residences sold per month, 2026 · 84 to date</p>
+      <svg class="chart" style="margin-top:28px" width="824" height="500"
+        data-chart='{"type":"bar","labels":["Mar","Apr","May","Jun","Jul","Aug","Sep"],"values":[17,12,9,11,10,12,13],"yMax":20,"yStep":5,"highlight":0}'></svg>
+    </div>
+    <div class="c-7-12 row-body chart-block" style="margin-top:72px">
+      <h3>Price per m²</h3>
+      <p class="unit">Average asking price, OMR per m² of saleable area</p>
+      <svg class="chart" style="margin-top:28px" width="824" height="500"
+        data-chart='{"type":"line","labels":["2021","2022","2023","2024","2025","2026"],"yMin":600,"yMax":1800,"yStep":300,
+        "series":[{"name":"Al Khuwair new-build","values":[1180,1230,1290,1370,1460,1560],"color":"#602733","dy":34},
+                  {"name":"Muscat apartments","values":[760,780,805,840,885,930],"color":"#8E837D"}],
+        "marker":{"i":5,"v":1670,"from":1560,"label":"Noor Residences","delta":"+7%"}}'></svg>
+    </div>
+    <p class="source c-1-12" style="position:absolute;bottom:-8px;left:0">Source: SIRAJ sales records, Sep 2026. Market series are illustrative demonstration data.</p>
+  </div>
+</section>
+
+<!-- 13 · CHART: STACKED (donut alternative) ================================ -->
+<section class="slide" data-section="02 · Performance" aria-label="Unit mix">
+  <div class="frame">
+    <div class="c-1-8"><p class="eyebrow">Unit mix</p><h2 class="title">A mix weighted towards two-bedroom homes</h2></div>
+    <div class="c-1-12 row-body" style="margin-top:96px">
+      <svg class="chart" width="1680" height="356"
+        data-chart='{"type":"stack","cats":["One-bedroom","Two-bedroom","Three-bedroom","Penthouse"],"rowGap":120,
+        "rows":[{"label":"Residences","total":"168","values":[48,84,30,6],"pct":[29,50,18,3]},
+                {"label":"Sales value","total":"OMR 40.0 M","values":[7.3,18.8,9.6,4.3],"pct":[18,47,24,11],"display":["7.3 M","18.8 M","9.6 M","4.3 M"]}]}'></svg>
+      <div class="mix">
+        <div><span class="caption">One-bedroom</span><p class="num">92–98 m² · from OMR 145,000</p><div class="meter"><i style="width:58%"></i></div><p class="sold num">28 of 48 sold</p></div>
+        <div><span class="caption">Two-bedroom</span><p class="num">132–140 m² · from OMR 212,000</p><div class="meter"><i style="width:52%"></i></div><p class="sold num">44 of 84 sold</p></div>
+        <div><span class="caption">Three-bedroom</span><p class="num">184–196 m² · from OMR 298,000</p><div class="meter"><i style="width:37%"></i></div><p class="sold num">11 of 30 sold</p></div>
+        <div><span class="caption">Penthouse</span><p class="num">340–410 m² · from OMR 640,000</p><div class="meter"><i style="width:17%"></i></div><p class="sold num">1 of 6 sold</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 · TIMELINE ========================================================== -->
+<section class="slide" data-section="02 · Performance" aria-label="Construction timeline">
+  <div class="frame">
+    <div class="c-1-7"><p class="eyebrow">Delivery</p><h2 class="title">On programme for handover in Q4 2027</h2>
+      <p class="body muted" style="margin-top:24px">The structure has reached level 9 of 24. Construction is 38% complete.</p></div>
+    <figure class="c-8-12" style="margin:0">
+      <div class="media" style="height:300px"><img src="../../08-Photography/Library/SIRAJ_Photo_Construction-Site-Dawn_v1.0.jpg" alt="Construction site at dawn"></div>
+      <figcaption class="caption media-caption">Site progress · October 2026</figcaption>
+    </figure>
+    <div class="c-1-12 row-body" style="align-self:end">
+      <div class="timeline">
+        <div class="tl-line"></div><div class="tl-done" style="width:910px"></div>
+        <div class="today" style="left:910px"><span>Today · Oct 2026</span></div>
+        <div class="tl-items">
+          <div class="tl-item done"><span class="lumen"></span><div class="q num">Q2 2025</div><h4>Land acquired</h4><p>Plot secured on Sultan Qaboos Street</p></div>
+          <div class="tl-item done"><span class="lumen"></span><div class="q num">Q4 2025</div><h4>Permits &amp; design</h4><p>Building permit and design freeze</p></div>
+          <div class="tl-item done"><span class="lumen"></span><div class="q num">Q1 2026</div><h4>Sales launch</h4><p>Released to market in March</p></div>
+          <div class="tl-item done"><span class="lumen"></span><div class="q num">Q2 2026</div><h4>Foundations</h4><p>Piling and two basement levels</p></div>
+          <div class="tl-item done"><span class="lumen"></span><div class="q num">Q3 2026</div><h4>Podium</h4><p>Podium slab and amenity shell</p></div>
+          <div class="tl-item next"><span class="lumen"></span><div class="q num">Q2 2027</div><h4>Topping out</h4><p>Structure complete to level 24</p></div>
+          <div class="tl-item next"><span class="lumen"></span><div class="q num">Q3 2027</div><h4>Façade &amp; fit-out</h4><p>Envelope sealed, interiors underway</p></div>
+          <div class="tl-item next"><span class="lumen" style="background:var(--stone);box-shadow:none"></span><div class="q num">Q4 2027</div><h4>Handover</h4><p>Keys to the first residents</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 · SECTION DIVIDER (dark silk) ======================================= -->
+<section class="slide slide--dark" data-foot="none" aria-label="Section 03">
+  <div class="bleed"><img src="../../06-SIRAJ-Silk/Stills/Ribbon-Sweep/SIRAJ_Silk_Ribbon-Sweep_16x9_v1.0.jpg" alt=""></div>
+  <div class="divider-text on-dark" style="top:var(--top)">
+    <p class="divider-num">03</p>
+    <h2 class="display">Investment</h2>
+    <p class="lead" style="margin-top:32px;max-width:620px">Budget, returns and the terms available to investors.</p>
+  </div>
+</section>
+
+<!-- 16 · FINANCIAL TABLE =================================================== -->
+<section class="slide" data-section="03 · Investment" aria-label="Development budget">
+  <div class="frame">
+    <div class="c-1-8"><p class="eyebrow">Financials</p><h2 class="title">Development budget and returns</h2></div>
+    <div class="c-1-8 row-body" style="margin-top:80px">
+      <table class="table">
+        <thead><tr><th>Budget line</th><th class="r">OMR M</th><th class="r">Share of cost</th><th class="r" style="width:300px">Committed to date</th></tr></thead>
+        <tbody>
+          <tr><td>Land</td><td class="r">4.6</td><td class="r">15.8%</td><td class="r"><span class="track"><i style="width:100%"></i></span><span class="tv">100%</span></td></tr>
+          <tr><td>Construction</td><td class="r">19.8</td><td class="r">67.8%</td><td class="r"><span class="track"><i style="width:46%"></i></span><span class="tv">46%</span></td></tr>
+          <tr><td>Professional fees</td><td class="r">1.9</td><td class="r">6.5%</td><td class="r"><span class="track"><i style="width:72%"></i></span><span class="tv">72%</span></td></tr>
+          <tr><td>Marketing &amp; sales</td><td class="r">1.2</td><td class="r">4.1%</td><td class="r"><span class="track"><i style="width:38%"></i></span><span class="tv">38%</span></td></tr>
+          <tr><td>Finance &amp; contingency</td><td class="r">1.7</td><td class="r">5.8%</td><td class="r"><span class="track"><i style="width:30%"></i></span><span class="tv">30%</span></td></tr>
+          <tr class="total"><td>Total development cost</td><td class="r">29.2</td><td class="r">100.0%</td><td class="r"><span class="track"><i style="width:55%"></i></span><span class="tv">55%</span></td></tr>
+        </tbody>
+      </table>
+      <p class="source" style="margin-top:28px">Figures in OMR million unless stated. Projections are illustrative and subject to change.</p>
+    </div>
+    <div class="c-10-12 row-body returns" style="margin-top:80px">
+      <div><span class="caption">Gross development value</span><p class="num">OMR 40.0 M</p></div>
+      <div><span class="caption">Gross profit</span><p class="num">OMR 10.8 M</p></div>
+      <div class="hl"><span class="caption">Gross margin</span><p class="num">27.0%<span class="lumen"></span></p></div>
+      <div><span class="caption">Project IRR, unlevered</span><p class="num">19.6%</p></div>
+      <div><span class="caption">Contracted sales</span><p class="num">OMR 18.4 M</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 17 · INVESTMENT PROPOSITION ============================================ -->
+<section class="slide slide--maroon" data-section="03 · Investment" aria-label="Investment proposition">
+  <img src="../../05-Graphic-System/SVG/SIRAJ_Silk-Line_Sand_v1.0.svg" alt="" style="position:absolute;left:-40px;top:250px;width:2000px;height:500px;opacity:.42">
+  <div class="frame">
+    <div class="c-1-8"><p class="eyebrow">Investment proposition</p><h2 class="title">Four reasons Noor holds its value</h2></div>
+    <div class="c-1-12 row-body" style="align-self:end">
+      <div class="pillars">
+        <div class="pillar"><div class="v num">5<small>min</small></div><h3>A central address</h3><p>On Sultan Qaboos Street, between Qurum and Al Ghubrah, five minutes from the Grand Mosque.</p></div>
+        <div class="pillar"><div class="v num">5.7<small>%</small></div><h3>Proven growth</h3><p>Compound annual growth in Al Khuwair new-build values, 2021 to 2026.</p></div>
+        <div class="pillar"><div class="v num">6.4<small>%</small></div><h3>Rental demand</h3><p>Projected gross yield, based on achieved rents for comparable new apartments.</p></div>
+        <div class="pillar"><div class="v num">40<small>%</small></div><h3>Patient terms</h3><p>Due only on handover, so most of your capital stays free until you receive the keys.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 18 · PAYMENT PLAN ====================================================== -->
+<section class="slide" data-section="03 · Investment" aria-label="Payment plan">
+  <div class="frame">
+    <div class="c-1-8"><p class="eyebrow">Payment plan</p><h2 class="title">Sixty percent during construction, forty on handover</h2></div>
+    <div class="c-1-12 row-body" style="margin-top:72px">
+      <div class="plan">
+        <div class="seg" style="flex:10"><div class="pct num">10%</div><div class="band"></div><h4>Booking</h4><p>On reservation</p></div>
+        <div class="seg" style="flex:10"><div class="pct num">10%</div><div class="band"></div><h4>Agreement</h4><p>Within 60 days</p></div>
+        <div class="seg" style="flex:10"><div class="pct num">10%</div><div class="band" style="background:var(--silk-mid)"></div><h4>Level 12</h4><p>Structure at 50%</p></div>
+        <div class="seg" style="flex:10"><div class="pct num">10%</div><div class="band" style="background:var(--silk-mid)"></div><h4>Topping out</h4><p>Q2 2027</p></div>
+        <div class="seg" style="flex:10"><div class="pct num">10%</div><div class="band" style="background:var(--silk-mid)"></div><h4>Façade</h4><p>Envelope sealed</p></div>
+        <div class="seg" style="flex:10"><div class="pct num">10%</div><div class="band" style="background:var(--silk-mid)"></div><h4>Fit-out</h4><p>Interiors complete</p></div>
+        <div class="seg" style="flex:40"><div class="pct num">40%<span class="lumen lumen--xl" style="margin-inline-start:24px;vertical-align:.35em"></span></div><div class="band" style="background:var(--deep)"></div><h4>Handover</h4><p>On completion, Q4 2027</p></div>
+      </div>
+    </div>
+    <div class="c-1-12 row-body subgrid" style="align-self:end">
+    <div class="c-1-6">
+      <table class="table">
+        <thead><tr><th>Example · Type B at OMR 212,000</th><th class="r">OMR</th></tr></thead>
+        <tbody>
+          <tr><td>Booking and agreement · 20%</td><td class="r">42,400</td></tr>
+          <tr><td>Construction instalments · 4 × 10%</td><td class="r">84,800</td></tr>
+          <tr><td>Handover · 40%</td><td class="r">84,800</td></tr>
+          <tr class="total"><td>Total</td><td class="r">212,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="c-8-12"><p class="caption" style="margin:0 0 16px">Terms</p>
+    <ul class="notes">
+      <li><span class="lumen"></span>No interest is charged during construction.</li>
+      <li><span class="lumen"></span>All payments are held in a dedicated project escrow account.</li>
+      <li><span class="lumen"></span>A post-handover option of 20% over 24 months is available on request.</li>
+    </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 19 · TEAM ============================================================== -->
+<section class="slide" data-section="03 · Investment" aria-label="Delivery team">
+  <div class="frame">
+    <div class="c-1-4 row-full" style="display:flex;flex-direction:column">
+      <p class="eyebrow">Team</p>
+      <h2 class="title">An experienced delivery team</h2>
+      <p class="body muted" style="margin-top:28px;font-size:24px">One developer accountable from land to keys, supported by specialist partners.</p>
+      <figure style="margin:auto 0 0">
+        <div class="media" style="height:300px"><img src="../../08-Photography/Library/SIRAJ_Photo_Sales-Centre-Interior_v1.0.jpg" alt="SIRAJ Sales Centre with the Noor Residences model" style="object-position:50% 45%"></div>
+        <figcaption class="caption media-caption">SIRAJ Sales Centre · Al Khuwair</figcaption>
+      </figure>
+    </div>
+    <div class="c-6-12 row-full" style="padding-top:8px;display:flex;flex-direction:column">
+      <div class="team team--rows" style="flex:1">
+        <article><div class="mono">SJ</div><div><span class="caption">Developer</span><h3>SIRAJ Real Estate Development</h3><p>Development, funding and sales</p></div></article>
+        <article><div class="mono">AW</div><div><span class="caption">Architect</span><h3>Atelier Wadi*</h3><p>Concept, façade and interiors</p></div></article>
+        <article><div class="mono">FC</div><div><span class="caption">Engineering</span><h3>Falaj Consulting*</h3><p>Structure, MEP and sustainability</p></div></article>
+        <article><div class="mono">AS</div><div><span class="caption">Main contractor</span><h3>Al Sahil Contracting*</h3><p>Design-and-build delivery</p></div></article>
+        <article><div class="mono">MP</div><div><span class="caption">Project management</span><h3>Meridian Partners*</h3><p>Cost, programme and quality</p></div></article>
+        <article><div class="mono">BL</div><div><span class="caption">Landscape</span><h3>Bustan Studio*</h3><p>Gardens, pool deck and podium</p></div></article>
+      </div>
+      <p class="source" style="margin:24px 0 0">* Partner names are illustrative placeholders.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 20 · QUOTE ============================================================= -->
+<section class="slide slide--deep" data-section="Closing" aria-label="Quote">
+  <img src="../../05-Graphic-System/SVG/SIRAJ_Lumen-Halo_v1.0.svg" alt="" style="position:absolute;left:37px;top:136px;width:240px;height:240px">
+  <div class="frame">
+    <div class="c-1-9 row-body" style="align-self:center;margin-top:40px">
+      <blockquote class="quote" style="margin:0">We build slowly, so that the people who live here can live quietly.</blockquote>
+      <div style="margin-top:56px;display:flex;align-items:center;gap:20px"><span class="hair" style="width:48px;opacity:.6"></span><p class="caption" style="margin:0">Chief Executive Officer · SIRAJ Real Estate Development</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 21 · CLOSING / CONTACT ================================================= -->
+<section class="slide slide--dark" data-foot="none" aria-label="Contact">
+  <div class="bleed"><img src="../../06-SIRAJ-Silk/Stills/Gateway/SIRAJ_Silk_Gateway_16x9_v1.0.jpg" alt=""></div>
+  <div style="position:absolute;left:0;right:0;top:330px;text-align:center" class="on-dark">
+    <img src="../../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ" style="width:340px;display:block;margin:0 auto">
+    <p class="lead" style="margin-top:56px;color:var(--sand)">Light, built.</p>
+    <p class="caption" style="margin-top:88px">Book a private viewing at the SIRAJ Sales Centre</p>
+    <div class="contact" style="margin-top:28px">
+      <span>siraj.om</span><span><span class="lumen"></span>info@siraj.om</span><span><span class="lumen"></span>+968 2400 0000</span><span><span class="lumen"></span>Al Khuwair, Muscat</span>
+    </div>
+  </div>
+  <p class="source" style="position:absolute;left:var(--m);right:var(--m);bottom:48px;text-align:center;color:rgba(214,192,178,.6)">Noor Residences is a demonstration project. All figures are illustrative and do not constitute an offer.</p>
+</section>
+
+</main>
+<script src="deck.js"></script>
+</body>
+</html>

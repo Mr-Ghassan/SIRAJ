@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Letterhead · Bilingual</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  .bi-head { display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; column-gap: 8mm; min-height: 30mm; }
+  .bi-head .en, .bi-head .ar { padding-top: 1.2mm; font-size: 7.5pt; line-height: 3.9mm; color: var(--d-ash); }
+  .bi-head .en strong { display: block; font-weight: 400; font-size: 8.5pt; color: var(--d-ink-strong); margin-bottom: 0.6mm; }
+  .bi-head .ar { direction: rtl; text-align: right; font-size: 8.5pt; line-height: 4.6mm; }
+  .bi-head .ar strong { display: block; font-weight: 500; font-size: 10pt; color: var(--d-ink-strong); }
+  .bi-head .en .cap-d, .bi-head .ar .cap-d { display: block; }
+  .foot-bi { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; column-gap: var(--gutter); }
+  .foot-bi [lang="ar"] { direction: rtl; text-align: right; font-size: 7pt; line-height: 3.7mm; }
+  .foot-bi [lang="ar"] b { font-size: 6.5pt; letter-spacing: 0; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Stationery · Letterhead"
+      data-preview-title="Letterhead — Bilingual · A4"
+      data-preview-note="English reads from the left margin, Arabic from the right; the wordmark is the shared centre. Symmetric 20 mm margins. Body may be set as two columns (see Contract cover) or in one language."
+      data-preview-cols="1">
+
+<section class="page page--sym marks-fold" lang="en" dir="ltr" data-label="Letterhead · Bilingual · page 1 master">
+  <i class="marks-punch"></i>
+  <header class="bi-head">
+    <div class="en"><strong>{{company.name_en}}</strong>{{contact.address_en}}</div>
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="ar" lang="ar"><strong>{{company.name_ar}}</strong>{{contact.address_ar}}</div>
+  </header>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__rule doc-foot__rule--center"><i class="lumen"></i></div>
+    <div class="foot-bi">
+      <div><b>Telephone</b>T {{contact.phone}}<br>WhatsApp {{contact.whatsapp}}</div>
+      <div><b>Postal · Online</b>{{contact.po_box}} · {{contact.cr_number}}<br>{{contact.email}} · {{contact.website}}</div>
+      <div lang="ar"><b>البريد · الموقع</b>{{print.po_box_ar}} · {{print.cr_number_ar}}<br><bdi dir="ltr">{{contact.email}}</bdi> · <bdi dir="ltr">{{contact.website}}</bdi></div>
+      <div lang="ar"><b>الهاتف</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi><br>واتساب <bdi dir="ltr">{{contact.whatsapp}}</bdi></div>
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>
