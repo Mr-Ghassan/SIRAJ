@@ -1,6 +1,28 @@
 /* Generated from 00-Brand-Foundation/brand.config.json — rebuild with: node tools/build-motion-data.js */
 (function(g){g.SIRAJ_BRAND={
  "$note": "Single source for company details used by templates. Fields marked PLACEHOLDER must be replaced before public release, then rebuild. Website and Instagram are confirmed.",
+ "language_policy": {
+  "communications": "ar",
+  "english": "dormant",
+  "english_activation": "Only for a freehold project open to foreign ownership (تملك حر وتملك للأجانب), and only for that project.",
+  "allowed_latin": [
+   "SIRAJ wordmark",
+   "website",
+   "social handle",
+   "email",
+   "phone",
+   "Western digits"
+  ],
+  "bilingual_exceptions": [
+   "business card",
+   "quotation",
+   "tax invoice",
+   "payment receipt",
+   "contract cover"
+  ],
+  "archive": "99-Archive/English-Dormant (restore: bash tools/archive-english.sh --restore; build English with SIRAJ_EN=1)",
+  "decided": "2026-10-11"
+ },
  "company": {
   "name_en": "SIRAJ Real Estate Development",
   "name_ar": "سراج للتطوير العقاري",
@@ -13,7 +35,7 @@
  "contact": {
   "website": "sirajproperties.net",
   "website_status": "CONFIRMED",
-  "email": "info@sirajproperties.net",
+  "email": "info@SIRAJPROPERTIES.net",
   "email_status": "Domain confirmed (sirajproperties.net); mailbox name to be confirmed",
   "phone": "+968 2400 0000",
   "phone_status": "PLACEHOLDER",
@@ -22,7 +44,7 @@
   "address_ar": "الخوير، مسقط، سلطنة عُمان",
   "po_box": "P.O. Box 000, P.C. 100",
   "cr_number": "CR 0000000",
-  "social_handle": "@sirajproperties",
+  "social_handle": "@SIRAJPROPERTIES",
   "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES",
   "instagram": "https://instagram.com/sirajproperties"
  },

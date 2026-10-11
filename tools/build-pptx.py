@@ -528,7 +528,7 @@ def build():
     logo(s, 960 - 170, 330, 340, 'Sand')
     text(s, 0, 482, 1920, 50, 'Light, built.', size=32, font='light', color='sand', align='c')
     text(s, 0, 614, 1920, 24, 'Book a private viewing at the SIRAJ Sales Centre', size=16, font='med', color='sand', track=0.16, caps=True, align='c')
-    text(s, 0, 664, 1920, 36, 'sirajproperties.net   ◆   info@sirajproperties.net   ◆   +968 2400 0000   ◆   Al Khuwair, Muscat', size=22, font='light', color='ondark', align='c')
+    text(s, 0, 664, 1920, 36, 'sirajproperties.net   ◆   info@SIRAJPROPERTIES.net   ◆   +968 2400 0000   ◆   Al Khuwair, Muscat', size=22, font='light', color='ondark', align='c')
     text(s, 0, 992, 1920, 24, 'Noor Residences is a demonstration project. All figures are illustrative and do not constitute an offer.', size=15, color='sand', align='c')
     notes(s, 'Layout: Closing / contact. Contact details come from 00-Brand-Foundation/brand.config.json (placeholders until confirmed).')
 

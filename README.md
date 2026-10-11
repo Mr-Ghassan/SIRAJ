@@ -113,7 +113,7 @@ Individual targets are `build:tokens`, `build:logos`, `build:ui`, `build:social`
 ## Status and notes
 
 - ✅ **Official v1.0.** The logo geometry is unchanged from the supplied master.
-- ✅ Website **sirajproperties.net** and Instagram **@sirajproperties** are confirmed. The phone, address and CR details in `brand.config.json` are still placeholders.
+- ✅ Website **sirajproperties.net** and Instagram **@SIRAJPROPERTIES** are confirmed. The phone, address and CR details in `brand.config.json` are still placeholders.
 - ⚠️ Photography in `08-Photography/Library` and the campaign visuals are **AI-generated concept imagery** (ElevenLabs/Seedream), used to demonstrate the art direction. Replace them with commissioned photography or CGI before public use.
 - ✅ Colour values (HEX, RGB, CMYK, Pantone) are **approved**.
 - ✅ **Language policy: Arabic only.** English deliverables are dormant in `99-Archive/English-Dormant/`.
