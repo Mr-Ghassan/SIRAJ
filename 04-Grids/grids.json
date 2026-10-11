@@ -1,0 +1,143 @@
+[
+  {
+    "id": "Desktop-1440",
+    "w": 1440,
+    "h": 900,
+    "cols": 12,
+    "margin": 80,
+    "gutter": 24,
+    "baseline": 8,
+    "unit": "px",
+    "note": "Max content 1280. Hero images bleed full width; text never crosses column 7 edge in hero."
+  },
+  {
+    "id": "Desktop-1920",
+    "w": 1920,
+    "h": 1080,
+    "cols": 12,
+    "margin": 240,
+    "gutter": 32,
+    "baseline": 8,
+    "unit": "px",
+    "note": "Content max 1440, centred."
+  },
+  {
+    "id": "Tablet-900",
+    "w": 900,
+    "h": 1200,
+    "cols": 8,
+    "margin": 48,
+    "gutter": 24,
+    "baseline": 8,
+    "unit": "px",
+    "note": "12-col collapses to 8."
+  },
+  {
+    "id": "Mobile-390",
+    "w": 390,
+    "h": 844,
+    "cols": 4,
+    "margin": 20,
+    "gutter": 16,
+    "baseline": 8,
+    "unit": "px",
+    "note": "Single text column; images full-bleed."
+  },
+  {
+    "id": "Presentation-1920x1080",
+    "w": 1920,
+    "h": 1080,
+    "cols": 12,
+    "margin": 120,
+    "gutter": 32,
+    "top": 96,
+    "bottom": 96,
+    "baseline": 8,
+    "unit": "px",
+    "note": "Footer band 48 px: page number + section (Lumen marker)."
+  },
+  {
+    "id": "Social-Post-1080x1350",
+    "w": 1080,
+    "h": 1350,
+    "cols": 6,
+    "margin": 72,
+    "gutter": 24,
+    "baseline": 8,
+    "unit": "px",
+    "note": "Logo zone bottom-start, 72 px from edges."
+  },
+  {
+    "id": "Social-Square-1080",
+    "w": 1080,
+    "h": 1080,
+    "cols": 6,
+    "margin": 72,
+    "gutter": 24,
+    "baseline": 8,
+    "unit": "px",
+    "note": ""
+  },
+  {
+    "id": "Social-Story-1080x1920",
+    "w": 1080,
+    "h": 1920,
+    "cols": 6,
+    "margin": 72,
+    "gutter": 24,
+    "top": 250,
+    "bottom": 340,
+    "baseline": 8,
+    "unit": "px",
+    "note": "Platform UI safe zones: top 250, bottom 340."
+  },
+  {
+    "id": "Editorial-A4-Portrait",
+    "w": 210,
+    "h": 297,
+    "cols": 12,
+    "margin": 15,
+    "inner": 20,
+    "gutter": 4,
+    "top": 18,
+    "bottom": 22,
+    "baseline": 3,
+    "unit": "mm",
+    "note": "Baseline 3 mm (≈ 8.5 pt). Inner margin 20 mm for binding."
+  },
+  {
+    "id": "Brochure-A4-Landscape",
+    "w": 297,
+    "h": 210,
+    "cols": 12,
+    "margin": 15,
+    "gutter": 4,
+    "top": 15,
+    "bottom": 18,
+    "baseline": 3,
+    "unit": "mm",
+    "note": "Sales brochure; spreads 594 × 210 mm."
+  },
+  {
+    "id": "Outdoor-Billboard-48-Sheet",
+    "w": 6096,
+    "h": 3048,
+    "cols": 12,
+    "margin": 300,
+    "gutter": 120,
+    "baseline": 0,
+    "unit": "mm",
+    "note": "Viewing distance rule: logo ≥ 10% of width; max 7 words."
+  },
+  {
+    "id": "Hoarding-Panel-2x1",
+    "w": 6000,
+    "h": 2400,
+    "cols": 12,
+    "margin": 240,
+    "gutter": 100,
+    "baseline": 0,
+    "unit": "mm",
+    "note": "Construction hoarding module; silk runs continuously across adjacent panels."
+  }
+]

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+<defs><radialGradient id="h"><stop offset="0" stop-color="#D6C0B2" stop-opacity=".55"/><stop offset="1" stop-color="#D6C0B2" stop-opacity="0"/></radialGradient></defs><circle cx="120" cy="120" r="120" fill="url(#h)"/><rect x="93.6" y="93.6" width="52.8" height="52.8" fill="#AA9180" transform="rotate(45 120 120)"/>
+</svg>
