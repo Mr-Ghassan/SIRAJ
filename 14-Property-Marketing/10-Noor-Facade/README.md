@@ -31,3 +31,15 @@ node tools/build-noor-facade.js
 | Hero post | في قلب المدينة، يبدأ المعيار. | In the heart of the city, the standard begins. |
 
 Both lines build on the brand core «سراج لا تبدأ بالانتشار، بل تبدأ بمعيار».
+
+## Silk Wrap · key visual (3D)
+
+`SIRAJ_Noor_Wrap_{Post,Story}_{AR,EN}_v1.0.png`: one SIRAJ Silk ribbon wraps the building in a full three-dimensional spiral, rising from the plaza and flowing into the sky. This is the brand's WRAP formation.
+
+- `Source/SIRAJ_Noor_Wrap_4x5_v1.0.jpg` and `Source/SIRAJ_Noor_Wrap_9x16_v1.0.jpg` are AI-assisted CGI (Nano Banana Pro) built on the hero view. Each is finished with `tools/noor-enhance.py`: true black point, S-curve, vibrance and light sharpening. There is no fading.
+- Layout: `Source/noor-wrap-post.html`.
+  - No milky overlays. The type sits in the sky, and on a deep SIRAJ Shadow fall at the bottom.
+  - The logo stays in clear sky, never on the silk.
+- Build: `node tools/build-noor-wrap.js`.
+
+The hero posts were rebuilt the same way: their ivory sky overlay was removed, and the 35 % grade was replaced by `noor-enhance.py`.
