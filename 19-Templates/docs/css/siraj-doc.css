@@ -40,8 +40,8 @@
   --logo-w: 38mm;                                             /* wordmark width on every A4 document */
 
   /* type */
-  --f-latin: "Jost", "Helvetica Neue", Arial, sans-serif;
-  --f-arabic: "SIRAJ Digits", "Tajawal", Tahoma, sans-serif;
+  --f-latin: "Jost", "Tajawal", "Helvetica Neue", Arial, sans-serif;   /* Tajawal catches stray Arabic in Latin runs */
+  --f-arabic: "SIRAJ Digits", "Tajawal", "Jost", Tahoma, sans-serif;   /* Jost catches ·, —, × that Tajawal lacks */
   --fs-body: 9pt; --lh-body: 4.5mm;
   --fs-small: 7.5pt; --fs-cap: 6.5pt; --fs-micro: 6pt;
 }
@@ -282,7 +282,7 @@ html:not(.is-preview) .pv-only { display: none !important; }
 .co strong { display: block; font-weight: 400; font-size: 7.8pt; color: var(--d-ink-strong); }
 .co [lang="ar"] { display: block; font-size: 8.4pt; line-height: 4.4mm; color: var(--d-ink-strong); margin-top: 0.8mm; }
 .page:not([dir="rtl"]) .co [lang="ar"] { text-align: right; }
-.page[dir="rtl"] .co [lang="en"] { text-align: left; direction: ltr; }
+.page[dir="rtl"] .co [lang="en"] { display: block; text-align: left; direction: ltr; margin-top: 0.8mm; }
 
 /* bilingual document title: English from the start, Arabic from the end, same weight of voice */
 .title-bi { display: flex; justify-content: space-between; align-items: baseline; gap: 8mm; padding: 3mm 0 4mm; border-bottom: 0.75pt solid var(--d-maroon); flex: none; }
@@ -331,3 +331,7 @@ html:not(.is-preview) .pv-only { display: none !important; }
 .page[dir="rtl"] .doc-table th.num [lang="ar"] { text-align: left; }
 /* one-line bilingual rows: English from the start, Arabic from the end of the same cell */
 .doc-table--1l td [lang="ar"] { display: inline; float: right; margin-top: 0; padding-inline-start: 3mm; }
+.page[dir="rtl"] .callout { font-size: 9.4pt; line-height: 5.3mm; }
+.page[dir="rtl"] .callout::before { top: 6mm; }
+.page[dir="rtl"] .co { font-size: 8pt; line-height: 4.4mm; }
+.page[dir="rtl"] .co strong { font-size: 9pt; font-weight: 500; }

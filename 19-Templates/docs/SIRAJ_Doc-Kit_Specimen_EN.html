@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Document kit specimen · English</title>
+<!--
+  SIRAJ Document Kit · component specimen. Copy any block into your own document.
+  Fixed-page documents: one <section class="page"> per A4 page (see 12-Print/Source/Documents for real ones).
+  Long text that should paginate by itself: use SIRAJ_Doc-Kit_Flow_EN.html instead.
+-->
+<link rel="stylesheet" href="css/siraj-doc.css">
+<script src="js/brand-config.js"></script>
+<script src="js/siraj-doc.js" defer></script>
+<style>
+  .anno { font: 500 5.2pt/1.3 var(--f-latin); letter-spacing: 0.12em; text-transform: uppercase; color: #0093C9; margin-bottom: 1.6mm; display: block; }
+  html:not(.is-preview) .anno { color: var(--d-warm-grey); }
+  .sp .meta { --meta-cols: 4; margin-top: 5mm; }
+  .sp .typo { margin-top: 9mm; }
+  .sp .two { margin-top: 7mm; }
+  .sp .callouts { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--gutter); margin-top: 9mm; }
+  .sp .kpis { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: var(--gutter); padding: 5mm 0; border-top: 0.75pt solid var(--d-maroon); border-bottom: 0.5pt solid var(--d-rule); }
+  .sp .kpis > div + div { border-inline-start: 0.5pt solid var(--d-rule-soft); padding-inline-start: 4mm; }
+  .sp .block { margin-top: 8mm; }
+  .sp .swatches { display: grid; grid-template-columns: repeat(8, 1fr); column-gap: 2mm; }
+  .sp .sw i { display: block; height: 9mm; }
+  .sp .sw span { display: block; font-size: 5.4pt; line-height: 2.8mm; margin-top: 1mm; color: var(--d-ash); }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Document kit · 19-Templates/docs"
+      data-preview-title="Document kit — component specimen · English"
+      data-preview-note="css/siraj-doc.css + js/siraj-doc.js. Blue labels name the class of each component (preview only)."
+      data-preview-cols="2">
+
+<!-- ============================================================ PAGE 1 == -->
+<section class="page sp" lang="en" dir="ltr" data-label="Specimen · page 1 · header, type, lists, callouts">
+  <header class="doc-head" style="min-height:22mm">
+    <div class="lk lk--word"><img src="../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="co"><span class="anno" style="text-align:end">.doc-head · .lk--word · .co</span><strong>{{company.name_en}}</strong>{{contact.cr_number}} · VATIN {{print.vatin}}<span lang="ar">{{company.name_ar}}</span></div>
+  </header>
+
+  <span class="anno">.title-bi</span>
+  <div class="title-bi" style="padding-top:0"><span class="en">Document kit</span><span class="ar" lang="ar">عُدّة المستندات</span></div>
+  <div class="meta">
+    <div><div class="k-bi bi-line"><span>Version</span><span lang="ar">الإصدار</span></div><div class="v">1.0 · Oct 2026</div></div>
+    <div><div class="k-bi bi-line"><span>Grid</span><span lang="ar">الشبكة</span></div><div class="v">12 col · 4 mm</div></div>
+    <div><div class="k-bi bi-line"><span>Margins</span><span lang="ar">الهوامش</span></div><div class="v">18 / 22 / 20 / 15 mm</div></div>
+    <div><div class="k-bi bi-line"><span>Baseline</span><span lang="ar">خط الأساس</span></div><div class="v">3 mm</div></div>
+  </div>
+
+  <div class="typo g12">
+    <div class="c8">
+      <span class="anno">.eyebrow-d · .h1 · .lead</span>
+      <div class="eyebrow-d"><i class="lumen"></i>Section eyebrow</div>
+      <h1 class="h1" style="margin-top:3mm">A calm, architectural page</h1>
+      <p class="lead mt-1">Light weights, generous space and one signature gesture. Information second, the logo as the final identifier.</p>
+    </div>
+  </div>
+
+  <div class="two g12">
+    <div class="c7 body-text">
+      <span class="anno">.h2 · .h3 · .body-text (9 pt / 4.5 mm)</span>
+      <h2 class="h2">Second-level heading</h2>
+      <h3 class="h3 mt-1">Third-level heading</h3>
+      <p class="mt-1">Body text is Jost 400 at 9 pt on a 4.5 mm line, in Graphite. Numbers use lining figures: OMR 145,000 · 245 m² · {{demo_projects.noor.handover}}. Arabic body text in Tajawal runs one point larger, never tracked.</p>
+      <p>Keep paragraphs short. Use one idea per paragraph and let the white space do the work.</p>
+    </div>
+    <div class="c5">
+      <span class="anno">ul.lumen-list</span>
+      <ul class="lumen-list">
+        <li>Lumen bullets in Stone</li>
+        <li>Two lines at most per item</li>
+        <li>Sentence case, no full stop on fragments</li>
+      </ul>
+      <span class="anno mt-2">ol.clauses</span>
+      <ol class="clauses">
+        <li>Numbered clauses for terms.</li>
+        <li>Leading zero, Maroon numerals.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="callouts">
+    <div><span class="anno">.callout</span><div class="callout"><b>Note</b><br>Ivory panel with a Lumen marker, for highlights.</div></div>
+    <div><span class="anno">.callout--rule</span><div class="callout callout--rule"><b>Caution</b><br>A Maroon rule at the start edge, for risks or conditions.</div></div>
+    <div><span class="anno">.callout--deep</span><div class="callout callout--deep"><b>Key figure</b><br>Gradient G1 with Sand text — once per document at most.</div></div>
+  </div>
+
+  <div class="block">
+    <span class="anno">Palette for documents (tokens)</span>
+    <div class="swatches">
+      <div class="sw"><i style="background:var(--d-maroon)"></i><span>Maroon<br>headings rules</span></div>
+      <div class="sw"><i style="background:var(--d-deep)"></i><span>Deep<br>dark panels</span></div>
+      <div class="sw"><i style="background:var(--d-stone)"></i><span>Stone<br>Lumen, rules only</span></div>
+      <div class="sw"><i style="background:var(--d-sand)"></i><span>Sand<br>text on dark</span></div>
+      <div class="sw"><i style="background:var(--d-ivory); box-shadow: inset 0 0 0 0.25pt var(--d-rule)"></i><span>Ivory<br>panels</span></div>
+      <div class="sw"><i style="background:var(--d-ink-strong)"></i><span>Near Black<br>titles, values</span></div>
+      <div class="sw"><i style="background:var(--d-ink)"></i><span>Graphite<br>body text</span></div>
+      <div class="sw"><i style="background:var(--d-ash)"></i><span>Ash<br>secondary text</span></div>
+    </div>
+  </div>
+
+  <footer class="doc-foot">
+    <span class="anno">.doc-foot · .doc-foot__bar · .folio [data-page] / [data-pages] · .bi4</span>
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>Page <span lang="ar">صفحة</span></b><span data-page></span> / <span data-pages></span></span></div>
+    <div class="bi4">
+      <div><b>Head office</b>{{contact.address_en|first}}<br>{{contact.po_box}}</div>
+      <div><b>Contact</b>T {{contact.phone}}<br>{{contact.email}} · {{contact.website}}</div>
+      <div lang="ar"><b>تواصل</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi><br><bdi dir="ltr">{{contact.email}}</bdi></div>
+      <div lang="ar"><b>المكتب الرئيسي</b>{{contact.address_ar|first}}<br>{{print.po_box_ar}}</div>
+    </div>
+  </footer>
+</section>
+
+<!-- ============================================================ PAGE 2 == -->
+<section class="page sp" lang="en" dir="ltr" data-label="Specimen · page 2 · tables, totals, bilingual, data, signatures">
+  <header class="run-head">
+    <div class="lk lk--word"><img src="../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="rh"><span class="anno" style="margin:0">.run-head</span><i></i><span>Document kit</span><i></i><span lang="ar">عُدّة المستندات</span></div>
+  </header>
+
+  <span class="anno">table.doc-table[data-calc][data-vat] · tr[data-qty][data-rate] · [data-out] · .doc-table--1l</span>
+  <table class="doc-table doc-table--1l" data-calc data-vat="5">
+    <thead><tr><th class="idx">#</th><th>Item <span lang="ar">البند</span></th><th class="num">Qty <span lang="ar">الكمية</span></th><th class="num">Rate <span lang="ar">السعر</span></th><th class="num">VAT <span lang="ar">الضريبة</span></th><th class="num">Amount <span lang="ar">المبلغ</span></th></tr></thead>
+    <tbody>
+      <tr data-qty="1" data-rate="1250"><td class="idx">01</td><td>Design review<span lang="ar">مراجعة التصميم</span></td><td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="vat"></td><td class="num" data-out="amount"></td></tr>
+      <tr data-qty="3" data-rate="420.5"><td class="idx">02</td><td>Site inspection<span lang="ar">معاينة الموقع</span></td><td class="num">3</td><td class="num" data-out="rate"></td><td class="num" data-out="vat"></td><td class="num" data-out="amount"></td></tr>
+      <tr data-qty="1" data-rate="85" data-vat="0"><td class="idx">03</td><td>Government fee (no VAT)<span lang="ar">رسوم حكومية</span></td><td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="vat"></td><td class="num" data-out="amount"></td></tr>
+    </tbody>
+  </table>
+  <div class="g12 mt-1">
+    <div class="c6 small muted" style="padding-top:2mm"><span class="anno">[data-words="total"]</span><span data-words="total" style="color:var(--d-ink-strong)"></span></div>
+    <div class="totals c6" style="width:auto; grid-column: 7 / span 6">
+      <span class="anno" style="margin-top:2mm">.totals · [data-total]</span>
+      <div class="row"><span class="lbl">Subtotal <span lang="ar">المجموع</span></span><span class="val" data-total="subtotal"></span></div>
+      <div class="row"><span class="lbl">VAT 5% <span lang="ar">الضريبة</span></span><span class="val" data-total="vat"></span></div>
+      <div class="row row--grand"><span class="lbl">Total <span lang="ar">الإجمالي</span></span><span class="val"><span class="cur">OMR</span><span data-total="total"></span></span></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <span class="anno">.bi-cols.bi-cols--ruled — English left, Arabic right</span>
+    <div class="bi-cols bi-cols--ruled">
+      <p lang="en">Official documents set English and Arabic side by side with equal space and equal weight. The English column reads from the left margin, the Arabic column from the right.</p>
+      <p lang="ar">تُكتب المستندات الرسمية بالعربية والإنجليزية جنبًا إلى جنب، بمساحة متساوية ووزن متساوٍ. يبدأ العمود الإنجليزي من الهامش الأيسر، والعمود العربي من الهامش الأيمن.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <span class="anno">.kpi__n · .kpi__l · .bar</span>
+    <div class="kpis">
+      <div><div class="kpi__n">{{demo_projects.noor.units}}</div><div class="kpi__l">Residences · {{demo_projects.noor.en}}</div></div>
+      <div><div class="kpi__n">{{demo_projects.noor.floors}}</div><div class="kpi__l">Floors</div></div>
+      <div><div class="kpi__n">58<small>%</small></div><div class="kpi__l">Progress</div><div class="bar mt-1" style="--v:58%"><i></i></div></div>
+      <div><div class="kpi__n">{{demo_projects.noor.handover}}</div><div class="kpi__l">Handover</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <span class="anno">.sig · .sig__line · .sig__lbl · .stamp</span>
+    <div style="display:grid; grid-template-columns: 1fr 1fr 26mm; column-gap: 8mm; align-items:end">
+      <div><div class="sig__line" style="height:14mm;border-bottom:0.5pt solid var(--d-ink)"></div><div class="sig__lbl small muted" style="margin-top:1.6mm"><b class="maroon" style="font-size:5.6pt;letter-spacing:.16em;text-transform:uppercase;font-weight:500">For SIRAJ</b> · عن سراج</div></div>
+      <div><div class="sig__line" style="height:14mm;border-bottom:0.5pt solid var(--d-ink)"></div><div class="sig__lbl small muted" style="margin-top:1.6mm"><b class="maroon" style="font-size:5.6pt;letter-spacing:.16em;text-transform:uppercase;font-weight:500">Client</b> · العميل</div></div>
+      <div class="stamp">Stamp</div>
+    </div>
+  </div>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>Page <span lang="ar">صفحة</span></b><span data-page></span> / <span data-pages></span></span></div>
+    <div class="bi4">
+      <div><b>Head office</b>{{contact.address_en|first}}<br>{{contact.po_box}}</div>
+      <div><b>Contact</b>T {{contact.phone}}<br>{{contact.email}} · {{contact.website}}</div>
+      <div lang="ar"><b>تواصل</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi><br><bdi dir="ltr">{{contact.email}}</bdi></div>
+      <div lang="ar"><b>المكتب الرئيسي</b>{{contact.address_ar|first}}<br>{{print.po_box_ar}}</div>
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>

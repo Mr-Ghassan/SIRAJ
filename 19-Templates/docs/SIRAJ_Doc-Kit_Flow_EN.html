@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Flow document template</title>
+<!--
+  SIRAJ Document Kit · FLOW template
+  For long text that should paginate by itself (policies, guidelines, proposals, minutes).
+  - Paste content inside <main class="flow">. Use h2 / h3 / p / ul.lumen-list / ol.clauses / table.doc-table / .callout.
+  - Page 1 carries the full header below. Pages 2+ get the running header (wordmark + data-running-title)
+    and the footer (company · website · Page n of N) automatically — see flowRules() in js/siraj-doc.js.
+  - Arabic: set <html lang="ar" dir="rtl">; margins, header and folio mirror automatically.
+  - Print from Chrome / Edge: "Save as PDF", margins "Default", background graphics on. Or: node tools/build-print.js flow
+-->
+<link rel="stylesheet" href="css/siraj-doc.css">
+<script src="js/brand-config.js"></script>
+<script src="js/siraj-doc.js" defer></script>
+<style>
+  .flow { font-size: 9.5pt; line-height: 5mm; color: var(--d-ink); }
+  .flow .first { display: flex; justify-content: space-between; align-items: flex-start; }
+  .flow .titleblock { margin-top: 14mm; padding-bottom: 6mm; border-bottom: 0.75pt solid var(--d-maroon); }
+  .flow .titleblock .h1 { margin-top: 3mm; }
+  .flow .titleblock .lead { margin-top: 3mm; max-width: 140mm; }
+  .flow .meta { --meta-cols: 4; margin-top: 5mm; }
+  .flow h2 { font-size: 14pt; font-weight: 300; line-height: 1.3; color: var(--d-ink-strong); margin: 10mm 0 0; break-after: avoid; display: flex; gap: 3mm; align-items: baseline; }
+  .flow h2 .n { font-size: 8pt; font-weight: 500; letter-spacing: 0.16em; color: var(--d-maroon); }
+  .flow h3 { font-size: 10pt; font-weight: 500; color: var(--d-ink-strong); margin: 6mm 0 0; break-after: avoid; }
+  .flow p { margin-top: 3mm; orphans: 3; widows: 3; text-wrap: pretty; }
+  .flow ul.lumen-list, .flow ol.clauses { margin-top: 3mm; }
+  .flow .callout { margin-top: 5mm; break-inside: avoid; }
+  .flow table.doc-table { margin-top: 5mm; }
+  .flow table.doc-table tr { break-inside: avoid; }
+  .flow .sign { margin-top: 12mm; break-inside: avoid; }
+  .flow .keep { break-inside: avoid; }  /* keep a closing section with its sign-off */
+  .flow .sign .tt { font-size: 6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); }
+</style>
+</head>
+<body data-flow data-running-title="Client site visit guidelines">
+<main class="flow">
+
+  <div class="first">
+    <div class="lk lk--desc"><img src="../../01-Logos/Lockups/SIRAJ_Lockup_Descriptor_Primary_v1.0.svg" alt="SIRAJ Real Estate Development"></div>
+    <div class="co"><strong>{{company.name_en}}</strong>{{contact.address_en}}<span lang="ar">{{company.name_ar}}</span></div>
+  </div>
+
+  <div class="titleblock">
+    <div class="eyebrow-d"><i class="lumen"></i>Guidelines · {{demo_projects.noor.en}}</div>
+    <h1 class="h1">Client site visit guidelines</h1>
+    <p class="lead">How we welcome clients to an active construction site: safely, calmly and with the same care they will find in the finished home.</p>
+    <div class="meta">
+      <div><dt>Owner</dt><dd>Development Management</dd></div>
+      <div><dt>Applies to</dt><dd>Sales, Customer Care, Site</dd></div>
+      <div><dt>Version</dt><dd>1.0 · October 2026</dd></div>
+      <div><dt>Review</dt><dd>Every six months</dd></div>
+    </div>
+  </div>
+
+  <h2><span class="n">01</span>Purpose</h2>
+  <p>Site visits let clients see their future home take shape. They are also the moment when the promise of a SIRAJ residence meets the reality of a building site. These guidelines set out how visits are planned, hosted and closed, so that every visit is safe for the client and consistent with the experience in our sales centres.</p>
+  <p>The guidelines apply to every visit by a client, a client's representative or a prospective buyer to {{demo_projects.noor.en}}, {{demo_projects.harir.en}}, {{demo_projects.qandeel.en}} and {{demo_projects.mishkat.en}} while construction is in progress.</p>
+
+  <h2><span class="n">02</span>Planning a visit</h2>
+  <p>Visits are booked at least five working days in advance through the CRM, so the site team can prepare a safe route and pause noisy work where possible.</p>
+  <ul class="lumen-list">
+    <li>Visits run on Sundays to Thursdays, between 08:30 and 11:30, outside concrete pours and crane lifts.</li>
+    <li>A group is limited to six guests and two SIRAJ hosts; children under 16 do not enter the site.</li>
+    <li>The site manager confirms the route, the viewing points and the welfare facilities 24 hours before the visit.</li>
+    <li>The client receives a confirmation with the meeting point, parking, dress guidance and the host's mobile number.</li>
+  </ul>
+
+  <h3>Viewing points by project</h3>
+  <table class="doc-table">
+    <thead><tr><th>Project</th><th>Meeting point</th><th>Viewing points</th><th class="num">Duration</th></tr></thead>
+    <tbody>
+      <tr><td>{{demo_projects.noor.en}}</td><td>Sales centre, {{demo_projects.noor.location_en}}</td><td>Level 12 sample floor · roof terrace (after topping-out)</td><td class="num">60 min</td></tr>
+      <tr><td>{{demo_projects.harir.en}}</td><td>Site gate 2, {{demo_projects.harir.location_en}}</td><td>Show villa · cluster A boulevard</td><td class="num">75 min</td></tr>
+      <tr><td>{{demo_projects.mishkat.en}}</td><td>Site office, {{demo_projects.mishkat.location_en}}</td><td>Level 8 office floor · façade mock-up</td><td class="num">45 min</td></tr>
+      <tr><td>{{demo_projects.qandeel.en}}</td><td>Hoarding gallery, {{demo_projects.qandeel.location_en}}</td><td>Viewing platform only</td><td class="num">30 min</td></tr>
+    </tbody>
+  </table>
+
+  <h2><span class="n">03</span>Safety</h2>
+  <p>Safety is never traded for convenience. Every guest is inducted, equipped and accompanied for the whole visit.</p>
+  <ol class="clauses">
+    <li>Guests sign the visitor register and receive a short safety induction at the meeting point.</li>
+    <li>Helmets, high-visibility vests, safety glasses and overshoes are provided in guest sizes and in the SIRAJ colours.</li>
+    <li>Guests stay on the marked route and never enter areas behind barriers, at open edges or under suspended loads.</li>
+    <li>The visit stops if the host or the site manager judges conditions unsafe, including heat above 40 °C or wind above 38 km/h.</li>
+    <li>In an emergency, guests follow their host to the assembly point shown on the induction card.</li>
+  </ol>
+  <div class="callout"><b>Heat</b><br>From May to September, visits finish by 10:00. Water and shaded rest are offered at every viewing point.</div>
+
+  <h2><span class="n">04</span>Hosting</h2>
+  <p>A visit should feel like an appointment, not a tour. The host introduces the site manager, explains what the client is seeing and what will change by the next visit, and answers questions with the same care as in the sales centre.</p>
+  <p>Hosts carry the floor plans of the client's residence and a tablet with the latest progress photographs. Photography by clients is welcome on the route; images of workers' faces are not shared.</p>
+  <h3>After the visit</h3>
+  <ul class="lumen-list">
+    <li>Return the equipment and close the visitor register.</li>
+    <li>Send a thank-you message within 24 hours with two photographs of the residence's floor.</li>
+    <li>Record the visit and any questions in the CRM, and flag finish or layout queries to Design Management.</li>
+  </ul>
+
+  <section class="keep">
+  <h2><span class="n">05</span>Contacts</h2>
+  <p>For bookings and changes, contact the Customer Care team on {{contact.phone|nbsp}} or {{contact.email}}. For questions about these guidelines, contact Development Management.</p>
+
+  <div class="sign">
+    <div>Approved</div>
+    <div style="height:14mm"></div>
+    <div style="color:var(--d-ink-strong)">{{print.people.sender.name_en}}</div>
+    <div class="tt">{{print.people.sender.title_en}}</div>
+  </div>
+  </section>
+</main>
+</body>
+</html>

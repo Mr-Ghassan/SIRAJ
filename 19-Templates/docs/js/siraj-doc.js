@@ -177,7 +177,7 @@
           svg.appendChild(svgEl('line', { y1: o + v, y2: o + v, x1: xx[0], x2: xx[1], stroke: '#000', 'stroke-width': sw, 'stroke-dasharray': '0.8 0.6' }));
         });
       });
-      var info = svgEl('text', { x: o + 2, y: g.H - g.slug / 2 + 0.6, 'font-family': 'Jost, sans-serif', 'font-size': g.w < 120 ? 1.5 : 2.2, fill: '#000' });
+      var info = svgEl('text', { x: o + 2, y: g.H - g.slug / 2 + 0.6, 'font-family': 'Jost, sans-serif', 'font-size': g.w < 60 ? 1.0 : g.w < 120 ? 1.5 : 2.2, fill: '#000' });
       info.textContent = (MODE.name || document.title) + '  ·  ' + (s.getAttribute('data-label') || ('Page ' + (i + 1))) +
         '  ·  Trim ' + g.w + ' × ' + g.h + ' mm  ·  Bleed ' + g.bleed + ' mm  ·  ' + (i + 1) + '/' + all.length;
       svg.appendChild(info);
@@ -192,8 +192,36 @@
     var w = p ? parseFloat(p.getAttribute('data-w') || '210') : 210, h = p ? parseFloat(p.getAttribute('data-h') || '297') : 297;
     return { width: w + 'mm', height: h + 'mm', w: w, h: h };
   }
+  /* Flow documents (body[data-flow]): content paginates itself; running header/footer live in @page margin boxes.
+     Page 1 carries the full in-flow header; pages 2+ get the wordmark, running title, company line and folio. */
+  function flowRules() {
+    var rtl = root.getAttribute('dir') === 'rtl';
+    var logo = (window.SIRAJ_ASSETS && window.SIRAJ_ASSETS.logoPrimarySvg || '').replace(/width="[^"]*" height="[^"]*"/, 'width="24mm" height="6.873mm"');
+    var uri = 'data:image/svg+xml,' + encodeURIComponent(logo);
+    var esc = function (t) { return String(t).replace(/\\/g, '\\\\').replace(/"/g, '\\"'); };
+    var title = esc(document.body.getAttribute('data-running-title') || document.title);
+    var co = CFG.company || {}, ct = CFG.contact || {};
+    var foot = esc(rtl ? (co.name_ar + ' · ' + ct.website) : (co.name_en + ' · ' + ct.website));
+    var folio = rtl ? '"صفحة " counter(page) " من " counter(pages)' : '"Page " counter(page) " of " counter(pages)';
+    var S = rtl ? 'right' : 'left', E = rtl ? 'left' : 'right';
+    var font = rtl ? '"SIRAJ Digits", Tajawal' : 'Jost';
+    var base = 'font-family: ' + font + '; font-size: ' + (rtl ? '7.5pt' : '6.5pt') + '; color: #6B625E; ';
+    var line = 'border-top: 0.5pt solid rgba(170,145,128,.7); vertical-align: top; padding-top: 3mm; ';
+    var css = '@page { size: 210mm 297mm; margin: 34mm ' + (rtl ? '20mm 26mm 15mm' : '15mm 26mm 20mm') + ';' +
+      ' @top-' + S + ' { content: url("' + uri + '"); vertical-align: bottom; padding-bottom: 7mm; }' +
+      ' @top-' + E + ' { content: "' + title + '"; ' + base + (rtl ? '' : 'letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; ') + 'vertical-align: bottom; padding-bottom: 8mm; }' +
+      ' @bottom-' + S + ' { content: "' + foot + '"; ' + base + line + ' }' +
+      ' @bottom-center { content: " "; ' + line + ' }' +
+      ' @bottom-' + E + ' { content: ' + folio + '; ' + base + line + 'color: #3B3436; }' +
+      ' }' +
+      ' @page :first { margin-top: 18mm; @top-left { content: none; } @top-right { content: none; } }';
+    var st = document.createElement('style');
+    st.textContent = css;
+    document.head.appendChild(st);
+  }
+
   function pageRule() {
-    if (document.body.hasAttribute('data-flow')) return; // flow documents own their @page rules
+    if (document.body.hasAttribute('data-flow')) return flowRules(); // flow documents paginate in the print engine
     var ps = pageSize();
     var st = document.createElement('style');
     st.textContent = '@page { size: ' + ps.width + ' ' + ps.height + '; margin: 0; }';

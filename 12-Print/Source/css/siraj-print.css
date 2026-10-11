@@ -42,7 +42,7 @@ html.is-preview .sheet > .art { background: #FCFAF7; }
 
 /* die-cut corner radius (CR80 cards) — preview/trim proof only */
 html:not(.has-marks) .sheet.cr80 > .art { border-radius: 3.18mm; }
-html.is-preview .pv-fig > .sheet.cr80 { border-radius: 3.18mm; }
+html.is-preview:not(.has-marks) .pv-fig > .sheet.cr80 { border-radius: 3.18mm; }
 
 /* positioning helper: everything inside .face is absolutely placed in mm */
 .abs { position: absolute; }
