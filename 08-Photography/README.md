@@ -39,7 +39,9 @@ Apply it at 100% and then balance exposure. Script: `python3 tools/siraj-grade.p
 >
 > **لا تُستخدم إلا صور نساء محجبات، دون إظهار الشعر أو أي عورة، وبلباس محتشم فضفاض.**
 
-- Men appear in modest dress, preferably Omani (dishdasha, kumma or massar) or formal business attire.
+- **Casting is a mix.** SIRAJ is an Omani company serving Omani, GCC and international clients, so people are a natural mix of Omani and international residents, investors and professionals.
+- **Omani men wear the dishdasha with the Omani massar (المصر)**, the patterned wrapped turban. They are not shown in the kumma, and never in a Gulf ghutra or shemagh.
+- International men wear formal or smart-casual modest clothing (suits, linen jackets, long trousers).
 - This applies to photography, CGI, AI-assisted imagery, stock, video, illustrations, scale figures in renders, mockups and event content, including people in the background and small figures.
 - Avoid romantic or intimate poses between people, and keep a respectful distance.
 - **Third-party renders** (for example architects' CGI) must be checked before use, and non-compliant figures edited out or replaced.
@@ -52,7 +54,7 @@ Apply it at 100% and then balance exposure. Script: `python3 tools/siraj-grade.p
 | **Interiors** | One-point or two-point perspective, horizon at mid height, view through glazing | 24 mm tilt-shift, tripod | Raking daylight, long shadows, lamps off or warm | None, or a hand or silhouette |
 | **Drone** | Masterplan legible, coastline or mountains as context | 45–60° oblique or top-down | Low sun, soft haze | None |
 | **Construction** | Precision and progress: crane, frame, orderly site | Wide, tripod | Dawn or early morning | Workers in PPE, distant, dignified |
-| **Lifestyle** | Candid, unposed, architecture dominant | 35–50 mm | Evening warm light | Omani families; women in hijab and abaya; modest dress for everyone |
+| **Lifestyle** | Candid, unposed, architecture dominant | 35–50 mm | Evening warm light | A mix of Omani and international residents; Omani men in dishdasha and massar; all women in hijab and modest dress |
 | **Investment** | Details: models, materials, plans, keys | 50–90 mm macro | Soft window light | Hands only |
 
 ## Colour grading targets
@@ -75,7 +77,7 @@ SILK (if any): ONE deep burgundy-maroon silk <ribbon | sheet | two forms> that <
   satin highlights, separate from the building, never covering the façade; ≤ 35 % of frame
 LIGHT: single warm source from upper right; soft long shadows
 CAMERA: <lens>, verticals corrected, generous negative space top-end for type
-PEOPLE: women only in hijab (hair and neck fully covered) and loose modest abaya; men in dishdasha or formal wear
+PEOPLE: a mix of Omani and international; Omani men in dishdasha + Omani massar turban (not kumma, not ghutra); international men in suits; ALL women in hijab (hair and neck fully covered) and loose modest clothing
 AVOID: text, logos, gold, glossy plastic, HDR, lens flare, people posing, uncovered hair, tight or revealing clothing
 POST: apply SIRAJ_Silk-Grade_v1.0.cube
 ```

@@ -102,7 +102,7 @@ Motion follows seven principles: **FLOW · DRAPE · REVEAL · WRAP · FOLD · GL
 
 - Women appear **only in a hijab that fully covers hair and neck, with loose modest clothing**. No uncovered hair or ʿawrah, ever, including background figures and render scale figures.
 - لا تُستخدم إلا صور نساء محجبات، دون إظهار الشعر أو أي عورة.
-- Men appear in modest dress (dishdasha or formal). There are no intimate poses.
+- Casting is a **mix of Omani and international** people. **Omani men wear the dishdasha with the massar (المصر)**, not the kumma, and never the Gulf ghutra. International men wear formal or smart modest clothing. There are no intimate poses.
 
 ## 8. Voice
 
