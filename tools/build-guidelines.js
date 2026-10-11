@@ -258,6 +258,10 @@ console.log('pages:', pageNo);
   const dir = path.join(OUT, 'pages'); fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
   for (let i = 0; i < n; i++) await pg.locator('section.page').nth(i).screenshot({ path: path.join(dir, `SIRAJ_Brand-Guidelines_p${String(i + 1).padStart(2, '0')}.png`), type: 'png' });
   await cleanup(); await R.close();
+  // Shrink embedded images (text stays vector) so the PDF stays well under hosting limits.
+  const pdfOut = path.join(OUT, 'SIRAJ_Brand-Guidelines_v1.0.pdf');
+  execFileSync('python3', [path.join(__dirname, 'compress-pdf.py'), pdfOut, pdfOut + '.tmp', '1800', '80']);
+  fs.renameSync(pdfOut + '.tmp', pdfOut);
   execFileSync('bash', ['-c', `cd "${dir}" && for f in *.png; do convert "$f" -resize 1280x -quality 82 "\${f%.png}.jpg" && rm "$f"; done && montage *.jpg -tile 8x -geometry 480x270+4+4 -background '#D6C0B2' ../SIRAJ_Brand-Guidelines_Contact-Sheet_v1.0.jpg`]);
   console.log('rendered', n, 'pages');
 })();
