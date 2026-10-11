@@ -2,6 +2,28 @@
    and 12-Print/Source/print.config.json. Do not edit — edit the JSON and rebuild. */
 window.SIRAJ_CONFIG = {
   "$note": "Single source for company details used by templates. Fields marked PLACEHOLDER must be replaced before public release, then rebuild. Website and Instagram are confirmed.",
+  "language_policy": {
+    "communications": "ar",
+    "english": "dormant",
+    "english_activation": "Only for a freehold project open to foreign ownership (تملك حر وتملك للأجانب), and only for that project.",
+    "allowed_latin": [
+      "SIRAJ wordmark",
+      "website",
+      "social handle",
+      "email",
+      "phone",
+      "Western digits"
+    ],
+    "bilingual_exceptions": [
+      "business card",
+      "quotation",
+      "tax invoice",
+      "payment receipt",
+      "contract cover"
+    ],
+    "archive": "99-Archive/English-Dormant (restore: bash tools/archive-english.sh --restore; build English with SIRAJ_EN=1)",
+    "decided": "2026-10-11"
+  },
   "company": {
     "name_en": "SIRAJ Real Estate Development",
     "name_ar": "سراج للتطوير العقاري",
@@ -14,7 +36,7 @@ window.SIRAJ_CONFIG = {
   "contact": {
     "website": "sirajproperties.net",
     "website_status": "CONFIRMED",
-    "email": "info@SIRAJPROPERTIES.net",
+    "email": "info@sirajproperties.net",
     "email_status": "Domain confirmed (sirajproperties.net); mailbox name to be confirmed",
     "phone": "+968 2400 0000",
     "phone_status": "PLACEHOLDER",
@@ -32,6 +54,16 @@ window.SIRAJ_CONFIG = {
     "ar": "نورٌ يُبنى",
     "status": "PROPOSED — pending approval. Not part of the official logo; use only where marked optional."
   },
+  "founding_project": {
+    "name_en": "Siraj",
+    "name_ar": "سراج",
+    "role_en": "The Founding Project",
+    "role_ar": "المشروع المؤسِّس",
+    "location_en": "Muscat",
+    "location_ar": "مسقط",
+    "type": "Mixed-use: residences above, retail ground floor (6 storeys)",
+    "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed."
+  },
   "demo_projects": {
     "$note": "Fictional projects used to demonstrate the system. Not real developments.",
     "noor": {
@@ -44,9 +76,7 @@ window.SIRAJ_CONFIG = {
       "floors": 24,
       "handover": "Q4 2027",
       "from_price_omr": 145000,
-      "official_name_en": "Noor",
-      "official_name_ar": "نور",
-      "status": "OFFICIAL NAME — The Founding Project. Other details (units, floors, prices, dates) are illustrative until confirmed."
+      "status": "FICTIONAL demonstration project (sample tower used by the property-marketing kit). Not the Founding Project."
     },
     "harir": {
       "en": "Harir Villas",
