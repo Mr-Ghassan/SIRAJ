@@ -98,6 +98,12 @@ Motion follows seven principles: **FLOW · DRAPE · REVEAL · WRAP · FOLD · GL
 
 ---
 
+## 7b. People in imagery (mandatory)
+
+- Women appear **only in a hijab that fully covers hair and neck, with loose modest clothing**. No uncovered hair or ʿawrah, ever, including background figures and render scale figures.
+- لا تُستخدم إلا صور نساء محجبات، دون إظهار الشعر أو أي عورة.
+- Men appear in modest dress (dishdasha or formal). There are no intimate poses.
+
 ## 8. Voice
 
 - Clear, calm, intelligent, confident and persuasive. SIRAJ is confident without noise and luxurious without exaggeration.

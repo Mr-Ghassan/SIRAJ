@@ -33,6 +33,17 @@ A 33-point 3D LUT (sRGB in and out) for Lightroom, Photoshop, Resolve, Premiere 
 
 Apply it at 100% and then balance exposure. Script: `python3 tools/siraj-grade.py apply in.jpg out.jpg`.
 
+## People: mandatory modesty rule (official)
+
+> **Women appear only wearing a hijab that fully covers the hair and neck, with loose, modest clothing (abaya or long, loose dress) covering arms to the wrists and legs to the ankles. No uncovered hair, no tight or revealing clothing, and nothing that shows ʿawrah.**
+>
+> **لا تُستخدم إلا صور نساء محجبات، دون إظهار الشعر أو أي عورة، وبلباس محتشم فضفاض.**
+
+- Men appear in modest dress, preferably Omani (dishdasha, kumma or massar) or formal business attire.
+- This applies to photography, CGI, AI-assisted imagery, stock, video, illustrations, scale figures in renders, mockups and event content, including people in the background and small figures.
+- Avoid romantic or intimate poses between people, and keep a respectful distance.
+- **Third-party renders** (for example architects' CGI) must be checked before use, and non-compliant figures edited out or replaced.
+
 ## Direction by subject
 
 | Subject | Composition | Camera | Light | People |
@@ -41,7 +52,7 @@ Apply it at 100% and then balance exposure. Script: `python3 tools/siraj-grade.p
 | **Interiors** | One-point or two-point perspective, horizon at mid height, view through glazing | 24 mm tilt-shift, tripod | Raking daylight, long shadows, lamps off or warm | None, or a hand or silhouette |
 | **Drone** | Masterplan legible, coastline or mountains as context | 45–60° oblique or top-down | Low sun, soft haze | None |
 | **Construction** | Precision and progress: crane, frame, orderly site | Wide, tripod | Dawn or early morning | Workers in PPE, distant, dignified |
-| **Lifestyle** | Candid, unposed, architecture dominant | 35–50 mm | Evening warm light | Omani and international residents, natural |
+| **Lifestyle** | Candid, unposed, architecture dominant | 35–50 mm | Evening warm light | Omani families; women in hijab and abaya; modest dress for everyone |
 | **Investment** | Details: models, materials, plans, keys | 50–90 mm macro | Soft window light | Hands only |
 
 ## Colour grading targets
@@ -64,6 +75,7 @@ SILK (if any): ONE deep burgundy-maroon silk <ribbon | sheet | two forms> that <
   satin highlights, separate from the building, never covering the façade; ≤ 35 % of frame
 LIGHT: single warm source from upper right; soft long shadows
 CAMERA: <lens>, verticals corrected, generous negative space top-end for type
-AVOID: text, logos, gold, glossy plastic, HDR, lens flare, people posing
+PEOPLE: women only in hijab (hair and neck fully covered) and loose modest abaya; men in dishdasha or formal wear
+AVOID: text, logos, gold, glossy plastic, HDR, lens flare, people posing, uncovered hair, tight or revealing clothing
 POST: apply SIRAJ_Silk-Grade_v1.0.cube
 ```
