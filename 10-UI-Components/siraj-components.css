@@ -865,8 +865,8 @@ body.sj-lock { overflow: hidden; }
 .sj-footer__social .sj-icon-btn { width: 40px; height: 40px; color: var(--siraj-text); border-color: var(--siraj-border); }
 @media (max-width: 899px) {
   .sj-footer { padding-block: 64px 32px; }
-  .sj-footer__brand, .sj-footer__col--wide { grid-column: 1 / -1; }
   .sj-footer__col { grid-column: span 6; }
+  .sj-footer__brand, .sj-footer__col.sj-footer__col--wide { grid-column: 1 / -1; }
 }
 
 /* -----------------------------------------------------------------------------
