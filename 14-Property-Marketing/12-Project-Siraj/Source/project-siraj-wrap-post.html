@@ -1,7 +1,7 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>SIRAJ · Noor silk wrap post</title>
-<!-- Noor · Silk Wrap key visual. Open with ?fmt=post|story&lang=ar|en
-     Photo: SIRAJ_Noor_Wrap_{4x5|9x16}_v1.0.jpg (AI-assisted CGI, enhanced with tools/noor-enhance.py). No milky overlays: type sits in the sky and on a deep Shadow fall. -->
+<html><head><meta charset="utf-8"><title>SIRAJ · Project Siraj silk wrap post</title>
+<!-- Project Siraj · Silk Wrap key visual. Open with ?fmt=post|story&lang=ar|en
+     Photo: SIRAJ_Project-Siraj_Wrap_{4x5|9x16}_v1.0.jpg (AI-assisted CGI, enhanced with tools/keyvisual-enhance.py). No milky overlays: type sits in the sky and on a deep Shadow fall. -->
 <link rel="stylesheet" href="../../../09-Design-System/css/siraj.css">
 <style>
   html, body { margin: 0; background: #170608; }
@@ -45,16 +45,16 @@ const fmt = q.get('fmt') || 'post', lang = q.get('lang') || 'ar';
 const art = document.getElementById('art'); art.className = fmt;
 if (lang === 'ar') art.setAttribute('dir', 'rtl');
 const T = {
-  ar: { eyebrow: 'مسقط', kicker: 'المشروع المؤسِّس لسراج · مسقط', name: 'نور', head: 'في قلب المدينة، يبدأ المعيار.',
+  ar: { eyebrow: 'مسقط', kicker: 'المشروع المؤسِّس · مسقط', name: 'سراج', head: 'في قلب المدينة، يبدأ المعيار.',
         foot: '<span>سجّل اهتمامك · <b class="ltr">sirajproperties.net</b></span><span class="ltr">@sirajproperties</span>',
         disc: 'تصوّر معماري للمشروع.' },
-  en: { eyebrow: 'Muscat', kicker: 'SIRAJ’s Founding Project · Muscat', name: 'Noor', head: 'In the heart of the city, the standard begins.',
+  en: { eyebrow: 'Muscat', kicker: 'The Founding Project · Muscat', name: 'Siraj', head: 'In the heart of the city, the standard begins.',
         foot: '<span>Register your interest · <b>sirajproperties.net</b></span><span>@sirajproperties</span>',
         disc: 'Architectural visualisation.' },
 }[lang];
 const L = { post: { fall: 600 }, story: { fall: 820 } }[fmt];
 const img = document.querySelector('.photo');
-img.src = q.get('img') || `SIRAJ_Noor_Wrap_${fmt === 'story' ? '9x16' : '4x5'}_v1.0.jpg`;
+img.src = q.get('img') || `SIRAJ_Project-Siraj_Wrap_${fmt === 'story' ? '9x16' : '4x5'}_v1.0.jpg`;
 img.style.objectPosition = q.get('pos') || '50% 50%';
 document.querySelector('.kicker').innerHTML = `<span class="lumen"></span>${T.kicker}`;
 document.querySelector('.name').textContent = T.name;

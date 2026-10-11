@@ -141,3 +141,10 @@ Legal text is set no smaller than 5.6 pt in print or 11 px on screen, in Ash on 
 11-Mockups/              6 composites + contact sheet
 _build/                  templates (JS)    _shared/property.css
 ```
+
+
+## 12 · Project Siraj (the Founding Project)
+
+Official façade posts, the city-centre hero and the 3D Silk Wrap key visual for **سراج · Siraj**. See `12-Project-Siraj/README.md`.
+
+> "Noor Residences", used across sections 01–11, is a **fictional demonstration project**. It is not the Founding Project.

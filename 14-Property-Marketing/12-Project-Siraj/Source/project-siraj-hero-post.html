@@ -1,7 +1,7 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>SIRAJ · Noor hero post</title>
-<!-- Noor · city-centre hero post. Open with ?fmt=post|story&lang=ar|en
-     Photo: SIRAJ_Noor_Hero_City_v1.0.jpg (graded with the SIRAJ Silk Grade). Silk: SIRAJ Silk Engine, Horizon formation. -->
+<html><head><meta charset="utf-8"><title>SIRAJ · Project Siraj hero post</title>
+<!-- Project Siraj · city-centre hero post. Open with ?fmt=post|story&lang=ar|en
+     Photo: SIRAJ_Project-Siraj_Hero_City_v1.0.jpg (graded with the SIRAJ Silk Grade). Silk: SIRAJ Silk Engine, Horizon formation. -->
 <link rel="stylesheet" href="../../../09-Design-System/css/siraj.css">
 <style>
   html, body { margin: 0; background: #170608; }
@@ -49,15 +49,15 @@ const fmt = q.get('fmt') || 'post', lang = q.get('lang') || 'ar';
 const art = document.getElementById('art'); art.className = fmt;
 if (lang === 'ar') art.setAttribute('dir', 'rtl');
 const T = {
-  ar: { eyebrow: 'المشروع المؤسِّس لسراج', head: 'في قلب المدينة،<br>يبدأ المعيار.', name: '<b>نور</b><span>مسقط</span>',
+  ar: { eyebrow: 'المشروع المؤسِّس', head: 'في قلب المدينة،<br>يبدأ المعيار.', name: '<b>سراج</b><span>مسقط</span>',
         foot: '<span>سجّل اهتمامك · <b class="ltr">sirajproperties.net</b></span><span class="ltr">@sirajproperties</span>',
         disc: 'تصوّر معماري للمشروع.' },
-  en: { eyebrow: 'SIRAJ’s Founding Project', head: 'In the heart of the city,<br>the standard begins.', name: '<b>Noor</b><span>Muscat</span>',
+  en: { eyebrow: 'The Founding Project', head: 'In the heart of the city,<br>the standard begins.', name: '<b>Siraj</b><span>Muscat</span>',
         foot: '<span>Register your interest · <b>sirajproperties.net</b></span><span>@sirajproperties</span>',
         disc: 'Architectural visualisation.' },
 }[lang];
 const L = { post: { head: null, pos: q.get('pos') || '50% 50%', fall: 520, silk: 300 }, story: { head: 200, pos: q.get('pos') || '50% 50%', fall: 640, silk: 420 } }[fmt];
-document.querySelector('.photo').src = q.get('img') || (fmt === 'story' ? 'SIRAJ_Noor_Hero_City_9x16_v1.0.jpg' : 'SIRAJ_Noor_Hero_City_4x5_v1.0.jpg');
+document.querySelector('.photo').src = q.get('img') || (fmt === 'story' ? 'SIRAJ_Project-Siraj_Hero_City_9x16_v1.0.jpg' : 'SIRAJ_Project-Siraj_Hero_City_4x5_v1.0.jpg');
 document.querySelector('.photo').style.objectPosition = L.pos;
 document.querySelector('.eyebrow').innerHTML = `<span class="lumen"></span>${T.eyebrow}`;
 const head = document.querySelector('.head'), headB = document.querySelector('.headB');

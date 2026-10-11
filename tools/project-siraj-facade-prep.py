@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Prepare the official Noor façade render for SIRAJ layouts.
+"""Prepare the official façade of Project Siraj (the Founding Project) render for SIRAJ layouts.
 
 1. Removes the architect's placeholder "SIGNAGE" lettering (fascia rebuilt from clean slats).
 2. Removes people (street figures and reflections) per the SIRAJ people rule.
 3. Cuts the building out of its context (sky keyed, ground and surroundings dropped).
 
-Usage: python3 tools/noor-facade-prep.py <source.jpg> <out_dir>
-Writes SIRAJ_Noor_Facade_Clean_v1.0.jpg (full frame, cleaned) and
-SIRAJ_Noor_Facade_Cutout_v1.0.png (RGBA, building only, base cut at the kerb line).
+Usage: python3 tools/project-siraj-facade-prep.py <source.jpg> <out_dir>
+Writes SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg (full frame, cleaned) and
+SIRAJ_Project-Siraj_Facade_Cutout_v1.0.png (RGBA, building only, base cut at the kerb line).
 """
 import sys, os
 import numpy as np
@@ -50,7 +50,7 @@ o[1156:1163, 524:566] = a[1156:1163, 464:506]   # feet of the removed figure on 
 
 clean = Image.fromarray(np.clip(o, 0, 255).astype(np.uint8))
 os.makedirs(out, exist_ok=True)
-clean.save(os.path.join(out, 'SIRAJ_Noor_Facade_Clean_v1.0.jpg'), quality=95)
+clean.save(os.path.join(out, 'SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg'), quality=95)
 
 # 3 · cut-out
 H, W = 1402, 1122
@@ -77,5 +77,5 @@ alpha = alpha * keep
 A = Image.fromarray((alpha * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.6))
 rgba = clean.copy(); rgba.putalpha(A)
 rgba = rgba.crop((140, 60, 1004, 1164))
-rgba.save(os.path.join(out, 'SIRAJ_Noor_Facade_Cutout_v1.0.png'))
+rgba.save(os.path.join(out, 'SIRAJ_Project-Siraj_Facade_Cutout_v1.0.png'))
 print('ok', rgba.size)

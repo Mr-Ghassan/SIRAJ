@@ -30,6 +30,16 @@
     "ar": "نورٌ يُبنى",
     "status": "PROPOSED — pending approval. Not part of the official logo; use only where marked optional."
   },
+  "founding_project": {
+    "name_en": "Siraj",
+    "name_ar": "سراج",
+    "role_en": "The Founding Project",
+    "role_ar": "المشروع المؤسِّس",
+    "location_en": "Muscat",
+    "location_ar": "مسقط",
+    "type": "Mixed-use: residences above, retail ground floor (6 storeys)",
+    "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed."
+  },
   "demo_projects": {
     "$note": "Fictional projects used to demonstrate the system. Not real developments.",
     "noor": {
@@ -42,9 +52,7 @@
       "floors": 24,
       "handover": "Q4 2027",
       "from_price_omr": 145000,
-      "official_name_en": "Noor",
-      "official_name_ar": "نور",
-      "status": "OFFICIAL NAME — The Founding Project. Other details (units, floors, prices, dates) are illustrative until confirmed."
+      "status": "FICTIONAL demonstration project (sample tower used by the property-marketing kit). Not the Founding Project."
     },
     "harir": {
       "en": "Harir Villas",

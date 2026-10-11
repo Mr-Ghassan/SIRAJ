@@ -2,7 +2,7 @@
 """Crisp, rich finishing for key visuals (the opposite of a faded look).
 
 Black point to true shadow, gentle S-curve, +vibrance, light unsharp mask, and
-maroon kept on brand (no hue shift). Usage: python3 tools/noor-enhance.py in out [strength]
+maroon kept on brand (no hue shift). Usage: python3 tools/keyvisual-enhance.py in out [strength]
 """
 import sys
 import numpy as np

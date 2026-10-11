@@ -1,7 +1,7 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>SIRAJ · Noor façade post</title>
-<!-- Noor · official façade post. Open with ?fmt=post|story&lang=ar|en
-     Building: SIRAJ_Noor_Facade_Cutout_v1.0.png (tools/noor-facade-prep.py). Silk: SIRAJ Silk Engine, rendered live. -->
+<html><head><meta charset="utf-8"><title>SIRAJ · Project Siraj façade post</title>
+<!-- Project Siraj · official façade post. Open with ?fmt=post|story&lang=ar|en
+     Building: SIRAJ_Project-Siraj_Facade_Cutout_v1.0.png (tools/project-siraj-facade-prep.py). Silk: SIRAJ Silk Engine, rendered live. -->
 <link rel="stylesheet" href="../../../09-Design-System/css/siraj.css">
 <style>
   html, body { margin: 0; background: #F7F2ED; }
@@ -39,7 +39,7 @@
 </head><body>
 <div id="art"><canvas id="silk"></canvas>
   <div class="shadow"></div><div class="ground"></div>
-  <div class="bld"><img src="SIRAJ_Noor_Facade_Cutout_v1.0.png" alt=""></div>
+  <div class="bld"><img src="SIRAJ_Project-Siraj_Facade_Cutout_v1.0.png" alt=""></div>
   <div class="top"><img class="logo" alt="SIRAJ"><div class="eyebrow"></div></div>
   <div class="copy"><h1 class="title"></h1><p class="head"></p><p class="line"></p></div>
   <div class="disc"></div>
@@ -51,10 +51,10 @@ const fmt = q.get('fmt') || 'post', lang = q.get('lang') || 'ar';
 const art = document.getElementById('art'); art.className = fmt;
 if (lang === 'ar') art.setAttribute('dir', 'rtl');
 const T = {
-  ar: { eyebrow: 'المشروع المؤسِّس · مسقط', title: 'نور', head: 'أوّلُ ضوءٍ لسراج.', line: 'مبنى واحد، بمعيارٍ كامل.',
+  ar: { eyebrow: 'المشروع المؤسِّس · مسقط', title: 'سراج', head: 'أوّلُ الضوء.', line: 'مبنى واحد، بمعيارٍ كامل.',
         foot: '<span>سجّل اهتمامك · <b class="ltr">sirajproperties.net</b></span><span class="ltr">@sirajproperties</span>',
         disc: 'تصوّر معماري للواجهة الرسمية للمشروع.' },
-  en: { eyebrow: 'The Founding Project · Muscat', title: 'Noor', head: 'SIRAJ’s first light.', line: 'One building. A complete standard.',
+  en: { eyebrow: 'The Founding Project · Muscat', title: 'Siraj', head: 'The first light.', line: 'One building. A complete standard.',
         foot: '<span>Register your interest · <b>sirajproperties.net</b></span><span>@sirajproperties</span>',
         disc: 'Architectural visualisation of the official project façade.' },
 }[lang];
