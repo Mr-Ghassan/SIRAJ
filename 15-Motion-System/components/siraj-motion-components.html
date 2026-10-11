@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Motion Component Library v1.0</title>
+<!--
+  SIRAJ Motion Components v1.0 — each component is a pure function of time t (seconds), driven by window.seek(t).
+  ?c=title|subtitle|lower-third|name-plate|statistics|numbers|project-card|property-details|map|floor-plan|progress|chart|quote|image-reveal|cta
+  &lang=en|ar   &fmt=16x9|9x16
+  Logo reveal / logo close / end card → 16-Intro, 17-Outro. Full-screen transitions → ../transitions/.
+  Timing grammar: enter with DRAPE (0.64–1.2 s), stagger 80–140 ms, hold, never bounce. Rules draw with FLOW, masks open with REVEAL.
+-->
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<script src="../lib/siraj-motion.js"></script>
+<script src="../lib/siraj-brand-data.js"></script>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #170608; color: #F7F2ED; }
+  #root { position: absolute; inset: 0; overflow: hidden; }
+  .bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  .scrim { position: absolute; inset: 0; }
+  .abs { position: absolute; }
+  .eb { font: 500 15px/1 Jost; letter-spacing: .26em; text-transform: uppercase; color: #D6C0B2; display: flex; align-items: center; gap: 14px; }
+  .eb i, .lum { width: 9px; height: 9px; background: #AA9180; transform: rotate(45deg); display: inline-block; flex: none; }
+  [dir="rtl"] .eb { letter-spacing: 0; font-family: "SIRAJ Digits", Tajawal; font-size: 18px; text-transform: none; }
+  .mask { overflow: hidden; display: block; }
+  .mask > span { display: inline-block; will-change: transform; }
+  .hair { height: 1px; background: #AA9180; transform-origin: 0 50%; }
+  [dir="rtl"] .hair { transform-origin: 100% 50%; }
+  .num { font-variant-numeric: lining-nums tabular-nums; }
+  .ar { font-family: "SIRAJ Digits", "Tajawal", sans-serif; }
+  svg text { font-family: Jost; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const M = SirajMotion, E = M.EASE, BR = window.SIRAJ_BRAND, PR = BR.demo_projects.noor;
+const q = new URLSearchParams(location.search);
+const C = q.get('c') || 'title', AR = q.get('lang') === 'ar';
+const W = innerWidth, H = innerHeight;
+const root = document.getElementById('root');
+if (AR) { document.documentElement.dir = 'rtl'; document.documentElement.lang = 'ar'; }
+const LIB = '../../08-Photography/Library/SIRAJ_Photo_', STILL = '../../06-SIRAJ-Silk/Stills/';
+const T = (en, ar) => (AR ? ar : en);
+const S = (el, st) => { el.style.opacity = st.opacity; el.style.transform = `translate3d(0,${st.y.toFixed(2)}px,0)`; el.style.filter = `blur(${Math.max(0, st.blur).toFixed(2)}px)`; };
+const rise = (el, t, start, dur = 0.9) => { const k = M.seg(t, start, dur, E.drape); el.style.transform = `translateY(${((1 - k) * 105).toFixed(2)}%)`; };
+const draw = (el, t, start, dur = 0.9) => { el.style.transform = `scaleX(${M.seg(t, start, dur, E.flow)})`; };
+const startSide = AR ? 'right' : 'left';
+const pad = 120;
+let seek = () => {};
+const imgs = [];
+const bg = (src, scrim) => { const d = document.createElement('div'); d.className = 'bg'; d.style.backgroundImage = `url(${src})`; root.appendChild(d); imgs.push(src); if (scrim) { const s = document.createElement('div'); s.className = 'scrim'; s.style.background = scrim; root.appendChild(s); } return d; };
+const el = (html, css = '') => { const d = document.createElement('div'); d.className = 'abs'; d.style.cssText = css; d.innerHTML = html; root.appendChild(d); return d; };
+const settle = (node, t, from = 1.05, start = 0, dur = 4) => { node.style.transform = `scale(${(from - (from - 1) * M.seg(t, start, dur, E.drape)).toFixed(5)})`; };
+
+// ---------------------------------------------------------------------------------------------------- components
+const COMP = {
+  title() {
+    const b = bg(STILL + 'Drape-Deep/SIRAJ_Silk_Drape-Deep_16x9_web_v1.0.webp');
+    const box = el(`<div class="eb" id="eb"><i></i>${T('Noor Residences · Al Khuwair', 'مساكن نور · الخوير')}</div>
+      <div style="margin-top:36px;font:300 ${AR ? 104 : 112}px/1.08 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};letter-spacing:${AR ? 0 : '-.01em'};color:#F7F2ED">
+        <span class="mask"><span id="l1">${T('A residence shaped', 'مساكن تتشكّل')}</span></span>
+        <span class="mask"><span id="l2">${T('by light and silence.', 'بالضوء والسكينة.')}</span></span></div>
+      <div class="hair" id="rule" style="width:120px;margin-top:48px"></div>`, `${startSide}:${pad}px;top:${H * 0.28}px;width:${W * 0.62}px`);
+    seek = (t) => { settle(b, t, 1.06, 0, 5); S(box.querySelector('#eb'), M.enter(t, 0.2, { dur: 0.8, distance: 10 })); rise(box.querySelector('#l1'), t, 0.45, 1.0); rise(box.querySelector('#l2'), t, 0.59, 1.0); draw(box.querySelector('#rule'), t, 1.2, 0.9); };
+  },
+  subtitle() {
+    const b = bg(LIB + 'Apartment-Interior-Sea-View_v1.0.jpg', 'linear-gradient(0deg, rgba(23,6,8,.78) 0%, rgba(23,6,8,0) 45%)');
+    const s = el(`<div style="font:300 40px/1.4 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#F7F2ED;text-align:center">${T('Floor-to-ceiling windows frame the Gulf of Oman.', 'نوافذ ممتدة من الأرض إلى السقف تؤطّر بحر عُمان.')}</div>`, `left:0;right:0;bottom:${H * 0.1}px`);
+    seek = (t) => { settle(b, t, 1.04, 0, 5); const e = M.enter(t, 0.4, { dur: 0.9, distance: 12 }); const x = M.exit(t, 3.4, { dur: 0.5 }); S(s, { opacity: e.opacity * x.opacity, y: e.y + x.y, blur: e.blur + x.blur }); };
+  },
+  'lower-third'() {
+    const b = bg(LIB + 'Sales-Centre-Interior_v1.0.jpg', 'linear-gradient(0deg, rgba(23,6,8,.55) 0%, rgba(23,6,8,0) 40%)');
+    const lt = el(`<div id="plate" style="position:absolute;inset:0;background:rgba(23,6,8,.78);border-start-end-radius:56px"></div>
+      <div style="position:relative;padding:34px 56px 34px 48px;display:flex;gap:28px;align-items:center">
+        <span class="lum" id="lm" style="width:12px;height:12px"></span>
+        <div><div class="mask"><span id="n" style="font:400 38px/1.15 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#F7F2ED">${T('Layla Al Harthy', 'ليلى الحارثية')}</span></div>
+        <div class="mask" style="margin-top:8px"><span id="r" class="eb" style="color:#D6C0B2">${T('Director of Sales · SIRAJ', 'مديرة المبيعات · سراج')}</span></div></div></div>`,
+      `${startSide}:${pad}px;bottom:${H * 0.12}px`);
+    seek = (t) => {
+      settle(b, t, 1.03, 0, 5);
+      const k = M.seg(t, 0.3, 0.8, E.reveal), out = M.seg(t, 3.5, 0.5, E.release);
+      lt.querySelector('#plate').style.clipPath = AR ? `inset(0 0 0 ${(1 - k + out) * 100}%)` : `inset(0 ${(1 - k + out) * 100}% 0 0)`;
+      lt.querySelector('#lm').style.opacity = M.seg(t, 0.6, 0.4) * (1 - out);
+      rise(lt.querySelector('#n'), t, 0.62, 0.8); rise(lt.querySelector('#r'), t, 0.74, 0.8);
+      lt.style.opacity = 1 - out;
+    };
+  },
+  'name-plate'() {
+    root.style.background = 'radial-gradient(120% 120% at 78% 18%, #4A1C26 0%, #2C0F12 45%, #170608 100%)';
+    const np = el(`<div class="mask"><span id="n" style="font:300 72px/1.1 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#F7F2ED">${T('Eng. Khalid Al Rawahi', 'م. خالد الرواحي')}</span></div>
+      <div class="hair" id="h" style="width:220px;margin:34px auto;transform-origin:50% 50%"></div>
+      <div class="mask"><span id="r" style="font:500 16px/1 Jost;letter-spacing:.26em;text-transform:uppercase;color:#D6C0B2">${T('Chief Executive Officer', 'الرئيس التنفيذي')}</span></div>`, `left:0;right:0;top:${H * 0.38}px;text-align:center`);
+    seek = (t) => { rise(np.querySelector('#n'), t, 0.3, 1.0); draw(np.querySelector('#h'), t, 0.8, 0.9); rise(np.querySelector('#r'), t, 1.0, 0.9); };
+  },
+  statistics() {
+    root.style.background = '#F7F2ED'; root.style.color = '#3B3436';
+    const data = [[168, T('Residences', 'وحدة سكنية'), 0], [24, T('Floors', 'طابقاً'), 0], [145000, T('From, OMR', 'تبدأ من، ر.ع.'), 0], [2027, T('Handover · Q4', 'التسليم · الربع الرابع'), 0]];
+    const cols = data.map(([v, l], i) => `<div style="flex:1;padding-inline:40px;${i ? 'border-inline-start:1px solid #D6C0B2' : ''}"><div class="num" id="v${i}" style="font:200 104px/1 Jost;color:#602733;letter-spacing:-.02em">0</div><div id="l${i}" style="margin-top:22px;font:${AR ? "400 22px 'SIRAJ Digits',Tajawal" : '500 15px Jost'};letter-spacing:${AR ? 0 : '.22em'};text-transform:uppercase;color:#6B625E">${l}</div></div>`).join('');
+    const st = el(`<div class="eb" style="color:#602733;margin-inline-start:40px"><i></i>${T('Noor Residences in numbers', 'مساكن نور بالأرقام')}</div><div style="display:flex;margin-top:64px" id="row">${cols}</div>`, `left:${pad}px;right:${pad}px;top:${H * 0.36}px`);
+    seek = (t) => data.forEach(([v], i) => { const s0 = 0.35 + i * 0.14; st.querySelector('#v' + i).textContent = v === 2027 ? Math.round(M.lerp(2020, 2027, M.seg(t, s0, 1.4, E.flow))) : M.count(t, s0, 1.6, v); S(st.querySelector('#v' + i), M.enter(t, s0, { dur: 0.8, distance: 16 })); S(st.querySelector('#l' + i), M.enter(t, s0 + 0.1, { dur: 0.8, distance: 10 })); });
+  },
+  numbers() {
+    const b = bg(STILL + 'Drape-Lumen/SIRAJ_Silk_Drape-Lumen_16x9_web_v1.0.webp', 'rgba(23,6,8,.35)');
+    const n = el(`<div class="num" id="v" style="font:200 300px/1 Jost;color:#F7F2ED;letter-spacing:-.03em">0.0%</div>
+      <img id="line" src="../../05-Graphic-System/SVG/SIRAJ_Silk-Line_Sand_v1.0.svg" style="width:640px;display:block;margin:-10px auto 0">
+      <div id="cap" class="eb" style="justify-content:center;margin-top:10px"><i></i>${T('Projected gross rental yield', 'العائد الإيجاري الإجمالي المتوقع')}</div>`, `left:0;right:0;top:${H * 0.22}px;text-align:center`);
+    seek = (t) => { settle(b, t, 1.05, 0, 5); n.querySelector('#v').textContent = M.count(t, 0.3, 1.8, 7.8, { decimals: 1 }) + '%'; S(n.querySelector('#v'), M.enter(t, 0.3, { dur: 1.0, distance: 20 })); n.querySelector('#line').style.clipPath = `inset(0 ${(1 - M.seg(t, 1.0, 1.2, E.flow)) * 100}% 0 0)`; S(n.querySelector('#cap'), M.enter(t, 1.5, { dur: 0.8, distance: 10 })); };
+  },
+  'project-card'() {
+    root.style.background = '#F7F2ED';
+    const card = el(`<div id="img" style="width:820px;height:620px;border-start-end-radius:220px 160px;overflow:hidden"><div id="ph" style="width:100%;height:100%;background:url(${LIB}Residential-Tower-Golden-Hour_v1.0.jpg) center/cover"></div></div>`, `${startSide}:${pad}px;top:${(H - 620) / 2}px`);
+    imgs.push(LIB + 'Residential-Tower-Golden-Hour_v1.0.jpg');
+    const tx = el(`<div class="eb" id="e" style="color:#602733"><i></i>${T('Residential tower', 'برج سكني')}</div>
+      <div class="mask" style="margin-top:28px"><span id="n" style="font:300 86px/1.05 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#140E10">${T(PR.en, PR.ar)}</span></div>
+      <div id="loc" style="margin-top:18px;font:300 28px/1.4 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#3B3436">${T(PR.location_en, PR.location_ar)}</div>
+      <div class="hair" id="h" style="width:100%;margin:40px 0 28px"></div>
+      <div id="facts" style="display:flex;gap:56px;font:400 22px/1.4 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#3B3436"><div><b style="font-weight:500;color:#602733">168</b> ${T('units', 'وحدة')}</div><div><b style="font-weight:500;color:#602733">Q4 2027</b> ${T('handover', 'تسليم')}</div><div>${T('from', 'من')} <b style="font-weight:500;color:#602733">${T('OMR 145,000', '145,000 ر.ع.')}</b></div></div>`,
+      `${AR ? 'right' : 'left'}:${pad + 820 + 96}px;top:${H * 0.33}px;width:${W - pad * 2 - 820 - 96}px`);
+    seek = (t) => {
+      const k = M.seg(t, 0.2, 1.2, E.reveal);
+      card.querySelector('#img').style.clipPath = `inset(${(1 - k) * 100}% 0 0 0)`;
+      card.querySelector('#ph').style.transform = `scale(${1.08 - 0.08 * M.seg(t, 0.2, 3.2, E.drape)})`;
+      S(tx.querySelector('#e'), M.enter(t, 0.8, { dur: 0.8, distance: 10 })); rise(tx.querySelector('#n'), t, 0.9, 1.0);
+      S(tx.querySelector('#loc'), M.enter(t, 1.1, { dur: 0.8, distance: 10 })); draw(tx.querySelector('#h'), t, 1.25, 0.9); S(tx.querySelector('#facts'), M.enter(t, 1.45, { dur: 0.8, distance: 10 }));
+    };
+  },
+  'property-details'() {
+    const b = bg(LIB + 'Apartment-Interior-Sea-View_v1.0.jpg');
+    const panel = el(`<div id="pn" style="position:absolute;inset:0;background:rgba(247,242,237,.96);border-start-end-radius:120px"></div>
+      <div style="position:relative;padding:72px 80px;color:#3B3436">
+        <div class="eb" style="color:#602733"><i></i>${T('Residence 1804 · Type C', 'الوحدة 1804 · النموذج C')}</div>
+        <div id="ttl" style="margin-top:22px;font:300 64px/1.1 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#140E10">${T('Three-bedroom, sea view', 'ثلاث غرف نوم، إطلالة بحرية')}</div>
+        ${[[T('Built-up area', 'المساحة المبنية'), T('245 m²', '245 م²')], [T('Bedrooms', 'غرف النوم'), '3'], [T('Bathrooms', 'دورات المياه'), '3'], [T('Parking', 'المواقف'), '2'], [T('Price', 'السعر'), T('OMR 212,000', '212,000 ر.ع.')]].map(([k, v], i) => `<div class="row" id="r${i}" style="display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid #D6C0B2;font:400 24px ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'}"><span style="color:#6B625E">${k}</span><span class="num" style="font-weight:${i === 4 ? 500 : 400};color:${i === 4 ? '#602733' : '#3B3436'}">${v}</span></div>`).join('')}
+      </div>`, `${AR ? 'left' : 'right'}:${pad}px;top:${H * 0.12}px;width:720px`);
+    seek = (t) => { settle(b, t, 1.04, 0, 5); const k = M.seg(t, 0.2, 0.9, E.reveal); panel.querySelector('#pn').style.clipPath = `inset(0 0 ${(1 - k) * 100}% 0)`; S(panel.querySelector('#ttl'), M.enter(t, 0.6, { dur: 0.8 })); panel.querySelector('.eb').style.opacity = M.seg(t, 0.5, 0.6); for (let i = 0; i < 5; i++) S(panel.querySelector('#r' + i), M.enter(t, 0.8 + i * 0.1, { dur: 0.7, distance: 12 })); };
+  },
+  map() {
+    root.style.background = '#F7F2ED';
+    const coast = 'M-20,520 C180,470 320,560 470,500 S760,380 930,420 S1210,330 1380,350 S1700,260 1960,220';
+    const roads = ['M0,860 C400,780 700,740 1000,700 S1600,620 1940,600', 'M600,1100 C640,900 700,760 760,640 S880,460 940,420', 'M1180,1100 C1150,900 1120,760 1140,620 S1200,420 1230,340', 'M0,700 C300,690 600,650 900,560'];
+    const pin = [1010, 600];
+    const svg = `<svg width="${W}" height="${H}" viewBox="0 0 1920 1080"><defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EFE7E0"/><stop offset="1" stop-color="#F7F2ED"/></linearGradient></defs>
+      <path d="${coast} L1960,-20 L-20,-20 Z" fill="#EFE7E0" id="sea" opacity="0"/>
+      <path d="${coast}" fill="none" stroke="#AA9180" stroke-width="2" id="cl" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+      ${roads.map((d, i) => `<path d="${d}" fill="none" stroke="#D6C0B2" stroke-width="${i < 1 ? 6 : 3}" id="rd${i}" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>`).join('')}
+      <text x="160" y="300" font-size="18" letter-spacing="6" fill="#8E837D" id="t1" opacity="0">${T('GULF OF OMAN', 'بحر عُمان')}</text>
+      ${[[620, 760, T('Muscat Int. Airport · 12 min', 'مطار مسقط الدولي · 12 دقيقة')], [1240, 460, T('Al Mouj · 9 min', 'الموج · 9 دقائق')], [520, 600, T('Qurum Beach · 14 min', 'شاطئ القرم · 14 دقيقة')]].map(([x, y, l], i) => `<g id="poi${i}" opacity="0"><rect x="${x - 5}" y="${y - 5}" width="10" height="10" fill="#AA9180" transform="rotate(45 ${x} ${y})"/><text x="${AR ? x - 20 : x + 20}" y="${y + 6}" font-size="${AR ? 22 : 20}" fill="#3B3436" ${AR ? 'font-family="SIRAJ Digits, Tajawal" text-anchor="end" direction="rtl"' : ''}>${l}</text></g>`).join('')}
+      <g id="pin"><circle id="halo" cx="${pin[0]}" cy="${pin[1]}" r="10" fill="none" stroke="#602733" stroke-width="2" opacity="0"/>
+        <line x1="${pin[0]}" y1="${pin[1]}" x2="${pin[0]}" y2="${pin[1] - 70}" stroke="#602733" stroke-width="2"/>
+        <rect x="${pin[0] - 14}" y="${pin[1] - 98}" width="28" height="28" fill="#602733" transform="rotate(45 ${pin[0]} ${pin[1] - 84})"/></g>
+    </svg>`;
+    const m = el(svg, 'left:0;top:0');
+    const lab = el(`<div class="eb" style="color:#602733"><i></i>${T('Location', 'الموقع')}</div><div style="margin-top:16px;font:300 60px/1.1 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#140E10">${T(PR.en, PR.ar)}</div><div style="margin-top:10px;font:300 28px ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#3B3436">${T(PR.location_en, PR.location_ar)}</div>`, `${startSide}:${pad}px;bottom:${H * 0.1}px`);
+    seek = (t) => {
+      m.querySelector('#sea').setAttribute('opacity', M.seg(t, 0.0, 0.8));
+      m.querySelector('#cl').setAttribute('stroke-dashoffset', 1 - M.seg(t, 0.0, 1.4, E.flow));
+      for (let i = 0; i < 4; i++) m.querySelector('#rd' + i).setAttribute('stroke-dashoffset', 1 - M.seg(t, 0.3 + i * 0.12, 1.2, E.flow));
+      m.querySelector('#t1').setAttribute('opacity', M.seg(t, 0.8, 0.6));
+      const d = M.spring(Math.max(0, t - 1.3), M.SPRING.drape);
+      m.querySelector('#pin').setAttribute('transform', `translate(0 ${((1 - d) * -60).toFixed(2)})`);
+      m.querySelector('#pin').setAttribute('opacity', M.seg(t, 1.3, 0.3));
+      const hk = M.seg(t, 1.8, 1.4, E.flow);
+      m.querySelector('#halo').setAttribute('r', 10 + hk * 70); m.querySelector('#halo').setAttribute('opacity', (1 - hk) * 0.6 * (t > 1.8 ? 1 : 0));
+      for (let i = 0; i < 3; i++) m.querySelector('#poi' + i).setAttribute('opacity', M.seg(t, 2.0 + i * 0.14, 0.6));
+      S(lab, M.enter(t, 1.5, { dur: 0.9, distance: 12 }));
+    };
+  },
+  'floor-plan'() {
+    root.style.background = '#F7F2ED';
+    // 2-bedroom plan, 1 unit = 1 cm at 1:50 → drawn in px
+    const ox = AR ? 260 : 700, oy = 170, s = 62;
+    const walls = [[0, 0, 16, 0], [16, 0, 16, 11], [16, 11, 0, 11], [0, 11, 0, 0], [6, 0, 6, 6], [0, 6, 4.8, 6], [6, 6, 7.4, 6], [10.5, 0, 10.5, 4.5], [10.5, 6, 10.5, 11], [10.5, 6, 16, 6], [6, 6, 6, 8], [6, 9.4, 6, 11]];
+    const rooms = [[3, 3, T('Bedroom 1', 'غرفة نوم 1'), '16.2 m²'], [3, 8.6, T('Kitchen', 'المطبخ'), '11.0 m²'], [8.2, 3, T('Living', 'المعيشة'), '32.4 m²'], [13.2, 3, T('Bedroom 2', 'غرفة نوم 2'), '14.8 m²'], [13.2, 8.6, T('Terrace', 'الشرفة'), '9.6 m²'], [8.2, 8.6, T('Dining', 'الطعام'), '12.5 m²']];
+    const svg = `<svg width="${W}" height="${H}" viewBox="0 0 1920 1080">
+      ${walls.map(([x1, y1, x2, y2], i) => `<line id="w${i}" x1="${ox + x1 * s}" y1="${oy + y1 * s}" x2="${ox + x2 * s}" y2="${oy + y2 * s}" stroke="#3B3436" stroke-width="${i < 4 ? 7 : 4}" stroke-linecap="square" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>`).join('')}
+      <path id="arc" d="M${ox + 10.5 * s},${oy + 4.5 * s} A${1.5 * s},${1.5 * s} 0 0 1 ${ox + 9 * s},${oy + 6 * s}" fill="none" stroke="#AA9180" stroke-width="1.5" opacity="0"/>
+      ${rooms.map(([x, y, n, a], i) => `<g id="rm${i}" opacity="0"><text x="${ox + x * s}" y="${oy + y * s}" text-anchor="middle" font-size="22" fill="#3B3436" ${AR ? 'font-family="Tajawal"' : ''}>${n}</text><text x="${ox + x * s}" y="${oy + y * s + 30}" text-anchor="middle" font-size="18" fill="#8E837D">${a}</text></g>`).join('')}
+      <g id="dim" opacity="0"><line x1="${ox}" y1="${oy + 11 * s + 50}" x2="${ox + 16 * s}" y2="${oy + 11 * s + 50}" stroke="#AA9180" stroke-width="1.5"/><text x="${ox + 8 * s}" y="${oy + 11 * s + 80}" text-anchor="middle" font-size="18" letter-spacing="3" fill="#6B625E">16.00 m</text></g>
+    </svg>`;
+    const p = el(svg, 'left:0;top:0');
+    const lab = el(`<div class="eb" style="color:#602733"><i></i>${T('Type B · 2 bedrooms', 'النموذج B · غرفتا نوم')}</div><div class="num" style="margin-top:18px;font:200 110px/1 Jost;color:#602733" id="area">0 m²</div><div style="margin-top:12px;font:300 24px ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#3B3436">${T('Total built-up area', 'إجمالي المساحة المبنية')}</div>`, `${startSide}:${pad}px;top:${H * 0.36}px`);
+    seek = (t) => {
+      walls.forEach((_, i) => p.querySelector('#w' + i).setAttribute('stroke-dashoffset', 1 - M.seg(t, 0.1 + i * 0.07, 0.8, E.flow)));
+      p.querySelector('#arc').setAttribute('opacity', M.seg(t, 1.0, 0.5));
+      for (let i = 0; i < rooms.length; i++) p.querySelector('#rm' + i).setAttribute('opacity', M.seg(t, 1.2 + i * 0.08, 0.6));
+      p.querySelector('#dim').setAttribute('opacity', M.seg(t, 1.8, 0.6));
+      lab.querySelector('#area').textContent = M.count(t, 0.6, 1.8, 132) + (AR ? ' م²' : ' m²');
+      S(lab, M.enter(t, 0.4, { dur: 0.9, distance: 12 }));
+    };
+  },
+  progress() {
+    const b = bg(LIB + 'Construction-Site-Dawn_v1.0.jpg', 'linear-gradient(90deg, rgba(23,6,8,.85) 0%, rgba(23,6,8,.55) 55%, rgba(23,6,8,.2) 100%)');
+    const ms = [[0, T('Groundbreaking', 'وضع حجر الأساس'), 'Q1 2025'], [0.35, T('Structure', 'الهيكل الإنشائي'), 'Q3 2026'], [0.64, T('Façade', 'الواجهات'), 'Q1 2027'], [1, T('Handover', 'التسليم'), 'Q4 2027']];
+    const pr = el(`<div class="eb"><i></i>${T('Construction update · October 2026', 'تحديث الإنشاءات · أكتوبر 2026')}</div>
+      <div style="display:flex;align-items:baseline;gap:24px;margin-top:28px"><div class="num" id="pc" style="font:200 160px/1 Jost;color:#F7F2ED">0%</div><div style="font:300 30px ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#D6C0B2">${T('complete', 'مكتمل')}</div></div>
+      <div style="position:relative;margin-top:80px;height:1px;background:rgba(214,192,178,.35)"><div id="fill" style="position:absolute;inset-block:-1px;${startSide}:0;height:3px;background:#D6C0B2;width:0"></div>
+      ${ms.map(([p, n, d], i) => `<div id="m${i}" style="position:absolute;${startSide}:${p * 100}%;top:-6px;transform:translateX(${AR ? 50 : -50}%);text-align:center;width:220px;margin-${startSide}:-110px;transform:none"><span class="lum" style="width:12px;height:12px"></span><div style="margin-top:28px;font:400 22px ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#F7F2ED">${n}</div><div style="margin-top:6px;font:500 14px Jost;letter-spacing:.2em;color:#AA9180">${d}</div></div>`).join('')}</div>`, `left:${pad}px;right:${pad + 120}px;top:${H * 0.2}px`);
+    seek = (t) => { settle(b, t, 1.05, 0, 5); const k = M.seg(t, 0.5, 2.2, E.flow) * 0.64; pr.querySelector('#fill').style.width = (k * 100) + '%'; pr.querySelector('#pc').textContent = Math.round(k * 100) + '%'; ms.forEach(([p], i) => { pr.querySelector('#m' + i).style.opacity = k + 0.001 >= p ? 1 : 0.35; }); S(pr.querySelector('.eb'), M.enter(t, 0.2, { dur: 0.8, distance: 10 })); };
+  },
+  chart() {
+    root.style.background = '#F7F2ED';
+    const data = [[2021, 610], [2022, 655], [2023, 702], [2024, 748], [2025, 812], [2026, 871]];
+    const max = 1000, ch = 520, bw = 120, gap = 92, x0 = 700, y0 = 850;
+    const bars = data.map(([y, v], i) => `<g><rect id="b${i}" x="${x0 + i * (bw + gap)}" y="${y0}" width="${bw}" height="0" fill="${i === data.length - 1 ? '#602733' : '#D6C0B2'}"/><text id="v${i}" x="${x0 + i * (bw + gap) + bw / 2}" y="${y0}" text-anchor="middle" font-size="24" fill="#3B3436" opacity="0">${v}</text><text x="${x0 + i * (bw + gap) + bw / 2}" y="${y0 + 44}" text-anchor="middle" font-size="18" letter-spacing="3" fill="#6B625E">${y}</text></g>`).join('');
+    const grid = [0, 250, 500, 750, 1000].map((g) => `<line x1="${x0 - 30}" x2="${x0 + 6 * (bw + gap)}" y1="${y0 - g / max * ch}" y2="${y0 - g / max * ch}" stroke="#E3D6CC" stroke-width="1"/>`).join('');
+    const c = el(`<svg width="${W}" height="${H}" viewBox="0 0 1920 1080">${grid}${bars}<line x1="${x0 - 30}" x2="${x0 + 6 * (bw + gap)}" y1="${y0}" y2="${y0}" stroke="#3B3436" stroke-width="1.5"/></svg>`, 'left:0;top:0');
+    const lab = el(`<div class="eb" style="color:#602733"><i></i>${T('Muscat residential market', 'سوق مسقط السكني')}</div><div style="margin-top:20px;font:300 56px/1.12 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#140E10;width:440px">${T('Average price per m², OMR', 'متوسط سعر المتر المربع، ر.ع.')}</div><div style="margin-top:24px;font:400 16px ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#6B625E;width:420px">${T('Illustrative data for demonstration.', 'بيانات توضيحية لأغراض العرض.')}</div>`, `left:${pad}px;top:${H * 0.3}px`);
+    seek = (t) => { data.forEach(([, v], i) => { const k = M.seg(t, 0.5 + i * 0.1, 1.1, E.drape); const h = v / max * ch * k; const r = c.querySelector('#b' + i); r.setAttribute('height', h); r.setAttribute('y', y0 - h); const tx = c.querySelector('#v' + i); tx.setAttribute('y', y0 - h - 16); tx.setAttribute('opacity', M.seg(t, 1.0 + i * 0.1, 0.5)); tx.textContent = Math.round(v * k); }); S(lab, M.enter(t, 0.2, { dur: 0.9, distance: 12 })); };
+  },
+  quote() {
+    const b = bg(STILL + 'Drape-Deep/SIRAJ_Silk_Drape-Deep_16x9_web_v1.0.webp');
+    const qq = el(`<img id="bl" src="../../05-Graphic-System/SVG/SIRAJ_Silk-Blade_Sand_v1.0.svg" style="width:96px;display:block;margin:0 auto 48px">
+      <div style="font:300 ${AR ? 64 : 66}px/1.3 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#F7F2ED;text-align:center">${(AR ? ['نبني ما يبقى:', 'عمارةً هادئة، صادقة،', 'تحمل الضوء.'] : ['We build what endures:', 'calm, honest architecture', 'that holds the light.']).map((l, i) => `<span class="mask"><span id="q${i}">${l}</span></span>`).join('')}</div>
+      <div class="eb" id="at" style="justify-content:center;margin-top:48px"><i></i>${T('SIRAJ Real Estate Development', 'سراج للتطوير العقاري')}</div>`, `left:${W * 0.15}px;right:${W * 0.15}px;top:${H * 0.24}px`);
+    seek = (t) => { settle(b, t, 1.05, 0, 6); qq.querySelector('#bl').style.clipPath = `inset(0 ${(1 - M.seg(t, 0.1, 0.9, E.reveal)) * 100}% 0 0)`; for (let i = 0; i < 3; i++) rise(qq.querySelector('#q' + i), t, 0.5 + i * 0.14, 1.0); S(qq.querySelector('#at'), M.enter(t, 1.3, { dur: 0.8, distance: 10 })); };
+  },
+  'image-reveal'() {
+    root.style.background = '#F7F2ED';
+    const fr = el(`<div id="f" style="width:${W - pad * 2}px;height:${H - 240}px;overflow:hidden;border-start-end-radius:320px 240px"><div id="ph" style="width:100%;height:100%;background:url(${LIB}Campaign-Silk-Reveal_v1.0.jpg) center/cover"></div></div>`, `left:${pad}px;top:120px`);
+    imgs.push(LIB + 'Campaign-Silk-Reveal_v1.0.jpg');
+    seek = (t) => { const k = M.seg(t, 0.2, 1.4, E.reveal); const inset = (1 - k) * 50; fr.querySelector('#f').style.clipPath = `inset(${inset * 0.7}% ${inset}% ${inset * 0.7}% ${inset}%)`; fr.querySelector('#ph').style.transform = `scale(${1.12 - 0.12 * M.seg(t, 0.2, 3.4, E.drape)})`; };
+  },
+  cta() {
+    const b = bg(STILL + 'Ribbon-Pair/SIRAJ_Silk_Ribbon-Pair_16x9_web_v1.0.webp', 'rgba(23,6,8,.25)');
+    const c = el(`<div class="eb" id="e" style="justify-content:center"><i></i>${T('Now selling · Noor Residences', 'متاح للبيع الآن · مساكن نور')}</div>
+      <div id="t" style="margin-top:30px;font:300 84px/1.1 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#F7F2ED">${T('Register your interest', 'سجّل اهتمامك')}</div>
+      <div id="btn" style="position:relative;display:inline-flex;align-items:center;gap:20px;margin-top:56px;padding:26px 44px;font:500 18px ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};letter-spacing:${AR ? 0 : '.2em'};text-transform:uppercase;color:#F7F2ED">
+        <svg style="position:absolute;inset:0;overflow:visible" width="100%" height="100%"><rect x="0.5" y="0.5" width="calc(100% - 1px)" height="calc(100% - 1px)" fill="none" stroke="#D6C0B2" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" id="fr"/></svg>
+        <span>${BR.contact.website}</span><span id="ar" style="display:inline-block">${AR ? '←' : '→'}</span></div>`, `left:0;right:0;top:${H * 0.3}px;text-align:center`);
+    seek = (t) => { settle(b, t, 1.04, 0, 5); S(c.querySelector('#e'), M.enter(t, 0.2, { dur: 0.8, distance: 10 })); S(c.querySelector('#t'), M.enter(t, 0.4, { dur: 1.0, distance: 18 })); c.querySelector('#fr').setAttribute('stroke-dashoffset', 1 - M.seg(t, 0.9, 1.2, E.flow)); c.querySelector('#btn').style.opacity = M.seg(t, 0.9, 0.5); const nud = Math.sin(Math.max(0, t - 2.2) * Math.PI / 0.9) * (t > 2.2 && t < 3.1 ? 1 : 0); c.querySelector('#ar').style.transform = `translateX(${(AR ? -1 : 1) * nud * 8}px)`; };
+  },
+};
+COMP[C]();
+window.ready = Promise.all(imgs.map((src) => new Promise((r) => { const i = new Image(); i.onload = i.onerror = r; i.src = src; })));
+window.seek = (t) => seek(t);
+if (!navigator.webdriver) { const t0 = performance.now(); const loop = () => { window.seek(((performance.now() - t0) / 1000) % 4.5); requestAnimationFrame(loop); }; loop(); }
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Typography Specimen v1.0</title>
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<style>
+  @page { size: 1920px 1080px; margin: 0; }
+  body { margin: 0; background: #F7F2ED; color: #3B3436; }
+  .page { width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; position: relative; overflow: hidden; page-break-after: always; }
+  .dark { background: #170608; color: #E9DDD4; }
+  .eb { font: 500 14px/1 Jost; letter-spacing: .24em; text-transform: uppercase; color: #602733; display: flex; gap: 14px; align-items: center; }
+  .dark .eb { color: #D6C0B2; }
+  .eb i { width: 8px; height: 8px; background: #AA9180; transform: rotate(45deg); }
+  .foot { position: absolute; left: 120px; right: 120px; bottom: 48px; display: flex; justify-content: space-between; font: 500 12px Jost; letter-spacing: .2em; text-transform: uppercase; color: #8E837D; }
+  .scale-row { display: grid; grid-template-columns: 220px 1fr 1fr; align-items: baseline; border-top: 1px solid #E3D6CC; padding: 14px 0; gap: 40px; }
+  .meta { font: 500 12px/1.5 Jost; letter-spacing: .14em; text-transform: uppercase; color: #8E837D; }
+  .ar { font-family: "SIRAJ Digits", "Tajawal", sans-serif; direction: rtl; text-align: right; letter-spacing: 0; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; }
+  .glyphs { font: 300 64px/1.25 Jost; color: #140E10; word-break: break-all; }
+  .num { font-variant-numeric: lining-nums tabular-nums; }
+  table { border-collapse: collapse; width: 100%; font: 400 20px/1.4 Jost; }
+  td, th { padding: 14px 0; border-bottom: 1px solid #E3D6CC; text-align: start; }
+  th { font: 500 12px Jost; letter-spacing: .16em; text-transform: uppercase; color: #8E837D; }
+</style>
+</head>
+<body>
+
+<!-- 1. Cover -->
+<section class="page dark">
+  <div class="eb"><i></i>03 · Typography</div>
+  <div style="margin-top:180px;font:200 200px/0.95 Jost;color:#F7F2ED;letter-spacing:-.02em">Jost</div>
+  <div class="ar" style="font:300 176px/1.2 Tajawal;color:#D6C0B2;text-align:left;direction:rtl;margin-top:24px">تجوال</div>
+  <p style="max-width:860px;font:300 26px/1.6 Jost;color:#E9DDD4;margin-top:56px">SIRAJ has one bilingual system. Jost sets Latin text with geometric, architectural precision, and Tajawal sets Arabic with calm, contemporary clarity. Both are open source (SIL OFL 1.1). Western digits (0–9) are used in every language.</p>
+  <div class="foot" style="color:#8E837D"><span>SIRAJ Typography Specimen v1.0</span><span>Jost · Tajawal · SIRAJ Digits</span></div>
+</section>
+
+<!-- 2. Latin scale -->
+<section class="page">
+  <div class="eb"><i></i>Type scale · Latin · Jost</div>
+  <div style="margin-top:40px">
+    <div class="scale-row"><div class="meta">Display<br>88 / 1.04 · Light 300<br>−0.01em</div><div style="font:300 88px/1.04 Jost;letter-spacing:-.01em;color:#140E10;grid-column:span 2">Light, built.</div></div>
+    <div class="scale-row"><div class="meta">H1<br>60 / 1.08 · Light 300</div><div style="font:300 60px/1.08 Jost;color:#140E10;grid-column:span 2">Noor Residences, Al Khuwair</div></div>
+    <div class="scale-row"><div class="meta">H2<br>42 / 1.14 · Regular 400</div><div style="font:400 42px/1.14 Jost;color:#140E10;grid-column:span 2">Architecture shaped by light</div></div>
+    <div class="scale-row"><div class="meta">H3<br>30 / 1.22 · Regular 400</div><div style="font:400 30px/1.22 Jost;color:#140E10;grid-column:span 2">Residences with uninterrupted sea views</div></div>
+    <div class="scale-row"><div class="meta">Lead<br>21 / 1.55 · Light 300</div><div style="font:300 21px/1.55 Jost;grid-column:span 2;max-width:1100px">A calm tower of 168 residences, set on a landscaped podium two minutes from the sea and minutes from the city.</div></div>
+    <div class="scale-row"><div class="meta">Body<br>16 / 1.6 · Regular 400</div><div style="font:400 16px/1.6 Jost;grid-column:span 2;max-width:820px">Every residence is oriented to the light. Deep loggias shade the façade, stone floors keep interiors cool, and floor-to-ceiling glazing frames the Gulf of Oman. Handover is scheduled for Q4 2027.</div></div>
+    <div class="scale-row"><div class="meta">Caption<br>12 / 1.4 · Medium 500<br>+0.16em · Uppercase</div><div style="font:500 12px/1.4 Jost;letter-spacing:.16em;text-transform:uppercase;color:#602733;grid-column:span 2">Residential tower · 24 floors · Handover Q4 2027</div></div>
+    <div class="scale-row"><div class="meta">Numeral<br>72 / 1 · ExtraLight 200<br>Tabular lining</div><div class="num" style="font:200 72px/1 Jost;color:#602733;letter-spacing:-.02em;grid-column:span 2">OMR 145,000 · 245 m² · 7.8%</div></div>
+  </div>
+  <div class="foot"><span>Mobile: Display 52 · H1 40 · H2 30 · H3 24 · Body 16</span><span>03-Typography</span></div>
+</section>
+
+<!-- 3. Arabic scale -->
+<section class="page" dir="rtl" lang="ar">
+  <div class="eb" style="flex-direction:row"><i></i><span style="font:500 18px Tajawal;letter-spacing:0">سلّم الخطوط · العربية · تجوال</span></div>
+  <div style="margin-top:40px">
+    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">Display<br>92 / 1.25 · Light 300</div><div class="ar" style="font-size:92px;line-height:1.25;font-weight:300;color:#140E10;grid-column:span 2">نورٌ يُبنى.</div></div>
+    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">H1<br>64 / 1.3 · Light 300</div><div class="ar" style="font-size:64px;line-height:1.3;font-weight:300;color:#140E10;grid-column:span 2">مساكن نور، الخوير</div></div>
+    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">H2<br>45 / 1.38 · Regular 400</div><div class="ar" style="font-size:45px;line-height:1.38;color:#140E10;grid-column:span 2">عمارةٌ يشكّلها الضوء</div></div>
+    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">Lead<br>22 / 1.75 · Light 300</div><div class="ar" style="font-size:22px;line-height:1.75;font-weight:300;grid-column:span 2">برجٌ هادئ يضم 168 وحدة سكنية، على منصة مشجّرة تبعد دقيقتين عن البحر ودقائق عن المدينة.</div></div>
+    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">Body<br>17 / 1.85 · Regular 400</div><div class="ar" style="font-size:17px;line-height:1.85;grid-column:span 2;max-width:860px">كل وحدة موجّهة نحو الضوء. شرفات عميقة تظلّل الواجهة، وأرضيات حجرية تحفظ برودة الداخل، ونوافذ ممتدة تؤطّر بحر عُمان. موعد التسليم في الربع الرابع 2027.</div></div>
+    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">Caption<br>13 / 1.6 · Medium 500<br>No tracking</div><div class="ar" style="font-size:13px;font-weight:500;color:#602733;grid-column:span 2">برج سكني · 24 طابقاً · التسليم الربع الرابع 2027</div></div>
+    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">Numerals<br>Western digits via<br>SIRAJ Digits (Jost)</div><div class="ar num" style="font-size:64px;font-weight:200;color:#602733;grid-column:span 2">145,000 ر.ع. · 245 م² · 7.8%</div></div>
+  </div>
+  <div class="foot" style="direction:ltr"><span>Arabic is set ≈ 8% larger than Latin for optical parity · never letter-spaced · never uppercase-styled</span><span>03-Typography</span></div>
+</section>
+
+<!-- 4. Bilingual composition -->
+<section class="page dark">
+  <div class="eb"><i></i>Bilingual composition</div>
+  <div class="grid2" style="margin-top:96px;align-items:end">
+    <div>
+      <div style="font:500 13px Jost;letter-spacing:.24em;color:#D6C0B2;text-transform:uppercase">Now selling</div>
+      <div style="font:300 96px/1.04 Jost;color:#F7F2ED;margin-top:24px;letter-spacing:-.01em">Noor<br>Residences</div>
+      <div style="font:300 24px/1.6 Jost;color:#E9DDD4;margin-top:32px;max-width:640px">168 residences in Al Khuwair, Muscat. From OMR 145,000. Handover Q4 2027.</div>
+    </div>
+    <div class="ar">
+      <div style="font:500 16px Tajawal;color:#D6C0B2">متاح للبيع الآن</div>
+      <div style="font-weight:300;font-size:104px;line-height:1.2;color:#F7F2ED;margin-top:24px">مساكن<br>نور</div>
+      <div style="font-weight:300;font-size:26px;line-height:1.8;color:#E9DDD4;margin-top:32px">168 وحدة سكنية في الخوير، مسقط. تبدأ من 145,000 ر.ع. التسليم الربع الرابع 2027.</div>
+    </div>
+  </div>
+  <div style="height:1px;background:#AA9180;opacity:.6;margin-top:72px"></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:40px;font:400 18px/1.6 Jost;color:#B9A69A">
+    <div><b style="color:#F7F2ED;font-weight:500">Optical alignment.</b> Align the Latin cap height with the top of the Arabic letter bodies, and share baselines across columns. Arabic sits about 8% larger.</div>
+    <div><b style="color:#F7F2ED;font-weight:500">Reading order.</b> In side-by-side layouts, Latin runs on the left and Arabic on the right. Each column aligns to its own start edge, and both mirror the same grid.</div>
+    <div><b style="color:#F7F2ED;font-weight:500">Mixed runs.</b> Wrap Latin words, numbers, phone numbers and URLs inside Arabic text in <span style="font-family:monospace">&lt;bdi&gt;</span> or a <span style="font-family:monospace">dir="ltr"</span> span so that bidi never reorders them.</div>
+  </div>
+</section>
+
+<!-- 5. Numerals & formats -->
+<section class="page">
+  <div class="eb"><i></i>Numerals, currency, dates</div>
+  <div class="grid2" style="margin-top:56px">
+    <table>
+      <tr><th>Item</th><th>English</th><th style="text-align:right">العربية</th></tr>
+      <tr><td>Price</td><td class="num">OMR 145,000</td><td class="ar num">145,000 ر.ع.</td></tr>
+      <tr><td>Price (compact)</td><td class="num">OMR 1.2M</td><td class="ar num">1.2 مليون ر.ع.</td></tr>
+      <tr><td>Area</td><td class="num">245 m²</td><td class="ar num">245 م²</td></tr>
+      <tr><td>Percentage</td><td class="num">7.8%</td><td class="ar num">7.8%</td></tr>
+      <tr><td>Date</td><td class="num">12 March 2027</td><td class="ar num">12 مارس 2027</td></tr>
+      <tr><td>Quarter</td><td class="num">Q4 2027</td><td class="ar num">الربع الرابع 2027</td></tr>
+      <tr><td>Phone</td><td class="num">+968 2400 0000</td><td class="ar num"><bdi dir="ltr">+968 2400 0000</bdi></td></tr>
+      <tr><td>Unit</td><td class="num">Unit 1804 · Floor 18</td><td class="ar num">الوحدة 1804 · الطابق 18</td></tr>
+    </table>
+    <div>
+      <div class="glyphs num">0123456789</div>
+      <div class="ar num" style="font:200 64px/1.3 'SIRAJ Digits',Tajawal;color:#140E10;text-align:left;direction:ltr">0123456789</div>
+      <p style="font:400 18px/1.7 Jost;margin-top:32px;max-width:620px">Western digits are used <b>everywhere</b>, including Arabic text, so that prices, areas and dates read identically in both languages. The <b>SIRAJ Digits</b> face maps Jost figures onto the digit code points and is loaded ahead of Tajawal. Use tabular lining figures in tables, and never use Arabic-Indic digits (٠١٢٣).</p>
+      <p style="font:400 18px/1.7 Jost;max-width:620px">The thousands separator is a comma and the decimal mark is a point. Currency is written <b>OMR</b> before the amount in English and <b>ر.ع.</b> after it in Arabic.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Weights -->
+<section class="page">
+  <div class="eb"><i></i>Weights in use</div>
+  <div class="grid2" style="margin-top:56px">
+    <div>
+      ${0}
+    </div>
+  </div>
+</section>
+<script>
+// fill weights page
+const w = document.querySelectorAll('.page')[5].querySelector('.grid2');
+w.innerHTML = `<div>${[[200, 'ExtraLight — large numerals'], [300, 'Light — display & headings'], [400, 'Regular — body, H2/H3'], [500, 'Medium — captions, labels, buttons'], [600, 'SemiBold — UI emphasis only']].map(([n, l]) => `<div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #E3D6CC;padding:18px 0"><span style="font:${n} 54px/1 Jost;color:#140E10">Siraj ${n}</span><span class="meta">${l}</span></div>`).join('')}</div>
+<div>${[[300, 'Light — العناوين الكبيرة'], [400, 'Regular — النصوص'], [500, 'Medium — التسميات والأزرار'], [700, 'Bold — تأكيد محدود']].map(([n, l]) => `<div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #E3D6CC;padding:18px 0;direction:rtl"><span style="font:${n} 58px/1.2 Tajawal;color:#140E10">سراج ${n}</span><span class="meta" style="direction:ltr">${l}</span></div>`).join('')}</div>`;
+</script>
+</body>
+</html>

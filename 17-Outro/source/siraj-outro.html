@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Official Brand Outro v1.0</title>
+<!--
+  SIRAJ Brand Outro v1.0 — 5.0 s. The visual system coming to rest.
+  0.0  A slim silk ribbon passes from the end side back toward the start (the mirror of the intro).
+  0.6  Behind it, the official wordmark resolves (fade, unblur, settle — DRAPE).
+  1.9  A stone hairline draws from the centre; supporting details settle in, staggered by 80 ms.
+  3.2  Clean final frame; hold to 5.0.
+  Query: ?fmt=16x9|9x16|1x1 &v=logo|url|contact|cta|project|social &theme=dark|light &alpha=1 &lang=en|ar|bi
+  Contact data comes from 00-Brand-Foundation/brand.config.json (via 15-Motion-System/lib/siraj-brand-data.js).
+-->
+<link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
+<script src="../../06-SIRAJ-Silk/engine/siraj-silk.js"></script>
+<script src="../../15-Motion-System/lib/siraj-motion.js"></script>
+<script src="../../15-Motion-System/lib/siraj-logo-data.js"></script>
+<script src="../../15-Motion-System/lib/siraj-brand-data.js"></script>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+  body { background: #170608; --ink: #D6C0B2; --ink2: #B9A69A; --rule: #AA9180; }
+  body.light { background: #F7F2ED; --ink: #602733; --ink2: #6B625E; --rule: #AA9180; }
+  body.alpha { background: transparent; }
+  canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+  #logo { position: absolute; left: 50%; overflow: visible; }
+  .block { position: absolute; left: 0; right: 0; text-align: center; color: var(--ink); }
+  .rule { position: absolute; left: 50%; height: 1px; background: var(--rule); opacity: .8; }
+  .line { will-change: transform, opacity, filter; }
+  .en { font-family: "Jost", sans-serif; }
+  .ar { font-family: "SIRAJ Digits", "Tajawal", sans-serif; direction: rtl; }
+  .eyebrow-x { font-family: "Jost"; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; color: var(--ink2); }
+  .lum { display: inline-block; background: var(--rule); transform: rotate(45deg); vertical-align: middle; }
+  .project { position: absolute; left: 0; right: 0; text-align: center; color: var(--ink); }
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="project" id="project"></div>
+<svg id="logo" xmlns="http://www.w3.org/2000/svg"></svg>
+<div class="rule" id="rule"></div>
+<div class="block" id="details"></div>
+<canvas id="fg"></canvas>
+<script>
+const M = SirajMotion, E = M.EASE, B = window.SIRAJ_BRAND;
+const q = new URLSearchParams(location.search);
+const FMT = q.get('fmt') || '16x9', V = q.get('v') || 'url', THEME = q.get('theme') || 'dark', ALPHA = q.get('alpha') === '1';
+if (THEME === 'light') document.body.classList.add('light');
+if (ALPHA) document.body.classList.add('alpha');
+const W = innerWidth, H = innerHeight, U = Math.min(W, H) / 1080; // type unit
+const DARK = THEME !== 'light';
+
+// ---- layout ----------------------------------------------------------------------------------------
+const BOX = window.SIRAJ_LOGO_BOX;
+const isProject = V === 'project';
+let LW = W * ({ '16x9': 0.34, '9x16': 0.6, '1x1': 0.5 }[FMT]);
+if (isProject) LW *= 0.42;
+const LH = LW * BOX.h / BOX.w;
+const hasDetails = V !== 'logo';
+let logoCY = H * (hasDetails ? (isProject ? 0.6 : 0.44) : 0.5);
+const svg = document.getElementById('logo');
+svg.setAttribute('viewBox', `${BOX.x} ${BOX.y} ${BOX.w} ${BOX.h}`);
+svg.style.cssText = `width:${LW}px;height:${LH}px;top:${logoCY - LH / 2}px;margin-left:${-LW / 2}px`;
+const letter = DARK ? '#D6C0B2' : '#602733';
+svg.innerHTML = `<defs><linearGradient id="wipe" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
+  <mask id="m" maskUnits="userSpaceOnUse" x="${BOX.x - 20}" y="${BOX.y - 20}" width="${BOX.w + 40}" height="${BOX.h + 40}"><rect x="${BOX.x - 20}" y="${BOX.y - 20}" width="${BOX.w + 40}" height="${BOX.h + 40}" fill="#000"/><path id="mp" fill="url(#wipe)"/></mask></defs>
+  <g mask="url(#m)">${window.SIRAJ_LOGO.map((p) => `<path d="${p.d}" fill="${p.role === 'lumen' ? '#AA9180' : letter}"/>`).join('')}</g>`;
+const mp = document.getElementById('mp'), wipe = document.getElementById('wipe');
+
+// details content per variant
+const C = B.contact, CO = B.company, PR = B.demo_projects.noor;
+const lum = (s) => `<span class="lum" style="width:${s}px;height:${s}px;margin:0 ${s * 2}px"></span>`;
+const fs = (k) => Math.round(k * U);
+const details = document.getElementById('details');
+const lines = [];
+const L = (html, cls = '') => lines.push(`<div class="line ${cls}">${html}</div>`);
+if (V === 'url') {
+  L(`<span class="en" style="font-size:${fs(34)}px;font-weight:300;letter-spacing:.06em">${C.website}</span>`);
+} else if (V === 'contact') {
+  L(`<span class="ar" style="font-size:${fs(34)}px;font-weight:400">${CO.name_ar}</span>`);
+  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${C.phone}${lum(fs(7))}${C.email}${lum(fs(7))}${C.website}</span>`, 'mt');
+} else if (V === 'cta') {
+  L(`<span class="eyebrow-x" style="font-size:${fs(16)}px">Register your interest</span>`);
+  L(`<span class="en" style="font-size:${fs(40)}px;font-weight:300">${C.website}</span>`, 'mt');
+  L(`<span class="ar" style="font-size:${fs(26)}px;font-weight:400">سجّل اهتمامك ${lum(fs(6))} <bdi dir="ltr">${C.phone}</bdi></span>`, 'mt');
+} else if (V === 'social') {
+  L(`<span class="en" style="font-size:${fs(36)}px;font-weight:400;letter-spacing:.04em">${C.social_handle}</span>`);
+  L(`<span class="eyebrow-x" style="font-size:${fs(15)}px">Follow · تابعونا</span>`, 'mt');
+} else if (V === 'project') {
+  L(`<span class="eyebrow-x" style="font-size:${fs(15)}px">A SIRAJ development · من تطوير سراج</span>`);
+  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${C.website}${lum(fs(6))}${C.phone}</span>`, 'mt');
+}
+details.innerHTML = lines.join('');
+const project = document.getElementById('project');
+if (isProject) project.innerHTML = `<div class="en" style="font-size:${fs(96)}px;font-weight:300;letter-spacing:-.01em;line-height:1">${PR.en}</div><div class="ar" style="font-size:${fs(54)}px;font-weight:300;margin-top:${fs(18)}px">${PR.ar}</div>`;
+project.style.top = (H * 0.26) + 'px';
+const rule = document.getElementById('rule');
+const ruleY = logoCY + LH / 2 + LH * (isProject ? 0.7 : 0.55);
+const ruleW = isProject ? LW * 1.4 : LW * 0.32;
+rule.style.cssText = `top:${ruleY}px;width:${ruleW}px;margin-left:${-ruleW / 2}px`;
+details.style.top = (ruleY + LH * 0.45) + 'px';
+[...details.children].forEach((el) => { if (el.classList.contains('mt')) el.style.marginTop = fs(18) + 'px'; });
+if (!hasDetails) rule.style.display = 'none';
+
+// ---- silk --------------------------------------------------------------------------------------------
+const bg = new SirajSilk(document.getElementById('bg'), { background: 'transparent' });
+const fg = new SirajSilk(document.getElementById('fg'), { background: 'transparent' });
+[bg, fg].forEach((s) => { s.canvas.width = W; s.canvas.height = H; });
+SirajSilk.BACKGROUNDS.outroDark = { type: 1, a: '#4A1C26', b: '#2C0F12', c: '#170608', d: '#070203', at: [0.72, 0.8] };
+SirajSilk.BACKGROUNDS.outroLight = { type: 2, a: '#FBF8F5', b: '#F7F2ED', c: '#EFE7E0', d: '#E6DCD3', at: [0.74, 0.82] };
+const A = W / H;
+const PATH = { '16x9': [[1.6, 0.9, 0], [1.0, 0.35, 0.3], [0.45, 0.02, -0.3], [-0.1, -0.12, 0.35], [-0.6, -0.08, -0.2], [-1.1, 0.25, 0.2], [-1.7, 0.75, 0]],
+               '9x16': [[1.9, 0.5, 0], [1.1, 0.2, 0.3], [0.45, 0.0, -0.3], [-0.2, -0.1, 0.35], [-0.85, -0.05, -0.2], [-1.4, 0.2, 0.2], [-2.0, 0.5, 0]],
+               '1x1': [[1.6, 0.9, 0], [1.0, 0.35, 0.3], [0.45, 0.02, -0.3], [-0.1, -0.12, 0.35], [-0.6, -0.08, -0.2], [-1.1, 0.25, 0.2], [-1.7, 0.75, 0]] }[FMT];
+
+window.seek = (t) => {
+  if (!ALPHA) { bg.set({ background: DARK ? 'outroDark' : 'outroLight', exposure: 0.84 }); bg.render(t); }
+  const head = M.lerp(0, 2.0, M.seg(t, 0.0, 2.6, E.glide));
+  const u1 = M.clamp(head), u0 = M.clamp(head - 0.9);
+  fg.set({ background: 'transparent', light: [0.7 - 0.9 * M.seg(t, 0, 2.6, E.linear), 0.7, 0.6], exposure: DARK ? 0.84 : 0.9,
+    ribbons: u1 - u0 > 0.002 ? [{ points: PATH, width: { '16x9': 0.2, '9x16': 0.12, '1x1': 0.18 }[FMT], range: [u0, u1], fade: 0.08, twist: [0.6, 2.0, 0.8, 0.15], wave: [0.04, 1.2, 0.2], exposure: DARK ? 1.25 : 1.45, segments: 420 }] : [] });
+  fg.render(t);
+  // project title first (project variant)
+  if (isProject) { const p = M.enter(t, 0.35, { dur: 1.1, distance: 18 * U }); project.style.opacity = p.opacity; project.style.transform = `translateY(${p.y}px)`; project.style.filter = `blur(${p.blur}px)`; }
+  // logo resolve: wipe from end → start + unblur + settle
+  const r = M.seg(t, isProject ? 1.2 : 0.55, 1.5, E.flow);
+  const x = BOX.x + BOX.w + 30 - r * (BOX.w + 60);
+  wipe.setAttribute('x1', x); wipe.setAttribute('x2', x + 14); wipe.setAttribute('y1', 0); wipe.setAttribute('y2', 0);
+  mp.setAttribute('d', `M${BOX.x + BOX.w + 20},${BOX.y - 20} H${x - 10} C${x - 4},${BOX.y + 6} ${x + 6},${BOX.y + 20} ${x + 12},${BOX.y + BOX.h + 20} H${BOX.x + BOX.w + 20} Z`);
+  const e = M.enter(t, isProject ? 1.2 : 0.55, { dur: 1.6, distance: LH * 0.08 });
+  svg.style.transform = `translateY(${e.y}px)`; svg.style.filter = `blur(${(e.blur * 0.5).toFixed(2)}px)`;
+  // rule + details
+  const rk = M.seg(t, 1.9, 0.9, E.flow);
+  rule.style.transform = `scaleX(${rk})`;
+  [...details.children].forEach((el, i) => { const s = M.enter(t, 2.15 + i * 0.12, { dur: 0.9, distance: 14 * U }); el.style.opacity = s.opacity; el.style.transform = `translateY(${s.y}px)`; el.style.filter = `blur(${s.blur}px)`; });
+};
+if (!navigator.webdriver) { const t0 = performance.now(); const loop = () => { window.seek(((performance.now() - t0) / 1000) % 5.5); requestAnimationFrame(loop); }; loop(); }
+</script>
+</body>
+</html>

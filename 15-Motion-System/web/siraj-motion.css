@@ -1,0 +1,57 @@
+/* =============================================================================
+   SIRAJ Motion v1.0 — Web layer
+   Requires 09-Design-System/css/siraj.css (motion tokens). Pair with siraj-motion-web.js,
+   which adds .is-in when an element enters the viewport.
+   Principles: FLOW · DRAPE · REVEAL · WRAP · FOLD · GLIDE · SETTLE — never bounce.
+   ========================================================================== */
+
+:root {
+  --sj-enter-dur: var(--siraj-motion-duration-emphasis, 640ms);
+  --sj-enter-ease: var(--siraj-motion-easing-drape, cubic-bezier(.16, 1, .3, 1));
+  --sj-flow: var(--siraj-motion-easing-flow, cubic-bezier(.45, .05, .15, 1));
+  --sj-reveal: var(--siraj-motion-easing-reveal, cubic-bezier(.77, 0, .18, 1));
+  --sj-stagger: var(--siraj-motion-stagger-standard, 80ms);
+}
+
+/* SETTLE — default entrance: rise 24px, fade, unblur */
+[data-sj="enter"] { opacity: 0; transform: translate3d(0, 24px, 0); filter: blur(6px);
+  transition: opacity calc(var(--sj-enter-dur) * .7) var(--sj-flow), transform var(--sj-enter-dur) var(--sj-enter-ease), filter var(--sj-enter-dur) var(--sj-enter-ease);
+  transition-delay: calc(var(--sj-i, 0) * var(--sj-stagger)); }
+[data-sj="enter"].is-in { opacity: 1; transform: none; filter: none; }
+
+/* REVEAL (lines) — each line rises from behind a mask. Wrap each line: <span class="sj-line"><span>…</span></span> */
+.sj-line { display: block; overflow: hidden; padding-bottom: .08em; }
+.sj-line > span { display: inline-block; transform: translateY(105%); transition: transform 1s var(--sj-enter-ease); transition-delay: calc(var(--sj-i, 0) * 140ms); }
+.is-in .sj-line > span, .sj-line.is-in > span { transform: none; }
+
+/* REVEAL (image) — curtain from below, image settles from 1.08 → 1 */
+[data-sj="image"] { clip-path: inset(100% 0 0 0); transition: clip-path 1.2s var(--sj-reveal); overflow: hidden; }
+[data-sj="image"] > img, [data-sj="image"] > picture { transform: scale(1.08); transition: transform 2.4s var(--sj-enter-ease); }
+[data-sj="image"].is-in { clip-path: inset(0 0 0 0); }
+[data-sj="image"].is-in > img, [data-sj="image"].is-in > picture { transform: none; }
+
+/* FLOW (rule) — hairline draws from the start side */
+[data-sj="rule"] { transform: scaleX(0); transform-origin: 0 50%; transition: transform .9s var(--sj-flow); }
+[dir="rtl"] [data-sj="rule"], [data-sj="rule"]:dir(rtl) { transform-origin: 100% 50%; }
+[data-sj="rule"].is-in { transform: scaleX(1); }
+
+/* GLIDE — parallax handled by JS via --sj-parallax (0..1); background moves at 12% of scroll */
+[data-sj="parallax"] { transform: translate3d(0, calc(var(--sj-parallax, 0) * -12%), 0); will-change: transform; }
+
+/* LUMEN — the indicator: a diamond that brightens, never pulses repeatedly */
+.sj-lumen-indicator { width: 8px; height: 8px; background: var(--siraj-color-brand-stone, #AA9180); transform: rotate(45deg); transition: background-color .2s var(--sj-flow), transform .36s var(--sj-enter-ease); }
+.is-active > .sj-lumen-indicator, .sj-lumen-indicator.is-active { background: var(--siraj-color-brand-primary, #602733); transform: rotate(45deg) scale(1.25); }
+
+/* Link underline — the thread draws on hover */
+.sj-thread { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .36s var(--sj-flow); }
+[dir="rtl"] .sj-thread { background-position: 100% 100%; }
+.sj-thread:hover, .sj-thread:focus-visible { background-size: 100% 1px; }
+
+/* Loader — a Lumen with a travelling sheen (no spinning dots) */
+.sj-loader { width: 14px; height: 14px; transform: rotate(45deg); background: linear-gradient(120deg, #602733 0%, #602733 40%, #C79A9C 50%, #602733 60%, #602733 100%) 0 0 / 300% 100%; animation: sj-sheen 1.6s var(--sj-flow) infinite; }
+@keyframes sj-sheen { from { background-position: 100% 0; } to { background-position: 0 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-sj], .sj-line > span, [data-sj="image"] > img { transition: opacity .2s linear !important; transform: none !important; filter: none !important; clip-path: none !important; }
+  .sj-loader { animation: none; }
+}
