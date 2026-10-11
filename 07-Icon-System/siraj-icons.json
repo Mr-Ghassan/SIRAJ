@@ -1,0 +1,2700 @@
+{
+  "name": "SIRAJ Icon System",
+  "version": "1.0",
+  "grid": 24,
+  "padding": 2,
+  "stroke": 1.25,
+  "compactStroke": 1.5,
+  "attributes": {
+    "viewBox": "0 0 24 24",
+    "fill": "none",
+    "stroke": "currentColor",
+    "stroke-width": 1.25,
+    "stroke-linecap": "square",
+    "stroke-linejoin": "miter"
+  },
+  "categories": {
+    "real-estate": {
+      "en": "Property",
+      "ar": "العقار"
+    },
+    "spaces": {
+      "en": "Spaces & Amenities",
+      "ar": "المساحات والمرافق"
+    },
+    "location": {
+      "en": "Location",
+      "ar": "الموقع"
+    },
+    "finance": {
+      "en": "Investment & Finance",
+      "ar": "الاستثمار والتمويل"
+    },
+    "journey": {
+      "en": "Purchase Journey",
+      "ar": "رحلة الشراء"
+    },
+    "trust": {
+      "en": "Trust & Values",
+      "ar": "الثقة والقيم"
+    },
+    "contact": {
+      "en": "People & Contact",
+      "ar": "الأشخاص والتواصل"
+    },
+    "media": {
+      "en": "Media & Sharing",
+      "ar": "الوسائط والمشاركة"
+    },
+    "navigation": {
+      "en": "Navigation",
+      "ar": "التنقّل"
+    },
+    "interface": {
+      "en": "Interface",
+      "ar": "الواجهة"
+    }
+  },
+  "icons": {
+    "property": {
+      "category": "real-estate",
+      "label": {
+        "en": "property",
+        "ar": "عقار"
+      },
+      "keywords": {
+        "en": [
+          "property",
+          "house",
+          "home",
+          "residence",
+          "listing"
+        ],
+        "ar": [
+          "عقار",
+          "منزل",
+          "بيت",
+          "سكن"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 21H21M5 21V10.5L12 4.5L19 10.5V21M10 21V15.5H14V21\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 9.5L13.5 11L12 12.5L10.5 11Z\"/>",
+      "filled": "<path d=\"M3 21H21\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M5 21V10.5L12 4.5L19 10.5V21H14V15.5H10V21ZM12 8.616L14.384 11L12 13.384L9.616 11Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-property.svg",
+        "filled": "svg/filled/siraj-icon-property.svg"
+      },
+      "sprite": {
+        "outline": "sj-property",
+        "filled": "sj-property-filled"
+      }
+    },
+    "building": {
+      "category": "real-estate",
+      "label": {
+        "en": "building",
+        "ar": "مبنى"
+      },
+      "keywords": {
+        "en": [
+          "building",
+          "tower",
+          "high-rise",
+          "development"
+        ],
+        "ar": [
+          "مبنى",
+          "برج",
+          "بناية",
+          "مشروع"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 21H21M7 21V7.5H11.5M9.5 11H12.5M9.5 14.5H12.5M9.5 18H12.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M11.5 7.5C15 7.5 17 13 17 21\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M9.25 2.5L10.75 4L9.25 5.5L7.75 4Z\"/>",
+      "filled": "<path d=\"M3 21H21\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7 21V7.5H11.5C15 7.5 17 13 17 21ZM8.125 12.375L13.875 12.375L13.875 9.625L8.125 9.625ZM8.125 15.875L13.875 15.875L13.875 13.125L8.125 13.125ZM8.125 19.375L13.875 19.375L13.875 16.625L8.125 16.625Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M9.25 2.5L10.75 4L9.25 5.5L7.75 4Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-building.svg",
+        "filled": "svg/filled/siraj-icon-building.svg"
+      },
+      "sprite": {
+        "outline": "sj-building",
+        "filled": "sj-building-filled"
+      }
+    },
+    "apartment": {
+      "category": "real-estate",
+      "label": {
+        "en": "apartment",
+        "ar": "شقة"
+      },
+      "keywords": {
+        "en": [
+          "apartment",
+          "flat",
+          "residential block",
+          "unit"
+        ],
+        "ar": [
+          "شقة",
+          "وحدة سكنية",
+          "عمارة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 21H21M5 21V3.5H19V21M10.5 21V17H13.5V21M8 7H10M14 7H16M8 11H10M8 15H10M14 15H16\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M15 9.5L16.5 11L15 12.5L13.5 11Z\"/>",
+      "filled": "<path d=\"M3 21H21\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M5 21V3.5H19V21H13.5V17H10.5V21ZM6.625 8.375L11.375 8.375L11.375 5.625L6.625 5.625ZM12.625 8.375L17.375 8.375L17.375 5.625L12.625 5.625ZM6.625 12.375L11.375 12.375L11.375 9.625L6.625 9.625ZM6.625 16.375L11.375 16.375L11.375 13.625L6.625 13.625ZM12.625 16.375L17.375 16.375L17.375 13.625L12.625 13.625ZM15 8.616L17.384 11L15 13.384L12.616 11Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-apartment.svg",
+        "filled": "svg/filled/siraj-icon-apartment.svg"
+      },
+      "sprite": {
+        "outline": "sj-apartment",
+        "filled": "sj-apartment-filled"
+      }
+    },
+    "villa": {
+      "category": "real-estate",
+      "label": {
+        "en": "villa",
+        "ar": "فيلا"
+      },
+      "keywords": {
+        "en": [
+          "villa",
+          "house",
+          "detached",
+          "modern home"
+        ],
+        "ar": [
+          "فيلا",
+          "منزل مستقل",
+          "بيت"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 21H21.5M4 21V8.5M2.5 8.5H15.5M14 8.5V21M14 13H21.5M20 13V21M7 21V12.5H11V21\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M17 15.625L18.375 17L17 18.375L15.625 17Z\"/>",
+      "filled": "<path d=\"M2.5 21H21.5M2.5 8.5H15.5M14 13H21.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M4 21V8.5H14V21H11V12.5H7V21Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M14 13H20V21H14ZM17 14.741L19.259 17L17 19.259L14.741 17Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-villa.svg",
+        "filled": "svg/filled/siraj-icon-villa.svg"
+      },
+      "sprite": {
+        "outline": "sj-villa",
+        "filled": "sj-villa-filled"
+      }
+    },
+    "commercial": {
+      "category": "real-estate",
+      "label": {
+        "en": "commercial",
+        "ar": "تجاري"
+      },
+      "keywords": {
+        "en": [
+          "commercial",
+          "retail",
+          "office",
+          "shop",
+          "storefront"
+        ],
+        "ar": [
+          "تجاري",
+          "محل",
+          "مكتب",
+          "تجزئة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 21H21.5M4.5 21V10M19.5 21V10M3 5H21V10H3ZM7.5 21V14H16.5V21M12 14V21\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 6.375L13.125 7.5L12 8.625L10.875 7.5Z\"/>",
+      "filled": "<path d=\"M2.5 21H21.5M12 14V21\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 5H21V10H3ZM12 5.491L14.009 7.5L12 9.509L9.991 7.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M4.5 10H19.5V21H16.5V14H7.5V21H4.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-commercial.svg",
+        "filled": "svg/filled/siraj-icon-commercial.svg"
+      },
+      "sprite": {
+        "outline": "sj-commercial",
+        "filled": "sj-commercial-filled"
+      }
+    },
+    "land": {
+      "category": "real-estate",
+      "label": {
+        "en": "land",
+        "ar": "أرض"
+      },
+      "keywords": {
+        "en": [
+          "land",
+          "plot",
+          "parcel",
+          "site"
+        ],
+        "ar": [
+          "أرض",
+          "قطعة أرض",
+          "موقع"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3.75 20L8.25 13H20.25L15.75 20ZM12 16.5V8\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 3.75L13.5 5.25L12 6.75L10.5 5.25Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3.75 20L8.25 13H20.25L15.75 20Z\"/><path d=\"M12 13V8\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 3.75L13.5 5.25L12 6.75L10.5 5.25Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-land.svg",
+        "filled": "svg/filled/siraj-icon-land.svg"
+      },
+      "sprite": {
+        "outline": "sj-land",
+        "filled": "sj-land-filled"
+      }
+    },
+    "community": {
+      "category": "real-estate",
+      "label": {
+        "en": "community",
+        "ar": "مجتمع سكني"
+      },
+      "keywords": {
+        "en": [
+          "community",
+          "neighbourhood",
+          "masterplan",
+          "district"
+        ],
+        "ar": [
+          "مجتمع",
+          "حي",
+          "مجمع سكني"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 21H21.5M4 21V12.5L8 9L12 12.5V21M14.5 21V5H20V21M17.25 8.25V9.25M17.25 12.25V13.25M17.25 16.25V17.25\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M8 15.25L9.25 16.5L8 17.75L6.75 16.5Z\"/>",
+      "filled": "<path d=\"M2.5 21H21.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M4 21V12.5L8 9L12 12.5V21ZM8 14.366L10.134 16.5L8 18.634L5.866 16.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M14.5 21V5H20V21ZM15.875 6.875L15.875 10.625L18.625 10.625L18.625 6.875ZM15.875 10.875L15.875 14.625L18.625 14.625L18.625 10.875ZM15.875 14.875L15.875 18.625L18.625 18.625L18.625 14.875Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-community.svg",
+        "filled": "svg/filled/siraj-icon-community.svg"
+      },
+      "sprite": {
+        "outline": "sj-community",
+        "filled": "sj-community-filled"
+      }
+    },
+    "construction": {
+      "category": "real-estate",
+      "label": {
+        "en": "construction",
+        "ar": "إنشاء"
+      },
+      "keywords": {
+        "en": [
+          "construction",
+          "crane",
+          "under construction",
+          "progress"
+        ],
+        "ar": [
+          "إنشاء",
+          "قيد الإنشاء",
+          "رافعة",
+          "تشييد"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 21.5H11M7 21.5V3.25M2.75 6.5H21M17 6.5V11.5M2.75 6.5V9H5V6.5\"/><path stroke-linecap=\"butt\" d=\"M2.75 6.5L7 3.25L21 6.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M17 12L18.5 13.5L17 15L15.5 13.5Z\"/>",
+      "filled": "<path d=\"M3 21.5H11M7 21.5V3.25M2.75 6.5H21M17 6.5V11.5\"/><path stroke-linecap=\"butt\" d=\"M2.75 6.5L7 3.25L21 6.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.75 6.5V9H5V6.5Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M17 12L18.75 13.75L17 15.5L15.25 13.75Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-construction.svg",
+        "filled": "svg/filled/siraj-icon-construction.svg"
+      },
+      "sprite": {
+        "outline": "sj-construction",
+        "filled": "sj-construction-filled"
+      }
+    },
+    "handover": {
+      "category": "real-estate",
+      "label": {
+        "en": "handover",
+        "ar": "تسليم"
+      },
+      "keywords": {
+        "en": [
+          "handover",
+          "move in",
+          "delivery",
+          "open door",
+          "welcome home"
+        ],
+        "ar": [
+          "تسليم",
+          "استلام",
+          "الانتقال",
+          "باب"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 21.5H21.5M5.5 21.5V2.5H18.5V21.5M9.25 11.5V13\"/><path stroke-linecap=\"butt\" d=\"M5.5 2.5L11 4.5V19.5L5.5 21.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M14.75 10.5L16.25 12L14.75 13.5L13.25 12Z\"/>",
+      "filled": "<path d=\"M2.5 21.5H21.5M5.5 21.5V2.5H18.5V21.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"bevel\" d=\"M5.5 2.5L11 4.5V19.5L5.5 21.5ZM7.875 10.125L7.875 14.375L10.625 14.375L10.625 10.125Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M14.75 10.5L16.25 12L14.75 13.5L13.25 12Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-handover.svg",
+        "filled": "svg/filled/siraj-icon-handover.svg"
+      },
+      "sprite": {
+        "outline": "sj-handover",
+        "filled": "sj-handover-filled"
+      }
+    },
+    "floor-plan": {
+      "category": "spaces",
+      "label": {
+        "en": "floor plan",
+        "ar": "مخطط الطابق"
+      },
+      "keywords": {
+        "en": [
+          "floor plan",
+          "layout",
+          "blueprint",
+          "plan"
+        ],
+        "ar": [
+          "مخطط",
+          "مخطط الطابق",
+          "تصميم داخلي"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 3H21V21H3ZM14 3V9M14 13.5V21M14 15.5H21M14 13.5H9.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.5 13.5A4.5 4.5 0 0 1 14 9\"/>",
+      "filled": "<path d=\"M3 3H21V21H3ZM14 3V9M14 13.5V21M14 15.5H21M14 13.5H9.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.5 13.5A4.5 4.5 0 0 1 14 9\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke=\"none\" d=\"M14.625 3.625H20.375V14.875H14.625Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-floor-plan.svg",
+        "filled": "svg/filled/siraj-icon-floor-plan.svg"
+      },
+      "sprite": {
+        "outline": "sj-floor-plan",
+        "filled": "sj-floor-plan-filled"
+      }
+    },
+    "area": {
+      "category": "spaces",
+      "label": {
+        "en": "area",
+        "ar": "المساحة"
+      },
+      "keywords": {
+        "en": [
+          "area",
+          "size",
+          "square metres",
+          "m2",
+          "dimensions"
+        ],
+        "ar": [
+          "المساحة",
+          "متر مربع",
+          "الأبعاد"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M3 8.5V3H8.5M15.5 3H21V8.5M21 15.5V21H15.5M8.5 21H3V15.5M8 16L16 8M11 8H16V13M8 11V16H13\"/>",
+      "filled": "<path d=\"M3 8.5V3H8.5M15.5 3H21V8.5M21 15.5V21H15.5M8.5 21H3V15.5M8 16L16 8M11 8H16V13M8 11V16H13\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-area.svg",
+        "filled": "svg/filled/siraj-icon-area.svg"
+      },
+      "sprite": {
+        "outline": "sj-area",
+        "filled": "sj-area-filled"
+      }
+    },
+    "bedroom": {
+      "category": "spaces",
+      "label": {
+        "en": "bedroom",
+        "ar": "غرفة نوم"
+      },
+      "keywords": {
+        "en": [
+          "bedroom",
+          "bed",
+          "rooms",
+          "sleep"
+        ],
+        "ar": [
+          "غرفة نوم",
+          "سرير",
+          "غرف"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 5V20M21 13V20M3 13H21M3 17H21\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5.5 13C5.5 9.75 10.5 9.75 10.5 13\"/>",
+      "filled": "<path d=\"M3 5V20M21 13V20\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 13H21V17H3Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M5.75 11.25C5.75 8.25 10.25 8.25 10.25 11.25Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-bedroom.svg",
+        "filled": "svg/filled/siraj-icon-bedroom.svg"
+      },
+      "sprite": {
+        "outline": "sj-bedroom",
+        "filled": "sj-bedroom-filled"
+      }
+    },
+    "bathroom": {
+      "category": "spaces",
+      "label": {
+        "en": "bathroom",
+        "ar": "حمّام"
+      },
+      "keywords": {
+        "en": [
+          "bathroom",
+          "bath",
+          "bathtub",
+          "washroom"
+        ],
+        "ar": [
+          "حمّام",
+          "دورة مياه",
+          "حوض استحمام"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 12H21.5M4 12V15A3.5 3.5 0 0 0 7.5 18.5H16.5A3.5 3.5 0 0 0 20 15V12M6.5 18.5L5.5 21M17.5 18.5L18.5 21\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.5 12V6C6.5 4.6 7.5 3.5 9 3.5C10.5 3.5 11.5 4.6 11.5 6\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M11.5 7.5L12.75 8.75L11.5 10L10.25 8.75Z\"/>",
+      "filled": "<path d=\"M2.5 12H21.5M6.5 18.5L5.5 21M17.5 18.5L18.5 21\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M4 12H20V15A3.5 3.5 0 0 1 16.5 18.5H7.5A3.5 3.5 0 0 1 4 15Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.5 12V6C6.5 4.6 7.5 3.5 9 3.5C10.5 3.5 11.5 4.6 11.5 6\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M11.5 7.5L12.75 8.75L11.5 10L10.25 8.75Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-bathroom.svg",
+        "filled": "svg/filled/siraj-icon-bathroom.svg"
+      },
+      "sprite": {
+        "outline": "sj-bathroom",
+        "filled": "sj-bathroom-filled"
+      }
+    },
+    "parking": {
+      "category": "spaces",
+      "label": {
+        "en": "parking",
+        "ar": "موقف سيارات"
+      },
+      "keywords": {
+        "en": [
+          "parking",
+          "car park",
+          "garage"
+        ],
+        "ar": [
+          "موقف",
+          "مواقف سيارات",
+          "كراج"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 3H21V21H3ZM9 17.5V7\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9 7H12.5A3.25 3.25 0 0 1 12.5 13.5H9\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 3H21V21H3ZM7.625 18.875V5.625H12.5A4.625 4.625 0 0 1 12.5 14.875H10.375V18.875ZM10.375 8.375H12.5A1.875 1.875 0 0 1 12.5 12.125H10.375Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-parking.svg",
+        "filled": "svg/filled/siraj-icon-parking.svg"
+      },
+      "sprite": {
+        "outline": "sj-parking",
+        "filled": "sj-parking-filled"
+      }
+    },
+    "amenities": {
+      "category": "spaces",
+      "label": {
+        "en": "amenities",
+        "ar": "المرافق"
+      },
+      "keywords": {
+        "en": [
+          "amenities",
+          "services",
+          "concierge",
+          "facilities"
+        ],
+        "ar": [
+          "المرافق",
+          "الخدمات",
+          "كونسيرج"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 18.5H21M4.5 15.5H19.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5.5 15.5C5.5 11.25 8.4 8.25 12 8.25C15.6 8.25 18.5 11.25 18.5 15.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 3.75L13.5 5.25L12 6.75L10.5 5.25Z\"/>",
+      "filled": "<path d=\"M3 18.5H21M4.5 15.5H19.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M5.5 15.5C5.5 11.25 8.4 8.25 12 8.25C15.6 8.25 18.5 11.25 18.5 15.5Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 3.75L13.5 5.25L12 6.75L10.5 5.25Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-amenities.svg",
+        "filled": "svg/filled/siraj-icon-amenities.svg"
+      },
+      "sprite": {
+        "outline": "sj-amenities",
+        "filled": "sj-amenities-filled"
+      }
+    },
+    "pool": {
+      "category": "spaces",
+      "label": {
+        "en": "pool",
+        "ar": "مسبح"
+      },
+      "keywords": {
+        "en": [
+          "pool",
+          "swimming",
+          "leisure"
+        ],
+        "ar": [
+          "مسبح",
+          "سباحة",
+          "حمّام سباحة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M8 15V5.75A2.25 2.25 0 0 0 5.75 3.5M15 15V5.75A2.25 2.25 0 0 0 12.75 3.5M8 8.5H15M8 12H15\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.5 18.5C4.5 17.25 6.5 17.25 8.5 18.5C10.5 19.75 12.5 19.75 14.5 18.5C16.5 17.25 18.5 17.25 21.5 18.75\"/>",
+      "filled": "<path d=\"M8 15V5.75A2.25 2.25 0 0 0 5.75 3.5M15 15V5.75A2.25 2.25 0 0 0 12.75 3.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M8 8H15V12.5H8Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.5 18.5C4.5 17.25 6.5 17.25 8.5 18.5C10.5 19.75 12.5 19.75 14.5 18.5C16.5 17.25 18.5 17.25 21.5 18.75\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-pool.svg",
+        "filled": "svg/filled/siraj-icon-pool.svg"
+      },
+      "sprite": {
+        "outline": "sj-pool",
+        "filled": "sj-pool-filled"
+      }
+    },
+    "gym": {
+      "category": "spaces",
+      "label": {
+        "en": "gym",
+        "ar": "نادٍ رياضي"
+      },
+      "keywords": {
+        "en": [
+          "gym",
+          "fitness",
+          "wellness",
+          "dumbbell"
+        ],
+        "ar": [
+          "نادي رياضي",
+          "لياقة",
+          "صالة رياضية"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M7.5 12H16.5M4.5 7.5H7.5V16.5H4.5ZM16.5 7.5H19.5V16.5H16.5ZM2.5 10V14M21.5 10V14\"/>",
+      "filled": "<path d=\"M7.5 12H16.5M2.5 10V14M21.5 10V14\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M4.5 7.5H7.5V16.5H4.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M16.5 7.5H19.5V16.5H16.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-gym.svg",
+        "filled": "svg/filled/siraj-icon-gym.svg"
+      },
+      "sprite": {
+        "outline": "sj-gym",
+        "filled": "sj-gym-filled"
+      }
+    },
+    "elevator": {
+      "category": "spaces",
+      "label": {
+        "en": "elevator",
+        "ar": "مصعد"
+      },
+      "keywords": {
+        "en": [
+          "elevator",
+          "lift"
+        ],
+        "ar": [
+          "مصعد"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M4.5 2.5H19.5V21.5H4.5ZM12 5.75L15.25 9.75H8.75ZM12 18.25L15.25 14.25H8.75Z\"/>",
+      "filled": "<path d=\"M4.5 2.5H19.5V21.5H4.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 5.75L15.25 9.75H8.75Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 18.25L15.25 14.25H8.75Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-elevator.svg",
+        "filled": "svg/filled/siraj-icon-elevator.svg"
+      },
+      "sprite": {
+        "outline": "sj-elevator",
+        "filled": "sj-elevator-filled"
+      }
+    },
+    "sea-view": {
+      "category": "spaces",
+      "label": {
+        "en": "sea view",
+        "ar": "إطلالة بحرية"
+      },
+      "keywords": {
+        "en": [
+          "sea view",
+          "waterfront",
+          "beach",
+          "ocean"
+        ],
+        "ar": [
+          "إطلالة بحرية",
+          "واجهة بحرية",
+          "شاطئ",
+          "بحر"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 12H21.5M7 12A5 5 0 0 1 17 12\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 16C5.25 14.75 7.25 14.75 9.5 16C11.75 17.25 13.75 17.25 16 16C17.75 15 19.5 14.85 21 15.5M7 20C8.75 19 10.25 19 12 20C13.75 21 15.25 21 17 20\"/>",
+      "filled": "<path d=\"M2.5 12H21.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7 12A5 5 0 0 1 17 12Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 16C5.25 14.75 7.25 14.75 9.5 16C11.75 17.25 13.75 17.25 16 16C17.75 15 19.5 14.85 21 15.5M7 20C8.75 19 10.25 19 12 20C13.75 21 15.25 21 17 20\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-sea-view.svg",
+        "filled": "svg/filled/siraj-icon-sea-view.svg"
+      },
+      "sprite": {
+        "outline": "sj-sea-view",
+        "filled": "sj-sea-view-filled"
+      }
+    },
+    "view": {
+      "category": "spaces",
+      "label": {
+        "en": "view",
+        "ar": "إطلالة"
+      },
+      "keywords": {
+        "en": [
+          "view",
+          "preview",
+          "visibility",
+          "see",
+          "watch"
+        ],
+        "ar": [
+          "عرض",
+          "إطلالة",
+          "مشاهدة",
+          "معاينة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.5 12C5.5 7.25 8.5 5.5 12 5.5C15.5 5.5 18.5 7.25 21.5 12C18.5 16.75 15.5 18.5 12 18.5C8.5 18.5 5.5 16.75 2.5 12Z\"/><path d=\"M8.75 12A3.25 3.25 0 1 0 15.25 12A3.25 3.25 0 1 0 8.75 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 11L13 12L12 13L11 12Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M2.5 12C5.5 7.25 8.5 5.5 12 5.5C15.5 5.5 18.5 7.25 21.5 12C18.5 16.75 15.5 18.5 12 18.5C8.5 18.5 5.5 16.75 2.5 12ZM7.5 12A4.5 4.5 0 1 0 16.5 12A4.5 4.5 0 1 0 7.5 12ZM9.75 12A2.25 2.25 0 1 0 14.25 12A2.25 2.25 0 1 0 9.75 12ZM12 10.366L13.634 12L12 13.634L10.366 12Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-view.svg",
+        "filled": "svg/filled/siraj-icon-view.svg"
+      },
+      "sprite": {
+        "outline": "sj-view",
+        "filled": "sj-view-filled"
+      }
+    },
+    "sun": {
+      "category": "spaces",
+      "label": {
+        "en": "sun",
+        "ar": "شمس"
+      },
+      "keywords": {
+        "en": [
+          "sun",
+          "daylight",
+          "orientation",
+          "sunlight"
+        ],
+        "ar": [
+          "شمس",
+          "ضوء النهار",
+          "إضاءة طبيعية"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M8 12A4 4 0 1 0 16 12A4 4 0 1 0 8 12ZM19 12L21.5 12M16.773 16.773L18.01 18.01M12 19L12 21.5M7.227 16.773L5.99 18.01M5 12L2.5 12M7.227 7.227L5.99 5.99M12 5L12 2.5M16.773 7.227L18.01 5.99\"/>",
+      "filled": "<path d=\"M19 12L21.5 12M16.773 16.773L18.01 18.01M12 19L12 21.5M7.227 16.773L5.99 18.01M5 12L2.5 12M7.227 7.227L5.99 5.99M12 5L12 2.5M16.773 7.227L18.01 5.99\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M8 12A4 4 0 1 0 16 12A4 4 0 1 0 8 12Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-sun.svg",
+        "filled": "svg/filled/siraj-icon-sun.svg"
+      },
+      "sprite": {
+        "outline": "sj-sun",
+        "filled": "sj-sun-filled"
+      }
+    },
+    "location": {
+      "category": "location",
+      "label": {
+        "en": "location",
+        "ar": "الموقع"
+      },
+      "keywords": {
+        "en": [
+          "location",
+          "pin",
+          "address",
+          "map marker"
+        ],
+        "ar": [
+          "الموقع",
+          "عنوان",
+          "دبوس الخريطة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M12 20.75C10 17.5 5.75 14.25 5.75 9.25A6.25 6.25 0 1 1 18.25 9.25C18.25 14.25 14 17.5 12 20.75Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 7.625L13.625 9.25L12 10.875L10.375 9.25Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 20.75C10 17.5 5.75 14.25 5.75 9.25A6.25 6.25 0 1 1 18.25 9.25C18.25 14.25 14 17.5 12 20.75ZM12 6.741L14.509 9.25L12 11.759L9.491 9.25Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-location.svg",
+        "filled": "svg/filled/siraj-icon-location.svg"
+      },
+      "sprite": {
+        "outline": "sj-location",
+        "filled": "sj-location-filled"
+      }
+    },
+    "map": {
+      "category": "location",
+      "label": {
+        "en": "map",
+        "ar": "خريطة"
+      },
+      "keywords": {
+        "en": [
+          "map",
+          "masterplan",
+          "area map",
+          "neighbourhood"
+        ],
+        "ar": [
+          "خريطة",
+          "مخطط عام",
+          "الحي"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 6L9 4L15 6L21 4V18L15 20L9 18L3 20Z\"/><path stroke-linecap=\"butt\" d=\"M9 4V18M15 6V20\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 10.5L13.5 12L12 13.5L10.5 12Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 6L7.625 4.458V18.458L3 20Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M9.875 4.292L14.125 5.708V19.708L9.875 18.292ZM12 10.116L13.884 12L12 13.884L10.116 12Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M16.375 5.542L21 4V18L16.375 19.542Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-map.svg",
+        "filled": "svg/filled/siraj-icon-map.svg"
+      },
+      "sprite": {
+        "outline": "sj-map",
+        "filled": "sj-map-filled"
+      }
+    },
+    "direction": {
+      "category": "location",
+      "label": {
+        "en": "direction",
+        "ar": "الاتجاهات"
+      },
+      "keywords": {
+        "en": [
+          "directions",
+          "signpost",
+          "route",
+          "navigate",
+          "how to get there"
+        ],
+        "ar": [
+          "الاتجاهات",
+          "لافتة",
+          "الطريق"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M12 4.5V21.5M9 21.5H15M12 4.5H18L20.25 6.75L18 9H12M12 11.5H6L3.75 13.75L6 16H12\"/>",
+      "filled": "<path d=\"M12 4.5V21.5M9 21.5H15\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 4.5H18L20.25 6.75L18 9H12Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 11.5H6L3.75 13.75L6 16H12Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-direction.svg",
+        "filled": "svg/filled/siraj-icon-direction.svg"
+      },
+      "sprite": {
+        "outline": "sj-direction",
+        "filled": "sj-direction-filled"
+      }
+    },
+    "compass": {
+      "category": "location",
+      "label": {
+        "en": "compass",
+        "ar": "بوصلة"
+      },
+      "keywords": {
+        "en": [
+          "compass",
+          "orientation",
+          "explore",
+          "north"
+        ],
+        "ar": [
+          "بوصلة",
+          "اتجاه",
+          "استكشاف",
+          "الشمال"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 12A9.5 9.5 0 1 0 21.5 12A9.5 9.5 0 1 0 2.5 12ZM16.5 7.5L13.75 13.75L7.5 16.5L10.25 10.25Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke=\"none\" d=\"M16.5 7.5L13.75 13.75L10.25 10.25Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" stroke=\"none\" d=\"M1.875 12A10.125 10.125 0 1 0 22.125 12A10.125 10.125 0 1 0 1.875 12ZM17.719 6.281L14.224 14.224L6.281 17.719L9.776 9.776Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke=\"none\" d=\"M15.72 8.28L13.619 13.054L10.946 10.381Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-compass.svg",
+        "filled": "svg/filled/siraj-icon-compass.svg"
+      },
+      "sprite": {
+        "outline": "sj-compass",
+        "filled": "sj-compass-filled"
+      }
+    },
+    "globe": {
+      "category": "location",
+      "label": {
+        "en": "globe",
+        "ar": "عالمي"
+      },
+      "keywords": {
+        "en": [
+          "globe",
+          "international",
+          "language",
+          "website",
+          "world"
+        ],
+        "ar": [
+          "عالمي",
+          "دولي",
+          "اللغة",
+          "الموقع الإلكتروني"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 12A9.5 9.5 0 1 0 21.5 12A9.5 9.5 0 1 0 2.5 12ZM12 2.5A4 9.5 0 0 1 12 21.5A4 9.5 0 0 1 12 2.5ZM2.5 12H21.5\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" stroke=\"none\" d=\"M1.894 11.375A10.125 10.125 0 0 1 12 1.875A4.625 10.125 0 0 0 7.384 11.375ZM22.106 11.375A10.125 10.125 0 0 0 12 1.875A4.625 10.125 0 0 1 16.616 11.375ZM8.633 11.375A3.375 8.875 0 0 1 12 3.125A3.375 8.875 0 0 1 15.367 11.375ZM1.894 12.625A10.125 10.125 0 0 0 12 22.125A4.625 10.125 0 0 1 7.384 12.625ZM22.106 12.625A10.125 10.125 0 0 1 12 22.125A4.625 10.125 0 0 0 16.616 12.625ZM8.633 12.625A3.375 8.875 0 0 0 12 20.875A3.375 8.875 0 0 0 15.367 12.625Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-globe.svg",
+        "filled": "svg/filled/siraj-icon-globe.svg"
+      },
+      "sprite": {
+        "outline": "sj-globe",
+        "filled": "sj-globe-filled"
+      }
+    },
+    "investment": {
+      "category": "finance",
+      "label": {
+        "en": "investment",
+        "ar": "استثمار"
+      },
+      "keywords": {
+        "en": [
+          "investment",
+          "wealth",
+          "capital",
+          "assets",
+          "gold"
+        ],
+        "ar": [
+          "استثمار",
+          "ثروة",
+          "رأس المال",
+          "أصول"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.75 20L4.25 15.5H9.75L11.25 20ZM12.75 20L14.25 15.5H19.75L21.25 20ZM7.5 15.5L9 11H15L16.5 15.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 5.75L13.5 7.25L12 8.75L10.5 7.25Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.75 20L4.25 16H9.75L11.25 20Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12.75 20L14.25 16H19.75L21.25 20Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7.75 13.75L9 10.25H15L16.25 13.75Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 5L13.5 6.5L12 8L10.5 6.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-investment.svg",
+        "filled": "svg/filled/siraj-icon-investment.svg"
+      },
+      "sprite": {
+        "outline": "sj-investment",
+        "filled": "sj-investment-filled"
+      }
+    },
+    "roi": {
+      "category": "finance",
+      "label": {
+        "en": "roi",
+        "ar": "العائد على الاستثمار"
+      },
+      "keywords": {
+        "en": [
+          "roi",
+          "return",
+          "yield",
+          "rental income",
+          "returns"
+        ],
+        "ar": [
+          "العائد",
+          "العائد على الاستثمار",
+          "عائد إيجاري"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19.064 8.244A8 8 0 1 1 11.721 4.005\"/><path d=\"M10.006 6.466L12.32 3.984L9.838 1.669\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 10L14 12L12 14L10 12Z\"/>",
+      "filled": "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19.064 8.244A8 8 0 1 1 11.721 4.005\"/><path d=\"M10.006 6.466L12.32 3.984L9.838 1.669\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 9.25L14.75 12L12 14.75L9.25 12Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-roi.svg",
+        "filled": "svg/filled/siraj-icon-roi.svg"
+      },
+      "sprite": {
+        "outline": "sj-roi",
+        "filled": "sj-roi-filled"
+      }
+    },
+    "growth": {
+      "category": "finance",
+      "label": {
+        "en": "growth",
+        "ar": "نمو"
+      },
+      "keywords": {
+        "en": [
+          "growth",
+          "appreciation",
+          "value",
+          "chart",
+          "trend"
+        ],
+        "ar": [
+          "نمو",
+          "ارتفاع القيمة",
+          "مؤشر",
+          "اتجاه"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 3V21H21\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.5 17.5C11.5 17.5 12 9 17.25 6.75\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M18.75 4.625L20.375 6.25L18.75 7.875L17.125 6.25Z\"/>",
+      "filled": "<path d=\"M3 3V21H21\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke=\"none\" d=\"M6.5 17.5C11.5 17.5 12 9 17.25 6.75V18H6.5Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.5 17.5C11.5 17.5 12 9 17.25 6.75\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M18.75 4.625L20.375 6.25L18.75 7.875L17.125 6.25Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-growth.svg",
+        "filled": "svg/filled/siraj-icon-growth.svg"
+      },
+      "sprite": {
+        "outline": "sj-growth",
+        "filled": "sj-growth-filled"
+      }
+    },
+    "payment": {
+      "category": "finance",
+      "label": {
+        "en": "payment",
+        "ar": "دفع"
+      },
+      "keywords": {
+        "en": [
+          "payment",
+          "card",
+          "pay",
+          "instalment",
+          "transaction"
+        ],
+        "ar": [
+          "دفع",
+          "بطاقة",
+          "قسط",
+          "معاملة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 5.5H21.5V18.5H2.5ZM2.5 9.5H21.5M5.5 14.5H10\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M17.5 13L19 14.5L17.5 16L16 14.5Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.5 5.5H21.5V8.25H2.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.5 11H21.5V18.5H2.5ZM4.125 16.125L11.375 16.125L11.375 13.375L4.125 13.375ZM17.5 12.366L19.884 14.75L17.5 17.134L15.116 14.75Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-payment.svg",
+        "filled": "svg/filled/siraj-icon-payment.svg"
+      },
+      "sprite": {
+        "outline": "sj-payment",
+        "filled": "sj-payment-filled"
+      }
+    },
+    "sales": {
+      "category": "finance",
+      "label": {
+        "en": "sales",
+        "ar": "مبيعات"
+      },
+      "keywords": {
+        "en": [
+          "sales",
+          "for sale",
+          "sign",
+          "available",
+          "listing"
+        ],
+        "ar": [
+          "مبيعات",
+          "للبيع",
+          "لافتة",
+          "متاح"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M5 21.5V3M3 21.5H7M5 5H19M9 5V8M17 5V8M7.5 8H18.5V15.5H7.5Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M13 10.25L14.5 11.75L13 13.25L11.5 11.75Z\"/>",
+      "filled": "<path d=\"M5 21.5V3M3 21.5H7M5 5H19M9 5V8M17 5V8\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7.5 8H18.5V15.5H7.5ZM13 9.366L15.384 11.75L13 14.134L10.616 11.75Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-sales.svg",
+        "filled": "svg/filled/siraj-icon-sales.svg"
+      },
+      "sprite": {
+        "outline": "sj-sales",
+        "filled": "sj-sales-filled"
+      }
+    },
+    "tag": {
+      "category": "finance",
+      "label": {
+        "en": "tag",
+        "ar": "السعر"
+      },
+      "keywords": {
+        "en": [
+          "tag",
+          "price",
+          "offer",
+          "label"
+        ],
+        "ar": [
+          "السعر",
+          "عرض",
+          "وسم"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 3H12L21 12L12 21L3 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M7.5 6L9 7.5L7.5 9L6 7.5Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 3H12L21 12L12 21L3 12ZM7.5 5.116L9.884 7.5L7.5 9.884L5.116 7.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-tag.svg",
+        "filled": "svg/filled/siraj-icon-tag.svg"
+      },
+      "sprite": {
+        "outline": "sj-tag",
+        "filled": "sj-tag-filled"
+      }
+    },
+    "percent": {
+      "category": "finance",
+      "label": {
+        "en": "percent",
+        "ar": "نسبة مئوية"
+      },
+      "keywords": {
+        "en": [
+          "percent",
+          "discount",
+          "rate",
+          "down payment"
+        ],
+        "ar": [
+          "نسبة",
+          "خصم",
+          "دفعة أولى"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M18.5 5.5L5.5 18.5\"/><path d=\"M7 4.5L9.5 7L7 9.5L4.5 7Z\"/><path d=\"M17 14.5L19.5 17L17 19.5L14.5 17Z\"/>",
+      "filled": "<path d=\"M18.5 5.5L5.5 18.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7 4.5L9.5 7L7 9.5L4.5 7Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M17 14.5L19.5 17L17 19.5L14.5 17Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-percent.svg",
+        "filled": "svg/filled/siraj-icon-percent.svg"
+      },
+      "sprite": {
+        "outline": "sj-percent",
+        "filled": "sj-percent-filled"
+      }
+    },
+    "reservation": {
+      "category": "journey",
+      "label": {
+        "en": "reservation",
+        "ar": "حجز"
+      },
+      "keywords": {
+        "en": [
+          "reservation",
+          "booking",
+          "reserve",
+          "save",
+          "hold"
+        ],
+        "ar": [
+          "حجز",
+          "حجز وحدة",
+          "حفظ"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M6 3H18V20.5L12 16L6 20.5Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 7.5L13.5 9L12 10.5L10.5 9Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M6 3H18V20.5L12 16L6 20.5ZM12 6.616L14.384 9L12 11.384L9.616 9Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-reservation.svg",
+        "filled": "svg/filled/siraj-icon-reservation.svg"
+      },
+      "sprite": {
+        "outline": "sj-reservation",
+        "filled": "sj-reservation-filled"
+      }
+    },
+    "contract": {
+      "category": "journey",
+      "label": {
+        "en": "contract",
+        "ar": "عقد"
+      },
+      "keywords": {
+        "en": [
+          "contract",
+          "agreement",
+          "sign",
+          "spa",
+          "deed"
+        ],
+        "ar": [
+          "عقد",
+          "اتفاقية",
+          "توقيع",
+          "سند"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M5 2.5H14.5L19 7V21.5H5ZM14.5 2.5V7H19M8 9.5H12.5M8 12.5H16\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7.75 18.25C9.5 15.75 11 15.25 12.25 16.75C13.5 18.25 14.75 18.5 16.25 16.25\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M5 2.5H14.5L19 7V21.5H5ZM6.625 10.875L13.875 10.875L13.875 8.125L6.625 8.125ZM6.625 13.875L17.375 13.875L17.375 11.125L6.625 11.125ZM8.86 19.06L9.11 18.71L9.34 18.43L9.55 18.17L9.76 17.95L9.95 17.76L10.11 17.62L10.33 17.45L10.50 17.36L10.62 17.30L10.67 17.29L10.75 17.28L10.79 17.29L10.88 17.33L10.95 17.39L11.08 17.51L11.29 17.74L11.58 18.06L11.91 18.37L12.28 18.67L12.77 18.96L13.34 19.18L13.96 19.28L14.61 19.23L15.21 19.05L15.69 18.80L16.11 18.49L16.49 18.15L16.78 17.83L17.05 17.50L17.30 17.16L17.39 17.02A1.375 1.375 0 0 0 15.11 15.48L15.05 15.56L14.86 15.83L14.69 16.04L14.55 16.20L14.36 16.37L14.23 16.47L14.17 16.51L14.09 16.53L14.09 16.53L14.07 16.53L14 16.50L13.85 16.40L13.72 16.30L13.55 16.14L13.33 15.90L13.04 15.57L12.65 15.23L12.20 14.92L11.61 14.66L10.94 14.54L10.30 14.56L9.75 14.70L9.27 14.90L8.82 15.16L8.40 15.46L8.08 15.74L7.78 16.03L7.49 16.35L7.20 16.69L6.91 17.06L6.64 17.44A1.375 1.375 0 0 0 8.86 19.06Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-contract.svg",
+        "filled": "svg/filled/siraj-icon-contract.svg"
+      },
+      "sprite": {
+        "outline": "sj-contract",
+        "filled": "sj-contract-filled"
+      }
+    },
+    "documents": {
+      "category": "journey",
+      "label": {
+        "en": "documents",
+        "ar": "مستندات"
+      },
+      "keywords": {
+        "en": [
+          "documents",
+          "files",
+          "brochure",
+          "paperwork"
+        ],
+        "ar": [
+          "مستندات",
+          "ملفات",
+          "كتيّب",
+          "أوراق"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M8 5.5V2.5H17L20.5 6V18H17M4 5.5H13L16.5 9V21.5H4ZM13 5.5V9H16.5M7 13H13.5M7 16.5H13.5\"/>",
+      "filled": "<path d=\"M8 5.5V2.5H17L20.5 6V18H17\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M4 5.5H13L16.5 9V21.5H4ZM5.625 14.375L14.875 14.375L14.875 11.625L5.625 11.625ZM5.625 17.875L14.875 17.875L14.875 15.125L5.625 15.125Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-documents.svg",
+        "filled": "svg/filled/siraj-icon-documents.svg"
+      },
+      "sprite": {
+        "outline": "sj-documents",
+        "filled": "sj-documents-filled"
+      }
+    },
+    "calendar": {
+      "category": "journey",
+      "label": {
+        "en": "calendar",
+        "ar": "تقويم"
+      },
+      "keywords": {
+        "en": [
+          "calendar",
+          "date",
+          "schedule",
+          "appointment",
+          "viewing"
+        ],
+        "ar": [
+          "تقويم",
+          "موعد",
+          "جدول",
+          "زيارة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 5H21V21H3ZM3 9.5H21M8 2.5V7M16 2.5V7\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 13.5L13.75 15.25L12 17L10.25 15.25Z\"/>",
+      "filled": "<path d=\"M8 2.5V5M16 2.5V5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 5H21V8.25H3Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 10.75H21V21H3ZM12 13.241L14.634 15.875L12 18.509L9.366 15.875Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-calendar.svg",
+        "filled": "svg/filled/siraj-icon-calendar.svg"
+      },
+      "sprite": {
+        "outline": "sj-calendar",
+        "filled": "sj-calendar-filled"
+      }
+    },
+    "clock": {
+      "category": "journey",
+      "label": {
+        "en": "clock",
+        "ar": "الوقت"
+      },
+      "keywords": {
+        "en": [
+          "clock",
+          "time",
+          "hours",
+          "duration",
+          "opening hours"
+        ],
+        "ar": [
+          "الوقت",
+          "ساعة",
+          "مواعيد العمل"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 12A9.5 9.5 0 1 0 21.5 12A9.5 9.5 0 1 0 2.5 12ZM12 6V9.5M14 14L16.5 16.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 10.75L13.25 12L12 13.25L10.75 12Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.5 12A9.5 9.5 0 1 0 21.5 12A9.5 9.5 0 1 0 2.5 12ZM10.625 4.625L10.625 9.625L13.375 9.625L13.375 4.625ZM12.805 14.75L16.5 18.445L18.445 16.5L14.75 12.805ZM12 9.866L14.134 12L12 14.134L9.866 12Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-clock.svg",
+        "filled": "svg/filled/siraj-icon-clock.svg"
+      },
+      "sprite": {
+        "outline": "sj-clock",
+        "filled": "sj-clock-filled"
+      }
+    },
+    "key": {
+      "category": "journey",
+      "label": {
+        "en": "key",
+        "ar": "مفتاح"
+      },
+      "keywords": {
+        "en": [
+          "key",
+          "keys",
+          "ownership",
+          "access",
+          "unlock"
+        ],
+        "ar": [
+          "مفتاح",
+          "مفاتيح",
+          "تملّك",
+          "دخول"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.75 12A4.5 4.5 0 1 0 11.75 12A4.5 4.5 0 1 0 2.75 12ZM11.75 12H21M21 12V15.5M17.5 12V14.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M7.25 10.5L8.75 12L7.25 13.5L5.75 12Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.75 12A4.5 4.5 0 1 0 11.75 12A4.5 4.5 0 1 0 2.75 12ZM7.25 9.616L9.634 12L7.25 14.384L4.866 12Z\"/><path d=\"M11.75 12H21M21 12V15.5M17.5 12V14.5\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-key.svg",
+        "filled": "svg/filled/siraj-icon-key.svg"
+      },
+      "sprite": {
+        "outline": "sj-key",
+        "filled": "sj-key-filled"
+      }
+    },
+    "security": {
+      "category": "trust",
+      "label": {
+        "en": "security",
+        "ar": "أمان"
+      },
+      "keywords": {
+        "en": [
+          "security",
+          "safe",
+          "protection",
+          "gated",
+          "guarantee"
+        ],
+        "ar": [
+          "أمان",
+          "حماية",
+          "ضمان",
+          "مجمع مسوّر"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M12 2.5L19.5 5.25V11C19.5 15.75 16.25 19.5 12 21.5C7.75 19.5 4.5 15.75 4.5 11V5.25Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 9.5L13.75 11.25L12 13L10.25 11.25Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 2.5L19.5 5.25V11C19.5 15.75 16.25 19.5 12 21.5C7.75 19.5 4.5 15.75 4.5 11V5.25ZM12 8.616L14.634 11.25L12 13.884L9.366 11.25Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-security.svg",
+        "filled": "svg/filled/siraj-icon-security.svg"
+      },
+      "sprite": {
+        "outline": "sj-security",
+        "filled": "sj-security-filled"
+      }
+    },
+    "quality": {
+      "category": "trust",
+      "label": {
+        "en": "quality",
+        "ar": "جودة"
+      },
+      "keywords": {
+        "en": [
+          "quality",
+          "award",
+          "premium",
+          "certified",
+          "excellence"
+        ],
+        "ar": [
+          "جودة",
+          "جائزة",
+          "تميّز",
+          "معتمد"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M5.75 8.75A6.25 6.25 0 1 0 18.25 8.75A6.25 6.25 0 1 0 5.75 8.75ZM9 14.25V20.75L12 19.25L15 20.75V14.25\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 7L13.75 8.75L12 10.5L10.25 8.75Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M5.75 8.75A6.25 6.25 0 1 0 18.25 8.75A6.25 6.25 0 1 0 5.75 8.75ZM12 6.116L14.634 8.75L12 11.384L9.366 8.75Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M9 13.5V20.75L12 19.25L15 20.75V13.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-quality.svg",
+        "filled": "svg/filled/siraj-icon-quality.svg"
+      },
+      "sprite": {
+        "outline": "sj-quality",
+        "filled": "sj-quality-filled"
+      }
+    },
+    "sustainability": {
+      "category": "trust",
+      "label": {
+        "en": "sustainability",
+        "ar": "استدامة"
+      },
+      "keywords": {
+        "en": [
+          "sustainability",
+          "green",
+          "eco",
+          "nature",
+          "landscape"
+        ],
+        "ar": [
+          "استدامة",
+          "صديق للبيئة",
+          "طبيعة",
+          "مساحات خضراء"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M5.5 18.5C5.5 9.5 10.5 4.5 19.5 4.5C19.5 13.5 14.5 18.5 5.5 18.5Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 21C7.5 16.5 11 13 15 9\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M5.5 18.5C5.5 9.5 10.5 4.5 19.5 4.5C19.5 13.5 14.5 18.5 5.5 18.5ZM9.97 15.97L10.22 15.73L10.46 15.49L10.69 15.25L10.92 15.02L11.15 14.80L11.37 14.58L11.58 14.36L11.90 14.05L12.20 13.74L12.51 13.44L12.80 13.14L13.09 12.85L13.38 12.56L13.67 12.27L13.96 11.98L14.25 11.69L14.55 11.40L14.85 11.10L15.15 10.79L15.46 10.48L15.78 10.16L16 9.94L16.22 9.72A1.375 1.375 0 0 0 14.28 7.78L14.06 8L13.84 8.22L13.52 8.54L13.21 8.85L12.90 9.15L12.60 9.45L12.31 9.75L12.02 10.04L11.73 10.33L11.44 10.62L11.15 10.91L10.86 11.20L10.56 11.49L10.26 11.80L9.95 12.10L9.64 12.42L9.42 12.63L9.20 12.85L8.98 13.08L8.75 13.31L8.51 13.54L8.27 13.78L8.03 14.03A1.375 1.375 0 0 0 9.97 15.97Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 21L5.75 18.25\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-sustainability.svg",
+        "filled": "svg/filled/siraj-icon-sustainability.svg"
+      },
+      "sprite": {
+        "outline": "sj-sustainability",
+        "filled": "sj-sustainability-filled"
+      }
+    },
+    "lock": {
+      "category": "trust",
+      "label": {
+        "en": "lock",
+        "ar": "قفل"
+      },
+      "keywords": {
+        "en": [
+          "lock",
+          "secure",
+          "private",
+          "password"
+        ],
+        "ar": [
+          "قفل",
+          "آمن",
+          "خاص",
+          "كلمة المرور"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M5 10.5H19V21H5ZM8 10.5V7A4 4 0 0 1 16 7V10.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 14.25L13.5 15.75L12 17.25L10.5 15.75Z\"/>",
+      "filled": "<path d=\"M8 10.5V7A4 4 0 0 1 16 7V10.5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M5 10.5H19V21H5ZM12 13.366L14.384 15.75L12 18.134L9.616 15.75Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-lock.svg",
+        "filled": "svg/filled/siraj-icon-lock.svg"
+      },
+      "sprite": {
+        "outline": "sj-lock",
+        "filled": "sj-lock-filled"
+      }
+    },
+    "star": {
+      "category": "trust",
+      "label": {
+        "en": "star",
+        "ar": "مميّز"
+      },
+      "keywords": {
+        "en": [
+          "star",
+          "featured",
+          "rating",
+          "favourite",
+          "premium"
+        ],
+        "ar": [
+          "مميّز",
+          "تقييم",
+          "نجمة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M12 3.85L14.41 9.533L20.56 10.069L15.899 14.117L17.29 20.131L12 16.95L6.71 20.131L8.101 14.117L3.44 10.069L9.59 9.533Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 3.85L14.41 9.533L20.56 10.069L15.899 14.117L17.29 20.131L12 16.95L6.71 20.131L8.101 14.117L3.44 10.069L9.59 9.533Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-star.svg",
+        "filled": "svg/filled/siraj-icon-star.svg"
+      },
+      "sprite": {
+        "outline": "sj-star",
+        "filled": "sj-star-filled"
+      }
+    },
+    "heart": {
+      "category": "trust",
+      "label": {
+        "en": "heart",
+        "ar": "مفضّلة"
+      },
+      "keywords": {
+        "en": [
+          "heart",
+          "favourite",
+          "save",
+          "wishlist",
+          "like"
+        ],
+        "ar": [
+          "مفضّلة",
+          "حفظ",
+          "إعجاب"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 20.25C7 16.9 3 13.4 3 9C3 6.2 5.1 4 7.75 4C9.6 4 11.1 5 12 6.5C12.9 5 14.4 4 16.25 4C18.9 4 21 6.2 21 9C21 13.4 17 16.9 12 20.25Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M12 20.25C7 16.9 3 13.4 3 9C3 6.2 5.1 4 7.75 4C9.6 4 11.1 5 12 6.5C12.9 5 14.4 4 16.25 4C18.9 4 21 6.2 21 9C21 13.4 17 16.9 12 20.25Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-heart.svg",
+        "filled": "svg/filled/siraj-icon-heart.svg"
+      },
+      "sprite": {
+        "outline": "sj-heart",
+        "filled": "sj-heart-filled"
+      }
+    },
+    "customer": {
+      "category": "contact",
+      "label": {
+        "en": "customer",
+        "ar": "عميل"
+      },
+      "keywords": {
+        "en": [
+          "customer",
+          "client",
+          "buyer",
+          "owner",
+          "vip"
+        ],
+        "ar": [
+          "عميل",
+          "مشتري",
+          "مالك",
+          "كبار العملاء"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M6.75 7.75A3.75 3.75 0 1 0 14.25 7.75A3.75 3.75 0 1 0 6.75 7.75Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3.5 21C3.5 16.6 6.6 14 10.5 14C14.4 14 17.5 16.6 17.5 21\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M19 5L20.5 6.5L19 8L17.5 6.5Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M6.75 7.75A3.75 3.75 0 1 0 14.25 7.75A3.75 3.75 0 1 0 6.75 7.75Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M3.5 21C3.5 16.6 6.6 14 10.5 14C14.4 14 17.5 16.6 17.5 21Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M19 5L20.5 6.5L19 8L17.5 6.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-customer.svg",
+        "filled": "svg/filled/siraj-icon-customer.svg"
+      },
+      "sprite": {
+        "outline": "sj-customer",
+        "filled": "sj-customer-filled"
+      }
+    },
+    "team": {
+      "category": "contact",
+      "label": {
+        "en": "team",
+        "ar": "فريق"
+      },
+      "keywords": {
+        "en": [
+          "team",
+          "agents",
+          "advisors",
+          "people",
+          "staff"
+        ],
+        "ar": [
+          "فريق",
+          "مستشارون",
+          "وكلاء",
+          "موظفون"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M8.75 8.5A3.25 3.25 0 1 0 15.25 8.5A3.25 3.25 0 1 0 8.75 8.5ZM3.25 7A2.25 2.25 0 1 0 7.75 7A2.25 2.25 0 1 0 3.25 7ZM16.25 7A2.25 2.25 0 1 0 20.75 7A2.25 2.25 0 1 0 16.25 7Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.25 21C6.25 17.3 8.75 15 12 15C15.25 15 17.75 17.3 17.75 21M2.5 16.5C2.5 13.9 3.9 12.25 5.75 12.25C6.5 12.25 7.15 12.45 7.7 12.8M21.5 16.5C21.5 13.9 20.1 12.25 18.25 12.25C17.5 12.25 16.85 12.45 16.3 12.8\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M8.75 8.5A3.25 3.25 0 1 0 15.25 8.5A3.25 3.25 0 1 0 8.75 8.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M6.25 21C6.25 17.3 8.75 15 12 15C15.25 15 17.75 17.3 17.75 21Z\"/><path d=\"M3.25 7A2.25 2.25 0 1 0 7.75 7A2.25 2.25 0 1 0 3.25 7ZM16.25 7A2.25 2.25 0 1 0 20.75 7A2.25 2.25 0 1 0 16.25 7Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.5 16.5C2.5 13.9 3.9 12.25 5.75 12.25C6.5 12.25 7.15 12.45 7.7 12.8M21.5 16.5C21.5 13.9 20.1 12.25 18.25 12.25C17.5 12.25 16.85 12.45 16.3 12.8\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-team.svg",
+        "filled": "svg/filled/siraj-icon-team.svg"
+      },
+      "sprite": {
+        "outline": "sj-team",
+        "filled": "sj-team-filled"
+      }
+    },
+    "user": {
+      "category": "contact",
+      "label": {
+        "en": "user",
+        "ar": "مستخدم"
+      },
+      "keywords": {
+        "en": [
+          "user",
+          "account",
+          "profile",
+          "sign in"
+        ],
+        "ar": [
+          "مستخدم",
+          "حساب",
+          "الملف الشخصي",
+          "تسجيل الدخول"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M8 7.5A4 4 0 1 0 16 7.5A4 4 0 1 0 8 7.5Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.5 21C4.5 16.5 7.8 13.75 12 13.75C16.2 13.75 19.5 16.5 19.5 21\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M8 7.5A4 4 0 1 0 16 7.5A4 4 0 1 0 8 7.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M4.5 21C4.5 16.5 7.8 13.75 12 13.75C16.2 13.75 19.5 16.5 19.5 21Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-user.svg",
+        "filled": "svg/filled/siraj-icon-user.svg"
+      },
+      "sprite": {
+        "outline": "sj-user",
+        "filled": "sj-user-filled"
+      }
+    },
+    "call": {
+      "category": "contact",
+      "label": {
+        "en": "call",
+        "ar": "اتصال"
+      },
+      "keywords": {
+        "en": [
+          "call",
+          "phone",
+          "telephone",
+          "contact"
+        ],
+        "ar": [
+          "اتصال",
+          "هاتف",
+          "تواصل"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M8.25 3.25L10 8L7.75 9.75C9 12.5 11.5 15 14.25 16.25L16 14L20.75 15.75V19.25C20.75 20.2 20 21 19 21C10.5 20.5 3.5 13.5 3 5C3 4 3.8 3.25 4.75 3.25Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M8.25 3.25L10 8L7.75 9.75C9 12.5 11.5 15 14.25 16.25L16 14L20.75 15.75V19.25C20.75 20.2 20 21 19 21C10.5 20.5 3.5 13.5 3 5C3 4 3.8 3.25 4.75 3.25Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-call.svg",
+        "filled": "svg/filled/siraj-icon-call.svg"
+      },
+      "sprite": {
+        "outline": "sj-call",
+        "filled": "sj-call-filled"
+      }
+    },
+    "whatsapp": {
+      "category": "contact",
+      "label": {
+        "en": "whatsapp",
+        "ar": "واتساب"
+      },
+      "keywords": {
+        "en": [
+          "whatsapp",
+          "chat",
+          "message",
+          "instant messaging"
+        ],
+        "ar": [
+          "واتساب",
+          "محادثة",
+          "رسالة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3.887 15.278A8.75 8.75 0 1 1 7.363 19.42L3.25 20.75Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M11.25 7.5H8.75C8.75 12 11.75 15.25 16.5 15.25V12.75\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" stroke-linejoin=\"round\" d=\"M3.887 15.278A8.75 8.75 0 1 1 7.363 19.42L3.25 20.75ZM11.25 6.13L10.69 6.13L10.14 6.13L9.58 6.13L8.67 6.17L7.47 7.23L7.40 8.26L7.45 8.75L7.51 9.24L7.60 9.72L7.72 10.19L7.85 10.65L8.01 11.10L8.19 11.53L8.39 11.96L8.61 12.37L8.85 12.76L9.11 13.14L9.40 13.51L9.70 13.86L10.02 14.19L10.37 14.50L10.73 14.79L11.11 15.07L11.50 15.32L11.91 15.55L12.34 15.76L12.78 15.95L13.24 16.12L13.71 16.26L14.19 16.38L14.68 16.48L15.19 16.55L15.70 16.60L16.73 16.54L17.82 15.35L17.88 14.42L17.88 13.86L17.88 13.31L17.88 12.75A1.375 1.375 0 0 0 15.13 12.75L15.13 13.31L15.13 13.86L15.13 14.42L15.18 14.60L15.80 13.95L15.90 13.85L15.51 13.82L15.14 13.76L14.78 13.69L14.44 13.61L14.11 13.51L13.79 13.39L13.49 13.26L13.20 13.12L12.92 12.96L12.65 12.79L12.40 12.61L12.16 12.42L11.94 12.21L11.72 11.99L11.52 11.76L11.33 11.52L11.15 11.26L10.99 10.99L10.84 10.71L10.70 10.42L10.58 10.12L10.47 9.81L10.37 9.48L10.29 9.15L10.23 8.80L10.18 8.44L10.14 8.07L10.04 8.22L9.39 8.83L9.58 8.88L10.14 8.88L10.69 8.88L11.25 8.88A1.375 1.375 0 0 0 11.25 6.13Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-whatsapp.svg",
+        "filled": "svg/filled/siraj-icon-whatsapp.svg"
+      },
+      "sprite": {
+        "outline": "sj-whatsapp",
+        "filled": "sj-whatsapp-filled"
+      }
+    },
+    "email": {
+      "category": "contact",
+      "label": {
+        "en": "email",
+        "ar": "بريد إلكتروني"
+      },
+      "keywords": {
+        "en": [
+          "email",
+          "mail",
+          "message",
+          "newsletter",
+          "enquiry"
+        ],
+        "ar": [
+          "بريد إلكتروني",
+          "رسالة",
+          "استفسار",
+          "نشرة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 5.5H21.5V18.5H2.5Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 6C7.5 10 9.5 12.25 12 12.25C14.5 12.25 16.5 10 21 6\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.5 5.5H21.5V18.5H2.5ZM4.37 9.31L4.67 9.55L4.96 9.80L5.25 10.03L5.53 10.25L5.80 10.47L6.07 10.68L6.33 10.89L6.59 11.08L6.84 11.27L7.21 11.54L7.58 11.79L7.94 12.03L8.30 12.25L8.66 12.45L9.02 12.63L9.38 12.80L9.74 12.95L10.11 13.08L10.48 13.18L10.87 13.27L11.36 13.34L11.87 13.37L12.38 13.36L12.89 13.31L13.38 13.22L13.77 13.11L14.14 12.99L14.50 12.85L14.86 12.69L15.22 12.51L15.58 12.32L15.94 12.10L16.30 11.87L16.66 11.63L17.03 11.36L17.41 11.08L17.67 10.89L17.93 10.68L18.20 10.47L18.47 10.25L18.75 10.03L19.04 9.80L19.33 9.55L19.63 9.31A1.375 1.375 0 0 0 17.87 7.19L17.58 7.44L17.29 7.67L17.02 7.90L16.75 8.11L16.49 8.32L16.24 8.52L16 8.70L15.77 8.88L15.42 9.14L15.10 9.37L14.79 9.57L14.49 9.76L14.21 9.93L13.94 10.08L13.69 10.21L13.44 10.31L13.21 10.40L12.99 10.48L12.78 10.53L12.49 10.59L12.21 10.62L11.93 10.62L11.65 10.61L11.36 10.56L11.16 10.52L10.94 10.46L10.71 10.38L10.48 10.28L10.23 10.17L9.97 10.03L9.70 9.88L9.41 9.70L9.11 9.51L8.80 9.29L8.46 9.05L8.24 8.88L8 8.70L7.76 8.52L7.51 8.32L7.25 8.11L6.98 7.90L6.71 7.67L6.42 7.44L6.13 7.19A1.375 1.375 0 0 0 4.37 9.31Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-email.svg",
+        "filled": "svg/filled/siraj-icon-email.svg"
+      },
+      "sprite": {
+        "outline": "sj-email",
+        "filled": "sj-email-filled"
+      }
+    },
+    "image": {
+      "category": "media",
+      "label": {
+        "en": "image",
+        "ar": "صورة"
+      },
+      "keywords": {
+        "en": [
+          "image",
+          "photo",
+          "gallery",
+          "render"
+        ],
+        "ar": [
+          "صورة",
+          "معرض الصور",
+          "تصوير"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 4.5H21.5V19.5H2.5Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.5 16.5C6.5 12.5 9.5 12 13 14.5C15.5 16.25 18 15.5 21.5 12.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M16.5 7.5L18 9L16.5 10.5L15 9Z\"/>",
+      "filled": "<path d=\"M2.5 4.5H21.5V19.5H2.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.5 16.5C6.5 12.5 9.5 12 13 14.5C15.5 16.25 18 15.5 21.5 12.5V19.5H2.5Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M16.5 7.5L18 9L16.5 10.5L15 9Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-image.svg",
+        "filled": "svg/filled/siraj-icon-image.svg"
+      },
+      "sprite": {
+        "outline": "sj-image",
+        "filled": "sj-image-filled"
+      }
+    },
+    "video": {
+      "category": "media",
+      "label": {
+        "en": "video",
+        "ar": "فيديو"
+      },
+      "keywords": {
+        "en": [
+          "video",
+          "film",
+          "walkthrough",
+          "reel"
+        ],
+        "ar": [
+          "فيديو",
+          "فيلم",
+          "جولة مصوّرة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 6.5H15.5V17.5H2.5ZM15.5 10.5L21.5 7V17L15.5 13.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M6.25 9L7.5 10.25L6.25 11.5L5 10.25Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.5 6.5H15.5V17.5H2.5ZM6.25 8.116L8.384 10.25L6.25 12.384L4.116 10.25Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M15.5 10.5L21.5 7V17L15.5 13.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-video.svg",
+        "filled": "svg/filled/siraj-icon-video.svg"
+      },
+      "sprite": {
+        "outline": "sj-video",
+        "filled": "sj-video-filled"
+      }
+    },
+    "360-tour": {
+      "category": "media",
+      "label": {
+        "en": "360 tour",
+        "ar": "جولة 360"
+      },
+      "keywords": {
+        "en": [
+          "360",
+          "virtual tour",
+          "panorama",
+          "3d tour",
+          "immersive"
+        ],
+        "ar": [
+          "جولة 360",
+          "جولة افتراضية",
+          "بانوراما"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 5.75V18.25M21.5 5.75V18.25\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.5 5.75C9 8.5 15 8.5 21.5 5.75M2.5 18.25C9 15.5 15 15.5 21.5 18.25\"/><path d=\"M6.75 12H8.75M15.25 12H17.25\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 10.5L13.5 12L12 13.5L10.5 12Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.5 5.75C9 8.5 15 8.5 21.5 5.75V18.25C15 15.5 9 15.5 2.5 18.25ZM4.875 13.375L9.375 13.375L9.375 10.625L4.875 10.625ZM14.625 13.375L19.125 13.375L19.125 10.625L14.625 10.625ZM12 9.616L14.384 12L12 14.384L9.616 12Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-360-tour.svg",
+        "filled": "svg/filled/siraj-icon-360-tour.svg"
+      },
+      "sprite": {
+        "outline": "sj-360-tour",
+        "filled": "sj-360-tour-filled"
+      }
+    },
+    "play": {
+      "category": "media",
+      "label": {
+        "en": "play",
+        "ar": "تشغيل"
+      },
+      "keywords": {
+        "en": [
+          "play",
+          "start",
+          "video"
+        ],
+        "ar": [
+          "تشغيل",
+          "بدء"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M7.5 5L19 12L7.5 19Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7.5 5L19 12L7.5 19Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-play.svg",
+        "filled": "svg/filled/siraj-icon-play.svg"
+      },
+      "sprite": {
+        "outline": "sj-play",
+        "filled": "sj-play-filled"
+      }
+    },
+    "pause": {
+      "category": "media",
+      "label": {
+        "en": "pause",
+        "ar": "إيقاف مؤقت"
+      },
+      "keywords": {
+        "en": [
+          "pause",
+          "hold"
+        ],
+        "ar": [
+          "إيقاف مؤقت"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M7 5H10V19H7ZM14 5H17V19H14Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7 5H10V19H7Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M14 5H17V19H14Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-pause.svg",
+        "filled": "svg/filled/siraj-icon-pause.svg"
+      },
+      "sprite": {
+        "outline": "sj-pause",
+        "filled": "sj-pause-filled"
+      }
+    },
+    "share": {
+      "category": "media",
+      "label": {
+        "en": "share",
+        "ar": "مشاركة"
+      },
+      "keywords": {
+        "en": [
+          "share",
+          "send",
+          "network"
+        ],
+        "ar": [
+          "مشاركة",
+          "إرسال"
+        ]
+      },
+      "rtl": "mirror",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M8.954 10.55L15.046 6.95M8.954 13.45L15.046 17.05\"/><path d=\"M17.5 3L20 5.5L17.5 8L15 5.5ZM6.5 9.5L9 12L6.5 14.5L4 12ZM17.5 16L20 18.5L17.5 21L15 18.5Z\"/>",
+      "filled": "<path d=\"M8.954 10.55L15.046 6.95M8.954 13.45L15.046 17.05\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M17.5 3L20 5.5L17.5 8L15 5.5ZM6.5 9.5L9 12L6.5 14.5L4 12ZM17.5 16L20 18.5L17.5 21L15 18.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-share.svg",
+        "filled": "svg/filled/siraj-icon-share.svg"
+      },
+      "sprite": {
+        "outline": "sj-share",
+        "filled": "sj-share-filled"
+      }
+    },
+    "download": {
+      "category": "media",
+      "label": {
+        "en": "download",
+        "ar": "تنزيل"
+      },
+      "keywords": {
+        "en": [
+          "download",
+          "brochure",
+          "save",
+          "export"
+        ],
+        "ar": [
+          "تنزيل",
+          "تحميل",
+          "كتيّب"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M12 3V14M7 10L12 15L17 10M3.5 15V20.5H20.5V15\"/>",
+      "filled": "<path d=\"M12 3V14M7 10L12 15L17 10M3.5 15V20.5H20.5V15\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-download.svg",
+        "filled": "svg/filled/siraj-icon-download.svg"
+      },
+      "sprite": {
+        "outline": "sj-download",
+        "filled": "sj-download-filled"
+      }
+    },
+    "upload": {
+      "category": "media",
+      "label": {
+        "en": "upload",
+        "ar": "رفع"
+      },
+      "keywords": {
+        "en": [
+          "upload",
+          "attach",
+          "submit"
+        ],
+        "ar": [
+          "رفع",
+          "إرفاق",
+          "إرسال"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M12 15V4.5M7 8.5L12 3.5L17 8.5M3.5 15V20.5H20.5V15\"/>",
+      "filled": "<path d=\"M12 15V4.5M7 8.5L12 3.5L17 8.5M3.5 15V20.5H20.5V15\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-upload.svg",
+        "filled": "svg/filled/siraj-icon-upload.svg"
+      },
+      "sprite": {
+        "outline": "sj-upload",
+        "filled": "sj-upload-filled"
+      }
+    },
+    "external": {
+      "category": "media",
+      "label": {
+        "en": "external",
+        "ar": "رابط خارجي"
+      },
+      "keywords": {
+        "en": [
+          "external",
+          "open",
+          "new window",
+          "link"
+        ],
+        "ar": [
+          "رابط خارجي",
+          "فتح",
+          "نافذة جديدة"
+        ]
+      },
+      "rtl": "mirror",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M10.5 4.5H4.5V19.5H19.5V13.5M11 13L18.75 5.25M13.5 4.5H19.5V10.5\"/>",
+      "filled": "<path d=\"M10.5 4.5H4.5V19.5H19.5V13.5M11 13L18.75 5.25M13.5 4.5H19.5V10.5\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-external.svg",
+        "filled": "svg/filled/siraj-icon-external.svg"
+      },
+      "sprite": {
+        "outline": "sj-external",
+        "filled": "sj-external-filled"
+      }
+    },
+    "arrow-left": {
+      "category": "navigation",
+      "label": {
+        "en": "arrow left",
+        "ar": "سهم لليسار"
+      },
+      "keywords": {
+        "en": [
+          "arrow left",
+          "back",
+          "previous"
+        ],
+        "ar": [
+          "سهم",
+          "رجوع",
+          "السابق"
+        ]
+      },
+      "rtl": "mirror",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M21 12H4.5M9.5 6L3.5 12L9.5 18\"/>",
+      "filled": "<path d=\"M21 12H4.5M9.5 6L3.5 12L9.5 18\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-arrow-left.svg",
+        "filled": "svg/filled/siraj-icon-arrow-left.svg"
+      },
+      "sprite": {
+        "outline": "sj-arrow-left",
+        "filled": "sj-arrow-left-filled"
+      }
+    },
+    "arrow-right": {
+      "category": "navigation",
+      "label": {
+        "en": "arrow right",
+        "ar": "سهم لليمين"
+      },
+      "keywords": {
+        "en": [
+          "arrow right",
+          "next",
+          "forward",
+          "continue"
+        ],
+        "ar": [
+          "سهم",
+          "التالي",
+          "متابعة"
+        ]
+      },
+      "rtl": "mirror",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M3 12H19.5M14.5 6L20.5 12L14.5 18\"/>",
+      "filled": "<path d=\"M3 12H19.5M14.5 6L20.5 12L14.5 18\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-arrow-right.svg",
+        "filled": "svg/filled/siraj-icon-arrow-right.svg"
+      },
+      "sprite": {
+        "outline": "sj-arrow-right",
+        "filled": "sj-arrow-right-filled"
+      }
+    },
+    "arrow-up": {
+      "category": "navigation",
+      "label": {
+        "en": "arrow up",
+        "ar": "سهم لأعلى"
+      },
+      "keywords": {
+        "en": [
+          "arrow up",
+          "top",
+          "increase"
+        ],
+        "ar": [
+          "سهم",
+          "أعلى",
+          "زيادة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M12 21V4.5M6 9.5L12 3.5L18 9.5\"/>",
+      "filled": "<path d=\"M12 21V4.5M6 9.5L12 3.5L18 9.5\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-arrow-up.svg",
+        "filled": "svg/filled/siraj-icon-arrow-up.svg"
+      },
+      "sprite": {
+        "outline": "sj-arrow-up",
+        "filled": "sj-arrow-up-filled"
+      }
+    },
+    "arrow-down": {
+      "category": "navigation",
+      "label": {
+        "en": "arrow down",
+        "ar": "سهم لأسفل"
+      },
+      "keywords": {
+        "en": [
+          "arrow down",
+          "scroll",
+          "decrease"
+        ],
+        "ar": [
+          "سهم",
+          "أسفل",
+          "انخفاض"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M12 3V19.5M6 14.5L12 20.5L18 14.5\"/>",
+      "filled": "<path d=\"M12 3V19.5M6 14.5L12 20.5L18 14.5\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-arrow-down.svg",
+        "filled": "svg/filled/siraj-icon-arrow-down.svg"
+      },
+      "sprite": {
+        "outline": "sj-arrow-down",
+        "filled": "sj-arrow-down-filled"
+      }
+    },
+    "arrow-up-right": {
+      "category": "navigation",
+      "label": {
+        "en": "arrow up right",
+        "ar": "سهم قطري"
+      },
+      "keywords": {
+        "en": [
+          "arrow up right",
+          "go",
+          "link",
+          "explore"
+        ],
+        "ar": [
+          "سهم",
+          "انتقال",
+          "رابط"
+        ]
+      },
+      "rtl": "mirror",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M5.5 18.5L17.25 6.75M9 6H18V15\"/>",
+      "filled": "<path d=\"M5.5 18.5L17.25 6.75M9 6H18V15\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-arrow-up-right.svg",
+        "filled": "svg/filled/siraj-icon-arrow-up-right.svg"
+      },
+      "sprite": {
+        "outline": "sj-arrow-up-right",
+        "filled": "sj-arrow-up-right-filled"
+      }
+    },
+    "chevron-left": {
+      "category": "navigation",
+      "label": {
+        "en": "chevron left",
+        "ar": "رأس سهم لليسار"
+      },
+      "keywords": {
+        "en": [
+          "chevron left",
+          "back",
+          "previous"
+        ],
+        "ar": [
+          "السابق",
+          "رجوع"
+        ]
+      },
+      "rtl": "mirror",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M15 5.5L8.5 12L15 18.5\"/>",
+      "filled": "<path d=\"M15 5.5L8.5 12L15 18.5\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-chevron-left.svg",
+        "filled": "svg/filled/siraj-icon-chevron-left.svg"
+      },
+      "sprite": {
+        "outline": "sj-chevron-left",
+        "filled": "sj-chevron-left-filled"
+      }
+    },
+    "chevron-right": {
+      "category": "navigation",
+      "label": {
+        "en": "chevron right",
+        "ar": "رأس سهم لليمين"
+      },
+      "keywords": {
+        "en": [
+          "chevron right",
+          "next",
+          "more"
+        ],
+        "ar": [
+          "التالي",
+          "المزيد"
+        ]
+      },
+      "rtl": "mirror",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M9 5.5L15.5 12L9 18.5\"/>",
+      "filled": "<path d=\"M9 5.5L15.5 12L9 18.5\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-chevron-right.svg",
+        "filled": "svg/filled/siraj-icon-chevron-right.svg"
+      },
+      "sprite": {
+        "outline": "sj-chevron-right",
+        "filled": "sj-chevron-right-filled"
+      }
+    },
+    "chevron-up": {
+      "category": "navigation",
+      "label": {
+        "en": "chevron up",
+        "ar": "رأس سهم لأعلى"
+      },
+      "keywords": {
+        "en": [
+          "chevron up",
+          "collapse"
+        ],
+        "ar": [
+          "طي",
+          "أعلى"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M5.5 15L12 8.5L18.5 15\"/>",
+      "filled": "<path d=\"M5.5 15L12 8.5L18.5 15\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-chevron-up.svg",
+        "filled": "svg/filled/siraj-icon-chevron-up.svg"
+      },
+      "sprite": {
+        "outline": "sj-chevron-up",
+        "filled": "sj-chevron-up-filled"
+      }
+    },
+    "chevron-down": {
+      "category": "navigation",
+      "label": {
+        "en": "chevron down",
+        "ar": "رأس سهم لأسفل"
+      },
+      "keywords": {
+        "en": [
+          "chevron down",
+          "expand",
+          "dropdown"
+        ],
+        "ar": [
+          "توسيع",
+          "قائمة منسدلة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M5.5 9L12 15.5L18.5 9\"/>",
+      "filled": "<path d=\"M5.5 9L12 15.5L18.5 9\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-chevron-down.svg",
+        "filled": "svg/filled/siraj-icon-chevron-down.svg"
+      },
+      "sprite": {
+        "outline": "sj-chevron-down",
+        "filled": "sj-chevron-down-filled"
+      }
+    },
+    "close": {
+      "category": "interface",
+      "label": {
+        "en": "close",
+        "ar": "إغلاق"
+      },
+      "keywords": {
+        "en": [
+          "close",
+          "dismiss",
+          "cancel",
+          "x"
+        ],
+        "ar": [
+          "إغلاق",
+          "إلغاء"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M5.5 5.5L18.5 18.5M18.5 5.5L5.5 18.5\"/>",
+      "filled": "<path d=\"M5.5 5.5L18.5 18.5M18.5 5.5L5.5 18.5\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-close.svg",
+        "filled": "svg/filled/siraj-icon-close.svg"
+      },
+      "sprite": {
+        "outline": "sj-close",
+        "filled": "sj-close-filled"
+      }
+    },
+    "menu": {
+      "category": "interface",
+      "label": {
+        "en": "menu",
+        "ar": "القائمة"
+      },
+      "keywords": {
+        "en": [
+          "menu",
+          "navigation",
+          "hamburger"
+        ],
+        "ar": [
+          "القائمة",
+          "التنقّل"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M3 6.5H21M3 12H21M3 17.5H21\"/>",
+      "filled": "<path d=\"M3 6.5H21M3 12H21M3 17.5H21\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-menu.svg",
+        "filled": "svg/filled/siraj-icon-menu.svg"
+      },
+      "sprite": {
+        "outline": "sj-menu",
+        "filled": "sj-menu-filled"
+      }
+    },
+    "plus": {
+      "category": "interface",
+      "label": {
+        "en": "plus",
+        "ar": "إضافة"
+      },
+      "keywords": {
+        "en": [
+          "plus",
+          "add",
+          "new",
+          "expand"
+        ],
+        "ar": [
+          "إضافة",
+          "جديد"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M12 4V20M4 12H20\"/>",
+      "filled": "<path d=\"M12 4V20M4 12H20\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-plus.svg",
+        "filled": "svg/filled/siraj-icon-plus.svg"
+      },
+      "sprite": {
+        "outline": "sj-plus",
+        "filled": "sj-plus-filled"
+      }
+    },
+    "minus": {
+      "category": "interface",
+      "label": {
+        "en": "minus",
+        "ar": "طرح"
+      },
+      "keywords": {
+        "en": [
+          "minus",
+          "remove",
+          "collapse"
+        ],
+        "ar": [
+          "إزالة",
+          "طي"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M4 12H20\"/>",
+      "filled": "<path d=\"M4 12H20\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-minus.svg",
+        "filled": "svg/filled/siraj-icon-minus.svg"
+      },
+      "sprite": {
+        "outline": "sj-minus",
+        "filled": "sj-minus-filled"
+      }
+    },
+    "check": {
+      "category": "interface",
+      "label": {
+        "en": "check",
+        "ar": "تأكيد"
+      },
+      "keywords": {
+        "en": [
+          "check",
+          "done",
+          "confirmed",
+          "included",
+          "sold"
+        ],
+        "ar": [
+          "تأكيد",
+          "تم",
+          "مشمول"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path d=\"M4 12.5L9.5 18L20 6.5\"/>",
+      "filled": "<path d=\"M4 12.5L9.5 18L20 6.5\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-check.svg",
+        "filled": "svg/filled/siraj-icon-check.svg"
+      },
+      "sprite": {
+        "outline": "sj-check",
+        "filled": "sj-check-filled"
+      }
+    },
+    "info": {
+      "category": "interface",
+      "label": {
+        "en": "info",
+        "ar": "معلومات"
+      },
+      "keywords": {
+        "en": [
+          "info",
+          "information",
+          "details",
+          "help"
+        ],
+        "ar": [
+          "معلومات",
+          "تفاصيل",
+          "مساعدة"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M2.5 12A9.5 9.5 0 1 0 21.5 12A9.5 9.5 0 1 0 2.5 12ZM12 11.25V17\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 6.25L13.25 7.5L12 8.75L10.75 7.5Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2.5 12A9.5 9.5 0 1 0 21.5 12A9.5 9.5 0 1 0 2.5 12ZM10.625 9.875L10.625 18.125L13.375 18.125L13.375 9.875ZM12 5.366L14.134 7.5L12 9.634L9.866 7.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-info.svg",
+        "filled": "svg/filled/siraj-icon-info.svg"
+      },
+      "sprite": {
+        "outline": "sj-info",
+        "filled": "sj-info-filled"
+      }
+    },
+    "alert": {
+      "category": "interface",
+      "label": {
+        "en": "alert",
+        "ar": "تنبيه"
+      },
+      "keywords": {
+        "en": [
+          "alert",
+          "warning",
+          "attention",
+          "notice"
+        ],
+        "ar": [
+          "تنبيه",
+          "تحذير",
+          "انتباه"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M12 3.75L20.75 19.75H3.25ZM12 9.25V13.5\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 15.625L13.125 16.75L12 17.875L10.875 16.75Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 3.75L20.75 19.75H3.25ZM10.625 8.125L10.625 14.625L13.375 14.625L13.375 8.125ZM12 15.116L13.884 17L12 18.884L10.116 17Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-alert.svg",
+        "filled": "svg/filled/siraj-icon-alert.svg"
+      },
+      "sprite": {
+        "outline": "sj-alert",
+        "filled": "sj-alert-filled"
+      }
+    },
+    "more": {
+      "category": "interface",
+      "label": {
+        "en": "more",
+        "ar": "المزيد"
+      },
+      "keywords": {
+        "en": [
+          "more",
+          "options",
+          "overflow",
+          "ellipsis"
+        ],
+        "ar": [
+          "المزيد",
+          "خيارات"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": true,
+      "outline": "<path fill=\"currentColor\" stroke=\"none\" d=\"M5.5 10.375L7.125 12L5.5 13.625L3.875 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 10.375L13.625 12L12 13.625L10.375 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M18.5 10.375L20.125 12L18.5 13.625L16.875 12Z\"/>",
+      "filled": "<path fill=\"currentColor\" stroke=\"none\" d=\"M5.5 10.375L7.125 12L5.5 13.625L3.875 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M12 10.375L13.625 12L12 13.625L10.375 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M18.5 10.375L20.125 12L18.5 13.625L16.875 12Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-more.svg",
+        "filled": "svg/filled/siraj-icon-more.svg"
+      },
+      "sprite": {
+        "outline": "sj-more",
+        "filled": "sj-more-filled"
+      }
+    },
+    "grid": {
+      "category": "interface",
+      "label": {
+        "en": "grid",
+        "ar": "شبكة"
+      },
+      "keywords": {
+        "en": [
+          "grid",
+          "gallery view",
+          "tiles",
+          "units"
+        ],
+        "ar": [
+          "شبكة",
+          "عرض شبكي",
+          "وحدات"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3.5 3.5H10V10H3.5ZM14 3.5H20.5V10H14ZM3.5 14H10V20.5H3.5ZM14 14H20.5V20.5H14Z\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3.5 3.5H10V10H3.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M14 3.5H20.5V10H14Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3.5 14H10V20.5H3.5Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M14 14H20.5V20.5H14Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-grid.svg",
+        "filled": "svg/filled/siraj-icon-grid.svg"
+      },
+      "sprite": {
+        "outline": "sj-grid",
+        "filled": "sj-grid-filled"
+      }
+    },
+    "list": {
+      "category": "interface",
+      "label": {
+        "en": "list",
+        "ar": "قائمة"
+      },
+      "keywords": {
+        "en": [
+          "list",
+          "list view",
+          "details"
+        ],
+        "ar": [
+          "قائمة",
+          "عرض القائمة"
+        ]
+      },
+      "rtl": "mirror",
+      "sameInBothStyles": true,
+      "outline": "<path fill=\"currentColor\" stroke=\"none\" d=\"M4.5 5.125L5.875 6.5L4.5 7.875L3.125 6.5Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M4.5 10.625L5.875 12L4.5 13.375L3.125 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M4.5 16.125L5.875 17.5L4.5 18.875L3.125 17.5Z\"/><path d=\"M8.5 6.5H21M8.5 12H21M8.5 17.5H21\"/>",
+      "filled": "<path fill=\"currentColor\" stroke=\"none\" d=\"M4.5 5.125L5.875 6.5L4.5 7.875L3.125 6.5Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M4.5 10.625L5.875 12L4.5 13.375L3.125 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M4.5 16.125L5.875 17.5L4.5 18.875L3.125 17.5Z\"/><path d=\"M8.5 6.5H21M8.5 12H21M8.5 17.5H21\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-list.svg",
+        "filled": "svg/filled/siraj-icon-list.svg"
+      },
+      "sprite": {
+        "outline": "sj-list",
+        "filled": "sj-list-filled"
+      }
+    },
+    "search": {
+      "category": "interface",
+      "label": {
+        "en": "search",
+        "ar": "بحث"
+      },
+      "keywords": {
+        "en": [
+          "search",
+          "find",
+          "explore",
+          "lookup"
+        ],
+        "ar": [
+          "بحث",
+          "إيجاد",
+          "استكشاف"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3.5 10.5A7 7 0 1 0 17.5 10.5A7 7 0 1 0 3.5 10.5ZM15.5 15.5L20.75 20.75\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3.5 10.5A7 7 0 1 0 17.5 10.5A7 7 0 1 0 3.5 10.5ZM4.75 10.5A5.75 5.75 0 1 0 16.25 10.5A5.75 5.75 0 1 0 4.75 10.5Z\"/><path d=\"M15.5 15.5L20.75 20.75\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-search.svg",
+        "filled": "svg/filled/siraj-icon-search.svg"
+      },
+      "sprite": {
+        "outline": "sj-search",
+        "filled": "sj-search-filled"
+      }
+    },
+    "filter": {
+      "category": "interface",
+      "label": {
+        "en": "filter",
+        "ar": "تصفية"
+      },
+      "keywords": {
+        "en": [
+          "filter",
+          "refine",
+          "sliders",
+          "settings"
+        ],
+        "ar": [
+          "تصفية",
+          "فرز",
+          "إعدادات"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M3 6.5H12.5M17.5 6.5H21M3 12H5.5M10.5 12H21M3 17.5H10.5M15.5 17.5H21M15 4L17.5 6.5L15 9L12.5 6.5ZM8 9.5L10.5 12L8 14.5L5.5 12ZM13 15L15.5 17.5L13 20L10.5 17.5Z\"/>",
+      "filled": "<path d=\"M3 6.5H21M3 12H21M3 17.5H21\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M15 3.625L17.875 6.5L15 9.375L12.125 6.5Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M8 9.125L10.875 12L8 14.875L5.125 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M13 14.625L15.875 17.5L13 20.375L10.125 17.5Z\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-filter.svg",
+        "filled": "svg/filled/siraj-icon-filter.svg"
+      },
+      "sprite": {
+        "outline": "sj-filter",
+        "filled": "sj-filter-filled"
+      }
+    },
+    "layers": {
+      "category": "interface",
+      "label": {
+        "en": "layers",
+        "ar": "طبقات"
+      },
+      "keywords": {
+        "en": [
+          "layers",
+          "floors",
+          "levels",
+          "stack"
+        ],
+        "ar": [
+          "طبقات",
+          "طوابق",
+          "مستويات"
+        ]
+      },
+      "rtl": "none",
+      "sameInBothStyles": false,
+      "outline": "<path d=\"M12 3L21 8L12 13L3 8ZM3 12L12 17L21 12M3 16L12 21L21 16\"/>",
+      "filled": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12 3L21 8L12 13L3 8Z\"/><path d=\"M3 12L12 17L21 12M3 16L12 21L21 16\"/>",
+      "files": {
+        "outline": "svg/outline/siraj-icon-layers.svg",
+        "filled": "svg/filled/siraj-icon-layers.svg"
+      },
+      "sprite": {
+        "outline": "sj-layers",
+        "filled": "sj-layers-filled"
+      }
+    }
+  }
+}
