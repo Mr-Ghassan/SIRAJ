@@ -79,7 +79,7 @@ order inside English layouts. Digits are always Western (the `SIRAJ Digits` face
 - Two versions: **EN** (left-to-right) and **AR** (right-to-left, logo on the right). Tables only, inline CSS, no web
   fonts required (Jost / Tajawal when installed, then Helvetica/Arial or Tahoma), no background images, 520 px max.
 - **Logo**: upload `assets/SIRAJ_Email-Logo_v1.0.png` to the URL in `12-Print/Source/print.config.json →
-  email.logo_url` (currently a PLACEHOLDER, `https://siraj.om/email/…`). It is shown at 132 × 38 px from a 2× file.
+  email.logo_url` (currently a PLACEHOLDER, `https://sirajproperties.net/email/…`). It is shown at 132 × 38 px from a 2× file.
 - **Personalise**: change `print.people.card` in `print.config.json` and rebuild, or edit name/title/mobile directly
   in the generated HTML. Contact lines come from `brand.config.json`.
 - **Install**: open the HTML in a browser → select all → copy → paste into Outlook (*Signatures*), Apple Mail or

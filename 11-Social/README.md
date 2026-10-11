@@ -149,13 +149,13 @@ Captions should be calm, precise and short. Use no more than one emoji, and only
 **Launch (EN)**
 > Noor Residences. A residence shaped by light and silence in Al Khuwair, Muscat.
 > 168 residences · 24 floors · from OMR 145,000.
-> Register your interest at siraj.om
+> Register your interest at sirajproperties.net
 > #SIRAJ #NoorResidences #Muscat #Oman #Architecture
 
 **Launch (AR)**
 > مساكن نور. مساكن تتشكّل بالضوء والسكينة في الخوير، مسقط.
 > 168 وحدة سكنية · 24 طابقاً · ابتداءً من 145,000 ر.ع.
-> سجّلوا اهتمامكم عبر siraj.om
+> سجّلوا اهتمامكم عبر sirajproperties.net
 > #سراج #مساكن_نور #مسقط #عمان #عمارة
 
 **Construction update (EN):** "Noor Residences has reached level 18 of 24. The façade installation is under way. Handover remains on track for Q4 2027."
