@@ -47,6 +47,7 @@ The hierarchy on every layout is **architecture first, information second, silk 
 | **Official palette** | Deep `#2C0F12` · Sand `#D6C0B2` · Architectural Stone `#AA9180` |
 | **Light / Dark** | Warm Ivory `#F7F2ED` / SIRAJ Shadow `#170608` |
 | **Typefaces** | **Jost** (Latin) · **Tajawal** (Arabic), both SIL OFL |
+| **Language** | **Arabic only** for all communications. English is dormant until a freehold project open to foreign ownership (see `DESIGN-LANGUAGE.md` § 0) |
 | **Numerals** | Western digits (0–9) in every language |
 | **Signature** | SIRAJ Silk · the Lumen ◆ · the Silk Corner |
 | **Motion** | FLOW · DRAPE · REVEAL · WRAP · FOLD · GLIDE · SETTLE (no bounce) |
@@ -115,6 +116,8 @@ Individual targets are `build:tokens`, `build:logos`, `build:ui`, `build:social`
 - ✅ Website **sirajproperties.net** and Instagram **@sirajproperties** are confirmed. The phone, address and CR details in `brand.config.json` are still placeholders.
 - ⚠️ Photography in `08-Photography/Library` and the campaign visuals are **AI-generated concept imagery** (ElevenLabs/Seedream), used to demonstrate the art direction. Replace them with commissioned photography or CGI before public use.
 - ✅ Colour values (HEX, RGB, CMYK, Pantone) are **approved**.
+- ✅ **Language policy: Arabic only.** English deliverables are dormant in `99-Archive/English-Dormant/`.
+- ✅ The Founding Project is officially named **«سراج · Siraj»** (`14-Property-Marketing/12-Project-Siraj/`).
 - 💡 Proposed brand line *«Light, built. · نورٌ يُبنى»* is pending approval.
 - 💡 A bespoke Arabic wordmark is recommended for v1.1.
 

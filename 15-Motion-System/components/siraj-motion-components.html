@@ -42,6 +42,7 @@ const root = document.getElementById('root');
 if (AR) { document.documentElement.dir = 'rtl'; document.documentElement.lang = 'ar'; }
 const LIB = '../../08-Photography/Library/SIRAJ_Photo_', STILL = '../../06-SIRAJ-Silk/Stills/';
 const T = (en, ar) => (AR ? ar : en);
+const QQ = (q) => (AR ? q.replace(/Q(\d) (\d{4})/g, 'الربع $1 · $2') : q);
 const S = (el, st) => { el.style.opacity = st.opacity; el.style.transform = `translate3d(0,${st.y.toFixed(2)}px,0)`; el.style.filter = `blur(${Math.max(0, st.blur).toFixed(2)}px)`; };
 const rise = (el, t, start, dur = 0.9) => { const k = M.seg(t, start, dur, E.drape); el.style.transform = `translateY(${((1 - k) * 105).toFixed(2)}%)`; };
 const draw = (el, t, start, dur = 0.9) => { el.style.transform = `scaleX(${M.seg(t, start, dur, E.flow)})`; };
@@ -115,7 +116,7 @@ const COMP = {
       <div class="mask" style="margin-top:28px"><span id="n" style="font:300 86px/1.05 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#140E10">${T(PR.en, PR.ar)}</span></div>
       <div id="loc" style="margin-top:18px;font:300 28px/1.4 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#3B3436">${T(PR.location_en, PR.location_ar)}</div>
       <div class="hair" id="h" style="width:100%;margin:40px 0 28px"></div>
-      <div id="facts" style="display:flex;gap:56px;font:400 22px/1.4 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#3B3436"><div><b style="font-weight:500;color:#602733">168</b> ${T('units', 'وحدة')}</div><div><b style="font-weight:500;color:#602733">Q4 2027</b> ${T('handover', 'تسليم')}</div><div>${T('from', 'من')} <b style="font-weight:500;color:#602733">${T('OMR 145,000', '145,000 ر.ع.')}</b></div></div>`,
+      <div id="facts" style="display:flex;gap:56px;font:400 22px/1.4 ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#3B3436"><div><b style="font-weight:500;color:#602733">168</b> ${T('units', 'وحدة')}</div><div><b style="font-weight:500;color:#602733">${QQ('Q4 2027')}</b> ${T('handover', 'تسليم')}</div><div>${T('from', 'من')} <b style="font-weight:500;color:#602733">${T('OMR 145,000', '145,000 ر.ع.')}</b></div></div>`,
       `${AR ? 'right' : 'left'}:${pad + 820 + 96}px;top:${H * 0.33}px;width:${W - pad * 2 - 820 - 96}px`);
     seek = (t) => {
       const k = M.seg(t, 0.2, 1.2, E.reveal);
@@ -191,7 +192,7 @@ const COMP = {
   },
   progress() {
     const b = bg(LIB + 'Construction-Site-Dawn_v1.0.jpg', 'linear-gradient(90deg, rgba(23,6,8,.85) 0%, rgba(23,6,8,.55) 55%, rgba(23,6,8,.2) 100%)');
-    const ms = [[0, T('Groundbreaking', 'وضع حجر الأساس'), 'Q1 2025'], [0.35, T('Structure', 'الهيكل الإنشائي'), 'Q3 2026'], [0.64, T('Façade', 'الواجهات'), 'Q1 2027'], [1, T('Handover', 'التسليم'), 'Q4 2027']];
+    const ms = [[0, T('Groundbreaking', 'وضع حجر الأساس'), QQ('Q1 2025')], [0.35, T('Structure', 'الهيكل الإنشائي'), QQ('Q3 2026')], [0.64, T('Façade', 'الواجهات'), QQ('Q1 2027')], [1, T('Handover', 'التسليم'), QQ('Q4 2027')]];
     const pr = el(`<div class="eb"><i></i>${T('Construction update · October 2026', 'تحديث الإنشاءات · أكتوبر 2026')}</div>
       <div style="display:flex;align-items:baseline;gap:24px;margin-top:28px"><div class="num" id="pc" style="font:200 160px/1 Jost;color:#F7F2ED">0%</div><div style="font:300 30px ${AR ? "'SIRAJ Digits',Tajawal" : 'Jost'};color:#D6C0B2">${T('complete', 'مكتمل')}</div></div>
       <div style="position:relative;margin-top:80px;height:1px;background:rgba(214,192,178,.35)"><div id="fill" style="position:absolute;inset-block:-1px;${startSide}:0;height:3px;background:#D6C0B2;width:0"></div>

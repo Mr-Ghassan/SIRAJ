@@ -2,6 +2,8 @@
 
 The official name of the Founding Project is **سراج · Siraj** (`brand.config.json → founding_project`).
 
+> **Arabic only** (language policy, 2026-10-11). Builds render Arabic. The English editions are dormant in `99-Archive/English-Dormant/`; build them only with `SIRAJ_EN=1`.
+
 ## Official façade posts
 
 Instagram post (4:5) and story (9:16), in Arabic and English. Each shows the official façade zoomed out on Warm Ivory, with one SIRAJ Silk ribbon passing behind the building.

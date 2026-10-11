@@ -5,6 +5,21 @@ The full rationale lives in `20-Brand-Guidelines/`. If this file and the guideli
 
 ---
 
+## 0. Language policy (official · 2026-10-11)
+
+> **SIRAJ communicates in Arabic only.** This covers the company and the Founding Project «سراج»: social media, advertising, print, presentations, property marketing, video, signage, events and the website.
+>
+> **كل منشورات وتسويق سراج، للشركة والمشروع الأول، باللغة العربية فقط في الوقت الحالي.**
+
+- **English is dormant.** It is activated only when SIRAJ launches a **freehold project open to foreign ownership** (تملك حر وتملك للأجانب), and then only for that project's audience.
+- All English deliverables are preserved in `99-Archive/English-Dormant/`. Restore them with `bash tools/archive-english.sh --restore`, and build English with `SIRAJ_EN=1`.
+- **Allowed Latin elements in Arabic communications:**
+  - the SIRAJ wordmark (the logo itself);
+  - the website `sirajproperties.net`, the handle `@sirajproperties`, email addresses and phone numbers;
+  - Western digits (0–9), which are the brand standard.
+- **Transactional and legal documents** keep their bilingual (EN-AR) format where business or regulation requires it: business card, quotation, tax invoice, payment receipt and contract cover. Arabic is always primary.
+- Use the **Arabic lockup** (`01-Logos/Lockups/SIRAJ_Lockup_Arabic_*`) wherever a descriptor is needed.
+
 ## 1. The idea in one line
 
 > **Positioning:** SIRAJ develops considered real estate projects designed to create lasting value. · سراج تطور مشاريع عقارية مدروسة تصنع قيمة تستمر.

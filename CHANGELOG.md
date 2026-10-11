@@ -18,6 +18,8 @@ The first complete release of the SIRAJ Real Estate Development identity, design
 - **Brand guidelines:** an 80-page document (PDF and HTML), plus governance and the brand checklist.
 - **Client confirmations (2026-10-11):** colours approved; website sirajproperties.net and Instagram @sirajproperties; Founding Project named «سراج · Siraj» (official façade posts, hero and 3D Silk Wrap key visuals in `14-Property-Marketing/12-Project-Siraj`); people rule: women only in hijab with modest dress, a mixed Omani and international cast, and Omani men in dishdasha and massar (never kumma or ghutra). The affected imagery was regenerated and all dependent assets were rebuilt.
 
+- **Language policy (2026-10-11): Arabic only.** All communications for SIRAJ and the Founding Project are Arabic. English is dormant, kept in `99-Archive/English-Dormant/`, until a freehold project open to foreign ownership. Added Arabic editions of every motion component, Arabic-default outros, and an Arabic RTL PowerPoint template (`tools/pptx-arabize.py`).
+
 ### Open items before public launch
 - Confirm the remaining placeholder data (phone, address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.
 - Approve the proposed brand line «Light, built. · نورٌ يُبنى».

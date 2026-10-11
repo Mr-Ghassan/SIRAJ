@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar">
 <head>
 <meta charset="utf-8">
 <title>SIRAJ — Official Brand Outro v1.0</title>
@@ -9,7 +9,7 @@
   0.6  Behind it, the official wordmark resolves (fade, unblur, settle — DRAPE).
   1.9  A stone hairline draws from the centre; supporting details settle in, staggered by 80 ms.
   3.2  Clean final frame; hold to 5.0.
-  Query: ?fmt=16x9|9x16|1x1 &v=logo|url|contact|cta|project|social &theme=dark|light &alpha=1 &lang=en|ar|bi
+  Query: ?fmt=16x9|9x16|1x1 &v=logo|url|contact|cta|project|social &theme=dark|light &alpha=1 &lang=ar (default)|bi|en
   Contact data comes from 00-Brand-Foundation/brand.config.json (via 15-Motion-System/lib/siraj-brand-data.js).
 -->
 <link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
@@ -68,31 +68,41 @@ svg.innerHTML = `<defs><linearGradient id="wipe" gradientUnits="userSpaceOnUse">
 const mp = document.getElementById('mp'), wipe = document.getElementById('wipe');
 
 // details content per variant
-const C = B.contact, CO = B.company, PR = B.demo_projects.noor;
+const C = B.contact, CO = B.company, PR = B.founding_project;
+// Language policy (brand.config.json → language_policy): Arabic by default; 'bi' and 'en' stay available for future freehold projects.
+const LANG = q.get('lang') || 'ar', AR_ONLY = LANG === 'ar', EN_ONLY = LANG === 'en';
 const lum = (s) => `<span class="lum" style="width:${s}px;height:${s}px;margin:0 ${s * 2}px"></span>`;
 const fs = (k) => Math.round(k * U);
 const details = document.getElementById('details');
 const lines = [];
 const L = (html, cls = '') => lines.push(`<div class="line ${cls}">${html}</div>`);
+const arLine = (txt, size, w = 400) => `<span class="ar" style="font-size:${fs(size)}px;font-weight:${w}">${txt}</span>`;
+const eb = (en, ar) => (AR_ONLY ? arLine(ar, 22, 500) : EN_ONLY ? `<span class="eyebrow-x" style="font-size:${fs(16)}px">${en}</span>` : `<span class="eyebrow-x" style="font-size:${fs(15)}px">${en} · ${ar}</span>`);
 if (V === 'url') {
   L(`<span class="en" style="font-size:${fs(34)}px;font-weight:300;letter-spacing:.06em">${C.website}</span>`);
 } else if (V === 'contact') {
-  L(`<span class="ar" style="font-size:${fs(34)}px;font-weight:400">${CO.name_ar}</span>`);
-  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${C.phone}${lum(fs(7))}${C.email}${lum(fs(7))}${C.website}</span>`, 'mt');
+  if (!EN_ONLY) L(arLine(CO.name_ar, 34));
+  else L(`<span class="en" style="font-size:${fs(30)}px;font-weight:400">${CO.name_en}</span>`);
+  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em"><bdi dir="ltr">${C.phone}</bdi>${lum(fs(7))}${C.email}${lum(fs(7))}${C.website}</span>`, 'mt');
 } else if (V === 'cta') {
-  L(`<span class="eyebrow-x" style="font-size:${fs(16)}px">Register your interest</span>`);
+  L(eb('Register your interest', 'سجّل اهتمامك'));
   L(`<span class="en" style="font-size:${fs(40)}px;font-weight:300">${C.website}</span>`, 'mt');
-  L(`<span class="ar" style="font-size:${fs(26)}px;font-weight:400">سجّل اهتمامك ${lum(fs(6))} <bdi dir="ltr">${C.phone}</bdi></span>`, 'mt');
+  L(AR_ONLY ? `<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em"><bdi dir="ltr">${C.phone}</bdi></span>`
+            : EN_ONLY ? `<span class="en" style="font-size:${fs(24)}px;font-weight:400"><bdi dir="ltr">${C.phone}</bdi></span>`
+            : arLine(`سجّل اهتمامك ${lum(fs(6))} <bdi dir="ltr">${C.phone}</bdi>`, 26), 'mt');
 } else if (V === 'social') {
   L(`<span class="en" style="font-size:${fs(36)}px;font-weight:400;letter-spacing:.04em">${C.social_handle}</span>`);
-  L(`<span class="eyebrow-x" style="font-size:${fs(15)}px">Follow · تابعونا</span>`, 'mt');
+  L(eb('Follow', 'تابعونا'), 'mt');
 } else if (V === 'project') {
-  L(`<span class="eyebrow-x" style="font-size:${fs(15)}px">A SIRAJ development · من تطوير سراج</span>`);
-  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${C.website}${lum(fs(6))}${C.phone}</span>`, 'mt');
+  L(eb(`${PR.role_en} · ${PR.location_en}`, `${PR.role_ar} · ${PR.location_ar}`));
+  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${C.website}${lum(fs(6))}<bdi dir="ltr">${C.phone}</bdi></span>`, 'mt');
 }
 details.innerHTML = lines.join('');
 const project = document.getElementById('project');
-if (isProject) project.innerHTML = `<div class="en" style="font-size:${fs(96)}px;font-weight:300;letter-spacing:-.01em;line-height:1">${PR.en}</div><div class="ar" style="font-size:${fs(54)}px;font-weight:300;margin-top:${fs(18)}px">${PR.ar}</div>`;
+if (isProject) project.innerHTML = AR_ONLY
+  ? `<div class="ar" style="font-size:${fs(110)}px;font-weight:500;line-height:1.1">${PR.name_ar}</div>`
+  : EN_ONLY ? `<div class="en" style="font-size:${fs(96)}px;font-weight:300;letter-spacing:-.01em;line-height:1">${PR.name_en}</div>`
+  : `<div class="en" style="font-size:${fs(96)}px;font-weight:300;letter-spacing:-.01em;line-height:1">${PR.name_en}</div><div class="ar" style="font-size:${fs(54)}px;font-weight:300;margin-top:${fs(18)}px">${PR.name_ar}</div>`;
 project.style.top = (H * 0.26) + 'px';
 const rule = document.getElementById('rule');
 const ruleY = logoCY + LH / 2 + LH * (isProject ? 0.7 : 0.55);

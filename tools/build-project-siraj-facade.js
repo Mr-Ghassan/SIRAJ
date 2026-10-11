@@ -6,7 +6,7 @@ const SRC = path.join(R.ROOT, '14-Property-Marketing/12-Project-Siraj/Source/pro
 const OUT = path.join(R.ROOT, '14-Property-Marketing/12-Project-Siraj');
 const JOBS = [['post', 1080, 1350, 'Post'], ['story', 1080, 1920, 'Story']];
 (async () => {
-  for (const [fmt, w, h, name] of JOBS) for (const lang of ['ar', 'en']) {
+  for (const [fmt, w, h, name] of JOBS) for (const lang of (process.env.SIRAJ_EN === '1' ? ['ar', 'en'] : ['ar'])) {
     const { page, cleanup } = await R.openPage({ file: SRC, width: w, height: h, scale: 2 });
     await page.goto('file://' + SRC + `?fmt=${fmt}&lang=${lang}`, { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
