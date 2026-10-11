@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Memo · Arabic</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  .memo .ttl { display: flex; justify-content: space-between; align-items: baseline; padding: 3mm 0 4mm; border-bottom: 0.75pt solid var(--d-maroon); }
+  .memo .ttl .t { font-size: 24pt; font-weight: 300; letter-spacing: -0.01em; color: var(--d-ink-strong); }
+  .memo .ttl .x { font-size: 6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); }
+  .memo .hdrs { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+  .memo .hdrs .r { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; padding: 2.4mm 0; border-bottom: 0.5pt solid var(--d-rule-soft); align-items: baseline; }
+  .memo .hdrs .k { grid-column: span 2; font-size: 5.6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); }
+  .memo .hdrs .v { grid-column: span 10; font-size: 9pt; color: var(--d-ink-strong); }
+  .memo .hdrs .r.subj .v { font-size: 11pt; }
+  .memo .body { margin-top: 9mm; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+  .memo .body .txt { grid-column: 3 / span 9; font-size: 9.5pt; line-height: 5mm; }
+  .page[dir="rtl"].memo .body .txt { font-size: 10.5pt; line-height: 6.2mm; }
+  .memo .body .txt p + p, .memo .body .txt p + ul, .memo .body .txt ul + p { margin-top: 3.5mm; }
+  .memo .body .callout { margin-top: 6mm; }
+  .memo .sign { margin-top: 10mm; }
+  .memo .sign .nm { color: var(--d-ink-strong); }
+  .memo .sign .tt { font-size: 6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); margin-top: 0.6mm; }
+  .page[dir="rtl"].memo .sign .tt { font-size: 9pt; }
+  .page[dir="rtl"].memo .hdrs .k { font-size: 8pt; }
+  .page[dir="rtl"].memo .hdrs .v { font-size: 10pt; }
+  .page[dir="rtl"].memo .hdrs .r.subj .v { font-size: 12pt; font-weight: 500; }
+  .page[dir="rtl"].memo .ttl .t { font-size: 22pt; font-weight: 400; }
+  .page[dir="rtl"].memo .ttl .x { font-size: 8pt; }
+</style>
+</head>
+<body dir="ltr" lang="en" data-preview-eyebrow="SIRAJ · Business documents · Memo"
+      data-preview-title="Internal memo — Arabic · A4"
+      data-preview-note="Right-to-left mirror of the English memo: same grid, labels on the right, Western digits."
+      data-preview-cols="1">
+
+<section class="page memo" lang="ar" dir="rtl" data-label="Memo · Arabic">
+  <header class="doc-head" style="min-height:22mm">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="co"><strong>{{company.name_ar}}</strong>داخلي · غير مخصص للتوزيع</div>
+  </header>
+
+  <div class="ttl"><span class="t">مذكرة داخلية</span><span class="x">المرجع <bdi dir="ltr">SRJ/DM/2026/118</bdi></span></div>
+  <div class="hdrs">
+    <div class="r"><span class="k">إلى</span><span class="v">إدارة المبيعات والتأجير؛ خدمة العملاء</span></div>
+    <div class="r"><span class="k">من</span><span class="v">{{print.people.id.name_ar}}، {{print.people.id.title_ar}}، {{print.people.id.dept_ar}}</span></div>
+    <div class="r"><span class="k">نسخة إلى</span><span class="v">{{print.people.sender.name_ar}}، {{print.people.sender.title_ar}}</span></div>
+    <div class="r"><span class="k">التاريخ</span><span class="v">11 أكتوبر 2026</span></div>
+    <div class="r subj"><span class="k">الموضوع</span><span class="v">{{demo_projects.noor.ar}} — افتتاح الشقة النموذجية</span></div>
+  </div>
+
+  <div class="body">
+    <div class="txt">
+      <p>تُفتتح الشقة النموذجية لمشروع {{demo_projects.noor.ar}} أمام العملاء يوم الأحد 1 نوفمبر في مركز المبيعات بـ{{demo_projects.noor.location_ar|first}}، وتعرض تصميم الثلاث غرف نوم بلوحة تشطيبات الرمل.</p>
+      <p>وللاستعداد، يُرجى مراعاة ما يلي:</p>
+      <ul class="lumen-list">
+        <li>المواعيد الخاصة من الساعة 10:00 إلى 19:00، بمدة 60 دقيقة لكل موعد، وتُحجز عبر نظام إدارة العملاء.</li>
+        <li>تحلّ قائمة أسعار باقات التشطيب (الإصدار 3) محل جميع الإصدارات السابقة اعتبارًا من 1 نوفمبر.</li>
+        <li>يُسمح للعملاء بالتصوير داخل الشقة، وتنظّم إدارة التسويق زيارات وسائل الإعلام.</li>
+        <li>تُختتم كل زيارة بملف المخططات وعرض سعر مطبوع من القالب المعتمد.</li>
+      </ul>
+      <p>نشكركم على المحافظة على الشقة كما تُعرض: خلع الأحذية عند المدخل، وتشغيل الإضاءة المسائية بعد الساعة 17:00، وإعادة عينات التشطيب إلى مكانها بعد كل زيارة.</p>
+      <div class="callout"><b>إجراء مطلوب قبل 22 أكتوبر</b><br>يؤكد قادة الفرق جدول المواعيد وأسماء المستشارين المناوبين.</div>
+      <div class="sign">
+        <div class="nm">{{print.people.id.name_ar}}</div>
+        <div class="tt">{{print.people.id.title_ar}}</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>صفحة</b> <span data-page></span> / <span data-pages></span></span></div>
+    <div class="doc-foot__cols"><div><b>{{company.name_ar}}</b>{{contact.address_ar|first}}</div><div><b>داخلي</b>لا يُرسل خارج سراج</div><div></div><div style="text-align:end"><b>المرجع</b><bdi dir="ltr">SRJ/DM/2026/118</bdi></div></div>
+  </footer>
+</section>
+
+</body>
+</html>

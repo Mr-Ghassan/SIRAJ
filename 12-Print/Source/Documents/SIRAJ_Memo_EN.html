@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Memo · English</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  .memo .ttl { display: flex; justify-content: space-between; align-items: baseline; padding: 3mm 0 4mm; border-bottom: 0.75pt solid var(--d-maroon); }
+  .memo .ttl .t { font-size: 24pt; font-weight: 300; letter-spacing: -0.01em; color: var(--d-ink-strong); }
+  .memo .ttl .x { font-size: 6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); }
+  .memo .hdrs { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+  .memo .hdrs .r { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; padding: 2.4mm 0; border-bottom: 0.5pt solid var(--d-rule-soft); align-items: baseline; }
+  .memo .hdrs .k { grid-column: span 2; font-size: 5.6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); }
+  .memo .hdrs .v { grid-column: span 10; font-size: 9pt; color: var(--d-ink-strong); }
+  .memo .hdrs .r.subj .v { font-size: 11pt; }
+  .memo .body { margin-top: 9mm; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+  .memo .body .txt { grid-column: 3 / span 9; font-size: 9.5pt; line-height: 5mm; }
+  .page[dir="rtl"].memo .body .txt { font-size: 10.5pt; line-height: 6.2mm; }
+  .memo .body .txt p + p, .memo .body .txt p + ul, .memo .body .txt ul + p { margin-top: 3.5mm; }
+  .memo .body .callout { margin-top: 6mm; }
+  .memo .sign { margin-top: 10mm; }
+  .memo .sign .nm { color: var(--d-ink-strong); }
+  .memo .sign .tt { font-size: 6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); margin-top: 0.6mm; }
+  .page[dir="rtl"].memo .sign .tt { font-size: 9pt; }
+  .page[dir="rtl"].memo .hdrs .k { font-size: 8pt; }
+  .page[dir="rtl"].memo .hdrs .v { font-size: 10pt; }
+  .page[dir="rtl"].memo .hdrs .r.subj .v { font-size: 12pt; font-weight: 500; }
+  .page[dir="rtl"].memo .ttl .t { font-size: 22pt; font-weight: 400; }
+  .page[dir="rtl"].memo .ttl .x { font-size: 8pt; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Business documents · Memo"
+      data-preview-title="Internal memo — English · A4"
+      data-preview-note="Headers on the 12-column grid (label 2 columns, value 10); body text starts at column 3 for a calm reading measure."
+      data-preview-cols="1">
+
+<section class="page memo" lang="en" dir="ltr" data-label="Memo · English">
+  <header class="doc-head" style="min-height:22mm">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="co"><strong>{{company.name_en}}</strong>Internal · not for distribution</div>
+  </header>
+
+  <div class="ttl"><span class="t">Memorandum</span><span class="x">Ref. SRJ/DM/2026/118</span></div>
+  <div class="hdrs">
+    <div class="r"><span class="k">To</span><span class="v">Sales &amp; Leasing; Customer Care</span></div>
+    <div class="r"><span class="k">From</span><span class="v">{{print.people.id.name_en}}, {{print.people.id.title_en}}, {{print.people.id.dept_en}}</span></div>
+    <div class="r"><span class="k">Copy</span><span class="v">{{print.people.sender.name_en}}, {{print.people.sender.title_en}}</span></div>
+    <div class="r"><span class="k">Date</span><span class="v">11 October 2026</span></div>
+    <div class="r subj"><span class="k">Subject</span><span class="v">{{demo_projects.noor.en}} — sample apartment opening</span></div>
+  </div>
+
+  <div class="body">
+    <div class="txt">
+      <p>The sample apartment for {{demo_projects.noor.en}} opens to clients on Sunday 1 November at the sales centre in {{demo_projects.noor.location_en}}. It presents the three-bedroom layout with the Sand finish palette.</p>
+      <p>To prepare, please note the following:</p>
+      <ul class="lumen-list">
+        <li>Private appointments run from 10:00 to 19:00, in 60-minute slots, booked through the CRM.</li>
+        <li>The finish pack price list (version 3) replaces all earlier versions from 1 November.</li>
+        <li>Photography inside the apartment is permitted for clients; press visits are arranged by Marketing.</li>
+        <li>Each visit closes with the floor-plan folder and a printed quotation from the template.</li>
+      </ul>
+      <p>Thank you for keeping the apartment as it is presented: shoes off at the threshold, lights on the evening scene after 17:00, and the finish samples returned to the tray after each visit.</p>
+      <div class="callout"><b>Action required by 22 October</b><br>Team leads to confirm the appointment rota and the names of the consultants on duty.</div>
+      <div class="sign">
+        <div class="nm">{{print.people.id.name_en}}</div>
+        <div class="tt">{{print.people.id.title_en}}</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>Page</b><span data-page></span> / <span data-pages></span></span></div>
+    <div class="doc-foot__cols"><div><b>{{company.name_en}}</b>{{contact.address_en|first}}</div><div><b>Internal</b>Do not forward outside SIRAJ</div><div></div><div style="text-align:end"><b>Ref.</b>SRJ/DM/2026/118</div></div>
+  </footer>
+</section>
+
+</body>
+</html>
