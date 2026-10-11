@@ -1,0 +1,255 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "SIRAJ Real Estate Development — Design Tokens v1.0 (single source of truth). Edit here, then run `npm run tokens`.",
+  "$version": "1.0.0",
+  "color": {
+    "brand": {
+      "primary":   { "$type": "color", "$value": "#602733", "$description": "SIRAJ Maroon — official logo colour. Hero colour of the brand." },
+      "deep":      { "$type": "color", "$value": "#2C0F12", "$description": "SIRAJ Deep — official. Black cherry; dark environment and gradient base." },
+      "shadow":    { "$type": "color", "$value": "#170608", "$description": "SIRAJ Shadow — deepest silk shadow; cinema black of the brand." },
+      "stone":     { "$type": "color", "$value": "#AA9180", "$description": "Architectural Stone — official Lumen (diamond) colour. Accent only." },
+      "sand":      { "$type": "color", "$value": "#D6C0B2", "$description": "SIRAJ Sand — official reversed-logo colour. Light-on-dark text and surfaces." },
+      "black":     { "$type": "color", "$value": "#020202", "$description": "Official black artboard colour (logo on black)." }
+    },
+    "silk": {
+      "highlight": { "$type": "color", "$value": "#C79A9C", "$description": "Silk Highlight — specular sheen on maroon silk. Never a fill for large areas." },
+      "midtone":   { "$type": "color", "$value": "#81404C", "$description": "Silk Midtone — lit fold of the silk." },
+      "base":      { "$type": "color", "$value": "#602733", "$description": "Silk Base — equals SIRAJ Maroon." },
+      "dark":      { "$type": "color", "$value": "#45161F", "$description": "Silk Dark — turning fold." },
+      "shadow":    { "$type": "color", "$value": "#170608", "$description": "Silk Shadow — core shadow inside a fold." }
+    },
+    "neutral": {
+      "white":     { "$type": "color", "$value": "#FFFFFF", "$description": "Pure White." },
+      "ivory":     { "$type": "color", "$value": "#F7F2ED", "$description": "Warm Ivory — default light environment background." },
+      "linen":     { "$type": "color", "$value": "#EFE7E0", "$description": "Linen — secondary light surface." },
+      "sand":      { "$type": "color", "$value": "#D6C0B2", "$description": "SIRAJ Sand (official)." },
+      "stone":     { "$type": "color", "$value": "#AA9180", "$description": "Architectural Stone (official)." },
+      "warm-grey": { "$type": "color", "$value": "#8E837D", "$description": "Warm Grey — large text / borders only on light (3.3:1)." },
+      "ash":       { "$type": "color", "$value": "#6B625E", "$description": "Ash — secondary text on light (5.3:1 on Ivory, AA)." },
+      "graphite":  { "$type": "color", "$value": "#3B3436", "$description": "Graphite — default body text on light." },
+      "near-black":{ "$type": "color", "$value": "#140E10", "$description": "Near Black — warm black for headlines and dark UI chrome." }
+    },
+    "maroon": {
+      "50":  { "$type": "color", "$value": "#FAF3F3" },
+      "100": { "$type": "color", "$value": "#F2E3E4" },
+      "200": { "$type": "color", "$value": "#E3C5C8" },
+      "300": { "$type": "color", "$value": "#CC9CA2" },
+      "400": { "$type": "color", "$value": "#AD6B75" },
+      "500": { "$type": "color", "$value": "#8A4351" },
+      "600": { "$type": "color", "$value": "#722F3D" },
+      "700": { "$type": "color", "$value": "#602733", "$description": "= brand.primary" },
+      "800": { "$type": "color", "$value": "#4A1D27" },
+      "900": { "$type": "color", "$value": "#2C0F12", "$description": "= brand.deep" },
+      "950": { "$type": "color", "$value": "#170608", "$description": "= brand.shadow" }
+    },
+    "functional": {
+      "success": { "$type": "color", "$value": "#4E6B4F", "$description": "Olive — confirmations, sold-out progress complete." },
+      "warning": { "$type": "color", "$value": "#A8742B", "$description": "Ochre — pending, attention." },
+      "error":   { "$type": "color", "$value": "#A8323A", "$description": "Crimson — errors. Kept visibly brighter than SIRAJ Maroon." },
+      "info":    { "$type": "color", "$value": "#3E5868", "$description": "Slate — neutral information." }
+    },
+    "data": {
+      "1": { "$type": "color", "$value": "#602733", "$description": "Series 1 — Maroon" },
+      "2": { "$type": "color", "$value": "#AA9180", "$description": "Series 2 — Stone" },
+      "3": { "$type": "color", "$value": "#3B3436", "$description": "Series 3 — Graphite" },
+      "4": { "$type": "color", "$value": "#C79A9C", "$description": "Series 4 — Silk Highlight" },
+      "5": { "$type": "color", "$value": "#8E837D", "$description": "Series 5 — Warm Grey" },
+      "6": { "$type": "color", "$value": "#2C0F12", "$description": "Series 6 — Deep" }
+    }
+  },
+  "theme": {
+    "light": {
+      "bg":            { "$type": "color", "$value": "{color.neutral.ivory}" },
+      "surface":       { "$type": "color", "$value": "{color.neutral.white}" },
+      "surface-alt":   { "$type": "color", "$value": "{color.neutral.linen}" },
+      "text":          { "$type": "color", "$value": "{color.neutral.graphite}" },
+      "text-strong":   { "$type": "color", "$value": "{color.neutral.near-black}" },
+      "text-muted":    { "$type": "color", "$value": "{color.neutral.ash}" },
+      "accent":        { "$type": "color", "$value": "{color.brand.primary}" },
+      "accent-strong": { "$type": "color", "$value": "{color.brand.deep}" },
+      "on-accent":     { "$type": "color", "$value": "{color.neutral.ivory}" },
+      "lumen":         { "$type": "color", "$value": "{color.brand.stone}" },
+      "border":        { "$type": "color", "$value": "#E3D6CC" },
+      "border-strong": { "$type": "color", "$value": "{color.neutral.warm-grey}" },
+      "focus":         { "$type": "color", "$value": "{color.brand.primary}" }
+    },
+    "dark": {
+      "bg":            { "$type": "color", "$value": "{color.brand.shadow}" },
+      "surface":       { "$type": "color", "$value": "{color.brand.deep}" },
+      "surface-alt":   { "$type": "color", "$value": "#3A141A" },
+      "text":          { "$type": "color", "$value": "#E9DDD4" },
+      "text-strong":   { "$type": "color", "$value": "{color.neutral.ivory}" },
+      "text-muted":    { "$type": "color", "$value": "#B9A69A" },
+      "accent":        { "$type": "color", "$value": "{color.brand.sand}" },
+      "accent-strong": { "$type": "color", "$value": "{color.neutral.ivory}" },
+      "on-accent":     { "$type": "color", "$value": "{color.brand.deep}" },
+      "lumen":         { "$type": "color", "$value": "{color.brand.stone}" },
+      "border":        { "$type": "color", "$value": "#4A2228" },
+      "border-strong": { "$type": "color", "$value": "#7A5A55" },
+      "focus":         { "$type": "color", "$value": "{color.brand.sand}" }
+    }
+  },
+  "gradient": {
+    "silk-light":  { "$type": "gradient", "$value": "linear-gradient(51deg, #2C0F12 0%, #602733 100%)", "$description": "G1 — Official. Light arriving from the upper right across maroon silk (from the master artboard)." },
+    "silk-sheen":  { "$type": "gradient", "$value": "linear-gradient(118deg, #2C0F12 0%, #602733 42%, #81404C 54%, #602733 66%, #2C0F12 100%)", "$description": "G2 — A single sheen band travelling across silk. Hero / motion use." },
+    "lumen-glow":  { "$type": "gradient", "$value": "radial-gradient(120% 120% at 78% 18%, #81404C 0%, #602733 32%, #2C0F12 78%, #170608 100%)", "$description": "G3 — Light source in the upper right. Covers, intro, end cards." },
+    "deep-fall":   { "$type": "gradient", "$value": "linear-gradient(180deg, #602733 0%, #2C0F12 62%, #170608 100%)", "$description": "G4 — Vertical fall-off for stories, signage and video lower areas." },
+    "ivory-light": { "$type": "gradient", "$value": "linear-gradient(51deg, #EFE7E0 0%, #F7F2ED 70%, #FBF8F5 100%)", "$description": "G5 — Light environment wash. Never combined with maroon in the same gradient." }
+  },
+  "font": {
+    "family": {
+      "latin":  { "$type": "fontFamily", "$value": ["Jost", "Helvetica Neue", "Arial", "sans-serif"] },
+      "arabic": { "$type": "fontFamily", "$value": ["Noto Kufi Arabic", "Geeza Pro", "Tahoma", "sans-serif"] },
+      "brand":  { "$type": "fontFamily", "$value": ["Jost", "Noto Kufi Arabic", "sans-serif"], "$description": "Mixed content stack: Latin glyphs in Jost, Arabic falls through to Noto Kufi Arabic." }
+    },
+    "weight": {
+      "extralight": { "$type": "fontWeight", "$value": 200 },
+      "light":      { "$type": "fontWeight", "$value": 300 },
+      "regular":    { "$type": "fontWeight", "$value": 400 },
+      "medium":     { "$type": "fontWeight", "$value": 500 },
+      "semibold":   { "$type": "fontWeight", "$value": 600 }
+    }
+  },
+  "type": {
+    "latin": {
+      "display": { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 300, "fontSize": "88px", "lineHeight": 1.04, "letterSpacing": "-0.01em" }, "mobile": "52px" },
+      "h1":      { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 300, "fontSize": "60px", "lineHeight": 1.08, "letterSpacing": "-0.005em" }, "mobile": "40px" },
+      "h2":      { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 400, "fontSize": "42px", "lineHeight": 1.14, "letterSpacing": "0em" }, "mobile": "30px" },
+      "h3":      { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 400, "fontSize": "30px", "lineHeight": 1.22, "letterSpacing": "0em" }, "mobile": "24px" },
+      "h4":      { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 500, "fontSize": "22px", "lineHeight": 1.3, "letterSpacing": "0em" }, "mobile": "20px" },
+      "lead":    { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 300, "fontSize": "21px", "lineHeight": 1.55, "letterSpacing": "0em" }, "mobile": "18px" },
+      "body":    { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 400, "fontSize": "16px", "lineHeight": 1.6, "letterSpacing": "0.005em" }, "mobile": "16px" },
+      "small":   { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 400, "fontSize": "14px", "lineHeight": 1.5, "letterSpacing": "0.01em" }, "mobile": "14px" },
+      "caption": { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 500, "fontSize": "12px", "lineHeight": 1.4, "letterSpacing": "0.16em", "textTransform": "uppercase" }, "mobile": "11px" },
+      "numeral": { "$type": "typography", "$value": { "fontFamily": "{font.family.latin}", "fontWeight": 200, "fontSize": "72px", "lineHeight": 1, "letterSpacing": "-0.02em", "fontVariantNumeric": "lining-nums tabular-nums" }, "mobile": "48px" }
+    },
+    "arabic": {
+      "display": { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "80px", "lineHeight": 1.35, "letterSpacing": "0" }, "mobile": "46px" },
+      "h1":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "54px", "lineHeight": 1.4, "letterSpacing": "0" }, "mobile": "36px" },
+      "h2":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "38px", "lineHeight": 1.45, "letterSpacing": "0" }, "mobile": "27px" },
+      "h3":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "27px", "lineHeight": 1.5, "letterSpacing": "0" }, "mobile": "22px" },
+      "h4":      { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 500, "fontSize": "20px", "lineHeight": 1.6, "letterSpacing": "0" }, "mobile": "18px" },
+      "lead":    { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 300, "fontSize": "19px", "lineHeight": 1.85, "letterSpacing": "0" }, "mobile": "17px" },
+      "body":    { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "15px", "lineHeight": 1.95, "letterSpacing": "0" }, "mobile": "15px" },
+      "small":   { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 400, "fontSize": "13px", "lineHeight": 1.85, "letterSpacing": "0" }, "mobile": "13px" },
+      "caption": { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 500, "fontSize": "12px", "lineHeight": 1.7, "letterSpacing": "0" }, "mobile": "12px" },
+      "numeral": { "$type": "typography", "$value": { "fontFamily": "{font.family.arabic}", "fontWeight": 200, "fontSize": "66px", "lineHeight": 1.2, "letterSpacing": "0" }, "mobile": "44px" }
+    }
+  },
+  "space": {
+    "0": { "$type": "dimension", "$value": "0px" },
+    "1": { "$type": "dimension", "$value": "4px" },
+    "2": { "$type": "dimension", "$value": "8px" },
+    "3": { "$type": "dimension", "$value": "12px" },
+    "4": { "$type": "dimension", "$value": "16px" },
+    "5": { "$type": "dimension", "$value": "24px" },
+    "6": { "$type": "dimension", "$value": "32px" },
+    "7": { "$type": "dimension", "$value": "48px" },
+    "8": { "$type": "dimension", "$value": "64px" },
+    "9": { "$type": "dimension", "$value": "96px" },
+    "10": { "$type": "dimension", "$value": "128px" },
+    "11": { "$type": "dimension", "$value": "192px" },
+    "12": { "$type": "dimension", "$value": "256px" }
+  },
+  "radius": {
+    "none":  { "$type": "dimension", "$value": "0px", "$description": "Default. SIRAJ surfaces are architectural: square corners." },
+    "xs":    { "$type": "dimension", "$value": "2px", "$description": "Inputs, chips, focus rings." },
+    "sm":    { "$type": "dimension", "$value": "4px", "$description": "Tooltips, small menus." },
+    "silk":  { "$type": "dimension", "$value": "40%", "$description": "Silk Corner — ONE corner of an image container (top-end) only. Signature." },
+    "silk-fixed": { "$type": "dimension", "$value": "96px", "$description": "Silk Corner for fixed-size UI cards." },
+    "round": { "$type": "dimension", "$value": "999px", "$description": "Avatars and the Lumen indicator only." }
+  },
+  "border": {
+    "hairline": { "$type": "dimension", "$value": "0.5px" },
+    "thin":     { "$type": "dimension", "$value": "1px" },
+    "regular":  { "$type": "dimension", "$value": "1.5px" },
+    "strong":   { "$type": "dimension", "$value": "2px" }
+  },
+  "shadow": {
+    "none":  { "$type": "shadow", "$value": "none" },
+    "low":   { "$type": "shadow", "$value": "0 1px 2px rgba(44,15,18,0.06), 0 2px 8px rgba(44,15,18,0.05)" },
+    "mid":   { "$type": "shadow", "$value": "0 4px 12px rgba(44,15,18,0.08), 0 16px 40px rgba(44,15,18,0.08)" },
+    "high":  { "$type": "shadow", "$value": "0 12px 32px rgba(44,15,18,0.12), 0 40px 96px rgba(44,15,18,0.14)" },
+    "drape": { "$type": "shadow", "$value": "0 30px 60px -30px rgba(23,6,8,0.45)", "$description": "Soft fall shadow beneath a silk element." }
+  },
+  "opacity": {
+    "disabled": { "$type": "number", "$value": 0.38 },
+    "muted":    { "$type": "number", "$value": 0.64 },
+    "overlay":  { "$type": "number", "$value": 0.72 },
+    "scrim":    { "$type": "number", "$value": 0.48 },
+    "veil":     { "$type": "number", "$value": 0.12 }
+  },
+  "breakpoint": {
+    "xs":  { "$type": "dimension", "$value": "0px",    "columns": 4,  "gutter": "16px", "margin": "20px" },
+    "sm":  { "$type": "dimension", "$value": "600px",  "columns": 8,  "gutter": "20px", "margin": "32px" },
+    "md":  { "$type": "dimension", "$value": "900px",  "columns": 12, "gutter": "24px", "margin": "48px" },
+    "lg":  { "$type": "dimension", "$value": "1280px", "columns": 12, "gutter": "24px", "margin": "80px" },
+    "xl":  { "$type": "dimension", "$value": "1600px", "columns": 12, "gutter": "32px", "margin": "120px", "maxContent": "1440px" }
+  },
+  "z": {
+    "base":     { "$type": "number", "$value": 0 },
+    "raised":   { "$type": "number", "$value": 10 },
+    "sticky":   { "$type": "number", "$value": 100 },
+    "drawer":   { "$type": "number", "$value": 400 },
+    "overlay":  { "$type": "number", "$value": 500 },
+    "dialog":   { "$type": "number", "$value": 600 },
+    "toast":    { "$type": "number", "$value": 700 },
+    "tooltip":  { "$type": "number", "$value": 800 }
+  },
+  "motion": {
+    "duration": {
+      "micro":     { "$type": "duration", "$value": "120ms", "$description": "Hover, press, focus." },
+      "fast":      { "$type": "duration", "$value": "200ms", "$description": "Small UI state changes, toggles, tooltips." },
+      "standard":  { "$type": "duration", "$value": "360ms", "$description": "Panels, cards, menus." },
+      "emphasis":  { "$type": "duration", "$value": "640ms", "$description": "Titles, image reveals, page sections." },
+      "cinematic": { "$type": "duration", "$value": "1200ms", "$description": "Silk sweeps, full-screen transitions." },
+      "hero":      { "$type": "duration", "$value": "2400ms", "$description": "Logo reveal, intro ribbon travel." }
+    },
+    "easing": {
+      "flow":    { "$type": "cubicBezier", "$value": [0.45, 0.05, 0.15, 1], "$description": "FLOW — default. Continuous momentum entering, long calm landing." },
+      "drape":   { "$type": "cubicBezier", "$value": [0.16, 1, 0.3, 1], "$description": "DRAPE / SETTLE — element arrives quickly then settles like falling fabric." },
+      "glide":   { "$type": "cubicBezier", "$value": [0.65, 0, 0.35, 1], "$description": "GLIDE — symmetric in/out for camera, parallax and position moves." },
+      "fold":    { "$type": "cubicBezier", "$value": [0.7, 0, 0.2, 1], "$description": "FOLD — strong compression then release. Transitions." },
+      "reveal":  { "$type": "cubicBezier", "$value": [0.77, 0, 0.18, 1], "$description": "REVEAL — mask wipes and silk uncovering content." },
+      "release": { "$type": "cubicBezier", "$value": [0.5, 0, 0.75, 0.25], "$description": "Exit — content leaves with gentle acceleration." },
+      "micro":   { "$type": "cubicBezier", "$value": [0.2, 0, 0, 1], "$description": "UI micro-interactions." }
+    },
+    "spring": {
+      "drape":  { "$type": "spring", "$value": { "stiffness": 90, "damping": 19, "mass": 1 }, "$description": "Critically damped (ζ≈1.0). No overshoot." },
+      "settle": { "$type": "spring", "$value": { "stiffness": 140, "damping": 28, "mass": 1 }, "$description": "Overdamped (ζ≈1.18). UI drawers, sheets." },
+      "silk":   { "$type": "spring", "$value": { "stiffness": 38, "damping": 11, "mass": 1 }, "$description": "ζ≈0.89 — a single, barely visible sway. Silk geometry only, never UI or the logo." }
+    },
+    "stagger": {
+      "tight":    { "$type": "duration", "$value": "40ms" },
+      "standard": { "$type": "duration", "$value": "80ms" },
+      "relaxed":  { "$type": "duration", "$value": "140ms" }
+    },
+    "distance": {
+      "nudge":  { "$type": "dimension", "$value": "8px" },
+      "shift":  { "$type": "dimension", "$value": "24px" },
+      "travel": { "$type": "dimension", "$value": "64px" },
+      "parallax-ratio": { "$type": "number", "$value": 0.12, "$description": "Background moves at 12% of scroll / camera speed." },
+      "scale-in": { "$type": "number", "$value": 1.04, "$description": "Image settle: from 1.04 to 1.0. Never above 1.08." }
+    }
+  },
+  "component": {
+    "button": {
+      "height-sm": { "$type": "dimension", "$value": "36px" },
+      "height-md": { "$type": "dimension", "$value": "48px" },
+      "height-lg": { "$type": "dimension", "$value": "56px" },
+      "padding-x": { "$type": "dimension", "$value": "28px" },
+      "radius":    { "$type": "dimension", "$value": "{radius.none}" }
+    },
+    "input": {
+      "height":  { "$type": "dimension", "$value": "52px" },
+      "radius":  { "$type": "dimension", "$value": "{radius.xs}" },
+      "border":  { "$type": "dimension", "$value": "{border.thin}" }
+    },
+    "state": {
+      "hover-overlay":   { "$type": "number", "$value": 0.08 },
+      "pressed-overlay": { "$type": "number", "$value": 0.16 },
+      "focus-ring-width":  { "$type": "dimension", "$value": "2px" },
+      "focus-ring-offset": { "$type": "dimension", "$value": "3px" }
+    }
+  }
+}
