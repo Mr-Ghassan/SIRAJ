@@ -51,3 +51,5 @@ Both lines build on the brand core «سراج لا تبدأ بالانتشار،
 The hero posts were rebuilt the same way: their ivory sky overlay was removed, and the 35 % grade was replaced by `keyvisual-enhance.py`.
 
 **People rule fix (2026-10-12).** `Source/SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg` still showed street figures at full frame (a couple, one woman unveiled, and a pedestrian). They were removed with an AI edit (Nano Banana Pro). Only the two street patches were composited back into the original, so the building is pixel-identical. Re-running `tools/project-siraj-facade-prep.py` regenerates the file from the supplied photo with those figures, so keep this version. The cut-out used by the façade posts was never affected.
+
+**Architect's design package (2026-10-12).** The original elevations and 3D renders by ORIX × Waleed Eid Group are in `Source/Architect/`: the presentation PDF plus six full-resolution renders (corner perspective, front and side elevations, each by day and by night). They are source files only. Every render still contains figures that break the people rule, so clean them before publishing. See `Source/Architect/README.md`.
