@@ -46,7 +46,9 @@
   "cr_number": "CR 0000000",
   "social_handle": "@SIRAJPROPERTIES",
   "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES",
-  "instagram": "https://instagram.com/sirajproperties"
+  "instagram": "https://instagram.com/sirajproperties",
+  "phone_post_placeholder_ar": "[رقم الهاتف]",
+  "post_contact_policy": "Posts (all social formats) show the phone number and @SIRAJPROPERTIES only, never the website (client instruction 2026-10-12). Use the tokens {contact.phone_post} and {contact.social_handle}; {contact.post_line} gives both."
  },
  "brand_line": {
   "en": "Light, built.",
@@ -61,7 +63,8 @@
   "location_en": "Muscat",
   "location_ar": "مسقط",
   "type": "Mixed-use: residences above, retail ground floor (6 storeys)",
-  "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed."
+  "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed.",
+  "public_naming": "«المشروع المؤسِّس / The Founding Project» is an INTERNAL term — never in public communication (client rule 2026-10-12). Publicly the project is «سراج» with its city (مسقط). Avoid self-referential strategy lines such as «المشروع الذي يؤسس معيار سراج»."
  },
  "demo_projects": {
   "$note": "Fictional projects used to demonstrate the system. Not real developments.",
@@ -103,5 +106,13 @@
    "type": "Commercial offices",
    "handover": "Q3 2028"
   }
+ },
+ "silk_policy": {
+  "rule": "Real silk only. Every silk background is a photograph of real silk fabric; moving silk is real silk footage keyed to alpha. Never a graphic, vector or CG render.",
+  "rule_ar": "حرير حقيقي فقط: كل خلفية حريرية صورة فوتوغرافية لقماش حرير حقيقي، والحرير المتحرك لقطات فيديو حقيقية؛ لا رسومات ولا تصاميم ولا محاكاة حاسوبية.",
+  "since": "2026-10-11",
+  "stills": "06-SIRAJ-Silk/Stills",
+  "footage": "06-SIRAJ-Silk/Footage",
+  "cg_archive": "99-Archive/Silk-CG-v1.0 (reference/previs only)"
  }
 };})(typeof window!=="undefined"?window:globalThis);

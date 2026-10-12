@@ -62,7 +62,8 @@
     "location_en": "Muscat",
     "location_ar": "مسقط",
     "type": "Mixed-use: residences above, retail ground floor (6 storeys)",
-    "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed."
+    "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed.",
+    "public_naming": "«المشروع المؤسِّس / The Founding Project» is an INTERNAL term — never in public communication (client rule 2026-10-12). Publicly the project is «سراج» with its city (مسقط). Avoid self-referential strategy lines such as «المشروع الذي يؤسس معيار سراج»."
   },
   "demo_projects": {
     "$note": "Fictional projects used to demonstrate the system. Not real developments.",

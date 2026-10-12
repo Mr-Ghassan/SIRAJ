@@ -2,7 +2,7 @@
 
 Contents: 1. Strategy lines · 2. Personality · 3. Words we use / avoid · 4. The five value pillars · 5. Campaign phases · 6. Post and caption patterns · 7. Formats for numbers, money, dates · 8. Disclaimers · 9. Worked examples
 
-## 1. Strategy lines (official, quote verbatim when useful)
+## 1. Strategy lines (official, **internal only — never in posts, captions or ads**; client rule 2026-10-12)
 
 | | العربية |
 |---|---|
@@ -82,12 +82,12 @@ Keep hashtags to 2–4 relevant ones (e.g. #سراج #مسقط #عقارات_ع�
 
 ## 9. Worked examples
 
-**Pre-launch teaser (Founding Project):**
-- On image: eyebrow «المشروع المؤسِّس · مسقط» · title «أوّلُ الضوء.» · lead «مبنى واحد، بمعيارٍ كامل.» · end «سجّل اهتمامك · sirajproperties.net»
-- Caption: «من مسقط، يبدأ معيار سراج.\n\nمشروعنا المؤسِّس يُكشف قريبًا: مبنى متعدد الاستخدامات بستة طوابق، صُمّم بعناية في كل تفصيل.\n\nسجّل اهتمامك: اتصل بنا على [رقم الهاتف] أو راسلنا على ‎@SIRAJPROPERTIES\n\n#سراج #مسقط»
+**Pre-launch teaser («سراج»):**
+- On image: eyebrow «قريباً · مسقط» · title «أوّلُ / الضوء.» (Tajawal 200 / 800) · lead «قريباً، يُرفع الستار عن «سراج».» · end = contact line (phone · @SIRAJPROPERTIES)
+- Caption: «في مسقط، مبنى يُضيء من داخله.\n\n«سراج» يُكشف قريبًا: شقق سكنية ومحلات تجارية، وستائر من الطوب يعبرها الضوء.\n\nتصوّر معماري للمشروع.\n\nسجّل اهتمامك: اتصل بنا على [رقم الهاتف] أو راسلنا على ‎@SIRAJPROPERTIES\n\n#سراج #مسقط»
 
-**Brand statement:** title «لا نبدأ بالانتشار،\nبل نبدأ بمعيار.» · lead «نبدأ بمشروع قوي، نبني اسمًا موثوقًا، ثم نتوسع بغاية واضحة.»
+**Brand statement:** title «نبني بالضوء،\nونترك التفاصيل تتكلّم.» · lead «عمارةٌ هادئة، ومواد صادقة، وضوءٌ يدخل كل بيت.»
 
-**Location (pillar 1), facts unknown yet:** title «في قلب المدينة، يبدأ المعيار.» · facts «[المسافة إلى … — بانتظار التأكيد]».
+**Location (pillar 1), facts unknown yet:** title «في قلب المدينة، بيتٌ من ضوء.» · facts «[المسافة إلى … — بانتظار التأكيد]».
 
 **Bad → good:** «فرصة لا تتكرر!! احجز الآن بأقل الأسعار 🔥🔥» → «قيمة تستمر. سجّل اهتمامك لتصلك تفاصيل الإطلاق أولًا.»

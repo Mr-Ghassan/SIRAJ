@@ -1,6 +1,6 @@
 ---
 name: siraj-brand-system
-description: The official brand, design, content and production system (v1.0, 2026-10) of SIRAJ Real Estate Development — سراج للتطوير العقاري, an Omani developer (Instagram @SIRAJPROPERTIES, sirajproperties.net) and its Founding Project «سراج» in Muscat. Use it for ANYTHING made for or about SIRAJ / سراج, even when the user never says "brand" — Instagram posts, stories, reels, carousels, captions, Arabic marketing copy, launch/teaser campaigns, property ads, brochures, flyers, presentations, hoardings, motion, video, AI image or video generation, photo briefs, the profile picture, or any design that must look like SIRAJ. It gives the approved colours (Maroon #602733, Deep, Shadow, Stone, Sand, Ivory), Tajawal + Jost type with Western digits, logo rules, the real-silk-only rule, the people/modesty rules, the Arabic-only voice, the five value pillars, and the one-command workflow (tools/make-post.js) that turns a brief into finished on-brand posts.
+description: The official brand, design, content and production system (v1.0, 2026-10) of SIRAJ Real Estate Development — سراج للتطوير العقاري, an Omani developer (Instagram @SIRAJPROPERTIES, sirajproperties.net) and its first project «سراج» in Muscat (internally "the Founding Project" — never said publicly). Use it for ANYTHING made for or about SIRAJ / سراج, even when the user never says "brand" — Instagram posts, stories, reels, carousels, captions, Arabic marketing copy, launch/teaser campaigns, property ads, brochures, flyers, presentations, hoardings, motion, video, AI image or video generation, photo briefs, the profile picture, or any design that must look like SIRAJ. It gives the approved colours (Maroon #602733, Deep, Shadow, Stone, Sand, Ivory), Tajawal + Jost type with Western digits, logo rules, the real-silk-only rule, the people/modesty rules, the Arabic-only voice, the five value pillars, and the one-command workflow (tools/make-post.js) that turns a brief into finished on-brand posts.
 ---
 
 # SIRAJ Brand System · نظام هوية سراج (v1.0 — معتمد)
@@ -28,7 +28,8 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 5. **Western digits (0–9) everywhere**, including Arabic text. Never ٠١٢٣.
 6. **Contact on posts = phone number + `@SIRAJPROPERTIES` only — never the website** (client rule, 2026-10-12). Captions likewise: point to the phone / DM, not the site.
 7. **No side notes on designs** (client rule, 2026-10-12): no disclaimers, footnotes, source lines or fine print on the artwork. The design carries only the message, the logo and the contact line; disclaimers go in the caption.
-8. **No invented facts.** Unit counts, prices, areas, dates, phone numbers and registration numbers of the Founding Project are **not confirmed yet** — use a visible placeholder like `[السعر — بانتظار التأكيد]`, never a made-up number. «مساكن نور / Noor Residences» and «حرير» are **fictional demo projects** of the brand system; never present their figures as real.
+8. **Public naming:** the project is «سراج» + its city. «المشروع المؤسِّس» and the strategy lines are internal (client rule 2026-10-12) — see §3.
+9. **No invented facts.** Unit counts, prices, areas, dates, phone numbers and registration numbers of the Founding Project are **not confirmed yet** — use a visible placeholder like `[السعر — بانتظار التأكيد]`, never a made-up number. «مساكن نور / Noor Residences» and «حرير» are **fictional demo projects** of the brand system; never present their figures as real.
 
 ## 3. Voice (النبرة)
 
@@ -37,7 +38,10 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 - **Never:** «الأفخم على الإطلاق»، «الفرصة التي لن تتكرر»، «لا تفوّت»، «عرض خرافي», countdown pressure, exclamation marks, emoji walls, guaranteed returns or appreciation.
 - **One idea per message.** Let the architecture and the numbers persuade.
 - Investment figures are always labelled (متوقّع / توضيحي / تاريخي); the disclaimer goes in the **caption**, not on the design.
-- Reference lines: «مدروسة في كل تفاصيلها. مبنية لتدوم.» · «المشروع الذي يؤسس معيار سراج.» · «قيمة تستمر.» · Founding Project: «أوّلُ الضوء.» · «في قلب المدينة، يبدأ المعيار.» · «مبنى واحد، بمعيارٍ كامل.»
+- **Terminology:** the project offers «شقق سكنية ومحلات تجارية» — never «سكن ومتاجر» or «شقق ومتاجر», and without saying which floors (no «في الأعلى / في الأرض») (client rule 2026-10-12).
+- **Depth without pretension** (client direction 2026-10-12): not shallow ad-speak, not forced profundity. Talk about tangible things (the place, the light, the material, the details, life in the building), never about SIRAJ itself or its strategy.
+- Reference lines: «أوّلُ الضوء.» · «مساكن تتشكّل بالضوء والسكينة.» · «مدروسة في كل تفاصيلها. مبنية لتدوم.» · «في قلب المدينة، بيتٌ من ضوء.» · «حين يحلّ المساء، يُضيء سراج.» · «ضوءٌ يعبر الطوب، وظلٌّ يرسم المكان.»
+- **Internal only, never in public copy:** «المشروع المؤسِّس / The Founding Project», the core statement «سراج لا تبدأ بالانتشار، بل تبدأ بمعيار.», the principle and the model (إثبات ← توسّع ← نمو), the pillar names, and self-praising «standard» lines such as «المشروع الذي يؤسس معيار سراج.» or «يبدأ المعيار».
 - The brand line «نورٌ يُبنى» is **proposed, not approved** — don't use it unless asked.
 
 ## 4. Facts you may use
@@ -49,7 +53,7 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 | **Contact on posts** | **phone + `@SIRAJPROPERTIES` only** (client rule 2026-10-12). The phone is not confirmed yet, so it shows as «[رقم الهاتف]» until `contact.phone` is set in the config | rule |
 | Instagram | `@SIRAJPROPERTIES` (always written in capitals) | confirmed |
 | Email | `info@sirajproperties.net` (domain confirmed; mailbox name to confirm) | partly |
-| Founding Project | «سراج» — المشروع المؤسِّس · مسقط · mixed-use, 6 storeys (residences above, retail at ground) · architects ORIX × Waleed Eid Group | name confirmed; units/areas/prices/dates **not**; district (Almawaleh South – Al Seeb, per the architect's sheet) **to confirm**, so write «مسقط» |
+| Project «سراج» (internally: the Founding Project — never say so publicly) | «سراج» · مسقط · mixed-use, 6 storeys (residences above, retail at ground) · architects ORIX × Waleed Eid Group | name confirmed; units/areas/prices/dates **not**; district (Almawaleh South – Al Seeb, per the architect's sheet) **to confirm**, so write «مسقط» |
 | Project imagery | Six publish-ready 4K renders in `14-Property-Marketing/12-Project-Siraj/Source/Clean/` (corner / front / side × cloudy day / blue hour). These are the official images; the architect originals in `Source/Architect/` contain people and placeholder signage, so don't publish them | approved |
 | Phone, WhatsApp, CR, address details | placeholders in the config | **do not publish** |
 
@@ -94,7 +98,7 @@ Minimal brief:
 ```json
 { "name": "Siraj-Teaser-01", "formats": ["post","story"],
   "layout": "type", "env": "deep", "still": "Drape-Deep",
-  "ar": { "eyebrow": "المشروع المؤسِّس · مسقط", "title": "أوّلُ الضوء.", "lead": "مبنى واحد، بمعيارٍ كامل.",
+  "ar": { "eyebrow": "مسقط", "title": "أوّلُ الضوء.", "lead": "مبنى واحد، بمعيارٍ كامل.",
           "end": "{contact.post_line}" } }
 ```
 Line breaks in titles are `\n` (not `<br>`); wrap Latin runs in `[[ ]]` so they stay LTR; `{contact.post_line}` (phone · @SIRAJPROPERTIES — also the default footer), `{contact.phone_post}`, `{contact.social_handle}`, `{founding_project.name_ar}` resolve from the brand config. The tool prints a layout-QA verdict — treat any `!` as a defect to fix.

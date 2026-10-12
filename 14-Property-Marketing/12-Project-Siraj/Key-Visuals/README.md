@@ -5,9 +5,9 @@ Hero posts built on the brand idea: سراج is the lamp. The building glows fro
 | Key visual | Scene | Display line (Tajawal 200 ↔ 800) |
 |---|---|---|
 | **Veil** | Blue hour; giant silk draped over the building, light glowing through it; a shaft of light | «أوّلُ / الضوء.» (pre-launch teaser) |
-| **Ribbon** | Drone view at dusk over Muscat and the Hajar mountains; one silk ribbon sweeping around the building | «نورٌ واحد، / يضع المعيار.» |
-| **Lantern** | Night, telephoto across a wet street; the building as a lantern with a column of light; a silk ribbon in the foreground | «في قلب المدينة، / يبدأ المعيار.» |
-| **Reveal** | Cinematic cloudy day; the silk slides off and the sun breaks through | «مبنى واحد، / بمعيارٍ كامل.» (light theme) |
+| **Ribbon** | Drone view at dusk over Muscat and the Hajar mountains; one silk ribbon sweeping around the building | «حين يحلّ المساء، / يُضيء سراج.» |
+| **Lantern** | Night, telephoto across a wet street; the building as a lantern with a column of light; a silk ribbon in the foreground | «في قلب المدينة، / بيتٌ من ضوء.» |
+| **Reveal** | Cinematic cloudy day; the silk slides off and the sun breaks through | «حين يُرفع الستار، / يتّضح كل شيء.» (light theme) |
 | **Detail** | Close-up: light through the perforated terracotta screens, the edge of silk | «مدروسة / في كل تفاصيلها.» |
 
 Each key visual comes in two formats:
@@ -15,6 +15,8 @@ Each key visual comes in two formats:
 - Story 1080×1920
 
 Both are rendered at 2× (`SIRAJ_Project-Siraj_KV_<Name>_<Post|Story>_AR_v1.0.png`).
+
+**Copy:** depth without pretension. The copy speaks about light, place, material and life, never about SIRAJ's strategy. «المشروع المؤسِّس» is internal and never appears.
 
 **Contact line:** phone + `@SIRAJPROPERTIES` only, never the website (client rule 2026-10-12). The phone shows as «[رقم الهاتف]» until `contact.phone` is confirmed in `00-Brand-Foundation/brand.config.json`. Rebuild with `node tools/build-social.js` (refreshes the brand data), then `node tools/build-project-siraj-kv.js`.
 

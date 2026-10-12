@@ -70,6 +70,8 @@ const mp = document.getElementById('mp'), wipe = document.getElementById('wipe')
 
 // details content per variant
 const C = B.contact, CO = B.company, PR = B.founding_project;
+// Public contact = phone + Instagram (client rule 2026-10-12); a placeholder phone shows as a visible Arabic placeholder.
+const PHN = /PLACEHOLDER/i.test(C.phone_status || '') ? `<span class="ar">${C.phone_post_placeholder_ar}</span>` : `<bdi dir="ltr">${C.phone}</bdi>`;
 // Language policy (brand.config.json → language_policy): Arabic by default; 'bi' and 'en' stay available for future freehold projects.
 const LANG = q.get('lang') || 'ar', AR_ONLY = LANG === 'ar', EN_ONLY = LANG === 'en';
 const lum = (s) => `<span class="lum" style="width:${s}px;height:${s}px;margin:0 ${s * 2}px"></span>`;
@@ -84,19 +86,19 @@ if (V === 'url') {
 } else if (V === 'contact') {
   if (!EN_ONLY) L(arLine(CO.name_ar, 34));
   else L(`<span class="en" style="font-size:${fs(30)}px;font-weight:400">${CO.name_en}</span>`);
-  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em"><bdi dir="ltr">${C.phone}</bdi>${lum(fs(7))}${C.email}${lum(fs(7))}${C.website}</span>`, 'mt');
+  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${PHN}${lum(fs(7))}${C.social_handle}</span>`, 'mt');
 } else if (V === 'cta') {
   L(eb('Register your interest', 'سجّل اهتمامك'));
-  L(`<span class="en" style="font-size:${fs(40)}px;font-weight:300">${C.website}</span>`, 'mt');
-  L(AR_ONLY ? `<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em"><bdi dir="ltr">${C.phone}</bdi></span>`
+  L(`<span class="en" style="font-size:${fs(40)}px;font-weight:300">${C.social_handle}</span>`, 'mt');
+  L(AR_ONLY ? `<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${PHN}</span>`
             : EN_ONLY ? `<span class="en" style="font-size:${fs(24)}px;font-weight:400"><bdi dir="ltr">${C.phone}</bdi></span>`
             : arLine(`سجّل اهتمامك ${lum(fs(6))} <bdi dir="ltr">${C.phone}</bdi>`, 26), 'mt');
 } else if (V === 'social') {
   L(`<span class="en" style="font-size:${fs(36)}px;font-weight:400;letter-spacing:.04em">${C.social_handle}</span>`);
   L(eb('Follow', 'تابعونا'), 'mt');
 } else if (V === 'project') {
-  L(eb(`${PR.role_en} · ${PR.location_en}`, `${PR.role_ar} · ${PR.location_ar}`));
-  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${C.website}${lum(fs(6))}<bdi dir="ltr">${C.phone}</bdi></span>`, 'mt');
+  L(eb(PR.location_en, PR.location_ar)); // the internal «المشروع المؤسِّس» label is never shown
+  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${PHN}${lum(fs(6))}${C.social_handle}</span>`, 'mt');
 }
 details.innerHTML = lines.join('');
 const project = document.getElementById('project');

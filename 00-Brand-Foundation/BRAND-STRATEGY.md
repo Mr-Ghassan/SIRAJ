@@ -136,7 +136,7 @@ The pillar icons are `location`, `floor-plan`, `view`, `investment` and `securit
 - **Project brands:** *each project is treated as a brand of its own within the SIRAJ system.* A project receives a name, a story, a personality and a visual expression (photography, a project typographic mark, and optionally a project accent drawn from the SIRAJ palette).
 - **Mandatory link to the parent:** every project brand carries the **endorsement lockup «A SIRAJ development · من تطوير سراج»** (`14-Property-Marketing/00-Endorsement-Lockup/`). The SIRAJ wordmark appears on every project communication, at least on the closing frame or page.
 - **What all projects share:** SIRAJ typography, the grid, the Lumen, silk as the reveal gesture, the SIRAJ Silk Grade, and the voice. *SIRAJ projects should not all look alike, but they should all feel like SIRAJ.*
-- **The Founding Project:** the first project in Muscat carries an additional honour line in corporate communication: *«The Founding Project · المشروع المؤسس»*.
+- **The Founding Project:** an **internal** term for the first project in Muscat. It is never used in public communication (client rule 2026-10-12): publicly the project is «سراج» with its city. The strategy lines (core statement, principle, model) are also internal and do not appear in posts or ads.
 - **Naming (recommended):** names from the world of light and craft, such as Noor (light), Qandeel (lantern), Mishkat (lamp niche) and Harir (silk). These make every project a chapter of the same story. The names used across this system are **demonstration names** until the real project names are confirmed.
 
 ---

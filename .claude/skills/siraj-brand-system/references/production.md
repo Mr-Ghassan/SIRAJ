@@ -50,7 +50,7 @@ Contents: 1. Repo map · 2. make-post briefs (schema + recipes) · 3. Ready temp
 { "name": "Siraj-Heart-Of-City", "formats": ["post","story"], "layout": "hero", "env": "photo",
   "photo": "14-Property-Marketing/12-Project-Siraj/Source/SIRAJ_Project-Siraj_Hero_City_4x5_v1.0.jpg",
   "pos": "50% 40%", "overlay": "horizon", "display": true,
-  "ar": { "eyebrow": "المشروع المؤسِّس · مسقط", "title": "{founding_project.name_ar}",
+  "ar": { "eyebrow": "مسقط", "title": "{founding_project.name_ar}",
           "lead": "في قلب المدينة، يبدأ المعيار.", "end": "{contact.post_line}" } }
 ```
 ```json

@@ -40,6 +40,19 @@ The first complete release of the SIRAJ Real Estate Development identity, design
 
 - **No side notes on designs (2026-10-12).** Designs carry no disclaimers, footnotes, source lines or fine print, only the message, the logo and the contact line. The social engine ignores `note`, and render or investment disclaimers move to the post caption. All posts were rebuilt.
 
+- **Public naming, voice and terminology (2026-10-12).**
+  - «المشروع المؤسِّس / The Founding Project» is internal. Publicly the project is «سراج» with its city.
+  - The strategy lines (core statement, principle, model) and self-praising «standard» lines are internal too.
+  - Copy aims for depth without pretension: light, place, material and life.
+  - The project offers «شقق سكنية ومحلات تجارية».
+  - Posts, key visuals, outros, examples, the skill, the Claude Design prompt and the guidelines were updated.
+- **Brand guidelines revised (2026-10-12).** The guidelines gain these pages:
+  - the official project imagery;
+  - Silk & Light key visuals (2 pages);
+  - contact line and clean artwork.
+
+  The checklist and the cover date were also updated.
+
 ### Open items before public launch
 - **Confirm the phone number** (it appears on every post), then rebuild the social and Project Siraj posts.
 - Confirm the remaining placeholder data (address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.
