@@ -22,7 +22,8 @@
     "build:guidelines": "node tools/build-guidelines.js",
     "build:index": "node tools/build-index.js",
     "build:silk-cg": "node tools/build-silk.js",
-    "build:silk-photo": "python3 tools/silk-photo-import.py"
+    "build:silk-photo": "python3 tools/silk-photo-import.py",
+    "build:kit": "bash tools/build-kit.sh"
   },
   "license": "UNLICENSED",
   "devDependencies": {

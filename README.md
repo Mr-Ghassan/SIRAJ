@@ -13,6 +13,8 @@ This repository is the **single source of truth** for the SIRAJ brand. It contai
 | | |
 |---|---|
 | 📕 **Brand Guidelines** | [`20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.pdf`](20-Brand-Guidelines/) |
+| 📦 **Brand Kit (ready to send)** | [`21-Brand-Kit/`](21-Brand-Kit/): Essentials ZIP, Project Siraj posts ZIP |
+| 👤 **Profile picture** | [`01-Logos/Dark/SIRAJ_Social-Avatar_Square_v1.0.png`](01-Logos/Dark/SIRAJ_Social-Avatar_Square_v1.0.png) |
 | 🧭 **Quick reference** | [`00-Brand-Foundation/DESIGN-LANGUAGE.md`](00-Brand-Foundation/DESIGN-LANGUAGE.md) |
 | 💡 **Strategy** | [`00-Brand-Foundation/BRAND-STRATEGY.md`](00-Brand-Foundation/BRAND-STRATEGY.md) |
 | 🗂 **Every file** | [`ASSET-INDEX.md`](ASSET-INDEX.md) |
@@ -77,6 +79,7 @@ The hierarchy on every layout is **architecture first, information second, silk 
 | [`18-3D`](18-3D) | CGI language and material specification |
 | [`19-Templates`](19-Templates) | Email signature and document template kit |
 | [`20-Brand-Guidelines`](20-Brand-Guidelines) | The complete brand guidelines (PDF, HTML, page previews) |
+| [`21-Brand-Kit`](21-Brand-Kit) | Ready-to-send ZIP packages (`npm run build:kit`) |
 | [`99-Archive`](99-Archive) | Superseded material |
 | [`tools`](tools) | Build scripts: everything here is reproducible |
 
