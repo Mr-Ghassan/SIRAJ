@@ -41,7 +41,7 @@ Files (`assets/logo/`): Primary (Maroon), Sand, White, Deep, Mono-Black, Mono-Wh
 | One-colour production | Mono variants |
 
 - Clear space ½ H all round (H = wordmark height). Minimum 96 px wide (25 mm print).
-- One logo zone, **bottom-start**: bottom-right in Arabic, on the margin, same size per format (post ~168 px, story 184 px). Bottom-end carries one quiet caption only (website, handle, disclaimer). Centred on covers and end cards. The wordmark itself is never mirrored.
+- One logo zone, **bottom-start**: bottom-right in Arabic, on the margin, same size per format (post ~168 px, story 184 px). Bottom-end carries one quiet line only: the contact line (phone · @SIRAJPROPERTIES). No side notes, footnotes or disclaimers on designs. Centred on covers and end cards. The wordmark itself is never mirrored.
 - Never: redraw, retype, recolour, stretch, rotate, outline, add shadow/glow, place on silk folds that cut through it, put in a box.
 - The S monogram is for avatars/favicons only, never next to the full wordmark. Profile picture: Sand wordmark on G1 (`assets/logo/SIRAJ_Social-Avatar_Square_v1.0.png`).
 
@@ -90,7 +90,7 @@ Rules: one gesture per layout; ≤ 35% coverage where architecture/information i
 - Architecture first: real buildings, honest perspective, golden or blue hour, calm desaturated skies, Omani context (Hajar mountains, date palms, Muscat streetscape). No fake flares, no HDR, no oversaturated teal-orange.
 - Grade: warm, slightly lifted shadows toward Shadow `#170608`, highlights toward Ivory.
 - People: see SKILL.md §2.3 — hijab and modest dress for women, mixed Omani/international cast, Omani men in dishdasha + massar, no intimacy. Applies to background and scale figures too.
-- AI or render imagery is labelled with the render disclaimer.
+- AI or render imagery is labelled in the post caption, never on the design.
 
 ## 8. Motion
 

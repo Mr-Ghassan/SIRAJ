@@ -198,3 +198,7 @@ Captions should be calm, precise and short. Use no more than one emoji, and only
 ## Contact line (client rule, 2026-10-12)
 
 Every post shows the **phone number and `@SIRAJPROPERTIES` only — never the website**. The default footer is the token `{contact.post_line}`. While `contact.phone` in `00-Brand-Foundation/brand.config.json` is a placeholder, the phone shows as «[رقم الهاتف]». Set the real number, change `phone_status` to `CONFIRMED`, then rebuild (`node tools/build-social.js` and the Project Siraj builds).
+
+## No side notes on designs (client rule, 2026-10-12)
+
+Designs carry no disclaimers, footnotes, source lines or fine print. The `note` field is ignored by the engine. Put render or investment disclaimers in the post caption.

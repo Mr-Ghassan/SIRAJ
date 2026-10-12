@@ -38,6 +38,8 @@ The first complete release of the SIRAJ Real Estate Development identity, design
 - **Silk & Light key visuals (2026-10-12).** Five cinematic hero posts and stories for the Founding Project are in `14-Property-Marketing/12-Project-Siraj/Key-Visuals/`: veil, drone ribbon, lantern, reveal and detail. They use real silk and warm light, cinematic camera angles, and display type that pairs Tajawal 200 with 800. Build with `node tools/build-project-siraj-kv.js`.
 - **Contact rule (2026-10-12).** Every post shows the phone number and @SIRAJPROPERTIES only, never the website. The new token `{contact.post_line}` is the default social footer. The phone shows as «[رقم الهاتف]» until it is confirmed in `brand.config.json`. All social exports, Project Siraj posts and content examples were rebuilt.
 
+- **No side notes on designs (2026-10-12).** Designs carry no disclaimers, footnotes, source lines or fine print, only the message, the logo and the contact line. The social engine ignores `note`, and render or investment disclaimers move to the post caption. All posts were rebuilt.
+
 ### Open items before public launch
 - **Confirm the phone number** (it appears on every post), then rebuild the social and Project Siraj posts.
 - Confirm the remaining placeholder data (address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.

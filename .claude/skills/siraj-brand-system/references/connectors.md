@@ -10,7 +10,7 @@ Contents: 1. House rules · 2. Real silk prompts · 3. Architecture & lifestyle 
 - **Never repeat a generation call to "retry"** — it charges again. Poll the run status instead.
 - Generate variations (default 4 for stills), pick the best against SKILL.md §2 and §6, and say which one you chose and why.
 - Signed download URLs expire (≈ 2 h): download immediately into the repo/scratch and keep the generation IDs.
-- Label AI imagery with the render disclaimer when published.
+- When AI imagery is published, state it in the caption («تصوّر معماري للمشروع.»), never on the design.
 - Models that worked well: stills `bytedance-seedream-5-pro` (photoreal, 2K; custom sizes up to 3840 px, e.g. 3840×1280 for long formats); edits/references `gemini-3-pro-image`; video `bytedance-seedance-v2.5` (1080p, 4–30 s, set `generate_audio:false`); background removal `birefnet-v2-bg-removal` (≈ $0.005).
 
 ## 2. Real silk prompts (studio photography, never CGI)

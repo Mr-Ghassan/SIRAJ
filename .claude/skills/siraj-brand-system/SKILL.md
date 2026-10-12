@@ -27,7 +27,8 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 4. **The logo is never redrawn**, recoloured outside its variants, stretched, shadowed, or set in a font. Use the files in `assets/logo/`.
 5. **Western digits (0–9) everywhere**, including Arabic text. Never ٠١٢٣.
 6. **Contact on posts = phone number + `@SIRAJPROPERTIES` only — never the website** (client rule, 2026-10-12). Captions likewise: point to the phone / DM, not the site.
-7. **No invented facts.** Unit counts, prices, areas, dates, phone numbers and registration numbers of the Founding Project are **not confirmed yet** — use a visible placeholder like `[السعر — بانتظار التأكيد]`, never a made-up number. «مساكن نور / Noor Residences» and «حرير» are **fictional demo projects** of the brand system; never present their figures as real.
+7. **No side notes on designs** (client rule, 2026-10-12): no disclaimers, footnotes, source lines or fine print on the artwork. The design carries only the message, the logo and the contact line; disclaimers go in the caption.
+8. **No invented facts.** Unit counts, prices, areas, dates, phone numbers and registration numbers of the Founding Project are **not confirmed yet** — use a visible placeholder like `[السعر — بانتظار التأكيد]`, never a made-up number. «مساكن نور / Noor Residences» and «حرير» are **fictional demo projects** of the brand system; never present their figures as real.
 
 ## 3. Voice (النبرة)
 
@@ -35,7 +36,7 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 - **Rely on:** facts and numbers, design and product quality, location, vision and lasting value.
 - **Never:** «الأفخم على الإطلاق»، «الفرصة التي لن تتكرر»، «لا تفوّت»، «عرض خرافي», countdown pressure, exclamation marks, emoji walls, guaranteed returns or appreciation.
 - **One idea per message.** Let the architecture and the numbers persuade.
-- Investment figures are always labelled (متوقّع / توضيحي / تاريخي) and carry a disclaimer.
+- Investment figures are always labelled (متوقّع / توضيحي / تاريخي); the disclaimer goes in the **caption**, not on the design.
 - Reference lines: «مدروسة في كل تفاصيلها. مبنية لتدوم.» · «المشروع الذي يؤسس معيار سراج.» · «قيمة تستمر.» · Founding Project: «أوّلُ الضوء.» · «في قلب المدينة، يبدأ المعيار.» · «مبنى واحد، بمعيارٍ كامل.»
 - The brand line «نورٌ يُبنى» is **proposed, not approved** — don't use it unless asked.
 
@@ -60,7 +61,7 @@ The live source of truth is `00-Brand-Foundation/brand.config.json` in the repo 
 
 **Type:** Arabic **Tajawal** (300 display/headings, 400 body, 500 labels). Latin **Jost** (300/400/500) only for the Latin runs above. Light weights carry big type; for key visuals the display line may pair **Tajawal 200 with Tajawal 800** (one light phrase, one heavy phrase — client direction 2026-10-12), supported by 300/400 body and 500 labels. Never a whole layout in bold. **No letter-spacing and no uppercase on Arabic.** Arabic line-height ≥ 1.5 (display 1.25). Formats: `145,000 ر.ع.` · `245 م²` · `الربع الرابع 2027`.
 
-**Logo:** Primary (Maroon) on Ivory/Linen; **Sand** on Deep/Shadow/Maroon/photos; White only on very busy photos. Clear space ½ H on all sides; minimum 96 px wide. **One logo zone, bottom-start: bottom-right in Arabic** (bottom-left only in the dormant English versions), on the margin; bottom-end holds one quiet caption only (website, handle or disclaimer), never a second logo. Centred only on covers and end cards. The **S monogram** is for avatars and favicons only.
+**Logo:** Primary (Maroon) on Ivory/Linen; **Sand** on Deep/Shadow/Maroon/photos; White only on very busy photos. Clear space ½ H on all sides; minimum 96 px wide. **One logo zone, bottom-start: bottom-right in Arabic** (bottom-left only in the dormant English versions), on the margin; bottom-end holds the contact line only (phone · @SIRAJPROPERTIES), never a second logo. Centred only on covers and end cards. The **S monogram** is for avatars and favicons only.
 
 **Shapes & marks:** square corners; one **Silk Corner** (single large radius on the top-*end* corner — top-left in RTL) at most once or twice per view; 1 px Stone hairlines at 70%; the **Lumen ◆** (45° Stone diamond) as bullet/marker. No pills, glassmorphism, stacked shadow cards or generic SaaS look.
 
@@ -73,7 +74,7 @@ The live source of truth is `00-Brand-Foundation/brand.config.json` in the repo 
 - Rises along the 51° Silk Axis from the lower start toward the upper end; Arabic layouts are full mirrors, so layout silk (stills, cut-outs, Horizon, Silk Corner) flips with the text — but **photographs are never mirrored**, including photos with silk in them (a building would flip too). Light from the upper end; warm single-source light.
 - Formations (in `assets/silk/`, 4:5 and 9:16): **Drape-Deep** (quiet dark field for statements) · **Drape-Lumen** (lit surface, covers) · **Drape-Fall** (vertical folds, stories) · **Horizon-Deep / Horizon-Ivory** (silk as ground line — architecture above, information below) · **Ribbon-Sweep / Ribbon-Ivory / Ribbon-Pair** (the signature ribbon) · **Fold-Corner-Ivory** · **Gateway** (two silk forms framing an opening — reveals) · **Wrap** (spiral — composites around towers).
 - Campaign behaviour: **pre-launch = Veil** (silk wraps/conceals, details withheld) · **launch = Reveal** (silk sweeps away) · **sustain = Connect** (a single ribbon links progress stories).
-- Architecture photography: warm golden-hour or blue-hour light, calm skies, real Omani context (Hajar mountains, date palms), no fake lens flares, no HDR look. AI imagery is labelled «تصوّر معماري» in the disclaimer.
+- Architecture photography: warm golden-hour or blue-hour light, calm skies, real Omani context (Hajar mountains, date palms), no fake lens flares, no HDR look. When imagery is a render or AI visualisation, say so in the post caption («تصوّر معماري للمشروع.»), never on the design.
 
 ### Silk & Light key visuals (client direction, 2026-10-12)
 Because سراج means the lamp, hero posts combine **real silk + light**: the building glows from within like a lantern; giant real maroon silk veils, reveals or flies around it; warm shafts of light; cinematic camera angles (low angle, drone, telephoto across a wet street, close detail). Reference set: `14-Property-Marketing/12-Project-Siraj/Key-Visuals/` (Veil · Ribbon · Lantern · Reveal · Detail), template `Source/project-siraj-kv-post.html`, build `node tools/build-project-siraj-kv.js`. Generate new scenes from the publish-ready renders as references (`references/connectors.md`), keep the architecture, no people, and leave calm sky for the copy.
@@ -104,7 +105,7 @@ For the full asset set (presentations, print, property marketing, motion, the br
 
 Run this check, briefly and honestly, and fix what fails:
 - Arabic only? Western digits? No tracking on Arabic? Contact = phone + @SIRAJPROPERTIES only, no website?
-- Facts real or clearly marked placeholders? Demo projects not passed off as real? Disclaimer present where images are renders or figures are investment-related?
+- Facts real or clearly marked placeholders? Demo projects not passed off as real? Render/investment disclaimers in the caption (never on the design)? No side notes, footnotes or fine print on the design? Figures investment-related?
 - Silk is a real photograph/footage, one gesture, not touching the logo, not hiding the building?
 - Any people: hijab and modest dress for women, massar for Omani men?
 - Correct logo variant for the background, clear space respected, logo not redrawn?

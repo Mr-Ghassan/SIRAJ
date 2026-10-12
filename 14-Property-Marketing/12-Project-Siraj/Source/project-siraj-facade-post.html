@@ -75,7 +75,7 @@ document.querySelector('.title').textContent = T.title;
 document.querySelector('.head').textContent = T.head;
 document.querySelector('.line').textContent = T.line;
 document.querySelector('.foot').innerHTML = T.foot;
-document.querySelector('.disc').textContent = T.disc;
+document.querySelector('.disc').remove(); // no side notes on designs (client rule 2026-10-12)
 
 // SIRAJ Silk — one real silk ribbon travelling behind the building along the Silk Axis (rising to the upper end)
 const W = art.offsetWidth, silk = document.getElementById('silk');

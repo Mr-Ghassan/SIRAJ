@@ -34,7 +34,7 @@ Contents: 1. Repo map · 2. make-post briefs (schema + recipes) · 3. Ready temp
 | `display` | `true` | big display title (short titles only) |
 | `ar.eyebrow` `ar.title` `ar.lead` `ar.end` | text | `\n` = line break; `[[…]]` = keep LTR; tokens `{contact.website}` `{contact.social_handle}` `{founding_project.name_ar}` |
 | `ar.blocks` | `[{type:"facts", items:[…]}]`, `{type:"stats", items:[{v,u,l}]}`, `{type:"list", items, numbered}`, `{type:"details", rows:[[k,v]]}`, `{type:"quote", text, cite}`, `{type:"progress", value, label}` | |
-| `ar.note` | text (`\n` allowed) | multi-line footer note; **replaces** `ar.end` (use for CTA + disclaimer on two lines). `ar.end` is a single line |
+| `ar.note` | — | **ignored**: no side notes on designs (client rule 2026-10-12). Put disclaimers in the caption. |
 | `logo` | `Primary` · `Sand` · `White` · `Deep` | force a logo variant (default is chosen by `env`; on photos prefer `Sand`) |
 | `tint` | CSS colour, e.g. `"rgba(23,6,8,.35)"` | flat tint over the whole image |
 | `topScrim` | `true` | short dark fall at the top (eyebrow over bright sky) |

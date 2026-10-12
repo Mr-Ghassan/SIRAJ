@@ -30,4 +30,4 @@ Both are rendered at 2× (`SIRAJ_Project-Siraj_KV_<Name>_<Post|Story>_AR_v1.0.pn
 
 The cost was about $14.25 (20 × $0.60 at 4K with 4 references, plus 6 × $0.375 outpaints).
 
-**Rules respected:** no people; real silk (photoreal); architecture taken from the approved renders; Arabic only; logo bottom-right; disclaimer «تصوّر معماري للمشروع.»
+**Rules respected:** no people; real silk (photoreal); architecture taken from the approved renders; Arabic only; logo bottom-right; no side notes on the design (the render disclaimer goes in the caption).

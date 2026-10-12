@@ -67,7 +67,7 @@ const head = document.querySelector('.head'), headB = document.querySelector('.h
 if (L.head) { head.innerHTML = T.head; head.style.top = L.head + 'px'; headB.remove(); } else { headB.innerHTML = T.head.replace('<br>', ' '); head.remove(); }
 document.querySelector('.name').innerHTML = T.name;
 document.querySelector('.foot').innerHTML = T.foot;
-document.querySelector('.disc').textContent = T.disc;
+document.querySelector('.disc').remove(); // no side notes on designs (client rule 2026-10-12)
 document.querySelector('.fall').style.height = L.fall + 'px';
 
 // SIRAJ Silk · Horizon: a real silk surface becomes the ground line the building stands on

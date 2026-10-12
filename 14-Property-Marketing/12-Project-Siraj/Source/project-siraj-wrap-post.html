@@ -67,7 +67,7 @@ if (fmt === 'story') {
   art.appendChild(h); document.querySelector('.head').remove();
 } else document.querySelector('.head').textContent = T.head;
 document.querySelector('.foot').innerHTML = T.foot;
-document.querySelector('.disc').textContent = T.disc;
+document.querySelector('.disc').remove(); // no side notes on designs (client rule 2026-10-12)
 document.querySelector('.fall').style.height = L.fall + 'px';
 (img.complete ? Promise.resolve() : new Promise((r) => (img.onload = r))).then(() => (window.ready = true));
 </script>

@@ -73,7 +73,7 @@ Keep hashtags to 2–4 relevant ones (e.g. #سراج #مسقط #عقارات_ع�
 - Handle: `@SIRAJPROPERTIES` (capitals). **Posts and captions give the phone number and the handle only — never the website** (client rule 2026-10-12).
 - Mixed runs (website, handle, phone) are wrapped to stay LTR inside Arabic (`[[…]]` in briefs).
 
-## 8. Disclaimers (Arabic, use the relevant line)
+## 8. Disclaimers (Arabic, use the relevant line — in the caption only, never on the design)
 
 - Renders/AI imagery: «الصور تصورات فنية لأغراض توضيحية فقط، وقد تختلف التشطيبات والمناظر الطبيعية والإطلالات النهائية.» Short form on posts: «تصوّر معماري للمشروع.»
 - Prices/areas: «المساحات تقريبية. الأسعار والمواصفات والتوافر استرشادية وقابلة للتغيير دون إشعار. لا تُعدّ هذه المادة عرضًا أو عقدًا.»

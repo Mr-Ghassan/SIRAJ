@@ -32,4 +32,4 @@ All are 3712×4608 px (4:5), sRGB JPEG. Overview: `SIRAJ_Project-Siraj_Clean_Con
 
 The cost was about $9 (24 generations × $0.375).
 
-**Publication:** these are visualisations, so label them «تصوّر معماري» in the disclaimer. Never mirror them in Arabic layouts.
+**Publication:** these are visualisations, so say «تصوّر معماري للمشروع.» in the post caption (never as a note on the design). Never mirror them in Arabic layouts.
