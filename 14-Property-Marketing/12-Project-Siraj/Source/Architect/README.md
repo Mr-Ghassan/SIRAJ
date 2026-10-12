@@ -26,7 +26,8 @@ Overview: `SIRAJ_Project-Siraj_Architect_Contact-Sheet.jpg`.
 
 ## Before using in marketing
 
-- **People rule:** every render contains entourage figures that do not meet the SIRAJ people rule (women without hijab, a couple in a close pose). The cyclist is in both corner views, the couple in both side elevations, and a pedestrian at the lower left of both front elevations. **Do not publish these renders as they are.** Remove or replace the figures first (as was done for `../SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg`) and keep the result as a new `_Clean` file next to the existing key visuals.
+- **Publish-ready versions exist:** see `../Clean/`.
+- **People rule:** every render here contains entourage figures that do not meet the SIRAJ people rule (women without hijab, a couple in a close pose). The cyclist is in both corner views, the couple in both side elevations, and a pedestrian at the lower left of both front elevations. **Do not publish these renders as they are.** Remove or replace the figures first (as was done for `../SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg`) and keep the result as a new `_Clean` file next to the existing key visuals.
 - The shopfronts carry placeholder «SIGNAGE» lettering. Retouch or cover it before publication.
 - Label published renders with the render disclaimer («تصوّر معماري»).
 - The location and client details above come from the architect's sheet. **Confirm them before publishing**, and only then add them to `00-Brand-Foundation/brand.config.json`.
