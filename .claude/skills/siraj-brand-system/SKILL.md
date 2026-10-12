@@ -26,7 +26,8 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 3. **People:** women appear **only in a hijab fully covering hair and neck, with loose modest clothing** — never uncovered hair or ʿawrah, including background and scale figures. Cast a **mix of Omani and international** people. **Omani men wear the dishdasha with the massar (المصر)** — never the kumma, never the Gulf ghutra. No intimate poses.
 4. **The logo is never redrawn**, recoloured outside its variants, stretched, shadowed, or set in a font. Use the files in `assets/logo/`.
 5. **Western digits (0–9) everywhere**, including Arabic text. Never ٠١٢٣.
-6. **No invented facts.** Unit counts, prices, areas, dates, phone numbers and registration numbers of the Founding Project are **not confirmed yet** — use a visible placeholder like `[السعر — بانتظار التأكيد]`, never a made-up number. «مساكن نور / Noor Residences» and «حرير» are **fictional demo projects** of the brand system; never present their figures as real.
+6. **Contact on posts = phone number + `@SIRAJPROPERTIES` only — never the website** (client rule, 2026-10-12). Captions likewise: point to the phone / DM, not the site.
+7. **No invented facts.** Unit counts, prices, areas, dates, phone numbers and registration numbers of the Founding Project are **not confirmed yet** — use a visible placeholder like `[السعر — بانتظار التأكيد]`, never a made-up number. «مساكن نور / Noor Residences» and «حرير» are **fictional demo projects** of the brand system; never present their figures as real.
 
 ## 3. Voice (النبرة)
 
@@ -43,7 +44,8 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 | Item | Value | Status |
 |---|---|---|
 | Company | سراج للتطوير العقاري · SIRAJ Real Estate Development · سلطنة عُمان | confirmed |
-| Website | `sirajproperties.net` | confirmed |
+| Website | `sirajproperties.net` | confirmed — but **never on posts** |
+| **Contact on posts** | **phone + `@SIRAJPROPERTIES` only** (client rule 2026-10-12). The phone is not confirmed yet, so it shows as «[رقم الهاتف]» until `contact.phone` is set in the config | rule |
 | Instagram | `@SIRAJPROPERTIES` (always written in capitals) | confirmed |
 | Email | `info@sirajproperties.net` (domain confirmed; mailbox name to confirm) | partly |
 | Founding Project | «سراج» — المشروع المؤسِّس · مسقط · mixed-use, 6 storeys (residences above, retail at ground) · architects ORIX × Waleed Eid Group | name confirmed; units/areas/prices/dates **not**; district (Almawaleh South – Al Seeb, per the architect's sheet) **to confirm**, so write «مسقط» |
@@ -56,7 +58,7 @@ The live source of truth is `00-Brand-Foundation/brand.config.json` in the repo 
 
 **Colour** (approved): Maroon `#602733` (hero) · Deep `#2C0F12` · Shadow `#170608` · Stone `#AA9180` (Lumen ◆, rules — never text on light) · Sand `#D6C0B2` (text/logo on dark) · Ivory `#F7F2ED` (light background) · Linen `#EFE7E0` · Graphite `#3B3436` (body text) · Ash `#6B625E` (secondary). Official gradient **G1** `linear-gradient(51deg, #2C0F12, #602733)`. Full tokens: `assets/tokens/`.
 
-**Type:** Arabic **Tajawal** (300 display/headings, 400 body, 500 labels). Latin **Jost** (300/400/500) only for the Latin runs above. Light weights for big type — SIRAJ never shouts in bold. **No letter-spacing and no uppercase on Arabic.** Arabic line-height ≥ 1.5 (display 1.25). Formats: `145,000 ر.ع.` · `245 م²` · `الربع الرابع 2027`.
+**Type:** Arabic **Tajawal** (300 display/headings, 400 body, 500 labels). Latin **Jost** (300/400/500) only for the Latin runs above. Light weights carry big type; for key visuals the display line may pair **Tajawal 200 with Tajawal 800** (one light phrase, one heavy phrase — client direction 2026-10-12), supported by 300/400 body and 500 labels. Never a whole layout in bold. **No letter-spacing and no uppercase on Arabic.** Arabic line-height ≥ 1.5 (display 1.25). Formats: `145,000 ر.ع.` · `245 م²` · `الربع الرابع 2027`.
 
 **Logo:** Primary (Maroon) on Ivory/Linen; **Sand** on Deep/Shadow/Maroon/photos; White only on very busy photos. Clear space ½ H on all sides; minimum 96 px wide. **One logo zone, bottom-start: bottom-right in Arabic** (bottom-left only in the dormant English versions), on the margin; bottom-end holds one quiet caption only (website, handle or disclaimer), never a second logo. Centred only on covers and end cards. The **S monogram** is for avatars and favicons only.
 
@@ -72,6 +74,9 @@ The live source of truth is `00-Brand-Foundation/brand.config.json` in the repo 
 - Formations (in `assets/silk/`, 4:5 and 9:16): **Drape-Deep** (quiet dark field for statements) · **Drape-Lumen** (lit surface, covers) · **Drape-Fall** (vertical folds, stories) · **Horizon-Deep / Horizon-Ivory** (silk as ground line — architecture above, information below) · **Ribbon-Sweep / Ribbon-Ivory / Ribbon-Pair** (the signature ribbon) · **Fold-Corner-Ivory** · **Gateway** (two silk forms framing an opening — reveals) · **Wrap** (spiral — composites around towers).
 - Campaign behaviour: **pre-launch = Veil** (silk wraps/conceals, details withheld) · **launch = Reveal** (silk sweeps away) · **sustain = Connect** (a single ribbon links progress stories).
 - Architecture photography: warm golden-hour or blue-hour light, calm skies, real Omani context (Hajar mountains, date palms), no fake lens flares, no HDR look. AI imagery is labelled «تصوّر معماري» in the disclaimer.
+
+### Silk & Light key visuals (client direction, 2026-10-12)
+Because سراج means the lamp, hero posts combine **real silk + light**: the building glows from within like a lantern; giant real maroon silk veils, reveals or flies around it; warm shafts of light; cinematic camera angles (low angle, drone, telephoto across a wet street, close detail). Reference set: `14-Property-Marketing/12-Project-Siraj/Key-Visuals/` (Veil · Ribbon · Lantern · Reveal · Detail), template `Source/project-siraj-kv-post.html`, build `node tools/build-project-siraj-kv.js`. Generate new scenes from the publish-ready renders as references (`references/connectors.md`), keep the architecture, no people, and leave calm sky for the copy.
 
 ## 7. Producing posts in the repo (Claude Code)
 
@@ -89,16 +94,16 @@ Minimal brief:
 { "name": "Siraj-Teaser-01", "formats": ["post","story"],
   "layout": "type", "env": "deep", "still": "Drape-Deep",
   "ar": { "eyebrow": "المشروع المؤسِّس · مسقط", "title": "أوّلُ الضوء.", "lead": "مبنى واحد، بمعيارٍ كامل.",
-          "end": "سجّل اهتمامك · [[{contact.website}]]" } }
+          "end": "{contact.post_line}" } }
 ```
-Line breaks in titles are `\n` (not `<br>`); wrap Latin runs in `[[ ]]` so they stay LTR; `{contact.website}`, `{contact.social_handle}`, `{founding_project.name_ar}` resolve from the brand config. The tool prints a layout-QA verdict — treat any `!` as a defect to fix.
+Line breaks in titles are `\n` (not `<br>`); wrap Latin runs in `[[ ]]` so they stay LTR; `{contact.post_line}` (phone · @SIRAJPROPERTIES — also the default footer), `{contact.phone_post}`, `{contact.social_handle}`, `{founding_project.name_ar}` resolve from the brand config. The tool prints a layout-QA verdict — treat any `!` as a defect to fix.
 
 For the full asset set (presentations, print, property marketing, motion, the brand guidelines), the build commands, the real-silk import pipeline and the commit rules, read `references/production.md`.
 
 ## 8. Before you hand anything over
 
 Run this check, briefly and honestly, and fix what fails:
-- Arabic only? Western digits? No tracking on Arabic?
+- Arabic only? Western digits? No tracking on Arabic? Contact = phone + @SIRAJPROPERTIES only, no website?
 - Facts real or clearly marked placeholders? Demo projects not passed off as real? Disclaimer present where images are renders or figures are investment-related?
 - Silk is a real photograph/footage, one gesture, not touching the logo, not hiding the building?
 - Any people: hijab and modest dress for women, massar for Omani men?

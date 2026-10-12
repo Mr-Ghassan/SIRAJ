@@ -46,7 +46,11 @@ window.SIRAJ_BRAND = {
     "cr_number": "CR 0000000",
     "social_handle": "@SIRAJPROPERTIES",
     "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES",
-    "instagram": "https://instagram.com/sirajproperties"
+    "instagram": "https://instagram.com/sirajproperties",
+    "phone_post_placeholder_ar": "[رقم الهاتف]",
+    "post_contact_policy": "Posts (all social formats) show the phone number and @SIRAJPROPERTIES only, never the website (client instruction 2026-10-12). Use the tokens {contact.phone_post} and {contact.social_handle}; {contact.post_line} gives both.",
+    "phone_post": "[رقم الهاتف]",
+    "post_line": "[رقم الهاتف]  ·  [[@SIRAJPROPERTIES]]"
   },
   "brand_line": {
     "en": "Light, built.",

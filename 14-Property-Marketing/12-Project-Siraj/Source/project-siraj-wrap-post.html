@@ -39,17 +39,21 @@
   <div class="top"><img class="logo" src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
   <div class="bottom"><div class="kicker"></div><h1 class="name"></h1><p class="head"></p><div class="rule"></div><div class="foot"></div><div class="disc"></div></div>
 </div>
+<script src="../../../11-Social/Templates/brand-data.js"></script>
 <script>
 const q = new URLSearchParams(location.search);
+// Posts show phone + Instagram only (no website). A placeholder phone shows as a visible Arabic placeholder.
+const CT = window.SIRAJ_BRAND.contact, PH_OK = !/PLACEHOLDER/i.test(CT.phone_status || '');
+const PH = PH_OK ? `<b class="ltr">${CT.phone}</b>` : CT.phone_post_placeholder_ar;
 const fmt = q.get('fmt') || 'post', lang = q.get('lang') || 'ar';
 const art = document.getElementById('art'); art.className = fmt;
 if (lang === 'ar') art.setAttribute('dir', 'rtl');
 const T = {
   ar: { eyebrow: 'مسقط', kicker: 'المشروع المؤسِّس · مسقط', name: 'سراج', head: 'في قلب المدينة، يبدأ المعيار.',
-        foot: '<span>سجّل اهتمامك · <b class="ltr">sirajproperties.net</b></span><span class="ltr">@SIRAJPROPERTIES</span>',
+        foot: `<span>سجّل اهتمامك · ${PH}</span><span class="ltr">@SIRAJPROPERTIES</span>`,
         disc: 'تصوّر معماري للمشروع.' },
   en: { eyebrow: 'Muscat', kicker: 'The Founding Project · Muscat', name: 'Siraj', head: 'In the heart of the city, the standard begins.',
-        foot: '<span>Register your interest · <b>sirajproperties.net</b></span><span>@SIRAJPROPERTIES</span>',
+        foot: `<span>Register your interest · ${PH}</span><span>@SIRAJPROPERTIES</span>`,
         disc: 'Architectural visualisation.' },
 }[lang];
 const L = { post: { fall: 600 }, story: { fall: 820 } }[fmt];

@@ -19,6 +19,6 @@
         ]
       }
     ],
-    "end": "[[{contact.website}]]"
+    "end": "{contact.post_line}"
   }
 }

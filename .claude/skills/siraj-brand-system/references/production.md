@@ -51,7 +51,7 @@ Contents: 1. Repo map · 2. make-post briefs (schema + recipes) · 3. Ready temp
   "photo": "14-Property-Marketing/12-Project-Siraj/Source/SIRAJ_Project-Siraj_Hero_City_4x5_v1.0.jpg",
   "pos": "50% 40%", "overlay": "horizon", "display": true,
   "ar": { "eyebrow": "المشروع المؤسِّس · مسقط", "title": "{founding_project.name_ar}",
-          "lead": "في قلب المدينة، يبدأ المعيار.", "end": "سجّل اهتمامك · [[{contact.website}]]" } }
+          "lead": "في قلب المدينة، يبدأ المعيار.", "end": "{contact.post_line}" } }
 ```
 ```json
 { "name": "Standard-Statement", "formats": ["post","square"], "layout": "type", "env": "deep", "still": "Drape-Deep",
@@ -63,7 +63,7 @@ Contents: 1. Repo map · 2. make-post briefs (schema + recipes) · 3. Ready temp
   "photo": "14-Property-Marketing/12-Project-Siraj/Source/SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg",
   "ar": { "eyebrow": "المنتج", "title": "مدروسة في كل تفاصيلها.",
           "blocks": [{ "type": "facts", "items": ["6 طوابق", "سكني وتجاري", "مسقط"] }],
-          "end": "[[{contact.website}]]" } }
+          "end": "{contact.post_line}" } }
 ```
 ```json
 { "name": "Quote-Standard", "formats": ["post"], "layout": "type", "env": "deep", "still": "Drape-Deep",
@@ -127,7 +127,7 @@ HTML post skeleton (1080×1350, Arabic):
   </div>
   <div style="position:absolute;inset-inline:72px;bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;color:#D6C0B2;font-size:19px">
     <!-- bottom-start (right in RTL): inline SIRAJ_Logo_Sand_v1.0.svg here, width 168px -->
-    <span>سجّل اهتمامك · <span dir="ltr">sirajproperties.net</span></span>
+    <span>سجّل اهتمامك · <span dir="ltr">[رقم الهاتف]</span> · <span dir="ltr">@SIRAJPROPERTIES</span></span>
   </div>
 </div>
 ```

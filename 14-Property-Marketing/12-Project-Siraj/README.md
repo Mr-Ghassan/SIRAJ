@@ -55,3 +55,7 @@ The hero posts were rebuilt the same way: their ivory sky overlay was removed, a
 **Architect's design package (2026-10-12).** The original elevations and 3D renders by ORIX × Waleed Eid Group are in `Source/Architect/`: the presentation PDF plus six full-resolution renders (corner perspective, front and side elevations, each by day and by night). They are source files only. Every render still contains figures that break the people rule, so clean them before publishing. See `Source/Architect/README.md`.
 
 **Publish-ready renders (2026-10-12).** `Source/Clean/` holds six cleaned and relit 4K renders: corner, front and side views, each as a cinematic cloudy day and at blue hour. There are no people and no placeholder signage, and the architecture is unchanged. These are the official project imagery for marketing. See `Source/Clean/README.md`.
+
+**Silk & Light key visuals (2026-10-12).** `Key-Visuals/` holds five cinematic hero posts and stories (Veil, Ribbon, Lantern, Reveal, Detail): real silk, with the building glowing like a lamp, and display type that pairs Tajawal 200 with 800. See `Key-Visuals/README.md`.
+
+**Contact line (2026-10-12).** All posts show the phone number and @SIRAJPROPERTIES only, never the website.

@@ -55,7 +55,7 @@ Every project message answers one pillar clearly (a campaign covers all five):
 
 [سطر أو سطران: حقيقة، أو تفصيل تصميم، أو ميزة موقع]
 
-سجّل اهتمامك عبر الرابط في الحساب · sirajproperties.net
+سجّل اهتمامك: اتصل بنا على [رقم الهاتف] أو راسلنا على ‎@SIRAJPROPERTIES
 
 #سراج #مسقط
 ```
@@ -70,7 +70,7 @@ Keep hashtags to 2–4 relevant ones (e.g. #سراج #مسقط #عقارات_ع�
 - Western digits: `168`, `24`, `2027`. Thousands separator comma: `145,000`.
 - Money: `145,000 ر.ع.` · «ابتداءً من 145,000 ر.ع.» (only with a confirmed price)
 - Area: `245 م²` · Dates: `الربع الرابع 2027`, `12 أكتوبر 2026` · Percent: `7.8%` (number first).
-- Handle: `@SIRAJPROPERTIES` (capitals). Website: `sirajproperties.net` (lowercase).
+- Handle: `@SIRAJPROPERTIES` (capitals). **Posts and captions give the phone number and the handle only — never the website** (client rule 2026-10-12).
 - Mixed runs (website, handle, phone) are wrapped to stay LTR inside Arabic (`[[…]]` in briefs).
 
 ## 8. Disclaimers (Arabic, use the relevant line)
@@ -84,7 +84,7 @@ Keep hashtags to 2–4 relevant ones (e.g. #سراج #مسقط #عقارات_ع�
 
 **Pre-launch teaser (Founding Project):**
 - On image: eyebrow «المشروع المؤسِّس · مسقط» · title «أوّلُ الضوء.» · lead «مبنى واحد، بمعيارٍ كامل.» · end «سجّل اهتمامك · sirajproperties.net»
-- Caption: «من مسقط، يبدأ معيار سراج.\n\nمشروعنا المؤسِّس يُكشف قريبًا: مبنى متعدد الاستخدامات بستة طوابق، صُمّم بعناية في كل تفصيل.\n\nسجّل اهتمامك عبر الرابط في الحساب · sirajproperties.net\n\n#سراج #مسقط»
+- Caption: «من مسقط، يبدأ معيار سراج.\n\nمشروعنا المؤسِّس يُكشف قريبًا: مبنى متعدد الاستخدامات بستة طوابق، صُمّم بعناية في كل تفصيل.\n\nسجّل اهتمامك: اتصل بنا على [رقم الهاتف] أو راسلنا على ‎@SIRAJPROPERTIES\n\n#سراج #مسقط»
 
 **Brand statement:** title «لا نبدأ بالانتشار،\nبل نبدأ بمعيار.» · lead «نبدأ بمشروع قوي، نبني اسمًا موثوقًا، ثم نتوسع بغاية واضحة.»
 

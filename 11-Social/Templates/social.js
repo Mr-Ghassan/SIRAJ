@@ -169,7 +169,7 @@
   let end = '';
   if (C.note) end = `<div class="foot-note">${rich(C.note)}</div>`;
   else if (TOTAL && D.counter !== false) end = `<div class="foot-end counter" dir="ltr"><b>${two(SLIDE)}</b>&nbsp;/&nbsp;${two(TOTAL)}${SLIDE < TOTAL ? ` <i class="lm"></i>` : ''}</div>`;
-  else if (C.end !== '') end = `<div class="foot-end${C.endLower !== false ? ' lower' : ''}">${rich(C.end || '{contact.website}')}</div>`;
+  else if (C.end !== '') end = `<div class="foot-end${C.endLower !== false ? ' lower' : ''}">${rich(C.end || '{contact.post_line}')}</div>`;
   if (D.noLogo) html += `<div class="foot">${end ? '<span></span>' + end : ''}</div>`;
   else if (D.footLockup) {
     // Lockup SVGs carry 14.05-unit clear space inside their viewBox; pull it back so the mark sits on the margin.

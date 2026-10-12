@@ -35,9 +35,12 @@ The first complete release of the SIRAJ Real Estate Development identity, design
   - The architect's package (ORIX × Waleed Eid Group) is filed in `14-Property-Marketing/12-Project-Siraj/Source/Architect/`.
   - Six publish-ready 4K renders are in `Source/Clean/`: people and placeholder signage removed, cinematic cloudy-day and blue-hour light, architecture unchanged.
 - **Claude Design kick-off (2026-10-12).** The foundation-phase prompt and reference pack are in `21-Brand-Kit/Claude-Design-Kickoff/`, with matching ZIPs in `21-Brand-Kit/`.
+- **Silk & Light key visuals (2026-10-12).** Five cinematic hero posts and stories for the Founding Project are in `14-Property-Marketing/12-Project-Siraj/Key-Visuals/`: veil, drone ribbon, lantern, reveal and detail. They use real silk and warm light, cinematic camera angles, and display type that pairs Tajawal 200 with 800. Build with `node tools/build-project-siraj-kv.js`.
+- **Contact rule (2026-10-12).** Every post shows the phone number and @SIRAJPROPERTIES only, never the website. The new token `{contact.post_line}` is the default social footer. The phone shows as «[رقم الهاتف]» until it is confirmed in `brand.config.json`. All social exports, Project Siraj posts and content examples were rebuilt.
 
 ### Open items before public launch
-- Confirm the remaining placeholder data (phone, address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.
+- **Confirm the phone number** (it appears on every post), then rebuild the social and Project Siraj posts.
+- Confirm the remaining placeholder data (address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.
 - Approve the proposed brand line «Light, built. · نورٌ يُبنى».
 - Replace the AI-generated concept imagery with commissioned project photography and CGI.
 - Commission a bespoke Arabic wordmark (recommended v1.1).

@@ -14,7 +14,7 @@
     "eyebrow": "المشروع المؤسِّس · مسقط",
     "title": "{founding_project.name_ar}",
     "lead": "في قلب المدينة، يبدأ المعيار.",
-    "end": "سجّل اهتمامك · [[{contact.website}]]"
+    "end": "{contact.post_line}"
   },
   "per_format": {
     "story": {

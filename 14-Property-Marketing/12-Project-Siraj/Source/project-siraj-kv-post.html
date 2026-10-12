@@ -1,0 +1,102 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SIRAJ · Project Siraj silk & light key visuals</title>
+<!-- Project Siraj · "Silk & Light" key-visual posts. Open with ?kv=veil|ribbon|lantern|reveal|detail&fmt=post|story
+     Photos: Source/KeyVisuals/*.jpg (real silk + light, cinematic angles, from the publish-ready renders).
+     Type: Tajawal in contrasting weights (200 ↔ 800) for the display line; Tajawal 300/500 for support text. -->
+<link rel="stylesheet" href="../../../09-Design-System/css/siraj.css">
+<style>
+  html, body { margin: 0; background: #170608; }
+  #art { position: relative; overflow: hidden; background: #170608; color: #F7F2ED; font-family: 'SIRAJ Digits', Tajawal, sans-serif; letter-spacing: 0; }
+  #art.post { width: 1080px; height: 1350px; }
+  #art.story { width: 1080px; height: 1920px; }
+  .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .scrim-top { position: absolute; left: 0; right: 0; top: 0; background: linear-gradient(180deg, rgba(23,6,8,.78) 0%, rgba(23,6,8,.45) 45%, rgba(23,6,8,0) 100%); }
+  .scrim-bot { position: absolute; left: 0; right: 0; bottom: 0; background: linear-gradient(0deg, rgba(23,6,8,.86) 0%, rgba(23,6,8,.5) 50%, rgba(23,6,8,0) 100%); }
+  .glow { position: absolute; width: 520px; height: 520px; border-radius: 50%; pointer-events: none;
+          background: radial-gradient(circle, rgba(255,214,160,.22) 0%, rgba(255,190,120,.08) 38%, rgba(255,190,120,0) 70%); }
+  .copy { position: absolute; left: 72px; right: 72px; text-align: right; }
+  .eyebrow { display: flex; align-items: center; gap: 16px; font-weight: 500; font-size: 24px; line-height: 1; color: #D6C0B2; margin: 0 0 30px; }
+  .eyebrow .rule { flex: 0 0 64px; height: 1px; background: rgba(170,145,128,.7); }
+  .lumen { width: 10px; height: 10px; background: #AA9180; transform: rotate(45deg); flex: none; box-shadow: 0 0 18px 4px rgba(255,205,150,.45); }
+  .display { margin: 0; line-height: 1.12; color: #F7F2ED; text-shadow: 0 2px 30px rgba(23,6,8,.45); }
+  .display .l { font-weight: 200; display: block; }
+  .display .h { font-weight: 800; display: block; }
+  .display .s { font-weight: 300; display: block; }
+  .display .sand { color: #E6D3C6; }
+  .sub { margin: 30px 0 0; font-weight: 400; font-size: 34px; line-height: 1.5; color: #E6D3C6; text-shadow: 0 1px 3px rgba(23,6,8,.55), 0 2px 22px rgba(23,6,8,.6); }
+  .sub b { font-weight: 700; color: #F7F2ED; }
+  .tag { display: inline-flex; align-items: center; gap: 14px; margin-top: 34px; padding: 14px 0 0; border-top: 1px solid rgba(170,145,128,.7); font-weight: 500; font-size: 24px; color: #F7F2ED; }
+  .foot { position: absolute; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .logo { height: 46px; display: block; }
+  .cap { text-align: left; font-weight: 400; font-size: 19px; line-height: 1.55; color: #D6C0B2; }
+  .cap .contact { display: block; font-weight: 500; font-size: 21px; color: #F7F2ED; }
+  #art.light .cap .contact { color: #F7F2ED; }
+  .cap .ltr { direction: ltr; unicode-bidi: isolate; font-family: Jost, sans-serif; letter-spacing: .06em; font-weight: 400; }
+  .cap .disc { display: block; font-size: 14px; color: rgba(214,192,178,.72); }
+  #art.strong .scrim-top { background: linear-gradient(180deg, rgba(23,6,8,.92) 0%, rgba(23,6,8,.72) 50%, rgba(23,6,8,0) 100%); }
+  /* light theme: day skies (ivory veil of light instead of a dark scrim) */
+  #art.light .scrim-top { background: linear-gradient(180deg, rgba(247,242,237,.86) 0%, rgba(247,242,237,.5) 48%, rgba(247,242,237,0) 100%); }
+  #art.light .display { color: #2C0F12; text-shadow: none; }
+  #art.light .display .h { color: #602733; }
+  #art.light .eyebrow { color: #602733; }
+  #art.light .sub { color: #3B3436; text-shadow: none; }
+  #art.light .sub b { color: #2C0F12; }
+  #art.light .tag { color: #2C0F12; }
+</style>
+</head><body>
+<div id="art" dir="rtl"><img class="photo" alt="">
+  <div class="scrim-top"></div><div class="scrim-bot"></div><div class="glow"></div>
+  <div class="copy"><div class="eyebrow"><span class="lumen"></span><span class="eb"></span><span class="rule"></span></div>
+    <h1 class="display"></h1><p class="sub"></p><div class="tagwrap"></div></div>
+  <div class="foot"><img class="logo" src="../../../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg" alt="SIRAJ">
+    <div class="cap"><span class="contact"></span><span class="disc">تصوّر معماري للمشروع.</span></div></div>
+</div>
+<script src="../../../11-Social/Templates/brand-data.js"></script>
+<script>
+const q = new URLSearchParams(location.search);
+// Posts show phone + Instagram only (no website). A placeholder phone shows as a visible Arabic placeholder.
+const CT = window.SIRAJ_BRAND.contact, PH_OK = !/PLACEHOLDER/i.test(CT.phone_status || '');
+const PH = PH_OK ? `<span class="ltr">${CT.phone}</span>` : CT.phone_post_placeholder_ar;
+const fmt = q.get('fmt') || 'post', kv = q.get('kv') || 'veil';
+const art = document.getElementById('art');
+// size = display font-size (px) per format; at = 'top' | 'bottom' copy block; glow = [x%, y%] light behind the Lumen
+const KV = {
+  veil:    { img: 'Veil', eb: 'المشروع المؤسِّس · مسقط', at: 'top', size: [150, 168],
+             display: '<span class="l">أوّلُ</span><span class="h">الضوء.</span>',
+             sub: 'قريباً، يُرفع الستار عن <b>«سراج»</b>.', tag: 'سجّل اهتمامك' },
+  ribbon:  { img: 'Ribbon', eb: 'سِراج: المصباح المضيء', at: 'top', size: [124, 140],
+             display: '<span class="l">نورٌ واحد،</span><span class="h">يضع المعيار.</span>',
+             sub: 'سراج لا تبدأ بالانتشار، <b>بل تبدأ بمعيار.</b>' },
+  lantern: { img: 'Lantern', eb: 'المشروع المؤسِّس · مسقط', at: 'top', size: [118, 134],
+             display: '<span class="s">في قلب المدينة،</span><span class="h">يبدأ المعيار.</span>',
+             sub: 'مبنى يُضيء كالسِّراج: <b>ضوءٌ دافئ، وعمارةٌ تدوم.</b>' },
+  reveal:  { img: 'Reveal', theme: 'light', eb: 'المشروع المؤسِّس «سراج»', at: 'top', size: [104, 130],
+             display: '<span class="l">مبنى واحد،</span><span class="h">بمعيارٍ كامل.</span>',
+             sub: 'سكنٌ ومتاجر، <b>في قلب مسقط.</b>', tag: 'سجّل اهتمامك' },
+  detail:  { img: 'Detail', strong: true, eb: 'التفاصيل', at: 'top', size: [116, 132],
+             display: '<span class="h">مدروسة</span><span class="l">في كل تفاصيلها.</span>',
+             sub: 'ضوءٌ يعبر الطوب، وظلٌّ يرسم المكان. <b>مبنية لتدوم.</b>' },
+}[kv];
+art.className = fmt + (KV.theme === 'light' ? ' light' : '') + (KV.strong ? ' strong' : '');
+const F = { post: { top: 92, bottom: 72, scrimT: 640, scrimB: 300 }, story: { top: 250, bottom: 340 - 60, scrimT: 900, scrimB: 520 } }[fmt];
+const photo = document.querySelector('.photo');
+photo.src = q.get('img') || `KeyVisuals/SIRAJ_Project-Siraj_KV_${KV.img}_${fmt === 'story' ? '9x16' : '4x5'}_v1.0.jpg`;
+photo.style.objectPosition = q.get('pos') || '50% 50%';
+document.querySelector('.eb').textContent = KV.eb;
+const d = document.querySelector('.display'); d.innerHTML = KV.display; d.style.fontSize = KV.size[fmt === 'story' ? 1 : 0] + 'px';
+const sub = Array.isArray(KV.sub) ? KV.sub[fmt === 'story' ? 1 : 0] : KV.sub;
+if (sub) document.querySelector('.sub').innerHTML = sub; else document.querySelector('.sub').remove();
+if (KV.inline && KV.inline[fmt === 'story' ? 1 : 0]) d.querySelectorAll('span').forEach((e) => (e.style.display = 'inline'));
+if (KV.tag) document.querySelector('.tagwrap').innerHTML = `<div class="tag"><span class="lumen"></span>${KV.tag}</div>`;
+const copy = document.querySelector('.copy');
+copy.style.top = F.top + 'px';
+const endW = KV.end && KV.end[fmt === 'story' ? 1 : 0];
+if (endW) { copy.style.right = 'auto'; copy.style.width = endW + 'px'; document.querySelector('.sub').style.fontSize = '30px'; }
+document.querySelector('.scrim-top').style.height = F.scrimT + 'px';
+document.querySelector('.scrim-bot').style.height = F.scrimB + 'px';
+document.querySelector('.foot').style.bottom = (fmt === 'story' ? 160 : F.bottom) + 'px';
+const g = document.querySelector('.glow'); g.style.right = '-140px'; g.style.top = (F.top - 230) + 'px';
+document.querySelector('.cap .contact').innerHTML = `${PH}&nbsp;&nbsp;·&nbsp;&nbsp;<span class="ltr">${CT.social_handle}</span>`;
+photo.onload = () => document.fonts.ready.then(() => { window.ready = true; });
+</script>
+</body></html>

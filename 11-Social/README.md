@@ -35,7 +35,7 @@ Each HTML file opens with a JSON block (`<script id="data">`):
 { "name": "Property-Launch",
   "exports": { "post": ["en","ar"], "story": ["en","ar"], "li": ["en","ar"] },
   "layout": "hero", "env": "photo", "photo": "Residential-Tower-Golden-Hour", "overlay": "horizon",
-  "en": { "eyebrow": "Now launching", "title": "{noor.en}", "lead": "…", "blocks": [ … ], "end": "{contact.website}" },
+  "en": { "eyebrow": "Now launching", "title": "{noor.en}", "lead": "…", "blocks": [ … ], "end": "{contact.post_line}" },
   "ar": { … },
   "formats": { "li": { "layout": "split", "env": "deep" } } }
 ```
@@ -149,13 +149,13 @@ Captions should be calm, precise and short. Use no more than one emoji, and only
 **Launch (EN)**
 > Noor Residences. A residence shaped by light and silence in Al Khuwair, Muscat.
 > 168 residences · 24 floors · from OMR 145,000.
-> Register your interest at sirajproperties.net
+> Register your interest: call [phone] or message @SIRAJPROPERTIES
 > #SIRAJ #NoorResidences #Muscat #Oman #Architecture
 
 **Launch (AR)**
 > مساكن نور. مساكن تتشكّل بالضوء والسكينة في الخوير، مسقط.
 > 168 وحدة سكنية · 24 طابقاً · ابتداءً من 145,000 ر.ع.
-> سجّلوا اهتمامكم عبر sirajproperties.net
+> سجّلوا اهتمامكم: اتصلوا على [رقم الهاتف] أو راسلونا على ‎@SIRAJPROPERTIES
 > #سراج #مساكن_نور #مسقط #عمان #عمارة
 
 **Construction update (EN):** "Noor Residences has reached level 18 of 24. The façade installation is under way. Handover remains on track for Q4 2027."
@@ -194,3 +194,7 @@ Captions should be calm, precise and short. Use no more than one emoji, and only
 - Bump the version when the system changes, not when copy changes. For live campaign posts, append a date: `…_EN_v1.0_2026-11-12.png`.
 
 > Contact details (website, email, phone, handle) are marked **PLACEHOLDER** in `brand.config.json`. Confirm them there and rerun `node tools/build-social.js` before anything is published.
+
+## Contact line (client rule, 2026-10-12)
+
+Every post shows the **phone number and `@SIRAJPROPERTIES` only — never the website**. The default footer is the token `{contact.post_line}`. While `contact.phone` in `00-Brand-Foundation/brand.config.json` is a placeholder, the phone shows as «[رقم الهاتف]». Set the real number, change `phone_status` to `CONFIRMED`, then rebuild (`node tools/build-social.js` and the Project Siraj builds).

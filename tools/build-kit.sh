@@ -11,7 +11,8 @@ zip -q $OUT/SIRAJ_Brand-Kit_v1.0_Essentials.zip 06-SIRAJ-Silk/Stills/*/*_web_v1.
   16-Intro/Exports/SIRAJ_Intro_16x9_1920x1080_Sound_v1.0.mp4 16-Intro/Exports/SIRAJ_Intro_9x16_1080x1920_Sound_v1.0.mp4 17-Outro/Exports/SIRAJ_Outro_Logo_16x9_Sound_v1.0.mp4
 rm KIT-README.md
 mkdir -p "$T/ps/14-Property-Marketing/12-Project-Siraj"
-for f in 14-Property-Marketing/12-Project-Siraj/*.png; do
+mkdir -p "$T/ps/14-Property-Marketing/12-Project-Siraj/Key-Visuals"
+for f in 14-Property-Marketing/12-Project-Siraj/*.png 14-Property-Marketing/12-Project-Siraj/Key-Visuals/*.png; do
   python3 -c "from PIL import Image; import sys; Image.open(sys.argv[1]).convert('RGB').save(sys.argv[2], quality=92, optimize=True, subsampling=0)" "$f" "$T/ps/${f%.png}.jpg"
 done
 (cd "$T/ps" && zip -q -r "$OLDPWD/$OUT/SIRAJ_Project-Siraj_Posts_AR_v1.0.zip" 14-Property-Marketing)

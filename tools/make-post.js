@@ -23,8 +23,9 @@
 //               a quote post needs no title: { "blocks": [{ "type": "quote", "text": "…", "cite": "…" }] }
 //   formats_ar  per-format copy overrides, e.g. { "story": { "lead": "…" } }
 //   per_format  per-format design overrides, e.g. { "story": { "photo": "…_9x16_v1.0.jpg", "pos": "50% 40%" } }
-// Text tokens resolve from 00-Brand-Foundation/brand.config.json: {contact.website} {contact.social_handle}
-// {founding_project.name_ar} …  Wrap Latin runs that must stay LTR in [[ ]], e.g. [[sirajproperties.net]].
+// Text tokens resolve from 00-Brand-Foundation/brand.config.json: {contact.post_line} (phone · @SIRAJPROPERTIES,
+// the default footer) {contact.phone_post} {contact.social_handle} {founding_project.name_ar} …  Posts never show the
+// website (client rule 2026-10-12). Wrap Latin runs that must stay LTR in [[ ]], e.g. [[@SIRAJPROPERTIES]].
 const fs = require('fs');
 const path = require('path');
 const R = require('./lib/render');
