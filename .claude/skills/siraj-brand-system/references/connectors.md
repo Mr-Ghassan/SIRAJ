@@ -44,7 +44,7 @@ softly in the distance, date palms, clean Omani streetscape. Honest perspective,
 warm stone, bronze, glass, timber), restrained landscaping. Photoreal, medium-format, no HDR, no lens flare,
 no oversaturation, no text, no signage, no logos.
 ```
-Use the official façade (`14-Property-Marketing/12-Project-Siraj/Source/SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg`) as a reference image when the Founding Project must appear, and keep its architecture unchanged (6 storeys, ivory and terracotta-screen façade with planting).
+Use the publish-ready renders (`14-Property-Marketing/12-Project-Siraj/Source/Clean/`, corner/front/side × cloudy day/blue hour) as reference images when the Founding Project must appear, and keep its architecture unchanged (6 storeys, ivory and terracotta-screen façade with planting).
 
 ## 4. People (mandatory wording — include it every time people may appear)
 

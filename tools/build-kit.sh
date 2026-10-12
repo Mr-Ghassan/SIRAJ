@@ -15,4 +15,7 @@ for f in 14-Property-Marketing/12-Project-Siraj/*.png; do
   python3 -c "from PIL import Image; import sys; Image.open(sys.argv[1]).convert('RGB').save(sys.argv[2], quality=92, optimize=True, subsampling=0)" "$f" "$T/ps/${f%.png}.jpg"
 done
 (cd "$T/ps" && zip -q -r "$OLDPWD/$OUT/SIRAJ_Project-Siraj_Posts_AR_v1.0.zip" 14-Property-Marketing)
+rm -f $OUT/SIRAJ_Claude-Design-Kickoff_v1.0.zip $OUT/SIRAJ_Project-Siraj_Renders_4K_v1.0.zip
+(cd $OUT && zip -q -r SIRAJ_Claude-Design-Kickoff_v1.0.zip Claude-Design-Kickoff -x '*/.DS_Store')
+(cd 14-Property-Marketing/12-Project-Siraj/Source/Clean && zip -q -0 "$OLDPWD/$OUT/SIRAJ_Project-Siraj_Renders_4K_v1.0.zip" *.jpg README.md)
 rm -rf "$T"; ls -la $OUT

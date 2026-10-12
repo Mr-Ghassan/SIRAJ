@@ -46,7 +46,8 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 | Website | `sirajproperties.net` | confirmed |
 | Instagram | `@SIRAJPROPERTIES` (always written in capitals) | confirmed |
 | Email | `info@sirajproperties.net` (domain confirmed; mailbox name to confirm) | partly |
-| Founding Project | «سراج» — المشروع المؤسِّس · مسقط · mixed-use, 6 storeys (residences above, retail at ground) | name confirmed; units/areas/prices/dates **not** |
+| Founding Project | «سراج» — المشروع المؤسِّس · مسقط · mixed-use, 6 storeys (residences above, retail at ground) · architects ORIX × Waleed Eid Group | name confirmed; units/areas/prices/dates **not**; district (Almawaleh South – Al Seeb, per the architect's sheet) **to confirm**, so write «مسقط» |
+| Project imagery | Six publish-ready 4K renders in `14-Property-Marketing/12-Project-Siraj/Source/Clean/` (corner / front / side × cloudy day / blue hour). These are the official images; the architect originals in `Source/Architect/` contain people and placeholder signage, so don't publish them | approved |
 | Phone, WhatsApp, CR, address details | placeholders in the config | **do not publish** |
 
 The live source of truth is `00-Brand-Foundation/brand.config.json` in the repo — read it when you can.

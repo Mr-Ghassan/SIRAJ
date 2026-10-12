@@ -1,0 +1,114 @@
+{
+  "$note": "Single source for company details used by templates. Fields marked PLACEHOLDER must be replaced before public release, then rebuild. Website and Instagram are confirmed.",
+  "language_policy": {
+    "communications": "ar",
+    "english": "dormant",
+    "english_activation": "Only for a freehold project open to foreign ownership (تملك حر وتملك للأجانب), and only for that project.",
+    "allowed_latin": [
+      "SIRAJ wordmark",
+      "website",
+      "social handle",
+      "email",
+      "phone",
+      "Western digits"
+    ],
+    "bilingual_exceptions": [
+      "business card",
+      "quotation",
+      "tax invoice",
+      "payment receipt",
+      "contract cover"
+    ],
+    "archive": "99-Archive/English-Dormant (restore: bash tools/archive-english.sh --restore; build English with SIRAJ_EN=1)",
+    "decided": "2026-10-11"
+  },
+  "company": {
+    "name_en": "SIRAJ Real Estate Development",
+    "name_ar": "سراج للتطوير العقاري",
+    "short": "SIRAJ",
+    "descriptor_en": "Real Estate Development",
+    "descriptor_ar": "للتطوير العقاري",
+    "country_en": "Sultanate of Oman",
+    "country_ar": "سلطنة عُمان"
+  },
+  "contact": {
+    "website": "sirajproperties.net",
+    "website_status": "CONFIRMED",
+    "email": "info@sirajproperties.net",
+    "email_status": "Domain confirmed (sirajproperties.net); mailbox name to be confirmed",
+    "phone": "+968 2400 0000",
+    "phone_status": "PLACEHOLDER",
+    "whatsapp": "+968 9000 0000",
+    "address_en": "Al Khuwair, Muscat, Sultanate of Oman",
+    "address_ar": "الخوير، مسقط، سلطنة عُمان",
+    "po_box": "P.O. Box 000, P.C. 100",
+    "cr_number": "CR 0000000",
+    "social_handle": "@SIRAJPROPERTIES",
+    "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES",
+    "instagram": "https://instagram.com/sirajproperties"
+  },
+  "brand_line": {
+    "en": "Light, built.",
+    "ar": "نورٌ يُبنى",
+    "status": "PROPOSED — pending approval. Not part of the official logo; use only where marked optional."
+  },
+  "founding_project": {
+    "name_en": "Siraj",
+    "name_ar": "سراج",
+    "role_en": "The Founding Project",
+    "role_ar": "المشروع المؤسِّس",
+    "location_en": "Muscat",
+    "location_ar": "مسقط",
+    "type": "Mixed-use: residences above, retail ground floor (6 storeys)",
+    "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed."
+  },
+  "demo_projects": {
+    "$note": "Fictional projects used to demonstrate the system. Not real developments.",
+    "noor": {
+      "en": "Noor Residences",
+      "ar": "مساكن نور",
+      "location_en": "Al Khuwair, Muscat",
+      "location_ar": "الخوير، مسقط",
+      "type": "Residential tower",
+      "units": 168,
+      "floors": 24,
+      "handover": "Q4 2027",
+      "from_price_omr": 145000,
+      "status": "FICTIONAL demonstration project (sample tower used by the property-marketing kit). Not the Founding Project."
+    },
+    "harir": {
+      "en": "Harir Villas",
+      "ar": "فلل حرير",
+      "location_en": "Al Mouj Road, Muscat",
+      "location_ar": "مسقط",
+      "type": "Luxury villa community",
+      "units": 42,
+      "handover": "Q2 2028",
+      "from_price_omr": 395000
+    },
+    "qandeel": {
+      "en": "Qandeel Square",
+      "ar": "ساحة قنديل",
+      "location_en": "Madinat Sultan Qaboos, Muscat",
+      "location_ar": "مدينة السلطان قابوس، مسقط",
+      "type": "Mixed-use",
+      "handover": "Q1 2029"
+    },
+    "mishkat": {
+      "en": "Mishkat Business Centre",
+      "ar": "مركز مشكاة للأعمال",
+      "location_en": "Ghala, Muscat",
+      "location_ar": "غلا، مسقط",
+      "type": "Commercial offices",
+      "handover": "Q3 2028"
+    }
+  },
+  "silk_policy": {
+    "rule": "Real silk only. Every silk background is a photograph of real silk fabric; moving silk is real silk footage keyed to alpha. Never a graphic, vector or CG render.",
+    "rule_ar": "حرير حقيقي فقط: كل خلفية حريرية صورة فوتوغرافية لقماش حرير حقيقي، والحرير المتحرك لقطات فيديو حقيقية؛ لا رسومات ولا تصاميم ولا محاكاة حاسوبية.",
+    "since": "2026-10-11",
+    "stills": "06-SIRAJ-Silk/Stills",
+    "footage": "06-SIRAJ-Silk/Footage",
+    "cg_archive": "99-Archive/Silk-CG-v1.0 (reference/previs only)"
+  }
+}

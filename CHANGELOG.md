@@ -31,6 +31,10 @@ The first complete release of the SIRAJ Real Estate Development identity, design
   - `tools/make-post.js`: one JSON brief → finished Arabic posts in every requested format (post, square, story, reel, LinkedIn, X, carousel) through the social template engine, with layout QA. Briefs and examples in `11-Social/Content/`.
   - Claude skill `.claude/skills/siraj-brand-system/`: non-negotiables, voice, visual system, production and connector prompt recipes, with bundled logos, fonts, tokens and real-silk backgrounds for use outside the repo.
   - People rule: the Project Siraj façade source (`SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg`) was cleaned of figures that did not meet the rule.
+- **Founding Project imagery (2026-10-12).**
+  - The architect's package (ORIX × Waleed Eid Group) is filed in `14-Property-Marketing/12-Project-Siraj/Source/Architect/`.
+  - Six publish-ready 4K renders are in `Source/Clean/`: people and placeholder signage removed, cinematic cloudy-day and blue-hour light, architecture unchanged.
+- **Claude Design kick-off (2026-10-12).** The foundation-phase prompt and reference pack are in `21-Brand-Kit/Claude-Design-Kickoff/`, with matching ZIPs in `21-Brand-Kit/`.
 
 ### Open items before public launch
 - Confirm the remaining placeholder data (phone, address, CR, VAT) in `brand.config.json` and `12-Print/Source/print.config.json`, then rebuild.
