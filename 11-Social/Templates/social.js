@@ -9,8 +9,9 @@
 (function () {
   'use strict';
   const B = window.SIRAJ_BRAND || {};
-  const ROOT = '../../';
-  const PHOTO = (n) => `${ROOT}08-Photography/Library/SIRAJ_Photo_${n}_v1.0.jpg`;
+  const ROOT = window.SIRAJ_ROOT || '../../';            // content pages (tools/make-post.js) live one level deeper
+  // a library name (Residential-Tower-Golden-Hour) or any repo-relative image path (14-Property-Marketing/…/x.jpg)
+  const PHOTO = (n) => (/[\/.]/.test(n) ? `${ROOT}${n}` : `${ROOT}08-Photography/Library/SIRAJ_Photo_${n}_v1.0.jpg`);
   const STILL = (n, r) => `${ROOT}06-SIRAJ-Silk/Stills/${n}/SIRAJ_Silk_${n}_${r}_v1.0.jpg`;
   const ALPHA = (n, r) => `${ROOT}06-SIRAJ-Silk/Stills/Alpha/SIRAJ_Silk_${n}-Alpha_${r}_v1.0.png`;
   const LOGO = (v) => `${ROOT}01-Logos/SVG/SIRAJ_Logo_${v}_v1.0.svg`;
@@ -243,7 +244,7 @@
       const sc = D.horizonScale || 1;
       const iw = W * sc, ih = portrait ? iw * 16 / 9 : iw * 9 / 16;
       const edge = ct - (D.horizonGap != null ? D.horizonGap : S5 * 1.1);
-      const itop = edge - (D.horizonEdge || 0.70) * ih;
+      const itop = edge - (D.horizonEdge || 0.80) * ih;   // the real-silk dunes rise well above the copy, so eyebrow and title always sit on fabric
       Object.assign(img.style, { width: iw + 'px', height: ih + 'px', left: (W - iw) / 2 + 'px', top: itop + 'px' });
       $('.horizon-fill').style.top = (itop + ih - 140) + 'px';
     }

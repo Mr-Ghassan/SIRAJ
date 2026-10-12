@@ -103,5 +103,13 @@ window.SIRAJ_BRAND = {
       "type": "Commercial offices",
       "handover": "Q3 2028"
     }
+  },
+  "silk_policy": {
+    "rule": "Real silk only. Every silk background is a photograph of real silk fabric; moving silk is real silk footage keyed to alpha. Never a graphic, vector or CG render.",
+    "rule_ar": "حرير حقيقي فقط: كل خلفية حريرية صورة فوتوغرافية لقماش حرير حقيقي، والحرير المتحرك لقطات فيديو حقيقية؛ لا رسومات ولا تصاميم ولا محاكاة حاسوبية.",
+    "since": "2026-10-11",
+    "stills": "06-SIRAJ-Silk/Stills",
+    "footage": "06-SIRAJ-Silk/Footage",
+    "cg_archive": "99-Archive/Silk-CG-v1.0 (reference/previs only)"
   }
 };

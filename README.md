@@ -14,6 +14,8 @@ This repository is the **single source of truth** for the SIRAJ brand. It contai
 |---|---|
 | 📕 **Brand Guidelines** | [`20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.pdf`](20-Brand-Guidelines/) |
 | 📦 **Brand Kit (ready to send)** | [`21-Brand-Kit/`](21-Brand-Kit/): Essentials ZIP, Project Siraj posts ZIP |
+| ✍️ **New post in one command** | `node tools/make-post.js 11-Social/Content/briefs/<name>.json` — see [`11-Social/Content/README.md`](11-Social/Content/README.md) |
+| 🤖 **Claude skill** | [`.claude/skills/siraj-brand-system/`](.claude/skills/siraj-brand-system/SKILL.md): brand rules, voice, production and connector recipes (auto-loads in Claude Code) |
 | 👤 **Profile picture** | [`01-Logos/Dark/SIRAJ_Social-Avatar_Square_v1.0.png`](01-Logos/Dark/SIRAJ_Social-Avatar_Square_v1.0.png) |
 | 🧭 **Quick reference** | [`00-Brand-Foundation/DESIGN-LANGUAGE.md`](00-Brand-Foundation/DESIGN-LANGUAGE.md) |
 | 💡 **Strategy** | [`00-Brand-Foundation/BRAND-STRATEGY.md`](00-Brand-Foundation/BRAND-STRATEGY.md) |

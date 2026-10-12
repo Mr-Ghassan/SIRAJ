@@ -1,0 +1,3 @@
+{ "name": "Example_Quote-Standard", "formats": ["post"], "layout": "type", "env": "deep", "still": "Drape-Deep",
+  "ar": { "blocks": [{ "type": "quote", "text": "لا نبدأ بالانتشار،\nبل نبدأ بمعيار.", "cite": "سراج للتطوير العقاري" }],
+          "end": "[[@SIRAJPROPERTIES]]" } }

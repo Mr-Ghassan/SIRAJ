@@ -1,0 +1,24 @@
+{
+  "name": "Example_Pillar-Product",
+  "formats": [
+    "post"
+  ],
+  "layout": "window",
+  "env": "ivory",
+  "photo": "14-Property-Marketing/12-Project-Siraj/Source/SIRAJ_Project-Siraj_Facade_Clean_v1.0.jpg",
+  "ar": {
+    "eyebrow": "المنتج",
+    "title": "مدروسة في كل تفاصيلها.",
+    "blocks": [
+      {
+        "type": "facts",
+        "items": [
+          "6 طوابق",
+          "سكني وتجاري",
+          "مسقط"
+        ]
+      }
+    ],
+    "end": "[[{contact.website}]]"
+  }
+}

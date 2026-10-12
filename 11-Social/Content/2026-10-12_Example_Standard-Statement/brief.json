@@ -1,0 +1,16 @@
+{
+  "name": "Example_Standard-Statement",
+  "formats": [
+    "post",
+    "square"
+  ],
+  "layout": "type",
+  "env": "deep",
+  "still": "Drape-Deep",
+  "ar": {
+    "eyebrow": "سراج للتطوير العقاري",
+    "title": "لا نبدأ بالانتشار،\nبل نبدأ بمعيار.",
+    "lead": "نبدأ بمشروع قوي، نبني اسمًا موثوقًا، ثم نتوسع بغاية واضحة.",
+    "end": "[[@SIRAJPROPERTIES]]"
+  }
+}
