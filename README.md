@@ -72,14 +72,15 @@ The hierarchy on every layout is **architecture first, information second, silk 
 | [`07-Icon-System`](07-Icon-System) | 82 proprietary icons in outline and filled styles, sprite, JSON manifest |
 | [`08-Photography`](08-Photography) | Art direction, graded image library, **SIRAJ Silk Grade** LUT |
 | [`09-Design-System`](09-Design-System) | Design tokens (CSS, SCSS, JS/TS, Tailwind, Swift, Kotlin) and base CSS |
-| [`10-UI-Components`](10-UI-Components) | UI component library and example screens (web, dashboard, portal) |
-| [`11-Social`](11-Social) | Social media templates and exports (EN and AR) |
+| [`design-system`](design-system) | **SIRAJ Design System v1.0**: tokens, components, real-estate components, docs, example screens, exports |
+| [`motion-system`](motion-system) | **SIRAJ Motion System v1.0** tokens: six levels, air/wind, built to CSS, JS, TS |
+| [`11-Social`](11-Social) | Social media templates, briefs and exports (Arabic) |
 | [`12-Print`](12-Print) | Stationery and business documents |
 | [`13-Presentations`](13-Presentations) | HTML deck, PDF and editable PPTX |
 | [`14-Property-Marketing`](14-Property-Marketing) | Brochure, fact sheets, floor plans, outdoor, signage, mockups, campaign key visuals |
 | [`15-Motion-System`](15-Motion-System) | Motion library, web motion layer, components, transitions, sound |
-| [`16-Intro`](16-Intro) | Official brand intro (16:9 · 9:16 · 1:1 · alpha · bilingual) |
-| [`17-Outro`](17-Outro) | Official modular brand outro |
+| [`16-Intro`](16-Intro) | Intro: company and project versions (16:9 · 9:16 · alpha) |
+| [`17-Outro`](17-Outro) | Outro: company (official) and project versions (16:9 · 9:16) |
 | [`18-3D`](18-3D) | CGI language and material specification |
 | [`19-Templates`](19-Templates) | Email signature and document template kit |
 | [`20-Brand-Guidelines`](20-Brand-Guidelines) | The complete brand guidelines (PDF, HTML, page previews) |
@@ -93,7 +94,7 @@ The hierarchy on every layout is **architecture first, information second, silk 
 
 ```html
 <link rel="stylesheet" href="09-Design-System/css/siraj.css">            <!-- fonts + tokens + base type -->
-<link rel="stylesheet" href="10-UI-Components/siraj-components.css">     <!-- components -->
+<link rel="stylesheet" href="design-system/components/siraj-ds.css">      <!-- components -->
 <link rel="stylesheet" href="15-Motion-System/web/siraj-motion.css">     <!-- motion -->
 <script src="15-Motion-System/web/siraj-motion-web.js" defer></script>
 ```
@@ -113,7 +114,7 @@ npm run build:motion       # intro, outro, transitions, motion components (+ sou
 npm run build:guidelines   # brand guidelines PDF + pages
 ```
 
-Individual targets are `build:tokens`, `build:logos`, `build:ui`, `build:social`, `build:print`, `build:presentations`, `build:property` and the others listed in `package.json`.
+Individual targets are `build:tokens`, `build:logos`, `build:ds`, `build:social`, `build:print`, `build:presentations`, `build:property` and the others listed in `package.json`.
 
 **Changing company details:** edit `00-Brand-Foundation/brand.config.json`, then rebuild the affected templates.
 
@@ -121,12 +122,11 @@ Individual targets are `build:tokens`, `build:logos`, `build:ui`, `build:social`
 
 - ✅ **Official v1.0.** The logo geometry is unchanged from the supplied master.
 - ✅ Phone **7771 4404**, Instagram **SIRAJPROPERTIES** (always shown with the Instagram icon, never «@») and website **WWW.SIRAJPROPERTIES.NET** (always in full, in capitals) are confirmed. Address (city only) and CR details are not provided.
-- ⚠️ Photography in `08-Photography/Library` and the campaign visuals are **AI-generated concept imagery** (ElevenLabs/Seedream), used to demonstrate the art direction. Replace them with commissioned photography or CGI before public use.
+- ✅ Imagery is the real project only: the six architect renders (4K, SIRAJ Luxe Grade) and the Silk & Light key visuals in `14-Property-Marketing/12-Project-Siraj/`. Concept imagery of fictional projects is isolated in `99-Archive/Demo-Isolated/`.
 - ✅ Colour values (HEX, RGB, CMYK, Pantone) are **approved**.
 - ✅ **Language policy: Arabic only.** English deliverables are dormant in `99-Archive/English-Dormant/`.
-- ✅ The Founding Project is officially named **«سراج · Siraj»** (`14-Property-Marketing/12-Project-Siraj/`).
-- 💡 Proposed brand line *«Light, built. · نورٌ يُبنى»* is pending approval.
-- 💡 A bespoke Arabic wordmark is recommended for v1.1.
+- ✅ The project is named publicly as «مشروع سراج» in its silk-ribbon lettering (`01-Logos/Project/`), never retyped; description «شقق سكنية ومحلات تجارية», city «مسقط».
+- ✅ Status of each system: [`BRAND_STATUS.md`](BRAND_STATUS.md) · [`DESIGN_SYSTEM_STATUS.md`](DESIGN_SYSTEM_STATUS.md) · [`MOTION_SYSTEM_STATUS.md`](MOTION_SYSTEM_STATUS.md) · final report [`docs/SIRAJ_FINAL_REPORT_v1.0.md`](docs/SIRAJ_FINAL_REPORT_v1.0.md).
 
 ---
 <p align="center"><sub>© 2026 SIRAJ Real Estate Development. Fonts: Jost and Tajawal, SIL Open Font License 1.1.</sub></p>

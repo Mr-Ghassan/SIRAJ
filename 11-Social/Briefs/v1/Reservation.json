@@ -35,12 +35,12 @@
     "end": "{contact.post_line}"
   },
   "media": {
-    "h": 0.28
+    "h": 0.23
   },
   "per_format": {
     "story": {
       "media": {
-        "h": 0.3
+        "h": 0.25
       }
     }
   }
