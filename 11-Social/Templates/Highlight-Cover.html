@@ -34,15 +34,14 @@
   const I = window.SIRAJ_HIGHLIGHT_ICONS;
   const q = new URLSearchParams(location.search);
   const svg = (k) => `<svg viewBox="${I[k].vb}" xmlns="http://www.w3.org/2000/svg">${I[k].body}</svg>`;
-  const LABELS = { projects: ['Projects', 'المشاريع'], noor: ['Noor', 'نور'], harir: ['Harir', 'حرير'], updates: ['Updates', 'التحديثات'],
-    investment: ['Investment', 'الاستثمار'], events: ['Events', 'الفعاليات'], careers: ['Careers', 'الوظائف'], contact: ['Contact', 'تواصل'] };
+  const LABELS = { siraj: ['Siraj', 'سراج'], light: ['Light', 'الضوء'], details: ['Details', 'التفاصيل'], progress: ['Progress', 'التقدّم'], contact: ['Contact', 'تواصل'] };
   if (q.get('sheet')) {
-    document.body.innerHTML = `<div class="sheet"><div class="eyebrow"><i></i>Instagram · Highlight covers</div><h1>Eight covers, one light.</h1>
+    document.body.innerHTML = `<div class="sheet"><div class="eyebrow"><i></i>Instagram · Highlight covers</div><h1>Five covers, one light.</h1>
       <p>Sand line icons from the SIRAJ icon system on a centred Lumen glow. Covers are 1080 × 1920; the icon sits inside the Ø 420 px circular-safe centre so it survives every crop.</p>
       <div class="grid">${Object.keys(LABELS).map((k) => `<div class="cell"><div class="circ"><div class="icon">${svg(k)}</div></div>
       <div class="lab"><span class="en">${LABELS[k][0]}</span><span class="ar" lang="ar" dir="rtl">${LABELS[k][1]}</span></div></div>`).join('')}</div></div>`;
   } else {
-    const k = q.get('icon') || 'projects';
+    const k = q.get('icon') || 'siraj';
     document.body.innerHTML = `<div class="cover"><div class="icon">${svg(k)}</div></div>`;
   }
   document.fonts.ready.then(() => { window.__qa = []; document.body.dataset.ready = '1'; });

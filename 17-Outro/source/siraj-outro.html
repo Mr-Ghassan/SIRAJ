@@ -17,6 +17,8 @@
 <script src="../../15-Motion-System/lib/siraj-logo-data.js"></script>
 <script src="../../15-Motion-System/lib/siraj-brand-data.js"></script>
 <script src="../../15-Motion-System/lib/siraj-footage.js"></script>
+<script src="../../15-Motion-System/lib/siraj-motion-tokens.js"></script>
+<script src="../../15-Motion-System/lib/siraj-silk-engine.js"></script>
 <style>
   html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
   body { background: #170608; --ink: #D6C0B2; --ink2: #B9A69A; --rule: #AA9180; }
@@ -33,10 +35,15 @@
   .eyebrow-x { font-family: "Jost"; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; color: var(--ink2); }
   .lum { display: inline-block; background: var(--rule); transform: rotate(45deg); vertical-align: middle; }
   .project { position: absolute; left: 0; right: 0; text-align: center; color: var(--ink); }
+  #hz { position: absolute; left: -2%; width: 104%; height: auto; opacity: 0; will-change: transform, opacity; transform-origin: 50% 100%; }
+  #sheen { mix-blend-mode: screen; pointer-events: none; }
+  #vig { pointer-events: none; background: radial-gradient(ellipse 75% 70% at 50% 45%, rgba(7,2,3,0) 55%, rgba(7,2,3,.55) 100%); }
+  .ig { width: .9em; height: .9em; vertical-align: -0.12em; margin-right: .4em; display: inline-block; }
 </style>
 </head>
 <body>
 <div id="bg" class="layer"></div>
+<img id="hz" alt=""><div id="sheen" class="layer"></div><div id="vig" class="layer"></div>
 <div class="project" id="project"></div>
 <svg id="logo" xmlns="http://www.w3.org/2000/svg"></svg>
 <div class="rule" id="rule"></div>
@@ -70,8 +77,10 @@ const mp = document.getElementById('mp'), wipe = document.getElementById('wipe')
 
 // details content per variant
 const C = B.contact, CO = B.company, PR = B.founding_project;
-// Public contact = phone + Instagram (client rule 2026-10-12); a placeholder phone shows as a visible Arabic placeholder.
-const PHN = /PLACEHOLDER/i.test(C.phone_status || '') ? `<span class="ar">${C.phone_post_placeholder_ar}</span>` : `<bdi dir="ltr">${C.phone}</bdi>`;
+// Public contact = phone + Instagram only (client rules 2026-10-12/13).
+const PHN = `<bdi dir="ltr">${C.phone}</bdi>`;
+// Instagram = icon + handle, never «@» (client rule 2026-10-13).
+const IG = `<bdi dir="ltr" class="igl">${C.social_icon_svg}${C.social_handle}</bdi>`;
 // Language policy (brand.config.json → language_policy): Arabic by default; 'bi' and 'en' stay available for future freehold projects.
 const LANG = q.get('lang') || 'ar', AR_ONLY = LANG === 'ar', EN_ONLY = LANG === 'en';
 const lum = (s) => `<span class="lum" style="width:${s}px;height:${s}px;margin:0 ${s * 2}px"></span>`;
@@ -81,29 +90,34 @@ const lines = [];
 const L = (html, cls = '') => lines.push(`<div class="line ${cls}">${html}</div>`);
 const arLine = (txt, size, w = 400) => `<span class="ar" style="font-size:${fs(size)}px;font-weight:${w}">${txt}</span>`;
 const eb = (en, ar) => (AR_ONLY ? arLine(ar, 22, 500) : EN_ONLY ? `<span class="eyebrow-x" style="font-size:${fs(16)}px">${en}</span>` : `<span class="eyebrow-x" style="font-size:${fs(15)}px">${en} · ${ar}</span>`);
-if (V === 'url') {
-  L(`<span class="en" style="font-size:${fs(34)}px;font-weight:300;letter-spacing:.06em">${C.website}</span>`);
+if (V === 'official') {
+  // Official outro (client rule 2026-10-13): logo + phone + Instagram icon/handle only — no website, no other text.
+  L(`<span class="en" style="font-size:${fs(34)}px;font-weight:400;letter-spacing:.06em">${PHN}</span>`);
+  L(`<span class="en" style="font-size:${fs(26)}px;font-weight:400;letter-spacing:.06em;color:#D6C0B2">${IG}</span>`, 'mt');
+} else if (V === 'url') {
+  L(`<span class="en" style="font-size:${fs(34)}px;font-weight:300;letter-spacing:.06em">${C.website_display}</span>`);
 } else if (V === 'contact') {
   if (!EN_ONLY) L(arLine(CO.name_ar, 34));
   else L(`<span class="en" style="font-size:${fs(30)}px;font-weight:400">${CO.name_en}</span>`);
-  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${PHN}${lum(fs(7))}${C.social_handle}</span>`, 'mt');
+  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${PHN}${lum(fs(7))}${IG}</span>`, 'mt');
 } else if (V === 'cta') {
   L(eb('Register your interest', 'سجّل اهتمامك'));
-  L(`<span class="en" style="font-size:${fs(40)}px;font-weight:300">${C.social_handle}</span>`, 'mt');
+  L(`<span class="en" style="font-size:${fs(40)}px;font-weight:300">${IG}</span>`, 'mt');
   L(AR_ONLY ? `<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${PHN}</span>`
             : EN_ONLY ? `<span class="en" style="font-size:${fs(24)}px;font-weight:400"><bdi dir="ltr">${C.phone}</bdi></span>`
             : arLine(`سجّل اهتمامك ${lum(fs(6))} <bdi dir="ltr">${C.phone}</bdi>`, 26), 'mt');
 } else if (V === 'social') {
-  L(`<span class="en" style="font-size:${fs(36)}px;font-weight:400;letter-spacing:.04em">${C.social_handle}</span>`);
+  L(`<span class="en" style="font-size:${fs(36)}px;font-weight:400;letter-spacing:.04em">${IG}</span>`);
   L(eb('Follow', 'تابعونا'), 'mt');
 } else if (V === 'project') {
-  L(eb(PR.location_en, PR.location_ar)); // the internal «المشروع المؤسِّس» label is never shown
-  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${PHN}${lum(fs(6))}${C.social_handle}</span>`, 'mt');
+  L(eb(PR.location_en, PR.location_ar)); // location only — internal labels are never shown
+  if (AR_ONLY) L(arLine('شقق سكنية ومحلات تجارية', 30, 300), 'mt');
+  L(`<span class="en" style="font-size:${fs(24)}px;font-weight:400;letter-spacing:.04em">${PHN}${lum(fs(6))}${IG}</span>`, 'mt');
 }
 details.innerHTML = lines.join('');
 const project = document.getElementById('project');
 if (isProject) project.innerHTML = AR_ONLY
-  ? `<div class="ar" style="font-size:${fs(110)}px;font-weight:500;line-height:1.1">${PR.name_ar}</div>`
+  ? `<div class="ar" style="font-size:${fs(110)}px;font-weight:500;line-height:1.3">${PR.name_ar}</div>`
   : EN_ONLY ? `<div class="en" style="font-size:${fs(96)}px;font-weight:300;letter-spacing:-.01em;line-height:1">${PR.name_en}</div>`
   : `<div class="en" style="font-size:${fs(96)}px;font-weight:300;letter-spacing:-.01em;line-height:1">${PR.name_en}</div><div class="ar" style="font-size:${fs(54)}px;font-weight:300;margin-top:${fs(18)}px">${PR.name_ar}</div>`;
 project.style.top = (H * 0.26) + 'px';
@@ -120,13 +134,28 @@ const bgEl = document.getElementById('bg');
 if (!ALPHA) bgEl.style.background = DARK
   ? 'radial-gradient(ellipse 80% 90% at 72% 20%, #4A1C26 0%, #2C0F12 36%, #170608 70%, #070203 100%)'
   : 'radial-gradient(ellipse 80% 90% at 74% 18%, #FBF8F5 0%, #F7F2ED 40%, #EFE7E0 74%, #E6DCD3 100%)';
+// Luxury finish (client rule 2026-10-13): pressed-silk horizon settling at the base, carried by a whisper of air,
+// one slow ivory-rose sheen across the frame, a soft vignette. Dark theme only; never yellow or gold light.
+const SK = window.SirajSilk, hz = document.getElementById('hz'), sheen = document.getElementById('sheen');
+const LUX = DARK && !ALPHA && V !== 'logo';
+// the silk crest (measured: 50.8% of the 16:9 cut-out, 67.7% of the 9:16 one) sits below the copy block
+const HZ = FMT === '9x16' ? { f: '9x16', crest: 0.677, at: 0.82 } : { f: '16x9', crest: 0.508, at: 0.875 };
+if (LUX) { hz.src = SK.ASSET.horizon(HZ.f); hz.onload = () => { const ih = 1.04 * W * hz.naturalHeight / hz.naturalWidth; hz.style.top = (H * HZ.at - HZ.crest * ih) + 'px'; }; }
+else { hz.remove(); sheen.remove(); document.getElementById('vig').remove(); }
 const rib = SirajFootage.ribbon(document.getElementById('rib'), { fmt: FMT });
 const CLIP = SirajFootage.PASS[FMT];
+window.ready = (async () => { if (LUX) await hz.decode().catch(() => {}); await rib.ready; })();
 
 window.seek = async (t) => {
   // ribbon: real footage mirrored (end → start), its passage spanning outro 0.0 → 2.6 s
   await rib.at(M.lerp(CLIP[0], CLIP[1], M.seg(t, 0.0, 2.6, E.linear)));
   rib.video.style.opacity = t > 3.0 ? 0 : 1;
+  if (LUX) {
+    const k = M.seg(t, 0.3, 2.8, E.drape);
+    hz.style.opacity = (M.seg(t, 0.3, 1.4, E.flow) * 0.92).toFixed(3);
+    SK.drift(hz, t, { W, level: 'whisper', seed: 3, extra: `translateY(${((1 - k) * 22).toFixed(3)}%) scale(${(1.04 - 0.04 * k).toFixed(4)}) ` });
+    SK.lightSweep(sheen, M.lerp(-0.2, 1.15, M.seg(t, 1.2, 3.2, E.glide)), Math.sin(Math.PI * M.seg(t, 1.2, 3.2, E.linear)) * 0.5, { W, H, rtl: true, width: 0.24, strength: 0.16, wash: 0.02 });
+  }
   // project title first (project variant)
   if (isProject) { const p = M.enter(t, 0.35, { dur: 1.1, distance: 18 * U }); project.style.opacity = p.opacity; project.style.transform = `translateY(${p.y}px)`; project.style.filter = `blur(${p.blur}px)`; }
   // logo resolve: wipe from end → start + unblur + settle

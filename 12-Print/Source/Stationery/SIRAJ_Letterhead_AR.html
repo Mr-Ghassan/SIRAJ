@@ -23,8 +23,9 @@
     <div class="doc-foot__cols">
       <div><b>المكتب الرئيسي</b>{{company.name_ar}}<br>{{contact.address_ar|first}}</div>
       <div><b>العنوان البريدي</b>{{print.po_box_ar}}<br>{{company.country_ar}} · {{print.cr_number_ar}}</div>
-      <div><b>الهاتف</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi><br>واتساب <bdi dir="ltr">{{contact.whatsapp}}</bdi></div>
-      <div><b>الموقع الإلكتروني</b><bdi dir="ltr">{{contact.email}}</bdi><br><bdi dir="ltr">{{contact.website}}</bdi></div>
+      <div><b>الهاتف</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi></div>
+      <div><b>إنستغرام</b><bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi></div>
+      <div><b>الموقع</b><bdi class="web">{{contact.website_display}}</bdi></div>
     </div>
   </footer>
 </section>
@@ -36,16 +37,14 @@
   </header>
   <div class="letter">
     <div class="letter__top">
-      <div class="letter__to">السيد أحمد الرواحي المحترم<br>ص.ب 123، ر.ب 112<br>روي، مسقط<br>سلطنة عُمان</div>
-      <div class="letter__meta"><div><b>التاريخ</b>11 أكتوبر 2026</div><div><b>المرجع</b><bdi dir="ltr">SRJ/SAL/2026/0412</bdi></div></div>
+      <div class="letter__to">اسم المرسل إليه<br>العنوان</div>
+      <div class="letter__meta"><div><b>التاريخ</b>—</div><div><b>المرجع</b>—</div></div>
     </div>
-    <div class="letter__subject">{{demo_projects.noor.ar}} — حجز الوحدة 1204</div>
+    <div class="letter__subject">موضوع الخطاب</div>
     <div class="letter__salute">تحية طيبة وبعد،</div>
     <div class="letter__body">
-      <p>نشكركم على اختياركم {{demo_projects.noor.ar}} في {{demo_projects.noor.location_ar|first}}. ويسعدنا أن نؤكد حجز الوحدة 1204، وهي مسكن من ثلاث غرف نوم في الطابق الثاني عشر بإطلالة مفتوحة على البحر.</p>
-      <p>يبقى الحجز ساريًا لمدة أربعة عشر يومًا من تاريخ هذه الرسالة، يُعِدّ خلالها فريقنا اتفاقية البيع والشراء وجدول الدفعات الذي ناقشناه، لمراجعتكم وتوقيعكم.</p>
-      <p>من المخطط تسليم {{demo_projects.noor.ar}} في {{demo_projects.noor.handover|qar}}، وسنوافيكم بالمستجدات في كل مرحلة من مراحل الإنشاء، ويسعدنا استقبالكم في مركز المبيعات في أي وقت.</p>
-      <p>لأي استفسار، يُرجى التواصل مع {{print.people.card.name_ar}}، {{print.people.card.title_ar}}، على الرقم <bdi dir="ltr">{{print.people.card.mobile}}</bdi>.</p>
+      <p>يُكتب نص الخطاب هنا بخط Tajawal بحجم 10.5 نقطة وتباعد أسطر مريح، مع محاذاة لبداية السطر وهوامش ثابتة كما في هذا القالب.</p>
+      <p>تُستخدم الفقرات القصيرة، وتُكتب الأرقام بالأرقام الغربية، ويُذكر التواصل برقم الهاتف <bdi dir="ltr">{{contact.phone}}</bdi> وحساب إنستغرام <bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi>، والموقع <bdi class="web">{{contact.website_display}}</bdi>.</p>
     </div>
     <div class="letter__sign">
       <div>وتفضلوا بقبول فائق الاحترام والتقدير،</div>
@@ -59,8 +58,9 @@
     <div class="doc-foot__cols">
       <div><b>المكتب الرئيسي</b>{{company.name_ar}}<br>{{contact.address_ar|first}}</div>
       <div><b>العنوان البريدي</b>{{print.po_box_ar}}<br>{{company.country_ar}} · {{print.cr_number_ar}}</div>
-      <div><b>الهاتف</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi><br>واتساب <bdi dir="ltr">{{contact.whatsapp}}</bdi></div>
-      <div><b>الموقع الإلكتروني</b><bdi dir="ltr">{{contact.email}}</bdi><br><bdi dir="ltr">{{contact.website}}</bdi></div>
+      <div><b>الهاتف</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi></div>
+      <div><b>إنستغرام</b><bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi></div>
+      <div><b>الموقع</b><bdi class="web">{{contact.website_display}}</bdi></div>
     </div>
   </footer>
 </section>

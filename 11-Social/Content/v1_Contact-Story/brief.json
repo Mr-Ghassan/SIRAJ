@@ -1,0 +1,32 @@
+{
+  "name": "Contact-Story",
+  "kind": "publish",
+  "formats": [
+    "story"
+  ],
+  "layout": "type",
+  "env": "maroon",
+  "still": "Drape-Fall",
+  "display": true,
+  "ar": {
+    "eyebrow": "«سراج» · مسقط",
+    "title": "تواصل معنا.",
+    "blocks": [
+      {
+        "type": "details",
+        "rows": [
+          [
+            "الهاتف",
+            "[[77714404]]"
+          ],
+          [
+            "إنستغرام",
+            "[[[ig] SIRAJPROPERTIES]]"
+          ]
+        ]
+      }
+    ],
+    "end": ""
+  },
+  "date": "v1"
+}

@@ -42,11 +42,11 @@
       <div class="contact">
         <div><span class="lbl">M</span>{{print.people.card.mobile}}</div>
         <div><span class="lbl">T</span>{{contact.phone}}</div>
-        <div><span class="lbl">E</span>{{print.people.card.email_user}}@{{contact.website}}</div>
       </div>
       <div class="contact">
-        <div class="addr">{{contact.address_en|lines}}</div>
-        <div>{{contact.website}}</div>
+        <div class="addr">{{contact.address_en}}</div>
+        <div><bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi></div>
+        <div><bdi class="web">{{contact.website_display}}</bdi></div>
       </div>
     </div>
   </div></div>
@@ -66,11 +66,11 @@
       <div class="contact" lang="ar">
         <div><span class="lbl">جوال</span><bdi dir="ltr">{{print.people.card.mobile}}</bdi></div>
         <div><span class="lbl">هاتف</span><bdi dir="ltr">{{contact.phone}}</bdi></div>
-        <div><span class="lbl">بريد</span><bdi dir="ltr">{{print.people.card.email_user}}@{{contact.website}}</bdi></div>
       </div>
       <div class="contact" lang="ar">
-        <div class="addr">{{contact.address_ar|lines}}</div>
-        <div><bdi dir="ltr">{{contact.website}}</bdi></div>
+        <div class="addr">{{contact.address_ar}}</div>
+        <div><bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi></div>
+        <div><bdi class="web">{{contact.website_display}}</bdi></div>
       </div>
     </div>
   </div></div>

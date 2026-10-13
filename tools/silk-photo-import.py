@@ -36,14 +36,18 @@ def graded(path):
     return Image.fromarray((np.clip(out, 0, 1) * 255 + 0.5).astype(np.uint8))
 
 
+ANCHOR = os.environ.get('SILK_ANCHOR', 'center')   # 'bottom' keeps a horizon formation's ground line in every crop
+
+
 def fit(im, w, h):
-    """cover-crop to w:h around the centre, then resize with Lanczos + light sharpening."""
+    """cover-crop to w:h (centre, or bottom with SILK_ANCHOR=bottom), then resize with Lanczos + light sharpening."""
     sw, sh = im.size
     r = w / h
     if sw / sh > r:
         cw = round(sh * r); box = ((sw - cw) // 2, 0, (sw - cw) // 2 + cw, sh)
     else:
-        ch = round(sw / r); box = (0, (sh - ch) // 2, sw, (sh - ch) // 2 + ch)
+        ch = round(sw / r); y0 = sh - ch if ANCHOR == 'bottom' else (sh - ch) // 2
+        box = (0, y0, sw, y0 + ch)
     out = im.crop(box).resize((w, h), Image.LANCZOS)
     return out.filter(ImageFilter.UnsharpMask(radius=1.2, percent=40, threshold=2))
 

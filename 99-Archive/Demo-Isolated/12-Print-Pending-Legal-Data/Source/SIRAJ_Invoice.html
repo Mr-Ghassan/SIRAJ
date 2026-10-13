@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Tax invoice · EN / AR</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  .inv .meta { --meta-cols: 4; margin-top: 5mm; }
+  .inv .parties { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); margin-top: 7mm; }
+  .inv .parties > :first-child { grid-column: 1 / span 6; }
+  .inv .parties > :last-child { grid-column: 8 / span 5; }
+  .inv table.doc-table { margin-top: 7mm; }
+  .inv .doc-table .c-desc { width: 50%; }
+  .inv .after { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); margin-top: 5mm; }
+  .inv .after .words { grid-column: 1 / span 5; padding-top: 2mm; }
+  .inv .after .totals { grid-column: 7 / span 6; width: auto; }
+  .inv .words .k { font-size: 5.6pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); }
+  .inv .words .v { font-size: 8.4pt; line-height: 4.3mm; color: var(--d-ink-strong); margin-top: 1mm; }
+  .inv .words .v[lang="ar"] { text-align: right; margin-top: 2.4mm; font-size: 9pt; }
+  .inv .bank { margin-top: 6mm; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+  .inv .bank .callout { grid-column: 1 / span 12; display: grid; grid-template-columns: 0.9fr 1.15fr 1.35fr 1fr; column-gap: var(--gutter); }
+  .inv .bank .k { font-size: 5.4pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); line-height: 3mm; }
+  .inv .bank .v { white-space: nowrap; font-size: 7.8pt; color: var(--d-ink-strong); line-height: 4mm; margin-top: 0.6mm; }
+  .inv .fine { margin-top: 4mm; display: grid; grid-template-columns: 1fr 1fr; column-gap: 10mm; font-size: 6.6pt; line-height: 3.5mm; color: var(--d-ash); }
+  .inv .fine [lang="ar"] { text-align: right; font-size: 7.6pt; line-height: 4.2mm; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Business documents · Invoice"
+      data-preview-title="Tax invoice — bilingual labels · OMR · VAT 5%"
+      data-preview-note="Line items, subtotal, VAT and total are calculated by the template (qty × rate, VAT per line). Values in OMR to 3 decimals (baisa). Customer and project data are fictional."
+      data-preview-cols="1">
+
+<section class="page inv" lang="en" dir="ltr" data-label="Tax invoice · page 1">
+  <header class="doc-head" style="min-height:22mm">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="co">
+      <strong>{{company.name_en}}</strong>
+      {{contact.cr_number}} · VATIN {{print.vatin}}
+      <span lang="ar">{{company.name_ar}}</span>
+    </div>
+  </header>
+
+  <div class="title-bi">
+    <span class="en">Tax Invoice</span>
+    <span class="ar" lang="ar">فاتورة ضريبية</span>
+  </div>
+
+  <div class="meta">
+    <div><div class="k-bi bi-line"><span>Invoice no.</span><span lang="ar">رقم الفاتورة</span></div><div class="v">SRJ-INV-2026-0187</div></div>
+    <div><div class="k-bi bi-line"><span>Date of issue</span><span lang="ar">تاريخ الإصدار</span></div><div class="v">11 Oct 2026</div></div>
+    <div><div class="k-bi bi-line"><span>Due date</span><span lang="ar">تاريخ الاستحقاق</span></div><div class="v">10 Nov 2026</div></div>
+    <div><div class="k-bi bi-line"><span>Currency</span><span lang="ar">العملة</span></div><div class="v">OMR · ر.ع.</div></div>
+  </div>
+
+  <div class="parties">
+    <div>
+      <div class="blk-k"><span>Billed to</span><span lang="ar">الفاتورة إلى</span></div>
+      <div class="party">
+        <strong>Falaj Advisory SPC</strong>
+        <span lang="ar">فلج للاستشارات ش.ش.و</span>
+        <span class="muted">P.O. Box 456, P.C. 133, Ghala · VATIN OM1100223344</span>
+      </div>
+    </div>
+    <div>
+      <div class="blk-k"><span>Property</span><span lang="ar">العقار</span></div>
+      <div class="party">
+        <strong>{{demo_projects.mishkat.en}}</strong>
+        <span lang="ar">{{demo_projects.mishkat.ar}}</span>
+        <span class="muted">Office 08-03 · Level 8 · 214 m² · SPA ref. SRJ-SPA-2026-0091</span>
+      </div>
+    </div>
+  </div>
+
+  <table class="doc-table" data-calc data-vat="5">
+    <thead>
+      <tr>
+        <th class="idx">#</th>
+        <th class="c-desc">Description <span lang="ar">الوصف</span></th>
+        <th class="num">Qty <span lang="ar">الكمية</span></th>
+        <th class="num">Unit price <span lang="ar">سعر الوحدة</span></th>
+        <th class="num">VAT <span lang="ar">الضريبة</span></th>
+        <th class="num">Amount <span lang="ar">المبلغ</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-qty="1" data-rate="27900">
+        <td class="idx">01</td>
+        <td>Office 08-03 — instalment 2 of 6 (15% of OMR 186,000)<span lang="ar">مكتب 08-03 — الدفعة 2 من 6 (15% من 186,000 ر.ع.)</span></td>
+        <td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="vat"></td><td class="num" data-out="amount"></td>
+      </tr>
+      <tr data-qty="2" data-rate="2500">
+        <td class="idx">02</td>
+        <td>Allocated parking bay, basement B1<span lang="ar">موقف سيارة مخصص، الطابق السفلي B1</span></td>
+        <td class="num">2</td><td class="num" data-out="rate"></td><td class="num" data-out="vat"></td><td class="num" data-out="amount"></td>
+      </tr>
+      <tr data-qty="1" data-rate="750">
+        <td class="idx">03</td>
+        <td>Fit-out design review<span lang="ar">مراجعة تصاميم التجهيز الداخلي</span></td>
+        <td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="vat"></td><td class="num" data-out="amount"></td>
+      </tr>
+      <tr data-qty="1" data-rate="120" data-vat="0">
+        <td class="idx">04</td>
+        <td>Municipality registration fee (disbursement, outside VAT scope)<span lang="ar">رسوم تسجيل البلدية — مبلغ مسترد، خارج نطاق الضريبة</span></td>
+        <td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="vat"></td><td class="num" data-out="amount"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="after">
+    <div class="words">
+      <div class="k">Amount in words · <span lang="ar" style="font-size:7pt">المبلغ كتابةً</span></div>
+      <div class="v" data-words="total"></div>
+      <div class="v" lang="ar">فقط <bdi dir="ltr" data-total="total"></bdi> ريال عُماني لا غير</div>
+    </div>
+    <div class="totals">
+      <div class="row"><span class="lbl">Subtotal <span lang="ar">المجموع</span></span><span class="val" data-total="subtotal"></span></div>
+      <div class="row"><span class="lbl">Taxable at 5% <span lang="ar">الخاضع للضريبة</span></span><span class="val" data-total="vatable"></span></div>
+      <div class="row"><span class="lbl">VAT 5% <span lang="ar">ضريبة القيمة المضافة</span></span><span class="val" data-total="vat"></span></div>
+      <div class="row row--grand"><span class="lbl">Total due <span lang="ar">الإجمالي المستحق</span></span><span class="val"><span class="cur">OMR</span><span data-total="total"></span></span></div>
+    </div>
+  </div>
+
+  <div class="bank">
+    <div class="callout">
+      <div><div class="k">Bank · البنك</div><div class="v">{{print.bank.name_en}}</div></div>
+      <div><div class="k">Account name</div><div class="v">{{print.bank.account_name_en}}</div></div>
+      <div><div class="k">IBAN</div><div class="v">{{print.bank.iban}}</div></div>
+      <div><div class="k">SWIFT · Ref.</div><div class="v">{{print.bank.swift}}<br>SRJ-INV-2026-0187</div></div>
+    </div>
+  </div>
+
+  <div class="fine">
+    <div>Payment within 30 days of issue. Please quote the invoice number on every transfer. Late payments are subject to the terms of the Sale &amp; Purchase Agreement.</div>
+    <div lang="ar">يُستحق السداد خلال 30 يومًا من تاريخ الإصدار. يُرجى ذكر رقم الفاتورة في كل تحويل. تخضع الدفعات المتأخرة لأحكام اتفاقية البيع والشراء.</div>
+  </div>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>Page <span lang="ar">صفحة</span></b><span data-page></span> / <span data-pages></span></span></div>
+    <div class="bi4">
+      <div><b>Head office</b>{{contact.address_en|first}}<br>{{contact.po_box}}</div>
+      <div><b>Contact</b>T {{contact.phone}}<br>{{contact.social_handle}}</div>
+      <div lang="ar"><b>تواصل</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi><br><bdi dir="ltr">{{contact.social_handle}}</bdi></div>
+      <div lang="ar"><b>المكتب الرئيسي</b>{{contact.address_ar|first}}<br>{{print.po_box_ar}}</div>
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>

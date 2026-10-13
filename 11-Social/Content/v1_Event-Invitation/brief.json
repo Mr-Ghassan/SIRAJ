@@ -1,0 +1,38 @@
+{
+  "name": "Event-Invitation",
+  "kind": "template",
+  "formats": [
+    "post",
+    "story"
+  ],
+  "layout": "type",
+  "env": "deep",
+  "still": "Gateway",
+  "display": true,
+  "ar": {
+    "eyebrow": "دعوة",
+    "title": "حين يُرفع الستار.",
+    "lead": "يسعدنا حضوركم كشف «سراج».",
+    "blocks": [
+      {
+        "type": "details",
+        "rows": [
+          [
+            "التاريخ",
+            "—"
+          ],
+          [
+            "الوقت",
+            "—"
+          ],
+          [
+            "المكان",
+            "—"
+          ]
+        ]
+      }
+    ],
+    "end": "{contact.post_line}"
+  },
+  "date": "v1"
+}

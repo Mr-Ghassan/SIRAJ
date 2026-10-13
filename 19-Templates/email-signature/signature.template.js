@@ -14,10 +14,11 @@ const tel = (s) => String(s).replace(/[^+\d]/g, '');
 
 function render(cfg, lang, { logoUrl, fragment = false } = {}) {
   const p = cfg.print.people.card, c = cfg.contact, co = cfg.company;
+  // Instagram = icon + handle (never «@»); the icon PNG is hosted next to the logo. Website always WWW.SIRAJPROPERTIES.NET.
+  const igUrl = String(logoUrl).replace(/SIRAJ_Email-Logo_v1\.0\.png$/, 'SIRAJ_Email-Instagram_v1.0.png');
   const ar = lang === 'AR';
   const dir = ar ? 'rtl' : 'ltr', align = ar ? 'right' : 'left', font = ar ? ARABIC : LATIN;
-  const email = `${p.email_user}@${c.website}`;
-  const ltr = (s) => `<span dir="ltr" style="unicode-bidi:embed;">${esc(s)}</span>`;
+  const ltr = (s, raw) => `<span dir="ltr" style="unicode-bidi:embed;">${raw ? s : esc(s)}</span>`;
   const lbl = (s) => `<span style="color:${C.maroon};font-family:${ar ? ARABIC : LATIN};font-size:${ar ? 12 : 10}px;${ar ? '' : 'letter-spacing:1.5px;'}font-weight:500;">${s}</span>&nbsp;&nbsp;`;
   const lumen = `<span style="color:${C.stone};font-size:8px;">&#9670;</span>`;
   const linkStyle = `color:${C.text};text-decoration:none;`;
@@ -29,7 +30,7 @@ function render(cfg, lang, { logoUrl, fragment = false } = {}) {
   const disclaimer = ar ? cfg.print.email.disclaimer_ar : cfg.print.email.disclaimer_en;
 
   const logoCell = `<td valign="top" style="padding:2px 0 0 0;width:132px;">
-        <a href="https://${esc(c.website)}" style="text-decoration:none;"><img src="${esc(logoUrl)}" width="132" height="38" alt="SIRAJ" style="display:block;width:132px;height:38px;border:0;outline:none;"></a>
+        <a href="${esc(c.instagram)}" style="text-decoration:none;"><img src="${esc(logoUrl)}" width="132" height="38" alt="SIRAJ" style="display:block;width:132px;height:38px;border:0;outline:none;"></a>
       </td>
       <td style="width:24px;font-size:0;line-height:0;">&nbsp;</td>
       <td style="width:1px;background:${C.rule};font-size:0;line-height:0;">&nbsp;</td>
@@ -39,8 +40,9 @@ function render(cfg, lang, { logoUrl, fragment = false } = {}) {
         <div style="font-family:${font};font-size:${ar ? 17 : 16}px;line-height:1.3;color:${C.ink};font-weight:${ar ? 500 : 400};margin:0;">${esc(name)}</div>
         <div style="font-family:${font};font-size:${ar ? 13 : 10}px;line-height:1.6;color:${C.maroon};font-weight:500;${ar ? '' : 'letter-spacing:2px;text-transform:uppercase;'}margin:2px 0 12px 0;">${esc(title)}</div>
         <div style="font-family:${font};font-size:${ar ? 13 : 12}px;line-height:1.75;color:${C.text};">
-          ${lbl(ar ? 'جوال' : 'M')}<a href="tel:${tel(p.mobile)}" style="${linkStyle}">${ltr(p.mobile)}</a>&nbsp;&nbsp;${lumen}&nbsp;&nbsp;${lbl(ar ? 'هاتف' : 'T')}<a href="tel:${tel(c.phone)}" style="${linkStyle}">${ltr(c.phone)}</a><br>
-          ${lbl(ar ? 'بريد' : 'E')}<a href="mailto:${esc(email)}" style="${linkStyle}">${ltr(email)}</a>&nbsp;&nbsp;${lumen}&nbsp;&nbsp;<a href="https://${esc(c.website)}" style="color:${C.maroon};text-decoration:none;">${ltr(c.website)}</a>
+          ${lbl(ar ? 'هاتف' : 'T')}<a href="tel:${tel(c.phone)}" style="${linkStyle}">${ltr(c.phone)}</a><br>
+          <a href="${esc(c.instagram)}" style="color:${C.maroon};text-decoration:none;">${ltr(`<img src="${esc(igUrl)}" width="12" height="12" alt="Instagram" style="display:inline-block;width:12px;height:12px;border:0;vertical-align:-1px;">&nbsp;${esc(c.social_handle)}`, true)}</a><br>
+          <a href="${esc(c.website_url)}" style="${linkStyle}letter-spacing:1px;">${ltr(c.website_display)}</a>
         </div>
         <div style="font-family:${font};font-size:${ar ? 12 : 11}px;line-height:1.6;color:${C.ash};margin-top:8px;">${esc(company)}<br>${esc(address)}</div>
       </td>`;
@@ -69,7 +71,8 @@ function render(cfg, lang, { logoUrl, fragment = false } = {}) {
 
   Install: open this file in a browser, select everything inside the signature (Ctrl/Cmd+A),
   copy, and paste into Outlook / Apple Mail / Gmail signature settings.
-  Logo: host assets/SIRAJ_Email-Logo_v1.0.png at ${logoUrl} (currently a PLACEHOLDER URL).
+  Images: host assets/SIRAJ_Email-Logo_v1.0.png and assets/SIRAJ_Email-Instagram_v1.0.png on the company
+  mail server or CDN, then set the absolute URL in 12-Print/Source/print.config.json → email.logo_url and rebuild.
 -->
 </head>
 <body style="margin:0;padding:24px;background:#FFFFFF;">

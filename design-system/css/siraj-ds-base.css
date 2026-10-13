@@ -1,0 +1,187 @@
+/* =============================================================================
+   SIRAJ Design System v1.0 — base, script handling, layout + grid utilities,
+   signature marks and motion hooks. Uses tokens from build/siraj-ds.css only.
+   All layout uses logical properties: everything mirrors between RTL and LTR.
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body {
+  margin: 0;
+  font-family: var(--siraj-type-body-family);
+  font-size: var(--siraj-type-body-size);
+  font-weight: var(--siraj-type-body-weight);
+  line-height: var(--siraj-type-body-line);
+  color: var(--siraj-text);
+  background: var(--siraj-bg);
+}
+[data-theme] { color: var(--siraj-text); }
+img, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
+ul[class], ol[class] { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+table { border-collapse: collapse; }
+::selection { background: var(--siraj-accent); color: var(--siraj-on-accent); }
+
+/* ---- Script handling --------------------------------------------------------
+   Arabic: Tajawal with Western digits (SIRAJ Digits), never tracked, never uppercase.
+   Line-height floor for Arabic (client rule): headings ≥ 1.3, H2/H3 ≥ 1.4, text ≥ 1.6. */
+:lang(ar) { font-family: var(--siraj-font-arabic); letter-spacing: 0; }
+:lang(en) { font-family: var(--siraj-font-latin); }
+:where(:lang(ar)) :where(h1, h2, h3, h4, h5, h6) { line-height: 1.45; letter-spacing: 0; }
+.siraj-latin { font-family: var(--siraj-font-latin); }
+.siraj-ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+.siraj-num { font-family: var(--siraj-font-numeric); font-variant-numeric: lining-nums tabular-nums; font-feature-settings: "lnum" 1, "tnum" 1; }
+
+/* ---- Focus ---------------------------------------------------------------- */
+:focus { outline: none; }
+:focus-visible { outline: var(--siraj-c-focus-ring-width) solid var(--siraj-focus); outline-offset: var(--siraj-c-focus-ring-offset); }
+
+.siraj-sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.siraj-skip { position: absolute; inset-inline-start: 16px; top: -64px; z-index: var(--siraj-z-tooltip); background: var(--siraj-accent); color: var(--siraj-on-accent); padding: 12px 20px; text-decoration: none; }
+.siraj-skip:focus { top: 16px; }
+
+/* ---- Layout --------------------------------------------------------------- */
+.siraj-container {
+  --_margin: var(--siraj-grid-mobile-margin);
+  width: 100%;
+  max-width: calc(var(--siraj-layout-container-lg) + 2 * var(--_margin));
+  margin-inline: auto;
+  padding-inline: var(--_margin);
+}
+.siraj-container--sm { max-width: calc(var(--siraj-layout-container-sm) + 2 * var(--_margin)); }
+.siraj-container--md { max-width: calc(var(--siraj-layout-container-md) + 2 * var(--_margin)); }
+.siraj-container--xl { max-width: calc(var(--siraj-layout-container-xl) + 2 * var(--_margin)); }
+@media (min-width: 834px) { .siraj-container { --_margin: var(--siraj-grid-tablet-margin); } }
+@media (min-width: 1200px) { .siraj-container { --_margin: var(--siraj-grid-desktop-margin); } }
+
+.siraj-section { padding-block: var(--siraj-layout-section-y-mobile); }
+@media (min-width: 834px) { .siraj-section { padding-block: calc(var(--siraj-layout-section-y) * 0.75); } }
+@media (min-width: 1200px) { .siraj-section { padding-block: var(--siraj-layout-section-y); } }
+.siraj-section--tight { padding-block: var(--siraj-space-48); }
+.siraj-section--alt { background: var(--siraj-surface-alt); }
+.siraj-section--inverse { background: var(--siraj-surface); }
+
+.siraj-stack { display: flex; flex-direction: column; gap: var(--siraj-gap, var(--siraj-space-16)); }
+.siraj-cluster { display: flex; flex-wrap: wrap; align-items: center; gap: var(--siraj-gap, var(--siraj-space-12)); }
+.siraj-measure { max-width: var(--siraj-layout-measure); }
+
+/* 4 / 8 / 12 column grid. Children span the full row unless a span class is set. */
+.siraj-grid {
+  --_cols: var(--siraj-grid-mobile-columns);
+  display: grid;
+  grid-template-columns: repeat(var(--_cols), minmax(0, 1fr));
+  column-gap: var(--siraj-grid-mobile-gutter);
+  row-gap: var(--siraj-row-gap, var(--siraj-space-24));
+}
+.siraj-grid > * { grid-column: 1 / -1; min-width: 0; }
+@media (min-width: 834px) { .siraj-grid { --_cols: var(--siraj-grid-tablet-columns); column-gap: var(--siraj-grid-tablet-gutter); } }
+@media (min-width: 1200px) { .siraj-grid { --_cols: var(--siraj-grid-desktop-columns); column-gap: var(--siraj-grid-desktop-gutter); } }
+.siraj-grid > .siraj-col-1 { grid-column: span 1; } .siraj-grid > .siraj-col-2 { grid-column: span 2; }
+.siraj-grid > .siraj-col-3 { grid-column: span 3; } .siraj-grid > .siraj-col-4 { grid-column: span 4; }
+@media (min-width: 834px) {
+  .siraj-grid > .siraj-col-t-1 { grid-column: span 1; } .siraj-grid > .siraj-col-t-2 { grid-column: span 2; }
+  .siraj-grid > .siraj-col-t-3 { grid-column: span 3; } .siraj-grid > .siraj-col-t-4 { grid-column: span 4; }
+  .siraj-grid > .siraj-col-t-5 { grid-column: span 5; } .siraj-grid > .siraj-col-t-6 { grid-column: span 6; }
+  .siraj-grid > .siraj-col-t-7 { grid-column: span 7; } .siraj-grid > .siraj-col-t-8 { grid-column: span 8; }
+}
+@media (min-width: 1200px) {
+  .siraj-grid > .siraj-col-d-1 { grid-column: span 1; } .siraj-grid > .siraj-col-d-2 { grid-column: span 2; }
+  .siraj-grid > .siraj-col-d-3 { grid-column: span 3; } .siraj-grid > .siraj-col-d-4 { grid-column: span 4; }
+  .siraj-grid > .siraj-col-d-5 { grid-column: span 5; } .siraj-grid > .siraj-col-d-6 { grid-column: span 6; }
+  .siraj-grid > .siraj-col-d-7 { grid-column: span 7; } .siraj-grid > .siraj-col-d-8 { grid-column: span 8; }
+  .siraj-grid > .siraj-col-d-9 { grid-column: span 9; } .siraj-grid > .siraj-col-d-10 { grid-column: span 10; }
+  .siraj-grid > .siraj-col-d-11 { grid-column: span 11; } .siraj-grid > .siraj-col-d-12 { grid-column: span 12; }
+}
+/* Auto-fit card grid (1 → 2 → 3/4 columns) that still sits on the gutter tokens */
+.siraj-autogrid { display: grid; gap: var(--siraj-space-24); grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--siraj-min, 280px)), 1fr)); }
+
+/* Grid overlay — architectural reference, toggle with [data-grid-overlay] on the container */
+.siraj-overlay-host { position: relative; }
+[data-grid-overlay="on"] .siraj-grid-overlay { display: grid; }
+.siraj-grid-overlay {
+  display: none; position: absolute; inset: 0; pointer-events: none; z-index: var(--siraj-z-raised);
+  grid-template-columns: repeat(var(--_cols, 4), minmax(0, 1fr)); column-gap: var(--siraj-grid-mobile-gutter);
+  --_cols: var(--siraj-grid-mobile-columns);
+}
+.siraj-grid-overlay > span { background: color-mix(in srgb, var(--siraj-accent) 8%, transparent); border-inline: 1px solid color-mix(in srgb, var(--siraj-accent) 22%, transparent); }
+@media (min-width: 834px) { .siraj-grid-overlay { --_cols: var(--siraj-grid-tablet-columns); column-gap: var(--siraj-grid-tablet-gutter); } }
+@media (min-width: 1200px) { .siraj-grid-overlay { --_cols: var(--siraj-grid-desktop-columns); column-gap: var(--siraj-grid-desktop-gutter); } }
+
+/* ---- Signature marks ------------------------------------------------------ */
+/* Lumen ◆ — 45° Stone diamond. Bullet, separator, active marker, map pin head. */
+.siraj-lumen { display: inline-block; flex: none; width: var(--siraj-c-lumen-md); height: var(--siraj-c-lumen-md); background: var(--siraj-lumen); transform: rotate(45deg); vertical-align: 0.15em; }
+.siraj-lumen--sm { width: var(--siraj-c-lumen-sm); height: var(--siraj-c-lumen-sm); }
+.siraj-lumen--lg { width: var(--siraj-c-lumen-lg); height: var(--siraj-c-lumen-lg); }
+.siraj-lumen--accent { background: var(--siraj-accent); }
+
+/* Stone hairline at 70% */
+.siraj-rule { border: 0; height: 1px; margin: 0; background: var(--siraj-lumen); opacity: var(--siraj-border-rule-opacity, 0.7); }
+.siraj-rule--short { width: 48px; }
+
+/* The Silk Corner — the system's only radius. Top-end corner (top-left in RTL). */
+.siraj-silk-corner { border-start-end-radius: min(var(--siraj-radius-silk), 33%); overflow: hidden; }
+
+/* Media: architecture is never cropped by accident — cover with a declared focal point */
+.siraj-media { position: relative; overflow: hidden; background: var(--siraj-surface-alt); }
+.siraj-media > img { width: 100%; height: 100%; object-fit: cover; object-position: var(--siraj-focus-x, 50%) var(--siraj-focus-y, 45%); }
+.siraj-ratio-4x5 { aspect-ratio: 4 / 5; } .siraj-ratio-1x1 { aspect-ratio: 1; } .siraj-ratio-16x9 { aspect-ratio: 16 / 9; }
+.siraj-ratio-3x2 { aspect-ratio: 3 / 2; } .siraj-ratio-9x16 { aspect-ratio: 9 / 16; } .siraj-ratio-21x9 { aspect-ratio: 21 / 9; }
+
+/* Data slot — unconfirmed facts always render as the label + «—» */
+.siraj-slot { font-family: var(--siraj-font-numeric); font-weight: 300; color: var(--siraj-text-muted); }
+
+/* Logo: official SVG files only. Two images, one per theme. */
+.siraj-logo { display: inline-flex; flex: none; width: var(--siraj-logo-w, var(--siraj-c-logo-header-width)); min-width: var(--siraj-c-logo-min-width); }
+.siraj-logo img { width: 100%; height: auto; }
+.siraj-logo .siraj-logo--on-dark { display: none; }
+[data-theme="dark"] .siraj-logo .siraj-logo--on-light, [data-theme="deep"] .siraj-logo .siraj-logo--on-light { display: none; }
+[data-theme="dark"] .siraj-logo .siraj-logo--on-dark, [data-theme="deep"] .siraj-logo .siraj-logo--on-dark { display: block; }
+[data-theme="light"] .siraj-logo .siraj-logo--on-dark { display: none; }
+[data-theme="light"] .siraj-logo .siraj-logo--on-light { display: block; }
+
+/* Icons (sprite symbols from 07-Icon-System, inlined once per page) */
+.siraj-icon { width: var(--siraj-c-icon-lg); height: var(--siraj-c-icon-lg); flex: none; color: currentColor; }
+.siraj-icon--sm { width: var(--siraj-c-icon-sm); height: var(--siraj-c-icon-sm); --siraj-icon-stroke: 1.5; }
+.siraj-icon--md { width: var(--siraj-c-icon-md); height: var(--siraj-c-icon-md); --siraj-icon-stroke: 1.5; }
+.siraj-icon--xl { width: var(--siraj-c-icon-xl); height: var(--siraj-c-icon-xl); }
+.siraj-icon--48 { width: 48px; height: 48px; }
+[dir="rtl"] .siraj-icon--mirror { transform: scaleX(-1); }
+
+/* ---- Environments --------------------------------------------------------- */
+.siraj-env-g1 { background: var(--siraj-gradient-g1); }
+.siraj-env-photo { position: relative; isolation: isolate; color: var(--siraj-color-ivory); }
+.siraj-env-photo::after { content: ""; position: absolute; inset: 0; background: var(--siraj-gradient-scrim); z-index: -1; }
+.siraj-env-photo > img.siraj-env-photo__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+
+/* ---- Motion hooks ----------------------------------------------------------
+   data-siraj-motion="micro|fast|standard|emphasis|hero|cinematic" on any element.
+   siraj-ds.js marks elements .is-pending when they start below the fold and .is-in
+   when they enter. Without JS (or with reduced motion) everything is simply visible. */
+[data-siraj-motion] { --_m: standard; }
+[data-siraj-motion].is-pending { opacity: 0; transform: translate3d(0, var(--_t, var(--siraj-motion-standard-translate)), 0) scale(var(--_s, 1)); filter: blur(var(--_b, 0px)); }
+[data-siraj-motion].is-in {
+  opacity: 1; transform: none; filter: none;
+  transition-property: opacity, transform, filter;
+  transition-duration: var(--_d, var(--siraj-motion-standard-duration));
+  transition-timing-function: var(--_e, var(--siraj-motion-standard-ease));
+  transition-delay: calc(var(--siraj-i, 0) * var(--_st, 0ms));
+}
+[data-siraj-motion="micro"]     { --_d: var(--siraj-motion-micro-duration);     --_e: var(--siraj-motion-micro-ease);     --_t: var(--siraj-motion-micro-translate);     --_s: var(--siraj-motion-micro-scale);     --_b: var(--siraj-motion-micro-blur);     --_st: var(--siraj-motion-micro-stagger); }
+[data-siraj-motion="fast"]      { --_d: var(--siraj-motion-fast-duration);      --_e: var(--siraj-motion-fast-ease);      --_t: var(--siraj-motion-fast-translate);      --_s: var(--siraj-motion-fast-scale);      --_b: var(--siraj-motion-fast-blur);      --_st: var(--siraj-motion-fast-stagger); }
+[data-siraj-motion="standard"]  { --_d: var(--siraj-motion-standard-duration);  --_e: var(--siraj-motion-standard-ease);  --_t: var(--siraj-motion-standard-translate);  --_s: var(--siraj-motion-standard-scale);  --_b: var(--siraj-motion-standard-blur);  --_st: var(--siraj-motion-standard-stagger); }
+[data-siraj-motion="emphasis"]  { --_d: var(--siraj-motion-emphasis-duration);  --_e: var(--siraj-motion-emphasis-ease);  --_t: var(--siraj-motion-emphasis-translate);  --_s: var(--siraj-motion-emphasis-scale);  --_b: var(--siraj-motion-emphasis-blur);  --_st: var(--siraj-motion-emphasis-stagger); }
+[data-siraj-motion="hero"]      { --_d: var(--siraj-motion-hero-duration);      --_e: var(--siraj-motion-hero-ease);      --_t: var(--siraj-motion-hero-translate);      --_s: var(--siraj-motion-hero-scale);      --_b: var(--siraj-motion-hero-blur);      --_st: var(--siraj-motion-hero-stagger); }
+[data-siraj-motion="cinematic"] { --_d: var(--siraj-motion-cinematic-duration); --_e: var(--siraj-motion-cinematic-ease); --_t: var(--siraj-motion-cinematic-translate); --_s: var(--siraj-motion-cinematic-scale); --_b: var(--siraj-motion-cinematic-blur); --_st: var(--siraj-motion-cinematic-stagger); }
+@media (prefers-reduced-motion: reduce) {
+  [data-siraj-motion].is-pending { transform: none; filter: none; }
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+
+/* ---- Print ---------------------------------------------------------------- */
+@media print {
+  .siraj-no-print { display: none !important; }
+  [data-siraj-motion] { opacity: 1 !important; transform: none !important; filter: none !important; }
+}

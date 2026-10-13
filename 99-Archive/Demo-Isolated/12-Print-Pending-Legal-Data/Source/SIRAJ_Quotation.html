@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIRAJ — Quotation · EN / AR</title>
+<link rel="stylesheet" href="../../../19-Templates/docs/css/siraj-doc.css">
+<script src="../../../19-Templates/docs/js/brand-config.js"></script>
+<script src="../../../19-Templates/docs/js/siraj-doc.js" defer></script>
+<style>
+  .qt .meta { --meta-cols: 4; margin-top: 5mm; }
+  .qt .hero { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); margin-top: 6mm; }
+  .qt .hero .who { grid-column: 1 / span 5; }
+  .qt .hero .img { grid-column: 7 / span 6; }
+  .qt .hero .img .frame { height: 44mm; border-start-end-radius: 16mm 12mm; overflow: hidden; background: var(--d-linen); }
+  .qt .hero .img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+  .qt .hero .img .cap { margin-top: 2mm; font-size: 5.4pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-ash); }
+  .qt .spec { display: grid; grid-template-columns: repeat(6, 1fr); column-gap: var(--gutter); margin-top: 6mm; padding: 3.4mm 0; border-top: 0.5pt solid var(--d-rule); border-bottom: 0.5pt solid var(--d-rule); }
+  .qt .spec .k { font-size: 5.4pt; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--d-maroon); line-height: 3mm; }
+  .qt .spec .k { display: flex; justify-content: space-between; gap: 1mm; }
+  .qt .spec .k [lang="ar"] { font-size: 6.8pt; letter-spacing: 0; text-transform: none; }
+  .qt .spec .v { font-size: 10pt; font-weight: 300; color: var(--d-ink-strong); margin-top: 1mm; }
+  .qt table.doc-table { margin-top: 6mm; }
+  .qt .after { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); margin-top: 3mm; }
+  .qt .after .totals { grid-column: 7 / span 6; width: auto; }
+  .qt .after .vatnote { grid-column: 1 / span 5; font-size: 6.6pt; line-height: 3.5mm; color: var(--d-ash); padding-top: 2.4mm; }
+  .qt .plan { margin-top: 6mm; }
+  .qt .plan table { font-size: 7.8pt; }
+  .qt .plan td { padding-top: 1.6mm; padding-bottom: 1.6mm; }
+  .qt .plan .pct { width: 14mm; }
+  .qt .terms { margin-top: 2mm; font-size: 7.6pt; line-height: 3.9mm; }
+  .qt .terms [lang="ar"] { font-size: 8.4pt; line-height: 4.6mm; }
+  .qt .accept { margin-top: auto; margin-bottom: 26mm; }
+  .qt .accept .sig { --sig-cols: 3; }
+</style>
+</head>
+<body data-preview-eyebrow="SIRAJ · Business documents · Quotation"
+      data-preview-title="Quotation — residence sale · two pages"
+      data-preview-note="Page 1: property, priced items, payment plan (instalments calculated from the total). Page 2: bilingual terms (English left, Arabic right) and acceptance. Fictional client."
+      data-preview-cols="2">
+
+<!-- ============================================================ PAGE 1 == -->
+<section class="page qt" lang="en" dir="ltr" data-label="Quotation · page 1">
+  <header class="doc-head" style="min-height:22mm">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="co"><strong>{{company.name_en}}</strong>{{contact.cr_number}} · VATIN {{print.vatin}}<span lang="ar">{{company.name_ar}}</span></div>
+  </header>
+
+  <div class="title-bi"><span class="en">Quotation</span><span class="ar" lang="ar">عرض سعر</span></div>
+
+  <div class="meta">
+    <div><div class="k-bi bi-line"><span>Quotation no.</span><span lang="ar">رقم العرض</span></div><div class="v">SRJ-QT-2026-0412</div></div>
+    <div><div class="k-bi bi-line"><span>Date</span><span lang="ar">التاريخ</span></div><div class="v">11 Oct 2026</div></div>
+    <div><div class="k-bi bi-line"><span>Valid until</span><span lang="ar">صالح حتى</span></div><div class="v">25 Oct 2026</div></div>
+    <div><div class="k-bi bi-line"><span>Consultant</span><span lang="ar">المستشار</span></div><div class="v">{{print.people.card.name_en}}</div></div>
+  </div>
+
+  <div class="hero">
+    <div class="who">
+      <div class="blk-k"><span>Prepared for</span><span lang="ar">أُعدّ لـ</span></div>
+      <div class="party">
+        <strong>Mr. Ahmed Al Rawahi</strong>
+        <span lang="ar">السيد أحمد الرواحي</span>
+        <span class="muted">P.O. Box 123, P.C. 112 · Ruwi, Muscat<br>+968 9200 0000 · a.alrawahi@example.com</span>
+      </div>
+      <div class="blk-k" style="margin-top:6mm"><span>Development</span><span lang="ar">المشروع</span></div>
+      <div class="party">
+        <strong>{{demo_projects.noor.en}} · Residence 1204</strong>
+        <span lang="ar">{{demo_projects.noor.ar}} · الوحدة 1204</span>
+        <span class="muted">{{demo_projects.noor.location_en}} · {{demo_projects.noor.floors}} floors · {{demo_projects.noor.units}} residences</span>
+      </div>
+    </div>
+    <div class="img"><div class="frame"><img src="../../../08-Photography/Library/SIRAJ_Photo_Residential-Tower-Golden-Hour_v1.0.jpg" alt="{{demo_projects.noor.en}}"></div><div class="cap">{{demo_projects.noor.en}} · Artist's impression</div></div>
+  </div>
+
+  <div class="spec">
+    <div><div class="k">Floor <span lang="ar">الطابق</span></div><div class="v">12</div></div>
+    <div><div class="k">Bedrooms <span lang="ar">الغرف</span></div><div class="v">3</div></div>
+    <div><div class="k">Internal <span lang="ar">الداخلية</span></div><div class="v">186 m²</div></div>
+    <div><div class="k">Balcony <span lang="ar">الشرفة</span></div><div class="v">24 m²</div></div>
+    <div><div class="k">View <span lang="ar">الإطلالة</span></div><div class="v">Sea</div></div>
+    <div><div class="k">Handover <span lang="ar">التسليم</span></div><div class="v">{{demo_projects.noor.handover}}</div></div>
+  </div>
+
+  <table class="doc-table doc-table--1l" data-calc data-vat="0">
+    <thead><tr>
+      <th class="idx">#</th>
+      <th>Item <span lang="ar">البند</span></th>
+      <th class="num">Qty <span lang="ar">الكمية</span></th>
+      <th class="num">Price <span lang="ar">السعر</span></th>
+      <th class="num">Amount (OMR) <span lang="ar">المبلغ (ر.ع.)</span></th>
+    </tr></thead>
+    <tbody>
+      <tr data-qty="1" data-rate="232500"><td class="idx">01</td><td>Residence 1204, three bedrooms<span lang="ar">الوحدة 1204، ثلاث غرف نوم</span></td><td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="amount"></td></tr>
+      <tr data-qty="1" data-rate="6500"><td class="idx">02</td><td>Second covered parking bay<span lang="ar">موقف مظلل إضافي</span></td><td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="amount"></td></tr>
+      <tr data-qty="1" data-rate="3200"><td class="idx">03</td><td>Storage room B2-14<span lang="ar">غرفة تخزين B2-14</span></td><td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="amount"></td></tr>
+      <tr data-qty="1" data-rate="4800"><td class="idx">04</td><td>Finish pack — Sand palette<span lang="ar">باقة التشطيب — لوحة الرمل</span></td><td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="amount"></td></tr>
+      <tr data-qty="1" data-rate="-5000"><td class="idx">05</td><td>Early-reservation incentive<span lang="ar">حافز الحجز المبكر</span></td><td class="num">1</td><td class="num" data-out="rate"></td><td class="num" data-out="amount"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="after">
+    <div class="vatnote">VAT shown at 0% for this residential sale — Finance to confirm the treatment per transaction. Registration fees are payable by the purchaser at the Ministry of Housing.</div>
+    <div class="totals">
+      <div class="row"><span class="lbl">Subtotal <span lang="ar">المجموع</span></span><span class="val" data-total="subtotal"></span></div>
+      <div class="row"><span class="lbl">VAT 0% <span lang="ar">الضريبة</span></span><span class="val" data-total="vat"></span></div>
+      <div class="row row--grand"><span class="lbl">Total price <span lang="ar">السعر الإجمالي</span></span><span class="val"><span class="cur">OMR</span><span data-total="total"></span></span></div>
+    </div>
+  </div>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>Page <span lang="ar">صفحة</span></b><span data-page></span> / <span data-pages></span></span></div>
+    <div class="bi4">
+      <div><b>Sales centre</b>{{contact.address_en|first}}<br>{{contact.po_box}}</div>
+      <div><b>Contact</b>T {{contact.phone}}<br>{{contact.social_handle}}</div>
+      <div lang="ar"><b>تواصل</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi><br><bdi dir="ltr">{{contact.social_handle}}</bdi></div>
+      <div lang="ar"><b>مركز المبيعات</b>{{contact.address_ar|first}}<br>{{print.po_box_ar}}</div>
+    </div>
+  </footer>
+</section>
+
+<!-- ============================================================ PAGE 2 == -->
+<section class="page qt" lang="en" dir="ltr" data-label="Quotation · page 2 · payment plan, terms &amp; acceptance">
+  <header class="run-head">
+    <div class="lk lk--word"><img src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ"></div>
+    <div class="rh"><span>Quotation SRJ-QT-2026-0412</span><i></i><span lang="ar">عرض سعر</span></div>
+  </header>
+
+
+  <div class="eyebrow-d" style="justify-content:space-between"><span style="display:flex;gap:2mm;align-items:center"><i class="lumen"></i>Payment plan</span><span lang="ar" style="font-size:8pt">خطة الدفع</span></div>
+  <div class="plan">
+    <table class="doc-table">
+      <thead><tr><th class="pct">%</th><th>Milestone <span lang="ar">المرحلة</span></th><th>Due <span lang="ar">الاستحقاق</span></th><th class="num">Amount (OMR) <span lang="ar">المبلغ (ر.ع.)</span></th></tr></thead>
+      <tbody>
+        <tr><td class="pct num" style="text-align:start">10%</td><td>Reservation and signature of the SPA<span lang="ar">الحجز وتوقيع اتفاقية البيع والشراء</span></td><td>On signing</td><td class="num" data-pct="10"></td></tr>
+        <tr><td class="pct num" style="text-align:start">20%</td><td>Within 60 days of signing<span lang="ar">خلال 60 يومًا من التوقيع</span></td><td>Dec 2026</td><td class="num" data-pct="20"></td></tr>
+        <tr><td class="pct num" style="text-align:start">20%</td><td>Completion of the structure<span lang="ar">اكتمال الهيكل الإنشائي</span></td><td>Q2 2027</td><td class="num" data-pct="20"></td></tr>
+        <tr><td class="pct num" style="text-align:start">20%</td><td>Completion of the façade<span lang="ar">اكتمال الواجهات</span></td><td>Q3 2027</td><td class="num" data-pct="20"></td></tr>
+        <tr><td class="pct num" style="text-align:start">30%</td><td>Handover<span lang="ar">التسليم</span></td><td>{{demo_projects.noor.handover}}</td><td class="num" data-pct="30"></td></tr>
+      </tbody>
+    </table>
+    <div class="totals" style="margin-top:1mm"><div class="row row--grand"><span class="lbl">Total <span lang="ar">الإجمالي</span></span><span class="val"><span class="cur">OMR</span><span data-total="total"></span></span></div></div>
+  </div>
+
+  <div class="eyebrow-d mt-3" style="justify-content:space-between"><span style="display:flex;gap:2mm;align-items:center"><i class="lumen"></i>Terms</span><span lang="ar" style="font-size:8pt">الشروط</span></div>
+  <div class="bi-cols bi-cols--ruled terms mt-1">
+    <ol class="clauses" lang="en">
+      <li>Prices are in Omani rials and valid until the date shown above.</li>
+      <li>The residence is reserved only on receipt of the reservation payment and signature of the Sale &amp; Purchase Agreement (SPA).</li>
+      <li>Areas are approximate and measured to the internal face of walls; final areas are confirmed at handover.</li>
+      <li>The finish pack follows the approved specification; images are artist's impressions.</li>
+      <li>The SPA prevails over this quotation in case of any difference.</li>
+    </ol>
+    <ol class="clauses" lang="ar">
+      <li>الأسعار بالريال العُماني وسارية حتى التاريخ المذكور أعلاه.</li>
+      <li>لا تُحجز الوحدة إلا بعد استلام دفعة الحجز وتوقيع اتفاقية البيع والشراء.</li>
+      <li>المساحات تقريبية ومقاسة حتى الوجه الداخلي للجدران، وتُؤكَّد المساحات النهائية عند التسليم.</li>
+      <li>تتبع باقة التشطيب المواصفات المعتمدة، والصور تصوّر فنّي.</li>
+      <li>تسود اتفاقية البيع والشراء على هذا العرض في حال وجود أي اختلاف.</li>
+    </ol>
+  </div>
+
+  <div class="accept">
+    <div class="eyebrow-d" style="justify-content:space-between"><span style="display:flex;gap:2mm;align-items:center"><i class="lumen"></i>Acceptance</span><span lang="ar" style="font-size:8pt">القبول</span></div>
+    <div class="sig mt-1">
+      <div><div class="sig__line"></div><div class="sig__lbl"><b>Purchaser</b> · المشتري<br>Mr. Ahmed Al Rawahi</div></div>
+      <div><div class="sig__line"></div><div class="sig__lbl"><b>For SIRAJ</b> · عن سراج<br>{{print.people.card.name_en}}</div></div>
+      <div><div class="sig__line"></div><div class="sig__lbl"><b>Date</b> · التاريخ<br>&nbsp;</div></div>
+    </div>
+  </div>
+
+  <footer class="doc-foot">
+    <div class="doc-foot__bar"><span class="ln"></span><span class="folio"><b>Page <span lang="ar">صفحة</span></b><span data-page></span> / <span data-pages></span></span></div>
+    <div class="bi4">
+      <div><b>Sales centre</b>{{contact.address_en|first}}<br>{{contact.po_box}}</div>
+      <div><b>Contact</b>T {{contact.phone}}<br>{{contact.social_handle}}</div>
+      <div lang="ar"><b>تواصل</b>هاتف <bdi dir="ltr">{{contact.phone}}</bdi><br><bdi dir="ltr">{{contact.social_handle}}</bdi></div>
+      <div lang="ar"><b>مركز المبيعات</b>{{contact.address_ar|first}}<br>{{print.po_box_ar}}</div>
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>

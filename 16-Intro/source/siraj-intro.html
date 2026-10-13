@@ -11,17 +11,24 @@
   3.6  The ribbon leaves through the upper end. The two Lumen diamonds ignite softly and settle.
   4.6  Final frame: official logo, strong negative space, stable composition (hold to 6.0).
   Query: ?fmt=16x9|9x16|1x1  &alpha=1 (transparent background)  &lockup=1 (adds bilingual descriptor)  &line=1 (proposed brand line)
+  AIR (client rule 2026-10-13): the breeze is what moves the silk. 0–1.5 s a whisper of air carries the dark silk
+  surface while a warm light travels over it; the ribbon's speed follows the air, with one gentle gust as it uncovers
+  the wordmark (≈ 1.6 s), then the air drops and everything SETTLES. One direction (right → left); no loops, no storm.
   Driven deterministically by window.seek(t) — see tools/render-motion.js. Open in a browser to preview (auto-plays).
 -->
 <link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
 <script src="../../15-Motion-System/lib/siraj-motion.js"></script>
 <script src="../../15-Motion-System/lib/siraj-footage.js"></script>
 <script src="../../15-Motion-System/lib/siraj-logo-data.js"></script>
+<script src="../../15-Motion-System/lib/siraj-motion-tokens.js"></script>
+<script src="../../15-Motion-System/lib/siraj-silk-engine.js"></script>
 <style>
   html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #030101; }
   body.alpha { background: transparent; }
   .layer { position: absolute; inset: 0; width: 100%; height: 100%; }
   #rib { object-fit: cover; }
+  #surf { object-fit: cover; opacity: 0; will-change: transform, opacity; }
+  #sweep { mix-blend-mode: screen; opacity: 1; }
   #logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); overflow: visible; }
   .glow { position: absolute; width: 1px; height: 1px; border-radius: 50%; pointer-events: none; mix-blend-mode: screen;
           background: radial-gradient(circle, rgba(226,207,195,.85) 0%, rgba(199,154,156,.35) 22%, rgba(129,64,76,.12) 48%, rgba(96,39,51,0) 70%); }
@@ -32,6 +39,7 @@
 </head>
 <body>
 <div id="bg" class="layer"></div>
+<img id="surf" class="layer" alt=""><div id="sweep" class="layer"></div>
 <svg id="logo" xmlns="http://www.w3.org/2000/svg"></svg>
 <div id="g1" class="glow"></div><div id="g2" class="glow"></div>
 <div class="caption" id="cap"><div class="ar" id="capAr">سراج للتطوير العقاري</div><div class="en" id="capEn">Real Estate Development</div></div>
@@ -81,6 +89,15 @@ const bgEl = document.getElementById('bg');
 const rib = SirajFootage.ribbon(document.getElementById('rib'), { fmt: FMT });
 // the ribbon's passage through the clip (seconds of footage) mapped onto intro time 0.25 → 4.15 s
 const CLIP = SirajFootage.PASS[FMT];
+// AIR: the silk surface (real photograph) and the ribbon's speed follow one breeze, right → left
+const SK = window.SirajSilk;
+const WIND = { level: 'whisper', gust: { at: 1.25, rise: 0.75, hold: 0.3, fall: 1.6 }, seed: 2 };
+const surf = document.getElementById('surf'), sweepEl = document.getElementById('sweep');
+if (!ALPHA) surf.src = SK.ASSET.drapeDeep(FMT === '9x16' ? '9x16' : '16x9'); else surf.remove();
+// ribbon clip time = the integral of the air speed over the passage (0.25 → 4.15 s), normalised to the clip span
+const PASS = [0.25, 4.15], STEP = 1 / 120, SPD = [];
+let acc = 0; for (let u = PASS[0]; u <= PASS[1] + 1e-9; u += STEP) { SPD.push(acc); acc += (0.55 + SK.air(u, WIND).v) * STEP; }
+const passK = (t) => { if (t <= PASS[0]) return 0; if (t >= PASS[1]) return 1; const f = (t - PASS[0]) / STEP, i = Math.floor(f); return M.lerp(SPD[i], SPD[Math.min(i + 1, SPD.length - 1)], f - i) / acc; };
 
 window.seek = async (t) => {
   // background: darkness → lamp light breathing in at the upper end → settled deep maroon field
@@ -90,8 +107,15 @@ window.seek = async (t) => {
     const at = `${(80 - 6 * settle).toFixed(2)}% ${(16 + 6 * settle).toFixed(2)}%`;
     bgEl.style.background = `radial-gradient(ellipse 85% 95% at ${at}, ${mix('#0A0304', '#5A2430', light)} 0%, ${mix('#050102', '#3A141A', light)} 38%, ${mix('#030101', '#1C080B', light)} 72%, #030101 100%)`;
   }
-  // ribbon: real footage, time-mapped so its passage spans intro 0.25 → 4.15 s
-  const k = M.seg(t, 0.25, 3.9, E.linear);
+  // silk surface in low light, carried by the air; a warm light travels over it, then it sinks into the dark
+  if (!ALPHA) {
+    const vis = M.inOut(t, 0, 0.9, 1.7, 3.0, E.flow, E.drape) * 0.6;
+    surf.style.opacity = vis.toFixed(3);
+    SK.drift(surf, t, { W, level: 'whisper', gust: WIND.gust, seed: WIND.seed, extra: `scale(${(1.06 - 0.03 * M.seg(t, 0, 3, E.drape)).toFixed(4)}) ` });
+    SK.lightSweep(sweepEl, M.lerp(-0.15, 0.9, M.seg(t, 0.15, 2.6, E.glide)), M.inOut(t, 0.15, 0.9, 1.9, 2.8, E.flow, E.drape) * 0.55, { W, H, rtl: true, width: 0.22, strength: 0.2, wash: 0.03, color: '232,190,176' });
+  }
+  // ribbon: real footage; its speed follows the air (passage 0.25 → 4.15 s, gust ≈ 1.6 s)
+  const k = passK(t);
   await rib.at(M.lerp(CLIP[0], CLIP[1], k));
   rib.video.style.opacity = t < 0.25 || t > 4.6 ? 0 : 1;
 

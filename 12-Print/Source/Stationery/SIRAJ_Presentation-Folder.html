@@ -77,8 +77,8 @@
 
     <!-- back cover (x 12–237) -->
     <div class="t" style="left:34mm; top:271mm; width:181mm; display:grid; grid-template-columns:1fr 1fr; column-gap:6mm">
-      <div class="sand-small">{{company.name_en}}<br>{{contact.address_en}}<br>T {{contact.phone}} · {{contact.website}}</div>
-      <div class="sand-ar" style="font-size:7.5pt;line-height:4.2mm;color:rgba(214,192,178,.82)">{{company.name_ar}}<br>{{contact.address_ar}}<br>هاتف <bdi dir="ltr">{{contact.phone}}</bdi> · <bdi dir="ltr">{{contact.website}}</bdi></div>
+      <div class="sand-small">{{company.name_en}}<br>{{contact.address_en}}<br>T {{contact.phone}} · <bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi><br><bdi class="web">{{contact.website_display}}</bdi></div>
+      <div class="sand-ar" style="font-size:7.5pt;line-height:4.2mm;color:rgba(214,192,178,.82)">{{company.name_ar}}<br>{{contact.address_ar}}<br>هاتف <bdi dir="ltr">{{contact.phone}}</bdi> · <bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi></div>
     </div>
 
     <!-- pocket face, rotated 180° (inside-view box x 252–282, y 262 → outside box) -->
@@ -115,10 +115,7 @@
     <div class="panel-copy" style="left:253mm; top:24mm; width:181mm">
       <div class="eyebrow-d" style="justify-content:space-between"><span style="display:flex;align-items:center;gap:2mm"><i class="lumen"></i>Developments</span><span lang="ar" style="font-size:8pt;letter-spacing:0">مشاريعنا</span></div>
       <div class="mt-2">
-        <div class="proj"><div><div class="n">{{demo_projects.noor.en}}</div><div class="m">{{demo_projects.noor.type}} · {{demo_projects.noor.location_en}}</div></div><div><div class="a">{{demo_projects.noor.ar}}</div><div class="am">{{demo_projects.noor.location_ar}}</div></div></div>
-        <div class="proj"><div><div class="n">{{demo_projects.harir.en}}</div><div class="m">{{demo_projects.harir.type}} · {{demo_projects.harir.location_en}}</div></div><div><div class="a">{{demo_projects.harir.ar}}</div><div class="am">{{demo_projects.harir.location_ar}}</div></div></div>
-        <div class="proj"><div><div class="n">{{demo_projects.qandeel.en}}</div><div class="m">{{demo_projects.qandeel.type}} · {{demo_projects.qandeel.location_en}}</div></div><div><div class="a">{{demo_projects.qandeel.ar}}</div><div class="am">{{demo_projects.qandeel.location_ar}}</div></div></div>
-        <div class="proj"><div><div class="n">{{demo_projects.mishkat.en}}</div><div class="m">{{demo_projects.mishkat.type}} · {{demo_projects.mishkat.location_en}}</div></div><div><div class="a">{{demo_projects.mishkat.ar}}</div><div class="am">{{demo_projects.mishkat.location_ar}}</div></div></div>
+        <div class="proj"><div><div class="n">Siraj</div><div class="m">Residential apartments &amp; retail · Muscat</div></div><div><div class="a">«سراج»</div><div class="am">شقق سكنية ومحلات تجارية · مسقط</div></div></div>
       </div>
     </div>
 

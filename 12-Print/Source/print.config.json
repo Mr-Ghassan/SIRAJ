@@ -1,60 +1,60 @@
 {
-  "$note": "Print-only values that brand.config.json does not hold yet (all PLACEHOLDER). Merged into window.SIRAJ_CONFIG as `print` by tools/build-print.js. Move these into brand.config.json once confirmed by Finance/Legal.",
-  "vatin": "OM0000000000",
-  "vatin_status": "PLACEHOLDER",
+  "$note": "Print-only values. Legal/financial fields (VATIN, CR, bank) are NOT provided yet and render as «—»; they must be filled by Finance/Legal before any legal document is issued. People fields are template slots.",
+  "vatin": "—",
+  "vatin_status": "NOT PROVIDED",
   "vat_rate": 5,
-  "fax": "+968 2400 0001",
-  "po_box_ar": "ص.ب 000، ر.ب 100",
-  "po_box_ar_status": "PLACEHOLDER — Arabic form of contact.po_box",
-  "cr_number_ar": "س.ت 0000000",
+  "fax": "—",
+  "po_box_ar": "—",
+  "po_box_ar_status": "NOT PROVIDED",
+  "cr_number_ar": "—",
   "bank": {
-    "name_en": "Bank Name SAOG",
-    "name_ar": "اسم البنك ش.م.ع.ع",
+    "name_en": "—",
+    "name_ar": "—",
     "account_name_en": "SIRAJ Real Estate Development",
-    "account_no": "0000-000000-000",
-    "iban": "OM00 0000 0000 0000 0000 000",
-    "swift": "XXXXOMRX",
-    "status": "PLACEHOLDER"
+    "account_no": "—",
+    "iban": "—",
+    "swift": "—",
+    "status": "NOT PROVIDED"
   },
   "email": {
-    "logo_url": "https://sirajproperties.net/email/SIRAJ_Email-Logo_v1.0.png",
-    "logo_status": "PLACEHOLDER — upload 19-Templates/email-signature/assets/SIRAJ_Email-Logo_v1.0.png to this URL",
+    "logo_url": "assets/SIRAJ_Email-Logo_v1.0.png",
+    "logo_status": "Host this PNG on the company mail server or CDN and set the absolute URL here before deploying the signature.",
     "disclaimer_en": "This email and any attachments are confidential and intended solely for the addressee. If you received it in error, please notify the sender and delete it.",
     "disclaimer_ar": "هذه الرسالة وأي مرفقات بها سرية وموجهة إلى المرسل إليه فقط. إذا وصلتكم عن طريق الخطأ، يرجى إبلاغ المرسل وحذفها."
   },
   "people": {
-    "$note": "Fictional staff used in specimens only.",
+    "$note": "Template slots — replace with the real person when issuing.",
     "card": {
-      "name_en": "Khalid Al Balushi",
-      "name_ar": "خالد البلوشي",
-      "title_en": "Director, Sales & Leasing",
-      "title_ar": "مدير المبيعات والتأجير",
-      "mobile": "+968 9100 0000",
-      "email_user": "k.albalushi"
+      "name_en": "Name Surname",
+      "name_ar": "الاسم",
+      "title_en": "Job title",
+      "title_ar": "المسمى الوظيفي",
+      "mobile": "77714404",
+      "email_user": ""
     },
     "id": {
-      "name_en": "Maryam Al Lawati",
-      "name_ar": "مريم اللواتي",
-      "title_en": "Senior Architect",
-      "title_ar": "مهندسة معمارية أولى",
-      "dept_en": "Design Management",
-      "dept_ar": "إدارة التصميم",
-      "staff_no": "SRJ-0427",
+      "name_en": "Name Surname",
+      "name_ar": "الاسم",
+      "title_en": "Job title",
+      "title_ar": "المسمى الوظيفي",
+      "dept_en": "Department",
+      "dept_ar": "الإدارة",
+      "staff_no": "—",
       "issued": "10/2026",
       "expires": "10/2028",
-      "blood": "O+"
+      "blood": "—"
     },
     "sender": {
-      "name_en": "Salim Al Hinai",
-      "name_ar": "سالم الهنائي",
-      "title_en": "Chief Executive Officer",
-      "title_ar": "الرئيس التنفيذي"
+      "name_en": "Name Surname",
+      "name_ar": "الاسم",
+      "title_en": "Job title",
+      "title_ar": "المسمى الوظيفي"
     },
     "finance": {
-      "name_en": "Noura Al Siyabi",
-      "name_ar": "نورة السيابية",
-      "title_en": "Finance Manager",
-      "title_ar": "مديرة المالية"
+      "name_en": "Name Surname",
+      "name_ar": "الاسم",
+      "title_en": "Job title",
+      "title_ar": "المسمى الوظيفي"
     }
   }
 }

@@ -35,19 +35,53 @@ window.SIRAJ_CONFIG = {
   },
   "contact": {
     "website": "sirajproperties.net",
-    "website_status": "CONFIRMED",
+    "website_status": "CONFIRMED — always written in full and in capitals: WWW.SIRAJPROPERTIES.NET (client rule 2026-10-13)",
     "email": "info@sirajproperties.net",
-    "email_status": "Domain confirmed (sirajproperties.net); mailbox name to be confirmed",
-    "phone": "+968 2400 0000",
-    "phone_status": "PLACEHOLDER",
-    "whatsapp": "+968 9000 0000",
-    "address_en": "Al Khuwair, Muscat, Sultanate of Oman",
-    "address_ar": "الخوير، مسقط، سلطنة عُمان",
-    "po_box": "P.O. Box 000, P.C. 100",
-    "cr_number": "CR 0000000",
-    "social_handle": "@SIRAJPROPERTIES",
-    "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES",
-    "instagram": "https://instagram.com/sirajproperties"
+    "email_status": "NOT FOR USE in public materials (mailbox unconfirmed); kept for reference",
+    "phone": "77714404",
+    "phone_status": "CONFIRMED (client, 2026-10-13)",
+    "whatsapp": "77714404",
+    "address_en": "Muscat, Sultanate of Oman",
+    "address_ar": "مسقط، سلطنة عُمان",
+    "po_box": "—",
+    "cr_number": "—",
+    "social_handle": "SIRAJPROPERTIES",
+    "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES. Shown as the Instagram icon + SIRAJPROPERTIES; never with «@» (client rule 2026-10-13)",
+    "instagram": "https://instagram.com/sirajproperties",
+    "post_contact_policy": "Posts, stories and video outros show the phone number and the Instagram icon + SIRAJPROPERTIES only (client rules 2026-10-12/13). Never write «@»: the Instagram glyph replaces it. Stationery, presentations, the email signature and documents may add the website, always written WWW.SIRAJPROPERTIES.NET. Tokens: {contact.phone_post}, {contact.social_handle}, {contact.website_display}; {contact.post_line} gives phone · [Instagram icon] SIRAJPROPERTIES.",
+    "phone_display": "77714404",
+    "address_status": "City only (street address not provided)",
+    "whatsapp_status": "same as phone (assumed for WhatsApp links only; confirm)",
+    "website_display": "WWW.SIRAJPROPERTIES.NET",
+    "website_url": "https://www.sirajproperties.net",
+    "social_display": "SIRAJPROPERTIES",
+    "social_icon": "07-Icon-System/svg/filled/siraj-icon-instagram.svg",
+    "contact_sets": {
+      "post": [
+        "phone",
+        "instagram"
+      ],
+      "outro": [
+        "phone",
+        "instagram"
+      ],
+      "stationery": [
+        "phone",
+        "instagram",
+        "website"
+      ],
+      "presentation": [
+        "phone",
+        "instagram",
+        "website"
+      ],
+      "email_signature": [
+        "phone",
+        "instagram",
+        "website"
+      ]
+    },
+    "social_icon_svg": "<svg class=\"ig\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-label=\"Instagram\" role=\"img\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"><path d=\"M3.5 3.5H20.5V20.5H3.5Z\"/><path d=\"M7.6 12A4.4 4.4 0 1 0 16.4 12A4.4 4.4 0 1 0 7.6 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M17 5.6L18.4 7L17 8.4L15.6 7Z\"/></svg>"
   },
   "brand_line": {
     "en": "Light, built.",
@@ -62,7 +96,8 @@ window.SIRAJ_CONFIG = {
     "location_en": "Muscat",
     "location_ar": "مسقط",
     "type": "Mixed-use: residences above, retail ground floor (6 storeys)",
-    "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed."
+    "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed.",
+    "public_naming": "«المشروع المؤسِّس / The Founding Project» is an INTERNAL term — never in public communication (client rule 2026-10-12). Publicly the project is «سراج» with its city (مسقط). Avoid self-referential strategy lines such as «المشروع الذي يؤسس معيار سراج»."
   },
   "demo_projects": {
     "$note": "Fictional projects used to demonstrate the system. Not real developments.",
@@ -105,63 +140,71 @@ window.SIRAJ_CONFIG = {
       "handover": "Q3 2028"
     }
   },
+  "silk_policy": {
+    "rule": "Real silk only. Every silk background is a photograph of real silk fabric; moving silk is real silk footage keyed to alpha. Never a graphic, vector or CG render.",
+    "rule_ar": "حرير حقيقي فقط: كل خلفية حريرية صورة فوتوغرافية لقماش حرير حقيقي، والحرير المتحرك لقطات فيديو حقيقية؛ لا رسومات ولا تصاميم ولا محاكاة حاسوبية.",
+    "since": "2026-10-11",
+    "stills": "06-SIRAJ-Silk/Stills",
+    "footage": "06-SIRAJ-Silk/Footage",
+    "cg_archive": "99-Archive/Silk-CG-v1.0 (reference/previs only)"
+  },
   "print": {
-    "$note": "Print-only values that brand.config.json does not hold yet (all PLACEHOLDER). Merged into window.SIRAJ_CONFIG as `print` by tools/build-print.js. Move these into brand.config.json once confirmed by Finance/Legal.",
-    "vatin": "OM0000000000",
-    "vatin_status": "PLACEHOLDER",
+    "$note": "Print-only values. Legal/financial fields (VATIN, CR, bank) are NOT provided yet and render as «—»; they must be filled by Finance/Legal before any legal document is issued. People fields are template slots.",
+    "vatin": "—",
+    "vatin_status": "NOT PROVIDED",
     "vat_rate": 5,
-    "fax": "+968 2400 0001",
-    "po_box_ar": "ص.ب 000، ر.ب 100",
-    "po_box_ar_status": "PLACEHOLDER — Arabic form of contact.po_box",
-    "cr_number_ar": "س.ت 0000000",
+    "fax": "—",
+    "po_box_ar": "—",
+    "po_box_ar_status": "NOT PROVIDED",
+    "cr_number_ar": "—",
     "bank": {
-      "name_en": "Bank Name SAOG",
-      "name_ar": "اسم البنك ش.م.ع.ع",
+      "name_en": "—",
+      "name_ar": "—",
       "account_name_en": "SIRAJ Real Estate Development",
-      "account_no": "0000-000000-000",
-      "iban": "OM00 0000 0000 0000 0000 000",
-      "swift": "XXXXOMRX",
-      "status": "PLACEHOLDER"
+      "account_no": "—",
+      "iban": "—",
+      "swift": "—",
+      "status": "NOT PROVIDED"
     },
     "email": {
-      "logo_url": "https://sirajproperties.net/email/SIRAJ_Email-Logo_v1.0.png",
-      "logo_status": "PLACEHOLDER — upload 19-Templates/email-signature/assets/SIRAJ_Email-Logo_v1.0.png to this URL",
+      "logo_url": "assets/SIRAJ_Email-Logo_v1.0.png",
+      "logo_status": "Host this PNG on the company mail server or CDN and set the absolute URL here before deploying the signature.",
       "disclaimer_en": "This email and any attachments are confidential and intended solely for the addressee. If you received it in error, please notify the sender and delete it.",
       "disclaimer_ar": "هذه الرسالة وأي مرفقات بها سرية وموجهة إلى المرسل إليه فقط. إذا وصلتكم عن طريق الخطأ، يرجى إبلاغ المرسل وحذفها."
     },
     "people": {
-      "$note": "Fictional staff used in specimens only.",
+      "$note": "Template slots — replace with the real person when issuing.",
       "card": {
-        "name_en": "Khalid Al Balushi",
-        "name_ar": "خالد البلوشي",
-        "title_en": "Director, Sales & Leasing",
-        "title_ar": "مدير المبيعات والتأجير",
-        "mobile": "+968 9100 0000",
-        "email_user": "k.albalushi"
+        "name_en": "Name Surname",
+        "name_ar": "الاسم",
+        "title_en": "Job title",
+        "title_ar": "المسمى الوظيفي",
+        "mobile": "77714404",
+        "email_user": ""
       },
       "id": {
-        "name_en": "Maryam Al Lawati",
-        "name_ar": "مريم اللواتي",
-        "title_en": "Senior Architect",
-        "title_ar": "مهندسة معمارية أولى",
-        "dept_en": "Design Management",
-        "dept_ar": "إدارة التصميم",
-        "staff_no": "SRJ-0427",
+        "name_en": "Name Surname",
+        "name_ar": "الاسم",
+        "title_en": "Job title",
+        "title_ar": "المسمى الوظيفي",
+        "dept_en": "Department",
+        "dept_ar": "الإدارة",
+        "staff_no": "—",
         "issued": "10/2026",
         "expires": "10/2028",
-        "blood": "O+"
+        "blood": "—"
       },
       "sender": {
-        "name_en": "Salim Al Hinai",
-        "name_ar": "سالم الهنائي",
-        "title_en": "Chief Executive Officer",
-        "title_ar": "الرئيس التنفيذي"
+        "name_en": "Name Surname",
+        "name_ar": "الاسم",
+        "title_en": "Job title",
+        "title_ar": "المسمى الوظيفي"
       },
       "finance": {
-        "name_en": "Noura Al Siyabi",
-        "name_ar": "نورة السيابية",
-        "title_en": "Finance Manager",
-        "title_ar": "مديرة المالية"
+        "name_en": "Name Surname",
+        "name_ar": "الاسم",
+        "title_en": "Job title",
+        "title_ar": "المسمى الوظيفي"
       }
     }
   }

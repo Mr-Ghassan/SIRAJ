@@ -1,0 +1,18 @@
+{
+  "name": "Reel-Cover",
+  "kind": "publish",
+  "formats": [
+    "reel"
+  ],
+  "layout": "hero",
+  "env": "photo",
+  "photo": "14-Property-Marketing/12-Project-Siraj/Source/KeyVisuals/SIRAJ_Project-Siraj_KV_Lantern_9x16_v1.0.jpg",
+  "pos": "50% 60%",
+  "overlay": "scrim",
+  "display": true,
+  "ar": {
+    "eyebrow": "مسقط",
+    "title": "بيتٌ من ضوء.",
+    "end": "{contact.post_line}"
+  }
+}

@@ -47,7 +47,7 @@ Every project message answers one pillar clearly (a campaign covers all five):
 
 ## 6. Patterns
 
-**Post copy (on the image):** eyebrow (context, ≤ 5 words) → title (≤ 6 words, the one idea) → lead (one sentence, ≤ 14 words) → optional facts block (2–3 items) → end line (CTA + website).
+**Post copy (on the image):** eyebrow (context, ≤ 5 words) → title (≤ 6 words, the one idea) → lead (one sentence, ≤ 14 words) → optional facts block (2–3 items) → end line (CTA + phone · Instagram icon SIRAJPROPERTIES).
 
 **Caption (below the post):**
 ```
@@ -55,7 +55,7 @@ Every project message answers one pillar clearly (a campaign covers all five):
 
 [سطر أو سطران: حقيقة، أو تفصيل تصميم، أو ميزة موقع]
 
-سجّل اهتمامك: اتصل بنا على [رقم الهاتف] أو راسلنا على ‎@SIRAJPROPERTIES
+سجّل اهتمامك: اتصل بنا على 77714404 أو راسلنا في الرسائل الخاصة.
 
 #سراج #مسقط
 ```
@@ -70,7 +70,8 @@ Keep hashtags to 2–4 relevant ones (e.g. #سراج #مسقط #عقارات_ع�
 - Western digits: `168`, `24`, `2027`. Thousands separator comma: `145,000`.
 - Money: `145,000 ر.ع.` · «ابتداءً من 145,000 ر.ع.» (only with a confirmed price)
 - Area: `245 م²` · Dates: `الربع الرابع 2027`, `12 أكتوبر 2026` · Percent: `7.8%` (number first).
-- Handle: `@SIRAJPROPERTIES` (capitals). **Posts and captions give the phone number and the handle only — never the website** (client rule 2026-10-12).
+- Instagram: the Instagram icon + `SIRAJPROPERTIES` (capitals), **never «@»** (client rule 2026-10-13). **Posts give the phone number and the Instagram icon/handle only — never the website** (2026-10-12). Captions: phone + «راسلونا في الرسائل الخاصة».
+- Website (stationery, presentations, signature, documents only): always `WWW.SIRAJPROPERTIES.NET`, in full and in capitals.
 - Mixed runs (website, handle, phone) are wrapped to stay LTR inside Arabic (`[[…]]` in briefs).
 
 ## 8. Disclaimers (Arabic, use the relevant line — in the caption only, never on the design)
@@ -83,8 +84,8 @@ Keep hashtags to 2–4 relevant ones (e.g. #سراج #مسقط #عقارات_ع�
 ## 9. Worked examples
 
 **Pre-launch teaser («سراج»):**
-- On image: eyebrow «قريباً · مسقط» · title «أوّلُ / الضوء.» (Tajawal 200 / 800) · lead «قريباً، يُرفع الستار عن «سراج».» · end = contact line (phone · @SIRAJPROPERTIES)
-- Caption: «في مسقط، مبنى يُضيء من داخله.\n\n«سراج» يُكشف قريبًا: شقق سكنية ومحلات تجارية، وستائر من الطوب يعبرها الضوء.\n\nتصوّر معماري للمشروع.\n\nسجّل اهتمامك: اتصل بنا على [رقم الهاتف] أو راسلنا على ‎@SIRAJPROPERTIES\n\n#سراج #مسقط»
+- On image: eyebrow «قريباً · مسقط» · title «أوّلُ / الضوء.» (Tajawal 200 / 800) · lead «قريباً، يُرفع الستار عن «سراج».» · end = contact line (77714404 · Instagram icon SIRAJPROPERTIES)
+- Caption: «في مسقط، مبنى يُضيء من داخله.\n\n«سراج» يُكشف قريبًا: شقق سكنية ومحلات تجارية، وستائر من الطوب يعبرها الضوء.\n\nتصوّر معماري للمشروع.\n\nسجّل اهتمامك: اتصل بنا على 77714404 أو راسلنا في الرسائل الخاصة.\n\n#سراج #مسقط»
 
 **Brand statement:** title «نبني بالضوء،\nونترك التفاصيل تتكلّم.» · lead «عمارةٌ هادئة، ومواد صادقة، وضوءٌ يدخل كل بيت.»
 

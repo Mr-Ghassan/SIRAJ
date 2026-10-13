@@ -1,0 +1,32 @@
+{
+  "name": "Sold",
+  "kind": "template",
+  "formats": [
+    "post",
+    "square"
+  ],
+  "layout": "type",
+  "env": "maroon",
+  "still": "Drape-Lumen",
+  "display": true,
+  "ar": {
+    "eyebrow": "«سراج» · مسقط",
+    "title": "تمّ البيع.",
+    "blocks": [
+      {
+        "type": "details",
+        "rows": [
+          [
+            "الوحدة",
+            "—"
+          ],
+          [
+            "النوع",
+            "—"
+          ]
+        ]
+      }
+    ],
+    "end": "{contact.post_line}"
+  }
+}

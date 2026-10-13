@@ -1,0 +1,49 @@
+{
+  "name": "Investment-Opportunity",
+  "kind": "template",
+  "formats": [
+    "post",
+    "story"
+  ],
+  "layout": "window",
+  "env": "ivory",
+  "photo": "14-Property-Marketing/12-Project-Siraj/Source/Clean/SIRAJ_Project-Siraj_Front_Cloudy-Day_Clean_v1.0.jpg",
+  "pos": "50% 40%",
+  "ar": {
+    "eyebrow": "فرصة استثمارية",
+    "title": "«سراج» · مسقط",
+    "lead": "شقق سكنية ومحلات تجارية.",
+    "blocks": [
+      {
+        "type": "stats",
+        "cols": 3,
+        "items": [
+          {
+            "v": "—",
+            "l": "العائد المتوقّع"
+          },
+          {
+            "v": "—",
+            "l": "سعر المتر"
+          },
+          {
+            "v": "—",
+            "l": "التسليم"
+          }
+        ]
+      }
+    ],
+    "end": "{contact.post_line}"
+  },
+  "media": {
+    "h": 0.4
+  },
+  "per_format": {
+    "story": {
+      "media": {
+        "h": 0.36
+      }
+    }
+  },
+  "date": "v1"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Reservation",
+  "kind": "template",
+  "formats": [
+    "post",
+    "story"
+  ],
+  "layout": "window",
+  "env": "deep",
+  "photo": "14-Property-Marketing/12-Project-Siraj/Source/Clean/SIRAJ_Project-Siraj_Corner_Blue-Hour_Clean_v1.0.jpg",
+  "pos": "50% 50%",
+  "ar": {
+    "eyebrow": "الحجز",
+    "title": "احجز وحدتك في «سراج».",
+    "blocks": [
+      {
+        "type": "details",
+        "rows": [
+          [
+            "نوع الوحدة",
+            "—"
+          ],
+          [
+            "المساحة",
+            "—"
+          ],
+          [
+            "الدفعة الأولى",
+            "—"
+          ]
+        ]
+      }
+    ],
+    "end": "{contact.post_line}"
+  },
+  "media": {
+    "h": 0.36
+  },
+  "per_format": {
+    "story": {
+      "media": {
+        "h": 0.36
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Quote",
+  "kind": "publish",
+  "formats": [
+    "post",
+    "square"
+  ],
+  "layout": "type",
+  "env": "deep",
+  "still": "Drape-Deep",
+  "ar": {
+    "blocks": [
+      {
+        "type": "quote",
+        "text": "الضوء جزءٌ من العمارة،\nلا زينةٌ تُضاف إليها.",
+        "cite": "سراج للتطوير العقاري"
+      }
+    ],
+    "end": "{contact.post_line}"
+  },
+  "date": "v1"
+}

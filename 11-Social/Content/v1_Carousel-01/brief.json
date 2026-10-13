@@ -1,0 +1,19 @@
+{
+  "name": "Carousel-01",
+  "kind": "publish",
+  "formats": [
+    "carousel"
+  ],
+  "layout": "hero",
+  "env": "photo",
+  "photo": "14-Property-Marketing/12-Project-Siraj/Source/KeyVisuals/SIRAJ_Project-Siraj_KV_Veil_4x5_v1.0.jpg",
+  "pos": "50% 60%",
+  "overlay": "scrim",
+  "display": true,
+  "ar": {
+    "eyebrow": "قريباً · مسقط",
+    "title": "أوّلُ الضوء.",
+    "end": "{contact.post_line}"
+  },
+  "date": "v1"
+}

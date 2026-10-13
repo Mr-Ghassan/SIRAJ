@@ -69,3 +69,7 @@ html.has-marks .deboss { display: none; }   /* deboss is a separate die, never p
 /* dieline technical layer */
 .dieline { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
 html.no-dieline .dieline, html.no-dieline .dl-legend { display: none; }
+
+/* Instagram glyph (replaces «@», client rule 2026-10-13) and the website, always WWW.SIRAJPROPERTIES.NET */
+.ig { width: .95em; height: .95em; vertical-align: -0.14em; margin-right: .4em; display: inline-block; }
+.web { font-family: "Jost", sans-serif; letter-spacing: .06em; direction: ltr; unicode-bidi: isolate; }

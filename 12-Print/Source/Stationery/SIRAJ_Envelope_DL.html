@@ -30,9 +30,9 @@
 <section class="sheet env" data-w="220" data-h="110" data-bleed="0" data-label="Front · address side">
   <div class="art"><div class="face">
     <img class="word" src="../../../01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg" alt="SIRAJ">
-    <div class="ret"><strong style="font-weight:400;color:var(--d-ink-strong)">{{company.name_en}}</strong><br>{{contact.po_box}}<br>{{contact.address_en|lines}}</div>
-    <div class="ret-ar" lang="ar"><strong>{{company.name_ar}}</strong>{{print.po_box_ar}}<br>{{contact.address_ar}}</div>
-    <div class="to pv-only"><span class="ln">Mr. Ahmed Al Rawahi</span><span class="ln">P.O. Box 123, P.C. 112</span><span class="ln">Ruwi, Muscat</span><span class="ln">Sultanate of Oman</span></div>
+    <div class="ret"><strong style="font-weight:400;color:var(--d-ink-strong)">{{company.name_en}}</strong><br>{{contact.address_en|lines}}</div>
+    <div class="ret-ar" lang="ar"><strong>{{company.name_ar}}</strong>{{contact.address_ar}}</div>
+    <div class="to pv-only"><span class="ln">Recipient name</span><span class="ln">Address</span></div>
   </div></div>
 </section>
 
@@ -41,7 +41,7 @@
     <svg class="flap pv-only" viewBox="0 0 220 110" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0,0 L0,38 L110,44 L220,38 L220,0" fill="none" stroke="#AA9180" stroke-width="0.25" stroke-dasharray="1.2 1"/>
     </svg>
-    <div class="flap-mark"><span>{{contact.website}}</span><i></i><span lang="ar">{{company.name_ar}}</span></div>
+    <div class="flap-mark"><span><bdi class="web">{{contact.website_display}}</bdi></span><i></i><span lang="ar">{{company.name_ar}}</span></div>
   </div></div>
 </section>
 

@@ -1,0 +1,33 @@
+{
+  "name": "Carousel-05",
+  "kind": "publish",
+  "formats": [
+    "carousel"
+  ],
+  "layout": "type",
+  "env": "maroon",
+  "still": "Drape-Deep",
+  "display": true,
+  "ar": {
+    "eyebrow": "«سراج» · مسقط",
+    "title": "سجّل اهتمامك.",
+    "lead": "شقق سكنية ومحلات تجارية.",
+    "blocks": [
+      {
+        "type": "details",
+        "rows": [
+          [
+            "الهاتف",
+            "[[77714404]]"
+          ],
+          [
+            "إنستغرام",
+            "[[[ig] SIRAJPROPERTIES]]"
+          ]
+        ]
+      }
+    ],
+    "end": ""
+  },
+  "date": "v1"
+}

@@ -41,7 +41,7 @@ Files (`assets/logo/`): Primary (Maroon), Sand, White, Deep, Mono-Black, Mono-Wh
 | One-colour production | Mono variants |
 
 - Clear space ½ H all round (H = wordmark height). Minimum 96 px wide (25 mm print).
-- One logo zone, **bottom-start**: bottom-right in Arabic, on the margin, same size per format (post ~168 px, story 184 px). Bottom-end carries one quiet line only: the contact line (phone · @SIRAJPROPERTIES). No side notes, footnotes or disclaimers on designs. Centred on covers and end cards. The wordmark itself is never mirrored.
+- One logo zone, **bottom-start**: bottom-right in Arabic, on the margin, same size per format (post ~168 px, story 184 px). Bottom-end carries one quiet line only: the contact line (phone · Instagram icon SIRAJPROPERTIES). No side notes, footnotes or disclaimers on designs. Centred on covers and end cards. The wordmark itself is never mirrored.
 - Never: redraw, retype, recolour, stretch, rotate, outline, add shadow/glow, place on silk folds that cut through it, put in a box.
 - The S monogram is for avatars/favicons only, never next to the full wordmark. Profile picture: Sand wordmark on G1 (`assets/logo/SIRAJ_Social-Avatar_Square_v1.0.png`).
 
@@ -95,3 +95,16 @@ Rules: one gesture per layout; ≤ 35% coverage where architecture/information i
 ## 8. Motion
 
 Principles FLOW · DRAPE · REVEAL · WRAP · FOLD · GLIDE · SETTLE. Easing flow `cubic-bezier(.45,.05,.15,1)`, settle `cubic-bezier(.16,1,.3,1)`. No bounce, elastic, spin or glitch. Image reveal = curved silk-edge mask + scale 1.04 → 1.0. Moving silk is real footage only. Official intro 6 s, outro 5 s (Arabic default).
+
+**Air / wind (client rule 2026-10-13).** Air is the force that moves everything soft. The silk moves because a breeze passes through it, and the palms, trees and plants in and around the project sway with the same air wherever they appear (motion, edited films, generated or filmed footage).
+- One prevailing direction per scene: right → left. Silk and leaves never move against each other.
+- Levels: still (holds, end cards), whisper (default ambience), breeze (sweeps and reveals), gust (at most one per film, the moment the veil lifts).
+- A wave travels across the cloth from the windward edge, with the far edge lagging 120–300 ms.
+- Gusts rise over 600–900 ms and fall over 1200–1800 ms, then SETTLE without overshoot.
+- Light breaks through moving leaves and silk as drifting dappled shadow on stone.
+- Never a storm, a flag-like flap, high-frequency jitter or a looping wobble. The architecture never moves.
+- Values and ready EN/AR video-prompt lines: `motion-system/tokens/siraj-wind.json`.
+
+**Silk finish and close-ups (client rule 2026-10-13).** Silk is always pressed: smooth, liquid folds with one clean sheen. Never wrinkled, crinkled, crushed or creased (un-ironed) silk, in photographs, footage or generated images. Close-up shots use high-resolution footage: generate close-up video at the highest resolution available (4K, at least 1080p) and never upscale a soft clip into a close-up. Prompt words: «smooth pressed silk satin, liquid folds, no wrinkles, no creases»; negative: «wrinkled, crinkled, crushed, creased fabric».
+
+**Light and finish (client rule 2026-10-13).** Reduce yellow light. Lamps, windows, sun haze and light sweeps read warm ivory-rose, never yellow, amber or gold. Final scenes (end frames, outros, hero images) must feel luxurious: deep, clean blacks, a soft highlight roll-off, one sheen of light, generous empty space. Every render, key visual and silk still goes through `tools/siraj-luxe-grade.py` (CIE Lab: pulls amber/yellow out of the light, protects the maroon band). In image and video prompts write «warm ivory-rose light, no yellow or golden cast».

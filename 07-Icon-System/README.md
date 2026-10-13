@@ -170,7 +170,7 @@ Never use Stone `#AA9180` for functional icons on light backgrounds (2.7:1). Nev
 ## 13. Icon index
 
 <!-- INDEX:START -->
-82 icons. ◆ marks icons that carry the Lumen, ∿ those with a silk curve. "Same" means one drawing serves both styles.
+85 icons. ◆ marks icons that carry the Lumen, ∿ those with a silk curve. "Same" means one drawing serves both styles.
 
 ### Property · العقار
 
@@ -185,6 +185,7 @@ Never use Stone `#AA9180` for functional icons on light backgrounds (2.7:1). Nev
 | `community` | مجتمع سكني | `sj-community` | ◆ | outline + filled | — | community, neighbourhood, masterplan, district · مجتمع، حي، مجمع سكني |
 | `construction` | إنشاء | `sj-construction` | ◆ | outline + filled | — | construction, crane, under construction, progress · إنشاء، قيد الإنشاء، رافعة، تشييد |
 | `handover` | تسليم | `sj-handover` | ◆ | outline + filled | — | handover, move in, delivery, open door, welcome home · تسليم، استلام، الانتقال، باب |
+| `shop` | محل تجاري | `sj-shop` | ◆ ∿ | outline + filled | — | shop, retail unit, storefront, store, commercial unit · محل، محل تجاري، واجهة محل، متجر |
 
 ### Spaces & Amenities · المساحات والمرافق
 
@@ -257,6 +258,7 @@ Never use Stone `#AA9180` for functional icons on light backgrounds (2.7:1). Nev
 | `call` | اتصال | `sj-call` | ∿ | outline + filled | — | call, phone, telephone, contact · اتصال، هاتف، تواصل |
 | `whatsapp` | واتساب | `sj-whatsapp` | ∿ | outline + filled | — | whatsapp, chat, message, instant messaging · واتساب، محادثة، رسالة |
 | `email` | بريد إلكتروني | `sj-email` | ∿ | outline + filled | — | email, mail, message, newsletter, enquiry · بريد إلكتروني، رسالة، استفسار، نشرة |
+| `instagram` | إنستغرام | `sj-instagram` | ◆ | outline + filled | — | instagram, social, profile, handle, follow · إنستغرام، تواصل اجتماعي، حساب، متابعة |
 
 ### Media & Sharing · الوسائط والمشاركة
 
@@ -271,6 +273,7 @@ Never use Stone `#AA9180` for functional icons on light backgrounds (2.7:1). Nev
 | `download` | تنزيل | `sj-download` | — | same | — | download, brochure, save, export · تنزيل، تحميل، كتيّب |
 | `upload` | رفع | `sj-upload` | — | same | — | upload, attach, submit · رفع، إرفاق، إرسال |
 | `external` | رابط خارجي | `sj-external` | — | same | mirror | external, open, new window, link · رابط خارجي، فتح، نافذة جديدة |
+| `brochure` | كتيّب المشروع | `sj-brochure` | ◆ ∿ | outline + filled | — | brochure, booklet, catalogue, sales brochure, download brochure · كتيّب، بروشور، كتالوج، تنزيل الكتيّب |
 
 ### Navigation · التنقّل
 

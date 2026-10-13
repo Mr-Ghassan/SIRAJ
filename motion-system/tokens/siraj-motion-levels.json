@@ -1,0 +1,21 @@
+{
+  "$description": "SIRAJ Motion System v1.0 — the six motion levels. Single source shared by the Design System (motion hooks) and the Motion System. Easings come from 09-Design-System tokens (flow, drape, glide, fold, reveal).",
+  "$version": "1.0.0",
+  "easing": {
+    "flow":   { "bezier": [0.45, 0.05, 0.15, 1], "use": "FLOW — default continuous movement" },
+    "drape":  { "bezier": [0.16, 1, 0.3, 1],     "use": "DRAPE / SETTLE — arrives, then settles like fabric" },
+    "glide":  { "bezier": [0.65, 0, 0.35, 1],    "use": "GLIDE — camera and position moves" },
+    "fold":   { "bezier": [0.7, 0, 0.2, 1],      "use": "FOLD — transitions" },
+    "reveal": { "bezier": [0.77, 0, 0.18, 1],    "use": "REVEAL — masks and silk uncovering content" }
+  },
+  "level": {
+    "micro":     { "duration": "120ms",  "ease": "drape",  "stagger": "0ms",   "scale": [1, 1],    "opacity": [0, 1], "translate": "4px",  "blur": "0px",  "camera": "none",                  "use": "hover, press, focus" },
+    "fast":      { "duration": "200ms",  "ease": "drape",  "stagger": "30ms",  "scale": [1, 1],    "opacity": [0, 1], "translate": "8px",  "blur": "0px",  "camera": "none",                  "use": "toggles, tooltips, small state changes" },
+    "standard":  { "duration": "360ms",  "ease": "flow",   "stagger": "60ms",  "scale": [1, 1],    "opacity": [0, 1], "translate": "16px", "blur": "2px",  "camera": "none",                  "use": "panels, cards, menus, drawers" },
+    "emphasis":  { "duration": "640ms",  "ease": "flow",   "stagger": "90ms",  "scale": [1.02, 1], "opacity": [0, 1], "translate": "24px", "blur": "4px",  "camera": "none",                  "use": "titles, image reveals, page sections" },
+    "hero":      { "duration": "1200ms", "ease": "reveal", "stagger": "120ms", "scale": [1.04, 1], "opacity": [0, 1], "translate": "40px", "blur": "8px",  "camera": "slow push-in 2%",       "use": "hero reveals, silk sweeps, project reveals" },
+    "cinematic": { "duration": "2400ms", "ease": "glide",  "stagger": "200ms", "scale": [1.06, 1], "opacity": [0, 1], "translate": "64px", "blur": "12px", "camera": "dolly / crane 4%, no rotation", "use": "intro, outro, logo reveal, full-screen transitions" }
+  },
+  "reducedMotion": "Under prefers-reduced-motion every level becomes an opacity-only change of 120ms; no translate, scale, blur or camera.",
+  "note": "v1.0 order is micro < fast < standard < emphasis < hero < cinematic. (09-Design-System v0 named 1200ms 'cinematic' and 2400ms 'hero'; those legacy CSS variables are kept for backward compatibility.)"
+}

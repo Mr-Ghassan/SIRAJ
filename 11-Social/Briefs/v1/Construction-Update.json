@@ -1,0 +1,34 @@
+{
+  "name": "Construction-Update",
+  "kind": "template",
+  "formats": [
+    "post",
+    "story"
+  ],
+  "layout": "window",
+  "env": "linen",
+  "photo": "14-Property-Marketing/12-Project-Siraj/Source/Clean/SIRAJ_Project-Siraj_Side_Cloudy-Day_Clean_v1.0.jpg",
+  "pos": "50% 40%",
+  "ar": {
+    "eyebrow": "تقدّم الأعمال",
+    "title": "«سراج» · مسقط",
+    "blocks": [
+      {
+        "type": "stats",
+        "cols": 2,
+        "items": [
+          {
+            "v": "—",
+            "u": "%",
+            "l": "نسبة الإنجاز"
+          },
+          {
+            "v": "—",
+            "l": "المرحلة الحالية"
+          }
+        ]
+      }
+    ],
+    "end": "{contact.post_line}"
+  }
+}

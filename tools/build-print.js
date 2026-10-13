@@ -54,17 +54,10 @@ const JOBS = [
   // Identity
   { src: PR('Identity', 'SIRAJ_ID-Card.html'), dir: '12-Print/{T}/Identity', name: 'ID-Card_CR80', scale: 3.4 },
   { src: PR('Identity', 'SIRAJ_ID-Card.html'), dir: '12-Print/{T}/Identity', name: 'ID-Card_CR80-Print', marks: true, scale: 2.8 },
-  { src: PR('Identity', 'SIRAJ_Badge.html'), dir: '12-Print/{T}/Identity', name: 'Badge_Visitor-Event', scale: 2.2 },
-  { src: PR('Identity', 'SIRAJ_Badge.html'), dir: '12-Print/{T}/Identity', name: 'Badge_Visitor-Event-Print', marks: true, scale: 2 },
   // Business documents
-  { src: PR('Documents', 'SIRAJ_Quotation.html'), dir: '12-Print/{T}/Documents', name: 'Quotation_EN-AR', scale: 1.5 },
-  { src: PR('Documents', 'SIRAJ_Invoice.html'), dir: '12-Print/{T}/Documents', name: 'Tax-Invoice_EN-AR', scale: 1.8 },
-  { src: PR('Documents', 'SIRAJ_Contract-Cover.html'), dir: '12-Print/{T}/Documents', name: 'Contract-Cover_SPA-Bilingual', scale: 1.5 },
   { src: PR('Documents', 'SIRAJ_Report_EN.html'), dir: '12-Print/{T}/Documents', name: 'Report_EN', scale: 1.5 },
-  { src: PR('Documents', 'SIRAJ_Report_AR.html'), dir: '12-Print/{T}/Documents', name: 'Report_AR', scale: 1.5 },
   { src: PR('Documents', 'SIRAJ_Memo_EN.html'), dir: '12-Print/{T}/Documents', name: 'Memo_EN', scale: 1.8 },
   { src: PR('Documents', 'SIRAJ_Memo_AR.html'), dir: '12-Print/{T}/Documents', name: 'Memo_AR', scale: 1.8 },
-  { src: PR('Documents', 'SIRAJ_Receipt-Voucher.html'), dir: '12-Print/{T}/Documents', name: 'Receipt-Payment-Voucher_EN-AR', scale: 1.5 },
   // Document kit (19-Templates)
   { src: '19-Templates/docs/SIRAJ_Doc-Kit_Specimen_EN.html', dir: '19-Templates/docs/{T}', name: 'Doc-Kit_Specimen_EN', scale: 1.5 },
   { src: '19-Templates/docs/SIRAJ_Doc-Kit_Specimen_AR.html', dir: '19-Templates/docs/{T}', name: 'Doc-Kit_Specimen_AR', scale: 1.5 },
@@ -180,6 +173,8 @@ async function emailPreviews(cfg) {
   // rasterise the hosted logo asset from the master SVG (2x of 132 px display width)
   const logoPng = P('19-Templates/email-signature/assets/SIRAJ_Email-Logo_v1.0.png');
   await R.png({ html: `<!doctype html><html><body style="margin:0;background:transparent"><img src="file://${P('01-Logos/SVG/SIRAJ_Logo_Primary_v1.0.svg')}" style="width:264px;height:auto;display:block"></body></html>`, out: logoPng, width: 264, height: Math.round(264 * 28.11 / 98.163), transparent: true });
+  // Instagram glyph (maroon, 4x of the 12 px display size) — replaces «@» (client rule 2026-10-13)
+  await R.png({ html: `<!doctype html><html><body style="margin:0;background:transparent;color:#602733">${cfg.contact.social_icon_svg.replace('<svg ', '<svg style="width:48px;height:48px;display:block" ')}</body></html>`, out: P('19-Templates/email-signature/assets/SIRAJ_Email-Instagram_v1.0.png'), width: 48, height: 48, transparent: true });
   const html = `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="file://${P('19-Templates/docs/css/siraj-doc.css')}"><style>
     body{margin:0;background:#E3D9CF} .stage{padding:56px 64px 64px;width:1180px}
     .mail{background:#fff;margin-top:28px;box-shadow:0 1px 2px rgba(23,6,8,.1),0 18px 40px -18px rgba(23,6,8,.3)}
@@ -192,8 +187,8 @@ async function emailPreviews(cfg) {
     <h1 class="pv-title" style="font-size:34px">Email signature — English &amp; Arabic</h1>
     <p class="pv-note" style="font-size:12px">Table-based, inline CSS, hosted logo (${cfg.print.email.logo_url}). Shown as rendered in a desktop mail client.</p>
     ${['EN', 'AR'].map((l) => `<div class="cap">${l === 'EN' ? 'English' : 'Arabic · RTL'}</div><div class="mail"><div class="chrome"><i></i><i></i><i></i></div>
-      <div class="mhdr"${l === 'AR' ? ' dir="rtl"' : ''}>${l === 'EN' ? 'To: client@example.com<br>Subject: Noor Residences — your private preview' : 'إلى: client@example.com<br>الموضوع: مساكن نور — معاينتكم الخاصة'}</div>
-      <div class="body"${l === 'AR' ? ' dir="rtl"' : ''}>${l === 'EN' ? 'Dear Mr. Al Rawahi,<br><br>Thank you for visiting the sales centre. Please find the floor plans for residence 1204 attached.<br><br>Kind regards,' : 'السيد أحمد الرواحي المحترم،<br><br>نشكركم على زيارتكم لمركز المبيعات. تجدون مرفقًا مخططات الوحدة 1204.<br><br>مع خالص التحيات،'}<br><br>${sig.render(cfg, l, { logoUrl: logoLocal, fragment: true })}</div></div>`).join('')}
+      <div class="mhdr"${l === 'AR' ? ' dir="rtl"' : ''}>${l === 'EN' ? 'To: —<br>Subject: Siraj, Muscat' : 'إلى: —<br>الموضوع: «سراج»، مسقط'}</div>
+      <div class="body"${l === 'AR' ? ' dir="rtl"' : ''}>${l === 'EN' ? 'Good evening,<br><br>Thank you for your interest. Please find the information on Siraj, Muscat attached.<br><br>Kind regards,' : 'مساء الخير،<br><br>نشكركم على اهتمامكم. تجدون مرفقًا معلومات «سراج» في مسقط.<br><br>مع خالص التحيات،'}<br><br>${sig.render(cfg, l, { logoUrl: logoLocal, fragment: true })}</div></div>`).join('')}
   </div></body></html>`;
   const f = R.tmpHtml(html, 'sigpv');
   let page = await openUrl('file://' + f, { width: 1308, height: 800 });

@@ -61,7 +61,7 @@ order inside English layouts. Digits are always Western (the `SIRAJ Digits` face
 | Grid | `.g12` + `.c1`…`.c12`, `.s2`…`.s9` · spacing `.mt-1`…`.mt-4` (3 mm steps) · `.hair` `.hair-m` |
 
 ### Runtime (`js/siraj-doc.js`)
-- **Config tokens** in text or attributes: `{{contact.phone}}`, `{{demo_projects.noor.handover|qar}}`.
+- **Config tokens** in text or attributes: `{{contact.phone}}`, `{{founding_project.location_ar}}`.
   Filters: `omr` (145,000) · `omr3` (145,000.000) · `upper` · `tel` · `nbsp` · `lines` / `first` / `last`
   (split an address at its last comma) · `qar` (`Q4 2027` → `الربع الرابع 2027`).
 - **Calculations**: `<table data-calc data-vat="5">`, rows `<tr data-qty="2" data-rate="2500">` (`data-vat="0"` for an

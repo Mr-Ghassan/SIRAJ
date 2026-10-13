@@ -4,7 +4,7 @@
    and loads brand-data.js (generated from 00-Brand-Foundation/brand.config.json), social.css and this file.
 
    URL parameters:  ?format=post|square|story|reel|carousel|li|x  &lang=en|ar  &slide=1..n  &guide=1
-   Text tokens:     {contact.phone}  {noor.en}  {n:noor.from_price_omr}  {sum:noor.units+harir.units}
+   Text tokens:     {contact.phone}  {founding_project.name_ar}  {n:path.to.number}  {sum:a.units+b.units}
    ========================================================================== */
 (function () {
   'use strict';
@@ -55,9 +55,10 @@
       return fn === 'n:' ? fmtN(v) : v;
     });
   }
-  // Light inline markup: *text* → <em>, [[x]] → LTR isolate (for handles, phone numbers in Arabic)
+  // Light inline markup: *text* → <em>, [[x]] → LTR isolate (for handles, phone numbers in Arabic), [ig] → Instagram glyph
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const rich = (s) => esc(t(s)).replace(/\[\[(.+?)\]\]/g, '<span class="ltr">$1</span>').replace(/\n/g, '<br>');
+  const rich = (s) => esc(t(s)).replace(/\[\[(.+?)\]\]/g, '<span class="ltr">$1</span>').replace(/\[ig\] ?/g, () => IG_SVG).replace(/\n/g, '<br>');
+  const IG_SVG = ((window.SIRAJ_BRAND || {}).contact || {}).social_icon_svg || '';
   const px = (el, v) => parseFloat(getComputedStyle(el).getPropertyValue(v));
   const two = (n) => String(n).padStart(2, '0');
 

@@ -1,0 +1,19 @@
+{
+  "name": "Announcement",
+  "kind": "publish",
+  "formats": [
+    "post",
+    "story"
+  ],
+  "layout": "type",
+  "env": "deep",
+  "still": "Drape-Lumen",
+  "display": true,
+  "ar": {
+    "eyebrow": "قريباً · مسقط",
+    "title": "أوّلُ الضوء.",
+    "lead": "قريباً، يُرفع الستار عن «سراج».",
+    "end": "{contact.post_line}"
+  },
+  "date": "v1"
+}

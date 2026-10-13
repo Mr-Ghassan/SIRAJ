@@ -1,0 +1,11 @@
+/* =============================================================================
+   SIRAJ Design System v1.0 — single entry point.
+   <link rel="stylesheet" href="design-system/css/siraj-ds.css">
+   Then set <html lang="ar" dir="rtl"> (default) or <html lang="en" dir="ltr">,
+   and data-theme="light" (Ivory) or data-theme="dark" (Deep) on any element.
+   ========================================================================== */
+@import url("../../03-Typography/siraj-fonts.css");
+@import url("../build/siraj-ds.css");
+@import url("../build/siraj-ds-typography.css");
+@import url("siraj-ds-base.css");
+@import url("../components/siraj-ds.css");

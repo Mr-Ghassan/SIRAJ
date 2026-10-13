@@ -59,6 +59,9 @@
     var n, list = [];
     while ((n = walker.nextNode())) if (n.nodeValue.indexOf('{{') !== -1) list.push(n);
     list.forEach(function (t) { t.nodeValue = interpolate(t.nodeValue); });
+    // Instagram = icon + handle, never «@» (client rule 2026-10-13): <bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi>
+    var ig = (CFG.contact && CFG.contact.social_icon_svg) || '';
+    scope.querySelectorAll('[data-ig]').forEach(function (el) { if (!el.querySelector('.ig')) el.insertAdjacentHTML('afterbegin', ig); });
     scope.querySelectorAll('*').forEach(function (el) {
       for (var i = 0; i < el.attributes.length; i++) {
         var a = el.attributes[i];

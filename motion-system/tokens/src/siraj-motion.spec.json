@@ -1,0 +1,950 @@
+{
+  "$description": "SIRAJ Motion Tokens v1.0 — extension spec. Merged with ../siraj-motion-levels.json (the six levels, unchanged) by tools/build-motion-system.js into ../siraj-motion.tokens.json, build/siraj-motion.css, build/siraj-motion.ts and build/siraj-motion.js. Edit this file or the levels file, never the generated outputs.",
+  "$version": "1.0.0",
+  "easingExtra": {
+    "release": {
+      "bezier": [
+        0.5,
+        0,
+        0.75,
+        0.25
+      ],
+      "use": "exits — leaves calmly, accelerating away"
+    },
+    "micro": {
+      "bezier": [
+        0.2,
+        0,
+        0,
+        1
+      ],
+      "use": "UI feedback only"
+    },
+    "linear": {
+      "bezier": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "use": "time-mapping real footage only, never for visible UI movement"
+    }
+  },
+  "levelExtra": {
+    "micro": {
+      "exit": 90,
+      "principle": "SETTLE",
+      "ar": "دقيق"
+    },
+    "fast": {
+      "exit": 140,
+      "principle": "SETTLE",
+      "ar": "سريع"
+    },
+    "standard": {
+      "exit": 240,
+      "principle": "FLOW",
+      "ar": "قياسي"
+    },
+    "emphasis": {
+      "exit": 360,
+      "principle": "DRAPE",
+      "ar": "إبراز"
+    },
+    "hero": {
+      "exit": 640,
+      "principle": "REVEAL",
+      "ar": "بطولي"
+    },
+    "cinematic": {
+      "exit": 1200,
+      "principle": "GLIDE",
+      "ar": "سينمائي"
+    }
+  },
+  "principles": {
+    "AIR": {
+      "ar": "هواء",
+      "meaning": "The driving force behind every soft movement: the silk moves because a breeze passes through it, and the trees, palms and plants in and around the project sway with the same air. One prevailing direction per scene (right → left), slow travelling waves, at most one gentle gust per film, then SETTLE. The architecture never moves. Source: motion-system/tokens/siraj-wind.json.",
+      "ease": "flow (gust rise) · drape (gust fall)",
+      "levels": [
+        "standard",
+        "emphasis",
+        "hero",
+        "cinematic"
+      ]
+    },
+    "FLOW": {
+      "ar": "انسياب",
+      "meaning": "Movement enters with continuous momentum; nothing starts or stops mechanically.",
+      "ease": "flow",
+      "levels": [
+        "standard",
+        "emphasis"
+      ]
+    },
+    "DRAPE": {
+      "ar": "انسدال",
+      "meaning": "Elements arrive and settle like falling fabric — fast in, long soft deceleration, no overshoot.",
+      "ease": "drape",
+      "levels": [
+        "micro",
+        "fast",
+        "emphasis"
+      ]
+    },
+    "REVEAL": {
+      "ar": "كشف",
+      "meaning": "Content is uncovered, never pushed in: masks along a curved silk edge, lines rising from behind a mask.",
+      "ease": "reveal",
+      "levels": [
+        "hero"
+      ]
+    },
+    "WRAP": {
+      "ar": "التفاف",
+      "meaning": "Real silk footage passes in front of or behind the architecture, using a cut-out of the building.",
+      "ease": "linear (footage time-map)",
+      "levels": [
+        "cinematic"
+      ]
+    },
+    "FOLD": {
+      "ar": "طيّ",
+      "meaning": "Transitions behave like a controlled material fold; the folded material is photographed silk.",
+      "ease": "fold",
+      "levels": [
+        "hero"
+      ]
+    },
+    "GLIDE": {
+      "ar": "انزلاق",
+      "meaning": "Camera and position moves are slow, smooth and confident — dolly or crane, never rotation.",
+      "ease": "glide",
+      "levels": [
+        "cinematic"
+      ]
+    },
+    "SETTLE": {
+      "ar": "استقرار",
+      "meaning": "Every animation ends in a calm, precise rest: the final 30–40% decelerates, images settle 1.04 → 1.00 (never above 1.08).",
+      "ease": "drape",
+      "levels": [
+        "micro",
+        "fast",
+        "standard",
+        "emphasis",
+        "hero",
+        "cinematic"
+      ]
+    }
+  },
+  "settle": {
+    "tailFraction": [
+      0.3,
+      0.4
+    ],
+    "imageScale": [
+      1.04,
+      1
+    ],
+    "maxScale": 1.08,
+    "rule": "Every move decelerates over its last 30–40%; the last frame of every component is a still, readable rest."
+  },
+  "camera": {
+    "none": {
+      "levels": [
+        "micro",
+        "fast",
+        "standard",
+        "emphasis"
+      ]
+    },
+    "pushIn": {
+      "amount": 0.02,
+      "ease": "glide",
+      "level": "hero",
+      "rule": "slow push-in 2% (scale 1.02 → 1.00 settle, or 1.00 → 1.02 drift on long holds)"
+    },
+    "dolly": {
+      "amount": 0.04,
+      "ease": "glide",
+      "level": "cinematic",
+      "rule": "dolly / crane up to 4% of frame; no rotation, no roll, no random 3D"
+    },
+    "parallax": {
+      "amount": 0.12,
+      "rule": "web only: background moves at 12% of scroll"
+    }
+  },
+  "silk": {
+    "rule": "Silk is always real: filmed footage (06-SIRAJ-Silk/Footage) or photographs/cut-outs (06-SIRAJ-Silk/Stills). Never drawn with CSS, SVG or CG. One silk gesture per composition; never over the logo; never hides the building.",
+    "axis": 51,
+    "direction": "Rises along the 51° Silk Axis from the lower start to the upper end. Arabic (RTL) mirrors layout silk: lower-right → upper-left. Photographs of buildings are never mirrored.",
+    "light": "Warm single source from the upper end (upper-left in RTL). Light sweeps are gradients of light, not silk.",
+    "wind": "Silk is moved by air (AIR principle): footage is chosen and time-mapped so the cloth travels with one consistent breeze; photographs drift with SirajSilk.drift(); reveal edges ripple with SirajSilk.breathe(); foliage layers use SirajSilk.sway()."
+  },
+  "reducedMotion": {
+    "rule": "Under prefers-reduced-motion every level becomes an opacity-only change of 120ms; no translate, scale, blur or camera. Silk footage is replaced by its still poster frame; transitions become a 120ms cross-fade.",
+    "duration": 120,
+    "ease": "linear",
+    "properties": [
+      "opacity"
+    ]
+  },
+  "forbidden": [
+    "bounce",
+    "elastic / overshoot springs (ζ < 1) on UI, text or logo",
+    "glitch, RGB split, shake",
+    "spin, rotation of the logo or text",
+    "flashy or excessive zoom (scale > 1.08)",
+    "random 3D",
+    "gold clichés, lens flares, sparkles",
+    "whip pans",
+    "CSS / vector / CG silk",
+    "silk or foliage moving with no air logic (rigid tween, looping wobble)",
+    "storm, flapping, high-frequency flutter",
+    "silk and foliage moving in opposite directions",
+    "wind that bends or moves the architecture"
+  ],
+  "transitions": {
+    "silk-sweep": {
+      "name_ar": "مسح الحرير",
+      "level": "cinematic",
+      "duration": 2400,
+      "ease": "reveal",
+      "principles": [
+        "FLOW",
+        "REVEAL"
+      ],
+      "silk": "footage: SIRAJ_Silk_Ribbon-Pass (mirrored in RTL), scaled to a broad plane",
+      "behaviour": "The real ribbon footage, scaled to a broad plane and mirrored for RTL, glides along the diagonal; scene B is revealed behind its trailing edge (the feathered mask edge is locked to the measured footage track), then settles 1.04 → 1.00."
+    },
+    "silk-fold": {
+      "name_ar": "طيّة الحرير",
+      "level": "hero",
+      "duration": 1200,
+      "ease": "fold",
+      "principles": [
+        "FOLD",
+        "SETTLE"
+      ],
+      "silk": "photograph: SIRAJ_Silk_Fold-Corner (real silk still) seen as the folded flap along the crease",
+      "behaviour": "Scene A folds away along a curved diagonal crease that travels from the lower start to the upper end; the folded flap is photographed silk catching the light, a soft fold shadow falls on B, and B settles 1.04 → 1.00."
+    },
+    "ribbon-pass": {
+      "name_ar": "عبور الشريط",
+      "level": "cinematic",
+      "duration": 2400,
+      "ease": "glide",
+      "principles": [
+        "FLOW",
+        "GLIDE"
+      ],
+      "silk": "footage: SIRAJ_Silk_Ribbon-Pass",
+      "behaviour": "A slim real ribbon passes through along the diagonal; B is revealed behind the ribbon's mid-line (feathered, locked to the footage track) and settles 1.04 → 1.00."
+    },
+    "architectural-reveal": {
+      "name_ar": "الكشف المعماري",
+      "level": "cinematic",
+      "duration": 2400,
+      "ease": "reveal",
+      "principles": [
+        "REVEAL",
+        "WRAP"
+      ],
+      "silk": "footage: SIRAJ_Silk_Ribbon-Pass flowing through the opening columns",
+      "behaviour": "Twelve architectural columns open from the centre outwards to reveal B while the real ribbon flows through."
+    },
+    "light-reveal": {
+      "name_ar": "كشف الضوء",
+      "level": "cinematic",
+      "duration": 2400,
+      "ease": "glide",
+      "principles": [
+        "REVEAL",
+        "SETTLE"
+      ],
+      "silk": "none — light only",
+      "behaviour": "A warm band of light passes across scene A along the Silk Axis from the upper end; at its brightest the light carries scene B in behind it, then fades as B settles 1.04 → 1.00. Light is a gradient of warm light, never a flare."
+    }
+  },
+  "components": {
+    "logo-reveal": {
+      "name_ar": "ظهور الشعار",
+      "duration": 5.0,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [],
+      "poster": 4.5,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.0,
+          "el": "light",
+          "level": "cinematic",
+          "principle": "SETTLE",
+          "action": "warm light breathes in at the upper end (upper-left)"
+        },
+        {
+          "at": 0.2,
+          "el": "silk",
+          "level": "cinematic",
+          "span": 3.0,
+          "principle": "FLOW",
+          "action": "real ribbon footage sweeps lower-right → upper-left"
+        },
+        {
+          "at": 1.0,
+          "el": "logo",
+          "level": "cinematic",
+          "principle": "REVEAL",
+          "action": "official wordmark resolves behind the ribbon: curved mask + unblur 12 → 0 + scale 1.02 → 1"
+        }
+      ]
+    },
+    "logo-close": {
+      "name_ar": "إغلاق الشعار",
+      "duration": 4.0,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [
+        "16x9"
+      ],
+      "poster": 3.5,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.0,
+          "el": "scrim",
+          "level": "hero",
+          "principle": "SETTLE",
+          "action": "the picture dims softly toward the bottom-start corner"
+        },
+        {
+          "at": 0.5,
+          "el": "logo",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "wordmark resolves in the logo zone (bottom-right): mask + unblur"
+        },
+        {
+          "at": 0.9,
+          "el": "rule",
+          "level": "emphasis",
+          "principle": "FLOW",
+          "action": "a Stone hairline draws under the logo from the start side"
+        }
+      ]
+    },
+    "title": {
+      "name_ar": "ظهور العنوان",
+      "duration": 5.0,
+      "formats": [
+        "16x9",
+        "9x16"
+      ],
+      "alpha": [],
+      "poster": 3.2,
+      "mode": "in-hold-out",
+      "out": {
+        "at": 4.3,
+        "level": "standard"
+      },
+      "timeline": [
+        {
+          "at": 0.0,
+          "el": "plate",
+          "level": "cinematic",
+          "span": 5.0,
+          "principle": "GLIDE",
+          "action": "plate settles 1.06 → 1.00 (dolly)"
+        },
+        {
+          "at": 0.35,
+          "el": "eyebrow",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "Lumen ◆ + place name rise 24px and unblur"
+        },
+        {
+          "at": 0.55,
+          "el": "line1",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "Tajawal 200 line rises from behind its mask"
+        },
+        {
+          "at": 0.67,
+          "el": "line2",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "Tajawal 800 line rises (hero stagger 120ms)"
+        },
+        {
+          "at": 1.5,
+          "el": "rule",
+          "level": "emphasis",
+          "principle": "FLOW",
+          "action": "hairline draws from the start side"
+        }
+      ]
+    },
+    "subtitle": {
+      "name_ar": "سطر الترجمة",
+      "duration": 4.5,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [
+        "16x9"
+      ],
+      "poster": 2.5,
+      "mode": "in-hold-out",
+      "out": {
+        "at": 3.8,
+        "level": "standard"
+      },
+      "timeline": [
+        {
+          "at": 0.0,
+          "el": "scrim",
+          "level": "standard",
+          "principle": "SETTLE",
+          "action": "soft scrim at the bottom for legibility"
+        },
+        {
+          "at": 0.4,
+          "el": "line",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "line rises 24px, fades and unblurs"
+        }
+      ]
+    },
+    "lower-third": {
+      "name_ar": "الشريط السفلي",
+      "duration": 5.0,
+      "formats": [
+        "16x9",
+        "9x16"
+      ],
+      "alpha": [
+        "16x9",
+        "9x16"
+      ],
+      "poster": 3.0,
+      "mode": "in-hold-out",
+      "out": {
+        "at": 4.1,
+        "level": "standard"
+      },
+      "timeline": [
+        {
+          "at": 0.3,
+          "el": "plate",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "Deep plate with Silk Corner opens from the start side (curved edge)"
+        },
+        {
+          "at": 0.75,
+          "el": "lumen",
+          "level": "fast",
+          "principle": "SETTLE",
+          "action": "Lumen ◆ appears"
+        },
+        {
+          "at": 0.8,
+          "el": "name",
+          "level": "emphasis",
+          "principle": "REVEAL",
+          "action": "name rises from its mask"
+        },
+        {
+          "at": 0.89,
+          "el": "line",
+          "level": "emphasis",
+          "principle": "REVEAL",
+          "action": "descriptor rises (stagger 90ms)"
+        }
+      ]
+    },
+    "stat": {
+      "name_ar": "حركة الإحصاء",
+      "duration": 5.0,
+      "formats": [
+        "16x9",
+        "9x16"
+      ],
+      "alpha": [],
+      "poster": 4.0,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.3,
+          "el": "eyebrow",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "eyebrow settles"
+        },
+        {
+          "at": 0.5,
+          "el": "rules",
+          "level": "hero",
+          "principle": "FLOW",
+          "action": "column hairlines draw (stagger 120ms)"
+        },
+        {
+          "at": 0.7,
+          "el": "values",
+          "level": "emphasis",
+          "principle": "REVEAL",
+          "action": "data slots «—» draw on from the start side (stagger 90ms); confirmed values replace the slot and count up with FLOW"
+        },
+        {
+          "at": 0.8,
+          "el": "labels",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "labels settle (stagger 90ms)"
+        }
+      ]
+    },
+    "counter": {
+      "name_ar": "العدّاد",
+      "duration": 4.5,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [],
+      "poster": 3.8,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.0,
+          "el": "plate",
+          "level": "cinematic",
+          "span": 4.5,
+          "principle": "GLIDE",
+          "action": "real silk still (Drape-Deep) settles 1.06 → 1.00"
+        },
+        {
+          "at": 0.3,
+          "el": "label",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "label settles"
+        },
+        {
+          "at": 0.5,
+          "el": "digits",
+          "level": "hero",
+          "principle": "SETTLE",
+          "action": "each digit rolls (odometer) and settles on the phone number, stagger 60ms, no overshoot"
+        },
+        {
+          "at": 1.7,
+          "el": "handle",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "Instagram icon + SIRAJPROPERTIES settles"
+        }
+      ]
+    },
+    "property-reveal": {
+      "name_ar": "كشف العقار",
+      "duration": 5.5,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [],
+      "poster": 4.8,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.2,
+          "el": "image",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "render revealed behind a real silk ribbon riding the mask edge, settle 1.04 → 1.00"
+        },
+        {
+          "at": 0.95,
+          "el": "eyebrow",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "place name settles"
+        },
+        {
+          "at": 1.05,
+          "el": "name",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "project name rises (Tajawal 800)"
+        },
+        {
+          "at": 1.17,
+          "el": "descriptor",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "«شقق سكنية ومحلات تجارية» rises (stagger 120ms)"
+        },
+        {
+          "at": 1.7,
+          "el": "rule",
+          "level": "emphasis",
+          "principle": "FLOW",
+          "action": "hairline draws"
+        },
+        {
+          "at": 1.9,
+          "el": "line",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "copy line settles"
+        }
+      ]
+    },
+    "image-reveal": {
+      "name_ar": "كشف الصورة",
+      "duration": 5.0,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [],
+      "poster": 4.2,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.3,
+          "el": "mask",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "curved silk-edge mask opens from the lower start toward the upper end"
+        },
+        {
+          "at": 0.3,
+          "el": "image",
+          "level": "cinematic",
+          "span": 4.2,
+          "principle": "SETTLE",
+          "action": "image settles 1.04 → 1.00"
+        }
+      ]
+    },
+    "map": {
+      "name_ar": "حركة الخريطة",
+      "duration": 5.5,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [],
+      "poster": 4.8,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.0,
+          "el": "coast",
+          "level": "hero",
+          "principle": "FLOW",
+          "action": "coastline draws, sea fills"
+        },
+        {
+          "at": 0.3,
+          "el": "roads",
+          "level": "hero",
+          "principle": "FLOW",
+          "action": "road lines draw (stagger 120ms)"
+        },
+        {
+          "at": 0.8,
+          "el": "camera",
+          "level": "cinematic",
+          "span": 3.2,
+          "principle": "GLIDE",
+          "action": "camera glides in 4% toward the marker"
+        },
+        {
+          "at": 1.6,
+          "el": "pin",
+          "level": "hero",
+          "principle": "DRAPE",
+          "action": "Lumen marker lowers and settles (critically damped, no overshoot)"
+        },
+        {
+          "at": 2.0,
+          "el": "halo",
+          "level": "hero",
+          "principle": "SETTLE",
+          "action": "one halo ring expands and fades (never repeats)"
+        },
+        {
+          "at": 1.8,
+          "el": "block",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "place block settles"
+        }
+      ]
+    },
+    "location-marker": {
+      "name_ar": "علامة الموقع",
+      "duration": 4.5,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [
+        "16x9"
+      ],
+      "poster": 3.0,
+      "mode": "in-hold-out",
+      "out": {
+        "at": 3.8,
+        "level": "standard"
+      },
+      "timeline": [
+        {
+          "at": 0.3,
+          "el": "pin",
+          "level": "hero",
+          "principle": "DRAPE",
+          "action": "Lumen marker lowers and settles"
+        },
+        {
+          "at": 0.6,
+          "el": "leader",
+          "level": "emphasis",
+          "principle": "FLOW",
+          "action": "leader hairline draws toward the label"
+        },
+        {
+          "at": 0.7,
+          "el": "halo",
+          "level": "hero",
+          "principle": "SETTLE",
+          "action": "single halo ring"
+        },
+        {
+          "at": 0.85,
+          "el": "label",
+          "level": "emphasis",
+          "principle": "REVEAL",
+          "action": "name + place rise (stagger 90ms)"
+        }
+      ]
+    },
+    "floor-plan": {
+      "name_ar": "كشف المخطط",
+      "duration": 5.5,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [],
+      "poster": 4.8,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.1,
+          "el": "walls",
+          "level": "hero",
+          "principle": "FLOW",
+          "action": "walls draw as hairlines (stagger 60ms)"
+        },
+        {
+          "at": 0.4,
+          "el": "block",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "type block + area slot settle"
+        },
+        {
+          "at": 1.2,
+          "el": "doors",
+          "level": "emphasis",
+          "principle": "FOLD",
+          "action": "door swings appear"
+        },
+        {
+          "at": 1.35,
+          "el": "rooms",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "room names + area slots settle (stagger 60ms)"
+        },
+        {
+          "at": 2.0,
+          "el": "dims",
+          "level": "emphasis",
+          "principle": "FLOW",
+          "action": "dimension line draws"
+        }
+      ]
+    },
+    "chart": {
+      "name_ar": "حركة الرسم البياني",
+      "duration": 5.0,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [],
+      "poster": 4.2,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.2,
+          "el": "block",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "title block settles"
+        },
+        {
+          "at": 0.3,
+          "el": "grid",
+          "level": "hero",
+          "principle": "FLOW",
+          "action": "baseline and grid draw"
+        },
+        {
+          "at": 0.6,
+          "el": "bars",
+          "level": "hero",
+          "principle": "DRAPE",
+          "action": "bars rise from the baseline and settle (stagger 120ms); without confirmed data they draw as outlined slots"
+        },
+        {
+          "at": 1.4,
+          "el": "values",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "value slots «—» settle"
+        }
+      ]
+    },
+    "cta": {
+      "name_ar": "دعوة للتواصل",
+      "duration": 4.5,
+      "formats": [
+        "16x9",
+        "9x16"
+      ],
+      "alpha": [
+        "16x9",
+        "9x16"
+      ],
+      "poster": 3.0,
+      "mode": "in-hold-out",
+      "out": {
+        "at": 3.8,
+        "level": "standard"
+      },
+      "timeline": [
+        {
+          "at": 0.0,
+          "el": "scrim",
+          "level": "standard",
+          "principle": "SETTLE",
+          "action": "soft scrim at the bottom"
+        },
+        {
+          "at": 0.3,
+          "el": "rule",
+          "level": "hero",
+          "principle": "FLOW",
+          "action": "hairline draws across the contact band"
+        },
+        {
+          "at": 0.5,
+          "el": "logo",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "wordmark resolves at the logo zone (bottom-right)"
+        },
+        {
+          "at": 0.75,
+          "el": "phone",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "77714404 settles"
+        },
+        {
+          "at": 0.84,
+          "el": "handle",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "Instagram icon + SIRAJPROPERTIES settles (stagger 90ms)"
+        }
+      ]
+    },
+    "transition": {
+      "name_ar": "الانتقال",
+      "duration": 3.0,
+      "formats": [
+        "16x9"
+      ],
+      "alpha": [],
+      "poster": 2.6,
+      "mode": "a-to-b",
+      "timeline": [
+        {
+          "at": 0.8,
+          "el": "edge",
+          "level": "hero",
+          "principle": "REVEAL",
+          "action": "curved edge cut A → B along the Silk Axis (start → end)"
+        },
+        {
+          "at": 0.8,
+          "el": "settle",
+          "level": "cinematic",
+          "span": 2.2,
+          "principle": "SETTLE",
+          "action": "B settles 1.04 → 1.00"
+        }
+      ]
+    },
+    "end-card": {
+      "name_ar": "البطاقة الختامية",
+      "duration": 5.0,
+      "formats": [
+        "16x9",
+        "9x16"
+      ],
+      "alpha": [],
+      "poster": 4.6,
+      "mode": "in-hold",
+      "timeline": [
+        {
+          "at": 0.1,
+          "el": "silk",
+          "level": "cinematic",
+          "principle": "GLIDE",
+          "action": "real silk horizon (photographed cut-out) glides up from below and settles as a ground line"
+        },
+        {
+          "at": 0.8,
+          "el": "logo",
+          "level": "cinematic",
+          "principle": "REVEAL",
+          "action": "centred wordmark resolves: curved mask + unblur"
+        },
+        {
+          "at": 2.0,
+          "el": "rule",
+          "level": "emphasis",
+          "principle": "FLOW",
+          "action": "hairline draws from the centre"
+        },
+        {
+          "at": 2.2,
+          "el": "contact",
+          "level": "emphasis",
+          "principle": "DRAPE",
+          "action": "77714404 ◆ Instagram icon + SIRAJPROPERTIES settles"
+        }
+      ]
+    }
+  }
+}

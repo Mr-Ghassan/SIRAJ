@@ -1,0 +1,1313 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$version": "1.0.0",
+  "$description": "SIRAJ Design System v1.0 — single source of truth for colour, type, space, grid, shape, elevation, layout, breakpoints, layers, motion hooks and component tokens. Arabic-first (RTL) with full English (LTR) support. Brand values are identical to 09-Design-System/tokens/siraj.tokens.json; motion levels come from motion-system/tokens/siraj-motion-levels.json. Build: node tools/build-design-system.js",
+  "$extensions": {
+    "siraj": {
+      "prefix": "siraj",
+      "themes": {
+        "light": "ivory",
+        "dark": "deep"
+      },
+      "sources": [
+        "09-Design-System/tokens/siraj.tokens.json",
+        "motion-system/tokens/siraj-motion-levels.json",
+        "04-Grids/grids.json"
+      ]
+    }
+  },
+  "color": {
+    "core": {
+      "maroon": {
+        "$type": "color",
+        "$value": "#602733",
+        "$description": "SIRAJ Maroon — logo and hero colour, primary action on light."
+      },
+      "deep": {
+        "$type": "color",
+        "$value": "#2C0F12",
+        "$description": "SIRAJ Deep — dark environment, G1 start."
+      },
+      "shadow": {
+        "$type": "color",
+        "$value": "#170608",
+        "$description": "SIRAJ Shadow — deepest dark, cinema black."
+      },
+      "stone": {
+        "$type": "color",
+        "$value": "#AA9180",
+        "$description": "Architectural Stone — Lumen ◆ and hairlines. Never text on light (2.7:1)."
+      },
+      "sand": {
+        "$type": "color",
+        "$value": "#D6C0B2",
+        "$description": "SIRAJ Sand — text, logo and primary action on dark."
+      },
+      "ivory": {
+        "$type": "color",
+        "$value": "#F7F2ED",
+        "$description": "Warm Ivory — default light background."
+      },
+      "linen": {
+        "$type": "color",
+        "$value": "#EFE7E0",
+        "$description": "Linen — secondary light surface."
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "White — raised surface on Ivory."
+      },
+      "graphite": {
+        "$type": "color",
+        "$value": "#3B3436",
+        "$description": "Graphite — body text on light."
+      },
+      "ash": {
+        "$type": "color",
+        "$value": "#6B625E",
+        "$description": "Ash — secondary text on light (AA)."
+      },
+      "warm-grey": {
+        "$type": "color",
+        "$value": "#8E837D",
+        "$description": "Warm Grey — field borders and large text only (3.3:1)."
+      },
+      "near-black": {
+        "$type": "color",
+        "$value": "#140E10",
+        "$description": "Near Black — headlines on light."
+      },
+      "black": {
+        "$type": "color",
+        "$value": "#020202",
+        "$description": "Official black artboard."
+      }
+    },
+    "maroon": {
+      "50": {
+        "$type": "color",
+        "$value": "#FAF3F3"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#F2E3E4"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#E3C5C8"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#CC9CA2"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#AD6B75"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#8A4351"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#722F3D"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#602733"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#4A1D27"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#2C0F12"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#170608"
+      }
+    },
+    "silk": {
+      "$description": "Silk photography grade only. Never UI or text colours.",
+      "highlight": {
+        "$type": "color",
+        "$value": "#C79A9C"
+      },
+      "midtone": {
+        "$type": "color",
+        "$value": "#81404C"
+      },
+      "base": {
+        "$type": "color",
+        "$value": "#602733"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#45161F"
+      },
+      "shadow": {
+        "$type": "color",
+        "$value": "#170608"
+      }
+    },
+    "functional": {
+      "success": {
+        "$type": "color",
+        "$value": "#4E6B4F",
+        "$description": "Olive"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#A8742B",
+        "$description": "Ochre — edges and icons only (3.5:1); text stays in the theme text colour."
+      },
+      "error": {
+        "$type": "color",
+        "$value": "#A8323A",
+        "$description": "Crimson — kept brighter than Maroon"
+      },
+      "info": {
+        "$type": "color",
+        "$value": "#3E5868",
+        "$description": "Slate"
+      }
+    },
+    "functional-on-dark": {
+      "success": {
+        "$type": "color",
+        "$value": "#9DB89E"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#DDB06C"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "#E4949B"
+      },
+      "info": {
+        "$type": "color",
+        "$value": "#A5BECD"
+      }
+    },
+    "dark-ui": {
+      "$description": "Derived dark surfaces (from 09 dark theme).",
+      "surface-alt": {
+        "$type": "color",
+        "$value": "#3A141A"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#E9DDD4"
+      },
+      "text-muted": {
+        "$type": "color",
+        "$value": "#B9A69A"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#4A2228"
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "#8C6B64"
+      }
+    },
+    "line": {
+      "light": {
+        "$type": "color",
+        "$value": "#E3D6CC",
+        "$description": "Hairline on light."
+      }
+    },
+    "data": {
+      "1": {
+        "$type": "color",
+        "$value": "#602733"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "#AA9180"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "#3B3436"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "#C79A9C"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "#8E837D"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "#2C0F12"
+      }
+    }
+  },
+  "gradient": {
+    "g1": {
+      "$type": "gradient",
+      "$value": "linear-gradient(51deg, #2C0F12 0%, #602733 100%)",
+      "$description": "Official G1."
+    },
+    "scrim": {
+      "$type": "gradient",
+      "$value": "linear-gradient(0deg, rgba(23,6,8,0.78) 0%, rgba(23,6,8,0.24) 52%, rgba(23,6,8,0) 100%)",
+      "$description": "Photo scrim behind copy on imagery."
+    }
+  },
+  "theme": {
+    "ivory": {
+      "$description": "Light theme — Ivory. data-theme=\"light\" (default).",
+      "bg": {
+        "$type": "color",
+        "$value": "{color.core.ivory}"
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "{color.core.white}"
+      },
+      "surface-alt": {
+        "$type": "color",
+        "$value": "{color.core.linen}"
+      },
+      "surface-inverse": {
+        "$type": "color",
+        "$value": "{color.core.deep}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.core.graphite}"
+      },
+      "text-strong": {
+        "$type": "color",
+        "$value": "{color.core.near-black}"
+      },
+      "text-muted": {
+        "$type": "color",
+        "$value": "{color.core.ash}"
+      },
+      "text-inverse": {
+        "$type": "color",
+        "$value": "{color.core.ivory}"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.core.maroon}"
+      },
+      "accent-hover": {
+        "$type": "color",
+        "$value": "{color.maroon.800}"
+      },
+      "accent-pressed": {
+        "$type": "color",
+        "$value": "{color.core.deep}"
+      },
+      "accent-tint": {
+        "$type": "color",
+        "$value": "{color.maroon.50}"
+      },
+      "on-accent": {
+        "$type": "color",
+        "$value": "{color.core.ivory}"
+      },
+      "lumen": {
+        "$type": "color",
+        "$value": "{color.core.stone}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.line.light}"
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "{color.core.warm-grey}"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.core.maroon}"
+      },
+      "skeleton": {
+        "$type": "color",
+        "$value": "{color.core.linen}"
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{color.functional.success}"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{color.functional.warning}"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "{color.functional.error}"
+      },
+      "info": {
+        "$type": "color",
+        "$value": "{color.functional.info}"
+      },
+      "scrim": {
+        "$type": "color",
+        "$value": "rgba(23, 6, 8, 0.56)"
+      },
+      "logo": {
+        "$type": "string",
+        "$value": "Primary"
+      }
+    },
+    "deep": {
+      "$description": "Dark theme — Deep. data-theme=\"dark\".",
+      "bg": {
+        "$type": "color",
+        "$value": "{color.core.shadow}"
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "{color.core.deep}"
+      },
+      "surface-alt": {
+        "$type": "color",
+        "$value": "{color.dark-ui.surface-alt}"
+      },
+      "surface-inverse": {
+        "$type": "color",
+        "$value": "{color.core.ivory}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.dark-ui.text}"
+      },
+      "text-strong": {
+        "$type": "color",
+        "$value": "{color.core.ivory}"
+      },
+      "text-muted": {
+        "$type": "color",
+        "$value": "{color.dark-ui.text-muted}"
+      },
+      "text-inverse": {
+        "$type": "color",
+        "$value": "{color.core.near-black}"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.core.sand}"
+      },
+      "accent-hover": {
+        "$type": "color",
+        "$value": "{color.core.ivory}"
+      },
+      "accent-pressed": {
+        "$type": "color",
+        "$value": "{color.core.linen}"
+      },
+      "accent-tint": {
+        "$type": "color",
+        "$value": "{color.dark-ui.surface-alt}"
+      },
+      "on-accent": {
+        "$type": "color",
+        "$value": "{color.core.deep}"
+      },
+      "lumen": {
+        "$type": "color",
+        "$value": "{color.core.stone}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.dark-ui.border}"
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "{color.dark-ui.border-strong}"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.core.sand}"
+      },
+      "skeleton": {
+        "$type": "color",
+        "$value": "{color.dark-ui.surface-alt}"
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{color.functional-on-dark.success}"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{color.functional-on-dark.warning}"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "{color.functional-on-dark.error}"
+      },
+      "info": {
+        "$type": "color",
+        "$value": "{color.functional-on-dark.info}"
+      },
+      "scrim": {
+        "$type": "color",
+        "$value": "rgba(2, 2, 2, 0.64)"
+      },
+      "logo": {
+        "$type": "string",
+        "$value": "Sand"
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "arabic": {
+        "$type": "fontFamily",
+        "$value": [
+          "SIRAJ Digits",
+          "Tajawal",
+          "Geeza Pro",
+          "Tahoma",
+          "sans-serif"
+        ],
+        "$description": "Tajawal with Western digits from Jost (SIRAJ Digits)."
+      },
+      "latin": {
+        "$type": "fontFamily",
+        "$value": [
+          "Jost",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif"
+        ]
+      },
+      "numeric": {
+        "$type": "fontFamily",
+        "$value": [
+          "Jost",
+          "SIRAJ Digits",
+          "Tajawal",
+          "sans-serif"
+        ],
+        "$description": "Numbers, pricing and data."
+      }
+    },
+    "weight": {
+      "extralight": {
+        "$type": "fontWeight",
+        "$value": 200
+      },
+      "light": {
+        "$type": "fontWeight",
+        "$value": 300
+      },
+      "regular": {
+        "$type": "fontWeight",
+        "$value": 400
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": 500
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": 700
+      },
+      "extrabold": {
+        "$type": "fontWeight",
+        "$value": 800,
+        "$description": "Arabic display pairing only (200 ↔ 800)."
+      }
+    }
+  },
+  "typography": {
+    "$description": "Arabic line-height minimums (client rule 2026-10-13): display/H1 ≥ 1.3 (also for 700+ weights and 200↔800 pairs), H2/H3 ≥ 1.4, body/caption/small/data ≥ 1.6, labels ≥ 1.4 — Arabic lines never touch. Bilingual roles. Sizes in px, desktop (1440) and mobile (390); CSS interpolates fluidly between them. Arabic letter-spacing is always 0.",
+    "display": {
+      "$type": "typography",
+      "usage": "One statement per view: hero lines, covers. Arabic may pair 200 with 800.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 92,
+        "mobile": 52,
+        "weight": 300,
+        "lineHeight": 1.36,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 88,
+        "mobile": 50,
+        "weight": 300,
+        "lineHeight": 1.04,
+        "letterSpacing": "-0.01em"
+      }
+    },
+    "h1": {
+      "$type": "typography",
+      "usage": "Page title.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 64,
+        "mobile": 40,
+        "weight": 300,
+        "lineHeight": 1.42,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 60,
+        "mobile": 38,
+        "weight": 300,
+        "lineHeight": 1.08,
+        "letterSpacing": "-0.005em"
+      }
+    },
+    "h2": {
+      "$type": "typography",
+      "usage": "Section title.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 45,
+        "mobile": 30,
+        "weight": 400,
+        "lineHeight": 1.45,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 42,
+        "mobile": 29,
+        "weight": 400,
+        "lineHeight": 1.14,
+        "letterSpacing": "0"
+      }
+    },
+    "h3": {
+      "$type": "typography",
+      "usage": "Card and block titles.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 28,
+        "mobile": 23,
+        "weight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 27,
+        "mobile": 22,
+        "weight": 400,
+        "lineHeight": 1.22,
+        "letterSpacing": "0"
+      }
+    },
+    "lead": {
+      "$type": "typography",
+      "usage": "Intro paragraph under a title.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 22,
+        "mobile": 19,
+        "weight": 300,
+        "lineHeight": 1.75,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 21,
+        "mobile": 18,
+        "weight": 300,
+        "lineHeight": 1.55,
+        "letterSpacing": "0"
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "usage": "Running text, descriptions.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 18,
+        "mobile": 17,
+        "weight": 400,
+        "lineHeight": 1.8,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 17,
+        "mobile": 16,
+        "weight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": "0"
+      }
+    },
+    "small": {
+      "$type": "typography",
+      "usage": "Secondary text, helper text, meta.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 15,
+        "mobile": 14,
+        "weight": 400,
+        "lineHeight": 1.7,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 14,
+        "mobile": 13,
+        "weight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": "0"
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "usage": "Image captions, footnotes inside UI (never on artwork).",
+      "ar": {
+        "family": "arabic",
+        "desktop": 14,
+        "mobile": 13,
+        "weight": 400,
+        "lineHeight": 1.65,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 13,
+        "mobile": 12,
+        "weight": 400,
+        "lineHeight": 1.45,
+        "letterSpacing": "0.01em"
+      }
+    },
+    "label": {
+      "$type": "typography",
+      "usage": "Eyebrows, field labels, buttons, tabs. English is uppercase and tracked; Arabic never.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 15,
+        "mobile": 14,
+        "weight": 500,
+        "lineHeight": 1.42,
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 12,
+        "mobile": 12,
+        "weight": 500,
+        "lineHeight": 1.4,
+        "letterSpacing": "0.16em",
+        "textTransform": "uppercase"
+      }
+    },
+    "numbers": {
+      "$type": "typography",
+      "usage": "Large figures in stats and facts. Western digits, tabular.",
+      "ar": {
+        "family": "numeric",
+        "desktop": 72,
+        "mobile": 46,
+        "weight": 200,
+        "lineHeight": 1.42,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "numeric",
+        "desktop": 72,
+        "mobile": 46,
+        "weight": 200,
+        "lineHeight": 1.0,
+        "letterSpacing": "-0.02em"
+      }
+    },
+    "pricing": {
+      "$type": "typography",
+      "usage": "Price figure with a small currency unit (ر.ع. / OMR). Shows the data slot «—» until confirmed.",
+      "ar": {
+        "family": "numeric",
+        "desktop": 40,
+        "mobile": 30,
+        "weight": 300,
+        "lineHeight": 1.42,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "numeric",
+        "desktop": 40,
+        "mobile": 30,
+        "weight": 300,
+        "lineHeight": 1.1,
+        "letterSpacing": "-0.01em"
+      }
+    },
+    "data": {
+      "$type": "typography",
+      "usage": "Tables, dashboards, specs. Tabular lining figures.",
+      "ar": {
+        "family": "arabic",
+        "desktop": 15,
+        "mobile": 14,
+        "weight": 400,
+        "lineHeight": 1.65,
+        "letterSpacing": "0"
+      },
+      "en": {
+        "family": "latin",
+        "desktop": 14,
+        "mobile": 13,
+        "weight": 400,
+        "lineHeight": 1.45,
+        "letterSpacing": "0.01em"
+      }
+    }
+  },
+  "space": {
+    "$description": "4/8 scale. Name = value in px.",
+    "0": {
+      "$type": "dimension",
+      "$value": "0px"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "40": {
+      "$type": "dimension",
+      "$value": "40px"
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": "48px"
+    },
+    "64": {
+      "$type": "dimension",
+      "$value": "64px"
+    },
+    "80": {
+      "$type": "dimension",
+      "$value": "80px"
+    },
+    "96": {
+      "$type": "dimension",
+      "$value": "96px"
+    },
+    "128": {
+      "$type": "dimension",
+      "$value": "128px"
+    },
+    "160": {
+      "$type": "dimension",
+      "$value": "160px"
+    },
+    "192": {
+      "$type": "dimension",
+      "$value": "192px"
+    }
+  },
+  "breakpoint": {
+    "mobile": {
+      "$type": "dimension",
+      "$value": "390px",
+      "min": "0px",
+      "columns": 4,
+      "gutter": "16px",
+      "margin": "20px",
+      "$description": "Phones. Designed at 390."
+    },
+    "tablet": {
+      "$type": "dimension",
+      "$value": "834px",
+      "min": "834px",
+      "columns": 8,
+      "gutter": "24px",
+      "margin": "40px",
+      "$description": "Tablets. Designed at 834."
+    },
+    "desktop": {
+      "$type": "dimension",
+      "$value": "1440px",
+      "min": "1200px",
+      "columns": 12,
+      "gutter": "24px",
+      "margin": "80px",
+      "$description": "Laptops and desktops. Designed at 1440, content max 1280."
+    },
+    "wide": {
+      "$type": "dimension",
+      "$value": "1920px",
+      "min": "1680px",
+      "columns": 12,
+      "gutter": "32px",
+      "margin": "240px",
+      "$description": "Large screens, sales-centre displays. Content max 1440."
+    }
+  },
+  "grid": {
+    "desktop": {
+      "$type": "grid",
+      "columns": 12,
+      "gutter": "24px",
+      "margin": "80px",
+      "maxWidth": "1280px",
+      "baseline": "8px"
+    },
+    "tablet": {
+      "$type": "grid",
+      "columns": 8,
+      "gutter": "24px",
+      "margin": "40px",
+      "baseline": "8px"
+    },
+    "mobile": {
+      "$type": "grid",
+      "columns": 4,
+      "gutter": "16px",
+      "margin": "20px",
+      "baseline": "8px"
+    },
+    "presentation": {
+      "$type": "grid",
+      "width": "1920px",
+      "height": "1080px",
+      "columns": 12,
+      "gutter": "32px",
+      "margin": "120px",
+      "top": "96px",
+      "bottom": "96px",
+      "footerBand": "48px"
+    },
+    "social-post": {
+      "$type": "grid",
+      "width": "1080px",
+      "height": "1350px",
+      "columns": 6,
+      "gutter": "24px",
+      "margin": "72px",
+      "logoZone": "bottom-start"
+    },
+    "social-square": {
+      "$type": "grid",
+      "width": "1080px",
+      "height": "1080px",
+      "columns": 6,
+      "gutter": "24px",
+      "margin": "72px"
+    },
+    "social-story": {
+      "$type": "grid",
+      "width": "1080px",
+      "height": "1920px",
+      "columns": 6,
+      "gutter": "24px",
+      "margin": "72px",
+      "safeTop": "250px",
+      "safeBottom": "340px"
+    },
+    "editorial-a4": {
+      "$type": "grid",
+      "width": "210mm",
+      "height": "297mm",
+      "columns": 12,
+      "gutter": "4mm",
+      "margin": "15mm",
+      "inner": "20mm",
+      "top": "18mm",
+      "bottom": "22mm",
+      "baseline": "3mm"
+    },
+    "property-a4": {
+      "$type": "grid",
+      "width": "210mm",
+      "height": "297mm",
+      "columns": 12,
+      "gutter": "4mm",
+      "margin": "15mm",
+      "top": "15mm",
+      "bottom": "18mm",
+      "baseline": "3mm",
+      "use": "fact sheet, unit sheet"
+    },
+    "property-a3": {
+      "$type": "grid",
+      "width": "297mm",
+      "height": "420mm",
+      "columns": 12,
+      "gutter": "5mm",
+      "margin": "20mm",
+      "top": "20mm",
+      "bottom": "24mm",
+      "baseline": "4mm",
+      "use": "floor-plan sheet, sales-centre poster"
+    }
+  },
+  "layout": {
+    "container-sm": {
+      "$type": "dimension",
+      "$value": "720px",
+      "$description": "Reading width, forms."
+    },
+    "container-md": {
+      "$type": "dimension",
+      "$value": "1040px"
+    },
+    "container-lg": {
+      "$type": "dimension",
+      "$value": "1280px",
+      "$description": "Default content max."
+    },
+    "container-xl": {
+      "$type": "dimension",
+      "$value": "1440px",
+      "$description": "Wide screens."
+    },
+    "measure": {
+      "$type": "dimension",
+      "$value": "68ch",
+      "$description": "Max line length for body text."
+    },
+    "header-height": {
+      "$type": "dimension",
+      "$value": "88px"
+    },
+    "header-height-mobile": {
+      "$type": "dimension",
+      "$value": "64px"
+    },
+    "sidebar-width": {
+      "$type": "dimension",
+      "$value": "272px"
+    },
+    "section-y": {
+      "$type": "dimension",
+      "$value": "128px",
+      "$description": "Vertical rhythm between page sections (desktop); 64px on mobile."
+    },
+    "section-y-mobile": {
+      "$type": "dimension",
+      "$value": "64px"
+    }
+  },
+  "radius": {
+    "none": {
+      "$type": "dimension",
+      "$value": "0px",
+      "$description": "Every surface, control and image is square."
+    },
+    "silk": {
+      "$type": "dimension",
+      "$value": "96px",
+      "$description": "The Silk Corner — the single radius of the system. One corner (top-end: top-left in RTL) of an image container, at most twice per view. Clamp with min(…, 33%) on small boxes."
+    }
+  },
+  "border": {
+    "width": {
+      "hairline": {
+        "$type": "dimension",
+        "$value": "1px"
+      },
+      "strong": {
+        "$type": "dimension",
+        "$value": "2px"
+      }
+    },
+    "rule-opacity": {
+      "$type": "number",
+      "$value": 0.7,
+      "$description": "Stone hairline at 70%."
+    }
+  },
+  "shadow": {
+    "$description": "Single-layer shadows only. Prefer hairlines; never stack shadows.",
+    "none": {
+      "$type": "shadow",
+      "$value": "none"
+    },
+    "sm": {
+      "$type": "shadow",
+      "$value": "0 2px 8px -2px rgba(44, 15, 18, 0.10)",
+      "$description": "Menus, sticky header on scroll."
+    },
+    "md": {
+      "$type": "shadow",
+      "$value": "0 16px 40px -16px rgba(44, 15, 18, 0.22)",
+      "$description": "Dialogs, drawers."
+    },
+    "drape": {
+      "$type": "shadow",
+      "$value": "0 30px 60px -30px rgba(23, 6, 8, 0.45)",
+      "$description": "Soft fall beneath a hero image or silk element."
+    }
+  },
+  "opacity": {
+    "disabled": {
+      "$type": "number",
+      "$value": 0.38
+    },
+    "muted": {
+      "$type": "number",
+      "$value": 0.64
+    },
+    "hover": {
+      "$type": "number",
+      "$value": 0.08
+    },
+    "pressed": {
+      "$type": "number",
+      "$value": 0.16
+    },
+    "scrim": {
+      "$type": "number",
+      "$value": 0.56
+    },
+    "veil": {
+      "$type": "number",
+      "$value": 0.12
+    }
+  },
+  "z": {
+    "base": {
+      "$type": "number",
+      "$value": 0
+    },
+    "raised": {
+      "$type": "number",
+      "$value": 10
+    },
+    "sticky": {
+      "$type": "number",
+      "$value": 100
+    },
+    "header": {
+      "$type": "number",
+      "$value": 200
+    },
+    "drawer": {
+      "$type": "number",
+      "$value": 400
+    },
+    "overlay": {
+      "$type": "number",
+      "$value": 500
+    },
+    "dialog": {
+      "$type": "number",
+      "$value": 600
+    },
+    "toast": {
+      "$type": "number",
+      "$value": 700
+    },
+    "tooltip": {
+      "$type": "number",
+      "$value": 800
+    }
+  },
+  "motion": {
+    "$description": "Motion hooks. The six levels and easings are read from motion-system/tokens/siraj-motion-levels.json at build time (single shared source).",
+    "$ref": "motion-system/tokens/siraj-motion-levels.json",
+    "reduced": {
+      "$type": "string",
+      "$value": "opacity-only, 120ms; no translate, scale, blur or camera"
+    }
+  },
+  "component": {
+    "focus-ring": {
+      "width": {
+        "$type": "dimension",
+        "$value": "2px"
+      },
+      "offset": {
+        "$type": "dimension",
+        "$value": "3px"
+      }
+    },
+    "button": {
+      "height-sm": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "height-md": {
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "height-lg": {
+        "$type": "dimension",
+        "$value": "56px"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "28px"
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.none}"
+      }
+    },
+    "input": {
+      "height": {
+        "$type": "dimension",
+        "$value": "52px"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "border": {
+        "$type": "dimension",
+        "$value": "1px"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.none}"
+      }
+    },
+    "chip": {
+      "height": {
+        "$type": "dimension",
+        "$value": "36px"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "14px"
+      }
+    },
+    "tab": {
+      "height": {
+        "$type": "dimension",
+        "$value": "52px"
+      },
+      "indicator": {
+        "$type": "dimension",
+        "$value": "2px"
+      }
+    },
+    "card": {
+      "padding": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "padding-lg": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "image-ratio": {
+        "$type": "string",
+        "$value": "4 / 5"
+      }
+    },
+    "table": {
+      "row-height": {
+        "$type": "dimension",
+        "$value": "52px"
+      },
+      "header-height": {
+        "$type": "dimension",
+        "$value": "44px"
+      }
+    },
+    "dialog": {
+      "max-width": {
+        "$type": "dimension",
+        "$value": "560px"
+      }
+    },
+    "drawer": {
+      "width": {
+        "$type": "dimension",
+        "$value": "440px"
+      }
+    },
+    "icon": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "stroke": {
+        "$type": "number",
+        "$value": 1.25
+      },
+      "stroke-compact": {
+        "$type": "number",
+        "$value": 1.5
+      }
+    },
+    "lumen": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "6px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "12px"
+      }
+    },
+    "logo": {
+      "min-width": {
+        "$type": "dimension",
+        "$value": "96px"
+      },
+      "header-width": {
+        "$type": "dimension",
+        "$value": "112px"
+      },
+      "clear-space": {
+        "$type": "string",
+        "$value": "0.5H"
+      }
+    },
+    "data-slot": {
+      "glyph": {
+        "$type": "string",
+        "$value": "—"
+      },
+      "$description": "Unconfirmed facts (price, area, units, dates, yields) always render as the label + «—»."
+    }
+  }
+}

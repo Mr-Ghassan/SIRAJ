@@ -1,0 +1,19 @@
+{
+  "name": "Light-Story",
+  "kind": "publish",
+  "formats": [
+    "story"
+  ],
+  "layout": "hero",
+  "env": "photo",
+  "photo": "14-Property-Marketing/12-Project-Siraj/Source/Clean/SIRAJ_Project-Siraj_Corner_Blue-Hour_Clean_v1.0.jpg",
+  "pos": "50% 60%",
+  "overlay": "scrim",
+  "display": true,
+  "ar": {
+    "eyebrow": "مسقط",
+    "title": "حين يحلّ المساء،\nيُضيء سراج.",
+    "end": "{contact.post_line}"
+  },
+  "date": "v1"
+}

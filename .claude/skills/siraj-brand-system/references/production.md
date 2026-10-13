@@ -32,7 +32,7 @@ Contents: 1. Repo map · 2. make-post briefs (schema + recipes) · 3. Ready temp
 | `pos` | `"50% 40%"` | photo framing |
 | `overlay` | `horizon` · `scrim` | horizon = real-silk ground line under the copy; scrim = dark fall for legibility |
 | `display` | `true` | big display title (short titles only) |
-| `ar.eyebrow` `ar.title` `ar.lead` `ar.end` | text | `\n` = line break; `[[…]]` = keep LTR; tokens `{contact.website}` `{contact.social_handle}` `{founding_project.name_ar}` |
+| `ar.eyebrow` `ar.title` `ar.lead` `ar.end` | text | `\n` = line break; `[[…]]` = keep LTR; tokens `{contact.post_line}` `{contact.social_handle}` `{contact.website_display}` `{founding_project.name_ar}`; `[ig]` = Instagram glyph |
 | `ar.blocks` | `[{type:"facts", items:[…]}]`, `{type:"stats", items:[{v,u,l}]}`, `{type:"list", items, numbered}`, `{type:"details", rows:[[k,v]]}`, `{type:"quote", text, cite}`, `{type:"progress", value, label}` | |
 | `ar.note` | — | **ignored**: no side notes on designs (client rule 2026-10-12). Put disclaimers in the caption. |
 | `logo` | `Primary` · `Sand` · `White` · `Deep` | force a logo variant (default is chosen by `env`; on photos prefer `Sand`) |
@@ -56,7 +56,7 @@ Contents: 1. Repo map · 2. make-post briefs (schema + recipes) · 3. Ready temp
 ```json
 { "name": "Standard-Statement", "formats": ["post","square"], "layout": "type", "env": "deep", "still": "Drape-Deep",
   "ar": { "eyebrow": "سراج للتطوير العقاري", "title": "لا نبدأ بالانتشار،\nبل نبدأ بمعيار.",
-          "lead": "نبدأ بمشروع قوي، نبني اسمًا موثوقًا، ثم نتوسع بغاية واضحة.", "end": "[[@SIRAJPROPERTIES]]" } }
+          "lead": "نبدأ بمشروع قوي، نبني اسمًا موثوقًا، ثم نتوسع بغاية واضحة.", "end": "{contact.post_line}" } }
 ```
 ```json
 { "name": "Pillar-Product", "formats": ["post"], "layout": "window", "env": "ivory",
@@ -68,7 +68,7 @@ Contents: 1. Repo map · 2. make-post briefs (schema + recipes) · 3. Ready temp
 ```json
 { "name": "Quote-Standard", "formats": ["post"], "layout": "type", "env": "deep", "still": "Drape-Deep",
   "ar": { "blocks": [{ "type": "quote", "text": "لا نبدأ بالانتشار،\nبل نبدأ بمعيار.", "cite": "سراج للتطوير العقاري" }],
-          "end": "[[@SIRAJPROPERTIES]]" } }
+          "end": "{contact.post_line}" } }
 ```
 A quote post needs no title. For a pre-launch **veil** teaser, use the Wrap key visual with `photoScale` ~1.3, `overlay:"scrim"` and `per_format.story.photo` = the 9:16 version.
 
@@ -127,7 +127,7 @@ HTML post skeleton (1080×1350, Arabic):
   </div>
   <div style="position:absolute;inset-inline:72px;bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;color:#D6C0B2;font-size:19px">
     <!-- bottom-start (right in RTL): inline SIRAJ_Logo_Sand_v1.0.svg here, width 168px -->
-    <span>سجّل اهتمامك · <span dir="ltr">[رقم الهاتف]</span> · <span dir="ltr">@SIRAJPROPERTIES</span></span>
+    <span>سجّل اهتمامك · <span dir="ltr">77714404</span> · <span dir="ltr">${CT.social_icon_svg}SIRAJPROPERTIES</span></span>
   </div>
 </div>
 ```

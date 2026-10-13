@@ -33,21 +33,53 @@
   },
   "contact": {
     "website": "sirajproperties.net",
-    "website_status": "CONFIRMED",
+    "website_status": "CONFIRMED — always written in full and in capitals: WWW.SIRAJPROPERTIES.NET (client rule 2026-10-13)",
     "email": "info@sirajproperties.net",
-    "email_status": "Domain confirmed (sirajproperties.net); mailbox name to be confirmed",
-    "phone": "+968 2400 0000",
-    "phone_status": "PLACEHOLDER",
-    "whatsapp": "+968 9000 0000",
-    "address_en": "Al Khuwair, Muscat, Sultanate of Oman",
-    "address_ar": "الخوير، مسقط، سلطنة عُمان",
-    "po_box": "P.O. Box 000, P.C. 100",
-    "cr_number": "CR 0000000",
-    "social_handle": "@SIRAJPROPERTIES",
-    "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES",
+    "email_status": "NOT FOR USE in public materials (mailbox unconfirmed); kept for reference",
+    "phone": "77714404",
+    "phone_status": "CONFIRMED (client, 2026-10-13)",
+    "whatsapp": "77714404",
+    "address_en": "Muscat, Sultanate of Oman",
+    "address_ar": "مسقط، سلطنة عُمان",
+    "po_box": "—",
+    "cr_number": "—",
+    "social_handle": "SIRAJPROPERTIES",
+    "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES. Shown as the Instagram icon + SIRAJPROPERTIES; never with «@» (client rule 2026-10-13)",
     "instagram": "https://instagram.com/sirajproperties",
-    "phone_post_placeholder_ar": "[رقم الهاتف]",
-    "post_contact_policy": "Posts (all social formats) show the phone number and @SIRAJPROPERTIES only, never the website (client instruction 2026-10-12). Use the tokens {contact.phone_post} and {contact.social_handle}; {contact.post_line} gives both."
+    "post_contact_policy": "Posts, stories and video outros show the phone number and the Instagram icon + SIRAJPROPERTIES only (client rules 2026-10-12/13). Never write «@»: the Instagram glyph replaces it. Stationery, presentations, the email signature and documents may add the website, always written WWW.SIRAJPROPERTIES.NET. Tokens: {contact.phone_post}, {contact.social_handle}, {contact.website_display}; {contact.post_line} gives phone · [Instagram icon] SIRAJPROPERTIES.",
+    "phone_display": "77714404",
+    "address_status": "City only (street address not provided)",
+    "whatsapp_status": "same as phone (assumed for WhatsApp links only; confirm)",
+    "website_display": "WWW.SIRAJPROPERTIES.NET",
+    "website_url": "https://www.sirajproperties.net",
+    "social_display": "SIRAJPROPERTIES",
+    "social_icon": "07-Icon-System/svg/filled/siraj-icon-instagram.svg",
+    "contact_sets": {
+      "post": [
+        "phone",
+        "instagram"
+      ],
+      "outro": [
+        "phone",
+        "instagram"
+      ],
+      "stationery": [
+        "phone",
+        "instagram",
+        "website"
+      ],
+      "presentation": [
+        "phone",
+        "instagram",
+        "website"
+      ],
+      "email_signature": [
+        "phone",
+        "instagram",
+        "website"
+      ]
+    },
+    "social_icon_svg": "<svg class=\"ig\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-label=\"Instagram\" role=\"img\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"><path d=\"M3.5 3.5H20.5V20.5H3.5Z\"/><path d=\"M7.6 12A4.4 4.4 0 1 0 16.4 12A4.4 4.4 0 1 0 7.6 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M17 5.6L18.4 7L17 8.4L15.6 7Z\"/></svg>"
   },
   "brand_line": {
     "en": "Light, built.",

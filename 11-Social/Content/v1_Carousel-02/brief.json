@@ -1,0 +1,19 @@
+{
+  "name": "Carousel-02",
+  "kind": "publish",
+  "formats": [
+    "carousel"
+  ],
+  "layout": "hero",
+  "env": "photo",
+  "photo": "14-Property-Marketing/12-Project-Siraj/Source/KeyVisuals/SIRAJ_Project-Siraj_KV_Lantern_4x5_v1.0.jpg",
+  "pos": "50% 60%",
+  "overlay": "scrim",
+  "display": true,
+  "ar": {
+    "eyebrow": "مسقط",
+    "title": "في قلب المدينة،\nبيتٌ من ضوء.",
+    "end": "{contact.post_line}"
+  },
+  "date": "v1"
+}
