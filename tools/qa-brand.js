@@ -21,6 +21,7 @@ const RULES = [
   ['fictional project «حرير» / Harir', /«حرير»|مشروع حرير|\bHarir\b|harir\./, 'fail'],
   ['website not written WWW.SIRAJPROPERTIES.NET', /(?<!https:\/\/www\.)sirajproperties\.net|(?<!https:\/\/)www\.sirajproperties\.net|(?<!WWW\.)SIRAJPROPERTIES\.NET|SirajProperties\.|Sirajproperties\./, 'fail'],
   ['«@» before the handle (use the Instagram icon)', /@SIRAJPROPERTIES|@sirajproperties/, 'fail'],
+  ['phone not grouped «7771 4404»', /(?<!tel:)(?<!968)(?<!wa\.me\/)(?<!"phone":\s?")(?<!phone: ')77714404/, 'fail'],
   ['email on public material', /\b[\w.]+@[\w-]+\.(com|net|om)\b|example\.com/, 'fail'],
   ['old / placeholder phone', /2400 0000|9000 0000|9100 0000|9200 0000|\[رقم الهاتف\]|phone_post_placeholder/, 'fail'],
   ['placeholder text', /\bPLACEHOLDER\b|Lorem ipsum|\[PLACEHOLDER|\[البنك|TODO:/, 'fail'],

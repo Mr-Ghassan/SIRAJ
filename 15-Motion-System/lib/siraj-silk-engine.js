@@ -148,11 +148,24 @@
     if (p <= ph + hold) return h + ((p - ph) / hold) * (t - h);
     return t + Math.min(1, (p - ph - hold) / pt) * tail;
   }
-  async function sweep(footage, p, { fmt = '16x9', hold = 0.1 } = {}) {
+  // EXIT GLIDE: the 4K masters end with the ribbon still partly in frame, so in the last part of the pass the air
+  // carries the whole footage layer along the travel direction until its trailing edge has left (GLIDE, ease 'glide').
+  function exitShift(fmt, p) {
+    const T = TR()[fmtKey(fmt)]; if (!T) return 0;
+    const last = T.s.filter(Boolean).pop() || [1, 1];
+    return M.EASE.glide(M.clamp((p - 0.45) / 0.55)) * Math.max(0, 1.12 - last[0]);
+  }
+  function carry(video, shift, { W, H, rtl = true, scale = 1 } = {}) {
+    const a = axis(W || video.clientWidth || 1920, H || video.clientHeight || 1080, rtl);
+    video.style.transform = `translate(${(a.ux * a.D * shift).toFixed(1)}px,${(a.uy * a.D * shift).toFixed(1)}px) ${rtl ? 'scaleX(-1) ' : ''}scale(${scale})`;
+  }
+  async function sweep(footage, p, { fmt = '16x9', hold = 0.1, exit = true, W, H, rtl = true, scale = 1 } = {}) {
     const c = passTime(fmt, M.clamp(p), { hold });
     await footage.at(c);
     const [trail, lead] = track(fmt, c);
-    return { clip: c, trail, lead, mid: (trail + lead) / 2 };
+    const sh = exit ? exitShift(fmt, M.clamp(p)) : 0;
+    if (exit) carry(footage.video, sh, { W, H, rtl, scale });
+    return { clip: c, trail: trail + sh, lead: lead + sh, mid: (trail + lead) / 2 + sh, shift: sh };
   }
   // Mirror the footage for RTL (layout silk mirrors with the text; footage of silk alone may be mirrored).
   function placeFootage(video, { rtl = true, scale = 1, origin = '50% 50%' } = {}) {
@@ -244,5 +257,5 @@
     return deg;
   }
 
-  g.SirajSilk = { version: '1.0.0', ASSET, air, breathe, drift, sway, gustEnv, axis, axisMask, axisBand, clearMask, edgeClip, edgePoints, kOf, maskReveal, silkEdge, lightSweep, track, phases, passTime, sweep, placeFootage, wrap, fold, settle };
+  g.SirajSilk = { version: '1.0.0', ASSET, air, breathe, drift, sway, gustEnv, exitShift, carry, axis, axisMask, axisBand, clearMask, edgeClip, edgePoints, kOf, maskReveal, silkEdge, lightSweep, track, phases, passTime, sweep, placeFootage, wrap, fold, settle };
 })(window);

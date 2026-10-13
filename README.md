@@ -120,7 +120,7 @@ Individual targets are `build:tokens`, `build:logos`, `build:ui`, `build:social`
 ## Status and notes
 
 - ✅ **Official v1.0.** The logo geometry is unchanged from the supplied master.
-- ✅ Phone **77714404**, Instagram **SIRAJPROPERTIES** (always shown with the Instagram icon, never «@») and website **WWW.SIRAJPROPERTIES.NET** (always in full, in capitals) are confirmed. Address (city only) and CR details are not provided.
+- ✅ Phone **7771 4404**, Instagram **SIRAJPROPERTIES** (always shown with the Instagram icon, never «@») and website **WWW.SIRAJPROPERTIES.NET** (always in full, in capitals) are confirmed. Address (city only) and CR details are not provided.
 - ⚠️ Photography in `08-Photography/Library` and the campaign visuals are **AI-generated concept imagery** (ElevenLabs/Seedream), used to demonstrate the art direction. Replace them with commissioned photography or CGI before public use.
 - ✅ Colour values (HEX, RGB, CMYK, Pantone) are **approved**.
 - ✅ **Language policy: Arabic only.** English deliverables are dormant in `99-Archive/English-Dormant/`.

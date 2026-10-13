@@ -26,7 +26,7 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 3. **People:** women appear **only in a hijab fully covering hair and neck, with loose modest clothing** — never uncovered hair or ʿawrah, including background and scale figures. Cast a **mix of Omani and international** people. **Omani men wear the dishdasha with the massar (المصر)** — never the kumma, never the Gulf ghutra. No intimate poses.
 4. **The logo is never redrawn**, recoloured outside its variants, stretched, shadowed, or set in a font. Use the files in `assets/logo/`.
 5. **Western digits (0–9) everywhere**, including Arabic text. Never ٠١٢٣.
-6. **Contact on posts and outros = phone `77714404` + the Instagram icon with `SIRAJPROPERTIES` — never «@», never the website** (client rules 2026-10-12/13). The Instagram glyph always replaces «@» (`contact.social_icon_svg`; `[ig]` in briefs). Stationery, presentations, the email signature and documents add the website, always written in full and in capitals: `WWW.SIRAJPROPERTIES.NET`. Captions: point to the phone or the DMs; no «@».
+6. **Contact on posts and outros = phone `7771 4404` + the Instagram icon with `SIRAJPROPERTIES` — never «@», never the website** (client rules 2026-10-12/13). The Instagram glyph always replaces «@» (`contact.social_icon_svg`; `[ig]` in briefs). Stationery, presentations, the email signature and documents add the website, always written in full and in capitals: `WWW.SIRAJPROPERTIES.NET`. Captions: point to the phone or the DMs; no «@».
 7. **Pressed silk only; sharp close-ups.** Silk is always smooth and pressed (liquid folds, clean sheen), never wrinkled, crinkled or creased. Close-ups use high-resolution footage (generate at 4K, at least 1080p).
 8. **Ivory-rose light, never yellow; luxurious final scenes.** Reduce yellow/amber light everywhere (windows, lamps, haze, sweeps); grade with `tools/siraj-luxe-grade.py`. End frames are quiet: deep blacks, one sheen, generous space.
 9. **Air moves everything soft.** In motion and video, wind is what moves the silk and the trees, palms and plants in and around the project: one prevailing direction (right → left), slow travelling waves, at most one gentle gust, then SETTLE; never a storm or a looping wobble; the building never moves. See `motion-system/tokens/siraj-wind.json` (includes ready video-prompt lines).
@@ -52,7 +52,7 @@ The idea in one line: **the lamp sets the standard, silk carries it, architectur
 | Item | Value | Status |
 |---|---|---|
 | Company | سراج للتطوير العقاري · SIRAJ Real Estate Development · سلطنة عُمان | confirmed |
-| **Contact on posts / outros** | **`77714404` + Instagram icon + `SIRAJPROPERTIES`** — never «@», never the website (client rules 2026-10-12/13) | rule |
+| **Contact on posts / outros** | **`7771 4404` + Instagram icon + `SIRAJPROPERTIES`** — never «@», never the website (client rules 2026-10-12/13) | rule |
 | Website | `WWW.SIRAJPROPERTIES.NET` — always in full and in capitals; stationery, presentations, email signature and documents only | confirmed |
 | Instagram | Instagram icon + `SIRAJPROPERTIES` (capitals, never «@») | confirmed |
 | Email | not for public use (mailbox unconfirmed) | — |
@@ -119,3 +119,10 @@ Run this check, briefly and honestly, and fix what fails:
 - Voice calm and factual — no hype words, no exclamation marks?
 
 When the user asks for something that breaks a rule (e.g. an unveiled model, a CG silk effect, an English post), say which rule it touches and offer the closest on-brand alternative instead of silently complying.
+
+
+**Project name (client rule 2026-10-13).** The SIRAJ brand mark is the English logo. Never typeset «سراج» as a name in Tajawal. When the project is meant, place the «مشروع سراج» silk-script lettering (`01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Silk-Dark|Silk-Light_v1.0.svg`, `[lettering]` in post briefs) and add «مسقط» if needed; in running copy write «المشروع» or «مسقط».
+
+**Phone (client rule 2026-10-13).** Always shown in groups of four digits with a small space: «7771 4404» (`contact.phone_display`, a non-breaking space); tel:/WhatsApp links keep the raw number.
+
+**Intro / outro.** Two versions each, both in 16:9 and 9:16: the SIRAJ company version (English wordmark) and the project version (the «مشروع سراج» ribbon lettering + small SIRAJ + مسقط). `16-Intro`, `17-Outro`; render with `node tools/build-motion.js intro outro`.

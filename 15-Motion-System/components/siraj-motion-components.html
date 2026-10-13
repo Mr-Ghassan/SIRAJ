@@ -12,8 +12,8 @@
 
   Timing comes from Motion Tokens v1.0 (motion-system/tokens → lib/siraj-motion-tokens.js → components.<c>.timeline),
   so the documentation and the renders can never drift. Moving silk = real footage; static silk = photographs.
-  Arabic only (RTL), Tajawal + Jost, Western digits. On-screen data: the project name «سراج», «مسقط»,
-  «شقق سكنية ومحلات تجارية», 77714404 and the Instagram icon + SIRAJPROPERTIES (lib/siraj-public-data.js; never «@»). Nothing else is claimed.
+  Arabic only (RTL), Tajawal + Jost, Western digits. On-screen data: «مسقط»,
+  «شقق سكنية ومحلات تجارية», the «مشروع سراج» silk-script lettering (never typed), 7771 4404 and the Instagram icon + SIRAJPROPERTIES (lib/siraj-public-data.js; never «@»). Nothing else is claimed.
 -->
 <link rel="stylesheet" href="../../09-Design-System/css/siraj.css">
 <script src="../lib/siraj-motion-tokens.js"></script>
@@ -69,9 +69,11 @@ const img = (src, cls, parent) => { const i = document.createElement('img'); i.c
 const lum = (s, col = '#AA9180') => `<i class="lum" style="width:${s}px;height:${s}px;background:${col}"></i>`;
 const AR = (txt, size, w = 400, lh = 1.6, col = 'inherit', extra = '') => `<div class="ar" style="font-size:${Math.round(size * U)}px;font-weight:${w};line-height:${lh};color:${col};${extra}">${txt}</div>`;
 const LINE = (id, txt, size, w, col, lh = 1.3) => `<span class="mask"><span id="${id}" class="ar" style="font-size:${Math.round(size * U)}px;font-weight:${w};line-height:${lh};color:${col}">${txt}</span></span>`;
+// «مشروع سراج» silk-script lettering — the project name is never typed (client rule 2026-10-13). h in type units.
+const LETT = (h, dark = true) => { const src = `../../01-Logos/Project/SIRAJ_Project-Siraj_Lettering_${dark ? 'Ribbon-Ivory' : 'Ribbon'}_v1.0.png`;   // real layered silk ribbon; ivory satin on dark const i = new Image(); i.src = src; waits.push(i.decode().catch(() => {})); return `<img class="lett" alt="مشروع سراج" src="${src}" style="height:${Math.round(h * U)}px;width:auto;display:block">`; };
 // Instagram = icon + handle, never «@» (client rule 2026-10-13)
 const IGH = `${(PUB.instagram_icon_svg || '').replace('<svg ', '<svg style="width:.9em;height:.9em;vertical-align:-.12em;margin-right:.4em" ')}${PUB.handle}`;
-const contactLine = (size, col = '#D6C0B2') => `<div style="display:flex;align-items:center;gap:${Math.round(size * 0.75)}px;font:400 ${Math.round(size * U)}px/1.45 Jost;color:${col};letter-spacing:.04em;direction:rtl"><bdi dir="ltr" class="lat num">${PUB.phone}</bdi>${lum(Math.round(size * 0.24 * U))}<bdi dir="ltr" class="lat">${IGH}</bdi></div>`;
+const contactLine = (size, col = '#D6C0B2') => `<div style="display:flex;align-items:center;gap:${Math.round(size * 0.75)}px;font:400 ${Math.round(size * U)}px/1.45 Jost;color:${col};letter-spacing:.04em;direction:rtl"><bdi dir="ltr" class="lat num" style="white-space:nowrap">${PUB.phone_display}</bdi>${lum(Math.round(size * 0.24 * U))}<bdi dir="ltr" class="lat">${IGH}</bdi></div>`;
 // entrance (+ exit when the component has one) at the token level of a timeline step
 function st(t, name, o = {}) {
   const s = step(name);
@@ -207,7 +209,7 @@ const COMP = {
     const lt = el(`<div id="pl" style="position:absolute;inset:0;background:rgba(44,15,18,.92);border-top-left-radius:${46 * U}px"></div>
       <div style="position:relative;display:flex;align-items:center;gap:${26 * U}px;padding:${26 * U}px ${46 * U}px ${26 * U}px ${56 * U}px">
         <span id="lm" style="display:inline-flex">${lum(Math.round(12 * U))}</span>
-        <div>${LINE('n', PUB.project.name_ar, V ? 50 : 46, 500, '#F7F2ED', 1.45)}${LINE('d', `${PUB.project.descriptor_ar} · ${PUB.project.city_ar}`, V ? 28 : 26, 400, '#D6C0B2', 1.5)}</div></div>`,
+        <div><span class="mask"><span id="n" style="display:inline-block">${LETT(V ? 92 : 84, true)}</span></span>${LINE('d', `${PUB.project.descriptor_ar} · ${PUB.project.city_ar}`, V ? 28 : 26, 400, '#D6C0B2', 1.5)}</div></div>`,
       `right:${MX}px;bottom:${(V ? SAFE_B + 40 : 112) * U}px`);
     const plEl = $('#pl', lt);
     seek = (t) => {
@@ -229,7 +231,7 @@ const COMP = {
         ${i && V ? `<div class="hair rl" style="position:absolute;right:0;left:0;top:0;transform-origin:100% 50%"></div>` : ''}
         <div class="mask"><span id="v${i}" class="num lat" style="font:200 ${Math.round((V ? 150 : 132) * U)}px/1.1 Jost;color:#602733;display:inline-block">${VALUES[i] !== undefined ? '0' : '—'}</span></div>
         <div id="l${i}">${AR(l, V ? 34 : 30, 400, 1.6, '#3B3436')}</div></div>`).join('');
-    const box = el(`<div id="eb" style="display:flex;align-items:center;gap:${14 * U}px">${lum(Math.round(10 * U))}${AR(`${PUB.project.name_ar} · ${PUB.project.city_ar}`, V ? 30 : 26, 500, 1.6, '#602733')}</div>
+    const box = el(`<div id="eb" style="display:flex;align-items:center;gap:${14 * U}px">${lum(Math.round(10 * U))}${AR(PUB.project.city_ar, V ? 30 : 26, 500, 1.6, '#602733')}</div>
       <div style="display:flex;${V ? 'flex-direction:column' : ''};margin-top:${(V ? 40 : 64) * U}px">${cols}</div>`,
       V ? `right:${MX}px;left:${MX}px;top:${SAFE_T + 120}px` : `right:${MX - 44 * U}px;left:${MX}px;top:${H * 0.3}px`);
     seek = (t) => {
@@ -248,11 +250,11 @@ const COMP = {
   counter() {
     const bg = el('', 'inset:0;overflow:hidden', root, 'full');
     if (!ALPHA) { const s = img(SK.ASSET.drapeDeep(FMT), 'plate', bg); s.style.cssText = 'left:0;top:0;width:100%;height:100%;object-fit:cover'; bg.silk = s; el('', 'inset:0;background:rgba(23,6,8,.42)', root, 'full'); }
-    const digits = PUB.phone.split('');
+    const digits = PUB.phone.split('');   // shown in groups of four with a small space: 7771 4404
     const DS = Math.round((V ? 150 : 210) * U);
     const reel = (d, i) => `<div style="height:${DS * 1.1}px;overflow:hidden;display:inline-block"><div id="r${i}" style="display:flex;flex-direction:column">${Array.from({ length: 11 + +d }, (_, n) => `<span style="height:${DS * 1.1}px;line-height:${DS * 1.1}px">${n % 10}</span>`).join('')}</div></div>`;
     const box = el(`<div id="lb" style="display:flex;justify-content:center;align-items:center;gap:${14 * U}px">${lum(Math.round(10 * U))}${AR('للتواصل', V ? 34 : 30, 500, 1.6, '#D6C0B2')}</div>
-      <div dir="ltr" class="num" style="margin-top:${18 * U}px;display:flex;justify-content:center;font:200 ${DS}px Jost;color:#F7F2ED;letter-spacing:-.01em">${digits.map(reel).join('')}</div>
+      <div dir="ltr" class="num" style="margin-top:${18 * U}px;display:flex;justify-content:center;font:200 ${DS}px Jost;color:#F7F2ED;letter-spacing:-.01em">${digits.map((d, i) => reel(d, i) + (i === 3 ? `<span style="display:inline-block;width:${Math.round(DS * 0.28)}px"></span>` : '')).join('')}</div>
       <div id="hd" style="margin-top:${26 * U}px;font:300 ${Math.round(44 * U)}px/1.45 Jost;color:#D6C0B2;letter-spacing:.06em" dir="ltr">${IGH}</div>`, `left:0;right:0;top:${H * (V ? 0.34 : 0.24)}px;text-align:center`);
     seek = (t) => {
       if (!ALPHA) { SK.settle(bg, t, 0, step('plate').dur, 1.06); SK.drift(bg.silk, t, { W, level: 'whisper' }); } // AIR: the silk still is carried by a breeze
@@ -274,7 +276,7 @@ const COMP = {
     const silkBox = el('', 'inset:0;overflow:hidden', frame, 'full');
     const rb = img(SK.ASSET.longRibbon, 'cut', silkBox);
     const tx = el(`<div id="eb" style="display:flex;align-items:center;gap:${14 * U}px">${lum(Math.round(10 * U))}${AR(PUB.project.city_ar, 26, 500, 1.6, '#602733')}</div>
-      <div style="margin-top:${10 * U}px">${LINE('n', PUB.project.name_ar, 150, 800, '#140E10', 1.3)}${LINE('d', PUB.project.descriptor_ar, 46, 300, '#3B3436', 1.45)}</div>
+      <div style="margin-top:${10 * U}px"><span class="mask"><span id="n" style="display:inline-block">${LETT(170, false)}</span></span>${LINE('d', PUB.project.descriptor_ar, 46, 300, '#3B3436', 1.45)}</div>
       <div class="hair" id="rule" style="width:${160 * U}px;margin:${30 * U}px 0 ${26 * U}px"></div>
       <div id="ln">${AR('مدروسة في كل تفاصيلها.', 38, 200, 1.6, '#3B3436')}</div>`, V ? `right:${MX}px;left:${MX}px;top:${PY + PH + 56 * U}px` : `right:${MX}px;top:${H * 0.26}px;width:${W - PW - MX * 2 - 100 * U}px`);
     seek = (t) => {
@@ -315,7 +317,7 @@ const COMP = {
     </svg>`;
     const sea = el(AR('بحر عُمان', 28, 400, 1.6, '#6B625E'), `left:${300 * W / 1920}px;top:${180 * H / 1080}px;opacity:0`, cam);
     const blk = el(`<div style="display:flex;align-items:center;gap:${14 * U}px">${lum(Math.round(10 * U))}${AR('الموقع', 26, 500, 1.6, '#602733')}</div>
-      ${AR(PUB.project.name_ar, 84, 800, 1.3, '#140E10')}${AR(PUB.project.city_ar, 40, 300, 1.45, '#3B3436')}`, `right:${MX}px;bottom:${110 * U}px;background:rgba(247,242,237,.94);padding:${26 * U}px ${34 * U}px;border-top-left-radius:${40 * U}px`);
+      ${LETT(96, false)}${AR(PUB.project.city_ar, 40, 300, 1.45, '#3B3436')}`, `right:${MX}px;bottom:${110 * U}px;background:rgba(247,242,237,.94);padding:${26 * U}px ${34 * U}px;border-top-left-radius:${40 * U}px`);
     seek = (t) => {
       const c = step('coast');
       $('#sea', cam).setAttribute('opacity', M.seg(t, c.at, c.dur, E.flow));
@@ -340,7 +342,7 @@ const COMP = {
         <g id="pin"><line x1="0" y1="0" x2="0" y2="-62" stroke="#F7F2ED" stroke-width="2"/><rect x="-13" y="-90" width="26" height="26" fill="#AA9180" transform="rotate(45 0 -77)"/><circle cx="0" cy="0" r="5" fill="#F7F2ED"/></g></svg>`,
       `left:${X - 100}px;top:${Y - 200}px;width:200px;height:240px;filter:drop-shadow(0 2px 14px rgba(23,6,8,.5))`);
     const lead = el('', `right:${W - X + 22}px;top:${Y - 77}px;width:${150 * U}px`); lead.className = 'abs hair'; lead.style.transformOrigin = '100% 50%'; lead.style.background = 'rgba(247,242,237,.9)';
-    const lab = el(`${LINE('n', PUB.project.name_ar, 46, 500, '#F7F2ED', 1.45)}${LINE('c', PUB.project.city_ar, 28, 400, '#F7F2ED', 1.5)}`,
+    const lab = el(`<span class="mask"><span id="n" style="display:inline-block">${LETT(80, true)}</span></span>${LINE('c', PUB.project.city_ar, 28, 400, '#F7F2ED', 1.5)}`,
       `right:${W - X + 22 + 150 * U + 22}px;top:${Y - 77 - 46 * U}px;text-shadow:0 1px 16px rgba(23,6,8,.6)`);
     seek = (t) => {
       if (!pl.skip) SK.settle(pl.cam, t, 0, 4.5, 1.03);
@@ -394,7 +396,7 @@ const COMP = {
       ${data.map((v, i) => `<rect id="b${i}" x="${x0 + i * gap + (gap - bw) / 2}" y="${y0}" width="${bw}" height="0" ${has ? `fill="${i === N - 1 ? '#602733' : '#D6C0B2'}"` : `fill="none" stroke="${i === N - 1 ? '#602733' : '#AA9180'}" stroke-width="1.5" stroke-dasharray="6 6"`}/>`).join('')}</svg>`, 'inset:0', root, 'full');
     const vals = data.map((v, i) => el(`<div class="lat num" style="font:300 ${Math.round(28 * U)}px/1.45 Jost;color:#3B3436">${has ? '' : '—'}</div>`, `left:${x0 + i * gap}px;width:${gap}px;text-align:center;top:0;opacity:0`));
     const cats = data.map((v, i) => el(AR('—', 22, 400, 1.6, '#6B625E'), `left:${x0 + i * gap}px;width:${gap}px;text-align:center;top:${y0 + 14 * U}px`));
-    const blk = el(`<div style="display:flex;align-items:center;gap:${14 * U}px">${lum(Math.round(10 * U))}${AR(`${PUB.project.name_ar} · ${PUB.project.city_ar}`, 26, 500, 1.6, '#602733')}</div>
+    const blk = el(`<div style="display:flex;align-items:center;gap:${14 * U}px">${lum(Math.round(10 * U))}${AR(`${PUB.project.city_ar}`, 26, 500, 1.6, '#602733')}</div>
       ${AR('المؤشّر', 72, 300, 1.3, '#140E10', `margin-top:${10 * U}px`)}${AR('—', 30, 300, 1.6, '#6B625E', `margin-top:${12 * U}px`)}`, `right:${MX}px;top:${H * 0.3}px;width:${W * 0.3}px`);
     seek = (t) => {
       const g = step('grid');
@@ -412,7 +414,7 @@ const COMP = {
     };
   },
 
-  // 14 · CTA — logo bottom-right, contact line bottom-left: logo + 77714404 + Instagram icon/SIRAJPROPERTIES only.
+  // 14 · CTA — logo bottom-right, contact line bottom-left: logo + 7771 4404 + Instagram icon/SIRAJPROPERTIES only.
   cta() {
     const pl = plate('Front-Night', { pos: [0.5, V ? 0.35 : 0.42] });
     const scrim = el('', 'inset:0;background:linear-gradient(0deg, rgba(23,6,8,.8) 0%, rgba(23,6,8,.5) ' + (V ? 30 : 22) + '%, rgba(23,6,8,0) ' + (V ? 52 : 44) + '%)', root, 'full');

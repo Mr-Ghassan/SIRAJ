@@ -115,6 +115,8 @@ body { width: max-content; }
 .body { font-size: var(--fs-body); font-weight: 400; line-height: 1.55; color: var(--fg); }
 [lang="ar"] .body { font-size: calc(var(--fs-body) * 1.06); line-height: 1.7; }
 .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+.lettering { height: 1.7em; width: auto; display: inline-block; vertical-align: middle; }
+.title .lettering, .display .lettering { height: 1.55em; display: block; margin-block: .05em .1em; }
 .ig { width: .92em; height: .92em; vertical-align: -0.13em; margin-inline-end: .38em; display: inline-block; flex: none; }
 
 /* ---- Footer (logo zone: bottom-start) --------------------------------------- */

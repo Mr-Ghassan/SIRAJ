@@ -127,7 +127,7 @@ HTML post skeleton (1080×1350, Arabic):
   </div>
   <div style="position:absolute;inset-inline:72px;bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;color:#D6C0B2;font-size:19px">
     <!-- bottom-start (right in RTL): inline SIRAJ_Logo_Sand_v1.0.svg here, width 168px -->
-    <span>سجّل اهتمامك · <span dir="ltr">77714404</span> · <span dir="ltr">${CT.social_icon_svg}SIRAJPROPERTIES</span></span>
+    <span>سجّل اهتمامك · <span dir="ltr">7771 4404</span> · <span dir="ltr">${CT.social_icon_svg}SIRAJPROPERTIES</span></span>
   </div>
 </div>
 ```

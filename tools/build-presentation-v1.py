@@ -25,7 +25,7 @@ OUTD = os.path.join(ROOT, '13-Presentations')
 PPTX = os.path.join(OUTD, 'PPTX', 'SIRAJ_Presentation_Siraj_AR_v1.0.pptx')
 EXP = os.path.join(OUTD, 'Exports')
 CFG = json.load(open(os.path.join(ROOT, '00-Brand-Foundation', 'brand.config.json')))
-PHONE, HANDLE = CFG['contact']['phone'], CFG['contact']['social_handle']
+PHONE, HANDLE = CFG['contact']['phone_display'], CFG['contact']['social_handle']   # «7771 4404»
 WEB = CFG['contact']['website_display']  # always WWW.SIRAJPROPERTIES.NET (client rule 2026-10-13)
 
 HEX = dict(maroon='602733', deep='2C0F12', shadow='170608', stone='AA9180', sand='D6C0B2', ivory='F7F2ED',
@@ -181,7 +181,8 @@ logo(s, 'Primary'); contact(s, 'ash')
 s = prs.slides.add_slide(BLANK); bg(s, 'deep')
 picture(s, CL('Front_Blue-Hour'), 1920 - 820, 0, 820, 1080)
 eyebrow(s, M, 160, 900, 'مسقط')
-text(s, M, 240, 900, 300, [[('«سراج»', 800)]], size=150, color='ivory', lh=1.3)
+LETT = os.path.join(ROOT, '01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Ribbon-Ivory_v1.0_2048px.png')  # «مشروع سراج» lettering, never typed
+s.shapes.add_picture(LETT, px(M + 900 - 620), px(250), px(620))
 text(s, M, 470, 900, 120, [[('شقق سكنية ومحلات تجارية.', 300)]], size=48, color='ondark', lh=1.5)
 contact(s); s.shapes.add_picture(LOGO('Sand'), px(M), px(1080 - 96 - 140), px(210))
 # 6 · gallery

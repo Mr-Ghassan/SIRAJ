@@ -49,7 +49,7 @@ window.SIRAJ_CONFIG = {
     "social_status": "CONFIRMED — Instagram: SIRAJPROPERTIES. Shown as the Instagram icon + SIRAJPROPERTIES; never with «@» (client rule 2026-10-13)",
     "instagram": "https://instagram.com/sirajproperties",
     "post_contact_policy": "Posts, stories and video outros show the phone number and the Instagram icon + SIRAJPROPERTIES only (client rules 2026-10-12/13). Never write «@»: the Instagram glyph replaces it. Stationery, presentations, the email signature and documents may add the website, always written WWW.SIRAJPROPERTIES.NET. Tokens: {contact.phone_post}, {contact.social_handle}, {contact.website_display}; {contact.post_line} gives phone · [Instagram icon] SIRAJPROPERTIES.",
-    "phone_display": "77714404",
+    "phone_display": "7771 4404",
     "address_status": "City only (street address not provided)",
     "whatsapp_status": "same as phone (assumed for WhatsApp links only; confirm)",
     "website_display": "WWW.SIRAJPROPERTIES.NET",
@@ -81,7 +81,8 @@ window.SIRAJ_CONFIG = {
         "website"
       ]
     },
-    "social_icon_svg": "<svg class=\"ig\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-label=\"Instagram\" role=\"img\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"><path d=\"M3.5 3.5H20.5V20.5H3.5Z\"/><path d=\"M7.6 12A4.4 4.4 0 1 0 16.4 12A4.4 4.4 0 1 0 7.6 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M17 5.6L18.4 7L17 8.4L15.6 7Z\"/></svg>"
+    "social_icon_svg": "<svg class=\"ig\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-label=\"Instagram\" role=\"img\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"><path d=\"M3.5 3.5H20.5V20.5H3.5Z\"/><path d=\"M7.6 12A4.4 4.4 0 1 0 16.4 12A4.4 4.4 0 1 0 7.6 12Z\"/><path fill=\"currentColor\" stroke=\"none\" d=\"M17 5.6L18.4 7L17 8.4L15.6 7Z\"/></svg>",
+    "phone_display_rule": "Always shown in groups of four digits with a small (non-breaking) space: «7771 4404» (client rule 2026-10-13). tel:/wa.me links keep the raw number 77714404."
   },
   "brand_line": {
     "en": "Light, built.",
@@ -97,7 +98,18 @@ window.SIRAJ_CONFIG = {
     "location_ar": "مسقط",
     "type": "Mixed-use: residences above, retail ground floor (6 storeys)",
     "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed.",
-    "public_naming": "«المشروع المؤسِّس / The Founding Project» is an INTERNAL term — never in public communication (client rule 2026-10-12). Publicly the project is «سراج» with its city (مسقط). Avoid self-referential strategy lines such as «المشروع الذي يؤسس معيار سراج»."
+    "public_naming": "«المشروع المؤسِّس / The Founding Project» is an INTERNAL term — never in public communication (client rule 2026-10-12). Publicly the project is «سراج» with its city (مسقط). Avoid self-referential strategy lines such as «المشروع الذي يؤسس معيار سراج». Client rule 2026-10-13: the brand mark is the English logo; «سراج» is never typeset as a name in Tajawal. The project is shown as the «مشروع سراج» silk-script lettering (founding_project.lettering); running copy says «المشروع» / «مسقط».",
+    "display_ar": "مشروع سراج",
+    "lettering": {
+      "dark": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Silk-Dark_v1.0.svg",
+      "light": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Silk-Light_v1.0.svg",
+      "solid_sand": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Sand_v1.0.svg",
+      "solid_maroon": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Maroon_v1.0.svg",
+      "aspect": 3.3762,
+      "typeface": "Aref Ruqaa Ink (SIL OFL 1.1), outlined by tools/build-project-lettering.py",
+      "ribbon": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Ribbon_v1.0.png",
+      "note": "Ribbon = the official display lettering (real layered silk ribbon, works on dark and light). Vector Silk-Dark/Silk-Light/solid versions only below ~120 px wide or where a vector is required."
+    }
   },
   "demo_projects": {
     "$note": "Fictional projects used to demonstrate the system. Not real developments.",
@@ -179,7 +191,7 @@ window.SIRAJ_CONFIG = {
         "name_ar": "الاسم",
         "title_en": "Job title",
         "title_ar": "المسمى الوظيفي",
-        "mobile": "77714404",
+        "mobile": "7771 4404",
         "email_user": ""
       },
       "id": {

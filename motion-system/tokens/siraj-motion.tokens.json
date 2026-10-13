@@ -617,8 +617,8 @@
       "wrinkled, crinkled, crushed or creased (un-ironed) silk"
     ],
     "video_prompt": {
-      "en": "a gentle evening breeze from right to left moves the smooth, freshly pressed maroon silk (no wrinkles or creases) in slow travelling waves; the palms and trees around the building sway softly in the same direction, leaves catching warm light; the architecture is perfectly still; calm, cinematic, no storm; close-ups rendered in 4K",
-      "ar": "نسمة مسائية هادئة من اليمين إلى اليسار تحرّك الحرير العنابي الأملس المكويّ (بلا تجاعيد أو ثنيات) بموجاتٍ بطيئة تعبره؛ النخيل والأشجار حول المبنى تتمايل برفق في الاتجاه نفسه وأوراقها تلتقط الضوء الدافئ؛ العمارة ثابتة تماماً؛ هدوء سينمائي بلا عاصفة؛ اللقطات القريبة بدقة 4K"
+      "en": "a gentle evening breeze from right to left moves the smooth, freshly pressed maroon silk (no wrinkles or creases) in slow travelling waves; the palms and trees around the building sway softly in the same direction, leaves catching soft ivory-rose light (no yellow or golden cast); the architecture is perfectly still; calm, cinematic, no storm; close-ups rendered in 4K",
+      "ar": "نسمة مسائية هادئة من اليمين إلى اليسار تحرّك الحرير العنابي الأملس المكويّ (بلا تجاعيد أو ثنيات) بموجاتٍ بطيئة تعبره؛ النخيل والأشجار حول المبنى تتمايل برفق في الاتجاه نفسه وأوراقها تلتقط ضوءاً عاجياً وردياً ناعماً (بلا اصفرار أو ذهبي)؛ العمارة ثابتة تماماً؛ هدوء سينمائي بلا عاصفة؛ اللقطات القريبة بدقة 4K"
     },
     "silk_finish": {
       "rule": "Pressed silk only: smooth, liquid folds and a clean continuous sheen. Never wrinkled, crinkled, crushed or creased (un-ironed) silk (client rule 2026-10-13).",
@@ -1499,7 +1499,7 @@
           "el": "phone",
           "level": "emphasis",
           "principle": "DRAPE",
-          "action": "77714404 settles",
+          "action": "7771 4404 settles",
           "dur": 0.64,
           "ease": "flow",
           "stagger": 0.09
@@ -1595,7 +1595,7 @@
           "el": "contact",
           "level": "emphasis",
           "principle": "DRAPE",
-          "action": "77714404 ◆ Instagram icon + SIRAJPROPERTIES settles",
+          "action": "7771 4404 ◆ Instagram icon + SIRAJPROPERTIES settles",
           "dur": 0.64,
           "ease": "flow",
           "stagger": 0.09

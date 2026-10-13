@@ -46,7 +46,7 @@
     Footage(video, FOOTAGE + `SIRAJ_Silk_Ribbon-Pass_${fmt === '9x16' ? '9x16' : '16x9'}_v1.0_alpha.webm`);
   Footage.DIR = FOOTAGE;
   /* Seconds of footage in which the ribbon crosses the frame: [enters, has left] (measured on the keyed clips). */
-  Footage.PASS = { '16x9': [0.0, 7.5], '9x16': [0.0, 6.25], '1x1': [0.0, 7.5] };
+  Footage.PASS = { '16x9': [0.0, 7.95], '9x16': [0.4, 7.95], '1x1': [0.0, 7.95] };   // 4K masters (2026-10-13); the engine's exit glide carries the ribbon out
 
   root.SirajFootage = Footage;
 })(window);

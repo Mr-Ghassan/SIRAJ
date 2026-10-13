@@ -11,7 +11,8 @@
   "pos": "50% 50%",
   "ar": {
     "eyebrow": "الحجز",
-    "title": "احجز وحدتك في «سراج».",
+    "title": "[lettering]",
+    "lead": "احجز وحدتك.",
     "blocks": [
       {
         "type": "details",
@@ -34,12 +35,12 @@
     "end": "{contact.post_line}"
   },
   "media": {
-    "h": 0.36
+    "h": 0.28
   },
   "per_format": {
     "story": {
       "media": {
-        "h": 0.36
+        "h": 0.3
       }
     }
   }

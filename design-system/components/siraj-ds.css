@@ -566,7 +566,7 @@ body.siraj-scroll-lock { overflow: hidden; }
 .siraj-download .siraj-btn { grid-column: 1 / -1; }
 @media (min-width: 834px) { .siraj-download { grid-template-columns: auto 1fr auto; } .siraj-download .siraj-btn { grid-column: auto; } }
 
-/* Contact sales — phone 77714404 + Instagram icon SIRAJPROPERTIES only */
+/* Contact sales — phone 7771 4404 + Instagram icon SIRAJPROPERTIES only */
 .siraj-contact { display: grid; gap: 24px; padding: 32px 24px; background: var(--siraj-surface); border: 1px solid var(--siraj-border); }
 @media (min-width: 834px) { .siraj-contact { padding: 40px; } }
 .siraj-contact__title { font-family: var(--siraj-type-h3-family); font-size: var(--siraj-type-h3-size); font-weight: 400; line-height: var(--siraj-type-h3-line); color: var(--siraj-text-strong); }
@@ -582,3 +582,7 @@ body.siraj-scroll-lock { overflow: hidden; }
 /* Instagram = icon + handle, never «@» (client rule 2026-10-13) */
 .siraj-ig { display: inline-flex; align-items: center; gap: .4em; direction: ltr; unicode-bidi: isolate; }
 .siraj-ig .siraj-icon { width: 1em; height: 1em; flex: none; }
+
+/* «مشروع سراج» silk-script lettering (client rule 2026-10-13) */
+.siraj-lettering { display: block; width: auto; max-width: 100%; }
+.siraj-hero .siraj-lettering { margin-block: 8px 4px; }

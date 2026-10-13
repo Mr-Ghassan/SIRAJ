@@ -10,7 +10,7 @@
     "Carousel-04_Carousel", "Carousel-05_Carousel", "Project-Launch_Square"
   ],
   "highlights": ["Siraj", "Light", "Details", "Progress", "Contact"],
-  "labels_ar": { "Siraj": "سراج", "Light": "الضوء", "Details": "التفاصيل", "Progress": "التقدّم", "Contact": "تواصل" },
+  "labels_ar": { "Siraj": "المشروع", "Light": "الضوء", "Details": "التفاصيل", "Progress": "التقدّم", "Contact": "تواصل" },
   "stats": { "posts": "9", "followers": "—", "following": "—" }
 }</script>
 <style>
@@ -66,7 +66,7 @@
   const ar = lang === 'ar';
   const L = ar ? 'AR' : 'EN';
   const handle = (B.contact.social_handle || '').replace(/^@/, '');
-  const projects = ar ? '«سراج» · مسقط' : 'Siraj · Muscat';
+  const projects = ar ? 'مسقط' : 'Muscat';   // the project name is the silk-script lettering, never typed (client rule 2026-10-13)
   const tiles = D.tiles.map((t) => `<div style="background-image:url('../Exports/SIRAJ_Social_${t}_${L}_v1.0.png')"></div>`).join('');
   const hl = D.highlights.map((h) => `<figure><div class="ring"><div style="background-image:url('../Highlights/SIRAJ_Social_Highlight_${h}_v1.0.png')"></div></div><figcaption>${ar ? D.labels_ar[h] : h}</figcaption></figure>`).join('');
   const T = ar

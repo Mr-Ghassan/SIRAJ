@@ -11,11 +11,12 @@ SIRAJ Real Estate Development · سراج للتطوير العقاري. Read th
 ## Non-negotiables
 1. **Arabic only** for public communication. Latin only for the logo, `SIRAJPROPERTIES`, `WWW.SIRAJPROPERTIES.NET` and the phone number. English is dormant (`99-Archive/English-Dormant`).
 2. **Contact.** Never write «@»: Instagram is always the **Instagram icon + `SIRAJPROPERTIES`** (`07-Icon-System/svg/…/siraj-icon-instagram.svg`, `contact.social_icon_svg`). The website is always written in full and in capitals: **`WWW.SIRAJPROPERTIES.NET`**.
-   - Posts, stories and video outros: `77714404` + Instagram icon/handle only.
+   - Posts, stories and video outros: `7771 4404` + Instagram icon/handle only.
    - Stationery, presentations, email signature, documents: phone + Instagram icon/handle + `WWW.SIRAJPROPERTIES.NET`.
    - Never the email address, street address or other data unless explicitly requested.
+   - The phone is always written in groups of four with a small space: **7771 4404** (`contact.phone_display`); tel:/WhatsApp links keep 77714404.
 3. **No side notes, footnotes or disclaimers on artwork.** Disclaimers go in captions.
-4. **Public naming:** the project is «سراج» (+ مسقط when needed). Describe it exactly as «شقق سكنية ومحلات تجارية». Never write «في الأعلى / في الأرض / في الطابق الأرضي».
+4. **Public naming:** the SIRAJ brand mark is the English logo; never typeset «سراج» as a name in Tajawal. When the project is meant, show **«مشروع سراج» as the silk-script lettering** (`01-Logos/Project/SIRAJ_Project-Siraj_Lettering_*`, Aref Ruqaa Ink with a satin finish; never retyped), with مسقط when needed. In running copy say «المشروع» or «مسقط» instead of the bare name. Describe it exactly as «شقق سكنية ومحلات تجارية». Never write «في الأعلى / في الأرض / في الطابق الأرضي».
 5. **Internal only, never public:** «المشروع المؤسِّس / The Founding Project», «سراج لا تبدأ بالانتشار، بل تبدأ بمعيار», «إثبات ← توسّع ← نمو», pillar names, and self-praising "standard" lines.
 6. **Copy:** depth without pretension. Write about place, light, architecture, material, life and detail. Not about the company's greatness, leadership or "the standard".
 7. **No fictional projects.** «مساكن نور» and «حرير» are isolated in `99-Archive/Demo-Isolated/`. Use only the real project, its approved renders (`14-Property-Marketing/12-Project-Siraj/Source/Clean`) and its key visuals (`…/Key-Visuals`).
@@ -27,6 +28,8 @@ SIRAJ Real Estate Development · سراج للتطوير العقاري. Read th
 13. **Motion:** FLOW · DRAPE · REVEAL · WRAP · FOLD · GLIDE · SETTLE. No bounce, elastic, glitch, flashy zooms, random 3D or gold clichés.
 15. **Light is ivory-rose, never yellow.** Reduce yellow/amber light everywhere: lamps, windows, sun haze and light sweeps read warm ivory-rose, not gold. Every final scene must feel quiet and luxurious: deep clean blacks, soft highlight roll-off, one sheen. Grade images with `tools/siraj-luxe-grade.py`.
 14. **Air / wind moves everything soft.** In all motion and every video we produce, the silk moves because a breeze passes through it, and so do the trees, palms and plants in and around the project wherever they appear. One prevailing direction per scene (right → left), slow travelling waves, at most one gentle gust per film, then SETTLE. Never a storm, flapping, jitter or looping wobble, and the architecture never moves. Values and video-prompt lines: `motion-system/tokens/siraj-wind.json`.
+
+16. **Intro and outro** each exist as a SIRAJ company version and a project version («مشروع سراج» ribbon lettering), in 16:9 and 9:16. Outros end on a quiet, luxurious frame.
 
 ## Working rules
 - Generated files carry the version `v1.0`. Keep sources editable (HTML/CSS/JS/JSON), and render with the scripts in `tools/`.

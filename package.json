@@ -13,16 +13,19 @@
     "build:graphics": "node tools/build-graphics.js",
     "build:icons": "node tools/build-icons.js",
     "build:lut": "python3 tools/siraj-grade.py lut",
-    "build:ui": "node tools/build-ui.js",
     "build:social": "node tools/build-social.js && node tools/build-social-v1.js",
     "build:print": "node tools/build-print.js",
-    "build:presentations": "node tools/build-presentations.js && python3 tools/build-pptx.py && python3 tools/pptx-arabize.py 13-Presentations/PPTX/SIRAJ_Presentation-Template_v1.0.pptx 13-Presentations/PPTX/SIRAJ_Presentation-Template_AR_v1.0.pptx && bash tools/archive-english.sh",
-    "build:motion": "node tools/build-motion-data.js && node tools/build-motion.js intro outro transitions components && bash tools/mux-sound.sh",
+    "build:presentations": "python3 tools/build-presentation-v1.py",
+    "build:motion": "node tools/build-motion-data.js && node tools/build-motion-system.js && node tools/build-motion.js intro outro transitions components && bash tools/mux-sound.sh",
     "build:guidelines": "node tools/build-guidelines.js",
     "build:index": "node tools/build-index.js",
     "build:silk-cg": "node tools/build-silk.js",
     "build:silk-photo": "python3 tools/silk-photo-import.py",
-    "build:kit": "bash tools/build-kit.sh"
+    "build:kit": "bash tools/build-kit.sh",
+    "build:project-siraj": "node tools/build-project-siraj-kv.js && node tools/build-project-siraj-hero.js && node tools/build-project-siraj-facade.js && node tools/build-project-siraj-wrap.js",
+    "build:ds": "node tools/build-design-system.js && node tools/build-design-system-docs.js",
+    "grade:luxe": "python3 tools/siraj-luxe-grade.py",
+    "qa": "node tools/qa-brand.js && node tools/build-design-system-docs.js"
   },
   "license": "UNLICENSED",
   "devDependencies": {

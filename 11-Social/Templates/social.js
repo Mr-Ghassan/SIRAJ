@@ -55,9 +55,9 @@
       return fn === 'n:' ? fmtN(v) : v;
     });
   }
-  // Light inline markup: *text* → <em>, [[x]] → LTR isolate (for handles, phone numbers in Arabic), [ig] → Instagram glyph
+  // Light inline markup: *text* → <em>, [[x]] → LTR isolate (for handles, phone numbers in Arabic), [ig] → Instagram glyph, [lettering] → the «مشروع سراج» silk-script lettering (never type the name)
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const rich = (s) => esc(t(s)).replace(/\[\[(.+?)\]\]/g, '<span class="ltr">$1</span>').replace(/\[ig\] ?/g, () => IG_SVG).replace(/\n/g, '<br>');
+  const rich = (s) => esc(t(s)).replace(/\[\[(.+?)\]\]/g, '<span class="ltr">$1</span>').replace(/\[ig\] ?/g, () => IG_SVG).replace(/\[lettering\]/g, () => `<img class="lettering" alt="مشروع سراج" src="${ROOT}01-Logos/Project/SIRAJ_Project-Siraj_Lettering_${['ivory', 'linen'].includes(D.env || 'ivory') ? 'Ribbon' : 'Ribbon-Ivory'}_v1.0.png">`).replace(/\n/g, '<br>');
   const IG_SVG = ((window.SIRAJ_BRAND || {}).contact || {}).social_icon_svg || '';
   const px = (el, v) => parseFloat(getComputedStyle(el).getPropertyValue(v));
   const two = (n) => String(n).padStart(2, '0');

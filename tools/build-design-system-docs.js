@@ -68,7 +68,7 @@ const pages = {};
 
 // Typography -----------------------------------------------------------------------------------------
 {
-  const SAMPLE = { display: ['أوّلُ الضوء.', 'First light.'], h1: ['في قلب المدينة، بيتٌ من ضوء.', 'In the heart of the city, a house of light.'], h2: ['شقق سكنية ومحلات تجارية', 'Residential apartments and retail shops'], h3: ['مدروسة في كل تفاصيلها', 'Considered in every detail'], lead: ['حين يحلّ المساء، يُضيء سراج.', 'When evening falls, Siraj lights up.'], body: ['ضوءٌ يعبر الطوب، وظلٌّ يرسم المكان. مبنى في مسقط صُمّم ليحتفي بالضوء والمادة والتفاصيل.', 'Light passes through brick and shadow draws the place. A building in Muscat designed around light, material and detail.'], small: ['تصوّر معماري للمشروع.', 'Architectural visualisation.'], caption: ['الواجهة عند الساعة الزرقاء', 'The facade at blue hour'], label: ['الموقع', 'Location'], numbers: ['77714404', '77714404'], pricing: ['—', '—'], data: ['— م²', '— m²'] };
+  const SAMPLE = { display: ['أوّلُ الضوء.', 'First light.'], h1: ['في قلب المدينة، بيتٌ من ضوء.', 'In the heart of the city, a house of light.'], h2: ['شقق سكنية ومحلات تجارية', 'Residential apartments and retail shops'], h3: ['مدروسة في كل تفاصيلها', 'Considered in every detail'], lead: ['حين يحلّ المساء، يُضيء سراج.', 'When evening falls, Siraj lights up.'], body: ['ضوءٌ يعبر الطوب، وظلٌّ يرسم المكان. مبنى في مسقط صُمّم ليحتفي بالضوء والمادة والتفاصيل.', 'Light passes through brick and shadow draws the place. A building in Muscat designed around light, material and detail.'], small: ['تصوّر معماري للمشروع.', 'Architectural visualisation.'], caption: ['الواجهة عند الساعة الزرقاء', 'The facade at blue hour'], label: ['الموقع', 'Location'], numbers: ['7771 4404', '7771 4404'], pricing: ['—', '—'], data: ['— م²', '— m²'] };
   const rows = leaf(TOKENS.typography).map(([k, v]) => {
     const a = v.ar, e = v.en;
     return `<div class="doc-type-row"><div class="doc-type-meta"><b>${k}</b><span class="siraj-small siraj-muted">${esc(v.usage || '')}</span><span class="siraj-num siraj-small">AR ${a.desktop}/${a.mobile}px · ${a.weight} · LH ${a.lineHeight}</span><span class="siraj-num siraj-small">EN ${e.desktop}/${e.mobile}px · ${e.weight} · LH ${e.lineHeight}</span></div>
@@ -176,7 +176,7 @@ const EXAMPLES = [['home', 'الصفحة الرئيسية للمشروع', 'Proj
   const rule = (a, e) => `<li>${t(a, e)}</li>`;
   const usage = section('rules', 'قواعد غير قابلة للتفاوض', 'Non-negotiables', null, `<div class="doc-dos"><div class="doc-do"><div class="doc-do__head">${ic('check')}${t('دائماً', 'Always')}</div><ul>${[
     ['العربية فقط في التواصل العام؛ اللاتينية للشعار والهاتف وSIRAJPROPERTIES وWWW.SIRAJPROPERTIES.NET فقط.', 'Arabic only in public communication; Latin only for the logo, phone, SIRAJPROPERTIES and WWW.SIRAJPROPERTIES.NET.'],
-    ['التواصل في المنشورات: 77714404 + أيقونة إنستغرام SIRAJPROPERTIES.', 'Contact on posts: 77714404 + Instagram icon SIRAJPROPERTIES.'],
+    ['التواصل في المنشورات: 7771 4404 + أيقونة إنستغرام SIRAJPROPERTIES.', 'Contact on posts: 7771 4404 + Instagram icon SIRAJPROPERTIES.'],
     ['الموقع حيث يُسمح: WWW.SIRAJPROPERTIES.NET بالأحرف الكبيرة كاملاً.', 'Website where allowed: WWW.SIRAJPROPERTIES.NET, in full, in capitals.'],
     ['الوصف: «شقق سكنية ومحلات تجارية».', 'Description: «شقق سكنية ومحلات تجارية».'],
     ['الحرير حقيقي، عنابي، إيماءة واحدة، يحرّكه الهواء.', 'Silk is real, maroon, one gesture, moved by air.'],

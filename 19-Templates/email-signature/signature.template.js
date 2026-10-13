@@ -40,7 +40,7 @@ function render(cfg, lang, { logoUrl, fragment = false } = {}) {
         <div style="font-family:${font};font-size:${ar ? 17 : 16}px;line-height:1.3;color:${C.ink};font-weight:${ar ? 500 : 400};margin:0;">${esc(name)}</div>
         <div style="font-family:${font};font-size:${ar ? 13 : 10}px;line-height:1.6;color:${C.maroon};font-weight:500;${ar ? '' : 'letter-spacing:2px;text-transform:uppercase;'}margin:2px 0 12px 0;">${esc(title)}</div>
         <div style="font-family:${font};font-size:${ar ? 13 : 12}px;line-height:1.75;color:${C.text};">
-          ${lbl(ar ? 'هاتف' : 'T')}<a href="tel:${tel(c.phone)}" style="${linkStyle}">${ltr(c.phone)}</a><br>
+          ${lbl(ar ? 'هاتف' : 'T')}<a href="tel:${tel(c.phone)}" style="${linkStyle}">${ltr(c.phone_display)}</a><br>
           <a href="${esc(c.instagram)}" style="color:${C.maroon};text-decoration:none;">${ltr(`<img src="${esc(igUrl)}" width="12" height="12" alt="Instagram" style="display:inline-block;width:12px;height:12px;border:0;vertical-align:-1px;">&nbsp;${esc(c.social_handle)}`, true)}</a><br>
           <a href="${esc(c.website_url)}" style="${linkStyle}letter-spacing:1px;">${ltr(c.website_display)}</a>
         </div>

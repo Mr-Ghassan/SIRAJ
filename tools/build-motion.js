@@ -9,6 +9,9 @@ const JOBS = {
     { comp: '16-Intro/source/siraj-intro.html', w: 1920, h: 1080, dur: 6, q: 'fmt=16x9', out: '16-Intro/Exports/SIRAJ_Intro_16x9_1920x1080_v1.0', poster: 5.9 },
     { comp: '16-Intro/source/siraj-intro.html', w: 1080, h: 1920, dur: 6, q: 'fmt=9x16', out: '16-Intro/Exports/SIRAJ_Intro_9x16_1080x1920_v1.0', poster: 5.9 },
     { comp: '16-Intro/source/siraj-intro.html', w: 1920, h: 1080, dur: 6, q: 'fmt=16x9&alpha=1', out: '16-Intro/Exports/SIRAJ_Intro_16x9_1920x1080_Transparent_v1.0', alpha: true, mp4: false },
+    // project intro (client rule 2026-10-13: a company version and a project version)
+    { comp: '16-Intro/source/siraj-intro.html', w: 1920, h: 1080, dur: 6, q: 'fmt=16x9&v=project', out: '16-Intro/Exports/SIRAJ_Intro_Project_16x9_1920x1080_v1.0', poster: 5.9 },
+    { comp: '16-Intro/source/siraj-intro.html', w: 1080, h: 1920, dur: 6, q: 'fmt=9x16&v=project', out: '16-Intro/Exports/SIRAJ_Intro_Project_9x16_1080x1920_v1.0', poster: 5.9 },
   ],
   // Signature transitions v1.0 (motion-system/tokens → transitions): real project plates, real silk, driven by air.
   transitions: Object.entries(TOK.transitions).flatMap(([ty, tr]) => FMTS.map(([f, w, h]) => ({ comp: '15-Motion-System/transitions/siraj-transitions.html', w, h, dur: 0.5 + tr.duration / 1000 + 0.8, q: `type=${ty}&fmt=${f}`, out: `15-Motion-System/Exports/Transitions/SIRAJ_Transition_${cap(ty)}_${f}_v1.0`, poster: 0.5 + tr.duration / 1000 * 0.5 }))),

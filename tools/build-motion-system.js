@@ -180,6 +180,7 @@ fs.writeFileSync(P('15-Motion-System/lib/siraj-motion-tokens.js'), UMD);
 // ---------------------------------------------------------------- public data (the only brand data compositions may show)
 const pub = {
   phone: CFG.contact.phone,
+  phone_display: CFG.contact.phone_display,   // «7771 4404» — always shown in groups of four
   handle: CFG.contact.social_handle,          // shown with the Instagram icon, never «@»
   instagram_icon_svg: CFG.contact.social_icon_svg,
   company_ar: CFG.company.name_ar,

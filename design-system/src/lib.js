@@ -6,7 +6,8 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..');
 const DS = path.join(ROOT, 'design-system');
 const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, '00-Brand-Foundation', 'brand.config.json'), 'utf8'));
-const PHONE = cfg.contact.phone;           // 77714404
+const PHONE = cfg.contact.phone;           // raw, for tel: and WhatsApp links
+const PHONE_D = cfg.contact.phone_display; // «7771 4404» — every visible phone
 const HANDLE = cfg.contact.social_handle;  // SIRAJPROPERTIES — always shown with the Instagram icon, never «@»
 const TOKENS = JSON.parse(fs.readFileSync(path.join(DS, 'tokens', 'siraj-ds.tokens.json'), 'utf8'));
 const MOTION = JSON.parse(fs.readFileSync(path.join(ROOT, 'motion-system', 'tokens', 'siraj-motion-levels.json'), 'utf8'));
@@ -34,19 +35,19 @@ const logoFixed = (R, variant, w = 120) => `<span class="siraj-logo" style="--si
 
 // ── imagery (web derivatives of the approved renders + key visuals) ─────────────
 const IMG = {
-  cornerBlue: { src: 'SIRAJ_Project-Siraj_Corner_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'سراج · مسقط — منظور الزاوية عند الساعة الزرقاء', en: 'Siraj · Muscat — corner view at blue hour' },
-  cornerDay: { src: 'SIRAJ_Project-Siraj_Corner_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'سراج · مسقط — منظور الزاوية نهارًا', en: 'Siraj · Muscat — corner view by day' },
-  frontBlue: { src: 'SIRAJ_Project-Siraj_Front_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'سراج · مسقط — الواجهة عند الساعة الزرقاء', en: 'Siraj · Muscat — front elevation at blue hour' },
-  frontDay: { src: 'SIRAJ_Project-Siraj_Front_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'سراج · مسقط — الواجهة نهارًا', en: 'Siraj · Muscat — front elevation by day' },
-  sideBlue: { src: 'SIRAJ_Project-Siraj_Side_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'سراج · مسقط — الواجهة الجانبية عند الساعة الزرقاء', en: 'Siraj · Muscat — side elevation at blue hour' },
-  sideDay: { src: 'SIRAJ_Project-Siraj_Side_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'سراج · مسقط — الواجهة الجانبية نهارًا', en: 'Siraj · Muscat — side elevation by day' },
-  kvLantern: { src: 'SIRAJ_Project-Siraj_KV_Lantern_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'سراج — المبنى يضيء كالفانوس', en: 'Siraj — the building lit like a lantern' },
-  kvVeil: { src: 'SIRAJ_Project-Siraj_KV_Veil_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'سراج — الحرير يغطّي المبنى قبل الكشف', en: 'Siraj — silk veils the building before the reveal' },
-  kvReveal: { src: 'SIRAJ_Project-Siraj_KV_Reveal_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'سراج — الحرير ينسحب كاشفًا المبنى', en: 'Siraj — silk sweeps away to reveal the building' },
-  kvRibbon: { src: 'SIRAJ_Project-Siraj_KV_Ribbon_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'سراج — شريط حرير يلتفّ حول المبنى', en: 'Siraj — a silk ribbon wraps the building' },
-  kvDetail: { src: 'SIRAJ_Project-Siraj_KV_Detail_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'سراج — ضوء يعبر الطوب المثقّب', en: 'Siraj — light through the perforated brick' },
-  kvLanternTall: { src: 'SIRAJ_Project-Siraj_KV_Lantern_9x16_v1.0.jpg', dir: 'KeyVisuals', ar: 'سراج — المبنى يضيء كالفانوس', en: 'Siraj — the building lit like a lantern', tall: true },
-  kvRevealTall: { src: 'SIRAJ_Project-Siraj_KV_Reveal_9x16_v1.0.jpg', dir: 'KeyVisuals', ar: 'سراج — الحرير ينسحب كاشفًا المبنى', en: 'Siraj — silk sweeps away to reveal the building', tall: true },
+  cornerBlue: { src: 'SIRAJ_Project-Siraj_Corner_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — منظور الزاوية عند الساعة الزرقاء', en: 'Siraj · Muscat — corner view at blue hour' },
+  cornerDay: { src: 'SIRAJ_Project-Siraj_Corner_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — منظور الزاوية نهارًا', en: 'Siraj · Muscat — corner view by day' },
+  frontBlue: { src: 'SIRAJ_Project-Siraj_Front_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — الواجهة عند الساعة الزرقاء', en: 'Siraj · Muscat — front elevation at blue hour' },
+  frontDay: { src: 'SIRAJ_Project-Siraj_Front_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — الواجهة نهارًا', en: 'Siraj · Muscat — front elevation by day' },
+  sideBlue: { src: 'SIRAJ_Project-Siraj_Side_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — الواجهة الجانبية عند الساعة الزرقاء', en: 'Siraj · Muscat — side elevation at blue hour' },
+  sideDay: { src: 'SIRAJ_Project-Siraj_Side_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — الواجهة الجانبية نهارًا', en: 'Siraj · Muscat — side elevation by day' },
+  kvLantern: { src: 'SIRAJ_Project-Siraj_KV_Lantern_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — المبنى يضيء كالفانوس', en: 'Siraj — the building lit like a lantern' },
+  kvVeil: { src: 'SIRAJ_Project-Siraj_KV_Veil_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — الحرير يغطّي المبنى قبل الكشف', en: 'Siraj — silk veils the building before the reveal' },
+  kvReveal: { src: 'SIRAJ_Project-Siraj_KV_Reveal_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — الحرير ينسحب كاشفًا المبنى', en: 'Siraj — silk sweeps away to reveal the building' },
+  kvRibbon: { src: 'SIRAJ_Project-Siraj_KV_Ribbon_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — شريط حرير يلتفّ حول المبنى', en: 'Siraj — a silk ribbon wraps the building' },
+  kvDetail: { src: 'SIRAJ_Project-Siraj_KV_Detail_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — ضوء يعبر الطوب المثقّب', en: 'Siraj — light through the perforated brick' },
+  kvLanternTall: { src: 'SIRAJ_Project-Siraj_KV_Lantern_9x16_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — المبنى يضيء كالفانوس', en: 'Siraj — the building lit like a lantern', tall: true },
+  kvRevealTall: { src: 'SIRAJ_Project-Siraj_KV_Reveal_9x16_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — الحرير ينسحب كاشفًا المبنى', en: 'Siraj — silk sweeps away to reveal the building', tall: true },
 };
 const webName = (k) => 'siraj-' + k.replace(/[A-Z]/g, (c) => '-' + c.toLowerCase()) + '.jpg';
 const imgUrl = (D, k, thumb) => `${D}assets/img/${thumb ? 'thumb-' : ''}${webName(k)}`;
@@ -128,14 +129,14 @@ function mapTile(c, { x = 54, y = 48, label } = {}) {
     if ((r === 2 && q > 2) || q === 4) continue;
     blocks += `<rect class="blk" x="${q * 96 + 14}" y="${r * 84 + 14}" width="${68 + ((q * 7 + r * 3) % 3) * 6}" height="${56 + ((q + r) % 2) * 6}"/>`;
   }
-  return `<div class="siraj-map" role="img" aria-label="${c.mode === 'ar' ? 'خريطة توضيحية لموقع سراج في مسقط' : 'Illustrative map of the Siraj location in Muscat'}" style="--x:${x}%;--y:${y}%">
+  return `<div class="siraj-map" role="img" aria-label="${c.mode === 'ar' ? 'خريطة توضيحية لموقع المشروع في مسقط' : 'Illustrative map of the Siraj location in Muscat'}" style="--x:${x}%;--y:${y}%">
   <svg viewBox="0 0 800 480" preserveAspectRatio="xMidYMid slice"><rect width="800" height="480" fill="var(--siraj-surface-alt)"/>
   <path class="ridge" d="M0 0H800V40C700 70 640 30 560 52C480 74 420 36 330 58C240 80 160 40 80 60C40 70 16 64 0 70Z"/>
   <g transform="rotate(-6 400 240)">${blocks}
   <path class="road road--main" d="M-40 252H860"/><path class="road road--main" d="M398 -40V540"/>
   <path class="road road--minor" d="M-40 168H860M-40 336H860M206 -40V540M590 -40V540"/></g>
   <path class="wadi" d="M-10 430C120 400 200 452 330 420C460 388 560 450 820 404"/></svg>
-  <div class="siraj-map__pin"><span class="siraj-map__label">${label || c.x('سراج', 'Siraj')}</span><span class="siraj-map__diamond"></span></div>
+  <div class="siraj-map__pin"><span class="siraj-map__label">${label || c.x('المشروع', 'The project')}</span><span class="siraj-map__diamond"></span></div>
   <div class="siraj-map__note">${c.x('مسقط', 'Muscat')}</div>
 </div>`;
 }
@@ -188,7 +189,7 @@ ${SPRITE}
   </div>
 </header>
 <div class="doc-shell">
-  <aside class="siraj-sidebar doc-side" aria-label="Docs"><div class="siraj-sidebar__group"><div class="siraj-sidebar__title siraj-label">${t('نظام تصميم سراج', 'SIRAJ Design System')}</div>${nav}</div></aside>
+  <aside class="siraj-sidebar doc-side" aria-label="Docs"><div class="siraj-sidebar__group"><div class="siraj-sidebar__title siraj-label">${t('نظام تصميم SIRAJ', 'SIRAJ Design System')}</div>${nav}</div></aside>
   <main id="main" class="doc-main">
     <div class="doc-hero">
       ${eyebrow ? `<div class="siraj-eyebrow"><span class="siraj-lumen"></span>${t(eyebrow[0], eyebrow[1])}</div>` : ''}
@@ -198,8 +199,8 @@ ${SPRITE}
     </div>
     ${body}
     <footer class="doc-foot">
-      <div class="doc-foot__row">${logo(R, '', 104)}<div class="siraj-contact-line"><a href="tel:${PHONE}"><span class="siraj-ltr">${PHONE}</span></a><span class="siraj-lumen"></span><a href="https://instagram.com/sirajproperties"><span class="siraj-ig">${ic('instagram')}<span class="siraj-ltr">${HANDLE}</span></span></a></div></div>
-      <div class="siraj-small siraj-muted">${t('نظام تصميم سراج · الإصدار 1.0.0', 'SIRAJ Design System · version 1.0.0')}</div>
+      <div class="doc-foot__row">${logo(R, '', 104)}<div class="siraj-contact-line"><a href="tel:${PHONE}"><span class="siraj-ltr">${PHONE_D}</span></a><span class="siraj-lumen"></span><a href="https://instagram.com/sirajproperties"><span class="siraj-ig">${ic('instagram')}<span class="siraj-ltr">${HANDLE}</span></span></a></div></div>
+      <div class="siraj-small siraj-muted">${t('نظام تصميم SIRAJ · الإصدار 1.0.0', 'SIRAJ Design System · version 1.0.0')}</div>
     </footer>
   </main>
 </div>
@@ -223,7 +224,7 @@ const DEMO_LABEL = ['بيانات عرض للمكوّن', 'Component demo data']
 
 // Example-screen shell (public-facing: Arabic only)
 function examplePage({ title, R, D, body, theme = 'light', bodyClass = '', extraCss = [] }) {
-  return `${head({ title: `${title} — سراج`, R, D, theme, extraCss: [`${D}examples/examples.css`, ...extraCss] })}
+  return `${head({ title: `${title} — SIRAJ`, R, D, theme, extraCss: [`${D}examples/examples.css`, ...extraCss] })}
 <body class="ex ${bodyClass}">
 ${SPRITE}
 ${body}
@@ -233,4 +234,4 @@ ${body}
 `;
 }
 
-module.exports = { ROOT, DS, cfg, PHONE, HANDLE, TOKENS, MOTION, ICONS, VERSION, t, tb, st, AR, BI, esc, ic, logo, logoFixed, IMG, imgUrl, SILK, ensureImages, barChart, lineChart, donutChart, floorPlan, mapTile, DOCS_NAV, docHref, head, docPage, section, spec, DEMO_LABEL, examplePage };
+module.exports = { ROOT, DS, cfg, PHONE, PHONE_D, HANDLE, TOKENS, MOTION, ICONS, VERSION, t, tb, st, AR, BI, esc, ic, logo, logoFixed, IMG, imgUrl, SILK, ensureImages, barChart, lineChart, donutChart, floorPlan, mapTile, DOCS_NAV, docHref, head, docPage, section, spec, DEMO_LABEL, examplePage };

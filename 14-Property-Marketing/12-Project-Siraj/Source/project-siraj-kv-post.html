@@ -57,21 +57,21 @@
 const q = new URLSearchParams(location.search);
 // Posts show phone + Instagram icon + handle only (no «@», no website).
 const CT = window.SIRAJ_BRAND.contact;
-const PH = `<span class="ltr">${CT.phone}</span>`;
+const PH = `<span class="ltr">${CT.phone_display}</span>`;
 const fmt = q.get('fmt') || 'post', kv = q.get('kv') || 'veil';
 const art = document.getElementById('art');
 // size = display font-size (px) per format; at = 'top' | 'bottom' copy block; glow = [x%, y%] light behind the Lumen
 const KV = {
   veil:    { img: 'Veil', eb: 'قريباً · مسقط', at: 'top', size: [150, 168],
              display: '<span class="l">أوّلُ</span><span class="h">الضوء.</span>',
-             sub: 'قريباً، يُرفع الستار عن <b>«سراج»</b>.', tag: 'سجّل اهتمامك' },
+             sub: 'قريباً في <b>مسقط</b>، يُرفع الستار.', tag: 'سجّل اهتمامك' },
   ribbon:  { img: 'Ribbon', eb: 'سِراج: المصباح المضيء', at: 'top', size: [124, 140],
              display: '<span class="l">حين يحلّ المساء،</span><span class="h">يُضيء سراج.</span>',
              sub: 'مبنى يُضيء من داخله، <b>في مسقط.</b>' },
   lantern: { img: 'Lantern', eb: 'مسقط', at: 'top', size: [118, 134],
              display: '<span class="s">في قلب المدينة،</span><span class="h">بيتٌ من ضوء.</span>',
              sub: 'مبنى يُضيء كالسِّراج: <b>ضوءٌ دافئ، وعمارةٌ تدوم.</b>' },
-  reveal:  { img: 'Reveal', theme: 'light', eb: '«سراج» · مسقط', at: 'top', size: [104, 130],
+  reveal:  { img: 'Reveal', theme: 'light', eb: 'مسقط', at: 'top', size: [104, 130],
              display: '<span class="l">حين يُرفع الستار،</span><span class="h">يتّضح كل شيء.</span>',
              sub: 'شقق سكنية ومحلات تجارية، <b>في قلب مسقط.</b>', tag: 'سجّل اهتمامك' },
   detail:  { img: 'Detail', strong: true, eb: 'التفاصيل', at: 'top', size: [116, 132],
