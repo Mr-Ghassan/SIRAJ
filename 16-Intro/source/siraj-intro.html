@@ -10,8 +10,6 @@
   1.5  The ribbon crosses the frame; behind its passage the official wordmark is revealed (the silk never distorts the logo).
   3.6  The ribbon leaves through the upper end. The two Lumen diamonds ignite softly and settle.
   4.6  Final frame: official logo, strong negative space, stable composition (hold to 6.0).
-  Variants: ?v=company (default — the SIRAJ wordmark) | v=project (the «مشروع سراج» silk-ribbon lettering is revealed,
-  then a small SIRAJ wordmark and «مسقط» settle beneath it). Client rule 2026-10-13: a company intro and a project intro.
   Query: ?fmt=16x9|9x16|1x1  &alpha=1 (transparent background)  &lockup=1 (adds bilingual descriptor)  &line=1 (proposed brand line)
   AIR (client rule 2026-10-13): the breeze is what moves the silk. 0–1.5 s a whisper of air carries the dark silk
   surface while a warm light travels over it; the ribbon's speed follows the air, with one gentle gust as it uncovers
@@ -37,10 +35,6 @@
           background: radial-gradient(circle, rgba(226,207,195,.85) 0%, rgba(199,154,156,.35) 22%, rgba(129,64,76,.12) 48%, rgba(96,39,51,0) 70%); }
   .caption { position: absolute; left: 0; right: 0; text-align: center; color: #D6C0B2; }
   .caption .ar { font-family: "SIRAJ Digits", "Tajawal", sans-serif; font-weight: 400; }
-  #plett { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none; }
-  #pmark { position: absolute; left: 0; right: 0; text-align: center; display: none; color: #D6C0B2; }
-  #pmark img { display: block; margin: 0 auto; }
-  #pmark .city { font-family: "SIRAJ Digits", "Tajawal", sans-serif; font-weight: 500; line-height: 1.5; }
   .caption .en { font-family: "Jost", sans-serif; font-weight: 400; letter-spacing: .32em; text-transform: uppercase; }
 </style>
 </head>
@@ -49,7 +43,6 @@
 <img id="surf" class="layer" alt=""><div id="sweep" class="layer"></div>
 <svg id="logo" xmlns="http://www.w3.org/2000/svg"></svg>
 <div id="g1" class="glow"></div><div id="g2" class="glow"></div>
-<img id="plett" alt="مشروع سراج"><div id="pmark"><img id="pmlogo" alt="SIRAJ"><div class="city">مسقط</div></div>
 <div class="caption" id="cap"><div class="ar" id="capAr">سراج للتطوير العقاري</div><div class="en" id="capEn">Real Estate Development</div></div>
 <video id="rib" class="layer" muted playsinline></video>
 <script>
@@ -59,7 +52,6 @@ const FMT = q.get('fmt') || '16x9', ALPHA = q.get('alpha') === '1', LOCKUP = q.g
 if (ALPHA) document.body.classList.add('alpha');
 if (LINE) { document.getElementById('capAr').textContent = 'نورٌ يُبنى'; document.getElementById('capEn').textContent = 'Light, built.'; }
 const W = innerWidth, H = innerHeight, A = W / H;
-const PROJECT = q.get('v') === 'project';
 
 // ---- official wordmark (exact paths; bbox 21.787,56.81 → 98.163 × 28.11) ------------------------------
 const LOGO = window.SIRAJ_LOGO;
@@ -93,20 +85,6 @@ document.getElementById('capAr').style.cssText = `font-size:${capSize * 1.25}px;
 document.getElementById('capEn').style.cssText = `font-size:${capSize * 0.62}px;margin-top:${capSize * 0.5}px`;
 if (!LOCKUP && !LINE) cap.style.display = 'none';
 
-// ---- project variant: the silk-ribbon lettering «مشروع سراج» takes the wordmark's place --------------------
-const plett = document.getElementById('plett'), pmark = document.getElementById('pmark');
-const RIBBON = '../../01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Ribbon-Ivory_v1.0.png';   // ivory satin ribbon on the dark intro
-if (PROJECT) {
-  svg.style.display = 'none'; glows.forEach((g) => (g.style.display = 'none'));
-  plett.style.display = 'block'; pmark.style.display = 'block';
-  const PW = W * ({ '16x9': 0.56, '9x16': 0.86, '1x1': 0.74 }[FMT]);
-  plett.src = RIBBON; plett.style.width = PW + 'px';
-  plett.style.top = (H * (FMT === '9x16' ? 0.45 : 0.44)) + 'px';
-  const ML = W * (FMT === '9x16' ? 0.3 : 0.14);
-  const ml = document.getElementById('pmlogo'); ml.src = '../../01-Logos/SVG/SIRAJ_Logo_Sand_v1.0.svg'; ml.style.width = ML + 'px';
-  pmark.style.top = (H * (FMT === '9x16' ? 0.6 : 0.66)) + 'px';
-  pmark.querySelector('.city').style.cssText = `font-size:${Math.round(ML * 0.13)}px;margin-top:${Math.round(ML * 0.12)}px`;
-}
 
 // ---- background light (a plain lamp glow, no graphics) + real silk ribbon footage ----------------------
 const bgEl = document.getElementById('bg');
@@ -154,15 +132,6 @@ window.seek = async (t) => {
   const xr = BOX.x + BOX.w + 30 - r * (BOX.w + 60);
   wipe.setAttribute('x1', xr); wipe.setAttribute('x2', xr + feather);
   maskPath.setAttribute('d', `M${BOX.x + BOX.w + 20},${BOX.y - 20} H${xr - 10} C${xr - 4},${BOX.y + 6} ${xr + 6},${BOX.y + 20} ${xr + 12},${BOX.y + BOX.h + 20} H${BOX.x + BOX.w + 20} Z`);
-  if (PROJECT) {
-    // the lettering is uncovered behind the ribbon along the same diagonal (feathered like a fabric edge)
-    const rp = M.seg(t, 1.45, 1.9, E.flow);
-    SK.axisMask(plett, M.lerp(-0.1, 1.1, rp), { W: plett.offsetWidth, H: plett.offsetHeight, rtl: true, feather: plett.offsetWidth * 0.08 });
-    const ps = 1.03 - 0.03 * M.seg(t, 1.4, 3.8, E.drape);
-    plett.style.transform = `translate(-50%, -50%) scale(${ps.toFixed(5)})`;
-    const e = M.enter(t, 3.5, { dur: 1.1, distance: H * 0.012 });
-    pmark.style.opacity = e.opacity; pmark.style.transform = `translateY(${e.y}px)`; pmark.style.filter = `blur(${e.blur}px)`;
-  }
   // settle: imperceptible scale-down 1.03 → 1.00 (DRAPE)
   const s = 1.03 - 0.03 * M.seg(t, 1.4, 3.6, E.drape);
   svg.style.transform = `translate(-50%, -50%) scale(${s.toFixed(5)})`;

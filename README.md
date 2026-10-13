@@ -79,8 +79,8 @@ The hierarchy on every layout is **architecture first, information second, silk 
 | [`13-Presentations`](13-Presentations) | HTML deck, PDF and editable PPTX |
 | [`14-Property-Marketing`](14-Property-Marketing) | Brochure, fact sheets, floor plans, outdoor, signage, mockups, campaign key visuals |
 | [`15-Motion-System`](15-Motion-System) | Motion library, web motion layer, components, transitions, sound |
-| [`16-Intro`](16-Intro) | Intro: company and project versions (16:9 · 9:16 · alpha) |
-| [`17-Outro`](17-Outro) | Outro: company (official) and project versions (16:9 · 9:16) |
+| [`16-Intro`](16-Intro) | Intro: SIRAJ company version (16:9 · 9:16 · alpha) |
+| [`17-Outro`](17-Outro) | Outro: SIRAJ official version (16:9 · 9:16) + logo alpha |
 | [`18-3D`](18-3D) | CGI language and material specification |
 | [`19-Templates`](19-Templates) | Email signature and document template kit |
 | [`20-Brand-Guidelines`](20-Brand-Guidelines) | The complete brand guidelines (PDF, HTML, page previews) |
@@ -125,7 +125,7 @@ Individual targets are `build:tokens`, `build:logos`, `build:ds`, `build:social`
 - ✅ Imagery is the real project only: the six architect renders (4K, SIRAJ Luxe Grade) and the Silk & Light key visuals in `14-Property-Marketing/12-Project-Siraj/`. Concept imagery of fictional projects is isolated in `99-Archive/Demo-Isolated/`.
 - ✅ Colour values (HEX, RGB, CMYK, Pantone) are **approved**.
 - ✅ **Language policy: Arabic only.** English deliverables are dormant in `99-Archive/English-Dormant/`.
-- ✅ The project is named publicly as «مشروع سراج» in its silk-ribbon lettering (`01-Logos/Project/`), never retyped; description «شقق سكنية ومحلات تجارية», city «مسقط».
+- ✅ «سراج» is never typeset as a name; the project is described as «شقق سكنية ومحلات تجارية» in «مسقط». A project-name lettering is postponed (client, 2026-10-13).
 - ✅ Status of each system: [`BRAND_STATUS.md`](BRAND_STATUS.md) · [`DESIGN_SYSTEM_STATUS.md`](DESIGN_SYSTEM_STATUS.md) · [`MOTION_SYSTEM_STATUS.md`](MOTION_SYSTEM_STATUS.md) · final report [`docs/SIRAJ_FINAL_REPORT_v1.0.md`](docs/SIRAJ_FINAL_REPORT_v1.0.md).
 
 ---

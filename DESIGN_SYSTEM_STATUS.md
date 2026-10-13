@@ -10,7 +10,6 @@
 | Typography | 12 bilingual roles: Display, H1–H3, Lead, Body, Small, Caption, Label, Numbers, Pricing, Data. Arabic line height display ≥ 1.36, headings ≥ 1.42, body ≥ 1.6 | `build/siraj-ds-typography.css` |
 | Components | Header, nav, drawer, breadcrumb, pagination, sidebar, footer, buttons, contact line (phone 7771 4404 · Instagram icon), fields, select, search, filters, tabs, accordion, table, stats, charts, alerts, banner, empty, skeleton, CTA, dialog, drawer | `components/siraj-ds.{css,js}`, `src/components.js` |
 | Real-estate components | Property, shop, project and unit cards; hero; overview; unit details; price; area; availability; floor plan; amenities; location map; construction steps; metrics; payment plan; gallery; download; contact sales; lead form — every unconfirmed figure is a «—» slot | `src/components.js` |
-| Project name | «مشروع سراج» ribbon lettering component (`LETT`), ivory on dark, maroon on light | `src/components.js` |
 | Icons | 07-Icon-System sprite (outline + filled), incl. Instagram, WhatsApp, Email, Shop | `07-Icon-System/` |
 | Motion hooks | Six levels (`.m-micro` … `.m-cinematic`), reduced motion, wind levels | `motion-system/tokens/build/siraj-motion.css` |
 | Templates | Social, marketing (Silk & Light), real-estate («—» slots), corporate | `docs/templates.html` |

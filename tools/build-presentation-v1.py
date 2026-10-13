@@ -180,9 +180,8 @@ logo(s, 'Primary'); contact(s, 'ash')
 # 5 · the project
 s = prs.slides.add_slide(BLANK); bg(s, 'deep')
 picture(s, CL('Front_Blue-Hour'), 1920 - 820, 0, 820, 1080)
-eyebrow(s, M, 160, 900, 'مسقط')
-LETT = os.path.join(ROOT, '01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Ribbon-Ivory_v1.0_2048px.png')  # «مشروع سراج» lettering, never typed
-s.shapes.add_picture(LETT, px(M + 900 - 620), px(250), px(620))
+eyebrow(s, M, 160, 900, 'المشروع')
+text(s, M, 250, 900, 190, [[('مسقط', 800)]], size=120, color='ivory', lh=1.36)   # project-name lettering postponed (client 2026-10-13)
 text(s, M, 470, 900, 120, [[('شقق سكنية ومحلات تجارية.', 300)]], size=48, color='ondark', lh=1.5)
 contact(s); s.shapes.add_picture(LOGO('Sand'), px(M), px(1080 - 96 - 140), px(210))
 # 6 · gallery

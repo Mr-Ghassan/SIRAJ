@@ -3,12 +3,12 @@
 ## v1.0 closing release — 2026-10-13 · Brand Identity, Design System and Motion System CLOSED / PRODUCTION READY
 
 - **Contact (client rules 2026-10-13):** Instagram is always the Instagram icon + `SIRAJPROPERTIES`, never «@»; the website is always `WWW.SIRAJPROPERTIES.NET` in full and in capitals (stationery, presentations, email signature, documents only); the phone is always grouped in fours: **7771 4404**. Posts, stories and outros: phone + Instagram only.
-- **Project name:** «مشروع سراج» is never typeset; it is a silk-ribbon lettering on Aref Ruqaa Ink letterforms, built from real layered satin ribbon (maroon on light, ivory on dark), with six vector variants for small sizes (`01-Logos/Project/`). The SIRAJ brand mark stays the English wordmark.
+- **Project name:** «سراج» is never typeset as a name; the SIRAJ brand mark stays the English wordmark. A «مشروع سراج» silk-script lettering was drafted and then **cancelled and postponed by the client the same day**; the draft and the project versions of the intro/outro are archived in `99-Archive/Postponed/Project-Lettering`.
 - **Silk:** pressed silk only. Five formations re-shot at 4K, the ribbon footage replaced by 4K masters (Veo 3.1), creased and soft material archived (`99-Archive/Silk-Creased-v1.0`, `99-Archive/Silk-Footage-Soft-v1.0`).
 - **Air / wind:** new token set `motion-system/tokens/siraj-wind.json` and engine primitives (`air`, `breathe`, `drift`, `sway`, exit glide) that move silk, trees and plants; never the building.
 - **Light:** SIRAJ Luxe Grade (`tools/siraj-luxe-grade.py`) removes yellow from renders, key visuals and posts; light accents are ivory-rose.
 - **Design System v1.0:** `design-system/` with tokens, components, real-estate components, 11 docs pages, 4 Arabic example screens and exports; QA 0 issues, contrast 28/28 in both themes. The v0 UI library (fictional project) is archived.
-- **Motion System v1.0:** `motion-system/` tokens (six levels + wind), 5 transitions and 16 components in 16:9 and 9:16, intro and outro in **company and project versions**, 16:9 and 9:16.
+- **Motion System v1.0:** `motion-system/` tokens (six levels + wind), 5 transitions and 16 components in 16:9 and 9:16, intro and outro (SIRAJ company version) in 16:9 and 9:16.
 - **Structure:** status files (`BRAND_STATUS.md`, `DESIGN_SYSTEM_STATUS.md`, `MOTION_SYSTEM_STATUS.md`), index folders (`brand/`, `motion/`, `assets/`, `templates/`, `docs/`), and brand-kit ZIPs that map one-to-one onto the Google Drive folders 01–07.
 - Earlier entries below are historical; where they mention «@» handles, the website in lower case or the ungrouped phone, the rules above supersede them.
 

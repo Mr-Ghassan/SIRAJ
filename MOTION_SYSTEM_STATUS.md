@@ -20,13 +20,13 @@ Deterministic primitives (pure in t): `air`, `breathe`, `drift`, `sway`, `axisMa
 | Item | Versions | Files |
 |---|---|---|
 | Intro · company (SIRAJ wordmark) | 16:9, 9:16, 16:9 alpha · + sound | `16-Intro/Exports/SIRAJ_Intro_*` |
-| Intro · project («مشروع سراج» ivory ribbon + SIRAJ + مسقط) | 16:9, 9:16 · + sound | `16-Intro/Exports/SIRAJ_Intro_Project_*` |
 | Outro · official (logo + 7771 4404 + Instagram icon) | 16:9, 9:16 · + sound | `17-Outro/Exports/SIRAJ_Outro_Official_*` |
-| Outro · project (lettering + مسقط + «شقق سكنية ومحلات تجارية» + contact) | 16:9, 9:16 · + sound | `17-Outro/Exports/SIRAJ_Outro_Project_*` |
 | Outro · logo only (editing utility) | 16:9 alpha | `17-Outro/Exports/SIRAJ_Outro_Logo_*` |
 | 5 signature transitions: Silk Sweep, Silk Fold, Ribbon Pass, Architectural Reveal, Light Reveal | 16:9, 9:16 | `15-Motion-System/Exports/Transitions/` |
 | 16 components: logo reveal, logo close, title, subtitle, lower third, stat, counter, property reveal, image reveal, map, location marker, floor plan, chart, CTA, transition, end card | 16:9, 9:16 (Arabic) | `15-Motion-System/Exports/Components/` |
 | Sound beds and SFX | intro 6 s, outro 5 s, 3 SFX | `15-Motion-System/Sound/` |
+
+Project versions of the intro and outro are postponed with the project-name lettering (archived in `99-Archive/Postponed/Project-Lettering/Intro-Outro-Project`).
 
 ## Tests
 

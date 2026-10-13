@@ -7,9 +7,8 @@ identity sources; files live in the numbered folders so each has exactly one hom
 |---|---|
 | Brand data (contact, naming, rules) | `../00-Brand-Foundation/brand.config.json` |
 | Official logo (English wordmark), lockups, monogram | `../01-Logos/` |
-| «مشروع سراج» project lettering (silk ribbon + vectors) | `../01-Logos/Project/` |
 | Colour palette | `../02-Colours/` |
-| Typography (Tajawal · Jost · lettering font) | `../03-Typography/` |
+| Typography (Tajawal · Jost) | `../03-Typography/` |
 | Grids | `../04-Grids/` |
 | Graphic system · Lumen · silk masks | `../05-Graphic-System/` |
 | Real pressed silk (4K stills, cut-outs, 4K footage) | `../06-SIRAJ-Silk/` |

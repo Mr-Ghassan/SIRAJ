@@ -7,8 +7,6 @@ const { ic, logo, imgUrl, IMG, PHONE, PHONE_D, HANDLE, SILK } = L;
 const SLOT = '<span class="siraj-slot">—</span>';
 const ltr = (s) => `<span class="siraj-ltr">${s}</span>`;
 // Instagram = icon + handle, never «@» (client rule 2026-10-13)
-// «مشروع سراج» silk-script lettering — the project name is never typed (client rule 2026-10-13)
-const LETT = (c, dark = false, h = 64) => `<img class="siraj-lettering" alt="مشروع سراج" src="${c.R}01-Logos/Project/SIRAJ_Project-Siraj_Lettering_${dark ? 'Ribbon-Ivory' : 'Ribbon'}_v1.0_2048px.png" style="height:${h}px" width="${Math.round(h * 3.0476)}" height="${h}">`;
 const IGH = () => `<span class="siraj-ig">${ic('instagram')}${ltr(HANDLE)}</span>`;
 const alt = (c, k) => (c.mode === 'ar' ? IMG[k].ar : `${IMG[k].ar} · ${IMG[k].en}`);
 const img = (c, k, { thumb = false, cls = '', lazy = false, w = 1200, h = 1490 } = {}) => `<img class="${cls}" src="${imgUrl(c.D, k, thumb)}" alt="${alt(c, k)}" width="${thumb ? 360 : w}" height="${thumb ? 447 : h}"${lazy ? ' loading="lazy"' : ''}>`;
@@ -123,8 +121,8 @@ function projectCard(c, { image = 'cornerBlue' } = {}) {
     <a class="siraj-card__media" href="#project">${img(c, image, { lazy: true })}</a>
     <div class="siraj-card__body">
       <div class="siraj-project-card__meta"><span class="siraj-lumen"></span>${c.x('مسقط', 'Muscat')}</div>
-      <h3 class="siraj-project-card__title">${LETT(c, false, 56)}</h3>
-      <p class="siraj-card__text">${c.x('شقق سكنية ومحلات تجارية', 'Residential apartments and retail shops')}</p>
+      <h3 class="siraj-project-card__title">${c.x('شقق سكنية ومحلات تجارية', 'Residential apartments and retail shops')}</h3>
+      <p class="siraj-card__text">${c.x('في قلب المدينة، بيتٌ من ضوء.', 'A house of light in the heart of the city.')}</p>
       <a class="siraj-btn siraj-btn--link" href="#project" style="align-self:flex-start">${c.x('استكشف المشروع', 'Explore the project')}${ic('arrow-right')}</a>
     </div>
   </article>`;
@@ -195,7 +193,7 @@ function hero(c, { image = 'kvLantern', titleA = ['أوّلُ', 'الضوء.'], 
     <div class="siraj-hero__body">
       <div class="siraj-eyebrow"><span class="siraj-lumen"></span>${c.x('مسقط', 'Muscat')}</div>
       <h1 class="siraj-hero__title">${c.x(`<span class="siraj-t-light">${titleA[0]}</span> <span class="siraj-t-heavy">${titleA[1]}</span>`, `<span class="siraj-t-light">${titleE[0]}</span> <span class="siraj-t-heavy">${titleE[1]}</span>`)}</h1>
-      ${LETT(c, true, 72)}<p class="siraj-hero__lead">${c.x('شقق سكنية ومحلات تجارية في مسقط.', 'Residential apartments and retail shops in Muscat.')}</p>
+      <p class="siraj-hero__lead">${c.x('شقق سكنية ومحلات تجارية في مسقط.', 'Residential apartments and retail shops in Muscat.')}</p>
       <div class="siraj-btn-row"><a class="siraj-btn siraj-btn--primary siraj-btn--lg" href="#contact">${c.x('سجّل اهتمامك', 'Register interest')}</a><a class="siraj-btn siraj-btn--ghost siraj-btn--lg" href="#brochure">${ic('download')}${c.x('كتيّب المشروع', 'Brochure')}</a></div>
     </div>
     <div class="siraj-hero__media siraj-silk-corner">${img(c, image)}</div>
@@ -276,4 +274,4 @@ function leadForm(c, id = 'lead') {
   </form>`;
 }
 
-module.exports = { SLOT, ltr, IGH, LETT, img, nav, header, menuDrawer, contactLine, footer, sidebar, breadcrumb, pagination, field, select, search, filterChips, tabs, accordion, FAQ, propertyCard, projectCard, infoCard, stats, STAT_SET, table, chartCard, dialogBox, drawerBox, banner, alert, cta, empty, skeletonCard, hero, overview, unitCard, unitDetails, price, area, availability, floorPlanBox, amenities, location, progressSteps, metrics, paymentPlan, gallery, GAL, download, contactSales, leadForm };
+module.exports = { SLOT, ltr, IGH, img, nav, header, menuDrawer, contactLine, footer, sidebar, breadcrumb, pagination, field, select, search, filterChips, tabs, accordion, FAQ, propertyCard, projectCard, infoCard, stats, STAT_SET, table, chartCard, dialogBox, drawerBox, banner, alert, cta, empty, skeletonCard, hero, overview, unitCard, unitDetails, price, area, availability, floorPlanBox, amenities, location, progressSteps, metrics, paymentPlan, gallery, GAL, download, contactSales, leadForm };

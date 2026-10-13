@@ -96,19 +96,8 @@
     "location_ar": "مسقط",
     "type": "Mixed-use: residences above, retail ground floor (6 storeys)",
     "status": "OFFICIAL NAME (confirmed by SIRAJ). Official façade render: 14-Property-Marketing/12-Project-Siraj/. Units, areas, prices and dates to be confirmed.",
-    "public_naming": "«المشروع المؤسِّس / The Founding Project» is an INTERNAL term — never in public communication (client rule 2026-10-12). Publicly the project is «سراج» with its city (مسقط). Avoid self-referential strategy lines such as «المشروع الذي يؤسس معيار سراج». Client rule 2026-10-13: the brand mark is the English logo; «سراج» is never typeset as a name in Tajawal. The project is shown as the «مشروع سراج» silk-script lettering (founding_project.lettering); running copy says «المشروع» / «مسقط».",
-    "display_ar": "مشروع سراج",
-    "lettering": {
-      "dark": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Silk-Dark_v1.0.svg",
-      "light": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Silk-Light_v1.0.svg",
-      "solid_sand": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Sand_v1.0.svg",
-      "solid_maroon": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Maroon_v1.0.svg",
-      "aspect": 3.3762,
-      "typeface": "Aref Ruqaa Ink (SIL OFL 1.1), outlined by tools/build-project-lettering.py",
-      "ribbon": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Ribbon_v1.0.png",
-      "note": "Ribbon (maroon satin) on light grounds; Ribbon-Ivory (ivory satin, same folds) on dark grounds and photographs. Vector versions only for very small sizes.",
-      "ribbon_ivory": "01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Ribbon-Ivory_v1.0.png"
-    }
+    "public_naming": "«المشروع المؤسِّس / The Founding Project» is an INTERNAL term — never in public communication (client rule 2026-10-12). Client rule 2026-10-13: the brand mark is the English SIRAJ logo; «سراج» is never typeset as a name in Tajawal. Running copy says «المشروع» / «مسقط». A dedicated project-name lettering is POSTPONED (client decision 2026-10-13: the «مشروع سراج» script was cancelled; draft archived in 99-Archive/Postponed/Project-Lettering). Until a new one is approved, layouts show no typeset project name: the SIRAJ logo, «مسقط» and the description «شقق سكنية ومحلات تجارية» identify it.",
+    "lettering_status": "POSTPONED (2026-10-13) — see 99-Archive/Postponed/Project-Lettering"
   },
   "demo_projects": {
     "$note": "Fictional projects used to demonstrate the system. Not real developments.",

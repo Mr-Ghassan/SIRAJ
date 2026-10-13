@@ -118,7 +118,7 @@ if (V === 'official') {
 details.innerHTML = lines.join('');
 const project = document.getElementById('project');
 if (isProject) project.innerHTML = AR_ONLY
-  ? `<img id="lett" alt="مشروع سراج" src="../../01-Logos/Project/SIRAJ_Project-Siraj_Lettering_${DARK ? 'Ribbon-Ivory' : 'Ribbon'}_v1.0.png" style="height:${fs(FMT === '9x16' ? 150 : 170)}px;width:auto;display:block;margin:0 auto">`   // «مشروع سراج» silk-script lettering, never typed
+  ? `<div class="ar" style="font-size:${fs(FMT === '9x16' ? 96 : 104)}px;font-weight:500;line-height:1.36">${PR.location_ar}</div>`   // project name lettering postponed (2026-10-13)
   : EN_ONLY ? `<div class="en" style="font-size:${fs(96)}px;font-weight:300;letter-spacing:-.01em;line-height:1">${PR.name_en}</div>`
   : `<div class="en" style="font-size:${fs(96)}px;font-weight:300;letter-spacing:-.01em;line-height:1">${PR.name_en}</div><div class="ar" style="font-size:${fs(54)}px;font-weight:300;margin-top:${fs(18)}px">${PR.name_ar}</div>`;
 project.style.top = (H * 0.26) + 'px';
@@ -145,7 +145,7 @@ if (LUX) { hz.src = SK.ASSET.horizon(HZ.f); hz.onload = () => { const ih = 1.04 
 else { hz.remove(); sheen.remove(); document.getElementById('vig').remove(); }
 const rib = SirajFootage.ribbon(document.getElementById('rib'), { fmt: FMT });
 const CLIP = SirajFootage.PASS[FMT];
-window.ready = (async () => { if (LUX) await hz.decode().catch(() => {}); const l = document.getElementById('lett'); if (l) await l.decode().catch(() => {}); await rib.ready; })();
+window.ready = (async () => { if (LUX) await hz.decode().catch(() => {}); await rib.ready; })();
 
 window.seek = async (t) => {
   // ribbon: real footage mirrored (end → start), its passage spanning outro 0.0 → 2.6 s

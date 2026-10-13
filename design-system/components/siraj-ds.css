@@ -583,6 +583,3 @@ body.siraj-scroll-lock { overflow: hidden; }
 .siraj-ig { display: inline-flex; align-items: center; gap: .4em; direction: ltr; unicode-bidi: isolate; }
 .siraj-ig .siraj-icon { width: 1em; height: 1em; flex: none; }
 
-/* «مشروع سراج» silk-script lettering (client rule 2026-10-13) */
-.siraj-lettering { display: block; width: auto; max-width: 100%; }
-.siraj-hero .siraj-lettering { margin-block: 8px 4px; }

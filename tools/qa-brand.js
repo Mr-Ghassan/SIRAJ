@@ -20,6 +20,7 @@ const RULES = [
   ['fictional project «مساكن نور» / Noor', /مساكن نور|Noor Residences|\bNoor\b|noor\./, 'fail'],
   ['fictional project «حرير» / Harir', /«حرير»|مشروع حرير|\bHarir\b|harir\./, 'fail'],
   ['website not written WWW.SIRAJPROPERTIES.NET', /(?<!https:\/\/www\.)sirajproperties\.net|(?<!https:\/\/)www\.sirajproperties\.net|(?<!WWW\.)SIRAJPROPERTIES\.NET|SirajProperties\.|Sirajproperties\./, 'fail'],
+  ['postponed «مشروع سراج» lettering used (client 2026-10-13)', /01-Logos\/Project\/|Project-Siraj_Lettering|\[lettering\]/, 'fail'],
   ['«@» before the handle (use the Instagram icon)', /@SIRAJPROPERTIES|@sirajproperties/, 'fail'],
   ['phone not grouped «7771 4404»', /(?<!tel:)(?<!968)(?<!wa\.me\/)(?<!"phone":\s?")(?<!phone: ')77714404/, 'fail'],
   ['email on public material', /\b[\w.]+@[\w-]+\.(com|net|om)\b|example\.com/, 'fail'],

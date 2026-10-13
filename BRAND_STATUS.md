@@ -8,7 +8,7 @@
 | Element | Rule | Source |
 |---|---|---|
 | Brand mark | The English SIRAJ wordmark (official files only; never redrawn, recoloured or stretched; bottom-right in Arabic layouts). «سراج» is never typeset as a name in Tajawal. | `01-Logos/` |
-| Project name | «مشروع سراج» silk-ribbon lettering (Aref Ruqaa Ink letterforms built from real layered satin ribbon). Maroon ribbon on light grounds, ivory ribbon on dark grounds and photographs; vector versions for very small sizes. Never retyped. | `01-Logos/Project/` |
+| Project name | «سراج» is never typeset as a name. A project-name lettering is **postponed** (client 2026-10-13; the «مشروع سراج» draft is archived in `99-Archive/Postponed/Project-Lettering`). Until a new one is approved: the logo + «مسقط» + the description. | `brand.config.json → founding_project` |
 | Description | «شقق سكنية ومحلات تجارية», word for word; city «مسقط». No floor-by-floor wording. | `brand.config.json` |
 | Language | Arabic only in public communication. Latin only for the logo, `SIRAJPROPERTIES`, `WWW.SIRAJPROPERTIES.NET` and the phone. English is dormant. | `00-Brand-Foundation/` |
 | Contact | Phone always **7771 4404** (groups of four, non-breaking space). Instagram = Instagram icon + **SIRAJPROPERTIES**, never «@». Posts, stories and video outros: phone + Instagram only. Stationery, presentations, email signature, documents: + **WWW.SIRAJPROPERTIES.NET** (in full, in capitals). | `brand.config.json → contact` |
@@ -22,17 +22,18 @@
 
 ## Deliverables (v1.0)
 
-- Logos, lockups, monogram, project lettering (6 vector variants + 2 ribbon colourways, 4K)
-- Colour, type (+ lettering font), grids, graphic system, icons (incl. Instagram, WhatsApp, Email, Shop)
+- Logos, lockups, monogram
+- Colour, type, grids, graphic system, icons (incl. Instagram, WhatsApp, Email, Shop)
 - Pressed-silk library: 11 formations (5 re-shot at 4K on 2026-10-13), alpha cut-outs, 4K footage (16:9, 9:16)
 - Social: 16 briefs → posts, stories, carousels, reel cover, quote, contact story; 5 real-estate templates with «—» slots
-- Project «مشروع سراج»: 5 Silk & Light key visuals (post + story), hero, facade and wrap posts
+- The project (مسقط): 5 Silk & Light key visuals (post + story), hero, facade and wrap posts
 - Print: business cards, letterhead, compliments slip, continuation sheet, envelopes, presentation folder, memo, ID card, email signature
 - Presentation: 10-slide PPTX + PDF + PNG
 - Brand guidelines PDF, the SIRAJ brand skill, Claude Design kick-off pack, brand kit ZIPs (one per Drive folder)
 
 ## Open items that need a person
 
+0. A new project-name treatment for the project (the «مشروع سراج» lettering was cancelled and postponed on 13 October 2026).
 1. Legal/commercial data: CR number, VATIN, full address, bank details → quotation, tax invoice, receipt and contract cover stay isolated (`99-Archive/Demo-Isolated/12-Print-Pending-Legal-Data`).
 2. Real names and titles for business cards and signatures (templates show «الاسم / المسمى الوظيفي»).
 3. Prices, areas, unit mix and dates for the project (templates show «—»).

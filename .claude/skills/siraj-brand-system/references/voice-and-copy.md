@@ -94,4 +94,4 @@ Keep hashtags to 2–4 relevant ones (e.g. #سراج #مسقط #عقارات_ع�
 **Bad → good:** «فرصة لا تتكرر!! احجز الآن بأقل الأسعار 🔥🔥» → «قيمة تستمر. سجّل اهتمامك لتصلك تفاصيل الإطلاق أولًا.»
 
 
-**Project name (client rule 2026-10-13).** The SIRAJ brand mark is the English logo. Never typeset «سراج» as a name in Tajawal. When the project is meant, place the «مشروع سراج» silk-script lettering (`01-Logos/Project/SIRAJ_Project-Siraj_Lettering_Silk-Dark|Silk-Light_v1.0.svg`, `[lettering]` in post briefs) and add «مسقط» if needed; in running copy write «المشروع» or «مسقط».
+**Project name (client rule 2026-10-13).** The SIRAJ brand mark is the English logo. Never typeset «سراج» as a name in Tajawal. A project-name lettering is **postponed** (client decision 2026-10-13: the «مشروع سراج» script was cancelled; the draft is archived in `99-Archive/Postponed/Project-Lettering` and must not be used). Until a new treatment is approved, show no typeset project name: the SIRAJ logo identifies the brand, and «مسقط» plus «شقق سكنية ومحلات تجارية» identify the project; in running copy write «المشروع» or «مسقط».
