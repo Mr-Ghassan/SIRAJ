@@ -40,7 +40,7 @@
   <div class="eb"><i></i>Type scale · Latin · Jost</div>
   <div style="margin-top:40px">
     <div class="scale-row"><div class="meta">Display<br>88 / 1.04 · Light 300<br>−0.01em</div><div style="font:300 88px/1.04 Jost;letter-spacing:-.01em;color:#140E10;grid-column:span 2">Light, built.</div></div>
-    <div class="scale-row"><div class="meta">H1<br>60 / 1.08 · Light 300</div><div style="font:300 60px/1.08 Jost;color:#140E10;grid-column:span 2">Siraj, Muscat</div></div>
+    <div class="scale-row"><div class="meta">H1<br>60 / 1.08 · Light 300</div><div style="font:300 60px/1.08 Jost;color:#140E10;grid-column:span 2">Light, built. Muscat</div></div>
     <div class="scale-row"><div class="meta">H2<br>42 / 1.14 · Regular 400</div><div style="font:400 42px/1.14 Jost;color:#140E10;grid-column:span 2">Architecture shaped by light</div></div>
     <div class="scale-row"><div class="meta">H3<br>30 / 1.22 · Regular 400</div><div style="font:400 30px/1.22 Jost;color:#140E10;grid-column:span 2">Residences with uninterrupted sea views</div></div>
     <div class="scale-row"><div class="meta">Lead<br>21 / 1.55 · Light 300</div><div style="font:300 21px/1.55 Jost;grid-column:span 2;max-width:1100px">A calm tower of 168 residences, set on a landscaped podium two minutes from the sea and minutes from the city.</div></div>
@@ -56,7 +56,7 @@
   <div class="eb" style="flex-direction:row"><i></i><span style="font:500 18px Tajawal;letter-spacing:0">سلّم الخطوط · العربية · تجوال</span></div>
   <div style="margin-top:40px">
     <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">Display<br>92 / 1.34 · Light 300</div><div class="ar" style="font-size:92px;line-height:1.34;font-weight:300;color:#140E10;grid-column:span 2">أوّلُ الضوء.</div></div>
-    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">H1<br>64 / 1.4 · Light 300</div><div class="ar" style="font-size:64px;line-height:1.4;font-weight:300;color:#140E10;grid-column:span 2">«سراج»، مسقط</div></div>
+    <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">H1<br>64 / 1.4 · Light 300</div><div class="ar" style="font-size:64px;line-height:1.4;font-weight:300;color:#140E10;grid-column:span 2">في قلب المدينة، مسقط</div></div>
     <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">H2<br>45 / 1.38 · Regular 400</div><div class="ar" style="font-size:45px;line-height:1.38;color:#140E10;grid-column:span 2">عمارةٌ يشكّلها الضوء</div></div>
     <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">Lead<br>22 / 1.75 · Light 300</div><div class="ar" style="font-size:22px;line-height:1.75;font-weight:300;grid-column:span 2">برجٌ هادئ يضم 168 وحدة سكنية، على منصة مشجّرة تبعد دقيقتين عن البحر ودقائق عن المدينة.</div></div>
     <div class="scale-row"><div class="meta" style="direction:ltr;text-align:left">Body<br>17 / 1.85 · Regular 400</div><div class="ar" style="font-size:17px;line-height:1.85;grid-column:span 2;max-width:860px">كل وحدة موجّهة نحو الضوء. شرفات عميقة تظلّل الواجهة، وأرضيات حجرية تحفظ برودة الداخل، ونوافذ ممتدة تؤطّر بحر عُمان. موعد التسليم في الربع الرابع 2027.</div></div>
@@ -72,7 +72,7 @@
   <div class="grid2" style="margin-top:96px;align-items:end">
     <div>
       <div style="font:500 13px Jost;letter-spacing:.24em;color:#D6C0B2;text-transform:uppercase">Now selling</div>
-      <div style="font:300 96px/1.04 Jost;color:#F7F2ED;margin-top:24px;letter-spacing:-.01em">Siraj<br>Muscat</div>
+      <div style="font:300 96px/1.04 Jost;color:#F7F2ED;margin-top:24px;letter-spacing:-.01em">Light<br>Muscat</div>
       <div style="font:300 24px/1.6 Jost;color:#E9DDD4;margin-top:32px;max-width:640px">168 residences in Al Khuwair, Muscat. From OMR 145,000. Handover Q4 2027.</div>
     </div>
     <div class="ar">
@@ -125,8 +125,8 @@
 <script>
 // fill weights page
 const w = document.querySelectorAll('.page')[5].querySelector('.grid2');
-w.innerHTML = `<div>${[[200, 'ExtraLight — large numerals'], [300, 'Light — display & headings'], [400, 'Regular — body, H2/H3'], [500, 'Medium — captions, labels, buttons'], [600, 'SemiBold — UI emphasis only']].map(([n, l]) => `<div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #E3D6CC;padding:18px 0"><span style="font:${n} 54px/1 Jost;color:#140E10">Siraj ${n}</span><span class="meta">${l}</span></div>`).join('')}</div>
-<div>${[[300, 'Light — العناوين الكبيرة'], [400, 'Regular — النصوص'], [500, 'Medium — التسميات والأزرار'], [700, 'Bold — تأكيد محدود']].map(([n, l]) => `<div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #E3D6CC;padding:18px 0;direction:rtl"><span style="font:${n} 58px/1.2 Tajawal;color:#140E10">سراج ${n}</span><span class="meta" style="direction:ltr">${l}</span></div>`).join('')}</div>`;
+w.innerHTML = `<div>${[[200, 'ExtraLight — large numerals'], [300, 'Light — display & headings'], [400, 'Regular — body, H2/H3'], [500, 'Medium — captions, labels, buttons'], [600, 'SemiBold — UI emphasis only']].map(([n, l]) => `<div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #E3D6CC;padding:18px 0"><span style="font:${n} 54px/1 Jost;color:#140E10">Muscat ${n}</span><span class="meta">${l}</span></div>`).join('')}</div>
+<div>${[[300, 'Light — العناوين الكبيرة'], [400, 'Regular — النصوص'], [500, 'Medium — التسميات والأزرار'], [700, 'Bold — تأكيد محدود']].map(([n, l]) => `<div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #E3D6CC;padding:18px 0;direction:rtl"><span style="font:${n} 58px/1.2 Tajawal;color:#140E10">مسقط ${n}</span><span class="meta" style="direction:ltr">${l}</span></div>`).join('')}</div>`;
 </script>
 </body>
 </html>
