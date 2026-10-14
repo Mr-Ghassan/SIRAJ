@@ -6,7 +6,7 @@ The packages are delivery copies; the repository is the source of truth. The ful
 
 | Package | Size | Files | Drive folder (content) | Contents | SHA-256 |
 |---|---|---|---|---|---|
-| `SIRAJ_01_Brand-Identity_v1.0.zip` | 109.3 MB | 676 | 01 ـ الهوية البصرية الرسمية | Logos, colour, type, grids, graphic system, icons, silk stills, guidelines PDF, brand skill, status, release notes, QA | `513f651996e8d917…` |
+| `SIRAJ_01_Brand-Identity_v1.0.zip` | 109.3 MB | 676 | 01 ـ الهوية البصرية الرسمية | Logos, colour, type, grids, graphic system, icons, silk stills, guidelines PDF, brand skill, status, release notes, QA | `841d613b3c3c08b4…` |
 | `SIRAJ_02_Design-System_v1.0.zip` | 20.7 MB | 107 | 02 ـ نظام التصميم | Design System v1.0: tokens, components, docs, examples, exports, QA | `31b584dfb23f2a2e…` |
 | `SIRAJ_03_Motion-System_v1.0.zip` | 6.6 MB | 47 | 03 ـ نظام الحركة والموشن | Motion tokens (six levels, wind), silk engine, compositions, sound (sources) | `ac987a99d5ef882a…` |
 | `SIRAJ_04_Video_Intro-Outro_v1.0.zip` | 81.8 MB | 18 | 04 ـ الفيديو والافتتاحيات والخواتيم | Corporate intro (16:9, 9:16, alpha) and official outro (16:9, 9:16, logo alpha) + sound versions | `5ec23f164a2b2bfa…` |
