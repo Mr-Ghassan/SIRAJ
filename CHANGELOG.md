@@ -5,6 +5,8 @@
 - **Washed-out silk fixed** (client: «الغلاف باهت بسبب الضوء على الحرير — الغلاف السابق كان أجمل»).
   - **Drape-Lumen:** the blown, colourless highlight is gone. A new pressed 4K still recreates the earlier, deeper composition: diagonal folds and narrow maroon sheen lines, no creases. It is used on the guidelines cover and dividers, posts, the presentation and the Silk Fold transition.
   - **Drape-Deep and Horizon-Deep:** highlights rolled off with the new `tools/siraj-silk-deepen.py`.
+  - **Horizon-Deep backdrop:** the warm overhead spotlight is gone (client: «الخلفية صفراء ليست جميلة، بسبب الضوء من الأعلى»). The same pressed silk horizon now sits under an even, deep maroon-black backdrop (new 4K stills).
+  - **Drape-Deep sheen:** eased from orange back to maroon (`--pull 0.9`).
   - **Archive:** the superseded stills are in `99-Archive/Silk-Washed-v1.0`.
 - **Typed name removed from the Design System:** titles, breadcrumbs, eyebrows and image alt texts no longer type «سراج» as a name.
 
