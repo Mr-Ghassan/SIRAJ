@@ -126,6 +126,7 @@ Individual targets are `build:tokens`, `build:logos`, `build:ds`, `build:social`
 - ✅ Colour values (HEX, RGB, CMYK, Pantone) are **approved**.
 - ✅ **Language policy: Arabic only.** English deliverables are dormant in `99-Archive/English-Dormant/`.
 - ✅ «سراج» is never typeset as a name; the project is described as «شقق سكنية ومحلات تجارية» in «مسقط». A project-name lettering is postponed (client, 2026-10-13).
+- ✅ **Release v1.0 is frozen** (`siraj-brand-system-v1.0.0`): see [`RELEASE_NOTES_v1.0.md`](RELEASE_NOTES_v1.0.md). Later work consumes it and does not change it.
 - ✅ Status of each system: [`BRAND_STATUS.md`](BRAND_STATUS.md) · [`DESIGN_SYSTEM_STATUS.md`](DESIGN_SYSTEM_STATUS.md) · [`MOTION_SYSTEM_STATUS.md`](MOTION_SYSTEM_STATUS.md) · final report [`docs/SIRAJ_FINAL_REPORT_v1.0.md`](docs/SIRAJ_FINAL_REPORT_v1.0.md).
 
 ---

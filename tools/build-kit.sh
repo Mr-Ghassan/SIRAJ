@@ -8,7 +8,7 @@ rm -f $OUT/SIRAJ_*.zip
 z() { local name=$1; shift; zip -q -r "$OUT/$name" "$@" -x '*/.DS_Store' -x '*/node_modules/*' -x '01-Logos/Master/Source/*'; }
 
 # 01 · الهوية البصرية الرسمية — identity sources, lettering, colours, type, grids, graphics, silk stills, icons, guidelines
-z SIRAJ_01_Brand-Identity_v1.0.zip README.md AGENTS.md BRAND_STATUS.md CHANGELOG.md 00-Brand-Foundation 01-Logos 02-Colours \
+z SIRAJ_01_Brand-Identity_v1.0.zip README.md AGENTS.md BRAND_STATUS.md CHANGELOG.md RELEASE_NOTES_v1.0.md docs/qa 00-Brand-Foundation 01-Logos 02-Colours \
   03-Typography 04-Grids 05-Graphic-System 07-Icon-System 06-SIRAJ-Silk/README.md 06-SIRAJ-Silk/Stills 20-Brand-Guidelines/PDF \
   .claude/skills/siraj-brand-system
 # 02 · نظام التصميم

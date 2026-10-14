@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.0 · 2026-10-14 · Release: SIRAJ Brand System v1.0 frozen
+
+- **Release:** Brand Identity, Design System and Motion System v1.0 frozen as a permanent baseline. Tag `siraj-brand-system-v1.0.0`.
+- **Release documents:** `RELEASE_NOTES_v1.0.md`, `docs/qa/RELEASE_QA_v1.0.md`, `docs/release/SIRAJ_v1.0_RELEASE_MANIFEST.md`, `SIRAJ_v1.0_SHA256SUMS.txt`.
+- **QA:**
+  - Brand QA: 0 failures.
+  - Design System QA: 0 issues.
+  - New silk QA (`npm run qa:silk`): 22/22 stills.
+  - All 10 release ZIPs pass `unzip -t`.
+
 ## v1.0 · 2026-10-14 · Deep silk restored
 
 - **Washed-out silk fixed** (client: «الغلاف باهت بسبب الضوء على الحرير — الغلاف السابق كان أجمل»).

@@ -25,7 +25,8 @@
     "build:project-siraj": "node tools/build-project-siraj-kv.js && node tools/build-project-siraj-hero.js && node tools/build-project-siraj-facade.js && node tools/build-project-siraj-wrap.js",
     "build:ds": "node tools/build-design-system.js && node tools/build-design-system-docs.js",
     "grade:luxe": "python3 tools/siraj-luxe-grade.py",
-    "qa": "node tools/qa-brand.js && node tools/build-design-system-docs.js"
+    "qa": "node tools/qa-brand.js && node tools/build-design-system-docs.js",
+    "qa:silk": "python3 tools/qa-silk.py"
   },
   "license": "UNLICENSED",
   "devDependencies": {
