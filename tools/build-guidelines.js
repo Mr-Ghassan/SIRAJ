@@ -197,7 +197,7 @@ P.push(page({ sec: '30 · Social media', title: 'Contact line and clean artwork'
 
 // PRINT / COLLATERAL
 const pr = glob('12-Print/PNG', /\.png$/);
-P.push(divider('31', 'Corporate collateral', 'المطبوعات المؤسسية', still('Wrap'), '31 · Corporate collateral'));
+P.push(divider('31', 'Corporate collateral', 'المطبوعات المؤسسية', still('Fold-Corner-Ivory'), '31 · Corporate collateral'));
 P.push(page({ sec: '31 · Corporate collateral', title: 'Stationery', body: `<div class="prgrid">${pr.filter((f) => /Business-Card|Letterhead|Envelope|Compliments|Folder|ID|Badge/i.test(f)).slice(0, 8).map((f) => `<figure>${img(f)}<figcaption>${path.basename(f).replace(/SIRAJ_|_v1\.0\.png/g, '').replace(/[-_]/g, ' ')}</figcaption></figure>`).join('')}</div>` }));
 P.push(page({ toc: '32 · Print & documents', sec: '32 · Print', title: 'Documents and the email signature', body: `<div class="prgrid">${[...pr.filter((f) => /Memo|Folder/i.test(f)).slice(0, 2), '19-Templates/email-signature/SIRAJ_Email-Signature_Preview_v1.0.png'].map((f) => `<figure>${img(f)}<figcaption>${path.basename(f).replace(/SIRAJ_|_v1\.0\.png/g, '').replace(/[-_]/g, ' ')}</figcaption></figure>`).join('')}</div><p class="small" style="margin-top:20px">Stationery, documents, presentations and the signature carry the full contact set: <b>7771 4404</b> · Instagram icon <b>SIRAJPROPERTIES</b> · <b>WWW.SIRAJPROPERTIES.NET</b> (always in full, in capitals). Legal documents (quotation, tax invoice, receipt, contract cover) wait for the CR number, VATIN, address and bank details.</p>` }));
 
