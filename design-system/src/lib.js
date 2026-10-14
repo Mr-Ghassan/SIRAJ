@@ -35,19 +35,19 @@ const logoFixed = (R, variant, w = 120) => `<span class="siraj-logo" style="--si
 
 // ── imagery (web derivatives of the approved renders + key visuals) ─────────────
 const IMG = {
-  cornerBlue: { src: 'SIRAJ_Project-Siraj_Corner_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — منظور الزاوية عند الساعة الزرقاء', en: 'Siraj · Muscat — corner view at blue hour' },
-  cornerDay: { src: 'SIRAJ_Project-Siraj_Corner_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — منظور الزاوية نهارًا', en: 'Siraj · Muscat — corner view by day' },
-  frontBlue: { src: 'SIRAJ_Project-Siraj_Front_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — الواجهة عند الساعة الزرقاء', en: 'Siraj · Muscat — front elevation at blue hour' },
-  frontDay: { src: 'SIRAJ_Project-Siraj_Front_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — الواجهة نهارًا', en: 'Siraj · Muscat — front elevation by day' },
-  sideBlue: { src: 'SIRAJ_Project-Siraj_Side_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — الواجهة الجانبية عند الساعة الزرقاء', en: 'Siraj · Muscat — side elevation at blue hour' },
-  sideDay: { src: 'SIRAJ_Project-Siraj_Side_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'مشروع سراج · مسقط — الواجهة الجانبية نهارًا', en: 'Siraj · Muscat — side elevation by day' },
-  kvLantern: { src: 'SIRAJ_Project-Siraj_KV_Lantern_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — المبنى يضيء كالفانوس', en: 'Siraj — the building lit like a lantern' },
-  kvVeil: { src: 'SIRAJ_Project-Siraj_KV_Veil_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — الحرير يغطّي المبنى قبل الكشف', en: 'Siraj — silk veils the building before the reveal' },
-  kvReveal: { src: 'SIRAJ_Project-Siraj_KV_Reveal_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — الحرير ينسحب كاشفًا المبنى', en: 'Siraj — silk sweeps away to reveal the building' },
-  kvRibbon: { src: 'SIRAJ_Project-Siraj_KV_Ribbon_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — شريط حرير يلتفّ حول المبنى', en: 'Siraj — a silk ribbon wraps the building' },
-  kvDetail: { src: 'SIRAJ_Project-Siraj_KV_Detail_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — ضوء يعبر الطوب المثقّب', en: 'Siraj — light through the perforated brick' },
-  kvLanternTall: { src: 'SIRAJ_Project-Siraj_KV_Lantern_9x16_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — المبنى يضيء كالفانوس', en: 'Siraj — the building lit like a lantern', tall: true },
-  kvRevealTall: { src: 'SIRAJ_Project-Siraj_KV_Reveal_9x16_v1.0.jpg', dir: 'KeyVisuals', ar: 'مشروع سراج — الحرير ينسحب كاشفًا المبنى', en: 'Siraj — silk sweeps away to reveal the building', tall: true },
+  cornerBlue: { src: 'SIRAJ_Project-Siraj_Corner_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'المشروع · مسقط — منظور الزاوية عند الساعة الزرقاء', en: 'Siraj · Muscat — corner view at blue hour' },
+  cornerDay: { src: 'SIRAJ_Project-Siraj_Corner_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'المشروع · مسقط — منظور الزاوية نهارًا', en: 'Siraj · Muscat — corner view by day' },
+  frontBlue: { src: 'SIRAJ_Project-Siraj_Front_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'المشروع · مسقط — الواجهة عند الساعة الزرقاء', en: 'Siraj · Muscat — front elevation at blue hour' },
+  frontDay: { src: 'SIRAJ_Project-Siraj_Front_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'المشروع · مسقط — الواجهة نهارًا', en: 'Siraj · Muscat — front elevation by day' },
+  sideBlue: { src: 'SIRAJ_Project-Siraj_Side_Blue-Hour_Clean_v1.0.jpg', dir: 'Clean', ar: 'المشروع · مسقط — الواجهة الجانبية عند الساعة الزرقاء', en: 'Siraj · Muscat — side elevation at blue hour' },
+  sideDay: { src: 'SIRAJ_Project-Siraj_Side_Cloudy-Day_Clean_v1.0.jpg', dir: 'Clean', ar: 'المشروع · مسقط — الواجهة الجانبية نهارًا', en: 'Siraj · Muscat — side elevation by day' },
+  kvLantern: { src: 'SIRAJ_Project-Siraj_KV_Lantern_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'المشروع — المبنى يضيء كالفانوس', en: 'Siraj — the building lit like a lantern' },
+  kvVeil: { src: 'SIRAJ_Project-Siraj_KV_Veil_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'المشروع — الحرير يغطّي المبنى قبل الكشف', en: 'Siraj — silk veils the building before the reveal' },
+  kvReveal: { src: 'SIRAJ_Project-Siraj_KV_Reveal_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'المشروع — الحرير ينسحب كاشفًا المبنى', en: 'Siraj — silk sweeps away to reveal the building' },
+  kvRibbon: { src: 'SIRAJ_Project-Siraj_KV_Ribbon_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'المشروع — شريط حرير يلتفّ حول المبنى', en: 'Siraj — a silk ribbon wraps the building' },
+  kvDetail: { src: 'SIRAJ_Project-Siraj_KV_Detail_4x5_v1.0.jpg', dir: 'KeyVisuals', ar: 'المشروع — ضوء يعبر الطوب المثقّب', en: 'Siraj — light through the perforated brick' },
+  kvLanternTall: { src: 'SIRAJ_Project-Siraj_KV_Lantern_9x16_v1.0.jpg', dir: 'KeyVisuals', ar: 'المشروع — المبنى يضيء كالفانوس', en: 'Siraj — the building lit like a lantern', tall: true },
+  kvRevealTall: { src: 'SIRAJ_Project-Siraj_KV_Reveal_9x16_v1.0.jpg', dir: 'KeyVisuals', ar: 'المشروع — الحرير ينسحب كاشفًا المبنى', en: 'Siraj — silk sweeps away to reveal the building', tall: true },
 };
 const webName = (k) => 'siraj-' + k.replace(/[A-Z]/g, (c) => '-' + c.toLowerCase()) + '.jpg';
 const imgUrl = (D, k, thumb) => `${D}assets/img/${thumb ? 'thumb-' : ''}${webName(k)}`;

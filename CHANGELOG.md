@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0 · 2026-10-14 · Deep silk restored
+
+- **Washed-out silk fixed** (client: «الغلاف باهت بسبب الضوء على الحرير — الغلاف السابق كان أجمل»).
+  - **Drape-Lumen:** the blown, colourless highlight is gone. A new pressed 4K still recreates the earlier, deeper composition: diagonal folds and narrow maroon sheen lines, no creases. It is used on the guidelines cover and dividers, posts, the presentation and the Silk Fold transition.
+  - **Drape-Deep and Horizon-Deep:** highlights rolled off with the new `tools/siraj-silk-deepen.py`.
+  - **Archive:** the superseded stills are in `99-Archive/Silk-Washed-v1.0`.
+- **Typed name removed from the Design System:** titles, breadcrumbs, eyebrows and image alt texts no longer type «سراج» as a name.
+
 ## v1.0 closing release — 2026-10-13 · Brand Identity, Design System and Motion System CLOSED / PRODUCTION READY
 
 - **Contact (client rules 2026-10-13):** Instagram is always the Instagram icon + `SIRAJPROPERTIES`, never «@»; the website is always `WWW.SIRAJPROPERTIES.NET` in full and in capitals (stationery, presentations, email signature, documents only); the phone is always grouped in fours: **7771 4404**. Posts, stories and outros: phone + Instagram only.

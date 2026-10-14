@@ -24,7 +24,7 @@
 
 - Logos, lockups, monogram
 - Colour, type, grids, graphic system, icons (incl. Instagram, WhatsApp, Email, Shop)
-- Pressed-silk library: 11 formations (5 re-shot at 4K on 2026-10-13), alpha cut-outs, 4K footage (16:9, 9:16)
+- Pressed-silk library: 11 formations (5 re-shot at 4K on 2026-10-13; Drape-Lumen re-shot deep on 2026-10-14), alpha cut-outs, 4K footage (16:9, 9:16). Highlights stay maroon and restrained (`tools/siraj-silk-deepen.py`)
 - Social: 16 briefs → posts, stories, carousels, reel cover, quote, contact story; 5 real-estate templates with «—» slots
 - The project (مسقط): 5 Silk & Light key visuals (post + story), hero, facade and wrap posts
 - Print: business cards, letterhead, compliments slip, continuation sheet, envelopes, presentation folder, memo, ID card, email signature
