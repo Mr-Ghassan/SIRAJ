@@ -1,0 +1,28 @@
+---
+// Design System .siraj-footer (dark). Official Sand logo, the frozen contact line, navigation. No legal data
+// (CR, VATIN, address) until it is supplied; the website address is not repeated on the website itself.
+import Logo from './Logo.astro';
+import ContactLine from './ContactLine.astro';
+import { NAV, PROJECT, LINES } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="siraj-footer" data-theme="dark">
+  <div class="siraj-container">
+    <div class="siraj-footer__top">
+      <p class="siraj-footer__lead">{LINES.houseOfLight}</p>
+      <div>
+        <div class="siraj-footer__title siraj-label">الموقع</div>
+        <nav class="siraj-footer__links" aria-label="روابط الموقع">{NAV.map((n) => <a href={n.href}>{n.label}</a>)}</nav>
+      </div>
+      <div>
+        <div class="siraj-footer__title siraj-label">المشروع</div>
+        <div class="siraj-footer__links"><a href="/project/">{PROJECT.city}</a><span>{PROJECT.description}</span></div>
+      </div>
+    </div>
+    <div class="siraj-footer__bottom">
+      <Logo variant="Sand" width={120} />
+      <ContactLine />
+    </div>
+    <p class="sj-legal">© <span class="siraj-num">{year}</span> · جميع الحقوق محفوظة.</p>
+  </div>
+</footer>

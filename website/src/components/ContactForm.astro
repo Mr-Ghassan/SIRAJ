@@ -1,0 +1,22 @@
+---
+import Field from './Field.astro';
+import FormStatus from './FormStatus.astro';
+import { RULES, TRANSPORT } from '../forms/contract';
+const r = Object.fromEntries(RULES.contact.map((x) => [x.name, x]));
+---
+<form class="siraj-form" id="contact-form" data-sj-form="contact" novalidate aria-labelledby="contact-form-title">
+  <div class="siraj-form__row">
+    <Field form="contact" name="name" label="الاسم" required error={r.name.message} autocomplete="name" maxlength={r.name.maxLength} />
+    <Field form="contact" name="phone" label="رقم الهاتف" type="tel" required error={r.phone.message} autocomplete="tel" inputmode="tel" maxlength={r.phone.maxLength} dir="ltr" />
+  </div>
+  <Field form="contact" name="email" label="البريد الإلكتروني" type="email" error={r.email.message} autocomplete="email" inputmode="email" maxlength={r.email.maxLength} dir="ltr" />
+  <Field form="contact" name="message" label="رسالتك" type="textarea" required error={r.message.message} maxlength={r.message.maxLength} />
+  <div class="siraj-field" data-field="consent">
+    <label class="siraj-check"><input type="checkbox" name="consent" value="yes" required aria-describedby="contact-consent-e" /> <span>أوافق على أن يتواصل معي الفريق بخصوص رسالتي.</span></label>
+    <div class="siraj-field__error" id="contact-consent-e"><span>{r.consent.message}</span></div>
+  </div>
+  <div class="sj-hp" aria-hidden="true"><label for="contact-company">اترك هذا الحقل فارغًا</label><input id="contact-company" name="company" type="text" tabindex="-1" autocomplete="off" /></div>
+  <div class="siraj-btn-row"><button class="siraj-btn siraj-btn--primary siraj-btn--lg" type="submit">أرسل الرسالة</button></div>
+  {!TRANSPORT.enabled && <p class="sj-form-note">لم يُفعَّل استقبال النماذج عبر الموقع بعد؛ لن تُرسَل بياناتك. الأسرع الآن: الاتصال المباشر.</p>}
+  <FormStatus id="contact" />
+</form>

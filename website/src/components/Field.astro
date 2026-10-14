@@ -1,0 +1,16 @@
+---
+// Design System .siraj-field: visible label, optional hint, error linked with aria-describedby (blur-first validation).
+import Icon from './Icon.astro';
+interface Props { form: string; name: string; label: string; type?: string; required?: boolean; hint?: string; error: string; autocomplete?: string; inputmode?: string; maxlength?: number; dir?: 'ltr' | 'rtl' | 'auto' }
+const { form, name, label, type = 'text', required = false, hint, error, autocomplete, inputmode, maxlength, dir } = Astro.props;
+const id = `${form}-${name}`;
+const describedBy = [hint ? `${id}-h` : '', `${id}-e`].filter(Boolean).join(' ');
+---
+<div class="siraj-field" data-field={name}>
+  <label class="siraj-field__label" for={id}>{label}{required ? <span class="siraj-field__req" aria-hidden="true">*</span> : <span class="siraj-muted"> (اختياري)</span>}</label>
+  {type === 'textarea'
+    ? <textarea class="siraj-textarea" id={id} name={name} required={required} aria-describedby={describedBy} maxlength={maxlength} rows="5" autocomplete={autocomplete}></textarea>
+    : <input class="siraj-input" id={id} name={name} type={type} required={required} aria-describedby={describedBy} autocomplete={autocomplete} inputmode={inputmode} maxlength={maxlength} dir={dir} />}
+  {hint && <div class="siraj-field__hint" id={`${id}-h`}>{hint}</div>}
+  <div class="siraj-field__error" id={`${id}-e`} aria-live="polite"><Icon name="alert" /><span>{error}</span></div>
+</div>

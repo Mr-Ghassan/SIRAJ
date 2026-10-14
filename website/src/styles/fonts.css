@@ -1,0 +1,16 @@
+/* SIRAJ website fonts — the official pair (Tajawal for Arabic, Jost for Latin), served as WOFF2 subsets.
+   «SIRAJ Digits» maps Jost figures onto Western digits so Arabic text uses the same 0–9 (Brand Identity v1.0). */
+@font-face { font-family: "Tajawal"; src: url("/fonts/tajawal-arabic-300.woff2") format("woff2"); font-weight: 200 300; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Tajawal"; src: url("/fonts/tajawal-arabic-400.woff2") format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Tajawal"; src: url("/fonts/tajawal-arabic-500.woff2") format("woff2"); font-weight: 500; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Tajawal"; src: url("/fonts/tajawal-arabic-700.woff2") format("woff2"); font-weight: 600 700; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Tajawal"; src: url("/fonts/tajawal-arabic-800.woff2") format("woff2"); font-weight: 800 900; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+
+@font-face { font-family: "Jost"; src: url("/fonts/jost-latin-200.woff2") format("woff2"); font-weight: 200; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("/fonts/jost-latin-300.woff2") format("woff2"); font-weight: 300; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("/fonts/jost-latin-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("/fonts/jost-latin-500.woff2") format("woff2"); font-weight: 500 600; font-display: swap; }
+
+@font-face { font-family: "SIRAJ Digits"; src: url("/fonts/jost-latin-300.woff2") format("woff2"); font-weight: 200 300; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A; }
+@font-face { font-family: "SIRAJ Digits"; src: url("/fonts/jost-latin-400.woff2") format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A; }
+@font-face { font-family: "SIRAJ Digits"; src: url("/fonts/jost-latin-500.woff2") format("woff2"); font-weight: 500 900; font-display: swap; unicode-range: U+0030-0039, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A; }

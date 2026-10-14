@@ -1,0 +1,10 @@
+---
+// Design System .siraj-channel list. WhatsApp appears only once its number is confirmed in brand.config.json.
+import Icon from './Icon.astro';
+import { CONTACT } from '../data/site';
+---
+<div class="siraj-contact__channels sj-channels">
+  <a class="siraj-channel" href={`tel:${CONTACT.phone}`}><Icon name="call" /><span><span class="siraj-channel__label">اتصال</span><span class="siraj-channel__value siraj-ltr">{CONTACT.phoneDisplay}</span></span></a>
+  {CONTACT.whatsappConfirmed && <a class="siraj-channel" href={CONTACT.whatsappUrl} rel="noopener"><Icon name="whatsapp" /><span><span class="siraj-channel__label">واتساب</span><span class="siraj-channel__value siraj-ltr">{CONTACT.phoneDisplay}</span></span></a>}
+  <a class="siraj-channel" href={CONTACT.instagramUrl} rel="noopener"><Icon name="instagram" /><span><span class="siraj-channel__label">إنستغرام</span><span class="siraj-channel__value siraj-ltr">{CONTACT.instagramHandle}</span></span></a>
+</div>

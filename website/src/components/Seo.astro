@@ -1,0 +1,40 @@
+---
+// SEO + social metadata. Canonical domain: https://www.sirajproperties.net (brand.config.json → contact.website_url).
+import { SITE, CONTACT } from '../data/site';
+interface Props { title: string; description: string; og: string; noindex?: boolean; jsonld?: Record<string, unknown>[] }
+const { title, description, og, noindex = false, jsonld = [] } = Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const ogUrl = new URL(`/og/SIRAJ_OG_${og}_v1.0.jpg`, SITE.url).href;
+const fullTitle = title ? `${title} — SIRAJ` : 'SIRAJ — شقق سكنية ومحلات تجارية في مسقط';
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'RealEstateAgent',
+  '@id': `${SITE.url}/#organization`,
+  name: 'SIRAJ',
+  url: `${SITE.url}/`,
+  logo: `${SITE.url}/brand/logo/SIRAJ_Logo_Primary_v1.0.svg`,
+  image: ogUrl,
+  telephone: CONTACT.phoneIntl,
+  areaServed: { '@type': 'City', name: 'Muscat' },
+  sameAs: [CONTACT.instagramUrl],
+};
+---
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, follow" />}
+<meta property="og:type" content="website" />
+<meta property="og:locale" content={SITE.locale} />
+<meta property="og:site_name" content="SIRAJ" />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={description} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogUrl} />
+<script type="application/ld+json" set:html={JSON.stringify([org, ...jsonld])} />

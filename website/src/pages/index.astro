@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import Img from '../components/Img.astro';
+import Icon from '../components/Icon.astro';
+import RibbonGesture from '../components/RibbonGesture.astro';
+import ContactLine from '../components/ContactLine.astro';
+import { PROJECT, LINES, CONTACT } from '../data/site';
+import { RENDERS, KEY_VISUALS, SILK } from '../data/media';
+---
+<Base
+  title=""
+  description="شقق سكنية ومحلات تجارية في مسقط. مشروع يبدأ من المكان والضوء والمادة، ويصل إلى أدقّ التفاصيل."
+  og="home"
+  active="home"
+>
+  <!-- Hero: Design System .siraj-hero — key visual (architecture + one silk gesture), then the message -->
+  <section class="siraj-container sj-hero" aria-labelledby="hero-title">
+    <div class="siraj-hero">
+      <div class="siraj-hero__body">
+        <div class="siraj-eyebrow m-enter m-emphasis" data-sj-motion><span class="siraj-lumen" aria-hidden="true"></span>{PROJECT.city}</div>
+        <h1 class="siraj-hero__title m-hero" id="hero-title" data-sj-motion>
+          <span class="m-line"><span><span class="siraj-t-light">أوّلُ</span> <span class="siraj-t-heavy">الضوء.</span></span></span>
+        </h1>
+        <p class="siraj-hero__lead m-enter m-emphasis" data-sj-motion style="--m-i:2">{PROJECT.description} في {PROJECT.city}.</p>
+        <div class="siraj-btn-row m-enter m-emphasis" data-sj-motion style="--m-i:3">
+          <a class="siraj-btn siraj-btn--primary siraj-btn--lg" href="/contact/#interest">سجّل اهتمامك</a>
+          <a class="siraj-btn siraj-btn--ghost siraj-btn--lg" href="/project/">اكتشف المشروع<Icon name="arrow-left" /></a>
+        </div>
+      </div>
+      <div class="siraj-hero__media siraj-silk-corner m-reveal m-hero" data-sj-motion>
+        <Img media={KEY_VISUALS.lantern} sizes="(min-width: 1200px) 50vw, (min-width: 834px) 50vw, 100vw" widths={[480, 768, 1080, 1440, 1920]} eager />
+      </div>
+    </div>
+  </section>
+
+  <!-- The company, in one paragraph -->
+  <section class="siraj-section" aria-labelledby="about-title">
+    <div class="siraj-container">
+      <div class="sj-head m-enter m-standard" data-sj-motion>
+        <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>عن الشركة</div>
+        <h2 class="siraj-t-h2" id="about-title">{LINES.detail}</h2>
+        <p class="siraj-t-lead sj-measure">نطوّر مشاريع سكنية وتجارية في {PROJECT.city}، ونبدأ كل مشروع من المكان: من الضوء الذي يدخله، ومن المادة التي تُلمس، ومن التفاصيل التي يعيش معها الناس كل يوم.</p>
+        <div><a class="siraj-btn siraj-btn--link" href="/about/">تعرّف إلينا<Icon name="arrow-left" /></a></div>
+      </div>
+      <div class="sj-values">
+        <article class="sj-value m-enter m-standard" data-sj-motion style="--m-i:0">
+          <Icon name="sun" size="md" />
+          <h3 class="siraj-t-h3">الضوء</h3>
+          <p>واجهات تتبدّل مع ضوء النهار، وبيت يضيء من الداخل حين يحلّ المساء.</p>
+        </article>
+        <article class="sj-value m-enter m-standard" data-sj-motion style="--m-i:1">
+          <Icon name="layers" size="md" />
+          <h3 class="siraj-t-h3">المادة</h3>
+          <p>حجر فاتح، وستائر من الطوب المثقّب، ونباتات على الشرفات تلطّف المكان.</p>
+        </article>
+        <article class="sj-value m-enter m-standard" data-sj-motion style="--m-i:2">
+          <Icon name="quality" size="md" />
+          <h3 class="siraj-t-h3">التفاصيل</h3>
+          <p>من الواجهة إلى المدخل، كل تفصيل يُرسم ليكون هادئًا ومريحًا في الاستخدام.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <RibbonGesture />
+
+  <!-- The current project in Muscat -->
+  <section class="siraj-section siraj-section--alt" aria-labelledby="project-title">
+    <div class="siraj-container">
+      <div class="sj-feature">
+        <div class="sj-feature__media siraj-silk-corner m-reveal m-hero" data-sj-motion>
+          <Img media={RENDERS.cornerBlue} sizes="(min-width: 834px) 50vw, 100vw" />
+        </div>
+        <div class="sj-feature__body m-enter m-emphasis" data-sj-motion>
+          <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>المشروع · {PROJECT.city}</div>
+          <h2 class="siraj-t-h2" id="project-title">{LINES.houseOfLight}</h2>
+          <p class="siraj-t-lead">مبنى بواجهات حجرية فاتحة وستائر من الطوب المثقّب، يعبرها الضوء نهارًا ويتوهّج منها ليلًا.</p>
+          <dl class="sj-facts">
+            <div><Icon name="location" /><dt>الموقع</dt><dd>{PROJECT.city}</dd></div>
+            <div><Icon name="building" /><dt>النوع</dt><dd>{PROJECT.description}</dd></div>
+          </dl>
+          <div class="siraj-btn-row"><a class="siraj-btn siraj-btn--secondary" href="/project/">اكتشف المشروع<Icon name="arrow-left" /></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Silk & Light: the curtain line, on a dark ground -->
+  <section class="siraj-section" data-theme="dark" style="background:var(--siraj-bg)" aria-labelledby="silk-title">
+    <div class="siraj-container">
+      <div class="sj-feature sj-feature--reverse">
+        <div class="sj-feature__media m-reveal m-hero" data-sj-motion>
+          <Img media={KEY_VISUALS.reveal} sizes="(min-width: 834px) 50vw, 100vw" />
+        </div>
+        <div class="sj-feature__body m-enter m-emphasis" data-sj-motion>
+          <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>الحرير والضوء</div>
+          <h2 class="siraj-t-h1" id="silk-title">{LINES.curtain}</h2>
+          <p class="siraj-t-lead">حرير عنابي يكشف المبنى بهدوء، وضوء هادئ يعبر واجهاته. لغة بصرية واحدة ترافق المشروع من أول صورة إلى آخر تفصيل.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action: Design System .siraj-cta -->
+  <section class="siraj-section sj-cta-wrap" aria-labelledby="cta-title">
+    <div class="siraj-container">
+      <div class="siraj-cta sj-cta" data-theme="dark">
+        <div class="siraj-cta__body m-enter m-emphasis" data-sj-motion>
+          <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>{PROJECT.city}</div>
+          <h2 class="siraj-cta__title" id="cta-title">سجّل اهتمامك بالمشروع، ونتواصل معك.</h2>
+          <ContactLine />
+          <div class="siraj-btn-row">
+            <a class="siraj-btn siraj-btn--primary siraj-btn--lg" href="/contact/#interest">سجّل اهتمامك</a>
+            <a class="siraj-btn siraj-btn--ghost siraj-btn--lg" href={`tel:${CONTACT.phone}`}><Icon name="call" /><span>اتصل بنا</span></a>
+          </div>
+        </div>
+        <div class="siraj-cta__silk" aria-hidden="true"><Img media={SILK.lumen} sizes="(min-width: 834px) 40vw, 100vw" widths={[480, 768, 1080, 1440]} decorative /></div>
+      </div>
+    </div>
+  </section>
+</Base>

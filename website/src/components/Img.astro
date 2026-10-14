@@ -1,0 +1,23 @@
+---
+// Responsive official image: AVIF + WebP + JPEG fallback, explicit width/height (no layout shift), lazy by default.
+import { Picture } from 'astro:assets';
+import type { Media } from '../data/media';
+interface Props { media: Media; widths?: number[]; sizes: string; eager?: boolean; class?: string; decorative?: boolean }
+const { media, widths = [480, 768, 1080, 1440, 1920], sizes, eager = false, class: cls, decorative = false } = Astro.props;
+const usable = widths.filter((w) => w <= media.src.width);
+---
+<Picture
+  src={media.src}
+  alt={decorative ? '' : media.alt}
+  widths={usable.length ? usable : [media.src.width]}
+  sizes={sizes}
+  formats={['avif', 'webp']}
+  fallbackFormat={media.src.format === 'png' ? 'png' : 'jpg'}
+  quality={media.src.format === 'png' ? 82 : 78}
+  loading={eager ? 'eager' : 'lazy'}
+  fetchpriority={eager ? 'high' : 'auto'}
+  decoding="async"
+  class={cls}
+  style={media.position ? `object-position:${media.position}` : undefined}
+  aria-hidden={decorative ? 'true' : undefined}
+/>

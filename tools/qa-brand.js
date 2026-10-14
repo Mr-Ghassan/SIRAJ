@@ -62,7 +62,7 @@ const binFiles = [];
   if (!fs.existsSync(abs)) return;
   for (const f of fs.readdirSync(abs)) {
     const rel = path.join(dir, f);
-    if (/node_modules|99-Archive|\.git/.test(rel)) continue;
+    if (/node_modules|99-Archive|\.git|website\/(dist|\.astro|public)/.test(rel)) continue; // website build output: generated, gitignored, checked by its own QA
     const st = fs.statSync(path.join(ROOT, rel));
     if (st.isDirectory()) walkBin(rel); else if (BIN.test(f)) binFiles.push(rel);
   }

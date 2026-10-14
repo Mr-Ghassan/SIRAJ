@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="الصفحة غير موجودة" description="الصفحة التي تبحث عنها غير موجودة." og="home" active="none" noindex>
+  <section class="siraj-container">
+    <div class="sj-404">
+      <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>404</div>
+      <h1 class="siraj-t-h1">لم نجد هذه الصفحة.</h1>
+      <p class="siraj-t-lead">ربما تغيّر عنوانها. يمكنك العودة إلى الصفحة الرئيسية أو زيارة صفحة المشروع.</p>
+      <div class="siraj-btn-row">
+        <a class="siraj-btn siraj-btn--primary" href="/">الصفحة الرئيسية</a>
+        <a class="siraj-btn siraj-btn--ghost" href="/project/">المشروع<Icon name="arrow-left" /></a>
+      </div>
+    </div>
+  </section>
+</Base>

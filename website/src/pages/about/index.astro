@@ -1,0 +1,81 @@
+---
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import Icon from '../../components/Icon.astro';
+import RibbonGesture from '../../components/RibbonGesture.astro';
+import { PROJECT, LINES } from '../../data/site';
+import { RENDERS, KEY_VISUALS } from '../../data/media';
+---
+<Base
+  title="عن الشركة"
+  description="شركة تطوير عقاري في مسقط، تبدأ مشاريعها السكنية والتجارية من المكان والضوء والمادة، وتعتني بكل تفصيل."
+  og="about"
+  active="about"
+>
+  <section class="siraj-container">
+    <div class="sj-intro m-enter m-emphasis" data-sj-motion>
+      <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>عن الشركة</div>
+      <h1 class="siraj-t-h1">نبني من الضوء والمادة والتفاصيل.</h1>
+      <p class="siraj-t-lead sj-measure">شركة تطوير عقاري في {PROJECT.city}، تعمل على مشاريع سكنية وتجارية تبدأ من المكان، وتنتهي عند أدقّ التفاصيل.</p>
+    </div>
+  </section>
+
+  <section class="siraj-section" style="padding-top:0" aria-labelledby="approach-title">
+    <div class="siraj-container">
+      <div class="sj-feature">
+        <div class="sj-feature__media siraj-silk-corner m-reveal m-hero" data-sj-motion>
+          <Img media={RENDERS.sideDay} sizes="(min-width: 834px) 50vw, 100vw" />
+        </div>
+        <div class="sj-feature__body m-enter m-emphasis" data-sj-motion>
+          <h2 class="siraj-t-h2" id="approach-title">{LINES.detail}</h2>
+          <p>نختار المواد لأنها تعيش طويلًا، ونرسم الواجهات لتتبدّل مع ضوء النهار، ونصمّم المساحات لتكون هادئة ومريحة لمن يسكنها ومن يعمل فيها.</p>
+          <p>نؤمن أن البيت يُعرف من تفاصيله: من الضوء الذي يدخل نوافذه، ومن ملمس جدرانه، ومن الطريق إلى بابه.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <RibbonGesture flip />
+
+  <section class="siraj-section siraj-section--alt" aria-labelledby="principles-title">
+    <div class="siraj-container">
+      <div class="sj-head m-enter m-standard" data-sj-motion>
+        <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>كيف نعمل</div>
+        <h2 class="siraj-t-h2" id="principles-title">المكان أولًا، ثم كل ما يُبنى عليه.</h2>
+      </div>
+      <div class="sj-values">
+        <article class="sj-value m-enter m-standard" data-sj-motion style="--m-i:0">
+          <Icon name="location" size="md" />
+          <h3 class="siraj-t-h3">المكان والضوء</h3>
+          <p>نقرأ الموقع قبل أن نرسم: اتجاه الشمس، ومسار الهواء، وما يراه الساكن من نافذته.</p>
+        </article>
+        <article class="sj-value m-enter m-standard" data-sj-motion style="--m-i:1">
+          <Icon name="building" size="md" />
+          <h3 class="siraj-t-h3">العمارة والمادة</h3>
+          <p>واجهات بسيطة ومتّزنة، ومواد مختارة لملمسها ولونها وقدرتها على البقاء.</p>
+        </article>
+        <article class="sj-value m-enter m-standard" data-sj-motion style="--m-i:2">
+          <Icon name="key" size="md" />
+          <h3 class="siraj-t-h3">الحياة والتفاصيل</h3>
+          <p>مساحات تخدم الحياة اليومية بهدوء، في البيت وفي المحل، من المدخل إلى آخر تفصيل.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="siraj-section" data-theme="dark" style="background:var(--siraj-bg)" aria-labelledby="current-title">
+    <div class="siraj-container">
+      <div class="sj-feature sj-feature--reverse">
+        <div class="sj-feature__media m-reveal m-hero" data-sj-motion>
+          <Img media={KEY_VISUALS.detail} sizes="(min-width: 834px) 50vw, 100vw" />
+        </div>
+        <div class="sj-feature__body m-enter m-emphasis" data-sj-motion>
+          <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>مشروعنا الحالي · {PROJECT.city}</div>
+          <h2 class="siraj-t-h2" id="current-title">{PROJECT.description}</h2>
+          <p class="siraj-t-lead">{LINES.houseOfLight}</p>
+          <div class="siraj-btn-row"><a class="siraj-btn siraj-btn--primary" href="/project/">اكتشف المشروع<Icon name="arrow-left" /></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import ContactChannels from '../../components/ContactChannels.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import InterestForm from '../../components/InterestForm.astro';
+import { PROJECT } from '../../data/site';
+---
+<Base
+  title="تواصل"
+  description="تواصل معنا هاتفيًا أو عبر إنستغرام، أو سجّل اهتمامك بالشقق السكنية والمحلات التجارية في مسقط."
+  og="contact"
+  active="contact"
+>
+  <section class="siraj-container">
+    <div class="sj-intro m-enter m-emphasis" data-sj-motion>
+      <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>تواصل</div>
+      <h1 class="siraj-t-h1">يسعدنا أن نسمع منك.</h1>
+      <p class="siraj-t-lead sj-measure">اتصل بنا مباشرة، أو راسلنا عبر إنستغرام، أو اترك بياناتك ليتواصل معك فريقنا بخصوص المشروع في {PROJECT.city}.</p>
+    </div>
+  </section>
+  <section class="siraj-section" style="padding-top:0">
+    <div class="siraj-container sj-contact-grid">
+      <aside class="m-enter m-standard" data-sj-motion aria-labelledby="channels-title">
+        <h2 class="siraj-t-h3" id="channels-title" style="margin-bottom:var(--siraj-space-24)">قنوات التواصل</h2>
+        <ContactChannels />
+      </aside>
+      <div class="sj-forms">
+        <section class="sj-form-card m-enter m-standard" data-sj-motion id="interest" aria-labelledby="interest-form-title">
+          <div><div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>المشروع · {PROJECT.city}</div>
+          <h2 class="siraj-t-h2" id="interest-form-title">سجّل اهتمامك</h2></div>
+          <InterestForm />
+        </section>
+        <section class="sj-form-card m-enter m-standard" data-sj-motion id="message" aria-labelledby="contact-form-title">
+          <h2 class="siraj-t-h2" id="contact-form-title">أرسل رسالة</h2>
+          <ContactForm />
+        </section>
+      </div>
+    </div>
+  </section>
+</Base>

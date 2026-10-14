@@ -1,0 +1,10 @@
+---
+// Frozen contact rule for public surfaces: 7771 4404 + Instagram icon + SIRAJPROPERTIES (never «@»).
+import Icon from './Icon.astro';
+import { CONTACT } from '../data/site';
+---
+<div class="siraj-contact-line">
+  <a href={`tel:${CONTACT.phone}`}><span class="siraj-ltr">{CONTACT.phoneDisplay}</span></a>
+  <span class="siraj-lumen" aria-hidden="true"></span>
+  <a href={CONTACT.instagramUrl} rel="noopener"><span class="siraj-ltr siraj-ig"><Icon name="instagram" size="sm" label="Instagram" /> {CONTACT.instagramHandle}</span></a>
+</div>

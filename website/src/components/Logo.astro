@@ -1,0 +1,8 @@
+---
+// Official SIRAJ wordmark files only (01-Logos/SVG): never redrawn, recoloured or stretched.
+// Primary (maroon) on light grounds, Sand on dark grounds. The accessible name is the wordmark itself.
+interface Props { variant?: 'Primary' | 'Sand' | 'White' | 'Deep'; width?: number; class?: string; eager?: boolean }
+const { variant = 'Primary', width = 112, class: cls = '', eager = false } = Astro.props;
+const height = Math.round(width / 3.4921);
+---
+<span class:list={['siraj-logo', cls]} style={`--siraj-logo-w:${width}px`}><img src={`/brand/logo/SIRAJ_Logo_${variant}_v1.0.svg`} alt="SIRAJ" width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async" /></span>

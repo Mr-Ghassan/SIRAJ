@@ -1,0 +1,71 @@
+---
+// SIRAJ website base layout — Arabic-first, native RTL (<html lang="ar" dir="rtl">), Design System v1.0 light theme.
+// Styles: Design System tokens + typography + base + components (consumed as-is from design-system/), Motion System
+// tokens (motion-system/), then the site's composition layer. Icons: the official 07-Icon-System sprite, inlined once.
+import fs from 'node:fs';
+import path from 'node:path';
+import '../styles/fonts.css';
+import '../../../design-system/build/siraj-ds.css';
+import '../../../design-system/build/siraj-ds-typography.css';
+import '../../../design-system/css/siraj-ds-base.css';
+import '../../../design-system/components/siraj-ds.css';
+import '../../../motion-system/tokens/build/siraj-motion.css';
+import '../styles/site.css';
+import Seo from '../components/Seo.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import type { NavKey } from '../data/site';
+
+interface Props { title: string; description: string; og: 'home' | 'about' | 'project' | 'contact'; active: NavKey | 'none'; noindex?: boolean; jsonld?: Record<string, unknown>[] }
+const { title, description, og, active, noindex, jsonld } = Astro.props;
+
+const SPRITE = fs.readFileSync(path.resolve(process.cwd(), '../07-Icon-System/sprite/siraj-icons.svg'), 'utf8')
+  .replace(/<!--[\s\S]*?-->/g, '')
+  .replace(/<\?xml[^>]*>/, '')
+  .replace('<svg ', '<svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" ')
+  .replace('style="display:none" ', '');
+// Inline only the symbols the site uses (every <Icon name="…"> in src/), so each page carries a few KB, not the full set.
+const walk = (d: string): string[] => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]);
+const USED = new Set(walk(path.resolve(process.cwd(), 'src')).filter((f) => f.endsWith('.astro'))
+  .flatMap((f) => [...fs.readFileSync(f, 'utf8').matchAll(/<Icon\s+name="([a-z0-9-]+)"/g)].map((m) => m[1])));
+const SPRITE_USED = SPRITE.replace(/<symbol id="sj-([a-z0-9-]+)"[\s\S]*?<\/symbol>\s*/g, (sym, id) => (USED.has(id) ? sym : ''));
+---
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F7F2ED" />
+    <meta name="format-detection" content="telephone=no" />
+    <script is:inline>
+      // Motion runs only with JavaScript; if the motion script never starts, nothing stays hidden.
+      document.documentElement.classList.add('sj-js');
+      setTimeout(function () { if (!window.__sjMotion) document.documentElement.classList.remove('sj-js'); }, 2500);
+    </script>
+    <link rel="preload" href="/fonts/tajawal-arabic-300.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/tajawal-arabic-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <Seo title={title} description={description} og={og} noindex={noindex} jsonld={jsonld} />
+  </head>
+  <body>
+    <Fragment set:html={SPRITE_USED} />
+    <a class="siraj-skip" href="#main">انتقل إلى المحتوى</a>
+    <Header active={active} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import '../../../design-system/components/siraj-ds.js';
+      import { initMotion } from '../scripts/motion';
+      import { initForms } from '../scripts/forms';
+      (window as unknown as { __sjMotion: boolean }).__sjMotion = true;
+      initMotion();
+      initForms();
+    </script>
+  </body>
+</html>

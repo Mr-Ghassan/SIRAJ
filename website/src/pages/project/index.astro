@@ -1,0 +1,90 @@
+---
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import Icon from '../../components/Icon.astro';
+import RibbonGesture from '../../components/RibbonGesture.astro';
+import ContactLine from '../../components/ContactLine.astro';
+import { PROJECT, LINES, CONTACT } from '../../data/site';
+import { RENDERS, KEY_VISUALS, GALLERY, SILK } from '../../data/media';
+// Unconfirmed commercial facts (prices, areas, unit counts, unit mix, dates, payment plans) are not shown at all.
+---
+<Base
+  title="المشروع في مسقط"
+  description="شقق سكنية ومحلات تجارية في مسقط: مبنى بواجهات حجرية فاتحة وستائر من الطوب المثقّب، يعبرها الضوء نهارًا ويتوهّج منها ليلًا."
+  og="project"
+  active="project"
+>
+  <section class="siraj-container sj-hero" aria-labelledby="project-hero-title">
+    <div class="siraj-hero">
+      <div class="siraj-hero__body">
+        <div class="siraj-eyebrow m-enter m-emphasis" data-sj-motion><span class="siraj-lumen" aria-hidden="true"></span>المشروع</div>
+        <h1 class="siraj-hero__title m-hero" id="project-hero-title" data-sj-motion><span class="m-line"><span><span class="siraj-t-heavy">{PROJECT.city}</span></span></span></h1>
+        <p class="siraj-hero__lead m-enter m-emphasis" data-sj-motion style="--m-i:2">{PROJECT.description}.</p>
+        <dl class="sj-facts m-enter m-emphasis" data-sj-motion style="--m-i:3">
+          <div><Icon name="location" /><dt>الموقع</dt><dd>{PROJECT.city}</dd></div>
+          <div><Icon name="apartment" /><dt>السكن</dt><dd>شقق سكنية</dd></div>
+          <div><Icon name="shop" /><dt>التجارة</dt><dd>محلات تجارية</dd></div>
+        </dl>
+        <div class="siraj-btn-row m-enter m-emphasis" data-sj-motion style="--m-i:4">
+          <a class="siraj-btn siraj-btn--primary siraj-btn--lg" href="/contact/#interest">سجّل اهتمامك</a>
+          <a class="siraj-btn siraj-btn--ghost siraj-btn--lg" href="#architecture">العمارة<Icon name="arrow-down" /></a>
+        </div>
+      </div>
+      <div class="siraj-hero__media siraj-silk-corner m-reveal m-hero" data-sj-motion>
+        <Img media={RENDERS.frontBlue} sizes="(min-width: 834px) 50vw, 100vw" eager />
+      </div>
+    </div>
+  </section>
+
+  <section class="siraj-section" id="architecture" aria-labelledby="architecture-title">
+    <div class="siraj-container">
+      <div class="sj-head m-enter m-standard" data-sj-motion>
+        <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>العمارة</div>
+        <h2 class="siraj-t-h2" id="architecture-title">{LINES.houseOfLight}</h2>
+        <p class="siraj-t-lead sj-measure">واجهات حجرية فاتحة، وستائر من الطوب المثقّب، وشرفات تحيط بها النباتات. في النهار يعبر الضوء الستائر بهدوء، وعند الساعة الزرقاء يتوهّج المبنى من الداخل، والمحلات التجارية تضيء الشارع.</p>
+      </div>
+      <div class="sj-gallery" role="list">
+        {GALLERY.map((k, i) => (
+          <figure class="m-enter m-standard" data-sj-motion style={`--m-i:${i % 3}`} role="listitem">
+            <Img media={RENDERS[k]} sizes="(min-width: 834px) 33vw, 50vw" widths={[360, 540, 720, 1080]} />
+            <figcaption>{RENDERS[k].caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <RibbonGesture />
+
+  <section class="siraj-section" data-theme="dark" style="background:var(--siraj-bg)" aria-labelledby="story-title">
+    <div class="siraj-container">
+      <div class="sj-head m-enter m-standard" data-sj-motion>
+        <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>الحرير والضوء</div>
+        <h2 class="siraj-t-h2" id="story-title">{LINES.curtain}</h2>
+      </div>
+      <div class="sj-story">
+        <figure class="m-reveal m-hero" data-sj-motion><Img media={KEY_VISUALS.veil} sizes="(min-width: 834px) 58vw, 100vw" /><figcaption>قبل الكشف: الحرير يغطّي المبنى.</figcaption></figure>
+        <figure class="m-reveal m-hero" data-sj-motion><Img media={KEY_VISUALS.reveal} sizes="(min-width: 834px) 42vw, 100vw" /><figcaption>الكشف: الحرير ينسحب، والمبنى يتّضح.</figcaption></figure>
+        <figure class="m-reveal m-hero" data-sj-motion><Img media={KEY_VISUALS.ribbon} sizes="(min-width: 834px) 42vw, 100vw" /><figcaption>بعده: شريط من الحرير يلتفّ حول المبنى.</figcaption></figure>
+        <figure class="m-reveal m-hero" data-sj-motion><Img media={KEY_VISUALS.lantern} sizes="(min-width: 834px) 58vw, 100vw" /><figcaption>{LINES.firstLight}</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="siraj-section" aria-labelledby="register-title">
+    <div class="siraj-container">
+      <div class="siraj-cta sj-cta" data-theme="dark">
+        <div class="siraj-cta__body m-enter m-emphasis" data-sj-motion>
+          <div class="siraj-eyebrow"><span class="siraj-lumen" aria-hidden="true"></span>{PROJECT.city}</div>
+          <h2 class="siraj-cta__title" id="register-title">سجّل اهتمامك، وسنتواصل معك حين تُعلن تفاصيل الوحدات.</h2>
+          <ContactLine />
+          <div class="siraj-btn-row">
+            <a class="siraj-btn siraj-btn--primary siraj-btn--lg" href="/contact/#interest">سجّل اهتمامك</a>
+            <a class="siraj-btn siraj-btn--ghost siraj-btn--lg" href={`tel:${CONTACT.phone}`}><Icon name="call" /><span>اتصل بنا</span></a>
+          </div>
+        </div>
+        <div class="siraj-cta__silk" aria-hidden="true"><Img media={SILK.lumen} sizes="(min-width: 834px) 40vw, 100vw" widths={[480, 768, 1080, 1440]} decorative /></div>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,12 @@
+---
+// Live status region for a form: transport-off notice, sending, success and error states (Design System .siraj-alert).
+import Icon from './Icon.astro';
+import { CONTACT } from '../data/site';
+interface Props { id: string }
+const { id } = Astro.props;
+---
+<div class="sj-form-status" id={`${id}-status`} role="status" aria-live="polite" tabindex="-1" hidden>
+  <div class="siraj-alert siraj-alert--success" data-state="success" hidden><Icon name="check" /><div><div class="siraj-alert__title">وصلتنا رسالتك.</div><div class="siraj-alert__text">سيتواصل معك فريقنا قريبًا على الرقم الذي كتبته.</div></div></div>
+  <div class="siraj-alert siraj-alert--warning" data-state="offline" hidden><Icon name="info" /><div><div class="siraj-alert__title">استقبال النماذج عبر الموقع لم يُفعَّل بعد.</div><div class="siraj-alert__text">لم تُرسَل بياناتك ولم تُحفظ. للتواصل الآن: <a href={`tel:${CONTACT.phone}`}><span class="siraj-ltr">{CONTACT.phoneDisplay}</span></a> أو عبر إنستغرام <a href={CONTACT.instagramUrl} rel="noopener"><span class="siraj-ltr">{CONTACT.instagramHandle}</span></a>.</div></div></div>
+  <div class="siraj-alert siraj-alert--error" data-state="error" hidden><Icon name="alert" /><div><div class="siraj-alert__title">تعذّر إرسال النموذج.</div><div class="siraj-alert__text">بياناتك ما زالت في النموذج، فحاول مرة أخرى بعد قليل، أو اتصل بنا مباشرة على <a href={`tel:${CONTACT.phone}`}><span class="siraj-ltr">{CONTACT.phoneDisplay}</span></a>.</div></div></div>
+</div>

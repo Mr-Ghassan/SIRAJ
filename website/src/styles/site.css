@@ -1,0 +1,143 @@
+/* =============================================================================
+   SIRAJ website v1.0 — page composition only. Every colour, size, space, radius
+   and easing comes from Design System v1.0 / Motion System v1.0 tokens; the
+   components themselves are the Design System's (.siraj-*). Logical properties
+   throughout: RTL is native, not a patch.
+   ========================================================================== */
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--siraj-layout-header-height-mobile) + 16px); }
+@media (min-width: 1200px) { html { scroll-padding-top: calc(var(--siraj-layout-header-height) + 16px); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { min-height: 100vh; display: flex; flex-direction: column; overflow-x: clip; }
+main { flex: 1; }
+:where(:lang(ar)) p { text-wrap: pretty; }
+.sj-measure { max-width: var(--siraj-layout-measure); }
+
+/* ---- Header: current page marker + official logo size ------------------------ */
+.siraj-header .siraj-logo { --siraj-logo-w: 104px; }
+@media (min-width: 1200px) { .siraj-header .siraj-logo { --siraj-logo-w: 120px; } }
+.siraj-logo img { width: var(--siraj-logo-w, 112px); height: auto; }
+
+@media (max-width: 479px) { .sj-header-cta { display: none; } }
+.siraj-drawer__foot { display: grid; gap: var(--siraj-space-12); }
+/* Text links keep the Design System look; a transparent hit area brings them to 44 px for touch. */
+.siraj-btn--link { position: relative; }
+.siraj-btn--link::after { content: ""; position: absolute; inset-inline: 0; top: 50%; height: 44px; transform: translateY(-50%); }
+
+/* ---- Section heads ---------------------------------------------------------- */
+.sj-head { display: grid; gap: var(--siraj-space-16); margin-bottom: var(--siraj-space-48); max-width: 760px; }
+.sj-head .siraj-t-h2 { margin: 0; }
+.sj-head p { color: var(--siraj-text); }
+
+/* ---- Hero (Design System .siraj-hero) --------------------------------------- */
+.sj-hero { padding-top: var(--siraj-space-16); }
+.sj-hero .siraj-hero__title { margin: 0; }
+.sj-hero .siraj-hero__media { position: relative; }
+.sj-hero .siraj-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 833px) { .sj-hero .siraj-hero__media { aspect-ratio: 4 / 4.4; } }
+
+/* ---- Silk gesture: one directional ribbon pass between sections -------------
+   Hierarchy: architecture → information → silk → logo. The ribbon frames a transition;
+   it never covers information. Motion: REVEAL from the start side, then SETTLE. */
+.sj-ribbon { position: relative; z-index: 1; pointer-events: none; margin-block: calc(var(--siraj-space-48) * -1) calc(var(--siraj-space-24) * -1); }
+.sj-ribbon img { display: block; width: 100%; height: clamp(72px, 12vw, 168px); object-fit: cover; object-position: 50% 50%; }
+.sj-ribbon--flip img { transform: scaleX(-1); }
+
+/* ---- Feature: image + text (project teaser, about) --------------------------- */
+.sj-feature { display: grid; gap: var(--siraj-space-40); align-items: center; }
+.sj-feature__media { position: relative; aspect-ratio: 4 / 5; }
+.sj-feature__media img { width: 100%; height: 100%; object-fit: cover; }
+.sj-feature__body { display: grid; gap: var(--siraj-space-20, 20px); align-content: center; }
+.sj-feature__body .siraj-btn-row { margin-top: var(--siraj-space-8); }
+@media (min-width: 834px) {
+  .sj-feature { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--siraj-grid-desktop-gutter); }
+  .sj-feature__media { grid-column: span 6; }
+  .sj-feature__body { grid-column: span 5; }
+  .sj-feature--reverse .sj-feature__media { order: 2; grid-column: 7 / span 6; }
+  .sj-feature--reverse .sj-feature__body { order: 1; grid-column: 1 / span 5; }
+}
+.sj-facts { display: grid; gap: 0; border-top: 1px solid var(--siraj-border); margin: var(--siraj-space-8) 0 0; }
+.sj-facts > div { display: flex; align-items: center; gap: var(--siraj-space-16); padding-block: var(--siraj-space-16); border-bottom: 1px solid var(--siraj-border); }
+.sj-facts dt { color: var(--siraj-text-muted); min-width: 7.5em; font-size: var(--siraj-type-small-size); }
+.sj-facts dd { margin: 0; color: var(--siraj-text-strong); }
+.sj-facts .siraj-icon { color: var(--siraj-accent); flex: none; }
+
+/* ---- Values (light · material · detail) ------------------------------------- */
+.sj-values { display: grid; gap: var(--siraj-space-32); }
+@media (min-width: 834px) { .sj-values { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--siraj-grid-desktop-gutter); } }
+.sj-value { display: grid; gap: var(--siraj-space-12); align-content: start; padding-top: var(--siraj-space-24); border-top: 1px solid var(--siraj-border-strong); }
+.sj-value .siraj-icon { color: var(--siraj-accent); }
+.sj-value h3 { margin: 0; }
+.sj-value p { color: var(--siraj-text); }
+
+/* ---- Key-visual band (Silk & Light) ----------------------------------------- */
+.sj-kv { position: relative; display: grid; isolation: isolate; color: var(--siraj-color-ivory); background: var(--siraj-color-shadow); }
+.sj-kv__media { position: relative; min-height: min(92vh, 900px); }
+.sj-kv__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.sj-kv__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23, 6, 8, 0.86) 0%, rgba(23, 6, 8, 0.2) 46%, rgba(23, 6, 8, 0) 70%); }
+.sj-kv__body { position: absolute; inset-inline: 0; bottom: 0; z-index: 1; padding-block: var(--siraj-space-48); }
+.sj-kv__line { margin: 0; font-family: var(--siraj-type-display-family); font-size: var(--siraj-type-h1-size); line-height: var(--siraj-type-h1-line); font-weight: 300; color: var(--siraj-color-ivory); max-width: 18ch; text-wrap: balance; }
+.sj-kv .siraj-eyebrow { color: var(--siraj-color-sand); }
+
+/* ---- Visual story (key visuals, project page) ------------------------------- */
+.sj-story { display: grid; gap: var(--siraj-space-24); }
+@media (min-width: 834px) { .sj-story { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--siraj-grid-desktop-gutter); } }
+.sj-story figure { margin: 0; display: grid; gap: var(--siraj-space-12); }
+.sj-story img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.sj-story figcaption { color: var(--siraj-text-muted); font-size: var(--siraj-type-small-size); }
+@media (min-width: 834px) {
+  .sj-story figure:nth-child(1) { grid-column: 1 / span 7; }
+  .sj-story figure:nth-child(2) { grid-column: 8 / span 5; align-self: end; }
+  .sj-story figure:nth-child(3) { grid-column: 1 / span 5; }
+  .sj-story figure:nth-child(4) { grid-column: 6 / span 7; }
+}
+
+/* ---- Render gallery (project page) ------------------------------------------ */
+.sj-gallery { display: grid; gap: var(--siraj-space-16); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 834px) { .sj-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--siraj-grid-desktop-gutter); } }
+.sj-gallery figure { margin: 0; display: grid; gap: var(--siraj-space-8); }
+.sj-gallery img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; background: var(--siraj-surface-alt); }
+.sj-gallery figcaption { color: var(--siraj-text-muted); font-size: var(--siraj-type-small-size); }
+
+/* ---- Page intro (inner pages) ----------------------------------------------- */
+.sj-intro { display: grid; gap: var(--siraj-space-16); padding-block: var(--siraj-space-64) var(--siraj-space-32); max-width: 820px; }
+.sj-intro h1 { margin: 0; }
+.sj-intro .siraj-t-lead { margin: 0; }
+
+/* ---- Contact ---------------------------------------------------------------- */
+.sj-contact-grid { display: grid; gap: var(--siraj-space-48); }
+@media (min-width: 1024px) { .sj-contact-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--siraj-space-80); align-items: start; } }
+.sj-channels.siraj-contact__channels { grid-template-columns: 1fr; }
+.sj-forms { display: grid; gap: var(--siraj-space-64); }
+.sj-form-card { display: grid; gap: var(--siraj-space-24); padding: var(--siraj-space-32) var(--siraj-space-24); background: var(--siraj-surface); border: 1px solid var(--siraj-border); }
+@media (min-width: 834px) { .sj-form-card { padding: var(--siraj-space-48); } }
+.sj-form-card h2 { margin: 0; }
+.sj-form-note { color: var(--siraj-text-muted); font-size: var(--siraj-type-small-size); }
+.sj-hp { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.sj-form-status { display: grid; gap: var(--siraj-space-8); }
+.sj-form-status[hidden] { display: none; }
+.siraj-check { display: flex; gap: 12px; align-items: flex-start; line-height: 1.7; }
+.siraj-check input { margin-top: .45em; width: 18px; height: 18px; accent-color: var(--siraj-accent); flex: none; }
+.siraj-field.is-invalid .siraj-check, .sj-consent.is-invalid { color: var(--siraj-error); }
+.siraj-field__error { display: none; }
+.siraj-field.is-invalid .siraj-field__error { display: flex; }
+
+/* ---- CTA (Design System .siraj-cta, dark) ----------------------------------- */
+.sj-cta .siraj-cta__silk img { object-position: 50% 50%; }
+.sj-cta .siraj-btn-row { margin-top: var(--siraj-space-8); }
+
+/* ---- Footer ----------------------------------------------------------------- */
+.sj-legal { color: var(--siraj-text-muted); font-size: var(--siraj-type-small-size); }
+
+/* ---- 404 -------------------------------------------------------------------- */
+.sj-404 { display: grid; gap: var(--siraj-space-24); padding-block: var(--siraj-space-96); max-width: 640px; }
+
+/* ---- Motion: Motion System v1.0 classes (.m-*) are driven by scripts/motion.ts.
+   Without JavaScript, or before it runs, nothing stays hidden. ---------------- */
+html:not(.sj-js) .m-enter, html:not(.sj-js) .m-reveal { opacity: 1 !important; transform: none !important; filter: none !important; clip-path: none !important; }
+html:not(.sj-js) .m-line > span { transform: none !important; }
+.sj-ribbon.m-reveal.is-in img { animation: sj-settle var(--siraj-m-cinematic-duration) var(--siraj-ease-glide) both; }
+@keyframes sj-settle { from { transform: translate3d(2.5%, 0, 0); } to { transform: none; } }
+.sj-ribbon--flip.m-reveal.is-in img { animation-name: sj-settle-flip; }
+@keyframes sj-settle-flip { from { transform: scaleX(-1) translate3d(-2.5%, 0, 0); } to { transform: scaleX(-1); } }
+@media (prefers-reduced-motion: reduce) { .sj-ribbon.m-reveal.is-in img, .sj-ribbon--flip.m-reveal.is-in img { animation: none; } }

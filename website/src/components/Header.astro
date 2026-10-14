@@ -1,0 +1,45 @@
+---
+// Design System .siraj-header: official logo (start side = right in Arabic), primary navigation, call + register CTA,
+// and the .siraj-drawer menu on small screens (DS interaction script: data-siraj-open / data-siraj-close).
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { NAV, CONTACT, type NavKey } from '../data/site';
+interface Props { active: NavKey | 'none' }
+const { active } = Astro.props;
+---
+<header class="siraj-header">
+  <div class="siraj-container siraj-header__inner">
+    <a href="/" aria-label="SIRAJ — الصفحة الرئيسية"><Logo width={112} eager /></a>
+    <div class="siraj-header__nav">
+      <nav class="siraj-nav" aria-label="التنقّل الرئيسي">
+        <ul class="siraj-nav__list">
+          {NAV.map((n) => <li><a class="siraj-nav__link" href={n.href} aria-current={n.key === active ? 'page' : undefined}>{n.label}</a></li>)}
+        </ul>
+      </nav>
+    </div>
+    <div class="siraj-header__actions">
+      <a class="siraj-btn siraj-btn--icon siraj-btn--ghost" href={`tel:${CONTACT.phone}`} aria-label={`اتصل بنا على ${CONTACT.phoneDisplay}`}><Icon name="call" /></a>
+      <a class="siraj-btn siraj-btn--secondary siraj-btn--sm sj-header-cta" href="/contact/#interest">سجّل اهتمامك</a>
+      <button class="siraj-btn siraj-btn--icon siraj-btn--ghost siraj-header__menu" type="button" data-siraj-open="site-menu" aria-haspopup="dialog" aria-controls="site-menu" aria-label="القائمة"><Icon name="menu" /></button>
+    </div>
+  </div>
+</header>
+<div class="siraj-overlay siraj-overlay--drawer" id="site-menu" hidden>
+  <div class="siraj-drawer" role="dialog" aria-modal="true" aria-labelledby="site-menu-title">
+    <div class="siraj-drawer__head">
+      <h2 class="siraj-drawer__title" id="site-menu-title">القائمة</h2>
+      <button class="siraj-btn siraj-btn--icon siraj-btn--ghost" type="button" data-siraj-close aria-label="إغلاق القائمة"><Icon name="close" /></button>
+    </div>
+    <div class="siraj-drawer__body">
+      <nav class="siraj-nav siraj-nav--vertical" aria-label="التنقّل الرئيسي">
+        <ul class="siraj-nav__list">
+          {NAV.map((n) => <li><a class="siraj-nav__link" href={n.href} aria-current={n.key === active ? 'page' : undefined}>{n.label}</a></li>)}
+        </ul>
+      </nav>
+    </div>
+    <div class="siraj-drawer__foot">
+      <a class="siraj-btn siraj-btn--secondary siraj-btn--block" href="/contact/#interest">سجّل اهتمامك</a>
+      <a class="siraj-btn siraj-btn--primary siraj-btn--block" href={`tel:${CONTACT.phone}`}><Icon name="call" /><span class="siraj-ltr">{CONTACT.phoneDisplay}</span></a>
+    </div>
+  </div>
+</div>

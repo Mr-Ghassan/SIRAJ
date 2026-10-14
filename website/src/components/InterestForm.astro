@@ -1,0 +1,30 @@
+---
+import Field from './Field.astro';
+import FormStatus from './FormStatus.astro';
+import Icon from './Icon.astro';
+import { RULES, INTEREST_OPTIONS, TRANSPORT } from '../forms/contract';
+const r = Object.fromEntries(RULES.interest.map((x) => [x.name, x]));
+---
+<form class="siraj-form" id="interest-form" data-sj-form="interest" novalidate aria-labelledby="interest-form-title">
+  <div class="siraj-form__row">
+    <Field form="interest" name="name" label="الاسم" required error={r.name.message} autocomplete="name" maxlength={r.name.maxLength} />
+    <Field form="interest" name="phone" label="رقم الهاتف" type="tel" required error={r.phone.message} autocomplete="tel" inputmode="tel" maxlength={r.phone.maxLength} dir="ltr" />
+  </div>
+  <div class="siraj-field" data-field="interest">
+    <label class="siraj-field__label" for="interest-interest">أهتمّ بـ<span class="siraj-field__req" aria-hidden="true">*</span></label>
+    <div class="siraj-select"><select id="interest-interest" name="interest" required aria-describedby="interest-interest-e">
+      <option value="">اختر</option>
+      {INTEREST_OPTIONS.map((o) => <option value={o.value}>{o.label}</option>)}
+    </select></div>
+    <div class="siraj-field__error" id="interest-interest-e"><Icon name="alert" /><span>{r.interest.message}</span></div>
+  </div>
+  <Field form="interest" name="note" label="ملاحظة" type="textarea" error={r.note.message} maxlength={r.note.maxLength} />
+  <div class="siraj-field" data-field="consent">
+    <label class="siraj-check"><input type="checkbox" name="consent" value="yes" required aria-describedby="interest-consent-e" /> <span>أوافق على أن يتواصل معي فريق المبيعات بخصوص المشروع.</span></label>
+    <div class="siraj-field__error" id="interest-consent-e"><span>{r.consent.message}</span></div>
+  </div>
+  <div class="sj-hp" aria-hidden="true"><label for="interest-company">اترك هذا الحقل فارغًا</label><input id="interest-company" name="company" type="text" tabindex="-1" autocomplete="off" /></div>
+  <div class="siraj-btn-row"><button class="siraj-btn siraj-btn--primary siraj-btn--lg" type="submit">سجّل اهتمامك</button></div>
+  {!TRANSPORT.enabled && <p class="sj-form-note">لم يُفعَّل استقبال النماذج عبر الموقع بعد؛ لن تُرسَل بياناتك. الأسرع الآن: الاتصال المباشر.</p>}
+  <FormStatus id="interest" />
+</form>

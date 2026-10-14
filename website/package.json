@@ -1,0 +1,25 @@
+{
+  "name": "siraj-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SIRAJ Digital & Project Experience v1.0 — Arabic-first website built on the frozen SIRAJ Brand System v1.0.",
+  "type": "module",
+  "scripts": {
+    "prepare-assets": "node scripts/prepare-assets.mjs",
+    "dev": "node scripts/prepare-assets.mjs && astro dev",
+    "build": "node scripts/prepare-assets.mjs && astro build",
+    "preview": "astro preview",
+    "test": "node scripts/test-content.mjs",
+    "verify": "npm run build && node scripts/test-content.mjs && node scripts/verify-browser.mjs"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "7.3.8"
+  },
+  "devDependencies": {
+    "@fontsource/jost": "5.3.0",
+    "@fontsource/tajawal": "5.3.0",
+    "axe-core": "4.14.0"
+  }
+}

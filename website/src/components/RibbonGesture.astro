@@ -1,0 +1,11 @@
+---
+// The single directional silk gesture between sections: the official pressed-silk long ribbon (alpha).
+// Decorative (aria-hidden). Motion: REVEAL from the start side (right in Arabic), then SETTLE (Motion System v1.0).
+import Img from './Img.astro';
+import { SILK } from '../data/media';
+interface Props { flip?: boolean }
+const { flip = false } = Astro.props;
+---
+<div class:list={['sj-ribbon', 'm-cinematic', 'm-reveal', flip && 'sj-ribbon--flip']} data-sj-motion aria-hidden="true">
+  <Img media={SILK.longRibbon} widths={[768, 1280, 1920, 2560]} sizes="100vw" decorative />
+</div>

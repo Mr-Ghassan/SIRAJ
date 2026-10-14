@@ -1,5 +1,14 @@
 # Changelog
 
+## Digital Experience v1.0 · 2026-10-14 · Website (branch `feat/siraj-digital-project-experience-v1`)
+
+- **Website** `website/`: Astro 7 + TypeScript, static, Arabic RTL; pages `/`, `/about/`, `/project/`, `/contact/`, 404. Built on the frozen v1.0 systems (Design System components and tokens, Motion System classes, official logos, icons and approved images). No identity change.
+- **Forms:** Register Interest + Contact with Arabic validation, consent and honeypot. Transport is disabled until an approved endpoint exists, so nothing is sent.
+- **SEO:** canonical `https://www.sirajproperties.net`, OG images, JSON-LD, sitemap, robots, favicons. Email-signature images are published at `/brand/email/v1/`.
+- **QA:** `npm run verify:web` covers content (12 brand rules) and browser checks (4 viewports, axe WCAG 2.1 AA, keyboard, reduced motion, forms, performance budget). Result: 0 failures.
+- **Docs:** `DIGITAL_EXPERIENCE_STATUS.md`, `docs/digital/` (architecture, QA report, forms contract, deployment runbook, email signature, screenshots).
+- **Root scripts added:** `web:install`, `dev:web`, `build:web`, `test:web`, `verify:web`. `tools/qa-brand.js` now skips the website's generated build output.
+
 ## v1.0.0 · 2026-10-14 · Release: SIRAJ Brand System v1.0 frozen
 
 - **Release:** Brand Identity, Design System and Motion System v1.0 frozen as a permanent baseline. Tag `siraj-brand-system-v1.0.0`.

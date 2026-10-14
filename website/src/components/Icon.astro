@@ -1,0 +1,6 @@
+---
+// Official SIRAJ icon (07-Icon-System sprite, inlined once by the layout). Decorative by default.
+interface Props { name: string; size?: 'sm' | 'md' | 'xl' | '48'; label?: string; class?: string }
+const { name, size, label, class: cls = '' } = Astro.props;
+---
+<svg class:list={['siraj-icon', size && `siraj-icon--${size}`, cls]} aria-hidden={label ? undefined : 'true'} role={label ? 'img' : undefined} aria-label={label} focusable="false"><use href={`#sj-${name}`} /></svg>
