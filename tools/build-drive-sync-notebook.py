@@ -11,8 +11,9 @@ import json, os
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 OUT = os.path.join(ROOT, 'docs', 'library', 'SIRAJ_Drive-Sync_Library_v1.0.1.ipynb')
-BRANCH = 'feat/siraj-brand-library-completion-v1'
-REPO = 'Mr-Ghassan/siraj'
+REF = 'siraj-brand-library-v1.0.1'  # the release tag; falls back to main
+REPO_FALLBACK = 'main'
+REPO = 'Mr-Ghassan/SIRAJ'
 
 
 def md(text):
@@ -50,8 +51,11 @@ import getpass, os, subprocess
 token = getpass.getpass('رمز GitHub (اتركه فارغًا إن كان المستودع عامًا): ').strip()
 url = f'https://{{token}}@github.com/{REPO}.git' if token else 'https://github.com/{REPO}.git'
 if not os.path.isdir('/content/siraj'):
-    r = subprocess.run(['git', 'clone', '--depth', '1', '--branch', '{BRANCH}', url, '/content/siraj'], capture_output=True, text=True)
-    print(r.stderr.replace(token, '***') if token else r.stderr)
+    for ref in ('{REF}', '{REPO_FALLBACK}'):
+        r = subprocess.run(['git', 'clone', '--depth', '1', '--branch', ref, url, '/content/siraj'], capture_output=True, text=True)
+        print(ref, '→', (r.stderr.replace(token, '***') if token else r.stderr).strip()[-300:])
+        if r.returncode == 0:
+            break
     subprocess.run(['git', '-C', '/content/siraj', 'remote', 'set-url', 'origin', 'https://github.com/{REPO}.git'])
 del token, url
 print(subprocess.run(['git', '-C', '/content/siraj', 'log', '-1', '--format=%h %s'], capture_output=True, text=True).stdout)
