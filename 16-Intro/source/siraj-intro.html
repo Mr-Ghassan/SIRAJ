@@ -10,7 +10,7 @@
   1.5  The ribbon crosses the frame; behind its passage the official wordmark is revealed (the silk never distorts the logo).
   3.6  The ribbon leaves through the upper end. The two Lumen diamonds ignite softly and settle.
   4.6  Final frame: official logo, strong negative space, stable composition (hold to 6.0).
-  Query: ?fmt=16x9|9x16|1x1  &alpha=1 (transparent background)  &lockup=1 (adds bilingual descriptor)  &line=1 (proposed brand line)
+  Query: ?fmt=16x9|9x16|1x1  &alpha=1 (transparent background)  &line=1 (proposed brand line). The bilingual lockup caption is withdrawn (decision D1, 2026-10-15).
   AIR (client rule 2026-10-13): the breeze is what moves the silk. 0–1.5 s a whisper of air carries the dark silk
   surface while a warm light travels over it; the ribbon's speed follows the air, with one gentle gust as it uncovers
   the wordmark (≈ 1.6 s), then the air drops and everything SETTLES. One direction (right → left); no loops, no storm.
@@ -43,12 +43,12 @@
 <img id="surf" class="layer" alt=""><div id="sweep" class="layer"></div>
 <svg id="logo" xmlns="http://www.w3.org/2000/svg"></svg>
 <div id="g1" class="glow"></div><div id="g2" class="glow"></div>
-<div class="caption" id="cap"><div class="ar" id="capAr">سراج للتطوير العقاري</div><div class="en" id="capEn">Real Estate Development</div></div>
+<div class="caption" id="cap"><div class="ar" id="capAr"></div><div class="en" id="capEn"></div></div>
 <video id="rib" class="layer" muted playsinline></video>
 <script>
 const M = SirajMotion, E = M.EASE;
 const q = new URLSearchParams(location.search);
-const FMT = q.get('fmt') || '16x9', ALPHA = q.get('alpha') === '1', LOCKUP = q.get('lockup') === '1', LINE = q.get('line') === '1';
+const FMT = q.get('fmt') || '16x9', ALPHA = q.get('alpha') === '1', LOCKUP = false /* D1: Arabic-name lockup withdrawn */, LINE = q.get('line') === '1';
 if (ALPHA) document.body.classList.add('alpha');
 if (LINE) { document.getElementById('capAr').textContent = 'نورٌ يُبنى'; document.getElementById('capEn').textContent = 'Light, built.'; }
 const W = innerWidth, H = innerHeight, A = W / H;

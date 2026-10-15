@@ -27,7 +27,7 @@ file corrections only. No visual or design change.
 | SOURCE | المصدر | Editable or generating source (AI file, build script, HTML composition, green-screen master). |
 | PRODUCTION EXPORT | ملفات الإنتاج | Ready to use. |
 | PREVIEW / REFERENCE | المعاينة | Look only; never a deliverable, never published. |
-| REVIEW | ملفات الإنتاج (قرار معلّق) | Approved in v1.0, conflicts with a later rule; owner decision listed in the index. |
+| SPECIAL PRODUCTION | إنتاج خاص ـ استخدام مقيّد | Restricted use: only where a production process technically needs it (vector silk, decision D2). |
 | ARCHIVE / POSTPONED | الأرشيف | Not approved for production. |
 
 ## Commands

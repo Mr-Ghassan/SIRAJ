@@ -9,7 +9,7 @@ committed files; documentation paths were checked against the disk. Nothing was 
 
 2,267 files audited (archive included), 1,989 opened by format (the rest are code/config and were checked for presence
 and non-zero size). Open failures: **0** (one empty `99-Archive/.gitkeep`, intentional). Production files indexed in the
-manifest: **947**.
+manifest: **947** at audit time; **917** after decision D1 withdrew the 30 Arabic-name lockup files.
 
 ## Family status
 
@@ -23,7 +23,7 @@ manifest: **947**.
 | **Silk** | 11 formations × 16:9, 9:16 (4K), 1:1, 4:5 JPG + web WebP; 13 alpha cut-outs (4K); 2 alpha footage clips; 2 × 4K green-screen masters; engine | — | Verified 4K, Silk QA 22/22 (no wash, no yellow, maroon chroma), visual pressed-silk check of all 11 formations. Indexed per formation. |
 | **Silk & Light** | 5 key visuals (4:5 + 9:16), 6 clean renders (3712 × 4608), posts/stories, architect source, grade LUT + Luxe Grade | Not organised as one family; grade/camera references scattered | Organised in the index: approved KVs, renders, compositions, grade, before/after reference, camera/composition references (AI concept, reference only). Ribbon KV measured warmer (decision D6). |
 | **Icons** | 85 icons × 2 styles on the 24 grid, 1.25 stroke, sprite, JSON catalogue with AR/EN labels, specimens | Source of truth defined only 82: a rebuild deleted **shop, instagram, brochure**; README said 82 | The 3 drawings restored element by element into `tools/build-icons.js`; all icon files rebuild byte-identical; README count corrected. Geometry consistent (grid, stroke, caps/joins) across all 170 SVGs. |
-| **Design tokens** | Design System v1.0 tokens (W3C) + builds; brand tokens + platform exports | One value differs between the two sets (dark border-strong) | Documented (decision D3); not changed (frozen). |
+| **Design tokens** | Design System v1.0 tokens (W3C) + builds; brand tokens + platform exports | One value differed between the two sets (dark border-strong) | Owner decision D3: #8C6B64 in both sets; platform exports regenerated. |
 | **Motion** | Tokens (six levels, wind), runtime lib, plates, transitions (source + 10 exports), components (source + 32 exports), intro + outro (source, MP4, sound, ProRes/WebM alpha, posters), 5 sound files | Not separated in one place | Separated in the index: tokens · runtime · silk engine · footage · transitions · components · intro · outro · audio · sources · exports. All media open (ffprobe). No re-animation. |
 | **Guidelines** | 82-page PDF, HTML source, build script, page previews | **Pages 6 and 19 missing an image** (broken objects from compression); internal pages not marked; 2 errata | v1.0.1 PDF (82 pages): images restored, «Internal» marker on pages 9–10, token path and icon count corrected; compressor fixed; build verifies every page. Reproducibility proven (byte-identical HTML, identical text layer). v1.0 archived. |
 | **Archive** | Folders for demo, English-dormant, postponed lettering, retired silk | No index of what each folder is; no markers | `99-Archive/README.md` table + `_NOT-FOR-PRODUCTION.md` in every archive folder. |
@@ -52,6 +52,15 @@ manifest: **947**.
 - 20 line-only icons are the same drawing in outline and filled (documented as «same» in the catalogue).
 - `01-Logos/Monochrome/` and `01-Logos/Master/` hold intentional byte-identical copies; QA fails if they ever drift.
 
-## Decisions for the owner (D1–D6)
+## Owner decisions applied (2026-10-15)
 
-Listed with context at the end of `BRAND_MASTER_ASSET_INDEX.md`.
+| | Decision | Applied |
+|---|---|---|
+| D1 | Withdraw every lockup typesetting «سراج للتطوير العقاري» in Tajawal | 30 lockup files + 2 kit copies archived (`99-Archive/Withdrawn/Arabic-Name-Lockups/`); build, letterhead, business card, intro source, docs, skill and guide page 18 updated; QA blocks any return |
+| D2 | Keep vector silk as SPECIAL PRODUCTION / RESTRICTED USE | new manifest status; README, specimen, guide silk rules, Drive folder |
+| D3 | border-strong = #8C6B64 | 09 token source + 6 platform exports, kit and skill copies; #7A5A55 retired (no consumer) |
+| D4 | Project name stays postponed | unchanged; QA confirms no lettering in production |
+| D5 | Unresolved data hidden in publish-ready exports | document runtime `?export`; 5 print/doc exports rebuilt; social template previews documented as internal |
+| D6 | Re-grade the warmer Ribbon key visual | `tools/siraj-warmth-match.py --strength 1.4`; warm environment 16.3 % → 2.5 %, yellow 1.6 % → 0 %; derivatives rebuilt |
+
+Full text in `BRAND_MASTER_ASSET_INDEX.md` (end) and `CHANGELOG.md`.

@@ -26,51 +26,15 @@ async function pdfSVG(svg, out, wmm, hmm) {
 async function lockup(kind, { letter, lumen, text }) {
   const H = L.BOX.h, W = L.BOX.w;
   let body = '', vw, vh;
-  if (kind === 'horizontal') {
-    const ar = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: H * 0.37 });
-    // Fit English line to the Arabic line's width with tracking.
-    const enSize = H * 0.165;
-    const en0 = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize });
-    const tracking = Math.max(0.12, Math.min(0.42, (ar.width - en0.width) / (22 * enSize)));
-    const en = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize, tracking });
-    const gap = H * 0.62, rule = H * 0.018;
-    const x0 = W + gap, tx = x0 + rule + gap;
-    const blockW = Math.max(ar.width, en.width);
-    const arBase = H * 0.40, enBase = H * 0.90;
-    body = L.group({ letter, lumen }) +
-      `<rect x="${x0.toFixed(2)}" y="0" width="${rule.toFixed(3)}" height="${H}" fill="${lumen}"/>` +
-      `<path transform="translate(${(tx + blockW - ar.width).toFixed(2)} ${arBase.toFixed(2)})" d="${ar.d}" fill="${text}"/>` +
-      `<path transform="translate(${(tx + blockW - en.width).toFixed(2)} ${enBase.toFixed(2)})" d="${en.d}" fill="${text}"/>`;
-    vw = tx + blockW; vh = H;
-  } else if (kind === 'stacked') {
-    const lineW = W * 0.86;
-    const enSize = H * 0.15;
-    const en0 = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize });
-    const en = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize, tracking: (lineW - en0.width) / (22 * enSize) });
-    const ar0 = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: 10 });
-    const arSize = Math.min(H * 0.42, 10 * (lineW * 0.82) / ar0.width);
-    const ar = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: arSize });
-    const ruleY = H * 1.42, arBase = H * 2.12, enBase = H * 2.58;
-    body = L.group({ letter, lumen }) +
-      `<rect x="${(W / 2 - H * 0.6).toFixed(2)}" y="${ruleY.toFixed(2)}" width="${(H * 1.2).toFixed(2)}" height="${(H * 0.018).toFixed(3)}" fill="${lumen}"/>` +
-      `<path transform="translate(${((W - ar.width) / 2).toFixed(2)} ${arBase.toFixed(2)})" d="${ar.d}" fill="${text}"/>` +
-      `<path transform="translate(${((W - en.width) / 2).toFixed(2)} ${enBase.toFixed(2)})" d="${en.d}" fill="${text}"/>`;
-    vw = W; vh = enBase + H * 0.02;
-  } else if (kind === 'descriptor') {
+  // Decision D1 (2026-10-15): the Horizontal, Stacked and Arabic-led lockups, which typeset «سراج للتطوير العقاري» in
+  // Tajawal, are withdrawn and archived (Withdrawn/Arabic-Name-Lockups). Only the Descriptor lockup is built.
+  if (kind === 'descriptor') {
     // Single-line descriptor under the wordmark: «REAL ESTATE DEVELOPMENT» only (English-only contexts).
     const enSize = H * 0.15;
     const en0 = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize });
     const en = await textPath('REAL ESTATE DEVELOPMENT', { font: 'jost-400', size: enSize, tracking: (W - en0.width) / (22 * enSize) });
     body = L.group({ letter, lumen }) + `<path transform="translate(${((W - en.width) / 2).toFixed(2)} ${(H * 1.62).toFixed(2)})" d="${en.d}" fill="${text}"/>`;
     vw = W; vh = H * 1.64;
-  } else if (kind === 'arabic') {
-    // Arabic-led lockup: Arabic name above the official wordmark (for Arabic-first communications).
-    const ar0 = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: 10 });
-    const arSize = 10 * W / ar0.width;
-    const ar = await textPath('سراج للتطوير العقاري', { font: 'tajawal-500', size: arSize });
-    const top = arSize * 1.25;
-    body = L.group({ x: 0, y: top + H * 0.55, letter, lumen }) + `<path transform="translate(0 ${(arSize * 1.02).toFixed(2)})" d="${ar.d}" fill="${text}"/>`;
-    vw = W; vh = top + H * 1.55;
   }
   const pad = L.BOX.h * 0.5;
   const VW = vw + 2 * pad, VH = vh + 2 * pad;
@@ -166,7 +130,7 @@ function construction() {
     'Mono-Black': { letter: '#020202', lumen: '#020202', text: '#020202' },
     'Mono-White': { letter: '#FFFFFF', lumen: '#FFFFFF', text: '#FFFFFF' },
   };
-  for (const kind of ['horizontal', 'stacked', 'descriptor', 'arabic']) {
+  for (const kind of ['descriptor']) {
     for (const [cn, c] of Object.entries(lockColors)) {
       const { svg, w, h } = await lockup(kind, c);
       const name = `SIRAJ_Lockup_${pascal(kind)}_${cn}_${V}`;

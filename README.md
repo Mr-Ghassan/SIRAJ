@@ -63,7 +63,7 @@ The hierarchy on every layout is **architecture first, information second, silk 
 | Folder | Contents |
 |---|---|
 | [`00-Brand-Foundation`](00-Brand-Foundation) | Strategy, design-language quick reference, `brand.config.json` (company and contact data used by every template) |
-| [`01-Logos`](01-Logos) | Original master files, SVG, PNG, PDF, light and dark backgrounds, monochrome, bilingual lockups, monogram, favicons, construction |
+| [`01-Logos`](01-Logos) | Original master files, SVG, PNG, PDF, light and dark backgrounds, monochrome, the Descriptor lockup, monogram, favicons, construction |
 | [`02-Colours`](02-Colours) | Palette specification, ASE (RGB and CMYK), GPL, CSV |
 | [`03-Typography`](03-Typography) | Jost and Tajawal fonts, `@font-face` CSS, type specimen |
 | [`04-Grids`](04-Grids) | 12 grid systems (web, presentation, social, editorial, outdoor) |

@@ -5,7 +5,7 @@ The definitive list of official SIRAJ identity assets and the canonical path of 
 with size, pixel dimensions and SHA-256 of every production file). Do not edit by hand.
 
 **Statuses** · **MASTER** canonical original · **SOURCE** editable / generating source · **PRODUCTION EXPORT** ready to use ·
-**PREVIEW** look only · **REFERENCE** art direction, never published · **REVIEW** approved in v1.0, decision pending ·
+**SPECIAL PRODUCTION** restricted use, only where a process technically needs it · **PREVIEW** look only · **REFERENCE** art direction, never published ·
 **ARCHIVE** not for production · **POSTPONED** cancelled until re-approved.
 
 Contact rules everywhere: phone **7771 4404** · Instagram icon + **SIRAJPROPERTIES** (never «@») · **WWW.SIRAJPROPERTIES.NET** where permitted.
@@ -15,7 +15,7 @@ Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمي
 
 | Family | Entries | Files |
 |---|---|---|
-| [Logos](#logos) | 29 | 203 |
+| [Logos](#logos) | 26 | 173 |
 | [Colours](#colours) | 6 | 8 |
 | [Typography](#typography) | 6 | 45 |
 | [Grids](#grids) | 3 | 27 |
@@ -27,7 +27,7 @@ Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمي
 | [Motion](#motion) | 14 | 139 |
 | [Guidelines](#guidelines) | 4 | 91 |
 | [Foundation](#foundation) | 3 | 7 |
-| [Archive](#archive) | 4 | 863 |
+| [Archive](#archive) | 5 | 895 |
 
 ## Logos
 
@@ -55,10 +55,7 @@ Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمي
 | **PRODUCTION EXPORT** | Favicon set · 7 files | `01-Logos/PNG/Favicon/SIRAJ_Favicon*` | png, svg | Web favicons 16–512 px + SVG. |
 | **PRODUCTION EXPORT** | Social avatars (official artboard 03) · 4 files | `01-Logos/Dark/SIRAJ_Social-Avatar_*` | png, svg | Profile pictures: wordmark at 57.2% width on G1. |
 | **PRODUCTION EXPORT** | Logo on approved backgrounds · 36 files | `01-Logos/Light/SIRAJ_Logo_On-*`<br>`01-Logos/Dark/SIRAJ_Logo_On-*` | png, svg | Ready compositions on Ivory, White, Linen, Sand (light) and Maroon, Deep, Shadow, Black, G1 (dark); landscape and square. |
-| **PRODUCTION EXPORT** | Lockup — Horizontal · 10 files | `01-Logos/Lockups/SIRAJ_Lockup_Horizontal_*` | pdf, png, svg | Letterheads, signage fascias **Decision D1.** |
-| **PRODUCTION EXPORT** | Lockup — Stacked · 10 files | `01-Logos/Lockups/SIRAJ_Lockup_Stacked_*` | pdf, png, svg | Covers, hoardings, end cards **Decision D1.** |
-| **PRODUCTION EXPORT** | Lockup — Arabic · 10 files | `01-Logos/Lockups/SIRAJ_Lockup_Arabic_*` | pdf, png, svg | Arabic-led: Arabic-first communication, government correspondence **Decision D1.** |
-| **PRODUCTION EXPORT** | Lockup — Descriptor · 10 files | `01-Logos/Lockups/SIRAJ_Lockup_Descriptor_*` | pdf, png, svg | Wordmark over «REAL ESTATE DEVELOPMENT» (English-only contexts) **Decision D1.** |
+| **PRODUCTION EXPORT** | Lockup — Descriptor · 10 files | `01-Logos/Lockups/SIRAJ_Lockup_Descriptor_*` | pdf, png, svg | Wordmark over «REAL ESTATE DEVELOPMENT» (English-only contexts). The only approved lockup. **Decision D1.** |
 | **PREVIEW** | Construction and clear-space diagram · 2 files | `01-Logos/Construction/*` | png, svg | Explains proportion (3.49 : 1), grid unit and clear space (½ H). |
 | **SOURCE** | Logo specification · 1 files | `01-Logos/README.md` | md | Anatomy, variants, clear space, minimum size, incorrect use. |
 | **SOURCE** | Logo build scripts · 4 files | `tools/build-logos.js`<br>`tools/build-logo-matrix.js`<br>`tools/lib/logo.js`<br>`tools/lib/logo-paths.json` | js, json | Regenerate every logo file from the master geometry (verified reproducible in v1.0.1). |
@@ -104,7 +101,7 @@ Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمي
 | **PRODUCTION EXPORT** | SIRAJ Portal (asymmetric silk arch) · 2 files | `05-Graphic-System/SVG/SIRAJ_Portal*.svg`<br>`05-Graphic-System/PNG/SIRAJ_Portal*.png` | png, svg | Vertical image openings for project reveals and entrances. |
 | **PRODUCTION EXPORT** | Architectural Cut · 2 files | `05-Graphic-System/SVG/SIRAJ_Architectural-Cut*.svg`<br>`05-Graphic-System/PNG/SIRAJ_Architectural-Cut*.png` | png, svg | Splits a plane or image at the Lumen angle. |
 | **PRODUCTION EXPORT** | Silk Fold (planar corner fold) · 2 files | `05-Graphic-System/SVG/SIRAJ_Silk-Fold*.svg`<br>`05-Graphic-System/PNG/SIRAJ_Silk-Fold*.png` | png, svg | Covers and section dividers. |
-| **REVIEW** | Silk Ribbon (vector, continuous + tonal) and Silk Wrap (vector) · 6 files | `05-Graphic-System/SVG/SIRAJ_Silk-Ribbon_Vector-*.svg`<br>`05-Graphic-System/SVG/SIRAJ_Silk-Wrap_Vector-*.svg`<br>`05-Graphic-System/PNG/SIRAJ_Silk-Ribbon_Vector-*.png`<br>`05-Graphic-System/PNG/SIRAJ_Silk-Wrap_Vector-*.png` | png, svg | Large-format / screen print / vinyl where a photograph cannot be reproduced. **Decision D2.** |
+| **SPECIAL PRODUCTION** | Silk Ribbon (vector, continuous + tonal) and Silk Wrap (vector) · 6 files | `05-Graphic-System/SVG/SIRAJ_Silk-Ribbon_Vector-*.svg`<br>`05-Graphic-System/SVG/SIRAJ_Silk-Wrap_Vector-*.svg`<br>`05-Graphic-System/PNG/SIRAJ_Silk-Ribbon_Vector-*.png`<br>`05-Graphic-System/PNG/SIRAJ_Silk-Wrap_Vector-*.png` | png, svg | RESTRICTED USE: vinyl cutting, embroidery, special printing, fabrication, plotter/cutting work that technically needs vectors. Never in place of real pressed silk in marketing visuals. **Decision D2.** |
 | **PRODUCTION EXPORT** | Masks (Portal, Silk Corner LTR/RTL) · 4 files | `05-Graphic-System/Masks/*.svg`<br>`05-Graphic-System/*.css` | css, svg | Clip paths for image frames (CSS + SVG). |
 | **SOURCE** | Graphic system specification + specimen · 3 files | `05-Graphic-System/README.md`<br>`05-Graphic-System/Previews/*`<br>`tools/build-graphics.js` | js, md, png | Origin, rule and file of every element. |
 
@@ -204,14 +201,15 @@ Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمي
 |---|---|---|---|---|
 | **POSTPONED** | «مشروع سراج» project lettering · 42 files | `99-Archive/Postponed/Project-Lettering/**/*` | json, md, mp4, png, py, svg, ttf, txt, webp | Never use until a new treatment is approved. **Decision D4.** |
 | **ARCHIVE** | Fictional demo kit, earlier UI kit, print waiting for legal data · 418 files | `99-Archive/Demo-Isolated/**/*` | css, html, js, json, md, pdf, png, pptx, py, svg | Not for production. **Decision D5.** |
+| **ARCHIVE** | Withdrawn Arabic-name lockups (Horizontal, Stacked, Arabic-led) · 32 files | `99-Archive/Withdrawn/Arabic-Name-Lockups/**/*` | pdf, png, svg | Never use. The registered Arabic name is legal/administrative text only. **Decision D1.** |
 | **ARCHIVE** | English-dormant outputs · 224 files | `99-Archive/English-Dormant/**/*` | html, md, mp4, pdf, png, pptx, svg | Arabic-only policy. |
 | **ARCHIVE** | Retired silk (CG, creased, washed, soft footage) · 179 files | `99-Archive/Silk-CG-v1.0/**/*`<br>`99-Archive/Silk-Creased-v1.0/**/*`<br>`99-Archive/Silk-Washed-v1.0/**/*`<br>`99-Archive/Silk-Footage-Soft-v1.0/**/*` | jpg, md, mp4, png, webm, webp | Never use. |
 
-## Decisions pending (owner)
+## Owner decisions (resolved 2026-10-15)
 
-- **D1** — Bilingual lockups typeset «سراج للتطوير العقاري» in Tajawal (approved guide v1.0, p.18). The 2026-10-13 rule says «سراج» is never typeset as a name in Tajawal. Confirm the lockups as approved (company name, not project name), or retire them.
-- **D2** — Vector silk (Silk Ribbon Vector/Tonal, Silk Wrap Vector) is shown in the approved guide v1.0, but the real-silk-only rule (2026-10-11) excludes graphic silk. Keep for screen print / vinyl / embroidery only, or archive.
-- **D3** — One dark-UI token differs between the two token sets: border-strong #8C6B64 (design-system/, Design System v1.0) vs #7A5A55 (09-Design-System/, platform exports). Confirm #8C6B64 and regenerate 09 exports, or document the difference as intentional.
-- **D4** — A new project-name treatment (the «مشروع سراج» lettering is postponed).
-- **D5** — Project data (prices, areas, unit counts, dates) and legal data (CR number, VATIN, address, bank details) for templates that show «—».
-- **D6** — Ribbon key visual: dusk sky and city lights measure warmer than the other key visuals (highlight hue ≈ 45° vs 22–29°). Visual review: keep, or regrade with tools/siraj-luxe-grade.py.
+- **D1** — Arabic-name lockups WITHDRAWN. Every lockup that typeset «سراج للتطوير العقاري» in Tajawal (Horizontal, Stacked, Arabic-led; all colours) is archived in 99-Archive/Withdrawn/Arabic-Name-Lockups. The official English artwork is the brand mark; the Descriptor lockup stays. The registered Arabic name appears only as normal legal/administrative text where required, never as a logo or substitute lockup.
+- **D2** — Vector silk KEPT as SPECIAL PRODUCTION / RESTRICTED USE: vinyl cutting, embroidery, special printing, fabrication, plotter/cutting workflows and other cases that technically require vectors. It never replaces the realistic pressed-maroon silk in normal marketing visuals.
+- **D3** — Dark border-strong = #8C6B64 in both token sets (09-Design-System tokens + platform exports regenerated). #7A5A55 had no consumer and no distinct role, so it was retired rather than kept as a third border level.
+- **D4** — Project name REMAINS POSTPONED. No project-name lettering is created, designed or restored.
+- **D5** — Missing legal/project data stays unresolved. «—» exists only in editable/internal templates; every publish-ready export hides an unresolved field (doc runtime ?export, social publish briefs) instead of showing a placeholder, dash or invented value.
+- **D6** — Ribbon key visual re-graded (colour only) to the family grade with tools/siraj-warmth-match.py --strength 1.4: warm environment 16.3 % → 2.5 %, yellow light 1.6 % → 0 %; composition unchanged; derived posts, stories, slide and carousel rebuilt.

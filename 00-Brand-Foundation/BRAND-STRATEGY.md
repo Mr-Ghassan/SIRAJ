@@ -20,7 +20,7 @@ Status: **Official · v1.0** · Owner: SIRAJ Management & Marketing · Last revi
   - the website, always written `WWW.SIRAJPROPERTIES.NET`, the Instagram handle `SIRAJPROPERTIES` (always with the Instagram icon, never «@»), email addresses and the phone number (`7771 4404`);
   - Western digits (0–9), which are the brand standard.
 - **Transactional and legal documents** keep their bilingual (EN-AR) format where business or regulation requires it: business card, quotation, tax invoice, payment receipt and contract cover. Arabic is always primary.
-- Use the **Arabic lockup** (`01-Logos/Lockups/SIRAJ_Lockup_Arabic_*`) wherever a descriptor is needed.
+- **No Arabic-name lockup** (decision D1, 2026-10-15): the official SIRAJ English artwork is the brand mark. The registered Arabic name «سراج للتطوير العقاري» appears only as normal legal or administrative text where required (letterhead footer, contracts, ID-card return address), never as a logo or a lockup. The withdrawn lockups are in `99-Archive/Withdrawn/Arabic-Name-Lockups/`.
 
 ## 1. The strategy in four lines
 

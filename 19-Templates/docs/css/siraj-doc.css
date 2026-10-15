@@ -89,9 +89,7 @@ bdi[dir="ltr"], .ltr { direction: ltr; unicode-bidi: isolate; }
 .lk--word img { width: var(--lw, var(--logo-w)); top: 0; inset-inline-start: 0; }
 [dir="rtl"] .lk--word img { right: 0; }
 .lk--desc { --vw: 126.27; --cw: 98.17; --ch: 46.11; }
-.lk--ar { --vw: 126.27; --cw: 98.17; --ch: 56.97; }
-.lk--hz { --vw: 256.98; --cw: 228.88; --ch: 28.12; }
-.lk--stack { --vw: 126.27; --cw: 98.17; --ch: 73.10; }
+/* .lk--ar / .lk--hz / .lk--stack retired with the Arabic-name lockups (decision D1, 2026-10-15). */
 
 /* -------------------------------------------------------------- header -- */
 .doc-head { position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: var(--gutter); min-height: 26mm; flex: none; }

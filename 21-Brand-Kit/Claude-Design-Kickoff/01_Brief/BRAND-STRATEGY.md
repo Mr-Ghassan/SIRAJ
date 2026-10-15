@@ -20,7 +20,7 @@ Status: **Official · v1.0** · Owner: SIRAJ Management & Marketing · Last revi
   - the website, always written `WWW.SIRAJPROPERTIES.NET`, the Instagram handle `SIRAJPROPERTIES` (always with the Instagram icon, never «@»), email addresses and the phone number (`7771 4404`);
   - Western digits (0–9), which are the brand standard.
 - **Transactional and legal documents** keep their bilingual (EN-AR) format where business or regulation requires it: business card, quotation, tax invoice, payment receipt and contract cover. Arabic is always primary.
-- Use the **Arabic lockup** (`01-Logos/Lockups/SIRAJ_Lockup_Arabic_*`) wherever a descriptor is needed.
+- **No Arabic-name lockup** (decision D1, 2026-10-15): the official SIRAJ English artwork is the brand mark. The registered Arabic name «سراج للتطوير العقاري» appears only as normal legal or administrative text where required (letterhead footer, contracts, ID-card return address), never as a logo or a lockup. The withdrawn lockups are in `99-Archive/Withdrawn/Arabic-Name-Lockups/`.
 
 ## 1. The strategy in four lines
 
@@ -134,7 +134,7 @@ The pillar icons are `location`, `floor-plan`, `view`, `investment` and `securit
 
 - **Masterbrand:** SIRAJ (the official wordmark), which stands for the developer, the standard and trust.
 - **Project brands:** *each project is treated as a brand of its own within the SIRAJ system.* A project receives a name, a story, a personality and a visual expression (photography, a project typographic mark, and optionally a project accent drawn from the SIRAJ palette).
-- **Mandatory link to the parent:** every project brand carries the **endorsement lockup «A SIRAJ development · من تطوير سراج»** (`14-Property-Marketing/00-Endorsement-Lockup/`). The SIRAJ wordmark appears on every project communication, at least on the closing frame or page.
+- **Mandatory link to the parent:** every project brand carries the **endorsement lockup «A SIRAJ development · من تطوير سراج»** (drafts archived with the demo kit in `99-Archive/Demo-Isolated/14-Property-Marketing/00-Endorsement-Lockup/`; no endorsement lockup is approved yet). The SIRAJ wordmark appears on every project communication, at least on the closing frame or page.
 - **What all projects share:** SIRAJ typography, the grid, the Lumen, silk as the reveal gesture, the SIRAJ Silk Grade, and the voice. *SIRAJ projects should not all look alike, but they should all feel like SIRAJ.*
 - **The Founding Project:** an **internal** term for the first project in Muscat. It is never used in public communication (client rule 2026-10-12): publicly the project is «سراج» with its city. The strategy lines (core statement, principle, model) are also internal and do not appear in posts or ads.
 - **Naming (recommended):** names from the world of light and craft, such as Noor (light), Qandeel (lantern), Mishkat (lamp niche) and Harir (silk). These make every project a chapter of the same story. The names used across this system are **demonstration names** until the real project names are confirmed.

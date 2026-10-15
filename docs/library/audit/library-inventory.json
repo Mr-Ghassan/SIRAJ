@@ -4,17 +4,17 @@
    "path": "00-Brand-Foundation/BRAND-STRATEGY.md",
    "family": "foundation",
    "ext": "md",
-   "bytes": 12201,
+   "bytes": 12695,
    "opened": true,
-   "sha256": "70c1f6d02a5b9921420e1b1b1d1676855f466fb6f9c4ed776fbd6a96dd78e87e"
+   "sha256": "8403dd2802cca2aed0ce35fb7d947e872a173a2d91ebfdaa9cb087d1e56a33c1"
   },
   {
    "path": "00-Brand-Foundation/DESIGN-LANGUAGE.md",
    "family": "foundation",
    "ext": "md",
-   "bytes": 8655,
+   "bytes": 9100,
    "opened": true,
-   "sha256": "1193818ac87fde8bc1cf429f4fa38bc6c85c19150f3ffa2df2b1e4a2ad5958c0"
+   "sha256": "9e6fb35046f4206827efc1f32edea2aebf25c1df34bc26c9a5a3cf84113f8998"
   },
   {
    "path": "00-Brand-Foundation/STRATEGIC-POSITIONING_AR.md",
@@ -44,9 +44,9 @@
    "path": "01-Logos/README.md",
    "family": "logos",
    "ext": "md",
-   "bytes": 4380,
+   "bytes": 4305,
    "opened": true,
-   "sha256": "5c0b2d24e90cbf27ee8cd0adfdfa5a46966342a9f57aea1282abb8c753b10f10"
+   "sha256": "7aed7c033513d9bed81eb783972dba33cfdda62f55ff1ed288265577741d5c76"
   },
   {
    "path": "01-Logos/Construction/SIRAJ_Logo_Construction_v1.0.png",
@@ -684,142 +684,6 @@
    "sha256": "9135102390c5a4f228267f8c2cc73553eac7e22072523f0d980d682532f4176b"
   },
   {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Mono-Black_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 81765,
-   "w": 2400,
-   "h": 1617,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "a0f914cace19c40f168affed21411dd5d3b9b3b0bdda3b339d66a7ee6e11a91b"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Mono-Black_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 9198,
-   "viewBox": "0 0 126.27 85.07",
-   "sprite": false,
-   "colours": [
-    "#020202"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "adf4c2747b8f1a1a2c1f8ec0eb8e3143eb1852097981b7d6a6e1974b9db53a30"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Mono-White_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 75339,
-   "w": 2400,
-   "h": 1617,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "ad3854b212aabb932d7ae5356d511bbeda363a6698bc227b526be24051590154"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Mono-White_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 9198,
-   "viewBox": "0 0 126.27 85.07",
-   "sprite": false,
-   "colours": [
-    "#FFFFFF"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "d5c1b54abbb566b142f37c0ecb17cc90baae13f7640128824be462db04dab14d"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.pdf",
-   "family": "logos",
-   "ext": "pdf",
-   "bytes": 6548,
-   "pages": 1,
-   "page_pts": [
-    454.08,
-    306.0
-   ],
-   "opened": true,
-   "sha256": "cd7e3094979458fbe754a202697bce05d2abac06bc74a8ffbe0d66d4a382341d"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 95058,
-   "w": 2400,
-   "h": 1617,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "011fbd503c27a9572dec42f1b659e78d59ee1507af10044ed739b314edf21a17"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 9198,
-   "viewBox": "0 0 126.27 85.07",
-   "sprite": false,
-   "colours": [
-    "#602733",
-    "#AA9180"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "667151735408a1da28a5a7d7bfb94a73c8db2267944dbc607c676984e53ad19c"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Reversed_v1.0.pdf",
-   "family": "logos",
-   "ext": "pdf",
-   "bytes": 6551,
-   "pages": 1,
-   "page_pts": [
-    454.08,
-    306.0
-   ],
-   "opened": true,
-   "sha256": "426ad537d525ceb80409a19ea08f4c39a9fac832f670ddc80278beb32be69f8f"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Reversed_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 95675,
-   "w": 2400,
-   "h": 1617,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "8bd124eb4c275f62b2738efae6ed92442b8c4bc03ce5365f39c47dfd15bde0ed"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Reversed_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 9198,
-   "viewBox": "0 0 126.27 85.07",
-   "sprite": false,
-   "colours": [
-    "#AA9180",
-    "#D6C0B2"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "cf7ae1dae998a0ebb623381b09818027a923d7363a321f6a6105209340d1326d"
-  },
-  {
    "path": "01-Logos/Lockups/SIRAJ_Lockup_Descriptor_Mono-Black_v1.0.png",
    "family": "logos",
    "ext": "png",
@@ -954,278 +818,6 @@
    "text_nodes": false,
    "opened": true,
    "sha256": "d4e69bd372bac491bd95b0508d301c244116f59e635ba6a5ec7758e69ea86a0c"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Mono-Black_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 36775,
-   "w": 2400,
-   "h": 525,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "7c39f1c74e3297378410a2dab994f7232d58ab81d21920c5296d5024dfa1e5c2"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Mono-Black_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 14836,
-   "viewBox": "0 0 256.98 56.22",
-   "sprite": false,
-   "colours": [
-    "#020202"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "3775c44f45e0c6e164916028f5a1840da2b1cceea689fecbc23edcf181fb763c"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Mono-White_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 33817,
-   "w": 2400,
-   "h": 525,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "7ab2cdd9a9c07d8276b6dda7771973236a017673e77fb5a7ff212da3fd89a950"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Mono-White_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 14836,
-   "viewBox": "0 0 256.98 56.22",
-   "sprite": false,
-   "colours": [
-    "#FFFFFF"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "eec5bf9a5e7ec5320d6b5d47a093668b632916248415b3123d4f3c34f9938a4e"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Primary_v1.0.pdf",
-   "family": "logos",
-   "ext": "pdf",
-   "bytes": 9487,
-   "pages": 1,
-   "page_pts": [
-    454.08,
-    98.88
-   ],
-   "opened": true,
-   "sha256": "8a52ffbf00ac1122f889610842f9b983bc868126992a639a8413037f10d862bc"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Primary_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 41646,
-   "w": 2400,
-   "h": 525,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "7b23762d1a29681815a32bd2ac58ac0a686d9cdfac4606c63c3f5783529eadaf"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Primary_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 14836,
-   "viewBox": "0 0 256.98 56.22",
-   "sprite": false,
-   "colours": [
-    "#602733",
-    "#AA9180"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "3335238e24fdccae5f554dc91794741b4ded5fb6d87bbe01bd0436eee4a768af"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Reversed_v1.0.pdf",
-   "family": "logos",
-   "ext": "pdf",
-   "bytes": 9490,
-   "pages": 1,
-   "page_pts": [
-    454.08,
-    98.88
-   ],
-   "opened": true,
-   "sha256": "6a4095842000d4eb0f07923b8ea24885bdbf9fcdc9690ccdca8568c8b28983d2"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Reversed_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 42099,
-   "w": 2400,
-   "h": 525,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "0d2db8e218b95076071760ba4075eda8d47509948165ebb7399c66c4272743c4"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Horizontal_Reversed_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 14836,
-   "viewBox": "0 0 256.98 56.22",
-   "sprite": false,
-   "colours": [
-    "#AA9180",
-    "#D6C0B2"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "ef3ce9b7615a196a435ce78af00b81cbab01576e51907988b6a2b7714322550b"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Mono-Black_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 90488,
-   "w": 2400,
-   "h": 1923,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "d20dc4d712f78c88bd111b12f5b7489b95905c70f2d743f67f674a2b18d8e5fd"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Mono-Black_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 14814,
-   "viewBox": "0 0 126.27 101.20",
-   "sprite": false,
-   "colours": [
-    "#020202"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "2dc98fe7dbc45d2742d408438972afd5dc269b4f8104f1c1b3117657bf0e7b99"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Mono-White_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 83542,
-   "w": 2400,
-   "h": 1923,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "e65b3e639bfb9f466523f2b7dc16e94c98cd2d66408c4e63036996e2660fde16"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Mono-White_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 14814,
-   "viewBox": "0 0 126.27 101.20",
-   "sprite": false,
-   "colours": [
-    "#FFFFFF"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "f9ba482d3a43e522d6e31144719f99a588e605092a4c84be0e28121036a918cc"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Primary_v1.0.pdf",
-   "family": "logos",
-   "ext": "pdf",
-   "bytes": 9350,
-   "pages": 1,
-   "page_pts": [
-    454.08,
-    363.12
-   ],
-   "opened": true,
-   "sha256": "52aaeb516918136ebd0cc1fda138e0bf975f266395f03e381814804a44bec8a9"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Primary_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 104979,
-   "w": 2400,
-   "h": 1923,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "636089cf063bd41781b016069cfbfad7f72b90fb0448c12f70d74d4cade0d0b8"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Primary_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 14814,
-   "viewBox": "0 0 126.27 101.20",
-   "sprite": false,
-   "colours": [
-    "#602733",
-    "#AA9180"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "bf8aa1b647078a61d9a7f38a35d0d32b6a1ae61bb96fad49a4f4e5acb7c3f35b"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Reversed_v1.0.pdf",
-   "family": "logos",
-   "ext": "pdf",
-   "bytes": 9353,
-   "pages": 1,
-   "page_pts": [
-    454.08,
-    363.12
-   ],
-   "opened": true,
-   "sha256": "72f52671ec80fe6d0025ab41ab750a1f089689e643cfac3112c653518e477b73"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Reversed_v1.0.png",
-   "family": "logos",
-   "ext": "png",
-   "bytes": 105889,
-   "w": 2400,
-   "h": 1923,
-   "mode": "RGBA",
-   "alpha": true,
-   "opened": true,
-   "sha256": "25fe6b07c13826a259a006ae0322cc75bb8a21a7e93e82e117ddac9b666acc16"
-  },
-  {
-   "path": "01-Logos/Lockups/SIRAJ_Lockup_Stacked_Reversed_v1.0.svg",
-   "family": "logos",
-   "ext": "svg",
-   "bytes": 14814,
-   "viewBox": "0 0 126.27 101.20",
-   "sprite": false,
-   "colours": [
-    "#AA9180",
-    "#D6C0B2"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "c27ff3e364226599da0ef318eee4810808933289a7ff486afe79d63ec84bf2cd"
   },
   {
    "path": "01-Logos/Master/SIRAJ_Logo_Master-Reversed_v1.0.svg",
@@ -1580,6 +1172,58 @@
    ],
    "opened": true,
    "sha256": "06ca2ce61d819ffe1d3f0217ced4c8f5a7fc8e291e1269803c3bf5bab5c108b3"
+  },
+  {
+   "path": "01-Logos/PDF/SIRAJ_Monogram-S_Ivory-on-Maroon_v1.0.pdf",
+   "family": "logos",
+   "ext": "pdf",
+   "bytes": 1397,
+   "pages": 1,
+   "page_pts": [
+    113.04,
+    113.04
+   ],
+   "opened": true,
+   "sha256": "94117ab52f806b00c878bed8ed1887bb43428b15175a095c6e8a30a63e3cea14"
+  },
+  {
+   "path": "01-Logos/PDF/SIRAJ_Monogram-S_Maroon-Transparent_v1.0.pdf",
+   "family": "logos",
+   "ext": "pdf",
+   "bytes": 1356,
+   "pages": 1,
+   "page_pts": [
+    113.04,
+    113.04
+   ],
+   "opened": true,
+   "sha256": "935647e1c4e5e459e9dfe93e3ceee9f38e2905b9320ce42f49ff958c718d534c"
+  },
+  {
+   "path": "01-Logos/PDF/SIRAJ_Monogram-S_Maroon-on-Ivory_v1.0.pdf",
+   "family": "logos",
+   "ext": "pdf",
+   "bytes": 1398,
+   "pages": 1,
+   "page_pts": [
+    113.04,
+    113.04
+   ],
+   "opened": true,
+   "sha256": "540b0b0d236b2f8e4ab9365367100e83823df04ab1b2e54d8e61d8f2ced1f091"
+  },
+  {
+   "path": "01-Logos/PDF/SIRAJ_Monogram-S_Sand-on-G1_v1.0.pdf",
+   "family": "logos",
+   "ext": "pdf",
+   "bytes": 1742,
+   "pages": 1,
+   "page_pts": [
+    113.04,
+    113.04
+   ],
+   "opened": true,
+   "sha256": "ecbf388d391e6fddd34007bdc0e22d22d70bea306058ff5f106108ab294264cf"
   },
   {
    "path": "01-Logos/PNG/SIRAJ_Logo_Deep_v1.0_1024px.png",
@@ -2134,6 +1778,42 @@
    "sha256": "b277f3af23fbf6ddc22e9ce9d718bf66f043d459e4f62a84694bec3a4c06ca7a"
   },
   {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Ivory-on-Maroon_2048px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 51521,
+   "w": 2048,
+   "h": 2048,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "b25a737d28ea56cccb1931537d2406e19daf49d2ed22a43a73704178970ebce7"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Ivory-on-Maroon_4096px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 122867,
+   "w": 4096,
+   "h": 4096,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "5f2f59fd5531a646af3cbc95802ffb0391c2ae00d55dfe38b075e1bf7b7b42c0"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Ivory-on-Maroon_512px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 4967,
+   "w": 512,
+   "h": 512,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "526b0c823a2e40961c27c6bc2a338469e1c9e30e23a6767fd868f64ef35cd292"
+  },
+  {
    "path": "01-Logos/PNG/SIRAJ_Monogram-S_Maroon-Transparent_1024px.png",
    "family": "logos",
    "ext": "png",
@@ -2144,6 +1824,42 @@
    "alpha": true,
    "opened": true,
    "sha256": "d2acfcdc4ccc4da12d47cfaab7cce31c373818e84d0b65247cd8439ce04e109a"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Maroon-Transparent_2048px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 55692,
+   "w": 2048,
+   "h": 2048,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "74f8c2e47107ec5e8a93f0503f00b75882e1ee5da7000b0016f43b8d7d488ae7"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Maroon-Transparent_4096px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 138821,
+   "w": 4096,
+   "h": 4096,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "ac97ecbb70bc7f933a392b70d9c62c51a1292fa2c305569ffcc6e0268080049d"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Maroon-Transparent_512px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 5273,
+   "w": 512,
+   "h": 512,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "2c5a146f592238d997211f5192013a32e6540e0be3760a2d582b7e9011faa269"
   },
   {
    "path": "01-Logos/PNG/SIRAJ_Monogram-S_Maroon-on-Ivory_1024px.png",
@@ -2158,6 +1874,42 @@
    "sha256": "2f1e5201fcebe44977dc02cc916b394c50c4b0320955c1345a02e9ed67d35965"
   },
   {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Maroon-on-Ivory_2048px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 48902,
+   "w": 2048,
+   "h": 2048,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "1f67eb8558eed807a1dc4dd5b80e7cf047b922c500c785af2575d8ac494e2dba"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Maroon-on-Ivory_4096px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 117696,
+   "w": 4096,
+   "h": 4096,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "1a39db223c08534e44e96da19b01a9c19dfb15273e0587adca59d72052b4db57"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Maroon-on-Ivory_512px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 4805,
+   "w": 512,
+   "h": 512,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "271ddaf7dd92cc65c94300857afc5f0dd249f97e5cf9805754667f9b38b93141"
+  },
+  {
    "path": "01-Logos/PNG/SIRAJ_Monogram-S_Sand-on-G1_1024px.png",
    "family": "logos",
    "ext": "png",
@@ -2168,6 +1920,42 @@
    "alpha": false,
    "opened": true,
    "sha256": "5e51e5b3de9d964bdaf7d31325bce3010c20fa2a464d092595729f91689e9940"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Sand-on-G1_2048px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 680008,
+   "w": 2048,
+   "h": 2048,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "282c158616bd2c99875a6734fe5f6369c4e913bff6321c8a98e0f63fb4758563"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Sand-on-G1_4096px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 1860213,
+   "w": 4096,
+   "h": 4096,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "435134e098c6a7fb54a204e424acb474046e357a8d86de470de191ebe4f836bc"
+  },
+  {
+   "path": "01-Logos/PNG/SIRAJ_Monogram-S_Sand-on-G1_512px.png",
+   "family": "logos",
+   "ext": "png",
+   "bytes": 72090,
+   "w": 512,
+   "h": 512,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "f9f996edf5735b6aa2b1c94fda1d6ac73b9908497e1add159cc44b780e82341d"
   },
   {
    "path": "01-Logos/PNG/Favicon/SIRAJ_Favicon.svg",
@@ -2635,6 +2423,14 @@
    "sha256": "a4d93c1d66bb7c78350238b409918cf5dce0a0f561cfd3a41c6beb022bc75ca4"
   },
   {
+   "path": "02-Colours/SIRAJ_Colours_v1.0.css",
+   "family": "colours",
+   "ext": "css",
+   "bytes": 2268,
+   "opened": null,
+   "sha256": "089c72b1149ec84c9ae82a618391e147f49644b526fe3bc04256d8fbe9cfaadb"
+  },
+  {
    "path": "02-Colours/SIRAJ_Colours_v1.0.csv",
    "family": "colours",
    "ext": "csv",
@@ -2654,9 +2450,17 @@
    "path": "03-Typography/README.md",
    "family": "typography",
    "ext": "md",
-   "bytes": 3789,
+   "bytes": 6326,
    "opened": true,
-   "sha256": "8130910ce3490f17bd584fc73c33fd61782637910c9980d9b757d4118dc356f6"
+   "sha256": "07f3a76699f632e5fd410ddc6173b1493f69a4d9df0564c59eb8117e26aef5f5"
+  },
+  {
+   "path": "03-Typography/siraj-fonts-woff2.css",
+   "family": "typography",
+   "ext": "css",
+   "bytes": 5239,
+   "opened": null,
+   "sha256": "289829ab5c411b58be06c00f567ca69aa3e7fbd7d5263bbc681a44eb69518278"
   },
   {
    "path": "03-Typography/siraj-fonts.css",
@@ -2782,9 +2586,9 @@
    "path": "03-Typography/fonts/Tajawal/OFL.txt",
    "family": "typography",
    "ext": "txt",
-   "bytes": 4314,
+   "bytes": 4464,
    "opened": true,
-   "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3"
+   "sha256": "9b584984f9db0ee30347391a76eff9c0a6b03dc450c3c6afe3757a2cb3a4db87"
   },
   {
    "path": "03-Typography/fonts/Tajawal/Tajawal-Black.ttf",
@@ -2876,6 +2680,217 @@
    "licence_in_font": "",
    "opened": true,
    "sha256": "ce4e98e477f2a36cc7a28bee546f736d67090afaa32073ceef1b7b4cdd076f21"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/Jost-Bold.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 19508,
+   "font_family": "Jost",
+   "style": "Bold",
+   "weight": 700,
+   "glyphs": 525,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "8b9567a0b5a97d1f1d0e9c49cf5ec7022d28841a05c8867d6777eddb072c3368"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/Jost-ExtraLight.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 18644,
+   "font_family": "Jost",
+   "style": "ExtraLight",
+   "weight": 250,
+   "glyphs": 525,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "8bd5163bf7e771769d393c7175f5486c7743ddebee4dbb446e5acb8476077bfa"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/Jost-Light.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 18108,
+   "font_family": "Jost",
+   "style": "Light",
+   "weight": 300,
+   "glyphs": 525,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "5db4208083e516eff725e65009df1fb749c2535034f0b2e2d0b5fea66b8d3389"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/Jost-LightItalic.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 22164,
+   "font_family": "Jost",
+   "style": "Light Italic",
+   "weight": 300,
+   "glyphs": 525,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "c3231044d2e73864e804d23dc1573a4078416232f7041927f3e68177e9be3c25"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/Jost-Medium.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 19364,
+   "font_family": "Jost",
+   "style": "Medium",
+   "weight": 500,
+   "glyphs": 525,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "42e81a42fb0836d6d390ae1294ecc0effae36e2a2e28e607c65fcc5d44024b8b"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/Jost-Regular.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 17280,
+   "font_family": "Jost",
+   "style": "Regular",
+   "weight": 400,
+   "glyphs": 525,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "536ef8d2e850e14889ee46274ef3107b49853f87cdf65d6145ec8fd66dc07da0"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/Jost-RegularItalic.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 21264,
+   "font_family": "Jost",
+   "style": "Italic",
+   "weight": 400,
+   "glyphs": 525,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "ea2b7c968de591feb18796858877d3aa5f15d799ffaec74b968d9923adebe88a"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/Jost-SemiBold.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 19432,
+   "font_family": "Jost",
+   "style": "SemiBold",
+   "weight": 600,
+   "glyphs": 525,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "42a4ca6c5ba31363705a9145419d27a3fd2115eb36f2c4e4f7ba8634bc14fb32"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Jost/OFL.txt",
+   "family": "typography",
+   "ext": "txt",
+   "bytes": 4497,
+   "opened": true,
+   "sha256": "536533cad95838e13777663c4109b802aa662ef1ef285337f0c7f51d35682fdc"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Tajawal/OFL.txt",
+   "family": "typography",
+   "ext": "txt",
+   "bytes": 4464,
+   "opened": true,
+   "sha256": "9b584984f9db0ee30347391a76eff9c0a6b03dc450c3c6afe3757a2cb3a4db87"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Tajawal/Tajawal-Black.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 19724,
+   "font_family": "Tajawal Black",
+   "style": "Regular",
+   "weight": 900,
+   "glyphs": 448,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "d71790bca995c570fd6a251a56982f06eb530d3811f98fd118bcb0d8c87181c7"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Tajawal/Tajawal-Bold.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 20032,
+   "font_family": "Tajawal",
+   "style": "Bold",
+   "weight": 700,
+   "glyphs": 457,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "f8249dc63108aa6090480c9a02c4e22e314a19d804065130510e5b39da7e21f0"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Tajawal/Tajawal-ExtraBold.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 20884,
+   "font_family": "Tajawal ExtraBold",
+   "style": "Regular",
+   "weight": 800,
+   "glyphs": 448,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "183bebd69bf88d4f8d5980a3ba7bebcdee1205e0e507d7697a69f146ecc6e176"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Tajawal/Tajawal-ExtraLight.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 19636,
+   "font_family": "Tajawal ExtraLight",
+   "style": "Regular",
+   "weight": 275,
+   "glyphs": 447,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "bd22315d8a1b6b7cffb9c80cea4397c6d513af19995631b4fee0c6d3176e327f"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Tajawal/Tajawal-Light.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 19184,
+   "font_family": "Tajawal Light",
+   "style": "Regular",
+   "weight": 300,
+   "glyphs": 456,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "852d838661ba464578451b5da28206947f8716ca9264009df663a62d374ce5a0"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Tajawal/Tajawal-Medium.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 19668,
+   "font_family": "Tajawal Medium",
+   "style": "Regular",
+   "weight": 500,
+   "glyphs": 457,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "ce3eeadeb841cc3c163e335f0848cb0485e9bd0ab1275bf2eb568783b421cb1d"
+  },
+  {
+   "path": "03-Typography/fonts/WOFF2/Tajawal/Tajawal-Regular.woff2",
+   "family": "typography",
+   "ext": "woff2",
+   "bytes": 19888,
+   "font_family": "Tajawal",
+   "style": "Regular",
+   "weight": 400,
+   "glyphs": 448,
+   "licence_in_font": "",
+   "opened": true,
+   "sha256": "dc0ca7982e78f4f91bdd47fcc1f7cb38a79693116bea18fa3c290eab2d09d5d1"
   },
   {
    "path": "03-Typography/specimen/SIRAJ_Typography-Specimen_p01_v1.0.png",
@@ -3356,9 +3371,9 @@
    "path": "05-Graphic-System/README.md",
    "family": "graphic-system",
    "ext": "md",
-   "bytes": 2596,
+   "bytes": 3137,
    "opened": true,
-   "sha256": "a0e08888bc69ff396c8f31308bf63ca317c470fb19933e32c3fb84f58585b0f5"
+   "sha256": "4ed2462a64a5824e4df7067086e3d6fef7f1e2ba4d139cb68ae12eab47a60408"
   },
   {
    "path": "05-Graphic-System/siraj-graphics.css",
@@ -3603,13 +3618,13 @@
    "path": "05-Graphic-System/Previews/SIRAJ_Graphic-System_Specimen_v1.0.png",
    "family": "graphic-system",
    "ext": "png",
-   "bytes": 1391367,
+   "bytes": 1393555,
    "w": 2400,
-   "h": 2531,
+   "h": 2555,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "706f60cef48970b0d3ad8c53972957537e4b387d0d2b9bedb128c6df9b30328b"
+   "sha256": "d46c3540f493b77c4d23d1b50abe237ab444a0c3d94ca4ddf507161d9a82c0c1"
   },
   {
    "path": "05-Graphic-System/SVG/SIRAJ_Architectural-Cut_v1.0.svg",
@@ -5188,7 +5203,7 @@
    "ext": "md",
    "bytes": 26171,
    "opened": true,
-   "sha256": "a23459e66f3e9218474a4781c69ce245d323baa1c6bcc83e3a0887c9119a913c"
+   "sha256": "3b77d1079ac76eac4d3611c022854e533628af009f3ebf7bd907aca482e06766"
   },
   {
    "path": "07-Icon-System/siraj-icons.json",
@@ -7797,9 +7812,9 @@
    "path": "09-Design-System/README.md",
    "family": "design-tokens",
    "ext": "md",
-   "bytes": 1419,
+   "bytes": 2097,
    "opened": true,
-   "sha256": "ed645cd11d60f9184d584851fb6e490af902df527d38b763ea78cb808d774a04"
+   "sha256": "3880e5bccf04002669f9cc66119eac17913ae8d2381f4668c50fcbbe3ea765b9"
   },
   {
    "path": "09-Design-System/css/siraj.css",
@@ -7813,9 +7828,9 @@
    "path": "09-Design-System/tokens/siraj.tokens.json",
    "family": "design-tokens",
    "ext": "json",
-   "bytes": 20485,
+   "bytes": 20673,
    "opened": true,
-   "sha256": "8f0908e7deb390c7ef914bcc66632ffcdbd2f092476a4532991f02dd903aac59"
+   "sha256": "3188d864b331fd139c1f7277fcccdc39018927fbdc8fa8196b0eca38ce80b4fd"
   },
   {
    "path": "09-Design-System/tokens/build/SirajTokens.kt",
@@ -7839,7 +7854,7 @@
    "ext": "scss",
    "bytes": 6173,
    "opened": null,
-   "sha256": "5d467e0dc80a81b974b160490dca881e2af92f354c04ec3012427d9f4a0b3795"
+   "sha256": "86ad1dc533a0206a95d5862bc7a2ce874f73c218b9dd6e11fd86cdf7d12130be"
   },
   {
    "path": "09-Design-System/tokens/build/siraj-tokens.cjs",
@@ -7847,7 +7862,7 @@
    "ext": "cjs",
    "bytes": 11563,
    "opened": null,
-   "sha256": "b444dbb9028f689dff0ecd3b613b1b60d256fec9b04c0d3041854b368cf24a35"
+   "sha256": "1f0804b4b27d4b167e87ad52ce5610aa75a9f8ae214e5445942749a6cc2e0d90"
   },
   {
    "path": "09-Design-System/tokens/build/siraj-tokens.css",
@@ -7855,7 +7870,7 @@
    "ext": "css",
    "bytes": 10833,
    "opened": null,
-   "sha256": "0fa5f13232540283485410db18d6a52477e702eecdc1ee8d0f2572eb8b5b1a04"
+   "sha256": "65cdf8dbbbe6f540b79e8754775972eb638a29b9b0d8820d04e091dd2652a198"
   },
   {
    "path": "09-Design-System/tokens/build/siraj-tokens.d.ts",
@@ -7871,7 +7886,7 @@
    "ext": "json",
    "bytes": 9706,
    "opened": true,
-   "sha256": "a4a8dd8a7c3981f0de0429e06d30a246b2aaf8fedba74cb2054313033cdfdf81"
+   "sha256": "b8d22abb273e7ceebddb4dc012ab15a951dc8d7ac5fcc18b34ea9517d3af2397"
   },
   {
    "path": "09-Design-System/tokens/build/siraj-tokens.json",
@@ -7879,7 +7894,7 @@
    "ext": "json",
    "bytes": 11453,
    "opened": true,
-   "sha256": "1a3e55e40f97a2b5418ca3437da13af7338a1d18d107661897d8256e11d927d3"
+   "sha256": "6363b0377deba3b2e20f351f5572a7718b299a16d132ae6489cc6fe23e517c51"
   },
   {
    "path": "09-Design-System/tokens/build/siraj-tokens.mjs",
@@ -7887,7 +7902,7 @@
    "ext": "mjs",
    "bytes": 11589,
    "opened": null,
-   "sha256": "4ce039dc983c39a106c9cd42d8681b5ab7c8c85117fed8d528821e2d0f48066e"
+   "sha256": "2fb68070e367baed148b31a0dd88bbceb15f1cd5a8df89938f2a1f407cea4d9f"
   },
   {
    "path": "09-Design-System/tokens/build/tailwind.preset.cjs",
@@ -8017,13 +8032,13 @@
    "path": "design-system/assets/img/siraj-kv-ribbon.jpg",
    "family": "design-system",
    "ext": "jpg",
-   "bytes": 194677,
+   "bytes": 240809,
    "w": 1200,
    "h": 1490,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "32f8058b0523a91fb33c14ef4a44cc29bf20cccde93e6510542b65a4a477f880"
+   "sha256": "0f355d9383285c4987d1cd6381b96ca4a65c639a727d29c673d6e1d5ab4e1df1"
   },
   {
    "path": "design-system/assets/img/siraj-kv-veil.jpg",
@@ -8149,13 +8164,13 @@
    "path": "design-system/assets/img/thumb-siraj-kv-ribbon.jpg",
    "family": "design-system",
    "ext": "jpg",
-   "bytes": 27248,
+   "bytes": 34621,
    "w": 360,
    "h": 447,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "5875f69e61892bc034d4c2b1416b06b3346c2dfdfa26f887a1a5094c5cec4cba"
+   "sha256": "450d45ed13422c2209f5bc91e5fcd950faa330c9895a142c42a1156d85d430f2"
   },
   {
    "path": "design-system/assets/img/thumb-siraj-kv-veil.jpg",
@@ -9946,9 +9961,9 @@
    "path": "16-Intro/README.md",
    "family": "intro",
    "ext": "md",
-   "bytes": 2022,
+   "bytes": 2031,
    "opened": true,
-   "sha256": "e62dab981dec4d4c5f3d9c92c3da523b2aeaca8f651fc99eb63bcad4ed41f138"
+   "sha256": "1ae867861bcc1feba02df3580e299a4be9a91c7149dae50744522f7ecacdf0ed"
   },
   {
    "path": "16-Intro/Exports/SIRAJ_Intro_16x9_1920x1080_Sound_v1.0.mp4",
@@ -10044,9 +10059,9 @@
    "path": "16-Intro/source/siraj-intro.html",
    "family": "intro",
    "ext": "html",
-   "bytes": 10852,
+   "bytes": 10843,
    "opened": null,
-   "sha256": "0f1b2381dbcb9c6cb3b60895ab44e5ccc264c281921f55599dccb34e4faa0b50"
+   "sha256": "d3e16a41e633dad246630715490d51e0bf2445e797c42ff1aa2861c7ca12feb6"
   },
   {
    "path": "17-Outro/README.md",
@@ -10163,29 +10178,37 @@
    "sha256": "9bd356ea6fa94ed313445f57749ed5d02eba62fbaf8885601bd945336d7e813d"
   },
   {
-   "path": "20-Brand-Guidelines/SIRAJ_Brand-Guidelines_Contact-Sheet_v1.0.jpg",
+   "path": "20-Brand-Guidelines/README.md",
+   "family": "guidelines",
+   "ext": "md",
+   "bytes": 6130,
+   "opened": true,
+   "sha256": "992044d18a4a926a51fcfeb370c4ce119fdcf00255abb83336fff11351b41502"
+  },
+  {
+   "path": "20-Brand-Guidelines/SIRAJ_Brand-Guidelines_Contact-Sheet_v1.0.1.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 2065460,
+   "bytes": 2065988,
    "w": 3904,
    "h": 3058,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "e445744d3aa67c026f045f59fb58192b681c851e36a426bd78b7dd011e4f6d71"
+   "sha256": "ebfc37107ba2e4e0597815545e503409d0a4115a1b904f3a1ddea0405198d323"
   },
   {
-   "path": "20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.pdf",
+   "path": "20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.1.pdf",
    "family": "guidelines",
    "ext": "pdf",
-   "bytes": 19011315,
+   "bytes": 19045964,
    "pages": 82,
    "page_pts": [
     1440.0,
     810.0
    ],
    "opened": true,
-   "sha256": "07db0671ca6c78110818f77a6d7200fa7609bb5bb86d7edc9a8a3cb5b6b178b6"
+   "sha256": "3f2cdd38ccaf4ca159092fd5fc020a4fb7cddadcfe4b5bf73cbfcd86e68cc0f8"
   },
   {
    "path": "20-Brand-Guidelines/assets/intro-strip-v.png",
@@ -10227,133 +10250,133 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p02.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 67442,
+   "bytes": 67889,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "e18356600fe87cf30dd2049b835e627d680fbcd861315c0d4cfa422f856f497c"
+   "sha256": "9bad4a5be8f5045c286a0c6f800c114eb28226bf28e2f0584fe3eaf0579ca061"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p03.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 87342,
+   "bytes": 87336,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "e572aa66d1dd08780794f308ba9f824fb301ac87793f1f6bd3d78a05ec9e55bf"
+   "sha256": "accda70e82b1a66682aab2d4814cbf972e20d1bf81a5b012a412980062a47fcf"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p04.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 111854,
+   "bytes": 111918,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "09e216985e320b43a93c165598003dbf616884f3bef165a870c66e685370aed0"
+   "sha256": "adfe3aaf13cb6938cca11ed1195365065d7ef0c01015c1bbf305966044c1ef85"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p05.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 141852,
+   "bytes": 141932,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "388c200327a4fdba5e83dbaa07817922eb53ffe77e6f09bf557e21b58a5744e1"
+   "sha256": "4cd726040a3ac6371938a646bad9701c5bc4a85b6b00caf8c4ce3f13bfad4305"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p06.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 58766,
+   "bytes": 58805,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "8bce3c1be7593e74a44fc574843561b647994bcf6cd8d37a8704f99b5358ab66"
+   "sha256": "5ad881ae643b7e4e7256cbec9f8673ac9eb63de828ee4e04340dc5ca91a57da0"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p07.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 65982,
+   "bytes": 66060,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "0b2dfbc2707137747807df142ec70ee95910857d1d7bef7757751f27bf632736"
+   "sha256": "8a6a3789deb57a422eee9b9ed4e297d617be8383634a0d0e453657155af661c6"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p08.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 99533,
+   "bytes": 99530,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "2d57f556157cbdf6ad6db2c393e30c176fc745f1c32a29f8e655b435f33ac927"
+   "sha256": "ce73ecb528a0029048a9708498a8bb9aaf9d3c40ad6e1f5b84f640cde730d177"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p09.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 60709,
+   "bytes": 59131,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "4720859051de6e28ba8f3114c3a87186dcde4e2c2e1db192480692fc44c8796b"
+   "sha256": "d4629eb9df7e9a8021cb06d4e7a5af363ec39e442a050f64573cd83ee9155255"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p10.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 94830,
+   "bytes": 91037,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "edc53779ec3bb93317254277c159fe6c6c615f64eb49de0baeb21cb0e8463727"
+   "sha256": "5efbd1145e296bbffc357863f3445cb6b303ce21686475a9ac870d4aedd9c1d9"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p11.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 50860,
+   "bytes": 50822,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "c73348a1e7a6baefcf6866aeaf4aa63d8b6fec58f3ad908f8a617f954cc0ddb5"
+   "sha256": "ed4580afcb7e4c0fceab5025e2654b93e5d078e2ec2b4fec201dcc038a2c47f0"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p12.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 64248,
+   "bytes": 64334,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "27cf1165e2d33ab487e7c22861523f42712a310109ba327f0f78f31b6f5b9284"
+   "sha256": "3326e2820da79ce83e7e55c6f9f02c6504e13005bab693adf589910e65c42b94"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p13.jpg",
@@ -10371,85 +10394,85 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p14.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 39039,
+   "bytes": 39069,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "d20f0e9d4bf5f6052b5af2a4cf4063d53d9f35fbf952a2827f70b4131d510208"
+   "sha256": "95109bb8882acb06e5b8e16c8c2a49e166c633b347d2288ec7595479005b9242"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p15.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 50878,
+   "bytes": 50911,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "ce8f2297de2985b0a71faa6722359dae57c509bf866d032017e509d2109e73c9"
+   "sha256": "aeb125bc9476d86fddbd24222e028a613118ed26075ce163a23989b9d2568ada"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p16.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 49771,
+   "bytes": 49824,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "0f73236589d7cd284f0cfea344a383d3dedea8bb826713f034056281b3237f69"
+   "sha256": "8fbab6b99af3efa7f25ba695e004072356a98cebc1c8e9d3fd4f8977509964a0"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p17.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 62834,
+   "bytes": 62896,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "deb9a30bfc18cd5ef6b47d88d22cd23b9d16d11e18f8281b2c350f4a20ed43d0"
+   "sha256": "3c0d0aff6c0d9fcae6fc8e6a4ba64765c02c15cf3f5f7e5204aa2a619beab799"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p18.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 48397,
+   "bytes": 59732,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "49f3d1c0a911e7e1383dc1845f9c60f8e33cd84bfc800753bc0a75391bb186a9"
+   "sha256": "d17ab70cee86dc384bf16cd18c0607155e8dd2ac7cf66338d7ebd2bb6ab80d7c"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p19.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 32254,
+   "bytes": 32283,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "7e6021d14798f684953fd0aa181ee0ef38208cfd6c8e9ed871d29cb395449869"
+   "sha256": "5fdaf2469b1dddbbdff1946a99b89dc8582b4eac768f4981b39016cb8623ea3f"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p20.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 56652,
+   "bytes": 56670,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "fdd7bce923ed135fbb960a1af6297175e933342ebaf860dd3a80bce58544a329"
+   "sha256": "316258d051727bf2ca749a44c526aed94f967f1ecca13a402be69eff32f50708"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p21.jpg",
@@ -10467,61 +10490,61 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p22.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 49880,
+   "bytes": 49857,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "c10a72757cf414ca466b25ce4b34e11d22f4024c3fd8678fbe06bcd7b495c7d4"
+   "sha256": "9efb910bd46c2f0e37317ce0630a9e07e11dca154d06c0b6abc8a675d31ef3c7"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p23.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 43639,
+   "bytes": 43660,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "8d6f3b2532deca67f72f963155a31efe2361a20d7f57d9f0441d889371f285a0"
+   "sha256": "efbe6b29c5bb5fd44bea454fcfec41b5f7acb6f4ac6669dee5051d628539ee12"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p24.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 45748,
+   "bytes": 45816,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "8052b2ed0300c3a1c330c147a20b605a8de2540592d233b15145be864abf1dea"
+   "sha256": "f3a4ef849517f842bdb4f48c034eee4a156f139445adaadafed3c215a5dae88c"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p25.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 45116,
+   "bytes": 45114,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "5d8fcd8c569f91f63327cbfc2313d4ac5b17e05219ff25c8149b4791212dc474"
+   "sha256": "8b898a955de95363b4cbdf7755fca1b5e4100ec863261710af80f813a817099d"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p26.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 54452,
+   "bytes": 54479,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "f326ac959340519c1dba65747e544c8890984288a836b2280da905b655f9dde8"
+   "sha256": "e7d2b6d2694fc4fae9c6f2c85f27bc00efac5f8aa9afdaf2c159eb0780cc8ade"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p27.jpg",
@@ -10539,97 +10562,97 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p28.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 37980,
+   "bytes": 38078,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "625734c7b5682bae18e605eab8d95d53a02fd73ec8da9e2592c6596bac7d6864"
+   "sha256": "16b066cdd5759b41ece12dd9949ca5675776fe6e001490141eaa50686bbfc30a"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p29.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 56631,
+   "bytes": 56715,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "89e3ea57626ee108a9c57d8aee638d5bac9035445491979e70d10c1304b0e23d"
+   "sha256": "8f521cdb5806057a70e1d6923b4adc16eee2a3983f4f43fb6adf891f74d92d08"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p30.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 48753,
+   "bytes": 48880,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "9fc183224cd8daa671e17e5af692329bb5559139e1887bacfd93feacda58f7bb"
+   "sha256": "0657c4c6934bded3d9887cc505900bb0ad795466c5c46fd5f908ceccc9140b32"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p31.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 52364,
+   "bytes": 52468,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "35c343b52d6ac079debaf966dbd15dae73c0af1dbb724013c5e0e725dc945cda"
+   "sha256": "9475694f9d4453baad9b29a5ef0251ee431e1a7eb0a06fb3e6debd3aa049d628"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p32.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 51462,
+   "bytes": 51509,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "7c0652e0fe9a967e1b7fbda1a7c6e7b7868027adfc3dfd62d6fbf01987895291"
+   "sha256": "d1ee0b3d45c2f4f2e3fc7b4ead89ce48e80e7ff4afc3792dceab74a28d060b95"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p33.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 41656,
+   "bytes": 41740,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "6efe87c0dfc7bd38b1aff4cecc1e92c70a50c342ef932bb4ba08de2f3ddbe7f9"
+   "sha256": "8ef4c84c19c8c72dbb6f470dc17777e769685fdee6fee33728cceb882c079d5b"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p34.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 53673,
+   "bytes": 53675,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "51a203b2744a912d81dd882a65aae22411f13a51136b9ae3b40e65236ea76e1a"
+   "sha256": "b55903b84e9ececcbf7725c5c331e32152c8bf343dbda637a17605d591207985"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p35.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 46010,
+   "bytes": 46110,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "8ba334bb444f7df00fdb95a34f7bd6b92add7185b198fa2912133f8e29462d78"
+   "sha256": "64b0991b847cd85f2d0ba0eb30b319b2b1cf07fee2d3c3a9c627cead390098e0"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p36.jpg",
@@ -10647,61 +10670,61 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p37.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 80844,
+   "bytes": 80944,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "730eda31e64e6c86752124b36c4211d370c7c64a98509d2fc0ca0875565ef2e3"
+   "sha256": "596c75b6e8590bacc3aa9594946977d2994f78979087d0da8320d454c992c7d2"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p38.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 62004,
+   "bytes": 65265,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "af5a7be148d8f09e1f0a4160bc241ad299f6bbce5f347ab0e01e71b197834aee"
+   "sha256": "63c2b6a482bd1c8436b8840a39ac097d926321f5757a43b7eb643e0f84986533"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p39.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 128695,
+   "bytes": 128696,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "bea63e2b8b2b98bd3e4292d42479363af14d6e093990305b26f8010d63df4f70"
+   "sha256": "76b3ad3a214ca91735252bf9e707c25f0b1c3049f2649d9d135ac323e28c223e"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p40.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 106098,
+   "bytes": 106096,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "576e688726715fa5272c2e583617ac2537938a6de286da647423cae7392aa6ed"
+   "sha256": "506d81ee491b8e91acfc3b543f1c0762182b3103e869f270322fba17baa7b23d"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p41.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 68482,
+   "bytes": 68531,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "2ef6b63f60205b3cd06ad825400e71055e23528468ae72fddf298d389ed4717f"
+   "sha256": "1144826f3fbca7417f50164e79192821ad6999ec87c2eee679848d532389214d"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p42.jpg",
@@ -10719,37 +10742,37 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p43.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 138352,
+   "bytes": 138368,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "21c0178960dc19ce457789305de722167d30805b6769a67db13c80acc7e5566d"
+   "sha256": "40406fb1a6f4f09cada63db53b5b76c75fe1c6b5b945450a7b7fca488ed45c74"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p44.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 76399,
+   "bytes": 76476,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "5fbf2b2b2830336173274bcb78fe9309c9363c4a625163e97e830142b8d1de79"
+   "sha256": "30c2e75ed8260a5e88762bc4f2ab54b45db16a8e0f0fd7dcf545490209bb2c83"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p45.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 85998,
+   "bytes": 86087,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "61a8c03ea471d727e166a4516f028212ddaa6e09b437d65952d7c7e048f4ad14"
+   "sha256": "b39093429c89ea2040e14d184fceee5718346f29a137603b0a9fcc97be9852ba"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p46.jpg",
@@ -10767,37 +10790,37 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p47.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 35811,
+   "bytes": 35788,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "4cc818e9010284087ca3e6c050c1bc6bf7378d0adfbc37c0305c3d5e1e7e343d"
+   "sha256": "b71fdaf57c01205d2bb4da7a712ffb12e34030f246a72476d32d3abe2318b56c"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p48.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 54280,
+   "bytes": 54297,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "327a1fb829bd48c6291ad3205d32b399b0cca25197822de31c607dda2d972d54"
+   "sha256": "60528219521a98b3442ecbbb6ffa6cb542f5f56a6901244bec25b9d581c77d1f"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p49.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 46373,
+   "bytes": 46410,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "03a8dd81b1e25ed15cc1ba5a27190bc8cb2d0410a5d22567c6ac111c4723e074"
+   "sha256": "8b3977792dd91f5a1bc42f1c1aea8e326310d0ae437c9cae7c2ceff82acd2106"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p50.jpg",
@@ -10815,49 +10838,49 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p51.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 65267,
+   "bytes": 65322,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "118a7746097abfb3da5ce774fe3d17c6e2ae6f482b8101dfabf0d52aeba1df7c"
+   "sha256": "b8fd14dfd41a27b48d037f955bc88610c053d852afa02d14f04580146142e0cb"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p52.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 87674,
+   "bytes": 87746,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "c8f4613a4e33728543b7aee110b640abbcac0c7a88c9c4ab5da5ce8a40d14027"
+   "sha256": "7e4d176ed914a51bacae03986046b8425fae2f33098e0fc2c50c13ed30775650"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p53.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 53331,
+   "bytes": 53398,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "7e5c9dc4033344d00800ccd80d68461a4f466d667a11b4848caee104727de029"
+   "sha256": "8fb236e64cdb9558350fae5feb18a32b19f93f182f988a9a510d1e7659d779c4"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p54.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 92190,
+   "bytes": 92469,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "db90a0b96cd84875c260bc3b575a6e7716a41f8c66079b2d6b913b4f82acb592"
+   "sha256": "53a20bb43355478750acb41846bd79a62f6f9aa6ee734090592f404ac522181e"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p55.jpg",
@@ -10875,49 +10898,49 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p56.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 49113,
+   "bytes": 49135,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "94982d67f1aae181d88390e738557035fcea88d26feaba3056c7329b9f2dbc36"
+   "sha256": "aba876d997e24bfda0c131073c8cf591f146520630a41902b9d7a2bf5b0c37ab"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p57.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 83393,
+   "bytes": 83462,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "5b1bb20b792c152620f96709468cce1baef591f2cceb196db86cd4df162db8f5"
+   "sha256": "cd376665f69fb616534bb768e04ddb14f92f362f10e617abe15027664d99a8ab"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p58.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 54468,
+   "bytes": 37900,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "a8c1573c09ecf7d4d48eaeff78f0e5b18822bb7092c493e7b94173c0bb2ea4aa"
+   "sha256": "674a38ad5c1ceb8e2110bbd236f45479150fff6c4278ca1ae9183b9001c1110c"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p59.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 93769,
+   "bytes": 93792,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "a0d4f6b09cdbb45695afd638a57b9def34a8a98964ed2f62280054b89b62a354"
+   "sha256": "aff23b14327218947d010178692e118a764db7edf3578822f6e8e65f25803be3"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p60.jpg",
@@ -10935,25 +10958,25 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p61.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 63266,
+   "bytes": 62889,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "cca6656b4736861590ef453370ec428f24e159a0bc2b1e520eb7b99bcb721eca"
+   "sha256": "ac5c8958de4773c05b300f67b9925a07e604bbedfe50b2fc70c9043c694d7cc4"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p62.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 41589,
+   "bytes": 41584,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "38f7a9a0efda9893237d7a5a083cc70f5893f402ac5d3399f27834e6881d40d6"
+   "sha256": "c8cbcccde5e707ff08b925438b783fde96b83c2c963befafd82e249b01291435"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p63.jpg",
@@ -10971,37 +10994,37 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p64.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 85547,
+   "bytes": 85543,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "a1d48960fc614aa2dfc6cc6af82da1cbb244d2609239bb5f431940af1de3e323"
+   "sha256": "152507ef0e44224922ba7f6386100862d8f1b5dbe56824fc7b3c476b04909ae5"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p65.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 106167,
+   "bytes": 106177,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "0ee56edb97d6bcee265d201c083a496cd4e172faa87d8cb1c33e6ba0e30cd427"
+   "sha256": "55b5c8b911744ee5f6f7abbbf7c6813d420a5103cb75b040fd8a839a5ee290fe"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p66.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 69266,
+   "bytes": 69333,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "f74a135ebf95faee75cac050af1f9388a582d6b92dacebafe2c1c4ca6f2635d9"
+   "sha256": "e0d80f83f7deab33aad1a7f8d3655102354bf5571111996f62b01c0b2ef86a98"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p67.jpg",
@@ -11019,13 +11042,13 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p68.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 87561,
+   "bytes": 87555,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "34de0154ba44542f33ce8b4c244a80aaff6615ac0436248171b46171ee9bf4ee"
+   "sha256": "9a174ec7122ae3ce42e254c903a4407ef3fd119895c256e2ecfccbb0061ef443"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p69.jpg",
@@ -11043,145 +11066,145 @@
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p70.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 43337,
+   "bytes": 43417,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "dd633ad6c76a11ac823e908d7a5ce28689082d3f690a470995b5c9a3dc8e642b"
+   "sha256": "14593b06efd187da2e9b4cc611b9917667bef8f428d2a0649b61a202e8df2280"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p71.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 58822,
+   "bytes": 58910,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "abdd5e046a437d851903766f6f0f2e9a054b4fd5e111bf2ce94eb548000ea612"
+   "sha256": "8c86a9513193b050e9932097bcf13ba12a2a3d8b9836bc8ff05e9b9e536ab4da"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p72.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 70654,
+   "bytes": 70608,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "05309d03fdad7f2f59c47036954340ff0e853bd50e478e8ab9eae82c6dd1cb47"
+   "sha256": "b726709e4d89f47c316c157fa7bfed744833a3ff45efd5f2a4ea2c29dd67fab4"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p73.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 60704,
+   "bytes": 60894,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "8baab64c223a644cb46129d293bf24cf5dded4c3586c7cc6de36e413ce647065"
+   "sha256": "dc9eb988d5e85791b33d8b08c3e47cb041361f1023ad72b6cb47ab2040315d26"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p74.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 23068,
+   "bytes": 23142,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "062512c5d1b6af6468b3c72c97884267733eb69aeb83833988c663978d34a2b6"
+   "sha256": "3c4284eb9199dde46c1265f63957ad8e81c5a0ad46e1b6e148d1ade1ae52039e"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p75.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 107824,
+   "bytes": 107873,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "348a24a6b3b05c1cb486814701af8190bea78f07647627e5db06b021b463980b"
+   "sha256": "4b781a9b93be2204fe494c45ee71bb9a6b8f7bcd72c40fcb72105ce035079adc"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p76.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 100277,
+   "bytes": 100311,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "f2c73901beff73048f2d632fa23bd5da8f30c3c1db8e933760ffc06772fd56da"
+   "sha256": "ada5f5ffb0f5fdaa6092bc942ed992837e5a06b1ea0608f2fda5ff48efaefaf9"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p77.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 46292,
+   "bytes": 46321,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "3e135c7fd1a1707fc147e1bd72d7e52ef2863f75fd397a1f0aa8c4cc5b32755d"
+   "sha256": "3937ce1b569ccf71a77a23caa48ff43a4b9c6624817aad61165b477a75305065"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p78.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 85953,
+   "bytes": 85870,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "512eb1fdac6b9f99b88ceb4e6d150c19b2149905c7e1d3f89d35de9da0a843f7"
+   "sha256": "31d25e5ce415abc215f2d2f4e6c958464ea3b55d5f487850f0b5bbf0fcd99628"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p79.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 54048,
+   "bytes": 54079,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "67a2451f149f7abebcb3eee7dd563f540591b391da9a52d494b64dc0cfd99694"
+   "sha256": "aac969ffbf83eacc03bedd58430260cb565198ec2f41a3a91a23358ed09ac5f7"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p80.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 52920,
+   "bytes": 52863,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "450da322c9c3ea25bf34568358c106530c9876ccd0b77fffd48e89862162ae73"
+   "sha256": "cb28a1265eafc960bd6176854432b8dd9b4d7d940629fcf9712b650bbeaba490"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p81.jpg",
    "family": "guidelines",
    "ext": "jpg",
-   "bytes": 73443,
+   "bytes": 73482,
    "w": 1280,
    "h": 720,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "9e9038283bc6103b03a785973c61c66235f90a41c2eed3fa53f6fa1903b6e743"
+   "sha256": "9018babc224b7c2c9f5d370773f06366d105a90492f9d69821f0b2efe4a36be6"
   },
   {
    "path": "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p82.jpg",
@@ -11199,33 +11222,33 @@
    "path": "20-Brand-Guidelines/source/guidelines.css",
    "family": "guidelines",
    "ext": "css",
-   "bytes": 16810,
+   "bytes": 17116,
    "opened": null,
-   "sha256": "117c684bc043b49cc3e6e4b4309edf5eccc92621ea6660ac8bb6504cfc8fc6b6"
+   "sha256": "2e583a428f99c0fcd1325c91afff95eaba8eb81b80e65d234c6634a2c0ee6893"
   },
   {
    "path": "20-Brand-Guidelines/source/siraj-brand-guidelines.html",
    "family": "guidelines",
    "ext": "html",
-   "bytes": 358241,
+   "bytes": 358942,
    "opened": null,
-   "sha256": "3898034914c38c536a54bd457d64e09780eb8c67a7fe8f5c69ac3dffd7b5ea02"
+   "sha256": "6d015b5f2817354ad005706617cc08f9f0880db72fe07cadb0f015c6e70a6ae2"
   },
   {
    "path": "14-Property-Marketing/README.md",
    "family": "silk-and-light",
    "ext": "md",
-   "bytes": 13730,
+   "bytes": 13886,
    "opened": true,
-   "sha256": "c68973c3ec239dfb98d4542c724c636bfe91685facfcde1bf2a7a89b6063573b"
+   "sha256": "5ab36d148f2f41c39f30620907930dcf8081dba3d8ca3109e46b67368b8b9487"
   },
   {
    "path": "14-Property-Marketing/12-Project-Siraj/README.md",
    "family": "silk-and-light",
    "ext": "md",
-   "bytes": 5120,
+   "bytes": 5188,
    "opened": true,
-   "sha256": "eef00d423012fc02e8ccbc7a164fb6177e862a3109d1623ca0c7bd30ad23bf14"
+   "sha256": "4cde5b055e6c8705dc2c796c90989288675c902f3a3878deb61a9ddb60eaf3ed"
   },
   {
    "path": "14-Property-Marketing/12-Project-Siraj/SIRAJ_Project-Siraj_Facade_Post_AR_v1.0.png",
@@ -11303,9 +11326,9 @@
    "path": "14-Property-Marketing/12-Project-Siraj/Key-Visuals/README.md",
    "family": "silk-and-light",
    "ext": "md",
-   "bytes": 3008,
+   "bytes": 3576,
    "opened": true,
-   "sha256": "0e66f6f614c110388953ac69ae0f17f4346b14fa5697b84bb7bb6b0e2e89e080"
+   "sha256": "55e8486fbf08e211d3359aa38c105cf727e914935b3f4d72c33e1e48c8fd2b37"
   },
   {
    "path": "14-Property-Marketing/12-Project-Siraj/Key-Visuals/SIRAJ_Project-Siraj_KV_Detail_Post_AR_v1.0.png",
@@ -11383,25 +11406,25 @@
    "path": "14-Property-Marketing/12-Project-Siraj/Key-Visuals/SIRAJ_Project-Siraj_KV_Ribbon_Post_AR_v1.0.png",
    "family": "silk-and-light",
    "ext": "png",
-   "bytes": 6278977,
+   "bytes": 6318799,
    "w": 2160,
    "h": 2700,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "3a579a210561346f83248c6bc51037a5074f73d97616a2daea903ec9475e4c0c"
+   "sha256": "e9b19f2191dc2199e6b12f39ee8aabef3bd0881863a08c6092cdf7dc522f2073"
   },
   {
    "path": "14-Property-Marketing/12-Project-Siraj/Key-Visuals/SIRAJ_Project-Siraj_KV_Ribbon_Story_AR_v1.0.png",
    "family": "silk-and-light",
    "ext": "png",
-   "bytes": 7736493,
+   "bytes": 7789898,
    "w": 2160,
    "h": 3840,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "662d683e95aea5ac9852f2c91d5b57941c7670f6f008b8faa3516513d7c0320f"
+   "sha256": "49bbffd799a73088c04f44b0cee2ab5d0485321125e6fd4364a9f624cddbe384"
   },
   {
    "path": "14-Property-Marketing/12-Project-Siraj/Key-Visuals/SIRAJ_Project-Siraj_KV_Veil_Post_AR_v1.0.png",
@@ -11535,9 +11558,9 @@
    "path": "14-Property-Marketing/12-Project-Siraj/Source/Architect/README.md",
    "family": "silk-and-light",
    "ext": "md",
-   "bytes": 2617,
+   "bytes": 2738,
    "opened": true,
-   "sha256": "14fc3d8724f32d0b34d35977b6894bf929b447c401ce067bea61500c9302417c"
+   "sha256": "cababdc758c1335c1195b9ab4a55859fa1ce9b2da8092e6c15f50d1100aecf56"
   },
   {
    "path": "14-Property-Marketing/12-Project-Siraj/Source/Architect/SIRAJ_Project-Siraj_Architect-Presentation_ORIX-WEG_2026-07.pdf",
@@ -11804,25 +11827,25 @@
    "path": "14-Property-Marketing/12-Project-Siraj/Source/KeyVisuals/SIRAJ_Project-Siraj_KV_Ribbon_4x5_v1.0.jpg",
    "family": "silk-and-light",
    "ext": "jpg",
-   "bytes": 3113883,
+   "bytes": 3146404,
    "w": 3712,
    "h": 4608,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "2f6c2698904d102445247e6e72f9ebaa559a95a63c5ffe4f084a4b62d75bb0a9"
+   "sha256": "9494a520611839753845c2ad76263407d51d8693ee7c452bb53617ce40810786"
   },
   {
    "path": "14-Property-Marketing/12-Project-Siraj/Source/KeyVisuals/SIRAJ_Project-Siraj_KV_Ribbon_9x16_v1.0.jpg",
    "family": "silk-and-light",
    "ext": "jpg",
-   "bytes": 2123768,
+   "bytes": 2149593,
    "w": 2592,
    "h": 4608,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "cfd790705faa747be5837e26e314b2254aa78be3cf2f3111f4d19c483539e83c"
+   "sha256": "7e491b42cecfb1b189a851ab4d61fafe5ebae8f5a374b25c8bbf1435811b34c7"
   },
   {
    "path": "14-Property-Marketing/12-Project-Siraj/Source/KeyVisuals/SIRAJ_Project-Siraj_KV_Veil_4x5_v1.0.jpg",
@@ -11852,9 +11875,9 @@
    "path": "21-Brand-Kit/README.md",
    "family": "brand-kit",
    "ext": "md",
-   "bytes": 1583,
+   "bytes": 1657,
    "opened": true,
-   "sha256": "64490db08323809ab524d2e8075538864619f998f7648c25a576ebb0d0fbc200"
+   "sha256": "1687bd4b2b2f0a41ab67983f5e0d2d77f53a77c54464816ba52a330a2f033fab"
   },
   {
    "path": "21-Brand-Kit/SIRAJ_Brand-Skill_v1.0.skill",
@@ -11904,17 +11927,17 @@
    "path": "21-Brand-Kit/Claude-Design-Kickoff/01_Brief/BRAND-STRATEGY.md",
    "family": "brand-kit",
    "ext": "md",
-   "bytes": 12201,
+   "bytes": 12695,
    "opened": true,
-   "sha256": "70c1f6d02a5b9921420e1b1b1d1676855f466fb6f9c4ed776fbd6a96dd78e87e"
+   "sha256": "8403dd2802cca2aed0ce35fb7d947e872a173a2d91ebfdaa9cb087d1e56a33c1"
   },
   {
    "path": "21-Brand-Kit/Claude-Design-Kickoff/01_Brief/DESIGN-LANGUAGE.md",
    "family": "brand-kit",
    "ext": "md",
-   "bytes": 8655,
+   "bytes": 9100,
    "opened": true,
-   "sha256": "1193818ac87fde8bc1cf429f4fa38bc6c85c19150f3ffa2df2b1e4a2ad5958c0"
+   "sha256": "9e6fb35046f4206827efc1f32edea2aebf25c1df34bc26c9a5a3cf84113f8998"
   },
   {
    "path": "21-Brand-Kit/Claude-Design-Kickoff/01_Brief/STRATEGIC-POSITIONING_AR.md",
@@ -11931,38 +11954,6 @@
    "bytes": 7429,
    "opened": true,
    "sha256": "50539132246a3f7b27dee79e000b3301671ce120e8c94d931726f582c5655844"
-  },
-  {
-   "path": "21-Brand-Kit/Claude-Design-Kickoff/02_Logo/SIRAJ_Lockup_Arabic_Primary_v1.0.svg",
-   "family": "brand-kit",
-   "ext": "svg",
-   "bytes": 9198,
-   "viewBox": "0 0 126.27 85.07",
-   "sprite": false,
-   "colours": [
-    "#602733",
-    "#AA9180"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "667151735408a1da28a5a7d7bfb94a73c8db2267944dbc607c676984e53ad19c"
-  },
-  {
-   "path": "21-Brand-Kit/Claude-Design-Kickoff/02_Logo/SIRAJ_Lockup_Arabic_Reversed_v1.0.svg",
-   "family": "brand-kit",
-   "ext": "svg",
-   "bytes": 9198,
-   "viewBox": "0 0 126.27 85.07",
-   "sprite": false,
-   "colours": [
-    "#AA9180",
-    "#D6C0B2"
-   ],
-   "raster_inside": false,
-   "text_nodes": false,
-   "opened": true,
-   "sha256": "cf7ae1dae998a0ebb623381b09818027a923d7363a321f6a6105209340d1326d"
   },
   {
    "path": "21-Brand-Kit/Claude-Design-Kickoff/02_Logo/SIRAJ_Logo_Deep_v1.0.svg",
@@ -12249,9 +12240,9 @@
    "path": "21-Brand-Kit/Claude-Design-Kickoff/03_Fonts/OFL-Tajawal.txt",
    "family": "brand-kit",
    "ext": "txt",
-   "bytes": 4314,
+   "bytes": 4464,
    "opened": true,
-   "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3"
+   "sha256": "9b584984f9db0ee30347391a76eff9c0a6b03dc450c3c6afe3757a2cb3a4db87"
   },
   {
    "path": "21-Brand-Kit/Claude-Design-Kickoff/03_Fonts/Tajawal-Bold.ttf",
@@ -12311,15 +12302,15 @@
    "ext": "css",
    "bytes": 10833,
    "opened": null,
-   "sha256": "0fa5f13232540283485410db18d6a52477e702eecdc1ee8d0f2572eb8b5b1a04"
+   "sha256": "65cdf8dbbbe6f540b79e8754775972eb638a29b9b0d8820d04e091dd2652a198"
   },
   {
    "path": "21-Brand-Kit/Claude-Design-Kickoff/04_Tokens/siraj.tokens.json",
    "family": "brand-kit",
    "ext": "json",
-   "bytes": 20485,
+   "bytes": 20673,
    "opened": true,
-   "sha256": "8f0908e7deb390c7ef914bcc66632ffcdbd2f092476a4532991f02dd903aac59"
+   "sha256": "3188d864b331fd139c1f7277fcccdc39018927fbdc8fa8196b0eca38ce80b4fd"
   },
   {
    "path": "21-Brand-Kit/Claude-Design-Kickoff/05_Project-Siraj/SIRAJ_Project-Siraj_Clean_Contact-Sheet.jpg",
@@ -12421,13 +12412,13 @@
    "path": "21-Brand-Kit/Claude-Design-Kickoff/05_Project-Siraj/SIRAJ_Project-Siraj_KV_Ribbon_4x5_v1.0.jpg",
    "family": "brand-kit",
    "ext": "jpg",
-   "bytes": 3113883,
+   "bytes": 3146404,
    "w": 3712,
    "h": 4608,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "2f6c2698904d102445247e6e72f9ebaa559a95a63c5ffe4f084a4b62d75bb0a9"
+   "sha256": "9494a520611839753845c2ad76263407d51d8693ee7c452bb53617ce40810786"
   },
   {
    "path": "21-Brand-Kit/Claude-Design-Kickoff/05_Project-Siraj/SIRAJ_Project-Siraj_KV_Veil_4x5_v1.0.jpg",
@@ -12841,13 +12832,13 @@
    "path": "21-Brand-Kit/Claude-Design-Kickoff/07_References/SIRAJ_Project-Siraj_KV_Ribbon_Post_AR_v1.0.jpg",
    "family": "brand-kit",
    "ext": "jpg",
-   "bytes": 236209,
+   "bytes": 254796,
    "w": 1080,
    "h": 1350,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "26acadf5b260137b512cd93b54bc4ff2bbc4850530c897ce455723ab38865a61"
+   "sha256": "e0f25f7c0b87cb6ee3b08cea72514e66c726c9073f7ee692cb7becc7d4709b4c"
   },
   {
    "path": "21-Brand-Kit/Claude-Design-Kickoff/07_References/SIRAJ_Project-Siraj_KV_Veil_Post_AR_v1.0.jpg",
@@ -12889,9 +12880,9 @@
    "path": "11-Social/README.md",
    "family": "application",
    "ext": "md",
-   "bytes": 14706,
+   "bytes": 14936,
    "opened": true,
-   "sha256": "900d1c1bdfd5ed71b237f57a72718ed313c86105713c55173475d9759bc8a832"
+   "sha256": "fb4d6bebae10d20c8b828da084e3ff9546a446e11836a1eb60fd7b658492e0fb"
   },
   {
    "path": "11-Social/Briefs/v1/Announcement.json",
@@ -13337,13 +13328,13 @@
    "path": "11-Social/Content/v1_Carousel-04/SIRAJ_Carousel-04_Carousel_AR_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 1666015,
+   "bytes": 1677901,
    "w": 1080,
    "h": 1350,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "861881c049d2db4da7fa505412a6f81f6510a090eb67b4bb1573a3de05f9c1da"
+   "sha256": "f00e1c59d634e20393d44ecd4f88a8e0c9c2b0d6456b3fb2523eb25f18384814"
   },
   {
    "path": "11-Social/Content/v1_Carousel-04/brief.json",
@@ -13829,13 +13820,13 @@
    "path": "11-Social/Exports/SIRAJ_Social_Carousel-04_Carousel_AR_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 1666015,
+   "bytes": 1677901,
    "w": 1080,
    "h": 1350,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "861881c049d2db4da7fa505412a6f81f6510a090eb67b4bb1573a3de05f9c1da"
+   "sha256": "f00e1c59d634e20393d44ecd4f88a8e0c9c2b0d6456b3fb2523eb25f18384814"
   },
   {
    "path": "11-Social/Exports/SIRAJ_Social_Carousel-05_Carousel_AR_v1.0.png",
@@ -14054,6 +14045,14 @@
    "sha256": "f513e1fc806f26cff81c4544a83651f24f999c23af3b27b63ae8c185571a636f"
   },
   {
+   "path": "11-Social/Template-Previews/README.md",
+   "family": "application",
+   "ext": "md",
+   "bytes": 691,
+   "opened": true,
+   "sha256": "81581b3505a8349bd0329892147d50df66400cef38af883948f17ba8dec50b5d"
+  },
+  {
    "path": "11-Social/Template-Previews/SIRAJ_Social_Construction-Update_Post_AR_v1.0.png",
    "family": "application",
    "ext": "png",
@@ -14241,40 +14240,40 @@
    "path": "12-Print/PDF/Documents/SIRAJ_Memo_AR_v1.0.pdf",
    "family": "application",
    "ext": "pdf",
-   "bytes": 37029,
+   "bytes": 36827,
    "pages": 1,
    "page_pts": [
     595.92,
     841.92
    ],
    "opened": true,
-   "sha256": "9e8d344c938c031311861c578dd972784e1eb5880b358544d0dec0850397f259"
+   "sha256": "27e903af94ffcba46c8417723730b391f31eecb91313097152c153dc75530f12"
   },
   {
    "path": "12-Print/PDF/Identity/SIRAJ_ID-Card_CR80-Print_v1.0.pdf",
    "family": "application",
    "ext": "pdf",
-   "bytes": 57356,
+   "bytes": 56484,
    "pages": 2,
    "page_pts": [
     227.04,
     317.04
    ],
    "opened": true,
-   "sha256": "17b8f01ea500b56358747e3d5efacbcac046ea5cd409f7554a8d4205782c1d55"
+   "sha256": "563d024871673a9f6202504b7efdae103db2e786039ab91cfb948534c79ca076"
   },
   {
    "path": "12-Print/PDF/Identity/SIRAJ_ID-Card_CR80_v1.0.pdf",
    "family": "application",
    "ext": "pdf",
-   "bytes": 55634,
+   "bytes": 54750,
    "pages": 2,
    "page_pts": [
     154.08,
     242.88
    ],
    "opened": true,
-   "sha256": "6658425f9d14ad9abc8074d6ed12194d02661c4437a441918f2e1463c00ff9be"
+   "sha256": "01c39710ebf618432313f3c7b659cd91b10785b4816ae7ae3a35e28ebdb51cde"
   },
   {
    "path": "12-Print/PDF/Stationery/SIRAJ_Business-Card_Brand-Print_v1.0.pdf",
@@ -14306,27 +14305,27 @@
    "path": "12-Print/PDF/Stationery/SIRAJ_Business-Card_EN-AR-Print_v1.0.pdf",
    "family": "application",
    "ext": "pdf",
-   "bytes": 42388,
+   "bytes": 38074,
    "pages": 2,
    "page_pts": [
     315.12,
     229.92
    ],
    "opened": true,
-   "sha256": "f9f2beb63158c46200340392423795abb1d5f5aac1090f92a95b975064f20e88"
+   "sha256": "d44782988411a2724a782d28813b6cef069ef865e8f354c20cf48368c7442279"
   },
   {
    "path": "12-Print/PDF/Stationery/SIRAJ_Business-Card_EN-AR_v1.0.pdf",
    "family": "application",
    "ext": "pdf",
-   "bytes": 37039,
+   "bytes": 32734,
    "pages": 2,
    "page_pts": [
     240.96,
     156.0
    ],
    "opened": true,
-   "sha256": "25a0373d8927c03a1e74cebb922b80a0405435c5d85014917640232dc8a358ab"
+   "sha256": "3e47672c30d7cd3504186b5062f8bedb6024d3457465815b7f215ddadab6dd5c"
   },
   {
    "path": "12-Print/PDF/Stationery/SIRAJ_Compliments-Slip_Bilingual-Print_v1.0.pdf",
@@ -14397,14 +14396,14 @@
    "path": "12-Print/PDF/Stationery/SIRAJ_Letterhead_AR_v1.0.pdf",
    "family": "application",
    "ext": "pdf",
-   "bytes": 19868,
+   "bytes": 15431,
    "pages": 1,
    "page_pts": [
     595.92,
     841.92
    ],
    "opened": true,
-   "sha256": "71aa158b809a6c53f530988a62be0f8260b467511bc9f9988174cdd65501e906"
+   "sha256": "d28df2045d4a56b9923a39682cb02798e0381e254f90f7c547c4e52d20b83fa1"
   },
   {
    "path": "12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Dieline_v1.0.pdf",
@@ -14449,37 +14448,37 @@
    "path": "12-Print/PNG/Documents/SIRAJ_Memo_AR_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 156589,
+   "bytes": 154852,
    "w": 1728,
    "h": 2626,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "29e3fe2018c22834574e97aa347cdceb947b2d52c341621780a724cfeb8af9ff"
+   "sha256": "529103a27411a94be2985d12710b66305a0b911c392cb457134e093096ca81e2"
   },
   {
    "path": "12-Print/PNG/Identity/SIRAJ_ID-Card_CR80-Print_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 365503,
+   "bytes": 360788,
    "w": 2733,
    "h": 2122,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "5b731f823ed7e471db68bc0f0b39348c383ac3b3b807a0abdbc7f31a1f96af3e"
+   "sha256": "e6560bb5ab0e6a5be49bb18ee602270a8c5fd803bcfac3f049b67f766faf5b05"
   },
   {
    "path": "12-Print/PNG/Identity/SIRAJ_ID-Card_CR80_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 420985,
+   "bytes": 414331,
    "w": 3318,
    "h": 2244,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "888b40ef401e32613d2dc230626f7b542a0f8d5b81344c056c1027ae7735980e"
+   "sha256": "6d584b656f3a65b8a75d9ad8d4dc54976e78f83cd0b1187c184bca91414b255c"
   },
   {
    "path": "12-Print/PNG/Stationery/SIRAJ_Business-Card_Brand-Print_v1.0.png",
@@ -14509,25 +14508,25 @@
    "path": "12-Print/PNG/Stationery/SIRAJ_Business-Card_EN-AR-Print_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 184321,
+   "bytes": 179351,
    "w": 2733,
    "h": 1672,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "ce8466c7ccd58ca1bd38153d4f48b9927e8a7f7a7fc27a7dfa9d9807d0f6ba21"
+   "sha256": "e23fdb52a5d598b3e031ef3088100e8979af4e90f270c8709bf43d82f2b69181"
   },
   {
    "path": "12-Print/PNG/Stationery/SIRAJ_Business-Card_EN-AR_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 216395,
+   "bytes": 209841,
    "w": 3002,
    "h": 1741,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "f3675bdbf4e6bc5519577384c5534a9f8928bdc7b235e3f1d65dd1d011c13b17"
+   "sha256": "ec42e5c91b885c862ccb4bd84577778376931b9c6129f09e492b087e2a474e1b"
   },
   {
    "path": "12-Print/PNG/Stationery/SIRAJ_Compliments-Slip_Bilingual-Print_v1.0.png",
@@ -14593,13 +14592,13 @@
    "path": "12-Print/PNG/Stationery/SIRAJ_Letterhead_AR_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 190746,
+   "bytes": 178423,
    "w": 2878,
    "h": 2334,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "7a07cf789f306001c3a01b28de5e29e3ab3a9bcb74b5ae6d1157bfd352d1d0c4"
+   "sha256": "fe2fd3cc1d127e29883ff9ff7dc9722ed13a161fb989d3d48242d9441195585d"
   },
   {
    "path": "12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_Dieline_v1.0.png",
@@ -14641,17 +14640,17 @@
    "path": "12-Print/Source/print.config.json",
    "family": "application",
    "ext": "json",
-   "bytes": 2193,
+   "bytes": 2314,
    "opened": true,
-   "sha256": "a76ac7d48eaeb083c2253ef8d2ac77754ff7adff58e232a03c99f9e33521545d"
+   "sha256": "009296fa9bf7f2455278d8fba9bc7da5f72f918fe018c7aac00ce382cc811015"
   },
   {
    "path": "12-Print/Source/Documents/SIRAJ_Memo_AR.html",
    "family": "application",
    "ext": "html",
-   "bytes": 4971,
+   "bytes": 4998,
    "opened": null,
-   "sha256": "f243a3186e8078a4383f33761e12fe48b5f8b4d88422026cce42953feab1d64a"
+   "sha256": "ad9ea11f4792e9c3814cbd9d280f8c0f2c1b02599dc09d47b6159135fbd0529b"
   },
   {
    "path": "12-Print/Source/Identity/SIRAJ_ID-Card.html",
@@ -14673,9 +14672,9 @@
    "path": "12-Print/Source/Stationery/SIRAJ_Business-Card_EN-AR.html",
    "family": "application",
    "ext": "html",
-   "bytes": 4609,
+   "bytes": 4507,
    "opened": null,
-   "sha256": "4c6a4c77395a3a13a7717b1ab3fd1136d24a3306948a86d18220edefdd08763b"
+   "sha256": "7323584ca3d554f458379ac16db69a9638d99518faf0e7c75522aa22538cf812"
   },
   {
    "path": "12-Print/Source/Stationery/SIRAJ_Compliments-Slip.html",
@@ -14715,7 +14714,7 @@
    "ext": "html",
    "bytes": 3967,
    "opened": null,
-   "sha256": "b3ec837414462b31995f941a4d25678240dfe4e1140181f0ec76b519f10097c0"
+   "sha256": "7bbb4f92f1034b2444a2b3473c2bcd5178d1ddc5bbded08301b9ed20a39defd7"
   },
   {
    "path": "12-Print/Source/Stationery/SIRAJ_Presentation-Folder.html",
@@ -14737,22 +14736,22 @@
    "path": "13-Presentations/README.md",
    "family": "application",
    "ext": "md",
-   "bytes": 10451,
+   "bytes": 10655,
    "opened": true,
-   "sha256": "cbbf823b4fa0a02df018ef7cc34c6cc193561765efd601b25c787a86af390e01"
+   "sha256": "aa2e13bd0e1cb92875a3a4ba2dccf2fca1ce07d440aab655ffd21d706ce3f6e5"
   },
   {
    "path": "13-Presentations/Exports/SIRAJ_Presentation_Siraj_AR_v1.0.pdf",
    "family": "application",
    "ext": "pdf",
-   "bytes": 7403464,
+   "bytes": 7405588,
    "pages": 10,
    "page_pts": [
     960.009,
     540.0
    ],
    "opened": true,
-   "sha256": "e8d677505323471071829447791c662e78b55f5533e8087d6ba46f4e2998e480"
+   "sha256": "28d7b439b8677bb61498bd202495a84e687217cc4f3b6af54b3200ae5552f996"
   },
   {
    "path": "13-Presentations/Exports/PNG/SIRAJ_Presentation_Siraj_AR_v1.0_slide-01.png",
@@ -14842,13 +14841,13 @@
    "path": "13-Presentations/Exports/PNG/SIRAJ_Presentation_Siraj_AR_v1.0_slide-08.png",
    "family": "application",
    "ext": "png",
-   "bytes": 335040,
+   "bytes": 336033,
    "w": 961,
    "h": 540,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "4957fe0bc84c04896a4cca0383160b1a877ac365d25af6afd50620bb11de5b37"
+   "sha256": "3921a075bf51fe2b15060a17a298fff0f55a3934129ff262c4ff782fc799c638"
   },
   {
    "path": "13-Presentations/Exports/PNG/SIRAJ_Presentation_Siraj_AR_v1.0_slide-09.png",
@@ -14878,74 +14877,74 @@
    "path": "13-Presentations/PPTX/SIRAJ_Presentation_Siraj_AR_v1.0.pptx",
    "family": "application",
    "ext": "pptx",
-   "bytes": 31170194,
+   "bytes": 31202253,
    "opened": null,
-   "sha256": "fc787577238101be1f41317299477eba7ab90db1e25257e274289603a3bd53aa"
+   "sha256": "504461ac7845e66478ee74db8ed853b3f219e6ad13b3b9fbe96c9fd21db5727d"
   },
   {
    "path": "19-Templates/README.md",
    "family": "application",
    "ext": "md",
-   "bytes": 8661,
+   "bytes": 9298,
    "opened": true,
-   "sha256": "ea53f22577cd6bc3889b971d04f7b45782885bcae844ef78cebe4e820e357067"
+   "sha256": "bdd5e90c1aa3871a5326e3bbf5e4230f681d260df003f219ae57a0e48dfea0f9"
   },
   {
    "path": "19-Templates/docs/SIRAJ_Doc-Kit_Specimen_AR.html",
    "family": "application",
    "ext": "html",
-   "bytes": 6617,
+   "bytes": 6702,
    "opened": null,
-   "sha256": "ee71bc7f666001c07d966b6de6d64b072c946eece910da3ce50c03600d33f454"
+   "sha256": "5a779d6e216c3de3348c87c0ba7e6e70572c064ade3ee5a4a0e8ed92c61bd238"
   },
   {
    "path": "19-Templates/docs/PDF/SIRAJ_Doc-Kit_Specimen_AR_v1.0.pdf",
    "family": "application",
    "ext": "pdf",
-   "bytes": 78799,
+   "bytes": 78900,
    "pages": 1,
    "page_pts": [
     595.92,
     841.92
    ],
    "opened": true,
-   "sha256": "66b2aa775f9c2b4b28f3ff769ec4165966783f1ebad74c3eefbc1d2467bc38c7"
+   "sha256": "89b2be0993d709f3bdf63282926ede435e99f894ac8416da528b90268b153939"
   },
   {
    "path": "19-Templates/docs/PNG/SIRAJ_Doc-Kit_Specimen_AR_v1.0.png",
    "family": "application",
    "ext": "png",
-   "bytes": 235283,
+   "bytes": 240411,
    "w": 1440,
    "h": 2189,
    "mode": "RGB",
    "alpha": false,
    "opened": true,
-   "sha256": "a9a2f36d1c9d5793cfec250fdf0230eebcc17484a85075638c03f062ba0d0268"
+   "sha256": "fc18c3faec2a1edf2e73040acc9b969daabcdece489f864fe35e0ec2725e110b"
   },
   {
    "path": "19-Templates/docs/css/siraj-doc.css",
    "family": "application",
    "ext": "css",
-   "bytes": 26354,
+   "bytes": 26295,
    "opened": null,
-   "sha256": "184e0b18889c8892faeadad69323dcfa22596aa39bbd9e72173ef5df31a3e1c1"
+   "sha256": "76871d1fd05d0aef74e4c501fff52905c244a7c82753c0a5669365a0a5a42405"
   },
   {
    "path": "19-Templates/docs/js/brand-config.js",
    "family": "application",
    "ext": "js",
-   "bytes": 12638,
+   "bytes": 12759,
    "opened": null,
-   "sha256": "b1229147174a8322e02a131e6308ca98726cc95d7b047b64ab131746fd18c5ae"
+   "sha256": "8e94776456a4919898415f17b8caf6423cd5637e494335ca9ec9f2d98e17e02d"
   },
   {
    "path": "19-Templates/docs/js/siraj-doc.js",
    "family": "application",
    "ext": "js",
-   "bytes": 16888,
+   "bytes": 19886,
    "opened": null,
-   "sha256": "e99f1ac105cec8088c0569fd19f91d9996e669f66c8921908c607ffaa37bb7b9"
+   "sha256": "6177ddf94bf77cec3ee8af198f81ef0a89922064aceaa2bd962d73170feb3b34"
   },
   {
    "path": "19-Templates/email-signature/SIRAJ_Email-Signature_AR_v1.0.html",
@@ -15018,9 +15017,17 @@
    "path": "99-Archive/README.md",
    "family": "archive",
    "ext": "md",
-   "bytes": 223,
+   "bytes": 2772,
    "opened": true,
-   "sha256": "440dfbbf4669608385a56f860086379c33c483ffc56a073318642c8b3ee2fd44"
+   "sha256": "6a02a6cf09f62eaa8765d46e3f6305833570083f68bbbb5e32b36eb4a1f67cf7"
+  },
+  {
+   "path": "99-Archive/Demo-Isolated/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 259,
+   "opened": true,
+   "sha256": "d197ad423ebc1fa27dba8f74c0eb8d44b00102eeb845472f652120bbdd2d5544"
   },
   {
    "path": "99-Archive/Demo-Isolated/10-UI-Components/ARCHIVED.md",
@@ -19732,6 +19739,14 @@
    "sha256": "39d3258cd62b6d50a1666fd35a0ea6086513ff269f144fd41e2de669fdf5d089"
   },
   {
+   "path": "99-Archive/English-Dormant/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 261,
+   "opened": true,
+   "sha256": "1659a1370fe7c8e15f67b3cc5986faf178c2e1a636b79185a7c850f2530cb27c"
+  },
+  {
    "path": "99-Archive/English-Dormant/11-Social/Exports/SIRAJ_Social_Construction-Update_LinkedIn_EN_v1.0.png",
    "family": "archive",
    "ext": "png",
@@ -22434,6 +22449,14 @@
    "sha256": "1398a5f309c81228afcff093af28becd5267f99d81831bad46573d1ab7cd1fb5"
   },
   {
+   "path": "99-Archive/Postponed/Project-Lettering/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 273,
+   "opened": true,
+   "sha256": "25038c8b2372ac9525de7e7c47932f2a0fc1f354ce20d3b97597465c653dd28e"
+  },
+  {
    "path": "99-Archive/Postponed/Project-Lettering/01-Logos-Project/SIRAJ_Project-Siraj_Lettering.json",
    "family": "archive",
    "ext": "json",
@@ -23025,6 +23048,14 @@
    "sha256": "e273549cee212a60ecc0e2b416c050bea063d2352b2e5bd9aaecddb97f21dda1"
   },
   {
+   "path": "99-Archive/Pre-Luxe-Grade-v1.0/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 265,
+   "opened": true,
+   "sha256": "330bf48dc5f5426b028b08138e11230477fc21eb18b58905fd95b412ed9b1f7d"
+  },
+  {
    "path": "99-Archive/Pre-Luxe-Grade-v1.0/Clean/SIRAJ_Project-Siraj_Corner_Blue-Hour_Clean_v1.0.jpg",
    "family": "archive",
    "ext": "jpg",
@@ -23215,6 +23246,14 @@
    "alpha": false,
    "opened": true,
    "sha256": "95478c3ee92d93ea2c832e61b641eff2e2c0bf88cba529ddacaa8e7bd7f74fae"
+  },
+  {
+   "path": "99-Archive/Silk-CG-v1.0/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 258,
+   "opened": true,
+   "sha256": "317ccba0cf08cce542bd30caca67bed5fc47f253f36ab8fd6f094ac6d08f79ba"
   },
   {
    "path": "99-Archive/Silk-CG-v1.0/Alpha/SIRAJ_Silk_Fold-Corner-Alpha_16x9_v1.0.png",
@@ -24441,6 +24480,14 @@
    "sha256": "6fe783d721b9be8c955a9b067ebcafcba2a3b8ce80d42084599025fe8345c437"
   },
   {
+   "path": "99-Archive/Silk-Creased-v1.0/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 263,
+   "opened": true,
+   "sha256": "f5c2f237382c705a8af0d3d7e97d68445f7e83fcc76ff96311caaa7911439491"
+  },
+  {
    "path": "99-Archive/Silk-Creased-v1.0/Drape-Deep/SIRAJ_Silk_Drape-Deep_16x9_v1.0.jpg",
    "family": "archive",
    "ext": "jpg",
@@ -24943,6 +24990,14 @@
    "sha256": "6f7de3fd38178eb713f3ac988b3b05a3bdd123170e6af942656100211a78f399"
   },
   {
+   "path": "99-Archive/Silk-Footage-Soft-v1.0/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 268,
+   "opened": true,
+   "sha256": "19e629bc63a4261c36b2e1d09642dbb3febb8e04221d52bb314d03a33249e3cb"
+  },
+  {
    "path": "99-Archive/Silk-Footage-Soft-v1.0/Source/SIRAJ_Silk_Ribbon-Pass_16x9_Green_v1.0.mp4",
    "family": "archive",
    "ext": "mp4",
@@ -24971,6 +25026,14 @@
    "bytes": 926,
    "opened": true,
    "sha256": "c974198a68ccff504d9703ae645903daf453a6b32dbfcc1762b39326bddcd325"
+  },
+  {
+   "path": "99-Archive/Silk-Washed-v1.0/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 262,
+   "opened": true,
+   "sha256": "43608c70222dd48147506dae9f8bc0f041e2cf66fdde3e96ac4d9f54c01b9dc1"
   },
   {
    "path": "99-Archive/Silk-Washed-v1.0/Drape-Deep/SIRAJ_Silk_Drape-Deep_16x9_v1.0.jpg",
@@ -25357,6 +25420,487 @@
    "sha256": "6cf6c42e69c439d6a1439b590321c567c3896a8b3cfc9f6a4687b4abdd675307"
   },
   {
+   "path": "99-Archive/Superseded/README.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 681,
+   "opened": true,
+   "sha256": "1dc597d1db07913844d69b4f7a5d96966568c6d9379ff79a3301a53007472aa3"
+  },
+  {
+   "path": "99-Archive/Superseded/Brand-Guidelines-v1.0/SIRAJ_Brand-Guidelines_Contact-Sheet_v1.0.jpg",
+   "family": "archive",
+   "ext": "jpg",
+   "bytes": 2065460,
+   "w": 3904,
+   "h": 3058,
+   "mode": "RGB",
+   "alpha": false,
+   "opened": true,
+   "sha256": "e445744d3aa67c026f045f59fb58192b681c851e36a426bd78b7dd011e4f6d71"
+  },
+  {
+   "path": "99-Archive/Superseded/Brand-Guidelines-v1.0/SIRAJ_Brand-Guidelines_v1.0.pdf",
+   "family": "archive",
+   "ext": "pdf",
+   "bytes": 19011315,
+   "pages": 82,
+   "page_pts": [
+    1440.0,
+    810.0
+   ],
+   "opened": true,
+   "sha256": "07db0671ca6c78110818f77a6d7200fa7609bb5bb86d7edc9a8a3cb5b6b178b6"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Mono-Black_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 81765,
+   "w": 2400,
+   "h": 1617,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "a0f914cace19c40f168affed21411dd5d3b9b3b0bdda3b339d66a7ee6e11a91b"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Mono-Black_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 9198,
+   "viewBox": "0 0 126.27 85.07",
+   "sprite": false,
+   "colours": [
+    "#020202"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "adf4c2747b8f1a1a2c1f8ec0eb8e3143eb1852097981b7d6a6e1974b9db53a30"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Mono-White_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 75339,
+   "w": 2400,
+   "h": 1617,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "ad3854b212aabb932d7ae5356d511bbeda363a6698bc227b526be24051590154"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Mono-White_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 9198,
+   "viewBox": "0 0 126.27 85.07",
+   "sprite": false,
+   "colours": [
+    "#FFFFFF"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "d5c1b54abbb566b142f37c0ecb17cc90baae13f7640128824be462db04dab14d"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.pdf",
+   "family": "archive",
+   "ext": "pdf",
+   "bytes": 6548,
+   "pages": 1,
+   "page_pts": [
+    454.08,
+    306.0
+   ],
+   "opened": true,
+   "sha256": "cd7e3094979458fbe754a202697bce05d2abac06bc74a8ffbe0d66d4a382341d"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 95058,
+   "w": 2400,
+   "h": 1617,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "011fbd503c27a9572dec42f1b659e78d59ee1507af10044ed739b314edf21a17"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 9198,
+   "viewBox": "0 0 126.27 85.07",
+   "sprite": false,
+   "colours": [
+    "#602733",
+    "#AA9180"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "667151735408a1da28a5a7d7bfb94a73c8db2267944dbc607c676984e53ad19c"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Reversed_v1.0.pdf",
+   "family": "archive",
+   "ext": "pdf",
+   "bytes": 6551,
+   "pages": 1,
+   "page_pts": [
+    454.08,
+    306.0
+   ],
+   "opened": true,
+   "sha256": "426ad537d525ceb80409a19ea08f4c39a9fac832f670ddc80278beb32be69f8f"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Reversed_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 95675,
+   "w": 2400,
+   "h": 1617,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "8bd124eb4c275f62b2738efae6ed92442b8c4bc03ce5365f39c47dfd15bde0ed"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Reversed_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 9198,
+   "viewBox": "0 0 126.27 85.07",
+   "sprite": false,
+   "colours": [
+    "#AA9180",
+    "#D6C0B2"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "cf7ae1dae998a0ebb623381b09818027a923d7363a321f6a6105209340d1326d"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Mono-Black_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 36775,
+   "w": 2400,
+   "h": 525,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "7c39f1c74e3297378410a2dab994f7232d58ab81d21920c5296d5024dfa1e5c2"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Mono-Black_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 14836,
+   "viewBox": "0 0 256.98 56.22",
+   "sprite": false,
+   "colours": [
+    "#020202"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "3775c44f45e0c6e164916028f5a1840da2b1cceea689fecbc23edcf181fb763c"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Mono-White_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 33817,
+   "w": 2400,
+   "h": 525,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "7ab2cdd9a9c07d8276b6dda7771973236a017673e77fb5a7ff212da3fd89a950"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Mono-White_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 14836,
+   "viewBox": "0 0 256.98 56.22",
+   "sprite": false,
+   "colours": [
+    "#FFFFFF"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "eec5bf9a5e7ec5320d6b5d47a093668b632916248415b3123d4f3c34f9938a4e"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Primary_v1.0.pdf",
+   "family": "archive",
+   "ext": "pdf",
+   "bytes": 9487,
+   "pages": 1,
+   "page_pts": [
+    454.08,
+    98.88
+   ],
+   "opened": true,
+   "sha256": "8a52ffbf00ac1122f889610842f9b983bc868126992a639a8413037f10d862bc"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Primary_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 41646,
+   "w": 2400,
+   "h": 525,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "7b23762d1a29681815a32bd2ac58ac0a686d9cdfac4606c63c3f5783529eadaf"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Primary_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 14836,
+   "viewBox": "0 0 256.98 56.22",
+   "sprite": false,
+   "colours": [
+    "#602733",
+    "#AA9180"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "3335238e24fdccae5f554dc91794741b4ded5fb6d87bbe01bd0436eee4a768af"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Reversed_v1.0.pdf",
+   "family": "archive",
+   "ext": "pdf",
+   "bytes": 9490,
+   "pages": 1,
+   "page_pts": [
+    454.08,
+    98.88
+   ],
+   "opened": true,
+   "sha256": "6a4095842000d4eb0f07923b8ea24885bdbf9fcdc9690ccdca8568c8b28983d2"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Reversed_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 42099,
+   "w": 2400,
+   "h": 525,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "0d2db8e218b95076071760ba4075eda8d47509948165ebb7399c66c4272743c4"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Horizontal_Reversed_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 14836,
+   "viewBox": "0 0 256.98 56.22",
+   "sprite": false,
+   "colours": [
+    "#AA9180",
+    "#D6C0B2"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "ef3ce9b7615a196a435ce78af00b81cbab01576e51907988b6a2b7714322550b"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Mono-Black_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 90488,
+   "w": 2400,
+   "h": 1923,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "d20dc4d712f78c88bd111b12f5b7489b95905c70f2d743f67f674a2b18d8e5fd"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Mono-Black_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 14814,
+   "viewBox": "0 0 126.27 101.20",
+   "sprite": false,
+   "colours": [
+    "#020202"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "2dc98fe7dbc45d2742d408438972afd5dc269b4f8104f1c1b3117657bf0e7b99"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Mono-White_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 83542,
+   "w": 2400,
+   "h": 1923,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "e65b3e639bfb9f466523f2b7dc16e94c98cd2d66408c4e63036996e2660fde16"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Mono-White_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 14814,
+   "viewBox": "0 0 126.27 101.20",
+   "sprite": false,
+   "colours": [
+    "#FFFFFF"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "f9ba482d3a43e522d6e31144719f99a588e605092a4c84be0e28121036a918cc"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Primary_v1.0.pdf",
+   "family": "archive",
+   "ext": "pdf",
+   "bytes": 9350,
+   "pages": 1,
+   "page_pts": [
+    454.08,
+    363.12
+   ],
+   "opened": true,
+   "sha256": "52aaeb516918136ebd0cc1fda138e0bf975f266395f03e381814804a44bec8a9"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Primary_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 104979,
+   "w": 2400,
+   "h": 1923,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "636089cf063bd41781b016069cfbfad7f72b90fb0448c12f70d74d4cade0d0b8"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Primary_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 14814,
+   "viewBox": "0 0 126.27 101.20",
+   "sprite": false,
+   "colours": [
+    "#602733",
+    "#AA9180"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "bf8aa1b647078a61d9a7f38a35d0d32b6a1ae61bb96fad49a4f4e5acb7c3f35b"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Reversed_v1.0.pdf",
+   "family": "archive",
+   "ext": "pdf",
+   "bytes": 9353,
+   "pages": 1,
+   "page_pts": [
+    454.08,
+    363.12
+   ],
+   "opened": true,
+   "sha256": "72f52671ec80fe6d0025ab41ab750a1f089689e643cfac3112c653518e477b73"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Reversed_v1.0.png",
+   "family": "archive",
+   "ext": "png",
+   "bytes": 105889,
+   "w": 2400,
+   "h": 1923,
+   "mode": "RGBA",
+   "alpha": true,
+   "opened": true,
+   "sha256": "25fe6b07c13826a259a006ae0322cc75bb8a21a7e93e82e117ddac9b666acc16"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Stacked_Reversed_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 14814,
+   "viewBox": "0 0 126.27 101.20",
+   "sprite": false,
+   "colours": [
+    "#AA9180",
+    "#D6C0B2"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "c27ff3e364226599da0ef318eee4810808933289a7ff486afe79d63ec84bf2cd"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/_NOT-FOR-PRODUCTION.md",
+   "family": "archive",
+   "ext": "md",
+   "bytes": 940,
+   "opened": true,
+   "sha256": "9e8b7edfa60d3c21f31d517bea165360ffbd6a720bda7f5e80b860f444561718"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/Brand-Kit-Copy/SIRAJ_Lockup_Arabic_Primary_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 9198,
+   "viewBox": "0 0 126.27 85.07",
+   "sprite": false,
+   "colours": [
+    "#602733",
+    "#AA9180"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "667151735408a1da28a5a7d7bfb94a73c8db2267944dbc607c676984e53ad19c"
+  },
+  {
+   "path": "99-Archive/Withdrawn/Arabic-Name-Lockups/Brand-Kit-Copy/SIRAJ_Lockup_Arabic_Reversed_v1.0.svg",
+   "family": "archive",
+   "ext": "svg",
+   "bytes": 9198,
+   "viewBox": "0 0 126.27 85.07",
+   "sprite": false,
+   "colours": [
+    "#AA9180",
+    "#D6C0B2"
+   ],
+   "raster_inside": false,
+   "text_nodes": false,
+   "opened": true,
+   "sha256": "cf7ae1dae998a0ebb623381b09818027a923d7363a321f6a6105209340d1326d"
+  },
+  {
    "path": "tools/.measure.js",
    "family": "tooling",
    "ext": "js",
@@ -25381,7 +25925,7 @@
    "path": "tools/build-colours.py",
    "family": "tooling",
    "ext": "py",
-   "bytes": 6085,
+   "bytes": 8141,
    "opened": null
   },
   {
@@ -25406,10 +25950,17 @@
    "opened": null
   },
   {
+   "path": "tools/build-drive-sync-notebook.py",
+   "family": "tooling",
+   "ext": "py",
+   "bytes": 4374,
+   "opened": null
+  },
+  {
    "path": "tools/build-graphics.js",
    "family": "tooling",
    "ext": "js",
-   "bytes": 18695,
+   "bytes": 18763,
    "opened": null
   },
   {
@@ -25423,14 +25974,14 @@
    "path": "tools/build-guidelines.js",
    "family": "tooling",
    "ext": "js",
-   "bytes": 64713,
+   "bytes": 67904,
    "opened": null
   },
   {
    "path": "tools/build-icons.js",
    "family": "tooling",
    "ext": "js",
-   "bytes": 61156,
+   "bytes": 64723,
    "opened": null
   },
   {
@@ -25448,10 +25999,24 @@
    "opened": null
   },
   {
+   "path": "tools/build-logo-matrix.js",
+   "family": "tooling",
+   "ext": "js",
+   "bytes": 3267,
+   "opened": null
+  },
+  {
    "path": "tools/build-logos.js",
    "family": "tooling",
    "ext": "js",
-   "bytes": 15151,
+   "bytes": 12424,
+   "opened": null
+  },
+  {
+   "path": "tools/build-master-library.py",
+   "family": "tooling",
+   "ext": "py",
+   "bytes": 33873,
    "opened": null
   },
   {
@@ -25486,7 +26051,7 @@
    "path": "tools/build-print.js",
    "family": "tooling",
    "ext": "js",
-   "bytes": 16478,
+   "bytes": 16557,
    "opened": null
   },
   {
@@ -25553,10 +26118,24 @@
    "opened": null
   },
   {
+   "path": "tools/build-webfonts.py",
+   "family": "tooling",
+   "ext": "py",
+   "bytes": 2089,
+   "opened": null
+  },
+  {
    "path": "tools/compress-pdf.py",
    "family": "tooling",
    "ext": "py",
-   "bytes": 989,
+   "bytes": 2076,
+   "opened": null
+  },
+  {
+   "path": "tools/drive_sync.py",
+   "family": "tooling",
+   "ext": "py",
+   "bytes": 6475,
    "opened": null
   },
   {
@@ -25599,6 +26178,13 @@
    "family": "tooling",
    "ext": "js",
    "bytes": 6109,
+   "opened": null
+  },
+  {
+   "path": "tools/qa-library.py",
+   "family": "tooling",
+   "ext": "py",
+   "bytes": 20422,
    "opened": null
   },
   {
@@ -25658,6 +26244,13 @@
    "opened": null
   },
   {
+   "path": "tools/siraj-warmth-match.py",
+   "family": "tooling",
+   "ext": "py",
+   "bytes": 3991,
+   "opened": null
+  },
+  {
    "path": "tools/lib/logo-paths.json",
    "family": "tooling",
    "ext": "json",
@@ -25700,10 +26293,59 @@
    "opened": true
   },
   {
+   "path": "docs/library/DRIVE_STRUCTURE.md",
+   "family": "docs",
+   "ext": "md",
+   "bytes": 4527,
+   "opened": true
+  },
+  {
+   "path": "docs/library/LIBRARY_AUDIT_v1.0.1.md",
+   "family": "docs",
+   "ext": "md",
+   "bytes": 7903,
+   "opened": true
+  },
+  {
+   "path": "docs/library/NAMING.md",
+   "family": "docs",
+   "ext": "md",
+   "bytes": 2676,
+   "opened": true
+  },
+  {
+   "path": "docs/library/QA_REPORT_v1.0.1.md",
+   "family": "docs",
+   "ext": "md",
+   "bytes": 1797,
+   "opened": true
+  },
+  {
+   "path": "docs/library/README.md",
+   "family": "docs",
+   "ext": "md",
+   "bytes": 2973,
+   "opened": true
+  },
+  {
+   "path": "docs/library/SIRAJ_Drive-Sync_Library_v1.0.1.ipynb",
+   "family": "docs",
+   "ext": "ipynb",
+   "bytes": 4254,
+   "opened": null
+  },
+  {
+   "path": "docs/library/drive-map.json",
+   "family": "docs",
+   "ext": "json",
+   "bytes": 5135,
+   "opened": true
+  },
+  {
    "path": "docs/library/audit/library-inventory.json",
    "family": "docs",
    "ext": "json",
-   "bytes": 750001,
+   "bytes": 754102,
    "opened": true
   },
   {
@@ -25738,9 +26380,9 @@
    "path": ".claude/skills/siraj-brand-system/SKILL.md",
    "family": "skill",
    "ext": "md",
-   "bytes": 18480,
+   "bytes": 19031,
    "opened": true,
-   "sha256": "11b1e0a654f49ab076a4ec3ac2d2ff006a4c188366527136e9d22786f9e8e689"
+   "sha256": "c704d409efcf8801ea2e9fbd58c607b82c34969b16db37c592ff2cb7db30bb73"
   },
   {
    "path": ".claude/skills/siraj-brand-system/assets/fonts/Jost-ExtraLight.ttf",
@@ -25806,9 +26448,9 @@
    "path": ".claude/skills/siraj-brand-system/assets/fonts/OFL-Tajawal.txt",
    "family": "skill",
    "ext": "txt",
-   "bytes": 4314,
+   "bytes": 4464,
    "opened": true,
-   "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3"
+   "sha256": "9b584984f9db0ee30347391a76eff9c0a6b03dc450c3c6afe3757a2cb3a4db87"
   },
   {
    "path": ".claude/skills/siraj-brand-system/assets/fonts/Tajawal-Bold.ttf",
@@ -26333,7 +26975,7 @@
    "ext": "css",
    "bytes": 10833,
    "opened": null,
-   "sha256": "0fa5f13232540283485410db18d6a52477e702eecdc1ee8d0f2572eb8b5b1a04"
+   "sha256": "65cdf8dbbbe6f540b79e8754775972eb638a29b9b0d8820d04e091dd2652a198"
   },
   {
    "path": ".claude/skills/siraj-brand-system/assets/tokens/siraj-wind.json",
@@ -26347,9 +26989,9 @@
    "path": ".claude/skills/siraj-brand-system/assets/tokens/siraj.tokens.json",
    "family": "skill",
    "ext": "json",
-   "bytes": 20485,
+   "bytes": 20673,
    "opened": true,
-   "sha256": "8f0908e7deb390c7ef914bcc66632ffcdbd2f092476a4532991f02dd903aac59"
+   "sha256": "3188d864b331fd139c1f7277fcccdc39018927fbdc8fa8196b0eca38ce80b4fd"
   },
   {
    "path": ".claude/skills/siraj-brand-system/references/connectors.md",
@@ -26363,9 +27005,9 @@
    "path": ".claude/skills/siraj-brand-system/references/production.md",
    "family": "skill",
    "ext": "md",
-   "bytes": 11119,
+   "bytes": 11273,
    "opened": true,
-   "sha256": "d9d851b166d975c513f4136053ea3928e2ca06bf76242d4c717d0d610f1eb6db"
+   "sha256": "1405bf60bac540c7c1af4f31fd695511a0c9700dae9f844fca777279f58f1fd7"
   },
   {
    "path": ".claude/skills/siraj-brand-system/references/visual-system.md",
@@ -26387,33 +27029,33 @@
    "path": "AGENTS.md",
    "family": "root",
    "ext": "md",
-   "bytes": 5938,
+   "bytes": 6414,
    "opened": true,
-   "sha256": "3bf652cef2aac25a4c5255697b2f0dd7fda068db430a94558b06f32134562224"
+   "sha256": "9374bb0a95a54a49751fd1a3577e1d75c0c13e5e2e057c93296fbfbb59b1643e"
   },
   {
    "path": "README.md",
    "family": "root",
    "ext": "md",
-   "bytes": 9640,
+   "bytes": 9726,
    "opened": true,
-   "sha256": "dd89c05f15c0aa15fb0aad09fc655a11f6a71c8414dca7c854ff931a288d8f17"
+   "sha256": "bf23eee158076cc506b12d06db885047e7191c6fd12ac86979ee72db707035c3"
   },
   {
    "path": "ASSET-INDEX.md",
    "family": "root",
    "ext": "md",
-   "bytes": 308780,
+   "bytes": 309079,
    "opened": true,
-   "sha256": "cd57ecea7d86ad1243659e0e9f637ada0a819ce396221ac7acf90dadb18dad66"
+   "sha256": "6df84fe9bf9fd33a9c62b6fefb2778fb53c2b295a2cceac43c05acc70af9cd74"
   },
   {
    "path": "BRAND_STATUS.md",
    "family": "root",
    "ext": "md",
-   "bytes": 4514,
+   "bytes": 4851,
    "opened": true,
-   "sha256": "04bcf6ccf4f186b3677e0d430369e058ffde2614f69182230311cdfaea15a27b"
+   "sha256": "497ce44d83b48730821a0e90735f66899b3d69542a014409d6d3e8177512869c"
   },
   {
    "path": "DESIGN_SYSTEM_STATUS.md",
@@ -26435,9 +27077,9 @@
    "path": "CHANGELOG.md",
    "family": "root",
    "ext": "md",
-   "bytes": 11175,
+   "bytes": 14173,
    "opened": true,
-   "sha256": "261e5121e5ab36281c1812ec0623bb694fecfbba5d82b48c42f4ecdce8feeb1f"
+   "sha256": "43ead406a5e7e21b5de78d81653e994e6ec5cb4155984d354b8e28658beea3dd"
   },
   {
    "path": "RELEASE_NOTES_v1.0.md",
@@ -26459,9 +27101,9 @@
    "path": "package.json",
    "family": "root",
    "ext": "json",
-   "bytes": 2098,
+   "bytes": 2533,
    "opened": true,
-   "sha256": "901d32386997d7e3e160cfa790b0e5097a200b27ac19a4bc9ab2fea474f91488"
+   "sha256": "f5ff1fe6cba7cf389577b067d3205cd80a725bcaa2eff9ced0adebcb822b0703"
   }
  ],
  "failures": [
@@ -26475,24 +27117,12 @@
  ],
  "missing_refs": [
   {
-   "in": "00-Brand-Foundation/BRAND-STRATEGY.md",
-   "ref": "14-Property-Marketing/00-Endorsement-Lockup/"
-  },
-  {
-   "in": "09-Design-System/README.md",
-   "ref": "tools/build-ui.js"
-  },
-  {
    "in": "14-Property-Marketing/README.md",
    "ref": "tools/build-property.js"
   },
   {
    "in": "14-Property-Marketing/README.md",
    "ref": "tools/build-property.js"
-  },
-  {
-   "in": "21-Brand-Kit/Claude-Design-Kickoff/01_Brief/BRAND-STRATEGY.md",
-   "ref": "14-Property-Marketing/00-Endorsement-Lockup/"
   },
   {
    "in": "13-Presentations/README.md",
@@ -26571,6 +27201,10 @@
    "ref": "tools/build-property.js"
   },
   {
+   "in": ".claude/skills/siraj-brand-system/references/production.md",
+   "ref": "tools/build-property.js"
+  },
+  {
    "in": "DESIGN_SYSTEM_STATUS.md",
    "ref": "docs/templates.html"
   }
@@ -26600,14 +27234,6 @@
    "01-Logos/Dark/SIRAJ_Social-Avatar_Square_v1.0.png",
    "21-Brand-Kit/Claude-Design-Kickoff/02_Logo/SIRAJ_Social-Avatar_Square_v1.0.png",
    ".claude/skills/siraj-brand-system/assets/logo/SIRAJ_Social-Avatar_Square_v1.0.png"
-  ],
-  [
-   "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.svg",
-   "21-Brand-Kit/Claude-Design-Kickoff/02_Logo/SIRAJ_Lockup_Arabic_Primary_v1.0.svg"
-  ],
-  [
-   "01-Logos/Lockups/SIRAJ_Lockup_Arabic_Reversed_v1.0.svg",
-   "21-Brand-Kit/Claude-Design-Kickoff/02_Logo/SIRAJ_Lockup_Arabic_Reversed_v1.0.svg"
   ],
   [
    "01-Logos/Master/SIRAJ_Logo_Master-Reversed_v1.0.svg",
@@ -26711,11 +27337,13 @@
   ],
   [
    "03-Typography/fonts/Jost/OFL.txt",
+   "03-Typography/fonts/WOFF2/Jost/OFL.txt",
    "21-Brand-Kit/Claude-Design-Kickoff/03_Fonts/OFL-Jost.txt",
    ".claude/skills/siraj-brand-system/assets/fonts/OFL-Jost.txt"
   ],
   [
    "03-Typography/fonts/Tajawal/OFL.txt",
+   "03-Typography/fonts/WOFF2/Tajawal/OFL.txt",
    "21-Brand-Kit/Claude-Design-Kickoff/03_Fonts/OFL-Tajawal.txt",
    ".claude/skills/siraj-brand-system/assets/fonts/OFL-Tajawal.txt"
   ],
@@ -27163,6 +27791,14 @@
   [
    "99-Archive/Postponed/Project-Lettering/01-Logos-Project/SIRAJ_Project-Siraj_Lettering_Silk-Light_v1.0.svg",
    "99-Archive/Postponed/Project-Lettering/Claude-Design-Kickoff-Project/SIRAJ_Project-Siraj_Lettering_Silk-Light_v1.0.svg"
+  ],
+  [
+   "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Primary_v1.0.svg",
+   "99-Archive/Withdrawn/Arabic-Name-Lockups/Brand-Kit-Copy/SIRAJ_Lockup_Arabic_Primary_v1.0.svg"
+  ],
+  [
+   "99-Archive/Withdrawn/Arabic-Name-Lockups/SIRAJ_Lockup_Arabic_Reversed_v1.0.svg",
+   "99-Archive/Withdrawn/Arabic-Name-Lockups/Brand-Kit-Copy/SIRAJ_Lockup_Arabic_Reversed_v1.0.svg"
   ]
  ]
 }

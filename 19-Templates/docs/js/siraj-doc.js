@@ -15,8 +15,9 @@
   var CFG = window.SIRAJ_CONFIG || {};
   var q = new URLSearchParams(location.search);
   var root = document.documentElement;
-  var MODE = { preview: q.has('preview'), marks: q.has('marks'), dieline: q.get('dieline') !== '0', name: q.get('name') || '' };
+  var MODE = { preview: q.has('preview'), marks: q.has('marks'), dieline: q.get('dieline') !== '0', name: q.get('name') || '', exp: q.has('export') };
   if (MODE.preview) root.classList.add('is-preview');
+  if (MODE.exp) root.classList.add('is-export');
   if (MODE.marks) root.classList.add('has-marks');
   if (!MODE.dieline) root.classList.add('no-dieline');
 
@@ -42,10 +43,15 @@
     last: function (v) { return String(v).replace(/^(.*)[,،]\s*([^,،]+)$/, '$2'); }
   };
   var RE = /\{\{\s*([^}]+?)\s*\}\}/g;
+  // Unresolved data (decision D5, 2026-10-15): a value that is not confirmed yet is «—». Editable templates show the
+  // labelled slot; exports (?export, set by tools/build-print.js) hide the field instead of printing a dash.
+  var SLOT = '—';
+  function unresolved(v) { return v === undefined || v === null || String(v).trim() === SLOT; }
   function resolve(expr) {
     var parts = expr.split('|');
     var v = get(parts[0].trim());
-    if (v === undefined) { console.warn('[SIRAJ] missing config value: ' + parts[0]); return '—'; }
+    if (v === undefined) { console.warn('[SIRAJ] missing config value: ' + parts[0]); return SLOT; }
+    if (unresolved(v)) return SLOT;
     for (var i = 1; i < parts.length; i++) {
       var f = FILTERS[parts[i].trim()];
       if (f) v = f(v);
@@ -53,12 +59,59 @@
     return String(v);
   }
   function interpolate(s) { return s.replace(RE, function (_, e) { return resolve(e); }); }
+  // text node → text with each unresolved token wrapped in <span data-unresolved>—</span>
+  function bindText(t) {
+    var s = t.nodeValue, frag = document.createDocumentFragment(), last = 0, m, slot = false;
+    var re = new RegExp(RE.source, 'g'); // own regex: interpolate() below resets RE.lastIndex
+    while ((m = re.exec(s))) {
+      var v = resolve(m[1]);
+      if (v !== SLOT) continue;
+      slot = true;
+      frag.appendChild(document.createTextNode(interpolate(s.slice(last, m.index))));
+      var sp = document.createElement('span'); sp.setAttribute('data-unresolved', ''); sp.textContent = SLOT;
+      frag.appendChild(sp);
+      last = m.index + m[0].length;
+    }
+    if (!slot) { t.nodeValue = interpolate(s); return; }
+    frag.appendChild(document.createTextNode(interpolate(s.slice(last))));
+    t.parentNode.replaceChild(frag, t);
+  }
+  // exports: remove each unresolved slot with its separator / line break; hide a field left with only its label
+  var LABELS = 'b, .k, .lbl, .anno, .ig';
+  function bareText(el) {
+    var c = el.cloneNode(true);
+    c.querySelectorAll(LABELS).forEach(function (x) { x.remove(); });
+    return c.textContent.replace(/[\s·،,]+/g, '');
+  }
+  function hideEl(el) { if (el) { el.hidden = true; el.style.setProperty('display', 'none', 'important'); } }
+  function hideUnresolved(scope) {
+    scope.querySelectorAll('[data-unresolved]').forEach(function (el) {
+      var field = el.closest('[data-field]');
+      if (field) { hideEl(field); return; }
+      var parent = el.parentNode;
+      // nearest real neighbours (binding leaves empty text nodes around the slot)
+      var prev = el.previousSibling, next = el.nextSibling;
+      while (prev && prev.nodeType === 3 && !prev.nodeValue.trim()) prev = prev.previousSibling;
+      while (next && next.nodeType === 3 && !next.nodeValue.trim()) next = next.nextSibling;
+      el.remove();
+      if (prev && prev.nodeType === 3 && /\s*[·،,]\s*$/.test(prev.nodeValue)) prev.nodeValue = prev.nodeValue.replace(/\s*[·،,]\s*$/, '');
+      else if (next && next.nodeType === 3 && /^\s*[·،,]\s*/.test(next.nodeValue)) next.nodeValue = next.nodeValue.replace(/^\s*[·،,]\s*/, '');
+      if (next && next.nodeName === 'BR') next.remove();
+      else if (prev && prev.nodeName === 'BR') prev.remove();
+      if (parent && parent.nodeType === 1 && !bareText(parent)) {
+        hideEl(parent);
+        var k = parent.previousElementSibling;
+        if (parent.classList.contains('v') && k && k.classList.contains('k')) hideEl(k);
+      }
+    });
+  }
 
   function bind(scope) {
     var walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, null);
     var n, list = [];
     while ((n = walker.nextNode())) if (n.nodeValue.indexOf('{{') !== -1) list.push(n);
-    list.forEach(function (t) { t.nodeValue = interpolate(t.nodeValue); });
+    list.forEach(bindText);
+    if (MODE.exp) hideUnresolved(scope);
     // Instagram = icon + handle, never «@» (client rule 2026-10-13): <bdi dir="ltr" data-ig>{{contact.social_handle}}</bdi>
     var ig = (CFG.contact && CFG.contact.social_icon_svg) || '';
     scope.querySelectorAll('[data-ig]').forEach(function (el) { if (!el.querySelector('.ig')) el.insertAdjacentHTML('afterbegin', ig); });

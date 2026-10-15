@@ -17,6 +17,8 @@ Checks (brief §28):
   archive         no production source loads a file from 99-Archive (except the documented «before» reference)
   references      paths quoted in library documentation exist
   placeholders    no PLACEHOLDER / Lorem / TODO / «asset pending» / postponed lettering in production sources
+  decisions       owner decisions D1–D6 (2026-10-15) hold: no Arabic-name lockup, vector silk restricted, border-strong
+                  #8C6B64, no lettering, no «—» in exports or publish briefs, Ribbon KV within the family grade
 """
 import hashlib, importlib.util, json, os, re, subprocess, sys
 from xml.etree import ElementTree as ET
@@ -246,6 +248,56 @@ for f in [p for p in prod_files if p.endswith(('.html', '.svg', '.css', '.json')
     if PH.search(t):
         ph.append(f'{f}: {PH.search(t).group(0)}')
 (fail if ph else ok)('placeholders', 'no placeholder text, «asset pending» tiles or postponed lettering in production sources' + ('' if not ph else ' · ' + '; '.join(ph[:5])))
+
+# ---- owner decisions (2026-10-15) ------------------------------------------------------------------------------------
+dec = []
+HIST = ('CHANGELOG.md', 'RELEASE_NOTES_v1.0.md', 'RELEASE_NOTES_LIBRARY_v1.0.1.md', 'ASSET-INDEX.md', 'SIRAJ_v1.0_SHA256SUMS.txt',
+        'docs/qa/RELEASE_QA_v1.0.md', 'docs/library/QA_REPORT_v1.0.1.md', 'docs/library/LIBRARY_AUDIT_v1.0.1.md', 'tools/qa-library.py')
+LOCK = re.compile(r'SIRAJ_Lockup_(Horizontal|Stacked|Arabic)_|Lockup_Arabic_|lk--(ar|hz|stack)\b')
+for cur, dirs, names in os.walk(ROOT):
+    rel = os.path.relpath(cur, ROOT)
+    if rel.startswith(('99-Archive', 'node_modules', '.git', 'website', 'docs/library/audit')) or 'node_modules' in rel or '/.cache' in rel:
+        dirs[:] = []
+        continue
+    for n in names:
+        f = os.path.normpath(os.path.join(rel, n))
+        if re.match(r'SIRAJ_Lockup_(Horizontal|Stacked|Arabic)_', n):
+            dec.append(f'D1: withdrawn lockup outside the archive: {f}')
+        if f in HIST or n in ('brand-master-manifest.json', 'library-inventory.json') or not n.endswith(SCAN_EXT + ('.md', '.txt', '.svg')):
+            continue
+        t = open(os.path.join(cur, n), encoding='utf-8', errors='replace').read()
+        m = LOCK.search(t)
+        if m and not (f.startswith('99-Archive') or 'Withdrawn/Arabic-Name-Lockups' in t[max(0, m.start() - 200):m.end() + 200] or 'retired' in t[max(0, m.start() - 120):m.end() + 120]):
+            dec.append(f'D1: {f} references a withdrawn lockup ({m.group(0)})')
+sv = [e for e in M['entries'] if e['id'] == 'graphic.silk-vector']
+if not sv or sv[0]['status'] != 'SPECIAL PRODUCTION':
+    dec.append('D2: vector silk is not classified SPECIAL PRODUCTION')
+for f in ('09-Design-System/tokens/siraj.tokens.json', '09-Design-System/tokens/build/siraj-tokens.css', 'design-system/build/siraj-ds.css'):
+    t = open(f, encoding='utf-8').read()
+    if '7A5A55' in t.upper() or '8C6B64' not in t.upper():
+        dec.append(f'D3: {f} does not carry border-strong #8C6B64')
+if [p for p in prod_files if re.search(r'Lettering', p)]:
+    dec.append('D4: project-name lettering in production')
+for f in [p for p in prod_files if p.startswith(('12-Print/PDF/', '19-Templates/docs/PDF/'))] + \
+         [os.path.join(d, n) for d in ('12-Print/PDF/Stationery', '12-Print/PDF/Documents', '12-Print/PDF/Identity', '19-Templates/docs/PDF') if os.path.isdir(d) for n in os.listdir(d) if n.endswith('.pdf')]:
+    code, txt = run(['pdftotext', '-q', f, '-'])
+    txt = re.sub(r'[«»]\s*—\s*[«»]', '', txt)
+    if re.search(r'(^|\s)—(\s|$)', txt):
+        dec.append(f'D5: unresolved «—» in export {f}')
+for f in sorted(os.listdir('11-Social/Briefs/v1')):
+    if f.endswith('.json'):
+        b = json.load(open(os.path.join('11-Social/Briefs/v1', f), encoding='utf-8'))
+        if b.get('kind', 'publish') == 'publish' and '—' in json.dumps(b, ensure_ascii=False):
+            dec.append(f'D5: publish brief with «—» slot: {f}')
+spec_w = importlib.util.spec_from_file_location('wm', os.path.join(ROOT, 'tools', 'siraj-warmth-match.py'))
+wm = importlib.util.module_from_spec(spec_w)
+spec_w.loader.exec_module(wm)
+for r in ('4x5', '9x16'):
+    mw = wm.measure(f'14-Property-Marketing/12-Project-Siraj/Source/KeyVisuals/SIRAJ_Project-Siraj_KV_Ribbon_{r}_v1.0.jpg')
+    if mw['warm_env'] > 4.0 or mw['yellow'] > 0.5:
+        dec.append(f'D6: Ribbon KV {r} still warmer than the family {mw}')
+dec = sorted(set(dec))
+(fail if dec else ok)('decisions', 'D1 no Arabic-name lockup in production · D2 vector silk restricted · D3 border-strong #8C6B64 · D4 no lettering · D5 no «—» in exports · D6 Ribbon KV in family grade' + ('' if not dec else ' · ' + '; '.join(dec[:6])))
 
 # ---- report ----------------------------------------------------------------------------------------------------------
 fails = [r for r in results if r[1] == 'FAIL']

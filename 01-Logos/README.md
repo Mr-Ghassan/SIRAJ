@@ -35,14 +35,13 @@ Each variant is supplied as tight SVG, `_ClearSpace` SVG, PNG at 512, 1024, 2048
 
 | Lockup | Use |
 |---|---|
-| **Horizontal**: wordmark, stone rule, then «سراج للتطوير العقاري» above «REAL ESTATE DEVELOPMENT» | Letterheads, website header (desktop), signage fascias |
-| **Stacked**: wordmark, rule, Arabic name, English descriptor | Covers, hoardings, end cards |
-| **Descriptor**: wordmark over «REAL ESTATE DEVELOPMENT» | English-only contexts |
-| **Arabic-led**: «سراج للتطوير العقاري» over the wordmark | Arabic-first communication, government correspondence |
+| **Descriptor**: wordmark over «REAL ESTATE DEVELOPMENT» (Jost Regular, tracked, outlined) | English-only contexts (dormant) |
 
-The Arabic name is set in **Tajawal Medium** and the descriptor in **Jost Regular** with tracking. Both are outlined (HarfBuzz-shaped). They form a **typographic lockup**, not a redrawn Arabic logo.
-
-> **Recommendation:** commission a bespoke Arabic wordmark that shares the stencil cuts and the Lumen. Until it is approved, use these lockups.
+**Arabic-name lockups withdrawn (decision D1, 2026-10-15).** The Horizontal, Stacked and Arabic-led lockups typeset
+«سراج للتطوير العقاري» in Tajawal; they are archived in `99-Archive/Withdrawn/Arabic-Name-Lockups/` and never used. The
+official SIRAJ English artwork is the brand mark. The registered Arabic corporate name appears only as normal legal or
+administrative text where required (a letterhead footer, a contract, an ID-card return address), never as a logo, next
+to the wordmark as a unit, or as a substitute lockup.
 
 ## Approved backgrounds (`Light/`, `Dark/`)
 
@@ -63,6 +62,6 @@ The **S** is lifted from the wordmark without modification. Use it only for app 
 5. Never apply drop shadows, glows, bevels, outlines or 3D extrusion. In the intro, the Lumen glow is a lighting event, not a logo effect.
 6. Never place the wordmark on busy image areas without enough contrast. Use White or Sand on a calm area, or move the logo.
 7. Never let silk or any graphic cross, overlap or distort the wordmark.
-8. Never lock up the wordmark with other words, taglines or icons except in the approved lockups.
+8. Never lock up the wordmark with other words, taglines or icons except the approved Descriptor lockup. Never typeset «سراج» or «سراج للتطوير العقاري» as a logo.
 9. Never place it inside a container shape (box, circle or badge), except the approved avatar and monogram tiles.
 10. Never set "SIRAJ" in a typeface as a substitute for the logo.

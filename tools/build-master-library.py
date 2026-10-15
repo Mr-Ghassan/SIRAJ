@@ -11,7 +11,7 @@ to the repository root; each glob must match at least one existing file, or the 
   PRODUCTION EXPORT  ready-to-use files derived from a master
   PREVIEW            specimen, contact sheet or reference render — never a deliverable
   REFERENCE          art-direction reference, not for publication
-  REVIEW             approved in v1.0 but conflicting with a later rule — owner decision recorded in DECISIONS
+  SPECIAL PRODUCTION restricted use: only where a production process technically needs it (decision D2)
   ARCHIVE            not approved for production (99-Archive)
   POSTPONED          cancelled/postponed by the client; never use until re-approved
 """
@@ -22,13 +22,13 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 LIB_VERSION = '1.0.1'
 CHECK = '--check' in sys.argv
 
-DECISIONS = {
-    'D1': 'Bilingual lockups typeset «سراج للتطوير العقاري» in Tajawal (approved guide v1.0, p.18). The 2026-10-13 rule says «سراج» is never typeset as a name in Tajawal. Confirm the lockups as approved (company name, not project name), or retire them.',
-    'D2': 'Vector silk (Silk Ribbon Vector/Tonal, Silk Wrap Vector) is shown in the approved guide v1.0, but the real-silk-only rule (2026-10-11) excludes graphic silk. Keep for screen print / vinyl / embroidery only, or archive.',
-    'D3': 'One dark-UI token differs between the two token sets: border-strong #8C6B64 (design-system/, Design System v1.0) vs #7A5A55 (09-Design-System/, platform exports). Confirm #8C6B64 and regenerate 09 exports, or document the difference as intentional.',
-    'D4': 'A new project-name treatment (the «مشروع سراج» lettering is postponed).',
-    'D5': 'Project data (prices, areas, unit counts, dates) and legal data (CR number, VATIN, address, bank details) for templates that show «—».',
-    'D6': 'Ribbon key visual: dusk sky and city lights measure warmer than the other key visuals (highlight hue ≈ 45° vs 22–29°). Visual review: keep, or regrade with tools/siraj-luxe-grade.py.',
+DECISIONS = {  # owner decisions, resolved by SIRAJ on 2026-10-15
+    'D1': 'Arabic-name lockups WITHDRAWN. Every lockup that typeset «سراج للتطوير العقاري» in Tajawal (Horizontal, Stacked, Arabic-led; all colours) is archived in 99-Archive/Withdrawn/Arabic-Name-Lockups. The official English artwork is the brand mark; the Descriptor lockup stays. The registered Arabic name appears only as normal legal/administrative text where required, never as a logo or substitute lockup.',
+    'D2': 'Vector silk KEPT as SPECIAL PRODUCTION / RESTRICTED USE: vinyl cutting, embroidery, special printing, fabrication, plotter/cutting workflows and other cases that technically require vectors. It never replaces the realistic pressed-maroon silk in normal marketing visuals.',
+    'D3': 'Dark border-strong = #8C6B64 in both token sets (09-Design-System tokens + platform exports regenerated). #7A5A55 had no consumer and no distinct role, so it was retired rather than kept as a third border level.',
+    'D4': 'Project name REMAINS POSTPONED. No project-name lettering is created, designed or restored.',
+    'D5': 'Missing legal/project data stays unresolved. «—» exists only in editable/internal templates; every publish-ready export hides an unresolved field (doc runtime ?export, social publish briefs) instead of showing a placeholder, dash or invented value.',
+    'D6': 'Ribbon key visual re-graded (colour only) to the family grade with tools/siraj-warmth-match.py --strength 1.4: warm environment 16.3 % → 2.5 %, yellow light 1.6 % → 0 %; composition unchanged; derived posts, stories, slide and carousel rebuilt.',
 }
 
 def E(id, category, name, status, paths, use, version='1.0', kind=None, notes=None, decision=None, sources=None):
@@ -78,10 +78,9 @@ ENTRIES = [
     E('logo.backgrounds', 'Logos', 'Logo on approved backgrounds', 'PRODUCTION EXPORT', [L + 'Light/SIRAJ_Logo_On-*', L + 'Dark/SIRAJ_Logo_On-*'],
       'Ready compositions on Ivory, White, Linen, Sand (light) and Maroon, Deep, Shadow, Black, G1 (dark); landscape and square.'),
 ] + [
-    E(f'logo.lockup.{k.lower()}', 'Logos', f'Lockup — {k}', 'PRODUCTION EXPORT', [L + f'Lockups/SIRAJ_Lockup_{k}_*'],
-      use, decision='D1', notes='Approved in guide v1.0 (p.18). Typographic lockup: Arabic name in Tajawal Medium, descriptor in Jost, outlined. PNG 2400 px; PDF for Primary/Reversed.')
-    for k, use in (('Horizontal', 'Letterheads, signage fascias'), ('Stacked', 'Covers, hoardings, end cards'),
-                   ('Arabic', 'Arabic-led: Arabic-first communication, government correspondence'), ('Descriptor', 'Wordmark over «REAL ESTATE DEVELOPMENT» (English-only contexts)'))
+    E('logo.lockup.descriptor', 'Logos', 'Lockup — Descriptor', 'PRODUCTION EXPORT', [L + 'Lockups/SIRAJ_Lockup_Descriptor_*'],
+      'Wordmark over «REAL ESTATE DEVELOPMENT» (English-only contexts). The only approved lockup.', decision='D1',
+      notes='Descriptor in Jost Regular, tracked and outlined. PNG 2400 px; PDF for Primary/Reversed. The Arabic-name lockups are withdrawn (D1).')
 ] + [
     E('logo.construction', 'Logos', 'Construction and clear-space diagram', 'PREVIEW', [L + 'Construction/*'], 'Explains proportion (3.49 : 1), grid unit and clear space (½ H).'),
     E('logo.spec', 'Logos', 'Logo specification', 'SOURCE', [L + 'README.md'], 'Anatomy, variants, clear space, minimum size, incorrect use.'),
@@ -125,9 +124,9 @@ ENTRIES = [
         ('architectural-cut', 'Architectural-Cut', 'Architectural Cut', 'Splits a plane or image at the Lumen angle.'),
         ('silk-fold', 'Silk-Fold', 'Silk Fold (planar corner fold)', 'Covers and section dividers.'))
 ] + [
-    E('graphic.silk-vector', 'Graphic system', 'Silk Ribbon (vector, continuous + tonal) and Silk Wrap (vector)', 'REVIEW',
+    E('graphic.silk-vector', 'Graphic system', 'Silk Ribbon (vector, continuous + tonal) and Silk Wrap (vector)', 'SPECIAL PRODUCTION',
       ['05-Graphic-System/SVG/SIRAJ_Silk-Ribbon_Vector-*.svg', '05-Graphic-System/SVG/SIRAJ_Silk-Wrap_Vector-*.svg', '05-Graphic-System/PNG/SIRAJ_Silk-Ribbon_Vector-*.png', '05-Graphic-System/PNG/SIRAJ_Silk-Wrap_Vector-*.png'],
-      'Large-format / screen print / vinyl where a photograph cannot be reproduced.', decision='D2'),
+      'RESTRICTED USE: vinyl cutting, embroidery, special printing, fabrication, plotter/cutting work that technically needs vectors. Never in place of real pressed silk in marketing visuals.', decision='D2'),
     E('graphic.masks', 'Graphic system', 'Masks (Portal, Silk Corner LTR/RTL)', 'PRODUCTION EXPORT', ['05-Graphic-System/Masks/*.svg', '05-Graphic-System/*.css'], 'Clip paths for image frames (CSS + SVG).'),
     E('graphic.spec', 'Graphic system', 'Graphic system specification + specimen', 'SOURCE', ['05-Graphic-System/README.md', '05-Graphic-System/Previews/*', 'tools/build-graphics.js'], 'Origin, rule and file of every element.'),
 
@@ -239,6 +238,8 @@ ENTRIES = [
     # ------------------------------------------------------------------------------------------------ ARCHIVE / POSTPONED
     E('archive.project-lettering', 'Archive', '«مشروع سراج» project lettering', 'POSTPONED', ['99-Archive/Postponed/Project-Lettering/**/*'], 'Never use until a new treatment is approved.', decision='D4'),
     E('archive.demo', 'Archive', 'Fictional demo kit, earlier UI kit, print waiting for legal data', 'ARCHIVE', ['99-Archive/Demo-Isolated/**/*'], 'Not for production.', decision='D5'),
+    E('archive.lockups-arabic', 'Archive', 'Withdrawn Arabic-name lockups (Horizontal, Stacked, Arabic-led)', 'ARCHIVE', ['99-Archive/Withdrawn/Arabic-Name-Lockups/**/*'],
+      'Never use. The registered Arabic name is legal/administrative text only.', decision='D1'),
     E('archive.english', 'Archive', 'English-dormant outputs', 'ARCHIVE', ['99-Archive/English-Dormant/**/*'], 'Arabic-only policy.'),
     E('archive.silk', 'Archive', 'Retired silk (CG, creased, washed, soft footage)', 'ARCHIVE',
       ['99-Archive/Silk-CG-v1.0/**/*', '99-Archive/Silk-Creased-v1.0/**/*', '99-Archive/Silk-Washed-v1.0/**/*', '99-Archive/Silk-Footage-Soft-v1.0/**/*'], 'Never use.'),
@@ -300,7 +301,7 @@ def main():
         '$schema': 'siraj-brand-master-manifest/1',
         'library': 'SIRAJ Brand Master Library', 'version': LIB_VERSION, 'brand_release': 'SIRAJ Brand System v1.0 (tag siraj-brand-system-v1.0.0)',
         'generated_by': 'tools/build-master-library.py', 'naming': 'SIRAJ_<Asset>_<Variant>_v<version>.<ext> (see docs/library/NAMING.md)',
-        'statuses': ['MASTER', 'SOURCE', 'PRODUCTION EXPORT', 'PREVIEW', 'REFERENCE', 'REVIEW', 'ARCHIVE', 'POSTPONED'],
+        'statuses': ['MASTER', 'SOURCE', 'PRODUCTION EXPORT', 'SPECIAL PRODUCTION', 'PREVIEW', 'REFERENCE', 'ARCHIVE', 'POSTPONED'],
         'decisions': DECISIONS,
         'entries': out_entries,
         'files': dict(sorted(index.items())),
@@ -317,7 +318,7 @@ def main():
           '`python3 -I tools/build-master-library.py` from the same declaration as `brand-master-manifest.json` (machine-readable,',
           'with size, pixel dimensions and SHA-256 of every production file). Do not edit by hand.', '',
           '**Statuses** · **MASTER** canonical original · **SOURCE** editable / generating source · **PRODUCTION EXPORT** ready to use ·',
-          '**PREVIEW** look only · **REFERENCE** art direction, never published · **REVIEW** approved in v1.0, decision pending ·',
+          '**SPECIAL PRODUCTION** restricted use, only where a process technically needs it · **PREVIEW** look only · **REFERENCE** art direction, never published ·',
           '**ARCHIVE** not for production · **POSTPONED** cancelled until re-approved.', '',
           'Contact rules everywhere: phone **7771 4404** · Instagram icon + **SIRAJPROPERTIES** (never «@») · **WWW.SIRAJPROPERTIES.NET** where permitted.', '',
           'Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمية», Arabic folders per family and status (المصدر · ملفات الإنتاج ·',
@@ -337,7 +338,7 @@ def main():
             extra = f" **Decision {e['decision']}.**" if e.get('decision') else ''
             md.append(f"| **{e['status']}** | {e['name']} · {e['file_count']} files | {paths} | {', '.join(e['formats'])} | {e['use']}{extra} |")
         md.append('')
-    md += ['## Decisions pending (owner)', ''] + [f'- **{k}** — {v}' for k, v in DECISIONS.items()] + ['']
+    md += ['## Owner decisions (resolved 2026-10-15)', ''] + [f'- **{k}** — {v}' for k, v in DECISIONS.items()] + ['']
     md_txt = '\n'.join(md)
 
     targets = {os.path.join(ROOT, 'brand-master-manifest.json'): manifest_txt, os.path.join(ROOT, 'BRAND_MASTER_ASSET_INDEX.md'): md_txt}

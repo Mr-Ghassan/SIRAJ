@@ -4,11 +4,11 @@
 |---|---|
 | **Release** | SIRAJ Brand Library v1.0.1 (SIRAJ Brand Master Library) |
 | **Type** | Library completion — organisation, manifests, missing exports, documentation, reproducibility, objective file fixes |
-| **Design change** | None. Brand Identity, Design System and Motion System v1.0 remain frozen. |
+| **Design change** | No redesign. Owner decisions D1–D6 (2026-10-15) applied as production corrections; Brand Identity, Design System and Motion System v1.0 otherwise frozen. |
 | **Base** | SIRAJ Brand System v1.0 · tag `siraj-brand-system-v1.0.0` (unchanged) |
 | **Branch** | `feat/siraj-brand-library-completion-v1` |
-| **Proposed tag** | `siraj-brand-library-v1.0.1` (after the owner approves; not created yet) |
-| **QA** | Library QA 14/14 · audit 2,267 files, 0 open failures · Brand QA 0 · Silk QA 22/22 · guide 82 pages render cleanly |
+| **Tag** | `siraj-brand-library-v1.0.1` (annotated; library completion and production corrections only) |
+| **QA** | Library QA 15/15 (0 failures) · Brand QA 0 · Silk QA 22/22 · guide 82 pages render cleanly · 917 production files indexed |
 
 ## Contents
 
@@ -22,4 +22,10 @@
 
 - Use `SIRAJ_Brand-Guidelines_v1.0.1.pdf`. Do not distribute the v1.0 PDF (pages 6 and 19 render without their images).
 - New and corrected files are listed in `CHANGELOG.md` (Library v1.0.1).
-- Open owner decisions D1–D6 are listed at the end of `BRAND_MASTER_ASSET_INDEX.md`; none blocks the use of the library.
+- Owner decisions D1–D6 (2026-10-15) are applied and recorded at the end of `BRAND_MASTER_ASSET_INDEX.md`:
+  - **D1** Arabic-name lockups withdrawn → `99-Archive/Withdrawn/Arabic-Name-Lockups/`; the letterhead and business card use the official wordmark. Replace any local copy of `SIRAJ_Lockup_Horizontal_*`, `_Stacked_*` or `_Arabic_*`.
+  - **D2** vector silk = SPECIAL PRODUCTION / RESTRICTED USE.
+  - **D3** dark `border-strong` = #8C6B64 in every token set (`09-Design-System/tokens/build/*` regenerated).
+  - **D4** project name stays postponed.
+  - **D5** unresolved data («—») only in editable templates; exports hide the field (`?export` in the document runtime).
+  - **D6** Ribbon key visual re-graded (`tools/siraj-warmth-match.py`); posts, stories, slide 8 and Carousel-04 rebuilt.

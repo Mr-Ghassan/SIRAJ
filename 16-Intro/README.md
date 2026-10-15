@@ -19,11 +19,10 @@
 | `SIRAJ_Intro_9x16_1080x1920_v1.0.mp4` | 9:16 (Reels, Stories, TikTok) |
 | `SIRAJ_Intro_1x1_1080x1080_v1.0.mp4` | 1:1 (feed) |
 | `SIRAJ_Intro_16x9_1920x1080_Transparent_v1.0_alpha.mov` / `.webm` | ProRes 4444 + VP9 **with alpha**: ribbon and logo over any footage |
-| `SIRAJ_Intro_16x9_1920x1080_Bilingual-Lockup_v1.0.mp4` | Adds «سراج للتطوير العقاري · Real Estate Development» under the logo |
 | `*_Sound_v1.0.mp4` | Versions with the optional SIRAJ sound bed |
 | `*_poster.png` | Final-frame stills |
 
-**Variants via query:** `?fmt=16x9|9x16|1x1`, `&alpha=1`, `&lockup=1`, `&line=1` (proposed brand line «نورٌ يُبنى · Light, built.»; use only after approval).
+**Variants via query:** `?fmt=16x9|9x16|1x1`, `&alpha=1`, `&line=1` (proposed brand line «نورٌ يُبنى · Light, built.»; use only after approval). The bilingual-lockup variant (`&lockup=1`, «سراج للتطوير العقاري» typeset under the logo) is withdrawn (decision D1, 2026-10-15); it was never exported.
 
 **Rebuild:** `node tools/build-motion.js intro`, then `tools/mux-sound.sh`.
 

@@ -38,6 +38,13 @@ vouchers) and the letterheads in `12-Print/Source/Stationery/`.
 3. Open in Chrome/Edge → Print → *Save as PDF*, paper A4, margins *Default* (fixed pages use zero margins
    automatically), *Background graphics* on. Or add the file to `JOBS` in `tools/build-print.js`.
 
+### Unconfirmed data (decision D5)
+A value that is not confirmed yet (CR, VATIN, P.O. box, bank, dates, prices, areas…) stays «—» in the JSON. The
+editable template shows it as a labelled slot; every export (`?export`, always set by `tools/build-print.js`) hides the
+field instead of printing a dash: the slot is removed with its separator and line break, and a field left with only its
+label disappears. Mark a hand-typed slot as `<span data-unresolved>—</span>`; put `data-field` on the element that
+should disappear with it. Never type an invented value.
+
 ### Arabic
 Set `lang="ar" dir="rtl"` on the page (or on `<html>` for flow). Margins, header order, Silk Corner, lists, tables,
 bars and the footer mirror automatically. Wrap Latin runs inside Arabic in `<bdi dir="ltr">…</bdi>` (phones, e-mails,
@@ -48,7 +55,7 @@ order inside English layouts. Digits are always Western (the `SIRAJ Digits` face
 | Area | Classes |
 |---|---|
 | Page | `.page` (A4, grid margins) · `.page--sym` (20/20 margins) · `.marks-fold` + `<i class="marks-punch">` (fold/punch marks) |
-| Logo | `.lk.lk--word` wordmark · `.lk--desc` descriptor · `.lk--ar` Arabic · `.lk--hz` horizontal · `.lk--stack` stacked — `--lw` = wordmark width (default 38 mm) |
+| Logo | `.lk.lk--word` official wordmark · `.lk--desc` descriptor lockup — `--lw` = wordmark width (default 38 mm). The Arabic-name lockups were withdrawn (D1): the registered Arabic name appears only as plain legal/administrative text. |
 | Header | `.doc-head` + `.co` (company block) · `.run-head` (inner pages) · `.title-bi` (EN title start / AR title end) |
 | Type | `.eyebrow-d` · `.h1` `.h2` `.h3` · `.lead` · `.body-text` · `.small` `.muted` `.maroon` |
 | Lists | `ul.lumen-list` · `ol.clauses` |

@@ -1,7 +1,7 @@
 # 20 · Brand Guidelines — SIRAJ Brand Guidelines v1.0.1
 
 **Production guide:** `SIRAJ_Brand-Guidelines_v1.0.1.pdf` · 82 pages · 1440 × 810 pt (16:9) · English with Arabic samples.
-**Status:** PRODUCTION (v1.0.1, 2026-10-15). Objective production fixes only; the identity, layout and rules are those of v1.0.
+**Status:** PRODUCTION (v1.0.1, 2026-10-15). Objective production fixes plus the owner decisions D1–D6 of 2026-10-15; no redesign.
 **Superseded:** `SIRAJ_Brand-Guidelines_v1.0.pdf` → `99-Archive/Superseded/Brand-Guidelines-v1.0/` (still attached to the
 GitHub Release `siraj-brand-system-v1.0.0`; do not use it for production, two of its images do not render).
 
@@ -16,6 +16,11 @@ GitHub Release `siraj-brand-system-v1.0.0`; do not use it for production, two of
 | 54 · Design tokens | named `design-system/tokens/siraj-ds.tokens.json` while listing the `09-Design-System` outputs | `09-Design-System/tokens/siraj.tokens.json` (the file those outputs are built from) | factual error |
 | 79 · Asset library | «82 icons» | «85 icons» (Instagram, WhatsApp and Email were added after the count was written) | factual error |
 | every footer | Brand Guidelines v1.0 | Brand Guidelines v1.0.1 | version |
+| 18 · Lockups | three Arabic-name lockups (horizontal, stacked, Arabic-led) typeset «سراج للتطوير العقاري» | the wordmark + the Descriptor lockup; the Arabic name is legal/administrative text only | owner decision D1 |
+| Silk rules · Graphic language | vector silk shown for hoardings and campaign composites | vector silk = special production / restricted use (vinyl, embroidery, special print, fabrication, cutting) | owner decision D2 |
+| Design tokens | dark `border-strong` #7A5A55 in the platform exports | #8C6B64, the Design System value | owner decision D3 |
+| Stationery | Arabic lockup on the letterhead and card; «—» in the letterhead footer | official wordmark; unresolved fields hidden in exports | owner decisions D1, D5 |
+| every page with the Ribbon key visual | warmer, beige-yellow environment | re-graded to the family grade (colour only) | owner decision D6 |
 
 Root cause of the missing images: `tools/compress-pdf.py` re-encoded soft-masked images and dropped "orphan" objects after
 merging duplicates, which broke a shared colour-profile reference. The HTML page previews (`pages/`) are rendered from

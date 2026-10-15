@@ -29,7 +29,7 @@ its Drive description). Only the official guide is given an Arabic file name: «
 | 03 ـ الألوان | المصدر (palette JSON) · ملفات الإنتاج (ASE RGB/CMYK, GPL, CSV, CSS) |
 | 04 ـ الخطوط | المصدر (TTF + OFL) · ملفات الإنتاج (WOFF2 + CSS) · المعاينة (specimens) |
 | 05 ـ الشبكات | المصدر (SVG + JSON) · ملفات الإنتاج (PNG) |
-| 06 ـ العناصر الجرافيكية | ملفات الإنتاج · المعاينة · قيد المراجعة ـ قرار معلّق (vector silk, decision D2) |
+| 06 ـ العناصر الجرافيكية | ملفات الإنتاج · المعاينة · إنتاج خاص ـ استخدام مقيّد (vector silk, decision D2) |
 | 07 ـ الحرير | المصدر (4K stills, alpha cut-outs, green-screen masters) · ملفات الإنتاج (web) |
 | 08 ـ الحرير والنور | المصدر (key visuals, renders) · ملفات الإنتاج (posts/stories, grade) · المعاينة (camera/composition references) |
 | 09 ـ الأيقونات | المصدر (85 outline SVG) · ملفات الإنتاج (filled SVG, sprite, JSON) · المعاينة (specimens) |
@@ -41,7 +41,7 @@ its Drive description). Only the official guide is given an Arabic file name: «
 | المصدر | MASTER, SOURCE | Original / editable — derive from it |
 | ملفات الإنتاج | PRODUCTION EXPORT | Ready to use |
 | المعاينة | PREVIEW, REFERENCE | Look only, never published |
-| قيد المراجعة ـ قرار معلّق | REVIEW | Waiting for an owner decision |
+| إنتاج خاص ـ استخدام مقيّد | SPECIAL PRODUCTION | Restricted use: vinyl, embroidery, special print, fabrication, cutting (D2) |
 | الأرشيف | ARCHIVE, POSTPONED | Not approved for production |
 
 ## Sync
@@ -51,6 +51,6 @@ its Drive description). Only the official guide is given an Arabic file name: «
   deletes and never overwrites (a file with the same name and size is skipped; a different size is reported, not
   replaced), and verifies the size after upload. Safe to re-run.
 - Notebook: `docs/library/SIRAJ_Drive-Sync_Library_v1.0.1.ipynb` (built by `tools/build-drive-sync-notebook.py`), a copy
-  in «00 ـ فهرس المكتبة». Plan v1.0.1: 660 files, ≈ 373 MB, 27 folders.
+  in «00 ـ فهرس المكتبة». Plan v1.0.1: 630 files, ≈ 372 MB, 27 folders.
 - Not synced to «01»: code and Markdown (they live in GitHub), motion (its own folder «03»), archive and postponed files,
   and the architect's presentation PDF (supplier source, already on Drive in «08 ـ الحرير والنور ← المصدر»).

@@ -16,4 +16,5 @@ The original supplied logo sources are kept, untouched, in `01-Logos/Master/Sour
 | `Silk-Washed-v1.0/` | ARCHIVE | Silk with a pale wash of light / warm overhead spotlight | Client 2026-10-14: deep silk, no warm overhead light. |
 | `Silk-Footage-Soft-v1.0/` | ARCHIVE | Earlier silk footage masters below 4K | Close-ups must use high-resolution (4K) footage. |
 | `Pre-Luxe-Grade-v1.0/` | ARCHIVE · reference | Renders and key visuals before the SIRAJ Luxe Grade | Superseded by the graded versions; used only as the «before» on the guide's imagery page. |
+| `Withdrawn/Arabic-Name-Lockups/` | **ARCHIVE · withdrawn** | Horizontal, Stacked and Arabic-led lockups that typeset «سراج للتطوير العقاري» in Tajawal (all colours), and the kit copies | Decision D1 (2026-10-15): the English artwork is the brand mark; the Arabic corporate name is legal/administrative text only. |
 | `Superseded/` | ARCHIVE | Earlier official files replaced by a corrected version (e.g. the v1.0 brand guide) | See `Superseded/README.md`. |
