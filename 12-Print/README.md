@@ -36,7 +36,7 @@ in Chrome to edit it; add `?preview` to the URL for the presentation view, `?mar
 | Compliments slip | DL 210 × 99 mm | `Compliments-Slip_Bilingual` · `…-Print` | 1 |
 | Envelope DL | 220 × 110 mm | `Envelope_DL` | front · back flap |
 | Envelope C4 | 229 × 324 mm | `Envelope_C4` | front · back flap |
-| Presentation folder (A4 pocket) | flat 468 × 430 mm | `Presentation-Folder_Flat` (proof + die) · `…_Print` (artwork + marks) · `…_Dieline` (artwork + die + marks) | outside · inside |
+| Presentation folder (A4 pocket) — **PREVIEW · NOT FOR PRODUCTION** | flat 468 × 430 mm | `Presentation-Folder_Flat` (proof + die) · `…_Print` (artwork + marks) · `…_Dieline` (artwork + die + marks) | outside · inside |
 | Employee ID card | CR80 54 × 85.6 mm, portrait | `ID-Card_CR80` · `…-Print` | front · back |
 | Visitor & event badge | 100 × 140 mm | `Badge_Visitor-Event` · `…-Print` | visitor · event |
 | Quotation | A4 | `Quotation_EN-AR` | 2 |
@@ -49,6 +49,15 @@ in Chrome to edit it; add `?preview` to the URL for the presentation view, `?mar
 Email signature (EN / AR) and the reusable A4 document kit live in `19-Templates/` — see its README.
 
 ---
+
+### Presentation folder — PREVIEW · NOT FOR PRODUCTION (library governance, 2026-10-15)
+The current folder artwork prints the vector Silk Ribbon across the whole exterior. Printed collateral is not an approved
+use of vector silk under decision D2 (vector silk is special production only: vinyl cutting, embroidery, special
+printing, fabrication, plotter/cutting work). The folder source and its three exports
+(`Presentation-Folder_Flat`, `…_Print`, `…_Dieline`) are therefore classified **PREVIEW · NOT FOR PRODUCTION**: they are
+not approved production-ready collateral, are not sent to print, and are not synced to the identity library on Drive.
+The design was deliberately left unchanged in the library-completion phase. **The final folder must be revisited during
+the future Applied Design & Collateral phase** (real pressed-silk imagery or no silk, then a new approval).
 
 ## 2 · Design decisions
 
@@ -63,7 +72,7 @@ Email signature (EN / AR) and the reusable A4 document kit live in `19-Templates
   EN / AR versions are given for letterhead, memo and report. Arabic is Tajawal, never tracked or uppercased, one
   point larger than the Latin it partners. **Western digits everywhere** (the `SIRAJ Digits` face).
 - **One signature element per piece.** Card: Silk Blade blind deboss. Slip: a Silk Line joining the two greetings.
-  Folder: the vector Silk Ribbon running across back cover, spine and front cover, and a Silk-curve pocket edge.
+  Folder (PREVIEW, not for production — see below): the vector Silk Ribbon running across back cover, spine and front cover, and a Silk-curve pocket edge.
   SPA cover: the Portal (as a vector clip). Report and quotation: one Silk Corner image. Everything else: the Lumen ◆.
 - **Calculated, not typed.** Invoice and quotation line amounts, subtotal, VAT, totals, instalments and the English
   amount-in-words are computed by the template from `data-qty` / `data-rate` (OMR, 3 decimals = baisa).

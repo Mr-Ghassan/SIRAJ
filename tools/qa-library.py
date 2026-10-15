@@ -272,6 +272,19 @@ for cur, dirs, names in os.walk(ROOT):
 sv = [e for e in M['entries'] if e['id'] == 'graphic.silk-vector']
 if not sv or sv[0]['status'] != 'SPECIAL PRODUCTION':
     dec.append('D2: vector silk is not classified SPECIAL PRODUCTION')
+# vector silk outside its own system may only appear in sources classified PREVIEW (not for production)
+preview_src = {f for e in M['entries'] if e['status'] == 'PREVIEW' for f in e['files']}
+for cur, dirs, names in os.walk(ROOT):
+    rel = os.path.relpath(cur, ROOT)
+    if rel.startswith(('99-Archive', 'node_modules', '.git', 'website', 'docs', '05-Graphic-System', '21-Brand-Kit')) or 'node_modules' in rel or '/.cache' in rel:
+        dirs[:] = []
+        continue
+    for n in names:
+        f = os.path.normpath(os.path.join(rel, n))
+        if not n.endswith(('.html', '.css', '.js', '.json')) or f in ('tools/build-graphics.js', 'brand-master-manifest.json'):
+            continue
+        if re.search(r'Silk-(Ribbon|Wrap)_Vector', open(os.path.join(cur, n), encoding='utf-8', errors='replace').read()) and f not in preview_src:
+            dec.append(f'D2: {f} uses vector silk but is not classified PREVIEW / special production')
 for f in ('09-Design-System/tokens/siraj.tokens.json', '09-Design-System/tokens/build/siraj-tokens.css', 'design-system/build/siraj-ds.css'):
     t = open(f, encoding='utf-8').read()
     if '7A5A55' in t.upper() or '8C6B64' not in t.upper():

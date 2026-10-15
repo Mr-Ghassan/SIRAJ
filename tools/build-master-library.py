@@ -235,6 +235,12 @@ ENTRIES = [
     E('foundation.rules', 'Foundation', 'Rules for everyone producing SIRAJ work + brand skill', 'SOURCE', ['AGENTS.md', '.claude/skills/siraj-brand-system/SKILL.md'], 'Non-negotiables and voice.'),
     E('foundation.strategy', 'Foundation', 'Strategy and design language (internal)', 'SOURCE', ['00-Brand-Foundation/*.md'], 'Internal strategy; never quoted publicly.'),
 
+    # ------------------------------------------------------------------------------------------------ COLLATERAL (governance)
+    E('collateral.presentation-folder', 'Collateral', 'Presentation folder (A4 pocket) — current artwork', 'PREVIEW',
+      ['12-Print/Source/Stationery/SIRAJ_Presentation-Folder.html', '12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_*', '12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_*', '12-Print/PRESENTATION-FOLDER_PREVIEW-NOT-FOR-PRODUCTION.md'],
+      'NOT FOR PRODUCTION. Vector silk across the exterior is not an approved D2 use on printed collateral; revisit in the Applied Design & Collateral phase.',
+      decision='D2', notes='Library governance decision 2026-10-15: classified PREVIEW; design intentionally unchanged; not approved production-ready collateral; not synced to Drive.'),
+
     # ------------------------------------------------------------------------------------------------ ARCHIVE / POSTPONED
     E('archive.project-lettering', 'Archive', '«مشروع سراج» project lettering', 'POSTPONED', ['99-Archive/Postponed/Project-Lettering/**/*'], 'Never use until a new treatment is approved.', decision='D4'),
     E('archive.demo', 'Archive', 'Fictional demo kit, earlier UI kit, print waiting for legal data', 'ARCHIVE', ['99-Archive/Demo-Isolated/**/*'], 'Not for production.', decision='D5'),

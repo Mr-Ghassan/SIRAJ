@@ -20,6 +20,7 @@ GitHub Release `siraj-brand-system-v1.0.0`; do not use it for production, two of
 | Silk rules · Graphic language | vector silk shown for hoardings and campaign composites | vector silk = special production / restricted use (vinyl, embroidery, special print, fabrication, cutting) | owner decision D2 |
 | Design tokens | dark `border-strong` #7A5A55 in the platform exports | #8C6B64, the Design System value | owner decision D3 |
 | Stationery | Arabic lockup on the letterhead and card; «—» in the letterhead footer | official wordmark; unresolved fields hidden in exports | owner decisions D1, D5 |
+| 31 · Stationery, 37 · Print | presentation folder shown as collateral | captioned «PREVIEW, not for production» (vector silk on printed collateral is not a D2 use; revisit in the Applied Design & Collateral phase) | library governance |
 | every page with the Ribbon key visual | warmer, beige-yellow environment | re-graded to the family grade (colour only) | owner decision D6 |
 
 Root cause of the missing images: `tools/compress-pdf.py` re-encoded soft-masked images and dropped "orphan" objects after

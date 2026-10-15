@@ -27,6 +27,7 @@ Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمي
 | [Motion](#motion) | 14 | 139 |
 | [Guidelines](#guidelines) | 4 | 91 |
 | [Foundation](#foundation) | 3 | 7 |
+| [Collateral](#collateral) | 1 | 8 |
 | [Archive](#archive) | 5 | 895 |
 
 ## Logos
@@ -194,6 +195,12 @@ Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمي
 | **MASTER** | Brand data (contact, language policy, project) · 1 files | `00-Brand-Foundation/brand.config.json` | json | Single source for contact data: phone 7771 4404, Instagram icon + SIRAJPROPERTIES, WWW.SIRAJPROPERTIES.NET. |
 | **SOURCE** | Rules for everyone producing SIRAJ work + brand skill · 2 files | `AGENTS.md`<br>`.claude/skills/siraj-brand-system/SKILL.md` | md | Non-negotiables and voice. |
 | **SOURCE** | Strategy and design language (internal) · 4 files | `00-Brand-Foundation/*.md` | md | Internal strategy; never quoted publicly. |
+
+## Collateral
+
+| Status | Asset | Canonical path | Formats | Use |
+|---|---|---|---|---|
+| **PREVIEW** | Presentation folder (A4 pocket) — current artwork · 8 files | `12-Print/Source/Stationery/SIRAJ_Presentation-Folder.html`<br>`12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_*`<br>`12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_*`<br>`12-Print/PRESENTATION-FOLDER_PREVIEW-NOT-FOR-PRODUCTION.md` | html, md, pdf, png | NOT FOR PRODUCTION. Vector silk across the exterior is not an approved D2 use on printed collateral; revisit in the Applied Design & Collateral phase. **Decision D2.** |
 
 ## Archive
 
