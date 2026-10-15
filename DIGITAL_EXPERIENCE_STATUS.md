@@ -4,6 +4,8 @@
 Built on the frozen baseline: Brand Identity v1.0, Design System v1.0, Motion System v1.0 (tag `siraj-brand-system-v1.0.0`).
 No identity, token, logo, colour, type or motion value was changed.
 
+> **Website visual design is ON HOLD (client, 2026-10-15):** «لا تنشغل بتصميم وهيئة الموقع الان». The build stays as it is on this branch; no further layout, look or styling work until the client reopens it. Only functional or brand-rule fixes, if needed.
+
 ## What exists
 
 | Area | State |
