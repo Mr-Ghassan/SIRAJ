@@ -9,7 +9,7 @@
 
 أنهِ **نشر إصدار SIRAJ v1.0**. البناء والفحص منتهيان، وبقي الرفع فقط:
 
-1. اجمع الحزم من الملفات التي نزّلها المستخدم، وتحقّق من بصماتها (§6).
+1. استنسخ فرع الملفات `release/v1.0-assets` من GitHub، واجمع الحزم، وتحقّق من بصماتها بأمر واحد (§6).
 2. ارفعها إلى Google Drive في المجلدات المحدّدة (§7)، مع ملف PDF الدليل.
 3. أنشئ الوسم `siraj-brand-system-v1.0.0` و GitHub Release على الكوميت `323431d`، وأرفق بها الحزم (§8).
 4. أعطِ المستخدم تقريرًا نهائيًا بالعربية (§10).
@@ -49,6 +49,7 @@
 | أداة بناء الحزم | `tools/build-kit.sh` → `21-Brand-Kit/` (الحزم نفسها خارج git) |
 | الموقع (فرع منفصل) | `website/` · `docs/digital/` على الفرع `feat/siraj-digital-project-experience-v1` |
 | هذا التسليم | `docs/HANDOFF_COWORK_v1.0.md` |
+| **ملفات الإصدار الثنائية** | الفرع `release/v1.0-assets` (§6) |
 
 **الفروع:**
 - كل ما سبق موجود على `main`، ما عدا `website/` و`docs/digital/` و`DIGITAL_EXPERIENCE_STATUS.md` وهذا الملف، فهي على الفرع `feat/siraj-digital-project-experience-v1`.
@@ -108,6 +109,7 @@
 - **الوسم المطلوب:** `siraj-brand-system-v1.0.0` على `323431d`. **غير موجود على GitHub بعد.**
 - **`feat/siraj-digital-project-experience-v1`:** `1e1aae8`، ويضم الموقع وقرار إيقاف تصميمه. **لا PR ولا دمج إلا بطلب المستخدم.**
 - **`claude/optimistic-hopper-mykv42`:** فرع الجلسة السحابية، ومطابق لفرع الموقع.
+- **`release/v1.0-assets`:** `bfd6ee3`، فرع مستقل يحمل ملفات الإصدار الثنائية فقط (§6). لا يُدمج.
 
 ## 5 · حزم الإصدار v1.0 والبصمات المرجعية
 
@@ -124,49 +126,47 @@
 | SIRAJ_07_Presentations_v1.0.zip | 40.1 MiB | 3076cfc4bae743a019b615785d11c65bc5368a09d41a9f5d246c72d36bee64cd |
 | SIRAJ_Claude-Design-Kickoff_v1.0.zip | 39.3 MiB | 294b023040012d5168a3b23387fdd2fb9eef7b04f571021f691e07a7de138e02 |
 
-**لا تُعِد بناء الحزم بـ `tools/build-kit.sh`.** إعادة البناء تغيّر توقيتات الملفات، فلا تطابق البصمات المنشورة. استخدم الملفات المرسلة فقط.
+**لا تُعِد بناء الحزم بـ `tools/build-kit.sh`.** إعادة البناء تغيّر توقيتات الملفات، فلا تطابق البصمات المنشورة. استخدم الملفات المستودعة في الفرع `release/v1.0-assets` فقط (§6).
 
-## 6 · الملفات الموجودة لدى المستخدم الآن
+## 6 · مصدر الملفات: مستودعة على GitHub (الفرع `release/v1.0-assets`)
 
-أُرسلت من الجلسة السحابية إلى تطبيق Claude. قد يحتاج المستخدم إلى تنزيلها إلى مجلد التنزيلات (Downloads) في جهازه.
+كل ملفات الإصدار مستودعة في المستودع نفسه، على فرع مستقل لا يشارك `main` تاريخه ولا يُدمج أبدًا:
+**https://github.com/Mr-Ghassan/SIRAJ/tree/release/v1.0-assets** (آخر كوميت `bfd6ee3`)
 
-- **كاملة:**
-  - `SIRAJ_Brand-Guidelines_v1.0.pdf` (19 MB)
-  - `SIRAJ_02_Design-System_v1.0.zip`
-  - `SIRAJ_03_Motion-System_v1.0.zip`
-  - `SIRAJ_v1.0_SHA256SUMS.txt`
-- **مجزّأة (28 جزءًا، كل جزء 29 MiB أو أقل)** لأن حد الإرسال 30 MiB:
-  - `SIRAJ_01_Brand-Identity_v1.0.zip.part00…03` (4)
-  - `SIRAJ_04_Video_Intro-Outro_v1.0.zip.part00…02` (3)
-  - `SIRAJ_04_Video_Silk-Footage-4K_v1.0.zip.part00…01` (2)
-  - `SIRAJ_04_Video_Transitions-Components_v1.0.zip.part00…05` (6)
-  - `SIRAJ_05_Templates-Marketing_v1.0.zip.part00…02` (3)
-  - `SIRAJ_06_Project-Siraj_v1.0.zip.part00…05` (6)
-  - `SIRAJ_07_Presentations_v1.0.zip.part00…01` (2)
-  - `SIRAJ_Claude-Design-Kickoff_v1.0.zip.part00…01` (2)
+| المسار في الفرع | المحتوى |
+|---|---|
+| `whole/` | `SIRAJ_02_Design-System_v1.0.zip` و`SIRAJ_03_Motion-System_v1.0.zip` و`SIRAJ_Brand-Guidelines_v1.0.pdf` (ملفات كاملة) |
+| `parts/` | الحزم الثماني الكبيرة مجزّأة إلى 28 جزءًا، كل جزء 29 MiB أو أقل، لأن GitHub يرفض أي ملف أكبر من 100 MB |
+| `SIRAJ_v1.0_SHA256SUMS.txt` | البصمات المنشورة (مطابقة لـ `main`) |
+| `join.sh` / `join.ps1` | يجمعان الحزم العشر في `out/` ويتحققان من كل بصمة |
+| `README.md` | الشرح نفسه بالإنجليزية |
 
-**الجمع والتحقق (في المجلد الذي يحوي الأجزاء):**
+**الجمع والتحقق (أمر واحد):**
 
 macOS / Linux:
 ```bash
-for z in SIRAJ_01_Brand-Identity SIRAJ_04_Video_Intro-Outro SIRAJ_04_Video_Silk-Footage-4K SIRAJ_04_Video_Transitions-Components SIRAJ_05_Templates-Marketing SIRAJ_06_Project-Siraj SIRAJ_07_Presentations SIRAJ_Claude-Design-Kickoff; do
-  cat "${z}_v1.0.zip.part"* > "${z}_v1.0.zip"
-done
-shasum -a 256 -c SIRAJ_v1.0_SHA256SUMS.txt     # كل السطور يجب أن تقول OK
+git clone --single-branch --branch release/v1.0-assets https://github.com/Mr-Ghassan/SIRAJ.git siraj-v1.0-assets
+cd siraj-v1.0-assets
+bash join.sh          # يجب أن يطبع OK لكل الحزم العشر، ثم يجمعها في out/
 ```
 
-Windows (PowerShell):
+Windows:
 ```powershell
-$names = 'SIRAJ_01_Brand-Identity','SIRAJ_04_Video_Intro-Outro','SIRAJ_04_Video_Silk-Footage-4K','SIRAJ_04_Video_Transitions-Components','SIRAJ_05_Templates-Marketing','SIRAJ_06_Project-Siraj','SIRAJ_07_Presentations','SIRAJ_Claude-Design-Kickoff'
-foreach ($n in $names) {
-  $out = [IO.File]::Create("$PWD\${n}_v1.0.zip")
-  Get-ChildItem "${n}_v1.0.zip.part*" | Sort-Object Name | ForEach-Object { $b = [IO.File]::ReadAllBytes($_.FullName); $out.Write($b,0,$b.Length) }
-  $out.Close()
-}
-Get-FileHash SIRAJ_*_v1.0.zip -Algorithm SHA256 | Format-Table Hash, Path   # قارنها بجدول §5
+git clone --single-branch --branch release/v1.0-assets https://github.com/Mr-Ghassan/SIRAJ.git siraj-v1.0-assets
+cd siraj-v1.0-assets
+powershell -ExecutionPolicy Bypass -File join.ps1
 ```
 
-إذا اختلفت أي بصمة **فلا ترفع تلك الحزمة**. أبلغ المستخدم واطلب إعادة تنزيل أجزائها. لا تُرفع الأجزاء (`.part`) إلى Drive ولا إلى GitHub، بل الحزم المجمّعة فقط.
+**إن لم يتوفر git:** نزّل الفرع من https://github.com/Mr-Ghassan/SIRAJ/archive/refs/heads/release/v1.0-assets.zip ، فكّه، وشغّل `join.sh` أو `join.ps1` داخله.
+
+**نسخة احتياطية:** الملفات نفسها أُرسلت أيضًا إلى المستخدم في محادثة Claude Code (28 جزءًا، والحزمتان 02 و03، وملف PDF، والبصمات)، والسكربتان يعملان عليها بالطريقة نفسها.
+
+تحقّقتُ من الفرع في 15 أكتوبر باستنساخ جديد من GitHub، فأعطى `join.sh` النتيجة OK للحزم العشر كلها.
+
+**القواعد:**
+- إذا اختلفت أي بصمة **فلا ترفع تلك الحزمة**، وأبلغ المستخدم.
+- **ارفع من `out/` فقط.** لا تُرفع الأجزاء (`.part`) إلى Drive ولا إلى الـ Release.
+- بعد تأكيد الرفع إلى Drive وإنشاء الـ Release، يمكن للمالك حذف الفرع `release/v1.0-assets` إن شاء، لأنه ناقل فقط. **لا تحذفه أنت إلا بطلبه.**
 
 ## 7 · الرفع إلى Google Drive
 
@@ -197,7 +197,7 @@ Get-FileHash SIRAJ_*_v1.0.zip -Algorithm SHA256 | Format-Table Hash, Path   # ق
 3. **العنوان:** `SIRAJ Brand System v1.0`
 4. **الوصف:** محتوى `RELEASE_NOTES_v1.0.md` من المستودع كما هو.
 5. **المرفقات:**
-   - الحزم العشر المجمّعة
+   - الحزم العشر المجمّعة من `out/`
    - `SIRAJ_Brand-Guidelines_v1.0.pdf`
    - `SIRAJ_v1.0_SHA256SUMS.txt`
    - حد GitHub ملفان بحجم 2 GB، والحزم أصغر.
