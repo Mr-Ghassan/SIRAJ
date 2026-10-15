@@ -10,6 +10,7 @@ on branch `feat/siraj-digital-project-experience-v1`.
 | `whole/` | `SIRAJ_02_Design-System_v1.0.zip`, `SIRAJ_03_Motion-System_v1.0.zip`, `SIRAJ_Brand-Guidelines_v1.0.pdf` (complete files) |
 | `parts/` | the 8 larger ZIPs split into ≤ 29 MiB parts (GitHub refuses files over 100 MB) — 28 parts |
 | `SIRAJ_v1.0_SHA256SUMS.txt` | the published SHA-256 of all 10 packages (identical to `main`) |
+| `HANDOFF_COWORK_v1.0.md` | the full handoff prompt (Arabic): history, sources, rules, Drive targets, Release steps |
 | `join.sh` / `join.ps1` | rebuild the 10 ZIPs into `out/` and verify every checksum |
 
 ## Rebuild and verify
