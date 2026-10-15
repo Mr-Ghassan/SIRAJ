@@ -1,0 +1,90 @@
+{
+  "$comment": "SIRAJ Brand Library v1.0.1 — where each manifest entry goes on Google Drive. Folders are Arabic; files keep their technical GitHub names (traceability), except names in 'rename'. Used by tools/drive_sync.py, run from the Colab notebook docs/library/SIRAJ_Drive-Sync_Library_v1.0.1.ipynb (built by tools/build-drive-sync-notebook.py). Motion, video, templates and project folders (02–07) are outside this sync. Folder IDs are fixed; the sync never deletes or overwrites.",
+  "root": "1iIxYSYWP5uR4LAe7C96ik_xcgWLp_1xc",
+  "identity": "1ahH9G4u52IPWN5RrhZ86ocQdEmMcXZfh",
+  "never_touch": ["ملفات سراج الهندسية", "09 ـ الموقع والتجربة الرقمية"],
+  "exclude_ext": ["js", "mjs", "cjs", "ts", "py", "sh", "html", "md"],
+  "exclude_entries": ["logo.monochrome.folder", "logo.build", "logo.spec", "colour.spec", "grid.spec", "silk.engine", "silk.spec", "sl.spec", "sl.grade-reference", "icons.source", "icons.catalogue", "type.spec", "guide.source", "guide.v1.0"],
+  "exclude_files": ["14-Property-Marketing/12-Project-Siraj/Source/Architect/SIRAJ_Project-Siraj_Architect-Presentation_ORIX-WEG_2026-07.pdf"],
+  "only_files": {
+    "guide.pages": ["20-Brand-Guidelines/SIRAJ_Brand-Guidelines_Contact-Sheet_v1.0.1.jpg"],
+    "icons.catalogue": []
+  },
+  "extra": [
+    {"path": "07-Icon-System/previews/SIRAJ_Icons_Specimen_Outline_Ivory_v1.0.png", "folder": "1Dkr4-1Qk9cIPKrPeMOwLxpQPxbIyaz16"},
+    {"path": "07-Icon-System/previews/SIRAJ_Icons_Specimen_Filled_v1.0.png", "folder": "1Dkr4-1Qk9cIPKrPeMOwLxpQPxbIyaz16"},
+    {"path": "07-Icon-System/previews/SIRAJ_Icons_Specimen_Outline_Deep_v1.0.png", "folder": "1Dkr4-1Qk9cIPKrPeMOwLxpQPxbIyaz16"},
+    {"path": "07-Icon-System/previews/SIRAJ_Icons_Size-Test_v1.0.png", "folder": "1Dkr4-1Qk9cIPKrPeMOwLxpQPxbIyaz16"},
+    {"path": "07-Icon-System/previews/SIRAJ_Icons_Construction_v1.0.png", "folder": "1Dkr4-1Qk9cIPKrPeMOwLxpQPxbIyaz16"},
+    {"path": "BRAND_MASTER_ASSET_INDEX.md", "folder": "1xO2jYPZl8SwJkW5bTGBWquxrd8oysxf8"},
+    {"path": "brand-master-manifest.json", "folder": "1xO2jYPZl8SwJkW5bTGBWquxrd8oysxf8"},
+    {"path": "docs/library/QA_REPORT_v1.0.1.md", "folder": "1xO2jYPZl8SwJkW5bTGBWquxrd8oysxf8"},
+    {"path": "RELEASE_NOTES_LIBRARY_v1.0.1.md", "folder": "1xO2jYPZl8SwJkW5bTGBWquxrd8oysxf8"}
+  ],
+  "rename": {
+    "20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.1.pdf": "دليل الهوية الرسمي ـ الإصدار 1.0.1.pdf"
+  },
+  "families": {
+    "Logos": {
+      "folder": "1vOLiWpnXkbZc0uxmg3V0hkk1KlGuh0BH",
+      "MASTER": "1BN6OFZ9YgxVgrx9RnwHCkyqvcV6OrDAs",
+      "SOURCE": "1BN6OFZ9YgxVgrx9RnwHCkyqvcV6OrDAs",
+      "PRODUCTION EXPORT": {"svg": "1SPgCpFJqg3gd6q8obr6I-Eueps4CzPdo", "pdf": "1SPgCpFJqg3gd6q8obr6I-Eueps4CzPdo", "png": "16WgTfRp3tZieOfZylJWhB4O_RVIShpw_"},
+      "PREVIEW": "13jsEryELd9VUU-uka48zVrKKHjVdKrpB"
+    },
+    "Guidelines": {
+      "folder": "1Ds0s9rtAp2UdoGzUAQSndkdhZ38xVDGs",
+      "PRODUCTION EXPORT": "1Ds0s9rtAp2UdoGzUAQSndkdhZ38xVDGs",
+      "PREVIEW": "1vA7ypuNOsj-fZNGhYHSQpPI7g47S9j2n"
+    },
+    "Colours": {
+      "folder": "10SKJjYC8qv4kv0ce7_eMhB--nL0AQ9wq",
+      "MASTER": "1DSO2PqeanXjcVwFG2OeXSdXOOdbMW3pf",
+      "PRODUCTION EXPORT": "18IRC6TR-rw8cIV1WviNs5rZdOWp1-TPj"
+    },
+    "Typography": {
+      "folder": "1ACdqjX6Y7LG8e_ZGkIxJQKFAvW8koqE2",
+      "MASTER": "1cZwAfM05nCIcmePA8CQBHI2EMZ9irsIk",
+      "SOURCE": "1cZwAfM05nCIcmePA8CQBHI2EMZ9irsIk",
+      "PRODUCTION EXPORT": "1ErYEGG8ZVlAba9_OZpdE5684J9hH0_PF",
+      "PREVIEW": "11oAQ-TebiGiq4Fj3HeUEOeoZZLM9zXIz"
+    },
+    "Grids": {
+      "folder": "1rbeapxluCzC0m-45JklzlOXh5SfOp3p3",
+      "MASTER": "1g7QUEfkbcvuFUn1HbPGl34evYekAIP69",
+      "SOURCE": "1g7QUEfkbcvuFUn1HbPGl34evYekAIP69",
+      "PRODUCTION EXPORT": "1kF1iP4Gzm3HM2bxQ6jwjKwgiSPd8DwwB"
+    },
+    "Graphic system": {
+      "folder": "1Rs6RvuwZz8S5cj3zlI84XfkVlalJDK7S",
+      "PRODUCTION EXPORT": "1jDpaJlIXvejURP0DSZHkCNEyem5h45kv",
+      "SOURCE": "1dNTwdPOySpIPIBnRgCQ2agH-lkBzViRT",
+      "REVIEW": "1g8UyP5R35pdwbb0h-Be505MH11e7k8P7"
+    },
+    "Silk": {
+      "folder": "14LwBSl7BOc0K-LWZ9WUnGajqgsZBdHgB",
+      "MASTER": "1rmK_ar3PPwA_q0Yu9ESW6CaKhab54yV7",
+      "SOURCE": "1rmK_ar3PPwA_q0Yu9ESW6CaKhab54yV7",
+      "PRODUCTION EXPORT": "1mnURMqhrntqgNoo8t8GMFsbG3rFZxE0J"
+    },
+    "Silk & Light": {
+      "folder": "112TpY3kKoO3rHwb4j2qQeJokFxWFr5Nc",
+      "MASTER": "1VqefHn__MbKKIZYqj61i4QBl9anDDVrn",
+      "SOURCE": "1VqefHn__MbKKIZYqj61i4QBl9anDDVrn",
+      "PRODUCTION EXPORT": "1wpuslT92M-qJIHewUrsguR6VMyXjeXGy",
+      "REFERENCE": "1lfpL4ttUQFmC777hp1JaWRzZD_NCYp40"
+    },
+    "Icons": {
+      "folder": "1-mEhbzDVohOcvWladySGFx4y_6geDo0l",
+      "MASTER": "1H-9N91LnabTH5gBtALYzb_2NVRkbXvEv",
+      "PRODUCTION EXPORT": "1vumV5sEaP0m-VKfJhZtEgDfOq4jrHjpT",
+      "PREVIEW": "1Dkr4-1Qk9cIPKrPeMOwLxpQPxbIyaz16"
+    },
+    "Design tokens": {
+      "folder": "1NDYkCFXfu84BHcD0TIhSds6xHoTosHRS",
+      "MASTER": "1ttqLoUa_apNKFbg-wBO4WqJkjBVDlAnL",
+      "SOURCE": "1ttqLoUa_apNKFbg-wBO4WqJkjBVDlAnL",
+      "PRODUCTION EXPORT": "13eh2yRtSeXekLyVRqoEGxk-37-2S9Puc"
+    }
+  }
+}

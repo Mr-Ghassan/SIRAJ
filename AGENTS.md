@@ -6,7 +6,7 @@ SIRAJ Real Estate Development · سراج للتطوير العقاري. Read th
 - Brand data: `00-Brand-Foundation/brand.config.json`. Never hard-code contact data; read it from here.
 - Brand rules and voice: `.claude/skills/siraj-brand-system/SKILL.md`. Official guidelines: `20-Brand-Guidelines/`.
 - Status of each system: `BRAND_STATUS.md`, `DESIGN_SYSTEM_STATUS.md`, `MOTION_SYSTEM_STATUS.md`.
-- Operational file store (Google Drive): the «سراج» folder, organised as `01 ـ الهوية البصرية الرسمية` … `07 ـ العروض والمستندات الرسمية`. Never touch `ملفات سراج الهندسية`.
+- Operational file store (Google Drive): the «سراج» folder, organised as `01 ـ الهوية البصرية الرسمية` … `09 ـ الموقع والتجربة الرقمية` (layout and sync: `docs/library/DRIVE_STRUCTURE.md`). Never touch `ملفات سراج الهندسية`.
 
 ## Non-negotiables
 1. **Arabic only** for public communication. Latin only for the logo, `SIRAJPROPERTIES`, `WWW.SIRAJPROPERTIES.NET` and the phone number. English is dormant (`99-Archive/English-Dormant`).

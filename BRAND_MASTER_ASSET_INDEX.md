@@ -10,6 +10,9 @@ with size, pixel dimensions and SHA-256 of every production file). Do not edit b
 
 Contact rules everywhere: phone **7771 4404** · Instagram icon + **SIRAJPROPERTIES** (never «@») · **WWW.SIRAJPROPERTIES.NET** where permitted.
 
+Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمية», Arabic folders per family and status (المصدر · ملفات الإنتاج ·
+المعاينة · الأرشيف); layout and sync in `docs/library/DRIVE_STRUCTURE.md`.
+
 | Family | Entries | Files |
 |---|---|---|
 | [Logos](#logos) | 29 | 203 |

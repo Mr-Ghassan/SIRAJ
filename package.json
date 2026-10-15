@@ -31,7 +31,9 @@
     "build:webfonts": "python3 -I tools/build-webfonts.py",
     "build:master-library": "python3 -I tools/build-master-library.py",
     "audit:library": "python3 -I tools/audit-library.py",
-    "qa:library": "python3 -I tools/qa-library.py"
+    "qa:library": "python3 -I tools/qa-library.py",
+    "drive:plan": "python3 -I tools/drive_sync.py --plan",
+    "build:drive-notebook": "python3 -I tools/build-drive-sync-notebook.py"
   },
   "license": "UNLICENSED",
   "devDependencies": {

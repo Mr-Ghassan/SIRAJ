@@ -319,7 +319,9 @@ def main():
           '**Statuses** · **MASTER** canonical original · **SOURCE** editable / generating source · **PRODUCTION EXPORT** ready to use ·',
           '**PREVIEW** look only · **REFERENCE** art direction, never published · **REVIEW** approved in v1.0, decision pending ·',
           '**ARCHIVE** not for production · **POSTPONED** cancelled until re-approved.', '',
-          'Contact rules everywhere: phone **7771 4404** · Instagram icon + **SIRAJPROPERTIES** (never «@») · **WWW.SIRAJPROPERTIES.NET** where permitted.', '']
+          'Contact rules everywhere: phone **7771 4404** · Instagram icon + **SIRAJPROPERTIES** (never «@») · **WWW.SIRAJPROPERTIES.NET** where permitted.', '',
+          'Google Drive copy: «سراج ← 01 ـ الهوية البصرية الرسمية», Arabic folders per family and status (المصدر · ملفات الإنتاج ·',
+          'المعاينة · الأرشيف); layout and sync in `docs/library/DRIVE_STRUCTURE.md`.', '']
     counts = {}
     for e in out_entries:
         counts[e['status']] = counts.get(e['status'], 0) + 1
