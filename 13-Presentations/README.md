@@ -22,6 +22,8 @@ investor presentation for **Noor Residences**. Noor Residences is a fictional de
 Build:
 
 ```bash
+# v1.0 presentation (Arabic): npm run build:presentations  (tools/build-presentation-v1.py)
+# The commands below belong to the earlier template kit, archived in 99-Archive/Demo-Isolated/13-Presentations/
 node tools/build-presentations.js          # PNG + PDF + contact sheets (EN and AR)
 node tools/build-presentations.js --lang=AR --preview=/tmp/x --slides=3,7 --grid   # quick check with the grid overlay
 python3 tools/build-pptx.py                 # editable PowerPoint

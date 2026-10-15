@@ -8,7 +8,7 @@
 | `SIRAJ_Claude-Design-Kickoff_v1.0.zip` (15 MB) | The foundation-phase kick-off pack for Claude Design: the Arabic prompt, brief, logos, fonts, tokens, renders, real silk and references. The same files unzipped are in `Claude-Design-Kickoff/`. |
 | `SIRAJ_Real-Silk_Overview_v1.0.jpg` | Overview of the real-silk rule applied: Numbers component, intro, Facade post, sales-centre wall. |
 
-- **Brand guidelines:** `../20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.pdf`
+- **Brand guidelines:** `../20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.1.pdf` (the v1.0 ZIPs and the v1.0 guide on the GitHub Release are historical)
 - **Profile picture:** `../01-Logos/Dark/SIRAJ_Social-Avatar_Square_v1.0.png` (upload) and `../11-Social/Profile/SIRAJ_Social_Avatar_Circle_1080_v1.0.png` (preview)
 - **The full kit** is this repository: https://github.com/Mr-Ghassan/SIRAJ/archive/refs/heads/claude/optimistic-hopper-mykv42.zip
 

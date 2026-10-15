@@ -85,7 +85,7 @@ Property-Launch, Project-Feature, Construction-Update, Investment-Opportunity, S
 | Founding Project posts (facade, hero, wrap) | `node tools/build-project-siraj-{facade,hero,wrap}.js` → `14-Property-Marketing/12-Project-Siraj/` |
 | Presentations (HTML/PDF/PPTX + Arabic PPTX) | `npm run build:presentations` |
 | Print / stationery | `npm run build:print` |
-| Property marketing (brochure, outdoor, sales centre, events, mockups) | `npm run build:property` (sections: `node tools/build-property.js outdoor event …`) |
+| Property marketing (brochure, outdoor, sales centre, events, mockups) | `npm run build:project-siraj` for the real project (the demo-kit `build:property` and `tools/build-property.js` are archived in `99-Archive/Demo-Isolated/14-Property-Marketing/`) (sections: `node tools/build-property.js outdoor event …`) |
 | Motion (intro, outro, transitions, components) | `npm run build:motion` (slow: ~1 h) |
 | Guidelines PDF | `npm run build:guidelines` |
 | Asset index | `npm run build:index` |

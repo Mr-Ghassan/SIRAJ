@@ -2,7 +2,7 @@
   "name": "siraj-brand",
   "version": "1.0.0",
   "private": true,
-  "description": "SIRAJ Real Estate Development \u2014 Brand Identity v1.0 build tooling",
+  "description": "SIRAJ Real Estate Development — Brand Identity v1.0 build tooling",
   "scripts": {
     "build": "npm run build:tokens && npm run build:colours && npm run build:logos && npm run build:type && npm run build:grids && npm run build:graphics && npm run build:icons && npm run build:index",
     "build:tokens": "node tools/build-tokens.js",
@@ -26,7 +26,12 @@
     "build:ds": "node tools/build-design-system.js && node tools/build-design-system-docs.js",
     "grade:luxe": "python3 tools/siraj-luxe-grade.py",
     "qa": "node tools/qa-brand.js && node tools/build-design-system-docs.js",
-    "qa:silk": "python3 tools/qa-silk.py"
+    "qa:silk": "python3 tools/qa-silk.py",
+    "build:logo-matrix": "node tools/build-logo-matrix.js",
+    "build:webfonts": "python3 -I tools/build-webfonts.py",
+    "build:master-library": "python3 -I tools/build-master-library.py",
+    "audit:library": "python3 -I tools/audit-library.py",
+    "qa:library": "python3 -I tools/qa-library.py"
   },
   "license": "UNLICENSED",
   "devDependencies": {

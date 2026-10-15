@@ -12,7 +12,7 @@ This repository is the **single source of truth** for the SIRAJ brand. It contai
 
 | | |
 |---|---|
-| 📕 **Brand Guidelines** | [`20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.pdf`](20-Brand-Guidelines/) |
+| 📕 **Brand Guidelines** | [`20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.1.pdf`](20-Brand-Guidelines/) · master library: [`BRAND_MASTER_ASSET_INDEX.md`](BRAND_MASTER_ASSET_INDEX.md) |
 | 📦 **Brand Kit (ready to send)** | [`21-Brand-Kit/`](21-Brand-Kit/): Essentials ZIP, Project Siraj posts ZIP |
 | 🎨 **Start in Claude Design** | [`21-Brand-Kit/Claude-Design-Kickoff/00_PROMPT_Claude-Design_AR.md`](21-Brand-Kit/Claude-Design-Kickoff/00_PROMPT_Claude-Design_AR.md): the foundation-phase prompt and its attachments |
 | 🏢 **Project «سراج» imagery** | [`14-Property-Marketing/12-Project-Siraj/Source/Clean/`](14-Property-Marketing/12-Project-Siraj/Source/Clean/): six publish-ready 4K renders |

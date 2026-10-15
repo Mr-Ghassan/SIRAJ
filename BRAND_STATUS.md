@@ -1,5 +1,9 @@
 # SIRAJ Brand Identity v1.0 — CLOSED / PRODUCTION READY
 
+> **Library v1.0.1 (2026-10-15):** the SIRAJ Brand Master Library is complete — index `BRAND_MASTER_ASSET_INDEX.md`,
+> manifest `brand-master-manifest.json`, production guide `20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.1.pdf`,
+> QA `npm run qa:library` (0 failures). No design change. Details: `RELEASE_NOTES_LIBRARY_v1.0.1.md`.
+
 **Status:** closed on 13 October 2026 · version `v1.0` · branch `claude/optimistic-hopper-mykv42`
 **QA:** `node tools/qa-brand.js` → report in `docs/qa/BRAND_QA_REPORT.md` (public material must show 0 failures).
 

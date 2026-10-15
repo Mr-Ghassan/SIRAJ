@@ -58,4 +58,4 @@ The hero posts were rebuilt the same way: their ivory sky overlay was removed, a
 
 **Silk & Light key visuals (2026-10-12).** `Key-Visuals/` holds five cinematic hero posts and stories (Veil, Ribbon, Lantern, Reveal, Detail): real silk, with the building glowing like a lamp, and display type that pairs Tajawal 200 with 800. See `Key-Visuals/README.md`.
 
-**Contact line (2026-10-12).** All posts show the phone number and @SIRAJPROPERTIES only, never the website.
+**Contact line (client rules 2026-10-12/13).** All posts show the phone number **7771 4404** and the Instagram icon + **SIRAJPROPERTIES** only (never «@»), never the website.

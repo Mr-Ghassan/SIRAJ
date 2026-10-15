@@ -3,7 +3,7 @@
 **Architectural precision + the graceful continuous line of silk.**
 SIRAJ icons are drawn like the wordmark is built. Straight members are cut square and stencil-clean. Each icon may carry one flowing *silk* curve, the gesture of the R's leg and the A's blade. The **Lumen ◆**, the stone diamond above the I and J, is the light point.
 
-- **82 icons**, each in two styles (outline and filled), on one 24 px grid
+- **85 icons**, each in two styles (outline and filled), on one 24 px grid
 - Source of truth: `tools/build-icons.js`. It holds every path definition and writes everything in this folder. Edit the definitions there and do not hand-edit the generated SVGs.
 
 ```

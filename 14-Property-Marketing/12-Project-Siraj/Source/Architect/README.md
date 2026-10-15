@@ -32,4 +32,4 @@ Overview: `SIRAJ_Project-Siraj_Architect_Contact-Sheet.jpg`.
 - Label published renders with the render disclaimer («تصوّر معماري»).
 - The location and client details above come from the architect's sheet. **Confirm them before publishing**, and only then add them to `00-Brand-Foundation/brand.config.json`.
 
-The second file in the same Drive folder («دليل الهوية - سراج.pdf») is byte-identical to `20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.pdf`, so it is not duplicated here.
+The second file in the same Drive folder («دليل الهوية - سراج.pdf») was byte-identical to the v1.0 guide (now `99-Archive/Superseded/Brand-Guidelines-v1.0/SIRAJ_Brand-Guidelines_v1.0.pdf`; production guide: `20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.1.pdf`), so it is not duplicated here.

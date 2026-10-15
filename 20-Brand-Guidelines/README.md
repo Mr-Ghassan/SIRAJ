@@ -31,9 +31,9 @@ unless every page of the PDF renders without a single error and no page loses an
 | Stylesheet (hand-kept source) | `20-Brand-Guidelines/source/guidelines.css` + `09-Design-System/css/siraj.css` |
 | Data read at build time | `00-Brand-Foundation/brand.config.json`, `02-Colours/SIRAJ_Colour-Palette_v1.0.json`, `09-Design-System/tokens/build/*`, `07-Icon-System/siraj-icons.json`, `motion-system/tokens/*.json` |
 | Images read at build time | `01-Logos/`, `05-Graphic-System/`, `06-SIRAJ-Silk/Stills/`, `14-Property-Marketing/12-Project-Siraj/`, `16-Intro/`, `17-Outro/`, `99-Archive/Pre-Luxe-Grade-v1.0/` (before/after page) |
-| Film strips (generated) | `20-Brand-Guidelines/assets/intro-strip*.png` (frames from the intro export, via ffmpeg) |
+| Film strips (generated) | `20-Brand-Guidelines/assets/intro-strip.png` and `intro-strip-v.png` (frames from the intro exports, via ffmpeg) |
 | Final PDF | `20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.1.pdf` |
-| Page previews + contact sheet | `20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_pNN.jpg`, `SIRAJ_Brand-Guidelines_Contact-Sheet_v1.0.1.jpg` |
+| Page previews + contact sheet | `20-Brand-Guidelines/pages/` (82 JPG, one per page), `SIRAJ_Brand-Guidelines_Contact-Sheet_v1.0.1.jpg` |
 
 ## Build and export
 
