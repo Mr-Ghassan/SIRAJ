@@ -3087,6 +3087,39 @@
    ]
   },
   {
+   "id": "collateral.presentation-folder",
+   "category": "Collateral",
+   "name": "Presentation folder (A4 pocket) — current artwork",
+   "version": "1.0",
+   "status": "PREVIEW",
+   "use": "NOT FOR PRODUCTION. Vector silk across the exterior is not an approved D2 use on printed collateral; revisit in the Applied Design & Collateral phase.",
+   "formats": [
+    "html",
+    "md",
+    "pdf",
+    "png"
+   ],
+   "paths": [
+    "12-Print/Source/Stationery/SIRAJ_Presentation-Folder.html",
+    "12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_*",
+    "12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_*",
+    "12-Print/PRESENTATION-FOLDER_PREVIEW-NOT-FOR-PRODUCTION.md"
+   ],
+   "file_count": 8,
+   "files": [
+    "12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Dieline_v1.0.pdf",
+    "12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Flat_v1.0.pdf",
+    "12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Print_v1.0.pdf",
+    "12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_Dieline_v1.0.png",
+    "12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_Flat_v1.0.png",
+    "12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_Print_v1.0.png",
+    "12-Print/PRESENTATION-FOLDER_PREVIEW-NOT-FOR-PRODUCTION.md",
+    "12-Print/Source/Stationery/SIRAJ_Presentation-Folder.html"
+   ],
+   "notes": "Library governance decision 2026-10-15: classified PREVIEW; design intentionally unchanged; not approved production-ready collateral; not synced to Drive.",
+   "decision": "D2"
+  },
+  {
    "id": "archive.project-lettering",
    "category": "Archive",
    "name": "«مشروع سراج» project lettering",
@@ -6600,6 +6633,50 @@
    "bytes": 20673,
    "sha256": "3188d864b331fd139c1f7277fcccdc39018927fbdc8fa8196b0eca38ce80b4fd"
   },
+  "12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Dieline_v1.0.pdf": {
+   "bytes": 2934498,
+   "sha256": "63bfc82bea884cd7a0f956c41c7e9afea5726f7ea4fa148a23a9ff9e4102f5ed"
+  },
+  "12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Flat_v1.0.pdf": {
+   "bytes": 2927422,
+   "sha256": "bca5f56ade5cb6b3e548e27f4d1b2cec00a130bff277146a53c1d510108da6b8"
+  },
+  "12-Print/PDF/Stationery/SIRAJ_Presentation-Folder_Print_v1.0.pdf": {
+   "bytes": 2911740,
+   "sha256": "051fbb6617bf82ad4ed9f8a7da6760db1a80bf4b9c52b1a4d3226e6de1588c95"
+  },
+  "12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_Dieline_v1.0.png": {
+   "bytes": 3252408,
+   "sha256": "5bdbbef22a948d0067f81f9f5c2ac287d3ba735c2b2c0915c93eacf1938d7463",
+   "px": [
+    4408,
+    2317
+   ]
+  },
+  "12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_Flat_v1.0.png": {
+   "bytes": 3106803,
+   "sha256": "c4e624c93b5f660a465847080225244aea65006603388139b71ac04bccbd8cc9",
+   "px": [
+    4125,
+    2176
+   ]
+  },
+  "12-Print/PNG/Stationery/SIRAJ_Presentation-Folder_Print_v1.0.png": {
+   "bytes": 3200356,
+   "sha256": "28fe6df1174b059da210e475bd3736915de4479a2ef6239f6a6b0c6a87ff2567",
+   "px": [
+    4408,
+    2317
+   ]
+  },
+  "12-Print/PRESENTATION-FOLDER_PREVIEW-NOT-FOR-PRODUCTION.md": {
+   "bytes": 859,
+   "sha256": "6818e8a88421c5422c08f0ce7561992c864a1682b58f355b5c4b62c9550f54e5"
+  },
+  "12-Print/Source/Stationery/SIRAJ_Presentation-Folder.html": {
+   "bytes": 12179,
+   "sha256": "6df341dbbfda329b2ce1d6b492aa744196ed78db1b6b8aafd4b67bbb83c52335"
+  },
   "14-Property-Marketing/12-Project-Siraj/Key-Visuals/README.md": {
    "bytes": 3576,
    "sha256": "55e8486fbf08e211d3359aa38c105cf727e914935b3f4d72c33e1e48c8fd2b37"
@@ -7645,20 +7722,20 @@
    "sha256": "06f7a529ee6902a32c4e34e86e12add8c3764b1b66583baa55d9704a7c5a1abb"
   },
   "20-Brand-Guidelines/README.md": {
-   "bytes": 6130,
-   "sha256": "992044d18a4a926a51fcfeb370c4ce119fdcf00255abb83336fff11351b41502"
+   "bytes": 6373,
+   "sha256": "00eb6ae66f49ae61797e092d1a0e48b0af7a372c61c43539ac28ab55b29085db"
   },
   "20-Brand-Guidelines/SIRAJ_Brand-Guidelines_Contact-Sheet_v1.0.1.jpg": {
-   "bytes": 2065988,
-   "sha256": "ebfc37107ba2e4e0597815545e503409d0a4115a1b904f3a1ddea0405198d323",
+   "bytes": 2071187,
+   "sha256": "ab4702919550fdc329e15cb03f3066a3e2219f6f54f17beb8f25723278fcaca8",
    "px": [
     3904,
     3058
    ]
   },
   "20-Brand-Guidelines/SIRAJ_Brand-Guidelines_v1.0.1.pdf": {
-   "bytes": 19045964,
-   "sha256": "3f2cdd38ccaf4ca159092fd5fc020a4fb7cddadcfe4b5bf73cbfcd86e68cc0f8"
+   "bytes": 19046322,
+   "sha256": "16fa4370e6325da1f5ea44d9b52e0bfd58988452b87353cb4ba62747e960de26"
   },
   "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p01.jpg": {
    "bytes": 58018,
@@ -8117,8 +8194,8 @@
    ]
   },
   "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p58.jpg": {
-   "bytes": 37900,
-   "sha256": "674a38ad5c1ceb8e2110bbd236f45479150fff6c4278ca1ae9183b9001c1110c",
+   "bytes": 54496,
+   "sha256": "1fcabce83dfb0a0d920c1a2182c660f66097a86c4257cb03fd95f31a4cad333d",
    "px": [
     1280,
     720
@@ -8149,8 +8226,8 @@
    ]
   },
   "20-Brand-Guidelines/pages/SIRAJ_Brand-Guidelines_p62.jpg": {
-   "bytes": 41584,
-   "sha256": "c8cbcccde5e707ff08b925438b783fde96b83c2c963befafd82e249b01291435",
+   "bytes": 43714,
+   "sha256": "9b939e3965e43e9a37a9995ed8f52a2ea034f5401576ec3fd6229bd960c58f54",
    "px": [
     1280,
     720
@@ -8321,8 +8398,8 @@
    "sha256": "2e583a428f99c0fcd1325c91afff95eaba8eb81b80e65d234c6634a2c0ee6893"
   },
   "20-Brand-Guidelines/source/siraj-brand-guidelines.html": {
-   "bytes": 358942,
-   "sha256": "6d015b5f2817354ad005706617cc08f9f0880db72fe07cadb0f015c6e70a6ae2"
+   "bytes": 359024,
+   "sha256": "febe565ae0ddbb4cf89a9c95637205a6c74aa9c6f99f674b595094eb08239353"
   },
   "99-Archive/Pre-Luxe-Grade-v1.0/KeyVisuals/SIRAJ_Project-Siraj_KV_Detail_4x5_v1.0.jpg": {
    "bytes": 2576256,
@@ -8541,8 +8618,8 @@
    "sha256": "239282219f04299953fbf00ec4ec844b5d9a0d13ae65ae077472f4ab918278af"
   },
   "tools/build-guidelines.js": {
-   "bytes": 67904,
-   "sha256": "54f2d6f0635aca83c834972045beacd65e96c797b1b21cb16e334badedd640b9"
+   "bytes": 68196,
+   "sha256": "e4aad3e844a6e1d27e6c5047a268031456dee2eb7ffbf23f3acca4a93893d629"
   },
   "tools/build-icons.js": {
    "bytes": 64723,
