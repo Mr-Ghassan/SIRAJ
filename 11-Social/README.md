@@ -20,7 +20,8 @@ All copy and project data in the exports is demo content for the fictional proje
     brand-data.js            GENERATED from 00-Brand-Foundation/brand.config.json
     highlight-icons.js       GENERATED from 07-Icon-System/sprite/siraj-icons.svg
     Property-Launch.html … Reel-Cover.html, Highlight-Cover.html, Profile-*.html
-  Exports/                   84 PNGs  SIRAJ_Social_<Template>_<Format>_<EN|AR>_v1.0.png
+  Exports/                   84 PNGs  SIRAJ_Social_<Template>_<Format>_<EN|AR>_v1.0.png  (publish-ready: no «—»)
+  Template-Previews/         internal previews of data-slot templates («—»), never published (decision D5)
   Highlights/                8 highlight covers + overview board
   Profile/                   avatar (1080 copy), avatar usage board, 9-tile grid preview EN + AR
 ```
@@ -65,7 +66,7 @@ Each HTML file opens with a JSON block (`<script id="data">`):
 |---|---|---|---|---|---|---|
 | Instagram Post | `post` | 1080 × 1350 | 72 | 72 / 72 | 168 | 6 col · 24 gutter. Grid crop 3:4 trims 34 px per side, so keep nothing critical in the outer 40 px. |
 | Square | `square` | 1080 × 1080 | 72 | 72 / 72 | 160 | Drop the lead line if the headline needs the room. |
-| Carousel | `carousel` | 1080 × 1350 × 3–5 | 72 | 72 / 72 | 168 | Counter `01 / 05` sits bottom-end. The last slide carries the lockup. |
+| Carousel | `carousel` | 1080 × 1350 × 3–5 | 72 | 72 / 72 | 168 | Counter `01 / 05` sits bottom-end. The last slide carries the wordmark. |
 | Story | `story` | 1080 × 1920 | 72 | **250 / 340** | 184 | Imagery may run under the platform UI. Text and logo may not. |
 | Reel cover | `reel` | 1080 × 1920 | 72 | **312 / 312** | 184 | All type and the logo stay inside the centre **1080 × 1440** (y 240–1680) grid crop. See `Reel-Guide`. |
 | LinkedIn | `li` | 1200 × 627 | 56 | 56 / 56 | 116 | Split layout: text on start, image on end. |
@@ -104,7 +105,7 @@ Headlines shrink automatically (5% steps) when a translation runs long, so they 
 ### Logo placement
 - Wordmark only (`01-Logos/SVG/SIRAJ_Logo_<Primary|Sand|White>_v1.0.svg`), bottom-start, on the margin. The bottom edge of the letters sits on the bottom safe line.
 - Primary (maroon) on ivory/linen. Sand on deep, maroon and silk. White only on photography.
-- The **end slide** of a carousel uses the lockup instead: `Lockup_Descriptor_Reversed` (EN) or `Lockup_Arabic_Reversed` (AR), aligned optically to the same corner.
+- The **end slide** of a carousel keeps the wordmark (Arabic posts) or uses `Lockup_Descriptor_Reversed` (dormant English posts), aligned optically to the same corner. The Arabic-name lockups were withdrawn (decision D1, 2026-10-15) and are never used.
 - Bottom-end holds one quiet caption only: website, handle, opening hours, carousel counter or the investment disclaimer. Never a second logo.
 
 ### Arabic (RTL)

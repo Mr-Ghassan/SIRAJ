@@ -83,7 +83,7 @@ export const siraj = {
       "on-accent": "#2C0F12",
       "lumen": "#AA9180",
       "border": "#4A2228",
-      "border-strong": "#7A5A55",
+      "border-strong": "#8C6B64",
       "focus": "#D6C0B2"
     }
   },

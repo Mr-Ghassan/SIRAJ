@@ -1,5 +1,5 @@
 {
-  "$note": "Print-only values. Legal/financial fields (VATIN, CR, bank) are NOT provided yet and render as «—»; they must be filled by Finance/Legal before any legal document is issued. People fields are template slots.",
+  "$note": "Print-only values. Legal/financial fields (VATIN, CR, P.O. box, bank) are NOT provided yet and stay «—»: editable templates show the labelled slot, every export hides the field (decision D5, 2026-10-15). Finance/Legal fill them before any legal document is issued; never type an invented value. People fields are template slots.",
   "vatin": "—",
   "vatin_status": "NOT PROVIDED",
   "vat_rate": 5,

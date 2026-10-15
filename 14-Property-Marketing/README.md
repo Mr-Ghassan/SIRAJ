@@ -6,6 +6,8 @@ Every item here is a **concept built on a fictional demo project, Noor Residence
 Everything is generated from source. Do not edit the exports by hand:
 
 ```bash
+# Archived with the demo kit: 99-Archive/Demo-Isolated/14-Property-Marketing/build-property.js
+# Real project (Muscat) outputs: npm run build:project-siraj
 node tools/build-property.js              # everything (≈ 6 min)
 node tools/build-property.js brochure     # one section: lockup plans brochure docs outdoor event digital campaign mockups
 ```

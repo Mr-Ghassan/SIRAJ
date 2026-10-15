@@ -194,3 +194,5 @@ pre.code { background: #170608; color: #D6C0B2; font: 400 14px/1.55 ui-monospace
 .fp6 figcaption { font-size: 13px; color: #6B625E; margin-top: 8px; }
 .kvst { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-content: start; }
 .kvst img { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; display: block; }
+/* v1.0.1 — internal-strategy marker (pages with content that never appears in public communication) */
+.ph .sec .int { display: block; width: max-content; margin-top: 14px; padding: 6px 10px; border: 1px solid #602733; background: #EFE7E0; font: 500 10px/1 Jost; letter-spacing: .2em; color: #602733; }

@@ -95,7 +95,7 @@ function fixPdfDates(file) {
 const outFile = (job, type, ext) => P(job.dir.replace('{T}', type), `SIRAJ_${job.name}_${V}.${ext}`);
 
 async function renderPdf(job) {
-  const params = { name: `SIRAJ_${job.name}_${V}` };
+  const params = { name: `SIRAJ_${job.name}_${V}`, export: '1' }; // export: unresolved «—» fields are hidden (D5)
   if (job.marks) params.marks = '1';
   if (job.dieline === false) params.dieline = '0';
   const page = await openUrl(url(job.src, params));
@@ -113,7 +113,7 @@ async function renderPdf(job) {
 }
 
 async function renderPng(job) {
-  const params = { preview: '1', name: `SIRAJ_${job.name}_${V}` };
+  const params = { preview: '1', name: `SIRAJ_${job.name}_${V}`, export: '1' };
   if (job.marks) params.marks = '1';
   if (job.dieline === false) params.dieline = '0';
   const out = outFile(job, 'PNG', 'png');

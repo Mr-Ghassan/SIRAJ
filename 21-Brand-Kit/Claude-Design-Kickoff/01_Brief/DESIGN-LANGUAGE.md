@@ -15,10 +15,10 @@ The full rationale lives in `20-Brand-Guidelines/`. If this file and the guideli
 - All English deliverables are preserved in `99-Archive/English-Dormant/`. Restore them with `bash tools/archive-english.sh --restore`, and build English with `SIRAJ_EN=1`.
 - **Allowed Latin elements in Arabic communications:**
   - the SIRAJ wordmark (the logo itself);
-  - the website `sirajproperties.net`, the handle `@SIRAJPROPERTIES`, email addresses and phone numbers;
+  - the website, always written `WWW.SIRAJPROPERTIES.NET`, the Instagram handle `SIRAJPROPERTIES` (always with the Instagram icon, never «@»), email addresses and the phone number (`7771 4404`);
   - Western digits (0–9), which are the brand standard.
 - **Transactional and legal documents** keep their bilingual (EN-AR) format where business or regulation requires it: business card, quotation, tax invoice, payment receipt and contract cover. Arabic is always primary.
-- Use the **Arabic lockup** (`01-Logos/Lockups/SIRAJ_Lockup_Arabic_*`) wherever a descriptor is needed.
+- **No Arabic-name lockup** (decision D1, 2026-10-15): the official SIRAJ English artwork is the brand mark. The registered Arabic name «سراج للتطوير العقاري» appears only as normal legal or administrative text where required (letterhead footer, contracts, ID-card return address), never as a logo or a lockup. The withdrawn lockups are in `99-Archive/Withdrawn/Arabic-Name-Lockups/`.
 
 ## 1. The idea in one line
 
@@ -41,7 +41,7 @@ The full rationale lives in `20-Brand-Guidelines/`. If this file and the guideli
 |---|---|
 | Wordmark (official) | `01-Logos/Master/SIRAJ_Logo_Master_v1.0.svg` (exact geometry of the supplied Illustrator master) |
 | Colour variants | `01-Logos/SVG/` |
-| Bilingual lockups | `01-Logos/Lockups/` (Arabic is set in Tajawal, English in Jost, outlined) |
+| Lockups | `01-Logos/Lockups/` — Descriptor only (wordmark + «REAL ESTATE DEVELOPMENT» in Jost, outlined). Arabic-name lockups withdrawn (D1). |
 | Monogram (S, derived) | `01-Logos/SVG/SIRAJ_Monogram-S_*` (avatars and favicons only) |
 
 - Clear space is **½ H** on all sides (H = wordmark height).

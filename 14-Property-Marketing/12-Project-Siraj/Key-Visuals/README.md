@@ -16,9 +16,15 @@ Each key visual comes in two formats:
 
 Both are rendered at 2× (`SIRAJ_Project-Siraj_KV_<Name>_<Post|Story>_AR_v1.0.png`).
 
+**Grade (decision D6, 2026-10-15):** the Ribbon key visual read warmer than the family (beige city, amber lights). Its
+4:5 and 9:16 masters were re-graded, colour only, with `python3 -I tools/siraj-warmth-match.py <kv.jpg> --strength 1.4`
+on top of the Luxe Grade: warm environment 16.3 % → 2.5 % of the frame, yellow light 1.6 % → 0 %, silk and rose
+interior light untouched, composition unchanged (`--measure` prints the metrics). The posts, stories, presentation slide
+8, social Carousel-04 and the guide pages that use it were rebuilt from the new masters.
+
 **Copy:** depth without pretension. The copy speaks about light, place, material and life, never about SIRAJ's strategy. «المشروع المؤسِّس» is internal and never appears.
 
-**Contact line:** phone + `@SIRAJPROPERTIES` only, never the website (client rule 2026-10-12). The phone shows as «[رقم الهاتف]» until `contact.phone` is confirmed in `00-Brand-Foundation/brand.config.json`. Rebuild with `node tools/build-social.js` (refreshes the brand data), then `node tools/build-project-siraj-kv.js`.
+**Contact line:** phone **7771 4404** + the Instagram icon and **SIRAJPROPERTIES** only (never «@»), never the website (client rules 2026-10-12/13). Values come from `00-Brand-Foundation/brand.config.json → contact`. Rebuild with `node tools/build-social.js` (refreshes the brand data), then `node tools/build-project-siraj-kv.js`.
 
 **Sources:** the photos are in `../Source/KeyVisuals/` (4:5 and 9:16). They were generated with Google Nano Banana Pro (`gemini-3-pro-image`, 4K) via ElevenLabs, using the publish-ready renders in `../Source/Clean/` as references so the architecture is the project's own. The Veil, Lantern and Reveal stories were outpainted to 9:16 from the chosen 4:5 frame; the Lantern and Reveal posts are 4:5 crops of that extension, which leaves more sky for the copy.
 

@@ -85,7 +85,7 @@
       "on-accent":     { "$type": "color", "$value": "{color.brand.deep}" },
       "lumen":         { "$type": "color", "$value": "{color.brand.stone}" },
       "border":        { "$type": "color", "$value": "#4A2228" },
-      "border-strong": { "$type": "color", "$value": "#7A5A55" },
+      "border-strong": { "$type": "color", "$value": "#8C6B64", "$description": "Emphasised border on dark surfaces: input outlines, selected cards, table heads. Approved 2026-10-15 (D3), same value as Design System v1.0 color.dark-ui.border-strong." },
       "focus":         { "$type": "color", "$value": "{color.brand.sand}" }
     }
   },
