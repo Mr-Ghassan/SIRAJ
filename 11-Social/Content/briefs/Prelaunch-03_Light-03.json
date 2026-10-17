@@ -8,10 +8,12 @@
   "env": "linen",
   "ar": {
     "eyebrow": "الضوء · 2",
-    "title": "يوسّع المكان.",
+    "title": "يوسّـــــع [-المكان.-]",
     "lead": "الغرفة نفسها تبدو أرحب\nحين يصلها ضوء النهار من الجانب الصحيح.",
     "end": "{contact.post_line}"
   },
   "still": "Horizon-Ivory",
-  "footOnSilk": true
+  "footOnSilk": true,
+  "titleHeavy": true,
+  "display": true
 }

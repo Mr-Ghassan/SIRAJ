@@ -57,12 +57,10 @@
   }
   // Light inline markup: *text* → <em>, [[x]] → LTR isolate (for handles, phone numbers in Arabic), [ig] → Instagram glyph
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  // Display typography (client direction 2026-10-17): [~] = a calligraphic kashida that dips below the baseline and
-  // rejoins the next letter (Tajawal stays the type; the dip is a drawn joining stroke, ZWJ keeps both letters joined);
-  // [-text-] = a light (200) phrase inside a heavy title.
-  const KD = '&zwj;<span class="kd" aria-hidden="true"><svg viewBox="0 0 200 58" preserveAspectRatio="none"><path d="M200,0 C150,0 112,40 72,40 C46,40 26,0 0,0 L0,14 C24,14 44,58 72,58 C114,58 152,14 200,14 Z" fill="currentColor"/></svg></span>&zwj;';
+  // Display typography (client direction 2026-10-17): heavy Tajawal titles (titleHeavy) with a straight kashida (ـ) typed
+  // in the text; [-text-] = a light (200) phrase inside a heavy title. The downward kashida dip was cancelled.
   const rich = (s) => esc(t(s)).replace(/\[\[(.+?)\]\]/g, '<span class="ltr">$1</span>').replace(/\[ig\] ?/g, () => IG_SVG)
-    .replace(/\[~\]/g, KD).replace(/\[-(.+?)-\]/g, '<span class="w2">$1</span>').replace(/\n/g, '<br>');
+    .replace(/\[-(.+?)-\]/g, '<span class="w2">$1</span>').replace(/\n/g, '<br>');
   const IG_SVG = ((window.SIRAJ_BRAND || {}).contact || {}).social_icon_svg || '';
   const px = (el, v) => parseFloat(getComputedStyle(el).getPropertyValue(v));
   const two = (n) => String(n).padStart(2, '0');

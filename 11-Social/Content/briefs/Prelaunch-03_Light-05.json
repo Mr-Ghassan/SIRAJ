@@ -8,10 +8,12 @@
   "env": "linen",
   "ar": {
     "eyebrow": "الضوء · 4",
-    "title": "يصنع الظل.",
+    "title": "يصنـــــع [-الظل.-]",
     "lead": "لا يكتمل الضوء إلا بظلّه؛\nوالظل المدروس راحةٌ في نهار مسقط.",
     "end": "{contact.post_line}"
   },
   "still": "Horizon-Ivory",
-  "footOnSilk": true
+  "footOnSilk": true,
+  "titleHeavy": true,
+  "display": true
 }

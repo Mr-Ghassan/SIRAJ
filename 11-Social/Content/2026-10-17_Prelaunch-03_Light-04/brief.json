@@ -8,10 +8,12 @@
   "env": "ivory",
   "ar": {
     "eyebrow": "الضوء · 3",
-    "title": "يكشف المادة.",
+    "title": "يكشـــــف [-المادة.-]",
     "lead": "الحجر والخشب والطين\nلا تظهر حقيقتها إلا في ضوء طبيعي.",
     "end": "{contact.post_line}"
   },
   "still": "Horizon-Ivory",
-  "footOnSilk": true
+  "footOnSilk": true,
+  "titleHeavy": true,
+  "display": true
 }
