@@ -11,5 +11,7 @@
     "title": "يوسّع المكان.",
     "lead": "الغرفة نفسها تبدو أرحب\nحين يصلها ضوء النهار من الجانب الصحيح.",
     "end": "{contact.post_line}"
-  }
+  },
+  "still": "Horizon-Ivory",
+  "footOnSilk": true
 }

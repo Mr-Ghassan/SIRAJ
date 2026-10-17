@@ -11,5 +11,7 @@
     "title": "يكشف المادة.",
     "lead": "الحجر والخشب والطين\nلا تظهر حقيقتها إلا في ضوء طبيعي.",
     "end": "{contact.post_line}"
-  }
+  },
+  "still": "Horizon-Ivory",
+  "footOnSilk": true
 }

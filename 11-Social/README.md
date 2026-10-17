@@ -106,6 +106,7 @@ Headlines shrink automatically (5% steps) when a translation runs long, so they 
 - Wordmark only (`01-Logos/SVG/SIRAJ_Logo_<Primary|Sand|White>_v1.0.svg`), bottom-start, on the margin. The bottom edge of the letters sits on the bottom safe line.
 - Primary (maroon) on ivory/linen. Sand on deep, maroon and silk. White only on photography.
 - The **end slide** of a carousel keeps the wordmark (Arabic posts) or uses `Lockup_Descriptor_Reversed` (dormant English posts), aligned optically to the same corner. The Arabic-name lockups were withdrawn (decision D1, 2026-10-15) and are never used.
+- **Silk behind the logo zone** (client direction 2026-10-17): when a dark silk Horizon fills the bottom of a light post, the logo and contact line sit on the silk — set `"footOnSilk": true` (Sand logo, light contact line).
 - Bottom-end holds one quiet caption only: website, handle, opening hours, carousel counter or the investment disclaimer. Never a second logo.
 
 ### Arabic (RTL)

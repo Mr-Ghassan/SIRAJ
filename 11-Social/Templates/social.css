@@ -125,6 +125,7 @@ body { width: max-content; }
   display: flex; align-items: center; gap: .9em; white-space: nowrap; margin-bottom: -0.12em;
 }
 .foot-end.lower { text-transform: none; letter-spacing: .08em; }
+.foot.on-silk .foot-end { color: rgba(226,208,196,.9); } /* contact line over dark silk (footOnSilk) */
 [lang="ar"] .foot-end { font-family: "SIRAJ Digits", "Tajawal", "Jost", sans-serif; letter-spacing: 0; text-transform: none; font-size: calc(var(--fs-cap) * 1.18); margin-bottom: -0.2em; }
 .foot-end .lm { width: .55em; height: .55em; }
 .foot-note { font-size: calc(var(--fs-cap) * 0.92); line-height: 1.45; color: var(--muted); max-width: 34em; text-align: end; font-weight: 400; margin-bottom: -0.3em; letter-spacing: .01em; }

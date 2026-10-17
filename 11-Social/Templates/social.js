@@ -166,17 +166,18 @@
   html += `<div class="content">${contentHTML()}</div>`;
   if (C.aside) html += `<div class="aside" style="position:absolute;${D.asideStyle || ''}">${C.aside.map((b) => BLOCKS[b.type](b)).join('')}</div>`;
   // footer
-  const logoV = D.logo || ({ ivory: 'Primary', linen: 'Primary', deep: 'Sand', shadow: 'Sand', maroon: 'Sand', photo: D.overlay === 'horizon' ? 'Sand' : 'White' })[env];
+  // footOnSilk: the dark silk passes behind the logo zone (client direction 2026-10-17) → Sand logo + light contact line
+  const logoV = D.logo || (D.footOnSilk ? 'Sand' : null) || ({ ivory: 'Primary', linen: 'Primary', deep: 'Sand', shadow: 'Sand', maroon: 'Sand', photo: D.overlay === 'horizon' ? 'Sand' : 'White' })[env];
   let end = '';
   // No side notes or disclaimers on designs (client rule 2026-10-12): `note` is ignored; disclaimers go in the caption.
   if (TOTAL && D.counter !== false) end = `<div class="foot-end counter" dir="ltr"><b>${two(SLIDE)}</b>&nbsp;/&nbsp;${two(TOTAL)}${SLIDE < TOTAL ? ` <i class="lm"></i>` : ''}</div>`;
   else if (C.end !== '') end = `<div class="foot-end${C.endLower !== false ? ' lower' : ''}">${rich(C.end || '{contact.post_line}')}</div>`;
-  if (D.noLogo) html += `<div class="foot">${end ? '<span></span>' + end : ''}</div>`;
+  if (D.noLogo) html += `<div class="foot${D.footOnSilk ? ' on-silk' : ''}">${end ? '<span></span>' + end : ''}</div>`;
   else if (D.footLockup) {
     // Lockup SVGs carry 14.05-unit clear space inside their viewBox; pull it back so the mark sits on the margin.
     const L = D.footLockup, vb = L.vb || [126.27, 74.21], w = L.w, h = w * vb[1] / vb[0];
-    html += `<div class="foot"><img class="logo lockup" src="${LOCKUP(L.v)}" alt="SIRAJ" style="width:${w}px;margin-inline-start:${-14.05 / vb[0] * w}px;margin-bottom:${-14.05 / vb[1] * h}px">${end}</div>`;
-  } else html += `<div class="foot"><img class="logo" src="${LOGO(logoV)}" alt="SIRAJ">${end}</div>`;
+    html += `<div class="foot${D.footOnSilk ? ' on-silk' : ''}"><img class="logo lockup" src="${LOCKUP(L.v)}" alt="SIRAJ" style="width:${w}px;margin-inline-start:${-14.05 / vb[0] * w}px;margin-bottom:${-14.05 / vb[1] * h}px">${end}</div>`;
+  } else html += `<div class="foot${D.footOnSilk ? ' on-silk' : ''}"><img class="logo" src="${LOGO(logoV)}" alt="SIRAJ">${end}</div>`;
   cv.innerHTML = html;
 
   const $ = (s) => cv.querySelector(s);
