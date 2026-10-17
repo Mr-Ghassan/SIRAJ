@@ -1,0 +1,15 @@
+{
+  "name": "Prelaunch-03_Light-02",
+  "kind": "publish",
+  "formats": [
+    "post"
+  ],
+  "layout": "type",
+  "env": "ivory",
+  "ar": {
+    "eyebrow": "الضوء · 1",
+    "title": "يرسم الوقت.",
+    "lead": "ضوء الصباح غير ضوء العصر.\nوالبيت الذي يدخله الضوء يعرف ساعات يومه.",
+    "end": "{contact.post_line}"
+  }
+}

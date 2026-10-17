@@ -1,0 +1,16 @@
+{
+  "name": "Prelaunch-03_Light-06",
+  "kind": "publish",
+  "formats": [
+    "post"
+  ],
+  "layout": "type",
+  "env": "deep",
+  "still": "Drape-Deep",
+  "ar": {
+    "eyebrow": "الضوء · 5",
+    "title": "يمنح السكينة.",
+    "lead": "ضوءٌ هادئ، وظلٌّ مدروس،\nوبيتٌ يتنفّس.",
+    "end": "{contact.post_line}"
+  }
+}

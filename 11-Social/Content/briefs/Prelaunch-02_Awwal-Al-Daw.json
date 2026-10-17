@@ -1,0 +1,18 @@
+{
+  "name": "Prelaunch-02_Awwal-Al-Daw",
+  "kind": "publish",
+  "formats": [
+    "post",
+    "story"
+  ],
+  "layout": "type",
+  "env": "deep",
+  "still": "Drape-Deep",
+  "display": true,
+  "ar": {
+    "eyebrow": "مسقط",
+    "title": "أوّلُ الضوء.",
+    "lead": "مساكن تتشكّل بالضوء والسكينة.",
+    "end": "{contact.post_line}"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Prelaunch-03_Light-04",
+  "kind": "publish",
+  "formats": [
+    "post"
+  ],
+  "layout": "type",
+  "env": "ivory",
+  "ar": {
+    "eyebrow": "الضوء · 3",
+    "title": "يكشف المادة.",
+    "lead": "الحجر والخشب والطين\nلا تظهر حقيقتها إلا في ضوء طبيعي.",
+    "end": "{contact.post_line}"
+  }
+}

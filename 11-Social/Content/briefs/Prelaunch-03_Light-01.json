@@ -1,0 +1,16 @@
+{
+  "name": "Prelaunch-03_Light-01",
+  "kind": "publish",
+  "formats": [
+    "post"
+  ],
+  "layout": "type",
+  "env": "deep",
+  "still": "Drape-Lumen",
+  "ar": {
+    "eyebrow": "الضوء",
+    "title": "ماذا يفعل الضوء الطبيعي\nفي البيت؟",
+    "lead": "خمسة أشياء نعيشها كل يوم،\nولا ننتبه لها.",
+    "end": "{contact.post_line}"
+  }
+}

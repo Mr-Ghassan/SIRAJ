@@ -1,0 +1,15 @@
+{
+  "name": "Prelaunch-03_Light-03",
+  "kind": "publish",
+  "formats": [
+    "post"
+  ],
+  "layout": "type",
+  "env": "linen",
+  "ar": {
+    "eyebrow": "الضوء · 2",
+    "title": "يوسّع المكان.",
+    "lead": "الغرفة نفسها تبدو أرحب\nحين يصلها ضوء النهار من الجانب الصحيح.",
+    "end": "{contact.post_line}"
+  }
+}
